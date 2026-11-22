@@ -211,3 +211,24 @@ svg text{font-family:var(--font)}
 .pair.same figure img{height:260px;width:auto;max-width:100%;object-fit:contain}
 /* Contents rail: never justify link text (wrapped titles spread out otherwise) */
 .toc li,.toc a{text-align:left;hyphens:manual}
+
+/* Unit 3 additions (shared): an electron hopping between atoms, a marker sliding along a solid-solution bar, and square photo galleries. */
+.hop{animation:hop 4s ease-in-out infinite}
+@keyframes hop{0%,25%{transform:translateX(0)}60%,100%{transform:translateX(var(--hop,100px))}}
+.slide{animation:slide 5s ease-in-out infinite alternate}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(var(--slide,100px))}}
+/* Galleries: every tile is the same square, so a row always looks even. Use inside one figure; tiles are lettered, not numbered. */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,140px),1fr));gap:.7rem;margin:0;padding:0;list-style:none}
+.gallery li{margin:0;display:flex;flex-direction:column;gap:.35rem}
+.gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px;background:var(--surface-2)}
+.gallery span{font-size:.8rem;line-height:1.35;color:var(--muted);text-align:left}
+.gallery b{color:var(--fg);display:block}
+/* Inline bar for a table cell (e.g. element abundance) */
+.bar{display:flex;align-items:center;gap:.5rem}
+.bar i{display:block;height:.7rem;border-radius:4px;background:var(--accent);min-width:2px}
+/* Diagrams with transparent backgrounds (any format) keep a white card so dark lines stay readable in dark mode */
+figure img.diagram{background:#fff;padding:4px}
+.gallery{grid-template-columns:repeat(var(--cols,4),minmax(0,1fr))}
+@media (max-width:560px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.callout ul.inline{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;padding-left:1.1rem}
+.callout ul.inline li{margin:0}

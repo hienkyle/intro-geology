@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Khoáng vật</title>
+<meta name="description" content="Tài liệu ôn tập Học phần 3, giáo trình An Introduction to Geology, Chương 3: Khoáng vật.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&subset=vietnamese&display=swap">
+<link rel="stylesheet" href="assets/guide.css">
+<style>
+/* Unit 3 palette: amethyst violet (quartz's purple variety) with pyrite gold and ruby red; header bands run clear quartz to deep amethyst. */
+:root{
+  --fig-prefix:"Hình 3."; --tbl-prefix:"Bảng 3.";
+  --bg:#f6f4f9; --surface:#ffffff; --surface-2:#ece7f3; --fg:#1e1a2b; --muted:#5b5470; --line:#d6cfe2;
+  --accent:#6a3fa0; --accent-soft:#ece2f7; --ochre:#a87a12; --ochre-soft:#f6ecd0; --rust:#b23a48;
+  --s1:#d8c7ef; --s2:#a77bd6; --s3:#6f3fa8; --s4:#3a2160; --s5:#1d1530;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121019; --surface:#1a1724; --surface-2:#242031; --fg:#e8e4f0; --muted:#a49cb8; --line:#352f47;
+  --accent:#b893ec; --accent-soft:#2c2342; --ochre:#e3b448; --ochre-soft:#3a2f14; --rust:#ef7f8c;
+  --s1:#7a6596; --s2:#5f4385; --s3:#47296e; --s4:#2a1a42; --s5:#151020; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121019; --surface:#1a1724; --surface-2:#242031; --fg:#e8e4f0; --muted:#a49cb8; --line:#352f47;
+  --accent:#b893ec; --accent-soft:#2c2342; --ochre:#e3b448; --ochre-soft:#3a2f14; --rust:#ef7f8c;
+  --s1:#7a6596; --s2:#5f4385; --s3:#47296e; --s4:#2a1a42; --s5:#151020; color-scheme:dark}
+</style>
+</head>
+<body>
+<div lang="vi">
+<header class="hero" id="top">
+  <div class="strata" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Học phần 3 · Chương 3 · An Introduction to Geology</div>
+      <h1>Khoáng vật</h1>
+      <p>Thế nào là một khoáng vật, các nguyên tử liên kết với nhau ra sao để tạo nên tinh thể, khoáng vật hình thành như thế nào, các nhóm khoáng vật silicat và phi silicat, và những phép thử vật lý mà nhà địa chất dùng để nhận dạng khoáng vật ngoài thực địa.</p>
+    </div>
+    <div class="hero-tools">
+      <a class="btn" href="unit3.html" lang="en" hreflang="en">English</a>
+      <button class="btn" id="themeBtn" type="button" aria-label="Chuyển chế độ sáng hoặc tối">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Chế độ tối</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="toc" aria-label="Mục lục">
+    <h2>Mục lục</h2>
+    <ol>
+      <li><a href="#outcomes">Mục tiêu học tập</a></li>
+      <li><a href="#s3-0"><span class="num">3.0</span>Khoáng vật là gì?</a></li>
+      <li><a href="#s3-1"><span class="num">3.1</span>Hóa học khoáng vật</a>
+        <ol>
+          <li><a href="#s3-1-1"><span class="num">3.1.1</span>Nguyên tử</a></li>
+          <li><a href="#s3-1-2"><span class="num">3.1.2</span>Bảng tuần hoàn</a></li>
+          <li><a href="#s3-1-3"><span class="num">3.1.3</span>Liên kết hóa học</a></li>
+        </ol>
+      </li>
+      <li><a href="#s3-2"><span class="num">3.2</span>Sự hình thành khoáng vật</a>
+        <ol>
+          <li><a href="#s3-2-1"><span class="num">3.2.1</span>Từ dung dịch nước</a></li>
+          <li><a href="#s3-2-2"><span class="num">3.2.2</span>Từ macma</a></li>
+          <li><a href="#s3-2-3"><span class="num">3.2.3</span>Do sinh vật</a></li>
+        </ol>
+      </li>
+      <li><a href="#s3-3"><span class="num">3.3</span>Khoáng vật silicat</a>
+        <ol>
+          <li><a href="#s3-3-1"><span class="num">3.3.1</span>Họ olivin</a></li>
+          <li><a href="#s3-3-2"><span class="num">3.3.2</span>Họ pyroxen</a></li>
+          <li><a href="#s3-3-3"><span class="num">3.3.3</span>Họ amphibol</a></li>
+          <li><a href="#s3-3-4"><span class="num">3.3.4</span>Silicat lớp</a></li>
+          <li><a href="#s3-3-5"><span class="num">3.3.5</span>Silicat khung</a></li>
+        </ol>
+      </li>
+      <li><a href="#s3-4"><span class="num">3.4</span>Khoáng vật phi silicat</a>
+        <ol>
+          <li><a href="#s3-4-1"><span class="num">3.4.1</span>Carbonat</a></li>
+          <li><a href="#s3-4-2"><span class="num">3.4.2</span>Oxit, halogenua, sulfua</a></li>
+          <li><a href="#s3-4-3"><span class="num">3.4.3</span>Sulfat</a></li>
+          <li><a href="#s3-4-4"><span class="num">3.4.4</span>Phosphat</a></li>
+          <li><a href="#s3-4-5"><span class="num">3.4.5</span>Nguyên tố tự sinh</a></li>
+        </ol>
+      </li>
+      <li><a href="#s3-5"><span class="num">3.5</span>Nhận dạng khoáng vật</a>
+        <ol>
+          <li><a href="#s3-5-1"><span class="num">3.5.1</span>Ánh &amp; màu</a></li>
+          <li><a href="#s3-5-2"><span class="num">3.5.2</span>Vết vạch</a></li>
+          <li><a href="#s3-5-3"><span class="num">3.5.3</span>Độ cứng</a></li>
+          <li><a href="#s3-5-4"><span class="num">3.5.4</span>Dạng quen tinh thể</a></li>
+          <li><a href="#s3-5-5"><span class="num">3.5.5</span>Cát khai &amp; vết vỡ</a></li>
+          <li><a href="#s3-5-6"><span class="num">3.5.6</span>Tính chất đặc biệt</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary">Tóm tắt</a></li>
+      <li><a href="#resources">Tài liệu tham khảo</a></li>
+      <li><a href="#factcheck">Ghi chú kiểm chứng</a></li>
+      <li><a href="#credits">Nguồn &amp; trích dẫn</a></li>
+    </ol>
+  </nav>
+
+<main>
+
+<section id="outcomes">
+  <h2 class="sec">Mục tiêu học tập</h2>
+  <p class="lead">Học xong Chương 3, bạn cần làm được từng việc dưới đây. Nhãn cho biết nội dung nằm ở mục nào.</p>
+  <ul class="outcomes">
+    <li><a class="tag" href="#s3-0">3.0</a><span>Định nghĩa khoáng vật.</span></li>
+    <li><a class="tag" href="#s3-1-1">3.1.1</a><span>Mô tả cấu tạo cơ bản của nguyên tử.</span></li>
+    <li><a class="tag" href="#s3-1-2">3.1.2</a><span>Rút ra thông tin cơ bản về nguyên tử từ Bảng tuần hoàn các nguyên tố hóa học.</span></li>
+    <li><a class="tag" href="#s3-1-3">3.1.3</a><span>Mô tả các liên kết hóa học liên quan đến khoáng vật.</span></li>
+    <li><a class="tag" href="#s3-2">3.2</a><span>Mô tả các con đường chính hình thành khoáng vật.</span></li>
+    <li><a class="tag" href="#s3-3">3.3</a><span>Mô tả tứ diện silic-oxy và cách nó tạo nên các khoáng vật silicat phổ biến.</span></li>
+    <li><a class="tag" href="#s3-4">3.4</a><span>Kể tên các khoáng vật phi silicat phổ biến thuộc nhóm oxit, sulfua, sulfat và carbonat.</span></li>
+    <li><a class="tag" href="#s3-5">3.5</a><span>Nhận dạng khoáng vật bằng tính chất vật lý và bảng tra cứu.</span></li>
+  </ul>
+  <div class="callout">
+    <h4>Cách dùng tài liệu này</h4>
+    <p>Các từ gạch chân là thuật ngữ chính. Nhấn vào một từ, hoặc mở <b>Thuật ngữ</b> ở góc dưới bên phải, để đọc và tìm mọi định nghĩa của chương. Các sơ đồ động sẽ đứng yên nếu thiết bị của bạn bật chế độ giảm chuyển động.</p>
+  </div>
+</section>
+
+<!-- 3.0 -->
+<section id="s3-0">
+  <h2 class="sec"><span class="n">3.0</span>Khoáng vật là gì?</h2>
+  <p>"Khoáng chất" ghi trên nhãn dinh dưỡng hay hộp thuốc không phải là khoáng vật theo nghĩa địa chất. Định nghĩa địa chất cổ điển gồm năm điều kiện:</p>
+  <div class="spheres">
+    <div class="sphere"><b><span class="dot" style="background:var(--s2)"></span>1. Có nguồn gốc tự nhiên</b>Do tự nhiên tạo ra, không phải trong phòng thí nghiệm.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s2)"></span>2. Vô cơ</b>Không do sinh vật tạo ra (xem các ngoại lệ bên dưới).</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s2)"></span>3. Ở thể rắn</b>Ở nhiệt độ phòng.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s2)"></span>4. Có cấu trúc tinh thể đều đặn</b>Các nguyên tử sắp xếp có trật tự, lặp lại.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s2)"></span>5. Có thành phần hóa học xác định</b>Một công thức cụ thể, vd. NaCl.</div>
+  </div>
+  <p><b>Ngoại lệ.</b> Nước và thủy ngân ở thể lỏng tại nhiệt độ phòng nhưng vẫn được xem là khoáng vật vì chúng được phân loại trước khi quy tắc nhiệt độ phòng ra đời. Canxit thường do sinh vật tạo ra nhưng vẫn được tính vì phân bố rộng và quan trọng về mặt địa chất. Để khắc phục những điểm không nhất quán này, <b>Hiệp hội Khoáng vật học Quốc tế</b> (IMA) đã sửa đổi định nghĩa:</p>
+  <div class="quote"><span lang="en">"A mineral is an element or chemical compound that is normally crystalline and that has been formed as a result of geological processes."</span><span class="q-tr">"Khoáng vật là một nguyên tố hoặc hợp chất hóa học, thường ở dạng tinh thể, được hình thành do kết quả của các quá trình địa chất."</span><cite>Hiệp hội Khoáng vật học Quốc tế, theo trích dẫn trong chương</cite></div>
+  <p>Vì vậy canxit trong vỏ một con nghêu còn sống <i>không</i> phải là khoáng vật, nhưng khi vỏ bị chôn vùi và biến đổi qua <button class="term" data-term="quá trình thành đá">quá trình thành đá</button> (diagenesis) hay các quá trình địa chất khác thì nó trở thành khoáng vật. Các chất tự nhiên không thỏa định nghĩa, như than đá, ngọc trai, opal và obsidian, được gọi là <button class="term" data-term="á khoáng vật">á khoáng vật</button> (mineraloid).</p>
+  <p><button class="term" data-term="đá">Đá</button> là vật chất chứa một hay nhiều khoáng vật hoặc á khoáng vật. Ba loại đá (học ở các chương sau) là <b>đá magma</b> (kết tinh từ vật chất nóng chảy), <b>đá trầm tích</b> (gồm sản phẩm của phong hóa cơ học, như cát, sỏi, và phong hóa hóa học, như các chất kết tủa từ dung dịch) và <b>đá biến chất</b> (đá khác bị biến đổi bởi nhiệt và áp suất).</p>
+  <figure>
+    <div class="frame"><img src="images/unit3/naica.webp" alt="Một người nhỏ bé giữa những tinh thể thạch cao khổng lồ màu nhạt, dạng xà ngang, đan chéo trong hang." loading="lazy" width="800" height="533"></div>
+    <figcaption>Tinh thể selenit (thạch cao) trong Hang Tinh thể ở Naica, Mexico, thuộc loại khoáng vật lớn nhất từng được tìm thấy. Tinh thể lớn nhất ở đây dài khoảng 12 m (39 ft). Chú ý người đứng làm thước tỉ lệ.<span class="credit">Alexander Van Driessche, CC BY, qua <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+</section>
+
+<!-- 3.1 -->
+<section id="s3-1">
+  <h2 class="sec"><span class="n">3.1</span>Hóa học khoáng vật</h2>
+  <p>Đá được cấu tạo từ khoáng vật, và mỗi khoáng vật có thành phần hóa học xác định. Để hiểu hóa học đó, ta bắt đầu từ đơn vị cơ bản của mọi vật chất: nguyên tử.</p>
+
+  <h3 id="s3-1-1">3.1.1 Nguyên tử</h3>
+  <p>Nguyên tử gồm ba loại hạt hạ nguyên tử. <button class="term" data-term="hạt nhân">Hạt nhân</button> ở trung tâm chứa <button class="term" data-term="proton">proton</button> (mang điện dương) và <button class="term" data-term="neutron">neutron</button> (không mang điện). Bao quanh là đám mây <button class="term" data-term="electron">electron</button> mang điện âm; trong nguyên tử trung hòa, số electron bằng số proton. Proton và neutron mỗi hạt có số khối 1, còn khối lượng electron chưa bằng 1/1000 số đó, nên <b>gần như toàn bộ khối lượng nguyên tử nằm ở hạt nhân</b>.</p>
+  <figure id="fig-atom">
+    <div class="frame"><svg viewBox="0 0 640 320" role="img" aria-labelledby="atom-t" style="width:100%;min-width:520px;height:auto"><title id="atom-t">Nguyên tử natri (2, 8, 1 electron) nhường electron hóa trị duy nhất cho nguyên tử clo (2, 8, 7 electron); cả hai có lớp vỏ ngoài cùng đầy đủ và trở thành ion Na+ và Cl-.</title><defs><marker id="ah-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--rust)"/></marker></defs><circle cx="150" cy="135" r="45" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="150" cy="135" r="75" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="150" cy="135" r="105" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="490" cy="135" r="45" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="490" cy="135" r="75" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="490" cy="135" r="105" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="150" cy="135" r="26" fill="var(--ochre-soft)" stroke="var(--ochre)" stroke-width="2"/><text x="150" y="132" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink">11 p⁺</text><text x="150" y="147" text-anchor="middle" font-size="11" class="svg-muted">12 n</text><circle cx="490" cy="135" r="26" fill="var(--ochre-soft)" stroke="var(--ochre)" stroke-width="2"/><text x="490" y="132" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink">17 p⁺</text><text x="490" y="147" text-anchor="middle" font-size="11" class="svg-muted">18 n</text><circle cx="150.0" cy="90.0" r="6" fill="var(--accent)"/><circle cx="150.0" cy="180.0" r="6" fill="var(--accent)"/><circle cx="150.0" cy="60.0" r="6" fill="var(--accent)"/><circle cx="203.0" cy="82.0" r="6" fill="var(--accent)"/><circle cx="225.0" cy="135.0" r="6" fill="var(--accent)"/><circle cx="203.0" cy="188.0" r="6" fill="var(--accent)"/><circle cx="150.0" cy="210.0" r="6" fill="var(--accent)"/><circle cx="97.0" cy="188.0" r="6" fill="var(--accent)"/><circle cx="75.0" cy="135.0" r="6" fill="var(--accent)"/><circle cx="97.0" cy="82.0" r="6" fill="var(--accent)"/><circle cx="490.0" cy="90.0" r="6" fill="var(--accent)"/><circle cx="490.0" cy="180.0" r="6" fill="var(--accent)"/><circle cx="490.0" cy="60.0" r="6" fill="var(--accent)"/><circle cx="543.0" cy="82.0" r="6" fill="var(--accent)"/><circle cx="565.0" cy="135.0" r="6" fill="var(--accent)"/><circle cx="543.0" cy="188.0" r="6" fill="var(--accent)"/><circle cx="490.0" cy="210.0" r="6" fill="var(--accent)"/><circle cx="437.0" cy="188.0" r="6" fill="var(--accent)"/><circle cx="415.0" cy="135.0" r="6" fill="var(--accent)"/><circle cx="437.0" cy="82.0" r="6" fill="var(--accent)"/><circle cx="415.8" cy="60.8" r="6" fill="var(--accent)"/><circle cx="490.0" cy="30.0" r="6" fill="var(--accent)"/><circle cx="564.2" cy="60.8" r="6" fill="var(--accent)"/><circle cx="595.0" cy="135.0" r="6" fill="var(--accent)"/><circle cx="564.2" cy="209.2" r="6" fill="var(--accent)"/><circle cx="490.0" cy="240.0" r="6" fill="var(--accent)"/><circle cx="415.8" cy="209.2" r="6" fill="var(--accent)"/><g class="hop" style="--hop:130px"><circle cx="255" cy="135" r="7" fill="var(--rust)"/></g><path d="M268 107 Q 320.0 73 372 107" fill="none" stroke="var(--rust)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ah-r)"/><text x="320.0" y="71" text-anchor="middle" font-size="12" class="svg-muted">1 electron hóa trị di chuyển</text><text x="150" y="268" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Natri (Na): lớp vỏ 2-8-1</text><text x="150" y="286" text-anchor="middle" font-size="12" class="svg-muted">nhường 1 e⁻ → ion Na⁺ (cation)</text><text x="490" y="268" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Clo (Cl): lớp vỏ 2-8-7</text><text x="490" y="286" text-anchor="middle" font-size="12" class="svg-muted">nhận 1 e⁻ → ion Cl⁻ (anion)</text><g font-size="11.5" class="svg-muted"><circle cx="276" cy="304" r="5" fill="var(--accent)"/><text x="286" y="308">electron</text><circle cx="356" cy="304" r="5" fill="var(--rust)"/><text x="366" y="308">electron hóa trị di chuyển</text></g></svg></div>
+    <figcaption>Mô hình lớp vỏ đơn giản của natri và clo. Electron hóa trị duy nhất của natri chuyển sang lớp vỏ ngoài của clo, nên cả hai đều có lớp vỏ ngoài cùng đầy đủ và trở thành ion. Đây là liên kết ion trong halit (Mục 3.1.3).<span class="credit">Sơ đồ động vẽ cho tài liệu này theo Mục 3.1.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-1-2">3.1.2 Bảng tuần hoàn các nguyên tố hóa học</h3>
+  <p><button class="term" data-term="nguyên tố">Nguyên tố</button> là loại nguyên tử có số proton xác định, gọi là <button class="term" data-term="số hiệu nguyên tử">số hiệu nguyên tử</button> (oxy có 8, sắt có 26). Nguyên tố không thể bị phân tách bằng phương pháp hóa học thành dạng đơn giản hơn và giữ tính chất hóa học, vật lý riêng. <button class="term" data-term="bảng tuần hoàn">Bảng tuần hoàn</button> liệt kê mọi nguyên tố đã biết theo thứ tự số hiệu nguyên tử; Dmitri Mendeleev lập bảng đầu tiên năm <b>1869</b>. Mỗi ô ghi ký hiệu hóa học (thường bắt nguồn từ tên Latinh hay Hy Lạp), tên, số hiệu nguyên tử và <button class="term" data-term="nguyên tử khối">nguyên tử khối</button> (proton + neutron, vì electron rất nhẹ).</p>
+  <figure id="fig-ptable">
+    <div class="frame"><svg viewBox="0 0 730 298" role="img" aria-labelledby="pt-t" style="width:100%;min-width:600px;height:auto"><title id="pt-t">Bốn hàng đầu của bảng tuần hoàn, tô màu theo xu hướng liên kết của từng cột; tám nguyên tố phổ biến nhất trong vỏ Trái Đất được viền đậm.</title><text x="58.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">1</text><text x="58.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">I</text><text x="96.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">2</text><text x="96.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">II</text><text x="134.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">3</text><text x="172.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">4</text><text x="210.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">5</text><text x="248.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">6</text><text x="286.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">7</text><text x="324.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">8</text><text x="362.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">9</text><text x="400.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">10</text><text x="438.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">11</text><text x="476.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">12</text><text x="514.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">13</text><text x="514.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">III</text><text x="552.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">14</text><text x="552.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">IV</text><text x="590.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">15</text><text x="590.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">V</text><text x="628.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">16</text><text x="628.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">VI</text><text x="666.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">17</text><text x="666.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">VII</text><text x="704.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">18</text><text x="704.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">VIII</text><text x="30" y="76.0" text-anchor="end" font-size="10.5" font-family="var(--mono)" class="svg-muted">1</text><rect x="40" y="54" width="36" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1"/><text x="43" y="64" font-size="8" font-family="var(--mono)" class="svg-muted">1</text><text x="58.0" y="81" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">H</text><rect x="686" y="54" width="36" height="36" rx="4" fill="var(--ochre-soft)" stroke="var(--ochre)" stroke-width="1"/><text x="689" y="64" font-size="8" font-family="var(--mono)" class="svg-muted">2</text><text x="704.0" y="81" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">He</text><text x="30" y="114.0" text-anchor="end" font-size="10.5" font-family="var(--mono)" class="svg-muted">2</text><rect x="40" y="92" width="36" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1"/><text x="43" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">3</text><text x="58.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Li</text><rect x="78" y="92" width="36" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1"/><text x="81" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">4</text><text x="96.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Be</text><rect x="496" y="92" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="499" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">5</text><text x="514.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">B</text><rect x="534" y="92" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="537" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">6</text><text x="552.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">C</text><rect x="572" y="92" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="575" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">7</text><text x="590.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">N</text><rect x="610" y="92" width="36" height="36" rx="4" fill="color-mix(in srgb,var(--rust) 22%,var(--surface))" stroke="var(--fg)" stroke-width="3"/><text x="613" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">8</text><text x="628.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">O</text><rect x="648" y="92" width="36" height="36" rx="4" fill="color-mix(in srgb,var(--rust) 22%,var(--surface))" stroke="var(--rust)" stroke-width="1"/><text x="651" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">9</text><text x="666.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">F</text><rect x="686" y="92" width="36" height="36" rx="4" fill="var(--ochre-soft)" stroke="var(--ochre)" stroke-width="1"/><text x="689" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">10</text><text x="704.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Ne</text><text x="30" y="152.0" text-anchor="end" font-size="10.5" font-family="var(--mono)" class="svg-muted">3</text><rect x="40" y="130" width="36" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--fg)" stroke-width="3"/><text x="43" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">11</text><text x="58.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Na</text><rect x="78" y="130" width="36" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--fg)" stroke-width="3"/><text x="81" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">12</text><text x="96.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Mg</text><rect x="496" y="130" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--fg)" stroke-width="3"/><text x="499" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">13</text><text x="514.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Al</text><rect x="534" y="130" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--fg)" stroke-width="3"/><text x="537" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">14</text><text x="552.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Si</text><rect x="572" y="130" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="575" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">15</text><text x="590.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">P</text><rect x="610" y="130" width="36" height="36" rx="4" fill="color-mix(in srgb,var(--rust) 22%,var(--surface))" stroke="var(--rust)" stroke-width="1"/><text x="613" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">16</text><text x="628.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">S</text><rect x="648" y="130" width="36" height="36" rx="4" fill="color-mix(in srgb,var(--rust) 22%,var(--surface))" stroke="var(--rust)" stroke-width="1"/><text x="651" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">17</text><text x="666.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Cl</text><rect x="686" y="130" width="36" height="36" rx="4" fill="var(--ochre-soft)" stroke="var(--ochre)" stroke-width="1"/><text x="689" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">18</text><text x="704.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Ar</text><text x="30" y="190.0" text-anchor="end" font-size="10.5" font-family="var(--mono)" class="svg-muted">4</text><rect x="40" y="168" width="36" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--fg)" stroke-width="3"/><text x="43" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">19</text><text x="58.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">K</text><rect x="78" y="168" width="36" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--fg)" stroke-width="3"/><text x="81" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">20</text><text x="96.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Ca</text><rect x="116" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="119" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">21</text><text x="134.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Sc</text><rect x="154" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="157" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">22</text><text x="172.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Ti</text><rect x="192" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="195" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">23</text><text x="210.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">V</text><rect x="230" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="233" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">24</text><text x="248.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Cr</text><rect x="268" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="271" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">25</text><text x="286.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Mn</text><rect x="306" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--fg)" stroke-width="3"/><text x="309" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">26</text><text x="324.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Fe</text><rect x="344" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="347" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">27</text><text x="362.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Co</text><rect x="382" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="385" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">28</text><text x="400.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Ni</text><rect x="420" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="423" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">29</text><text x="438.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Cu</text><rect x="458" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="461" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">30</text><text x="476.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Zn</text><rect x="496" y="168" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="499" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">31</text><text x="514.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Ga</text><rect x="534" y="168" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="537" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">32</text><text x="552.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Ge</text><rect x="572" y="168" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="575" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">33</text><text x="590.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">As</text><rect x="610" y="168" width="36" height="36" rx="4" fill="color-mix(in srgb,var(--rust) 22%,var(--surface))" stroke="var(--rust)" stroke-width="1"/><text x="613" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">34</text><text x="628.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Se</text><rect x="648" y="168" width="36" height="36" rx="4" fill="color-mix(in srgb,var(--rust) 22%,var(--surface))" stroke="var(--rust)" stroke-width="1"/><text x="651" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">35</text><text x="666.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Br</text><rect x="686" y="168" width="36" height="36" rx="4" fill="var(--ochre-soft)" stroke="var(--ochre)" stroke-width="1"/><text x="689" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">36</text><text x="704.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Kr</text><rect x="40" y="217" width="14" height="14" rx="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/><text x="62" y="228" font-size="11.5" class="svg-ink">I–II: nhường 1–2 electron → cation (+)</text><rect x="380" y="217" width="14" height="14" rx="3" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.5"/><text x="402" y="228" font-size="11.5" class="svg-ink">3–12: nguyên tố chuyển tiếp (vd. Fe²⁺ / Fe³⁺)</text><rect x="40" y="239" width="14" height="14" rx="3" fill="var(--surface)" stroke="var(--line)" stroke-width="1.5"/><text x="62" y="250" font-size="11.5" class="svg-ink">13–15: thường dùng chung electron (cộng hóa trị)</text><rect x="380" y="239" width="14" height="14" rx="3" fill="color-mix(in srgb,var(--rust) 22%,var(--surface))" stroke="var(--rust)" stroke-width="1.5"/><text x="402" y="250" font-size="11.5" class="svg-ink">VI–VII: nhận 1–2 electron → anion (−)</text><rect x="40" y="261" width="14" height="14" rx="3" fill="var(--ochre-soft)" stroke="var(--ochre)" stroke-width="1.5"/><text x="62" y="272" font-size="11.5" class="svg-ink">VIII: khí hiếm, lớp vỏ đầy, trơ</text><rect x="380" y="261" width="14" height="14" rx="3" fill="var(--surface)" stroke="var(--fg)" stroke-width="3"/><text x="402" y="272" font-size="11.5" class="svg-ink">Viền đậm: 8 nguyên tố phổ biến nhất trong vỏ Trái Đất</text></svg></div>
+    <figcaption>Bốn hàng đầu của bảng tuần hoàn, tô màu theo xu hướng liên kết mô tả ở Mục 3.1.3. Các cột được đánh số 1–18, các cột chính còn mang số La Mã I–VIII. Tám nguyên tố phổ biến nhất trong vỏ Trái Đất (Bảng 3.1) được viền đậm.<span class="credit">Sơ đồ vẽ cho tài liệu này theo Mục 3.1. Chương gốc dùng bảng đầy đủ của NIST.</span></figcaption>
+  </figure>
+  <p><b>Đồng vị.</b> Nguyên tử khối trên bảng tuần hoàn thường không phải số nguyên vì đó là giá trị trung bình của các nguyên tử có số neutron khác nhau. <button class="term" data-term="đồng vị">Đồng vị</button> là các dạng của một nguyên tố có cùng số proton nhưng khác số neutron. Với cacbon, 98,9% nguyên tử là <b>cacbon-12</b> (6 proton, 6 neutron); một ít là <b>cacbon-13</b> (7 neutron); một lượng vết là <b>cacbon-14</b> (8 neutron).</p>
+  <figure>
+    <div class="frame"><img src="images/unit3/c14.webp" style="max-width:520px" alt="Sơ đồ: hạt nhân nitơ-14 hấp thụ một neutron và giải phóng một proton, trở thành cacbon-14." loading="lazy" width="732" height="300"></div>
+    <figcaption>Sự hình thành cacbon-14 từ nitơ-14: một neutron đi vào, một proton thoát ra, nên số hiệu nguyên tử giảm từ 7 xuống 6.<span class="credit">Sgbeer, NikNaks chỉnh sửa, CC BY-SA, qua <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+  <p>Trong <b>118 nguyên tố đã biết</b>, các nguyên tố nặng nhất là sản phẩm nhân tạo tồn tại rất ngắn; nguyên tố tự nhiên nặng nhất là <b>urani</b> (số hiệu 92). Chỉ tám nguyên tố tạo nên gần như toàn bộ vỏ lục địa, và đó chính là các nguyên tố có trong những khoáng vật tạo đá phổ biến.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Tám nguyên tố phổ biến nhất trong vỏ lục địa Trái Đất, % khối lượng (USGS, theo chương). Mỗi nguyên tố còn lại đều dưới 1%.</caption>
+      <thead><tr><th>Nguyên tố</th><th>Ký hiệu</th><th>Hàm lượng</th></tr></thead>
+      <tbody>
+        <tr><td>Oxy</td><td>O</td><td><span class="bar"><i style="width:94px"></i>47%</span></td></tr>
+        <tr><td>Silic</td><td>Si</td><td><span class="bar"><i style="width:56px"></i>28%</span></td></tr>
+        <tr><td>Nhôm</td><td>Al</td><td><span class="bar"><i style="width:16px"></i>8%</span></td></tr>
+        <tr><td>Sắt</td><td>Fe</td><td><span class="bar"><i style="width:10px"></i>5%</span></td></tr>
+        <tr><td>Canxi</td><td>Ca</td><td><span class="bar"><i style="width:8px"></i>4%</span></td></tr>
+        <tr><td>Natri</td><td>Na</td><td><span class="bar"><i style="width:6px"></i>3%</span></td></tr>
+        <tr><td>Kali</td><td>K</td><td><span class="bar"><i style="width:6px"></i>3%</span></td></tr>
+        <tr><td>Magie</td><td>Mg</td><td><span class="bar"><i style="width:4px"></i>2%</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s3-1-3">3.1.3 Liên kết hóa học</h3>
+  <p>Phần lớn vật chất trên Trái Đất là <button class="term" data-term="hợp chất">hợp chất</button> của nhiều nguyên tố. <button class="term" data-term="liên kết hóa học">Liên kết hóa học</button> mô tả cách các nguyên tử gắn với nhau để tạo hợp chất, vd. natri và clo tạo NaCl (muối ăn). Hợp chất được giữ bởi liên kết hóa học gọi là <button class="term" data-term="phân tử">phân tử</button>. Chỉ số dưới cho biết số nguyên tử: O<sub>2</sub> là hai nguyên tử oxy, còn nước (H<sub>2</sub>O) là hai hydro liên kết cộng hóa trị với một oxy.</p>
+  <p>Phần lớn khoáng vật cũng là hợp chất. <b>Canxit, CaCO<sub>3</sub></b>, gồm một canxi, một cacbon và ba oxy. Cacbon và ba oxy liên kết cộng hóa trị thành một <button class="term" data-term="ion đa nguyên tử">ion đa nguyên tử</button> mang điện âm, <b>ion carbonat (CO<sub>3</sub><sup>2−</sup>)</b>, hút ion canxi (Ca<sup>2+</sup>). Trong <b>olivin, (Mg,Fe)<sub>2</sub>SiO<sub>4</sub></b>, dấu phẩy nghĩa là Mg và Fe có thể chiếm cùng một vị trí trong tinh thể và thay thế cho nhau.</p>
+
+  <h4>Hóa trị và điện tích</h4>
+  <p>Electron nằm trong các <b>lớp vỏ</b> ứng với các mức năng lượng khác nhau. Lớp ngoài cùng là <button class="term" data-term="lớp electron hóa trị">lớp electron hóa trị</button>, và electron của nó tham gia liên kết. Năm 1913, Niels Bohr cho rằng nguyên tử bền hơn khi lớp ngoài cùng đầy, nên phần lớn nguyên tử nhận thêm hoặc nhường bớt electron để làm đầy lớp này. Trong mô hình Bohr, lớp thứ nhất chứa tối đa 2 electron, lớp thứ hai và thứ ba chứa tối đa 8: đó là <button class="term" data-term="quy tắc bát tử">quy tắc bát tử</button> (octet; với hydro và heli là lớp thứ nhất đầy 2 electron).</p>
+  <ul>
+    <li><b>Cột I và II</b> có 1 và 2 electron hóa trị và dễ nhường chúng. Natri (hàng 3, cột I: lớp vỏ 2-8-1) mất electron hóa trị duy nhất, còn 11 proton và 10 electron: thành ion có điện tích <b>+1</b>. Các nguyên tố cột II thành ion <b>+2</b>.</li>
+    <li><b>Cột VI và VII</b> có 6 và 7 electron hóa trị và dễ nhận thêm electron, nên thường liên kết với các nguyên tố cột I và II.</li>
+    <li><b>Cột VIII (18)</b> gồm các <button class="term" data-term="khí hiếm">khí hiếm</button>. Lớp hóa trị của chúng đã đầy (heli có 2), nên chúng trơ về mặt hóa học và không liên kết.</li>
+  </ul>
+  <p>Nguyên tử mang điện tích do nhận hoặc mất electron gọi là <button class="term" data-term="ion">ion</button>. Các nguyên tố bên trái bảng mất electron và thành <button class="term" data-term="cation">cation</button> dương (bị hút về cực âm, cathode, trong thiết bị điện); các nguyên tố bên phải nhận electron và thành <button class="term" data-term="anion">anion</button> âm (bị hút về cực dương, anode). Các nguyên tố ở giữa bảng không tuân thủ quy tắc bát tử một cách nhất quán; đó là các <button class="term" data-term="nguyên tố chuyển tiếp">nguyên tố chuyển tiếp</button>. Ví dụ điển hình là sắt: <b>Fe<sup>3+</sup></b> (dạng oxy hóa) thường làm đá có màu <b>đỏ</b>, còn <b>Fe<sup>2+</sup></b> (dạng khử) thường cho màu <b>lục</b>.</p>
+  <figure>
+    <div class="frame"><img class="diagram" src="images/unit3/co2.webp" alt="Mô hình quả cầu và thanh của cacbon đioxit: nguyên tử cacbon màu đen giữa hai nguyên tử oxy màu đỏ." loading="lazy" style="max-width:300px" width="512" height="364"></div>
+    <figcaption>Phân tử cacbon đioxit. Oxy mang −2 và cacbon mang +4, nên hai oxy liên kết với một cacbon tạo phân tử trung hòa.<span class="credit">Jynto, CC0, qua <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+
+  <h4>Liên kết ion</h4>
+  <p><button class="term" data-term="liên kết ion">Liên kết ion</button> (liên kết chuyển electron) hình thành nhờ lực hút tĩnh điện giữa các ion trái dấu: một nguyên tử chuyển electron cho nguyên tử kia để cả hai có lớp hóa trị đầy đủ. Một Na<sup>+</sup> và một Cl<sup>−</sup> tạo <b>natri clorua, NaCl</b>: khoáng vật <b>halit</b>, muối ăn (<a href="#fig-nacl">Hình 3.6</a>). Một Ca<sup>2+</sup> và hai Cl<sup>−</sup> tạo canxi clorua, <b>CaCl<sub>2</sub></b>. Liên kết ion thường hình thành giữa một kim loại và một phi kim.</p>
+  <h4>Liên kết cộng hóa trị</h4>
+  <p><button class="term" data-term="liên kết cộng hóa trị">Liên kết cộng hóa trị</button> (liên kết dùng chung electron) thường gặp giữa các phi kim, chúng dùng chung electron để làm đầy lớp hóa trị. Oxy có 6 electron hóa trị; hai nguyên tử oxy dùng chung 2 electron để tạo <b>O<sub>2</sub></b>. Trong <b>metan (CH<sub>4</sub>)</b>, cacbon cần 4 electron và mỗi hydro cần 1, nên mỗi hydro dùng chung electron của mình với cacbon.</p>
+  <div class="pair same">
+    <figure id="fig-nacl">
+      <div class="frame"><img class="diagram" src="images/unit3/nacl.webp" alt="Khối lập phương gồm các quả cầu clo lớn màu lục và natri nhỏ màu tím xen kẽ." loading="lazy" width="768" height="728"></div>
+      <figcaption>Liên kết ion: cách sắp xếp lập phương của Na (tím) và Cl (lục) trong halit.<span class="credit">Benjah-bmm27, CC0.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img class="diagram" src="images/unit3/methane.webp" alt="Sơ đồ metan: nguyên tử cacbon ở giữa dùng chung một cặp electron với mỗi nguyên tử trong bốn nguyên tử hydro." loading="lazy" width="665" height="800"></div>
+      <figcaption>Liên kết cộng hóa trị: metan, mỗi hydro dùng chung một cặp electron với cacbon.<span class="credit">DynaBlast, CC BY-SA.</span></figcaption>
+    </figure>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener">Bài kiểm tra mục 3.1 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<!-- 3.2 -->
+<section id="s3-2">
+  <h2 class="sec"><span class="n">3.2</span>Sự hình thành khoáng vật</h2>
+  <p>Khoáng vật hình thành khi các nguyên tử liên kết với nhau theo một trật tự tinh thể. Trong tự nhiên có ba con đường chính:</p>
+  <div class="spheres">
+    <div class="sphere"><b><span class="dot" style="background:var(--accent)"></span>Từ dung dịch nước</b>Kết tủa từ dung dịch nước, vd. khi nhiệt độ thay đổi hoặc nước bay hơi.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--rust)"></span>Từ macma</b>Kết tinh từ đá nóng chảy khi nguội đi.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--ochre)"></span>Do sinh vật</b>Kết tủa sinh học tạo vỏ, xương và bộ khung.</div>
+  </div>
+
+  <h3 id="s3-2-1">3.2.1 Kết tủa từ dung dịch nước</h3>
+  <p><button class="term" data-term="dung dịch">Dung dịch</button> gồm các ion hay phân tử (<button class="term" data-term="chất tan">chất tan</button>) hòa tan trong một <button class="term" data-term="dung môi">dung môi</button>, trong tự nhiên thường là nước. Khi halit tan, các ion Na<sup>+</sup> và Cl<sup>−</sup> tách ra và phân tán. <button class="term" data-term="kết tủa">Kết tủa</button> là quá trình ngược lại: các ion trong dung dịch kết hợp thành khoáng vật rắn. Quá trình này phụ thuộc vào nồng độ ion, nhiệt độ và áp suất. Thời điểm dung môi không thể hòa tan thêm chất tan là <button class="term" data-term="bão hòa">bão hòa</button>. Kết tủa có thể xảy ra khi dung dịch nguội đi, khi dung môi bay hơi hoặc khi điều kiện hóa học thay đổi. Ở nhà, đó là lớp cặn khoáng trên vòi nước, vòi sen và ly uống nước.</p>
+  <ul>
+    <li><b><button class="term" data-term="tufa">Tufa</button></b> ở Utah hình thành nơi các mạch suối giàu khoáng chảy vào hồ Bonneville thời kỳ băng hà. Nay lộ ra ở các thung lũng khô, loại đá xốp này từng được những người khai hoang dùng làm vật liệu cách nhiệt tự nhiên cho nhà ở.</li>
+    <li>Các <b>bậc travertin</b> ở Mammoth Hot Springs, Yellowstone, hình thành do canxit kết tủa ở rìa các ao nông được suối cấp nước.</li>
+    <li><b>Hồ Great Salt Lake</b> mặn gần gấp tám lần đại dương. Sông suối mang ion muối vào, hồ không có lối thoát, nước bốc hơi làm nồng độ tăng đến bão hòa và khoáng vật kết tủa thành trầm tích. Hồ Mono (California) và Biển Chết cũng tương tự.</li>
+  </ul>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/hard-water.webp" alt="Đầu lọc vòi nước phủ cặn khoáng màu trắng." loading="lazy" width="768" height="512"></div>
+      <figcaption>Cặn canxi carbonat do nước cứng để lại trên vòi nước.<span class="credit">Bbypnda, CC BY-SA.</span></figcaption>
+    </figure>
+    <figure id="fig-saltflats">
+      <div class="frame"><img src="images/unit3/salt-flats.webp" alt="Bãi muối trắng phẳng trải dài tới dãy núi xa dưới bầu trời xanh." loading="lazy" width="754" height="494"></div>
+      <figcaption>Bãi muối Bonneville ở Utah, để lại sau quá trình bay hơi.<span class="credit">Phạm vi công cộng.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s3-2-2">3.2.2 Kết tinh từ macma</h3>
+  <p>Nhiệt là năng lượng làm nguyên tử dao động; nhiệt độ đo cường độ của dao động đó. Khi dao động đủ mạnh, liên kết hóa học bị phá vỡ, tinh thể nóng chảy và giải phóng ion vào khối nóng chảy. <button class="term" data-term="macma">Macma</button> là đá nóng chảy với các ion chuyển động tự do. Khi macma xâm nhập ở dưới sâu hoặc phun trào lên bề mặt (lúc đó gọi là <button class="term" data-term="dung nham">dung nham</button>), nó nguội đi và các tinh thể khoáng vật có thể hình thành.</p>
+  <figure>
+    <div class="frame"><img src="images/unit3/pahoehoe.webp" alt="Một mũi dung nham mới phát sáng màu cam với lớp vỏ sẫm đang nguội." loading="lazy" width="800" height="500"></div>
+    <figcaption>Dung nham, tức macma trên bề mặt Trái Đất. Khi nguội, khoáng vật kết tinh từ khối nóng chảy.<span class="credit">Phạm vi công cộng, qua <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-2-3">3.2.3 Kết tủa do sinh vật</h3>
+  <p>Nhiều sinh vật tạo xương, vỏ và lớp bao bọc cơ thể bằng cách lấy ion từ nước và kết tủa khoáng vật. Phổ biến nhất là <b>canxit (CaCO<sub>3</sub>)</b>, thường được kết tủa dưới dạng <button class="term" data-term="dạng đa hình">dạng đa hình</button> của nó là <b>aragonit</b> (các dạng đa hình có cùng công thức hóa học nhưng khác cấu trúc tinh thể).</p>
+  <ul>
+    <li><b>San hô và nghêu</b> tạo vỏ aragonit hoặc canxit. Sau khi chết, phần cứng tích tụ dưới đáy biển và có thể thành <b>đá vôi</b>. Đá vôi có thể hình thành không cần sinh vật, nhưng phần lớn hình thành theo cách này.</li>
+    <li><b>Trùng phóng xạ</b> (radiolaria), một loại động vật phù du, tạo vỏ silica cực nhỏ có thể tích tụ thành đá <b>chert</b> (đá silic).</li>
+    <li><b>Xương</b> chủ yếu là một dạng <b>apatit</b> (nhóm phosphat) gọi là apatit hydroxycarbonat.</li>
+  </ul>
+  <div class="callout warn">
+    <h4>Ghi nhớ</h4>
+    <p>Theo định nghĩa của IMA, các chất sinh học này chưa phải là khoáng vật cho đến khi sinh vật chết và phần cứng của nó trở thành hóa thạch.</p>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener">Bài kiểm tra mục 3.2 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<!-- 3.3 -->
+<section id="s3-3">
+  <h2 class="sec"><span class="n">3.3</span>Khoáng vật silicat</h2>
+  <p>Khoáng vật được phân nhóm theo thành phần và cấu trúc. <button class="term" data-term="khoáng vật silicat">Khoáng vật silicat</button>, nhóm lớn nhất trên Trái Đất, chiếm phần lớn manti và vỏ Trái Đất. Trong gần 4.000 khoáng vật đã biết, đa số hiếm gặp; chỉ một số ít, gọi là <button class="term" data-term="khoáng vật tạo đá">khoáng vật tạo đá</button>, tạo nên hầu hết các loại đá ta thường gặp.</p>
+  <p>Silicat được xây dựng quanh <button class="term" data-term="tứ diện silic-oxy">tứ diện silic-oxy</button> (SiO<sub>4</sub>): một ion silic nhỏ (+4) ở tâm của bốn ion oxy lớn (mỗi ion −2) ở bốn đỉnh của một hình chóp bốn mặt. Silic dùng chung một electron hóa trị với mỗi oxy bằng liên kết cộng hóa trị. Vì mỗi oxy chỉ dùng chung một nửa số electron hóa trị, tứ diện mang điện tích <b>−4</b> và các đỉnh của nó vẫn còn hoạt động hóa học: chúng liên kết với tứ diện khác hoặc với cation như Al<sup>3+</sup>, Fe<sup>2+,3+</sup>, Mg<sup>2+</sup>, K<sup>+</sup>, Na<sup>+</sup> và Ca<sup>2+</sup>.</p>
+  <figure>
+    <div class="frame"><svg viewBox="0 0 600 232" role="img" aria-labelledby="tet-t" style="width:100%;min-width:520px;height:auto"><title id="tet-t">Ion silic nằm ở tâm của bốn ion oxy xếp thành hình chóp bốn mặt; tổng điện tích là âm bốn.</title><line x1="150" y1="48" x2="66" y2="178" stroke="var(--muted)" stroke-width="2"/><line x1="150" y1="48" x2="238" y2="182" stroke="var(--muted)" stroke-width="2"/><line x1="66" y1="178" x2="238" y2="182" stroke="var(--muted)" stroke-width="2"/><line x1="150" y1="48" x2="170" y2="132" stroke="var(--muted)" stroke-width="2" stroke-dasharray="5 4"/><line x1="66" y1="178" x2="170" y2="132" stroke="var(--muted)" stroke-width="2" stroke-dasharray="5 4"/><line x1="238" y1="182" x2="170" y2="132" stroke="var(--muted)" stroke-width="2" stroke-dasharray="5 4"/><circle cx="170" cy="132" r="26" fill="var(--rust)" opacity=".35"/><line x1="156" y1="136" x2="150" y2="48" stroke="var(--ochre)" stroke-width="3"/><line x1="156" y1="136" x2="66" y2="178" stroke="var(--ochre)" stroke-width="3"/><line x1="156" y1="136" x2="238" y2="182" stroke="var(--ochre)" stroke-width="3"/><line x1="156" y1="136" x2="170" y2="132" stroke="var(--ochre)" stroke-width="3"/><circle cx="156" cy="136" r="11" fill="var(--ochre)"/><text x="156" y="140" text-anchor="middle" font-size="10" font-weight="700" fill="#1c1a14">Si</text><circle cx="150" cy="48" r="26" fill="var(--rust)" opacity=".85"/><text x="150" y="53" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">O</text><circle cx="66" cy="178" r="26" fill="var(--rust)" opacity=".85"/><text x="66" y="183" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">O</text><circle cx="238" cy="182" r="26" fill="var(--rust)" opacity=".85"/><text x="238" y="187" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">O</text><text x="330" y="56" font-size="14" font-weight="700" class="svg-ink">Tứ diện silic-oxy</text><text x="330" y="92" font-size="13" class="svg-ink">Si⁴⁺ ở tâm</text><text x="580" y="92" text-anchor="end" font-size="13" font-family="var(--mono)" class="svg-ink">+4</text><text x="330" y="122" font-size="13" class="svg-ink">4 × O²⁻ ở bốn đỉnh</text><text x="580" y="122" text-anchor="end" font-size="13" font-family="var(--mono)" class="svg-ink">−8</text><text x="330" y="152" font-size="13" class="svg-ink" font-weight="700">Điện tích tổng của SiO₄</text><text x="580" y="152" text-anchor="end" font-size="13" font-family="var(--mono)" class="svg-ink" font-weight="700">−4</text><line x1="330" y1="132" x2="580" y2="132" stroke="var(--line)"/><text x="330" y="182" font-size="12" class="svg-muted">Mỗi O ở đỉnh còn một liên kết tự do,</text><text x="330" y="198" font-size="12" class="svg-muted">nên có thể nối với một tứ diện khác</text><text x="330" y="214" font-size="12" class="svg-muted">hoặc với cation (Al, Fe, Mg, K, Na, Ca).</text></svg></div>
+    <figcaption>Tứ diện silic-oxy. Ion silic nhỏ hơn nhiều so với ion oxy nên nằm vừa trong khoảng trống nhỏ giữa chúng.<span class="credit">Sơ đồ vẽ cho tài liệu này theo Mục 3.3.</span></figcaption>
+  </figure>
+  <p>Tùy các yếu tố như thành phần hóa học ban đầu của macma, các tứ diện có thể <b>đứng riêng lẻ</b> hoặc nối thành <b>chuỗi, tấm hay khung ba chiều</b>. Các tứ diện nối nhau là <button class="term" data-term="polyme">polyme</button>, liên kết cộng hóa trị qua các oxy ở đỉnh. Cation lấp vào khoảng trống trong mỗi cấu trúc, tạo nên các nhóm silicat khác nhau.</p>
+  <figure id="fig-silicates">
+    <div class="frame"><svg viewBox="0 0 750 300" role="img" aria-labelledby="sil-t" style="width:100%;min-width:640px;height:auto"><title id="sil-t">Năm kiểu liên kết của tứ diện silica: đơn lẻ, chuỗi đơn, chuỗi kép, tấm và khung ba chiều, với số oxy đỉnh dùng chung tăng dần từ trái sang phải.</title><defs><marker id="ah-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs><g transform="translate(0,0)"><rect x="4" y="4" width="142" height="246" rx="10" class="flow-step" style="--d:0.0s;stroke-width:1.2"/><text x="75.0" y="28" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Đơn lẻ</text><polygon points="22.0,89.4 56.0,89.4 39.0,60.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="39.0" cy="79.6" r="2.6" fill="var(--ochre)"/><polygon points="82.0,69.4 116.0,69.4 99.0,40.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="99.0" cy="59.6" r="2.6" fill="var(--ochre)"/><polygon points="52.0,129.4 86.0,129.4 69.0,100.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="69.0" cy="119.6" r="2.6" fill="var(--ochre)"/><polygon points="100.0,127.4 134.0,127.4 117.0,98.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="117.0" cy="117.6" r="2.6" fill="var(--ochre)"/><text x="75.0" y="184" text-anchor="middle" font-size="11" font-family="var(--mono)" class="svg-muted">dùng chung 0 đỉnh</text><text x="75.0" y="210" text-anchor="middle" font-size="11.5" font-style="italic" class="svg-ink">silicat đảo (neso)</text><text x="75.0" y="230" text-anchor="middle" font-size="11" class="svg-muted">olivin, granat, zircon</text></g><g transform="translate(150,0)"><rect x="4" y="4" width="142" height="246" rx="10" class="flow-step" style="--d:1.2s;stroke-width:1.2"/><text x="75.0" y="28" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Chuỗi đơn</text><polygon points="8.0,104.5 34.0,104.5 21.0,82.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="97.0" r="2.6" fill="var(--ochre)"/><polygon points="34.0,104.5 60.0,104.5 47.0,82.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="47.0" cy="97.0" r="2.6" fill="var(--ochre)"/><polygon points="60.0,104.5 86.0,104.5 73.0,82.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="73.0" cy="97.0" r="2.6" fill="var(--ochre)"/><polygon points="86.0,104.5 112.0,104.5 99.0,82.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="99.0" cy="97.0" r="2.6" fill="var(--ochre)"/><polygon points="112.0,104.5 138.0,104.5 125.0,82.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="125.0" cy="97.0" r="2.6" fill="var(--ochre)"/><text x="75.0" y="184" text-anchor="middle" font-size="11" font-family="var(--mono)" class="svg-muted">dùng chung 2 đỉnh</text><text x="75.0" y="210" text-anchor="middle" font-size="11.5" font-style="italic" class="svg-ink">pyroxen</text><text x="75.0" y="230" text-anchor="middle" font-size="11" class="svg-muted">augit, diopsit</text></g><g transform="translate(300,0)"><rect x="4" y="4" width="142" height="246" rx="10" class="flow-step" style="--d:2.4s;stroke-width:1.2"/><text x="75.0" y="28" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Chuỗi kép</text><polygon points="8.0,60.0 34.0,60.0 21.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="67.5" r="2.6" fill="var(--ochre)"/><polygon points="34.0,60.0 60.0,60.0 47.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="47.0" cy="67.5" r="2.6" fill="var(--ochre)"/><polygon points="60.0,60.0 86.0,60.0 73.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="73.0" cy="67.5" r="2.6" fill="var(--ochre)"/><polygon points="86.0,60.0 112.0,60.0 99.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="99.0" cy="67.5" r="2.6" fill="var(--ochre)"/><polygon points="112.0,60.0 138.0,60.0 125.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="125.0" cy="67.5" r="2.6" fill="var(--ochre)"/><polygon points="8.0,105.0 34.0,105.0 21.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="97.5" r="2.6" fill="var(--ochre)"/><polygon points="34.0,105.0 60.0,105.0 47.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="47.0" cy="97.5" r="2.6" fill="var(--ochre)"/><polygon points="60.0,105.0 86.0,105.0 73.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="73.0" cy="97.5" r="2.6" fill="var(--ochre)"/><polygon points="86.0,105.0 112.0,105.0 99.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="99.0" cy="97.5" r="2.6" fill="var(--ochre)"/><polygon points="112.0,105.0 138.0,105.0 125.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="125.0" cy="97.5" r="2.6" fill="var(--ochre)"/><text x="75.0" y="184" text-anchor="middle" font-size="11" font-family="var(--mono)" class="svg-muted">dùng chung 2 hoặc 3 đỉnh</text><text x="75.0" y="210" text-anchor="middle" font-size="11.5" font-style="italic" class="svg-ink">amphibol (silicat chuỗi)</text><text x="75.0" y="230" text-anchor="middle" font-size="11" class="svg-muted">hornblend</text></g><g transform="translate(450,0)"><rect x="4" y="4" width="142" height="246" rx="10" class="flow-step" style="--d:3.5999999999999996s;stroke-width:1.2"/><text x="75.0" y="28" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Tấm (lớp)</text><polygon points="10.0,65.1 32.0,65.1 21.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="32.0,65.1 54.0,65.1 43.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="43.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="54.0,65.1 76.0,65.1 65.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="65.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="76.0,65.1 98.0,65.1 87.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="87.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="98.0,65.1 120.0,65.1 109.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="109.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="21.0,84.1 43.0,84.1 32.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="32.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="43.0,84.1 65.0,84.1 54.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="54.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="65.0,84.1 87.0,84.1 76.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="76.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="87.0,84.1 109.0,84.1 98.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="98.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="109.0,84.1 131.0,84.1 120.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="120.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="10.0,103.2 32.0,103.2 21.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="32.0,103.2 54.0,103.2 43.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="43.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="54.0,103.2 76.0,103.2 65.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="65.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="76.0,103.2 98.0,103.2 87.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="87.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="98.0,103.2 120.0,103.2 109.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="109.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="21.0,122.2 43.0,122.2 32.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="32.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="43.0,122.2 65.0,122.2 54.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="54.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="65.0,122.2 87.0,122.2 76.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="76.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="87.0,122.2 109.0,122.2 98.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="98.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="109.0,122.2 131.0,122.2 120.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="120.0" cy="115.9" r="2.6" fill="var(--ochre)"/><text x="75.0" y="184" text-anchor="middle" font-size="11" font-family="var(--mono)" class="svg-muted">dùng chung 3 đỉnh</text><text x="75.0" y="210" text-anchor="middle" font-size="11.5" font-style="italic" class="svg-ink">silicat lớp (phyllo)</text><text x="75.0" y="230" text-anchor="middle" font-size="11" class="svg-muted">mica, khoáng vật sét</text></g><g transform="translate(600,0)"><rect x="4" y="4" width="142" height="246" rx="10" class="flow-step" style="--d:4.8s;stroke-width:1.2"/><text x="75.0" y="28" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Khung</text><g transform="translate(6,8)"><polygon points="10.0,65.1 32.0,65.1 21.0,46.0" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="32.0,65.1 54.0,65.1 43.0,46.0" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="43.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="54.0,65.1 76.0,65.1 65.0,46.0" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="65.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="76.0,65.1 98.0,65.1 87.0,46.0" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="87.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="98.0,65.1 120.0,65.1 109.0,46.0" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="109.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="21.0,84.1 43.0,84.1 32.0,65.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="32.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="43.0,84.1 65.0,84.1 54.0,65.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="54.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="65.0,84.1 87.0,84.1 76.0,65.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="76.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="87.0,84.1 109.0,84.1 98.0,65.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="98.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="109.0,84.1 131.0,84.1 120.0,65.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="120.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="10.0,103.2 32.0,103.2 21.0,84.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="32.0,103.2 54.0,103.2 43.0,84.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="43.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="54.0,103.2 76.0,103.2 65.0,84.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="65.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="76.0,103.2 98.0,103.2 87.0,84.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="87.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="98.0,103.2 120.0,103.2 109.0,84.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="109.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="21.0,122.2 43.0,122.2 32.0,103.2" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="32.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="43.0,122.2 65.0,122.2 54.0,103.2" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="54.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="65.0,122.2 87.0,122.2 76.0,103.2" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="76.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="87.0,122.2 109.0,122.2 98.0,103.2" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="98.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="109.0,122.2 131.0,122.2 120.0,103.2" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="120.0" cy="115.9" r="2.6" fill="var(--ochre)"/></g><polygon points="10.0,65.1 32.0,65.1 21.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="32.0,65.1 54.0,65.1 43.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="43.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="54.0,65.1 76.0,65.1 65.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="65.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="76.0,65.1 98.0,65.1 87.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="87.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="98.0,65.1 120.0,65.1 109.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="109.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="21.0,84.1 43.0,84.1 32.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="32.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="43.0,84.1 65.0,84.1 54.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="54.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="65.0,84.1 87.0,84.1 76.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="76.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="87.0,84.1 109.0,84.1 98.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="98.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="109.0,84.1 131.0,84.1 120.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="120.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="10.0,103.2 32.0,103.2 21.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="32.0,103.2 54.0,103.2 43.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="43.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="54.0,103.2 76.0,103.2 65.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="65.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="76.0,103.2 98.0,103.2 87.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="87.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="98.0,103.2 120.0,103.2 109.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="109.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="21.0,122.2 43.0,122.2 32.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="32.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="43.0,122.2 65.0,122.2 54.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="54.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="65.0,122.2 87.0,122.2 76.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="76.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="87.0,122.2 109.0,122.2 98.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="98.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="109.0,122.2 131.0,122.2 120.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="120.0" cy="115.9" r="2.6" fill="var(--ochre)"/><text x="75.0" y="184" text-anchor="middle" font-size="11" font-family="var(--mono)" class="svg-muted">dùng chung cả 4 đỉnh</text><text x="75.0" y="210" text-anchor="middle" font-size="11.5" font-style="italic" class="svg-ink">silicat khung (tecto)</text><text x="75.0" y="230" text-anchor="middle" font-size="11" class="svg-muted">thạch anh, fenspat</text></g><line x1="20" y1="270" x2="730" y2="270" stroke="var(--muted)" stroke-width="1.5" marker-end="url(#ah-m)"/><text x="375.0" y="290" text-anchor="middle" font-size="12" class="svg-muted">càng nhiều oxy ở đỉnh được dùng chung giữa các tứ diện (mức trùng hợp càng cao)</text></svg></div>
+    <figcaption>Cách các tứ diện silica liên kết trong các nhóm silicat chính, nhìn từ trên xuống (mỗi tam giác là một tứ diện; chấm là silic). Ô silicat khung thể hiện thêm một lớp thứ hai (nét đứt) để gợi không gian ba chiều.<span class="credit">Sơ đồ vẽ cho tài liệu này theo Mục 3.3.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-3-1">3.3.1 Các silicat sắt-magie sẫm màu: họ olivin</h3>
+  <p><b>Olivin, (Fe,Mg)<sub>2</sub>SiO<sub>4</sub></b>, là khoáng vật chính của đá manti như peridotit và có trong bazan. Khi chưa phong hóa, olivin có màu lục đặc trưng. Sắt và magie tạo thành <button class="term" data-term="dung dịch rắn">dung dịch rắn</button>: các nguyên tố có tính chất tương tự (ở đây, gần cùng kích thước và điện tích) thay thế tự do cho nhau ở cùng một vị trí trong tinh thể. Vì vậy olivin là một <b>họ khoáng vật</b>, một dãy thành phần giữa hai <button class="term" data-term="thành phần đầu cuối">thành phần đầu cuối</button> (end member): <b>forsterit</b> toàn magie và <b>fayalit</b> toàn sắt. Tỉ lệ Fe và Mg trong macma mẹ quyết định khoáng vật nào trong dãy được hình thành. Các nguyên tố hiếm hơn, như mangan, có thể thay thế với lượng nhỏ; những sự thay thế như vậy tạo nên sự đa dạng lớn của khoáng vật và thường làm thay đổi màu sắc cùng các tính chất khác.</p>
+  <figure>
+    <div class="frame"><svg viewBox="0 0 600 150" role="img" aria-label="Forsterit – Fayalit" style="width:100%;min-width:480px;height:auto"><defs><linearGradient id="ol-g" x1="0" x2="1"><stop offset="0" stop-color="var(--accent)"/><stop offset="1" stop-color="var(--ochre)"/></linearGradient></defs><rect x="40" y="50" width="520" height="22" rx="11" fill="url(#ol-g)" opacity=".85"/><g class="slide" style="--slide:500px"><circle cx="50" cy="61" r="13" fill="var(--surface)" stroke="var(--fg)" stroke-width="2"/></g><text x="40" y="34" font-size="13.5" font-weight="700" class="svg-ink">Forsterit</text><text x="560" y="34" text-anchor="end" font-size="13.5" font-weight="700" class="svg-ink">Fayalit</text><text x="40" y="96" font-size="12.5" font-family="var(--mono)" class="svg-ink">Mg₂SiO₄</text><text x="560" y="96" text-anchor="end" font-size="12.5" font-family="var(--mono)" class="svg-ink">Fe₂SiO₄</text><text x="40" y="114" font-size="11.5" class="svg-muted">thành phần đầu cuối toàn magie</text><text x="560" y="114" text-anchor="end" font-size="11.5" class="svg-muted">thành phần đầu cuối toàn sắt</text><text x="300" y="140" text-anchor="middle" font-size="12" class="svg-muted">olivin (Mg,Fe)₂SiO₄: Fe và Mg thay thế tự do ở cùng một vị trí</text></svg></div>
+    <figcaption>Dãy dung dịch rắn olivin. Mọi tỉ lệ trộn giữa hai thành phần đầu cuối đều có thể có, và các thành phần trung gian có tên riêng.<span class="credit">Sơ đồ vẽ cho tài liệu này theo Mục 3.3.1.</span></figcaption>
+  </figure>
+  <p>Olivin chủ yếu gồm Si, O, Fe và Mg nên là khoáng vật <button class="term" data-term="sắt-magie">sắt-magie</button> (ferromagnesian; ferro = sắt, magnesian = magie) hay <button class="term" data-term="mafic">mafic</button> sẫm màu. Silicat sắt-magie thường <b>đặc hơn</b> silicat không chứa sắt-magie. Điều này quan trọng với kiến tạo mảng: một mảng có hút chìm hay không phụ thuộc phần lớn vào tỉ trọng của đá, mà tỉ trọng đá lại phụ thuộc tỉ trọng các khoáng vật tạo nên nó.</p>
+  <p>Cấu trúc của olivin gồm <b>các tứ diện độc lập</b>, gọi là <button class="term" data-term="silicat đảo">silicat đảo</button> (nesosilicate, orthosilicate); granat, topaz, kyanit và zircon cũng thuộc nhóm này. Hai cấu trúc gần giống dẫn dần sang nhóm pyroxen: <button class="term" data-term="silicat đảo kép">silicat đảo kép</button> (sorosilicate), trong đó hai tứ diện dùng chung một oxy (vd. epidot màu xanh hạt dẻ cười), và <button class="term" data-term="silicat vòng">silicat vòng</button> (cyclosilicate), gồm các vòng tứ diện (vd. beryl, ngọc lục bảo, aquamarin, turmalin).</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/peridot-basalt.webp" alt="Tinh thể olivin dạng hạt màu lục tươi nằm dày đặc trong đá bazan sẫm màu." loading="lazy" width="445" height="334"></div>
+      <figcaption>Tinh thể olivin trong bazan.<span class="credit">Vsmith, CC BY-SA.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/olivine-structure.webp" alt="Sơ đồ cấu trúc tinh thể với các tứ diện màu hồng tách rời và các nguyên tử xanh, đỏ nằm giữa." loading="lazy" width="300" height="258"></div>
+      <figcaption>Cấu trúc olivin: các tứ diện rời nhau được nối bằng ion Fe và Mg.<span class="credit">Matanya, phạm vi công cộng.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s3-3-2">3.3.2 Họ pyroxen</h3>
+  <p><button class="term" data-term="pyroxen">Pyroxen</button> là khoáng vật sắt-magie sẫm màu, thường đen hoặc lục sẫm, cấu tạo từ <b>chuỗi đơn</b> các tứ diện, mỗi tứ diện dùng chung <b>hai</b> oxy ở đỉnh. Các cation kim loại liên kết các chuỗi với nhau. Pyroxen có trong đá magma mafic (peridotit, bazan, gabro) và đá biến chất (eclogit, đá phiến lam). Một đại diện phổ biến là <b>augit</b>, (Ca,Na)(Mg,Fe,Al,Ti)(Si,Al)<sub>2</sub>O<sub>6</sub>.</p>
+  <p>Công thức chung là <b>XZ(Al,Si)<sub>2</sub>O<sub>6</sub></b>, với X = Na, Ca, Mg hoặc Fe và Z = Mg, Fe hoặc Al. Các ion này có kích thước gần nhau nên có thể thay thế nhiều kiểu, nhưng điện tích vẫn phải cân bằng: nếu Na<sup>+</sup> thay Ca<sup>2+</sup> thì phải có sự thay thế khác trong tinh thể bù lại. <b>Kích thước ion quan trọng hơn điện tích ion</b> đối với sự thay thế trong dãy dung dịch rắn.</p>
+  <figure>
+    <div class="frame"><img src="images/unit3/diopside.webp" alt="Cụm tinh thể lăng trụ ngắn, bóng như thủy tinh, màu lục sẫm." loading="lazy" style="max-width:420px" width="800" height="617"></div>
+    <figcaption>Diopsit, một khoáng vật thuộc họ pyroxen.<span class="credit">Rob Lavinsky, iRocks.com, CC BY-SA.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-3-3">3.3.3 Họ amphibol</h3>
+  <p><button class="term" data-term="amphibol">Amphibol</button> được cấu tạo từ <b>chuỗi kép</b>: hai chuỗi kiểu pyroxen nối với nhau bằng cách dùng chung oxy thứ ba của mỗi tứ diện. Chúng được gọi là <button class="term" data-term="silicat chuỗi">silicat chuỗi</button> (inosilicate). Amphibol có trong đá magma và đá biến chất, thường có dạng quen <b>tấm dài</b>. Loại phổ biến nhất, <b>hornblend</b>, thường màu đen nhưng amphibol có nhiều màu. Chúng có trong gabro, bazan và diorit, thường tạo thành các đốm đen trong granit, và cấu tạo nên đá biến chất <b>amphibolit</b>.</p>
+  <p>Công thức rất phức tạp, thường viết (RSi<sub>4</sub>O<sub>11</sub>)<sub>2</sub>, trong đó R đại diện cho nhiều cation khác nhau. Amphibol cũng có thể chứa <b>ion hydroxit (OH<sup>−</sup>)</b>, lấy từ nước hòa tan trong macma khi tinh thể phát triển.</p>
+  <figure>
+    <div class="frame"><img src="images/unit3/hornblende.webp" alt="Hai mảnh hornblend màu đen dạng khối." loading="lazy" style="max-width:420px" width="360" height="283"></div>
+    <figcaption>Hornblend, amphibol phổ biến nhất.<span class="credit">Phạm vi công cộng, qua <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-3-4">3.3.4 Silicat lớp</h3>
+  <p>Trong <button class="term" data-term="silicat lớp">silicat lớp</button> (silicat tấm, phyllosilicate), mỗi tứ diện dùng chung cả ba oxy ở đáy, tạo thành các tấm với đỉnh trên tự do để liên kết với nguyên tử khác. Tỉ lệ Si:O là <b>2:5 (Si<sub>4</sub>O<sub>10</sub>)</b>. Các loại phổ biến là mica và khoáng vật sét.</p>
+  <ul>
+    <li><b><button class="term" data-term="mica">Mica</button></b> chủ yếu gồm silica, nhôm và kali, có trong đá magma và đá biến chất. <b>Biotit</b> sẫm màu (nhiều Fe và Mg hơn, nên thuộc nhóm sắt-magie) phổ biến trong granit; <b>muscovit</b> sáng màu là khoáng vật <button class="term" data-term="felsic">felsic</button>, có trong đá phiến kết tinh (schist).</li>
+    <li>Trong mica, các tấm tứ diện kẹp một lớp bát diện chứa Fe, Mg hoặc Al. Ion kali nằm giữa các "bánh kẹp" giữ chúng lại bằng <button class="term" data-term="liên kết Van der Waals">liên kết Van der Waals</button> yếu, nên mica <b>dễ tách thành tấm</b> dọc theo các lớp kali.</li>
+    <li><b><button class="term" data-term="khoáng vật sét">Khoáng vật sét</button></b> là alumosilicat ngậm nước hình thành do phong hóa, quan trọng trong đá trầm tích. <b>Kaolinit</b> giống bánh mì kẹp hở một mặt: một tấm silica ("bánh mì") với một lớp bát diện nhôm ("nhân phết").</li>
+    <li>Các silicat lớp khác: <b>serpentin</b> và <b>clorit</b>, trong đá biến chất.</li>
+  </ul>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/muscovite.webp" alt="Một chồng tấm mica mỏng, bóng, màu nâu bạc." loading="lazy" width="600" height="451"></div>
+      <figcaption>Tinh thể mica muscovit.<span class="credit">USGS "Minerals in Your World", phạm vi công cộng.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img class="diagram" src="images/unit3/sheet-polyhedra.webp" alt="Hình ba chiều của một tấm phẳng gồm các tứ diện nối nhau thành vòng sáu cạnh." loading="lazy" width="768" height="505"></div>
+      <figcaption>Một tấm tứ diện liên kết, đơn vị cơ bản của mica và khoáng vật sét.<span class="credit">Benjah-bmm27, phạm vi công cộng.</span></figcaption>
+    </figure>
+  </div>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/mica-structure.webp" alt="Sơ đồ hai tấm tứ diện kẹp một lớp bát diện, với ion kali giữa các lớp kẹp." loading="lazy" width="768" height="770"></div>
+      <figcaption>Cấu trúc mica: các tấm tứ diện quanh một lớp bát diện, được giữ với nhau bởi kali (K).<span class="credit">Theo Grim (1962), phạm vi công cộng.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/kaolinite.webp" alt="Sơ đồ một lớp kaolinit: một tấm tứ diện liên kết với một tấm bát diện nhôm." loading="lazy" width="768" height="624"></div>
+      <figcaption>Kaolinit: một tấm tứ diện cộng một lớp nhôm.<span class="credit">USGS, theo Grim (1962), phạm vi công cộng.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s3-3-5">3.3.5 Silicat khung</h3>
+  <p><b>Thạch anh và fenspat</b> là hai khoáng vật phổ biến nhất trong vỏ lục địa. Trong các <button class="term" data-term="silicat khung">silicat khung</button> (tectosilicate) này, <b>cả bốn</b> oxy ở đỉnh đều được dùng chung, tạo khung ba chiều. <b>Fenspat</b> là khoáng vật phổ biến nhất trong vỏ Trái Đất, chiếm khoảng 50%. <b>Thạch anh</b> là khoáng vật phổ biến nhất trên <i>bề mặt</i> Trái Đất vì bền với phong hóa; nó đặc biệt nhiều trong <button class="term" data-term="đá trầm tích vụn">đá trầm tích vụn</button> (gồm các hạt phong hóa cơ học như cát, sỏi).</p>
+  <ul>
+    <li><b>Thạch anh</b> là silica tinh khiết, <b>SiO<sub>2</sub></b>. Tạp chất tạo nên các biến thể như thạch anh tím (amethyst), thạch anh hồng và thạch anh vàng (citrin).</li>
+    <li><b><button class="term" data-term="orthoclas">Orthoclas</button></b> (fenspat kali, K-spar), <b>KAlSi<sub>3</sub>O<sub>8</sub></b>, phổ biến trong đá felsic của vỏ lục địa. Thạch anh và orthoclas là khoáng vật <b>felsic</b> (giàu silica; từ này ghép từ feldspar và silica).</li>
+    <li><b><button class="term" data-term="plagioclas">Plagioclas</button></b>, <b>(Ca,Na)AlSi<sub>3</sub>O<sub>8</sub></b>, là dung dịch rắn từ <b>albit</b> giàu natri đến <b>anortit</b> giàu canxi, phổ biến trong đá mafic của vỏ đại dương.</li>
+  </ul>
+  <figure>
+    <div class="frame"><svg viewBox="0 0 600 150" role="img" aria-label="Albit – Anortit" style="width:100%;min-width:480px;height:auto"><defs><linearGradient id="pl-g" x1="0" x2="1"><stop offset="0" stop-color="var(--accent)"/><stop offset="1" stop-color="var(--ochre)"/></linearGradient></defs><rect x="40" y="50" width="520" height="22" rx="11" fill="url(#pl-g)" opacity=".85"/><g class="slide" style="--slide:500px"><circle cx="50" cy="61" r="13" fill="var(--surface)" stroke="var(--fg)" stroke-width="2"/></g><text x="40" y="34" font-size="13.5" font-weight="700" class="svg-ink">Albit</text><text x="560" y="34" text-anchor="end" font-size="13.5" font-weight="700" class="svg-ink">Anortit</text><text x="40" y="96" font-size="12.5" font-family="var(--mono)" class="svg-ink">NaAlSi₃O₈</text><text x="560" y="96" text-anchor="end" font-size="12.5" font-family="var(--mono)" class="svg-ink">CaAl₂Si₂O₈</text><text x="40" y="114" font-size="11.5" class="svg-muted">thành phần đầu cuối natri</text><text x="560" y="114" text-anchor="end" font-size="11.5" class="svg-muted">thành phần đầu cuối canxi</text><text x="300" y="140" text-anchor="middle" font-size="12" class="svg-muted">plagioclas (Ca,Na)AlSi₃O₈: Ca²⁺ và Na⁺ thay thế nhau; Al và Si điều chỉnh để cân bằng điện tích</text></svg></div>
+    <figcaption>Dãy dung dịch rắn plagioclas. Nhôm, có kích thước gần với silic, có thể thay silic bên trong tứ diện, giúp cân bằng điện tích khi Ca<sup>2+</sup> và Na<sup>+</sup> thay thế nhau.<span class="credit">Sơ đồ vẽ cho tài liệu này theo Mục 3.3.5.</span></figcaption>
+  </figure>
+  <p>Vì sao có hai họ fenspat? Ion kali lớn hơn nhiều so với ion natri và canxi (hai ion này có kích thước gần nhau). Mạng tinh thể không thể chứa cả hai loại, nên fenspat chia thành <b>orthoclas</b> (K) và <b>plagioclas</b> (Na/Ca). Silicat khung còn gồm fenspatoit và zeolit.</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/quartz-tibet.webp" alt="Tinh thể thạch anh trong suốt, sáu cạnh, đầu nhọn trên nền đen." loading="lazy" width="768" height="726"></div>
+      <figcaption>Tinh thể thạch anh phát triển tự do với các mặt tinh thể.<span class="credit">JJ Harrison, CC BY-SA.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/orthoclase.webp" alt="Tinh thể orthoclas dạng khối màu be hồng." loading="lazy" width="768" height="511"></div>
+      <figcaption>Tinh thể orthoclas (fenspat kali).<span class="credit">Didier Descouens, CC BY-SA.</span></figcaption>
+    </figure>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Tổng quan các nhóm silicat (cấu trúc theo <a href="#fig-silicates">Hình 3.12</a>).</caption>
+      <thead><tr><th>Cấu trúc</th><th>Nhóm</th><th>Ví dụ</th><th>Ghi chú</th></tr></thead>
+      <tbody>
+        <tr><td>Tứ diện riêng lẻ</td><td>Silicat đảo</td><td>Olivin, granat, topaz, kyanit, zircon</td><td>Olivin: dung dịch rắn Fe–Mg; mafic, đặc, màu lục</td></tr>
+        <tr><td>Cặp / vòng</td><td>Silicat đảo kép / silicat vòng</td><td>Epidot / beryl, turmalin</td><td>Chuyển tiếp sang các silicat chuỗi</td></tr>
+        <tr><td>Chuỗi đơn</td><td>Pyroxen</td><td>Augit, diopsit</td><td>Sẫm màu, mafic; XZ(Al,Si)<sub>2</sub>O<sub>6</sub></td></tr>
+        <tr><td>Chuỗi kép</td><td>Amphibol</td><td>Hornblend, tremolit</td><td>Sẫm màu; dạng tấm dài; có thể chứa OH<sup>−</sup></td></tr>
+        <tr><td>Tấm</td><td>Silicat lớp</td><td>Biotit, muscovit, kaolinit, serpentin, clorit</td><td>Si:O = 2:5; tách thành tấm</td></tr>
+        <tr><td>Khung ba chiều</td><td>Silicat khung</td><td>Thạch anh, orthoclas, plagioclas</td><td>Phổ biến nhất trong vỏ lục địa</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener">Bài kiểm tra mục 3.3 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<!-- 3.4 -->
+<section id="s3-4">
+  <h2 class="sec"><span class="n">3.4</span>Khoáng vật phi silicat</h2>
+  <p>Cấu trúc tinh thể của <button class="term" data-term="khoáng vật phi silicat">khoáng vật phi silicat</button> không chứa tứ diện silica. Nhiều khoáng vật trong số này có giá trị kinh tế: cung cấp kim loại (đồng, chì, sắt) và sản phẩm phi kim (muối, vật liệu xây dựng, phân bón).</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Các nhóm khoáng vật phi silicat phổ biến (theo chương).</caption>
+      <thead><tr><th>Nhóm</th><th>Ví dụ</th><th>Công thức</th><th>Công dụng</th></tr></thead>
+      <tbody>
+        <tr><td>Nguyên tố tự sinh</td><td>vàng, bạc, đồng</td><td>Au, Ag, Cu</td><td>Trang sức, tiền xu, công nghiệp</td></tr>
+        <tr><td>Carbonat</td><td>canxit, dolomit</td><td>CaCO<sub>3</sub>, CaMg(CO<sub>3</sub>)<sub>2</sub></td><td>Vôi, xi măng Portland</td></tr>
+        <tr><td>Oxit</td><td>hematit, magnetit, bauxit</td><td>Fe<sub>2</sub>O<sub>3</sub>, Fe<sub>3</sub>O<sub>4</sub>, hỗn hợp oxit nhôm</td><td>Quặng sắt và nhôm, chất màu</td></tr>
+        <tr><td>Halogenua</td><td>halit, sylvin</td><td>NaCl, KCl</td><td>Muối ăn, phân bón</td></tr>
+        <tr><td>Sulfua</td><td>galenit, chalcopyrit, thần sa (cinnabar)</td><td>PbS, CuFeS<sub>2</sub>, HgS</td><td>Quặng chì, đồng, thủy ngân</td></tr>
+        <tr><td>Sulfat</td><td>thạch cao, muối Epsom</td><td>CaSO<sub>4</sub>·2H<sub>2</sub>O, MgSO<sub>4</sub>·7H<sub>2</sub>O</td><td>Tấm thạch cao, ngâm trị liệu</td></tr>
+        <tr><td>Phosphat</td><td>apatit</td><td>Ca<sub>5</sub>(PO<sub>4</sub>)<sub>3</sub>(F,Cl,OH)</td><td>Phân bón, răng, xương</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure>
+    <div class="frame"><img src="images/unit3/hanksite.webp" alt="Một tinh thể hanksit sáu cạnh màu nhạt." loading="lazy" style="max-width:420px" width="640" height="427"></div>
+    <figcaption>Hanksit, Na<sub>22</sub>K(SO<sub>4</sub>)<sub>9</sub>(CO<sub>3</sub>)<sub>2</sub>Cl, một trong số ít khoáng vật vừa là carbonat vừa là sulfat.<span class="credit">Matt Affolter (QFL247), CC BY-SA.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-4-1">3.4.1 Carbonat</h3>
+  <p>Hai khoáng vật <button class="term" data-term="carbonat">carbonat</button> phổ biến nhất là <b>canxit (CaCO<sub>3</sub>)</b> và <b>dolomit (CaMg(CO<sub>3</sub>)<sub>2</sub>)</b>, chủ yếu có trong các đá trầm tích <b>đá vôi</b> và <b>đá dolomit</b>. Một số carbonat hình thành do bay hơi và kết tủa, nhưng phần lớn đá giàu carbonat, như đá vôi, hình thành do <button class="term" data-term="thạch hóa">thạch hóa</button> (đá hóa) xác sinh vật biển hóa thạch: vỏ và bộ khung canxi carbonat của chúng tích tụ sau khi chết, phần mềm phân hủy, còn phần cứng trở thành đá vôi. Đa số đá vôi được tạo từ các sinh vật cực nhỏ.</p>
+  <p><b>Muối.</b> Nhiều khoáng vật phi silicat là <button class="term" data-term="muối">muối</button>, tức hợp chất tạo ra khi thay hydro trong axit tự nhiên. Axit tự nhiên phổ biến nhất là <b>axit cacbonic (H<sub>2</sub>CO<sub>3</sub>)</b>, do CO<sub>2</sub> hòa tan trong nước; khoáng vật carbonat thay hydro của nó bằng canxi và/hoặc magie. Sinh vật tiết ra canxit và dạng đa hình aragonit từ ion bicarbonat hòa tan (HCO<sub>3</sub><sup>−</sup>). Halit thay hydro trong axit clohydric bằng natri, còn thạch cao thay hydro trong axit sulfuric bằng canxi. Muối hình thành do bay hơi gọi là <button class="term" data-term="khoáng vật evaporit">khoáng vật evaporit</button>.</p>
+  <p><b>Lưỡng chiết.</b> Canxit tách ánh sáng thành hai tia dao động vuông góc nhau, truyền với tốc độ và đường đi khác nhau, nên nhìn qua tinh thể trong suốt ta thấy <b>ảnh kép</b>. Hiện tượng <button class="term" data-term="lưỡng chiết">lưỡng chiết</button> này là lý do canxit được dùng trong kính hiển vi thạch học. Canxit cũng <b>sủi bọt trong axit clohydric loãng</b> (Mục 3.5.6).</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/calcite-rhomb.webp" alt="Khối canxit mặt thoi trong suốt đặt trên nhãn; chữ nhìn qua nó bị nhân đôi." loading="lazy" width="654" height="800"></div>
+      <figcaption>Khối canxit mặt thoi. Chữ "calcite" nhìn qua nó bị nhân đôi do lưỡng chiết.<span class="credit">Phạm vi công cộng.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img class="diagram" src="images/unit3/birefringence.webp" alt="Sơ đồ một tia sáng đi vào tinh thể và tách thành hai tia phân cực vuông góc." loading="lazy" width="533" height="568"></div>
+      <figcaption>Lưỡng chiết: một tia đi vào, hai tia phân cực đi ra.<span class="credit">Mikael Häggström, phạm vi công cộng.</span></figcaption>
+    </figure>
+  </div>
+  <p>Trong cấu trúc canxit, mỗi cacbon liên kết cộng hóa trị với ba oxy tạo thành một đơn vị carbonat hình tam giác mang điện −2, đơn vị này liên kết ion với một ion Ca<sup>2+</sup>.</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/limestone.webp" alt="Hai tấm đá vôi xám chứa đầy mảnh vỏ nhỏ." loading="lazy" width="749" height="800"></div>
+      <figcaption>Đá vôi chứa hóa thạch nhỏ.<span class="credit">Jstuby, phạm vi công cộng.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/calcite-structure.webp" alt="Sơ đồ cấu trúc tinh thể canxit với các nguyên tử canxi, cacbon và oxy trong một ô lặp lại." loading="lazy" width="546" height="668"></div>
+      <figcaption>Cấu trúc tinh thể canxit (Ca xanh lam, C nhỏ, O đỏ).<span class="credit">Materialscientist, CC BY-SA.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s3-4-2">3.4.2 Oxit, halogenua và sulfua</h3>
+  <p>Sau carbonat, đây là các khoáng vật phi silicat phổ biến nhất.</p>
+  <h4>Oxit</h4>
+  <p><button class="term" data-term="oxit">Oxit</button> là ion kim loại liên kết với oxy. Quen thuộc nhất là <b>gỉ sắt</b>: oxit sắt (Fe<sub>2</sub>O<sub>3</sub>) cùng các oxit ngậm nước hình thành khi sắt tiếp xúc với oxy và nước. Luyện quặng oxit sắt tạo ra sắt kim loại và CO<sub>2</sub>. Oxit sắt làm cho phần lớn <b>đá đỏ</b> có màu đỏ; ở Vườn quốc gia Zion và khắp miền nam Utah, cát kết đỏ là các hạt thạch anh không màu được oxit sắt bao phủ và gắn kết.</p>
+  <p>Các oxit sắt gồm <b>limonit</b>, <b>magnetit</b> và <b>hematit</b>. Hematit có nhiều dạng nhưng cùng công thức Fe<sub>2</sub>O<sub>3</sub>: <b>dạng khối</b> (không có hình dạng ngoài), <b>dạng chùm nho</b> (các khối tròn đồng tâm lớn), <b>dạng gương</b> (tinh thể kim loại sáng bóng) và <b>dạng trứng cá</b> (như trứng cá màu đỏ xỉn). Chương gọi các dạng này là dạng đa hình. Các oxit khác: <b>nước đá</b> (H<sub>2</sub>O), <b>bauxit</b> (oxit nhôm ngậm nước, quặng nhôm) và <b>corindon</b> (Al<sub>2</sub>O<sub>3</sub>, gồm cả hồng ngọc và lam ngọc).</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/limonite.webp" alt="Một cục limonit màu nâu vàng, dạng đất." loading="lazy" width="360" height="307"></div>
+      <figcaption>Limonit, một oxit sắt ngậm nước.<span class="credit">USGS "Minerals in Your World", phạm vi công cộng.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/oolitic-hematite.webp" alt="Đá màu nâu đỏ gồm rất nhiều hạt tròn nhỏ." loading="lazy" width="528" height="474"></div>
+      <figcaption>Hematit dạng trứng cá, như trứng cá màu đỏ xỉn.<span class="credit">Dave Dyet, phạm vi công cộng.</span></figcaption>
+    </figure>
+  </div>
+  <h4>Halogenua</h4>
+  <p><button class="term" data-term="halogenua">Halogenua</button> là các halogen ở cột VII, thường là flo hoặc clo, liên kết ion với natri hoặc cation khác: <b>halit</b> (NaCl), <b>sylvin</b> (KCl) và <b>fluorit</b> (CaF<sub>2</sub>). Chúng thường hình thành do nước biển hoặc các vùng nước cô lập bốc hơi, như ở bãi muối Bonneville phía tây hồ Great Salt Lake (<a href="#fig-saltflats">Hình 3.9</a>).</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/halite.webp" alt="Tinh thể halit trắng hồng với các mặt hình lập phương." loading="lazy" width="360" height="270"></div>
+      <figcaption>Tinh thể halit có dạng quen lập phương.<span class="credit">Phạm vi công cộng.</span></figcaption>
+    </figure>
+    <figure id="fig-fluorite">
+      <div class="frame"><img src="images/unit3/fluorite-uv.webp" alt="Hai ảnh của cùng một mẫu fluorit: màu tím dưới ánh sáng ban ngày (A) và phát sáng xanh lam dưới tia cực tím (B)." loading="lazy" width="652" height="800"></div>
+      <figcaption>Fluorit dưới ánh sáng thường (A) và phát huỳnh quang dưới tia UV (B).<span class="credit">CC BY-SA, qua <i>An Introduction to Geology</i>.</span></figcaption>
+    </figure>
+  </div>
+  <h4>Sulfua</h4>
+  <p>Trong <button class="term" data-term="sulfua">sulfua</button>, kim loại liên kết với lưu huỳnh. Nhiều sulfua là khoáng vật <button class="term" data-term="quặng">quặng</button> quan trọng: <b>galenit</b> (chì sulfua, nguồn chì chính), <b>sphalerit</b> (kẽm sulfua, nguồn kẽm chính), <b>pyrit</b> (sắt sulfua, "vàng của kẻ ngốc") và <b>chalcopyrit</b> (sắt-đồng sulfua, quặng đồng chính trong các mỏ porphyr như mỏ Bingham; Chương 16). Nguồn niken, antimon, molypden, asen và thủy ngân lớn nhất cũng là sulfua.</p>
+  <figure>
+    <div class="frame"><img src="images/unit3/pyrite.webp" alt="Các khối lập phương pyrit màu đồng thau bóng mọc ra từ đá nhạt màu." loading="lazy" style="max-width:420px" width="756" height="800"></div>
+    <figcaption>Tinh thể pyrit lập phương ("vàng của kẻ ngốc").<span class="credit">CarlesMillan, CC BY-SA.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-4-3">3.4.3 Sulfat</h3>
+  <p><button class="term" data-term="sulfat">Sulfat</button> chứa một ion kim loại, như canxi, liên kết với ion sulfat (SO<sub>4</sub><sup>2−</sup>). <b>Thạch cao (CaSO<sub>4</sub>·2H<sub>2</sub>O)</b> được dùng làm vữa trát và tấm thạch cao, thường hình thành do nước bốc hơi, và chứa nguyên phân tử nước trong tinh thể (phần "·2H<sub>2</sub>O"). Điều này khác với amphibol, vốn chứa hydroxit (OH<sup>−</sup>), tức nước thiếu một ion hydro. Canxi sulfat không ngậm nước là một khoáng vật khác, <b>anhydrit (CaSO<sub>4</sub>)</b>.</p>
+  <h3 id="s3-4-4">3.4.4 Phosphat</h3>
+  <p><button class="term" data-term="phosphat">Phosphat</button> có đơn vị phosphat hình tứ diện (PO<sub>4</sub><sup>3−</sup>) kết hợp với các ion khác; đôi khi asen hoặc vanadi thay cho phospho. Chúng được dùng trong phân bón, chất tẩy rửa và sơn. Nổi tiếng nhất là <b>apatit, Ca<sub>5</sub>(PO<sub>4</sub>)<sub>3</sub>(F,Cl,OH)</b>, có trong răng và xương. Đá quý <b>ngọc lam</b> (turquoise) là một phosphat giàu đồng, giống thạch cao ở chỗ chứa phân tử nước.</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/gypsum.webp" alt="Tinh thể thạch cao (selenit) trong suốt, bóng như thủy tinh, dạng khối." loading="lazy" width="360" height="341"></div>
+      <figcaption>Tinh thể thạch cao (selenit).<span class="credit">USGS "Minerals in Your World", phạm vi công cộng.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/apatite.webp" alt="Tinh thể apatit dài, sáu cạnh, màu lục, bóng như thủy tinh trên đá hồng." loading="lazy" width="629" height="800"></div>
+      <figcaption>Tinh thể apatit.<span class="credit">CC BY-SA, qua <i>An Introduction to Geology</i>.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s3-4-5">3.4.5 Khoáng vật nguyên tố tự sinh</h3>
+  <p>Khoáng vật <button class="term" data-term="nguyên tố tự sinh">nguyên tố tự sinh</button>, thường là kim loại, tồn tại ở trạng thái tinh khiết hoặc gần tinh khiết. <b>Vàng</b> kém hoạt động và hiếm khi liên kết với nguyên tố khác. <b>Cacbon</b> tồn tại tự sinh dưới dạng graphit và kim cương. Các nguyên tố hoạt động vừa phải như <b>bạc, đồng, platin, thủy ngân và lưu huỳnh</b> đôi khi ở dạng tự sinh, còn các kim loại hoạt động mạnh như <b>sắt, chì và nhôm</b> hầu như luôn liên kết với nguyên tố khác.</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/sulfur.webp" alt="Lớp lưu huỳnh vàng tươi quanh một miệng phun núi lửa." loading="lazy" width="768" height="576"></div>
+      <figcaption>Lưu huỳnh tự sinh lắng đọng quanh một lỗ phun khí núi lửa (fumarole).<span class="credit">brisk_g, phạm vi công cộng.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/copper.webp" alt="Một cục đồng tự sinh màu đỏ, xoắn và phân nhánh." loading="lazy" width="768" height="727"></div>
+      <figcaption>Đồng tự sinh.<span class="credit">CC BY-SA, qua <i>An Introduction to Geology</i>.</span></figcaption>
+    </figure>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener">Bài kiểm tra mục 3.4 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<!-- 3.5 -->
+<section id="s3-5">
+  <h2 class="sec"><span class="n">3.5</span>Nhận dạng khoáng vật</h2>
+  <p>Nhà địa chất nhận dạng khoáng vật qua tính chất vật lý, có thể thử ngoài thực địa mà không cần thiết bị hiện đại: <b>ánh và màu, vết vạch, độ cứng, dạng quen tinh thể, cát khai và vết vỡ</b>, cùng một số <b>tính chất đặc biệt</b>. Phần lớn đá gồm vài khoáng vật phổ biến dưới dạng hạt nhỏ, nên hãy nghĩ xem tính chất nào vẫn dùng được với một hạt nhỏ nằm giữa các khoáng vật khác.</p>
+  <figure>
+    <div class="frame"><img src="images/unit3/curiosity.webp" alt="Đá sao Hỏa màu đỏ nhạt có một lỗ khoan nhỏ màu xám." loading="lazy" style="max-width:420px" width="673" height="601"></div>
+    <figcaption>Xe tự hành Curiosity khoan vào tảng đá này trên sao Hỏa và xác nhận có hematit, đúng như bản đồ từ vệ tinh.<span class="credit">NASA, phạm vi công cộng.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-5-1">3.5.1 Ánh và màu</h3>
+  <p><button class="term" data-term="ánh">Ánh</button> (luster) mô tả vẻ ngoài bề mặt khoáng vật. Ánh <b>kim</b> trông như kim loại sáng bóng (crom, thép, bạc, vàng); ánh <b>bán kim</b> mờ hơn, như thiếc pewter. Ánh <b>phi kim</b> không giống kim loại và vẫn có thể sáng, nhưng theo kiểu khác với kim loại.</p>
+  <figure>
+    <div class="frame">
+      <ul class="gallery" style="--cols:3">
+        <li><img src="images/unit3/molybdenite.webp" alt="Tinh thể molybdenit sáu cạnh màu bạc bóng trong đá." loading="lazy" width="768" height="576"><span><b>Ánh kim</b>molybdenit</span></li>
+        <li><img src="images/unit3/luster-submetallic.webp" alt="Sphalerit sẫm màu, ánh kim mờ." loading="lazy" width="372" height="343"><span><b>Ánh bán kim</b>sphalerit</span></li>
+        <li><img src="images/unit3/luster-vitreous.webp" alt="Tinh thể thạch anh trong suốt ánh thủy tinh." loading="lazy" width="800" height="681"><span><b>Ánh thủy tinh</b>thạch anh</span></li>
+        <li><img src="images/unit3/luster-earthy.webp" alt="Một cục kaolin trắng mờ." loading="lazy" width="360" height="287"><span><b>Ánh đất (mờ)</b>kaolin</span></li>
+        <li><img src="images/unit3/luster-silky.webp" alt="Thạch cao dạng sợi có ánh mềm." loading="lazy" width="768" height="588"><span><b>Ánh tơ</b>thạch cao</span></li>
+        <li><img src="images/unit3/luster-pearly.webp" alt="Mica có ánh xà cừ." loading="lazy" width="768" height="557"><span><b>Ánh xà cừ</b>mica</span></li>
+      </ul>
+    </div>
+    <figcaption>Các kiểu ánh với ví dụ trong chương. Ảnh được cắt vuông; mở ảnh trong thẻ mới để xem đầy đủ.<span class="credit">Molybdenit: John Chapman (Pyrope), CC BY-SA. Sphalerit: Andreas Früh, CC BY-SA. Thạch anh: Didier Descouens, CC BY-SA. Kaolin: USGS, phạm vi công cộng. Thạch cao ánh tơ: Ra'ike, CC BY. Mica ánh xà cừ: Luis Miguel Bugallo Sánchez, CC BY-SA.</span></figcaption>
+  </figure>
+  <div class="tablewrap">
+    <table>
+      <caption>Ánh phi kim và ánh bán kim.</caption>
+      <thead><tr><th>Ánh</th><th>Trông giống</th></tr></thead>
+      <tbody>
+        <tr><td>Thủy tinh</td><td>Sáng bóng như thủy tinh</td></tr>
+        <tr><td>Đất / mờ</td><td>Mờ, như bùn khô hay đất sét</td></tr>
+        <tr><td>Tơ</td><td>Ánh dịu như vải lụa</td></tr>
+        <tr><td>Xà cừ</td><td>Như mặt trong vỏ nghêu (xà cừ)</td></tr>
+        <tr><td>Bán kim</td><td>Kim loại mờ, như thiếc pewter. Thường vẫn được xếp vào ánh kim; có thể do khoáng vật ánh kim bị phong hóa.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><b>Màu</b> có thể hữu ích nhưng thường thay đổi trong cùng một họ khoáng vật. Màu phụ thuộc vào các nguyên tố chính và <b>tạp chất</b>, như mangan, titan, crom hay liti, thậm chí phân tử nước (làm thạch anh vốn trong suốt trở nên trắng đục). Một số khoáng vật chủ yếu có một màu: đồng làm <b>malachit lục</b> và <b>azurit lam</b>. Số khác, như fenspat, có nhiều màu (hồng, trắng, lục, xám) do dung dịch rắn. Trừ vài ngoại lệ đáng chú ý, <b>màu không phải tính chất quyết định</b>; vết vạch đáng tin cậy hơn.</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/azurite.webp" alt="Hai khối azurit tròn màu lam đậm trong bột kết nhạt màu." loading="lazy" width="652" height="800"></div>
+      <figcaption>Azurit luôn có màu lam đậm và từng được dùng hàng thế kỷ làm chất màu lam.<span class="credit">Graeme Churchard, CC BY.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/malachite.webp" alt="Hai mẩu malachit màu lục, một mẩu được mài để lộ vân." loading="lazy" width="768" height="446"></div>
+      <figcaption>Malachit có màu lục nhờ đồng.<span class="credit">Didier Descouens, CC BY-SA.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s3-5-2">3.5.2 Vết vạch</h3>
+  <p><button class="term" data-term="vết vạch">Vết vạch</button> là màu của bột khoáng vật, tạo bằng cách cạ khoáng vật lên <b>tấm sứ không tráng men</b> (với một số khoáng vật, trang sổ ghi chép thực địa cũng dùng được). Khoáng vật cứng hơn tấm sứ sẽ làm xước tấm sứ thay vì để lại vết; khi đó hãy dùng búa nghiền thành bột rồi miết lên tấm. Vết vạch <b>ổn định hơn màu bề mặt</b>:</p>
+  <ul>
+    <li><b>Hematit</b> trông từ màu bạc ánh kim đến nâu đỏ dạng đất, nhưng vết vạch luôn <b>nâu đỏ</b>.</li>
+    <li><b>Pyrit</b> có màu vàng đồng thau ánh kim, nhưng vết vạch <b>đen đến đen ánh lục</b>.</li>
+  </ul>
+  <figure>
+    <div class="frame"><img src="images/unit3/streak.webp" alt="Một tấm sứ trắng và một tấm sứ đen; pyrit để lại vết sẫm, rhodochrosit hồng để lại vết nhạt." loading="lazy" style="max-width:480px" width="768" height="581"></div>
+    <figcaption>Các khoáng vật khác nhau để lại vết vạch khác nhau: pyrit và rhodochrosit trên tấm sứ.<span class="credit">CC BY-SA, qua <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-5-3">3.5.3 Độ cứng</h3>
+  <p><button class="term" data-term="độ cứng">Độ cứng</button> là khả năng của khoáng vật làm xước vật khác. <button class="term" data-term="thang độ cứng Mohs">Thang độ cứng Mohs</button>, mang tên nhà địa chất người Đức Friedrich Mohs, xếp hạng khả năng chống xước so với mười khoáng vật chuẩn, từ 1 đến 10. Độ cứng do độ bền liên kết nguyên tử quyết định. Thang này <b>không tuyến tính</b>: kim cương (10) cứng gấp khoảng bốn lần corindon (9). Lưỡi dao thép bỏ túi (5,5) là ranh giới thường dùng giữa khoáng vật cứng và mềm trong các khóa tra cứu.</p>
+  <figure id="fig-mohs">
+      <div class="frame"><img src="images/unit3/mohs.webp" alt="Áp phích của Cục Công viên Quốc gia Hoa Kỳ về thang Mohs, liệt kê mười khoáng vật từ talc đến kim cương bên cạnh các vật thử thông dụng." loading="lazy" width="800" height="558"></div>
+      <figcaption>Thang Mohs với các vật thử thông dụng (áp phích bằng tiếng Anh).<span class="credit">Cục Công viên Quốc gia Hoa Kỳ, phạm vi công cộng.</span></figcaption>
+    </figure>
+  <div class="callout">
+      <h4>Độ cứng của bộ dụng cụ thử</h4>
+      <ul class="inline">
+        <li>Móng tay: 2,5</li>
+        <li>Đồng xu bằng đồng: 3,5</li>
+        <li>Dao / tấm kính: 5,5</li>
+        <li>Đinh thép: 6,5</li>
+        <li>Mũi khoan bê tông: 8,5</li>
+      </ul>
+      <p class="small">Giá trị lấy từ áp phích ở <a href="#fig-mohs">Hình 3.44</a>.</p>
+    </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Mười khoáng vật chuẩn của thang Mohs.</caption>
+      <thead><tr><th>Độ cứng</th><th>Khoáng vật</th><th>Độ cứng</th><th>Khoáng vật</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Talc</td><td>6</td><td>Orthoclas</td></tr>
+        <tr><td>2</td><td>Thạch cao</td><td>7</td><td>Thạch anh</td></tr>
+        <tr><td>3</td><td>Canxit</td><td>8</td><td>Topaz</td></tr>
+        <tr><td>4</td><td>Fluorit</td><td>9</td><td>Corindon</td></tr>
+        <tr><td>5</td><td>Apatit</td><td>10</td><td>Kim cương</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s3-5-4">3.5.4 Dạng quen tinh thể</h3>
+  <p><button class="term" data-term="dạng quen tinh thể">Dạng quen tinh thể</button> (crystal habit) là hình dạng điển hình mà tinh thể khoáng vật phát triển và biểu hiện. Hình dạng phản ánh cách sắp xếp nguyên tử bên trong (sắp xếp lập phương cho tinh thể lập phương), nhưng sự chèn ép của khoáng vật khác có thể làm thay đổi nó:</p>
+  <ul>
+    <li><button class="term" data-term="tự hình">Tự hình</button> (euhedral): hình dạng hoàn chỉnh, không bị cản trở, có các mặt tinh thể (phát triển tự do).</li>
+    <li><button class="term" data-term="bán tự hình">Bán tự hình</button> (subhedral): hình dạng hoàn chỉnh một phần.</li>
+    <li><button class="term" data-term="tha hình">Tha hình</button> (anhedral): bị cản trở nên không phát triển được dạng quen điển hình.</li>
+  </ul>
+  <p>Một số khoáng vật, như <b>granat</b>, vẫn phát triển mặt tinh thể dù bị tinh thể khác bao quanh. Một số tạo tinh thể quá nhỏ để thấy dạng quen bằng mắt thường. Số khác, như <b>pyrit</b>, có nhiều dạng quen (lập phương, mười hai mặt, tám mặt, dạng khối).</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Các dạng quen tinh thể điển hình (theo chương).</caption>
+      <thead><tr><th>Dạng quen</th><th>Mô tả</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td>Dạng tấm dài (bladed)</td><td>Dài và dẹt</td><td>kyanit, amphibol, thạch cao</td></tr>
+        <tr><td>Dạng chùm nho / vú</td><td>Khối tròn, dạng bướu</td><td>hematit, malachit, smithsonit</td></tr>
+        <tr><td>Lớp phủ / lá mỏng / tinh đám (druse)</td><td>Tinh thể nhỏ phủ trên bề mặt</td><td>thạch anh, canxit, malachit, azurit</td></tr>
+        <tr><td>Lập phương</td><td>Hình khối vuông</td><td>pyrit, galenit, halit</td></tr>
+        <tr><td>Mười hai mặt</td><td>Khối 12 mặt</td><td>granat, pyrit</td></tr>
+        <tr><td>Dạng cành cây</td><td>Phân nhánh</td><td>oxit Mn, đồng, vàng</td></tr>
+        <tr><td>Đẳng thước</td><td>Không có phương kéo dài</td><td>olivin, granat, pyroxen</td></tr>
+        <tr><td>Dạng sợi</td><td>Mảnh, rất dài</td><td>serpentin, amphibol, zeolit</td></tr>
+        <tr><td>Dạng lớp / tấm</td><td>Các tấm rất mỏng, dẹt, xếp chồng</td><td>mica (biotit, muscovit)</td></tr>
+        <tr><td>Dạng thấu kính / phiến</td><td>Như tấm mỏng</td><td>hoa hồng selenit, wulfenit, canxit</td></tr>
+        <tr><td>Lục giác</td><td>Sáu cạnh</td><td>thạch anh, hanksit, corindon</td></tr>
+        <tr><td>Dạng khối / hạt</td><td>Không có hình dạng rõ; tinh thể cực nhỏ</td><td>limonit, pyrit, azurit, bornit</td></tr>
+        <tr><td>Tám mặt</td><td>Hai hình chóp bốn mặt ghép đáy</td><td>kim cương, fluorit, magnetit, pyrit</td></tr>
+        <tr><td>Lăng trụ / dạng cột</td><td>Rất dài, dạng cột</td><td>turmalin, beryl, barit</td></tr>
+        <tr><td>Tỏa tia</td><td>Mọc từ một điểm rồi tỏa ra</td><td>"mặt trời" pyrit, pyrophyllit</td></tr>
+        <tr><td>Mặt thoi</td><td>Như khối lập phương bị xô lệch</td><td>canxit, dolomit</td></tr>
+        <tr><td>Dạng bản / khối / ngắn</td><td>Cạnh sắc, không có phương kéo dài</td><td>fenspat, pyroxen, canxit</td></tr>
+        <tr><td>Tứ diện</td><td>Hình chóp ba mặt</td><td>magnetit, spinel, tetrahedrit</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure>
+    <div class="frame">
+      <ul class="gallery" style="--cols:4">
+        <li><img src="images/unit3/kyanite.webp" alt="Tinh thể kyanit xanh lam dạng tấm dài." loading="lazy" width="768" height="576"><span><b>Tấm dài</b>kyanit</span></li>
+        <li><img src="images/unit3/malachite.webp" alt="Malachit lục với vân tròn." loading="lazy" width="768" height="446"><span><b>Chùm nho</b>malachit</span></li>
+        <li><img src="images/unit3/galena-cubic.webp" alt="Tinh thể galenit lập phương xám sẫm." loading="lazy" width="347" height="400"><span><b>Lập phương</b>galenit</span></li>
+        <li><img src="images/unit3/pyrite-dodeca.webp" alt="Tinh thể pyrit màu đồng thau nhiều mặt." loading="lazy" width="768" height="499"><span><b>Mười hai mặt</b>pyrit</span></li>
+        <li><img src="images/unit3/dendrites.webp" alt="Hình cành cây oxit mangan màu đen trên đá nhạt." loading="lazy" width="768" height="519"><span><b>Cành cây</b>oxit Mn</span></li>
+        <li><img src="images/unit3/tourmaline.webp" alt="Tinh thể turmalin lục dạng lăng trụ dài." loading="lazy" width="307" height="650"><span><b>Lăng trụ</b>turmalin</span></li>
+        <li><img src="images/unit3/quartz-tibet.webp" alt="Tinh thể thạch anh sáu cạnh." loading="lazy" width="768" height="726"><span><b>Lục giác</b>thạch anh</span></li>
+        <li><img src="images/unit3/staurolite.webp" alt="Hai tinh thể staurolit nâu đan chéo nhau." loading="lazy" width="466" height="501"><span><b>Song tinh</b>staurolit</span></li>
+      </ul>
+    </div>
+    <figcaption>Ví dụ các dạng quen tinh thể trong chương.<span class="credit">Kyanit: Aelwyn, CC BY-SA. Malachit, pyrit: Didier Descouens, CC BY-SA. Galenit, staurolit: Robert M. Lavinsky, CC BY-SA. Hình cành cây: Wilson44691, phạm vi công cộng. Turmalin: Rob Lavinsky, CC BY-SA. Thạch anh: JJ Harrison, CC BY-SA.</span></figcaption>
+  </figure>
+  <p><b>Đường sọc và song tinh.</b> <button class="term" data-term="đường sọc">Đường sọc</button> (striations) là các vạch sáng tối song song trên mặt tinh thể. <button class="term" data-term="song tinh">Song tinh</button> xảy ra khi cấu trúc tinh thể lặp lại theo kiểu đối xứng gương dọc theo một số phương. Hai hiện tượng liên quan với nhau ở <b>plagioclas</b>: song tinh tạo đường sọc trên một trong hai mặt cát khai của nó (Mục 3.5.6).</p>
+
+  <h3 id="s3-5-5">3.5.5 Cát khai và vết vỡ</h3>
+  <p><button class="term" data-term="cát khai">Cát khai</button> là xu hướng vỡ theo các mặt phẳng nhẵn, song song, nơi liên kết nguyên tử yếu hơn theo một số phương. Vì đi theo các lớp nguyên tử, mặt cát khai nhẵn về quang học và phản chiếu ánh sáng, kể cả khi vết vỡ trông lởm chởm: chúng có thể hiện thành chuỗi bậc như <b>ruộng bậc thang</b> cùng lóe sáng dưới một góc mặt trời, hoặc như các vết nứt song song ăn vào tinh thể. <b>Graphit</b> cho thấy lý do: liên kết mạnh trong các lớp cacbon và liên kết rất yếu giữa các lớp giúp nó tách và trượt, nên dùng làm chất bôi trơn.</p>
+  <p>Cát khai được mô tả bằng <b>mức độ</b> (hoàn toàn, không hoàn toàn hoặc không có), <b>số phương</b> và <b>góc</b> giữa các phương. Đây là một trong những tính chất nhận dạng hữu ích nhất. Đừng nhầm mặt cát khai với mặt tinh thể: đập đá để lộ bề mặt mới thường làm tinh thể vỡ theo mặt cát khai, và một số mặt cát khai song song với mặt tinh thể nhưng nhiều mặt thì không.</p>
+  <figure>
+    <div class="frame"><svg viewBox="0 0 720 400" role="img" aria-labelledby="clv-t" style="width:100%;min-width:600px;height:auto"><title id="clv-t">Sáu hình phác: một phương cát khai như mica; hai phương 90 độ như fenspat; hai phương 60 và 120 độ như amphibol; ba phương 90 độ tạo hình lập phương như halit; ba phương khoảng 75 độ tạo khối mặt thoi như canxit; và vết vỡ vỏ sò cong như thạch anh.</title><g transform="translate(0,0)"><rect x="6" y="6" width="228" height="188" rx="10" fill="var(--surface-2)"/><g><polygon points="70,112 170,112 190,100 90,100" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><rect x="70" y="112" width="100" height="5" fill="color-mix(in srgb,var(--accent) 45%,var(--surface))"/></g><g><polygon points="70,101 170,101 190,89 90,89" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><rect x="70" y="101" width="100" height="5" fill="color-mix(in srgb,var(--accent) 45%,var(--surface))"/></g><g><polygon points="70,90 170,90 190,78 90,78" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><rect x="70" y="90" width="100" height="5" fill="color-mix(in srgb,var(--accent) 45%,var(--surface))"/></g><g><polygon points="70,79 170,79 190,67 90,67" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><rect x="70" y="79" width="100" height="5" fill="color-mix(in srgb,var(--accent) 45%,var(--surface))"/></g><g><polygon points="70,68 170,68 190,56 90,56" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><rect x="70" y="68" width="100" height="5" fill="color-mix(in srgb,var(--accent) 45%,var(--surface))"/></g><g transform="rotate(-8 80 57)"><polygon points="80,57 180,57 200,45 100,45" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><rect x="80" y="57" width="100" height="5" fill="color-mix(in srgb,var(--accent) 45%,var(--surface))"/></g><text x="120.0" y="164" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">1 phương</text><text x="120.0" y="182" text-anchor="middle" font-size="11.5" class="svg-muted">mica (hoàn toàn, tách thành tấm)</text></g><g transform="translate(240,0)"><rect x="6" y="6" width="228" height="188" rx="10" fill="var(--surface-2)"/><rect x="80" y="30" width="80" height="100" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><line x1="80" y1="50" x2="160" y2="50" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="80" y1="70" x2="160" y2="70" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="80" y1="90" x2="160" y2="90" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="80" y1="110" x2="160" y2="110" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="100" y1="30" x2="100" y2="130" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="120" y1="30" x2="120" y2="130" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="140" y1="30" x2="140" y2="130" stroke="var(--accent)" stroke-dasharray="3 3"/><path d="M160 118 h-12 v12" fill="none" stroke="var(--rust)" stroke-width="2"/><text x="170" y="138" font-size="12" font-weight="700" fill="var(--rust)">90°</text><text x="120.0" y="164" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">2 phương góc 90°</text><text x="120.0" y="182" text-anchor="middle" font-size="11.5" class="svg-muted">fenspat; pyroxen (không hoàn toàn)</text></g><g transform="translate(480,0)"><rect x="6" y="6" width="228" height="188" rx="10" fill="var(--surface-2)"/><polygon points="60,130 130,130 165,69.4 95,69.4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><line x1="68.8" y1="114.8" x2="138.8" y2="114.8" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="77.5" y1="130" x2="112.5" y2="69.4" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="77.5" y1="99.7" x2="147.5" y2="99.7" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="95.0" y1="130" x2="130.0" y2="69.4" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="86.2" y1="84.5" x2="156.2" y2="84.5" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="112.5" y1="130" x2="147.5" y2="69.4" stroke="var(--accent)" stroke-dasharray="3 3"/><path d="M74 130 A14 14 0 0 0 67 117.9" fill="none" stroke="var(--rust)" stroke-width="2"/><text x="40" y="146" font-size="11.5" font-weight="700" fill="var(--rust)">60°</text><path d="M116 130 A14 14 0 0 1 137 117.9" fill="none" stroke="var(--rust)" stroke-width="2"/><text x="122" y="146" font-size="11.5" font-weight="700" fill="var(--rust)">120°</text><text x="120.0" y="164" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">2 phương góc 60°/120°</text><text x="120.0" y="182" text-anchor="middle" font-size="11.5" class="svg-muted">amphibol</text></g><g transform="translate(0,200)"><rect x="6" y="6" width="228" height="188" rx="10" fill="var(--surface-2)"/><polygon points="120,34 162,58 120,82 78,58" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><polygon points="78,58 120,82 120,130 78,106" fill="color-mix(in srgb,var(--accent) 30%,var(--surface))" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><polygon points="162,58 120,82 120,130 162,106" fill="color-mix(in srgb,var(--accent) 50%,var(--surface))" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><text x="172" y="60" font-size="12" font-weight="700" fill="var(--rust)">90°</text><text x="120.0" y="164" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">3 phương góc 90°</text><text x="120.0" y="182" text-anchor="middle" font-size="11.5" class="svg-muted">halit, galen, pyrit (lập phương)</text></g><g transform="translate(240,200)"><rect x="6" y="6" width="228" height="188" rx="10" fill="var(--surface-2)"/><g transform="translate(120,82) skewX(-20) scale(1,.92) translate(-120,-82)"><polygon points="120,34 162,58 120,82 78,58" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><polygon points="78,58 120,82 120,130 78,106" fill="color-mix(in srgb,var(--accent) 30%,var(--surface))" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><polygon points="162,58 120,82 120,130 162,106" fill="color-mix(in srgb,var(--accent) 50%,var(--surface))" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/></g><text x="166" y="60" font-size="12" font-weight="700" fill="var(--rust)">≈75°</text><text x="120.0" y="164" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">3 phương góc ≈75°</text><text x="120.0" y="182" text-anchor="middle" font-size="11.5" class="svg-muted">canxit (khối mặt thoi)</text></g><g transform="translate(480,200)"><rect x="6" y="6" width="228" height="188" rx="10" fill="var(--surface-2)"/><path d="M60 128 C 60 60, 120 30, 182 56 C 200 90, 170 130, 60 128 z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><path d="M70 124 q 10.799999999999999 -18 28.8 -9.9" fill="none" stroke="var(--accent)" stroke-width="1.4"/><path d="M74 122 q 20.4 -34 54.400000000000006 -18.700000000000003" fill="none" stroke="var(--accent)" stroke-width="1.4"/><path d="M78 120 q 30.0 -50 80.0 -27.500000000000004" fill="none" stroke="var(--accent)" stroke-width="1.4"/><path d="M82 118 q 39.6 -66 105.60000000000001 -36.300000000000004" fill="none" stroke="var(--accent)" stroke-width="1.4"/><text x="120.0" y="164" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Không cát khai: vết vỡ vỏ sò</text><text x="120.0" y="182" text-anchor="middle" font-size="11.5" class="svg-muted">thạch anh, olivin, obsidian</text></g></svg></div>
+    <figcaption>Kiểu cát khai của các khoáng vật tạo đá phổ biến. Nét đứt là các mặt yếu.<span class="credit">Sơ đồ vẽ cho tài liệu này theo Mục 3.5.5.</span></figcaption>
+  </figure>
+  <div class="tablewrap">
+    <table>
+      <caption>Cát khai của các khoáng vật tạo đá phổ biến (theo chương).</caption>
+      <thead><tr><th>Khoáng vật</th><th>Cát khai</th></tr></thead>
+      <tbody>
+        <tr><td>Thạch anh</td><td>Không có (vết vỡ vỏ sò)</td></tr>
+        <tr><td>Olivin</td><td>Không có (vết vỡ vỏ sò)</td></tr>
+        <tr><td>Mica</td><td>1 phương hoàn toàn</td></tr>
+        <tr><td>Fenspat</td><td>2 phương hoàn toàn, góc 90°</td></tr>
+        <tr><td>Pyroxen</td><td>2 phương không hoàn toàn, góc 90°</td></tr>
+        <tr><td>Amphibol</td><td>2 phương hoàn toàn, góc 60°/120°</td></tr>
+        <tr><td>Canxit</td><td>3 phương hoàn toàn, góc khoảng 75° (khối mặt thoi: khối lập phương bị ép lệch về một góc)</td></tr>
+        <tr><td>Halit, galenit, pyrit</td><td>3 phương hoàn toàn, góc 90° (lập phương)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/galena-cleavage.webp" alt="Galenit với nhiều mặt cát khai sáng bóng, song song, xếp bậc." loading="lazy" width="768" height="668"></div>
+      <figcaption>Cát khai lập phương của galenit: các mặt song song ở những độ cao khác nhau.<span class="credit">Modris Baum, phạm vi công cộng.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/amphibole-cleavage.webp" alt="Ảnh hiển vi một hạt amphibol bị cắt bởi hai hệ vết nứt giao nhau khoảng 60 và 120 độ." loading="lazy" width="468" height="476"></div>
+      <figcaption>Ảnh hiển vi cát khai 60°/120° trong một hạt amphibol.<span class="credit">Zimbres, CC BY-SA.</span></figcaption>
+    </figure>
+  </div>
+  <p><button class="term" data-term="vết vỡ">Vết vỡ</button> là kiểu vỡ không theo cát khai. Nó có thể không đều (được mô tả là gồ ghề, dạng mảnh vụn hay dạng sợi) hoặc dạng <button class="term" data-term="vết vỡ vỏ sò">vỏ sò</button>: bề mặt cong, nhẵn như một cái bát nông hay vỏ ốc, thường có các gờ cong. Thạch anh và olivin hiếm khi có cát khai và thường vỡ dạng vỏ sò, giống như thủy tinh núi lửa <b>obsidian</b>.</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/citrine.webp" alt="Mẩu citrin vàng với các mặt vỡ cong, nhẵn." loading="lazy" width="768" height="576"></div>
+      <figcaption>Vết vỡ vỏ sò ở citrin, một biến thể của thạch anh.<span class="credit">CC BY, qua <i>An Introduction to Geology</i>.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/graphite.gif" alt="Mô hình động của graphit: các lớp nguyên tử cacbon lục giác phẳng xếp chồng với khoảng trống giữa các lớp." loading="lazy" width="452" height="504"></div>
+      <figcaption>Graphit: các lớp cacbon cách nhau bởi khoảng trống có liên kết yếu.<span class="credit">Saumitra R Mehrotra &amp; Gerhard Klimeck, CC BY.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s3-5-6">3.5.6 Tính chất đặc biệt</h3>
+  <p><button class="term" data-term="tính chất đặc biệt">Tính chất đặc biệt</button> là những đặc điểm riêng giúp nhận dạng một số khoáng vật hoặc khiến chúng hữu dụng.</p>
+  <ul>
+    <li><b>Dẫn quang dạng sợi:</b> <b>ulexit</b> chiếu ảnh xuyên qua tinh thể như một màn hình.</li>
+    <li><b>Vị:</b> halit (NaCl) có vị mặn; sylvin (KCl) đắng hơn.</li>
+    <li><b><button class="term" data-term="tỷ trọng">Tỷ trọng</button>:</b> khối lượng mẫu so với khối lượng của cùng thể tích nước. Cân mẫu theo gam, nhúng vào ống đong chia vạch và đọc thể tích nước dâng lên; vì nước nặng 1 g/cm³, tỉ số cho ra tỷ trọng. Đo trong phòng thí nghiệm thì dễ nhưng ít hữu ích ngoài thực địa, trừ khoáng vật rất đặc như <b>galenit và vàng</b>, mà nhà địa chất đánh giá bằng <button class="term" data-term="cảm giác nặng tay">cảm giác nặng tay</button> (heft): mẫu cầm thấy nặng thế nào so với kích thước.</li>
+    <li><b>Phản ứng với axit:</b> canxit sủi bọt trong axit clohydric loãng; dolomit chỉ sủi bọt chậm, và chỉ khi đã nghiền bột (<a href="#fig-acid">Hình 3.51</a>). Nhà địa chất làm việc với đá carbonat mang theo lọ nhỏ giọt HCl loãng. Giấm (axit axetic, yếu hơn) cũng dùng được nhưng sủi ít hơn.</li>
+    <li><b>Từ tính:</b> <b>magnetit (Fe<sub>3</sub>O<sub>4</sub>)</b> bị nam châm hút mạnh và có thể bị từ hóa; oxit sắt có từ tính tự nhiên gọi là <b>đá nam châm</b> (lodestone). Ilmenit (FeTiO<sub>3</sub>) và một số hematit có từ tính yếu.</li>
+    <li><b><button class="term" data-term="ánh ngũ sắc">Ánh ngũ sắc</button>:</b> ánh sáng bị tán xạ tạo hiệu ứng nhiều màu, như ở labradorit (một biến thể của plagioclas), opal, ngọc trai và vỏ sò.</li>
+    <li><b>Đường sọc và phiến tách:</b> giúp phân biệt hai loại fenspat. <b>Plagioclas</b> có <b>đường sọc</b> trên một mặt cát khai do song tinh (góc cát khai của nó lệch nhẹ khỏi 90°, nên các đới song tinh phản xạ ánh sáng ở góc hơi khác nhau). <b>Fenspat kali</b> không có đường sọc nhưng có thể có <button class="term" data-term="phiến tách">phiến tách</button> (exsolution lamellae, perthit): các vệt gần song song của fenspat natri (albit) tách ra vì Na và K không cùng nằm được trong một cấu trúc fenspat.</li>
+    <li><b><button class="term" data-term="huỳnh quang">Huỳnh quang</button>:</b> một số khoáng vật, hoặc nguyên tố vết trong chúng, phát ánh sáng nhìn thấy dưới tia cực tím (đèn đen) (<a href="#fig-fluorite">Hình 3.33</a>). Hiếm hơn là <b><button class="term" data-term="lân quang">lân quang</button></b>: hấp thụ ánh sáng rồi phát ra chậm, như miếng dán dạ quang.</li>
+  </ul>
+  <figure id="fig-acid">
+    <div class="frame"><svg viewBox="0 0 640 200" role="img" aria-labelledby="acid-t" style="width:100%;min-width:560px;height:auto"><title id="acid-t">Sơ đồ: nhỏ axit clohydric loãng lên mẫu; nếu sủi bọt là canxit; nếu không, cạo thành bột rồi thử lại; sủi bọt chậm trên bột là dolomit.</title><defs><marker id="ah-a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs><rect x="20" y="30" width="180" height="56" rx="10" class="flow-step" style="--d:0s"/><text x="110.0" y="52.0" text-anchor="middle" font-size="12.5" font-weight="700" class="svg-ink">Nhỏ HCl loãng</text><text x="110.0" y="70.0" text-anchor="middle" font-size="11.5" class="svg-muted">(10–15%) lên mẫu</text><rect x="250" y="30" width="170" height="56" rx="10" class="flow-step" style="--d:1.5s"/><text x="335.0" y="62.0" text-anchor="middle" font-size="12.5" font-weight="700" class="svg-ink">Sủi bọt trên bề mặt?</text><rect x="470" y="30" width="150" height="56" rx="10" class="flow-step" style="--d:3s"/><text x="545.0" y="52.0" text-anchor="middle" font-size="12.5" font-weight="700" class="svg-ink">Canxit</text><text x="545.0" y="70.0" text-anchor="middle" font-size="11.5" class="svg-muted">CaCO₃</text><rect x="250" y="130" width="170" height="56" rx="10" class="flow-step" style="--d:3s"/><text x="335.0" y="152.0" text-anchor="middle" font-size="12.5" font-weight="700" class="svg-ink">Cạo thành bột,</text><text x="335.0" y="170.0" text-anchor="middle" font-size="11.5" class="svg-muted">thử lại</text><rect x="470" y="130" width="150" height="56" rx="10" class="flow-step" style="--d:4.5s"/><text x="545.0" y="152.0" text-anchor="middle" font-size="12.5" font-weight="700" class="svg-ink">Dolomit</text><text x="545.0" y="170.0" text-anchor="middle" font-size="11.5" class="svg-muted">sủi bọt chậm</text><line x1="200" y1="58" x2="246" y2="58" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#ah-a)"/><line x1="420" y1="58" x2="466" y2="58" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#ah-a)"/><line x1="335" y1="86" x2="335" y2="126" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#ah-a)"/><line x1="420" y1="158" x2="466" y2="158" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#ah-a)"/><text x="443" y="50" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--accent)">có</text><text x="343" y="110" font-size="11.5" font-weight="700" fill="var(--rust)">không</text></svg></div>
+    <figcaption>Phép thử axit cho canxit và dolomit, dùng axit clohydric loãng (HCl 10–15%). Xem video trong giáo trình: <a href="https://www.youtube.com/watch?v=DX6ZMPbA09U" target="_blank" rel="noopener">"Calcite and Dolomite Reacting with Hydrochloric Acid" (tiếng Anh) ↗</a>.<span class="credit">Sơ đồ vẽ cho tài liệu này theo Mục 3.5.6.</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame">
+      <ul class="gallery" style="--cols:3">
+        <li><img src="images/unit3/ulexite.webp" alt="Tinh thể ulexit đặt trên trang chữ in, chữ hiện lên ở mặt trên." loading="lazy" width="300" height="274"><span><b>Chiếu ảnh</b>ulexit</span></li>
+        <li><img src="images/unit3/gold.webp" alt="Một cục vàng tự sinh." loading="lazy" width="600" height="800"><span><b>Tỷ trọng cao</b>vàng tự sinh</span></li>
+        <li><img src="images/unit3/lodestone.webp" alt="Kẹp giấy dính vào một hòn đá sẫm màu." loading="lazy" width="768" height="512"><span><b>Từ tính</b>đá nam châm (magnetit)</span></li>
+        <li><img src="images/unit3/plagioclase-striations.webp" alt="Plagioclas xám lam có ánh màu và các vạch song song mảnh." loading="lazy" width="768" height="620"><span><b>Ánh ngũ sắc, đường sọc</b>plagioclas</span></li>
+        <li><img src="images/unit3/perthite.webp" alt="Fenspat nhạt màu với các vệt lượn sóng gần song song." loading="lazy" width="540" height="390"><span><b>Phiến tách</b>fenspat kali</span></li>
+        <li><img src="images/unit3/wollastonite-steps.webp" alt="Khoáng vật trắng với các mặt cát khai xếp bậc và đồng xu làm tỉ lệ." loading="lazy" width="360" height="269"><span><b>Bậc cát khai</b>wollastonit</span></li>
+      </ul>
+    </div>
+    <figcaption>Các tính chất đặc biệt, cùng các mặt cát khai xếp bậc theo một phương cát khai (wollastonit).<span class="credit">Ulexit: Sec, phạm vi công cộng. Vàng: Gump Stump, CC BY-SA. Đá nam châm: Ryan Somma, CC BY-SA. Plagioclas: Mike Beauregard, CC BY. Perthit: Jstuby, phạm vi công cộng. Wollastonit: phạm vi công cộng.</span></figcaption>
+  </figure>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener">Bài kiểm tra mục 3.5 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<section id="summary">
+  <h2 class="sec">Tóm tắt</h2>
+  <p>Khoáng vật là những viên gạch xây nên đá, và tính chất của chúng do liên kết nguyên tử quyết định. Phần lớn khoáng vật bắt đầu từ một chất lưu: kết tinh từ macma đang nguội hoặc kết tủa từ dung dịch bão hòa. Silicat là nhóm lớn nhất cả về số loại lẫn khối lượng, chiếm phần lớn vỏ và manti; cấu trúc tứ diện của chúng phản ánh việc oxy và silic là hai nguyên tố phổ biến nhất trong vỏ Trái Đất. Khoáng vật phi silicat có giá trị kinh tế lớn, cung cấp vật liệu xây dựng và sản xuất. Khoáng vật được nhận dạng qua tính chất vật lý: ánh, màu, vết vạch, độ cứng, dạng quen tinh thể, vết vỡ, cát khai và các tính chất đặc biệt.</p>
+  <div class="callout">
+    <h4>Tóm lược nhanh</h4>
+    <ul>
+      <li>Khoáng vật: tự nhiên, vô cơ, rắn, kết tinh, thành phần xác định; IMA: "hình thành do kết quả của các quá trình địa chất". Than đá, ngọc trai, opal, obsidian là á khoáng vật.</li>
+      <li>Nguyên tử: hạt nhân (proton +, neutron 0) và electron (−). Số hiệu nguyên tử = số proton; nguyên tử khối ≈ proton + neutron; đồng vị khác nhau ở số neutron.</li>
+      <li>Quy tắc bát tử: cột I–II nhường electron (cation), VI–VII nhận electron (anion), VIII trơ. Liên kết ion chuyển electron (NaCl); liên kết cộng hóa trị dùng chung electron (CH<sub>4</sub>).</li>
+      <li>Khoáng vật hình thành từ nước (kết tủa khi bão hòa), từ macma (kết tinh) và do sinh vật (canxit, aragonit, silica, apatit).</li>
+      <li>Tứ diện SiO<sub>4</sub> (−4) liên kết thành: riêng lẻ (olivin) → chuỗi đơn (pyroxen) → chuỗi kép (amphibol) → tấm (mica, sét) → khung (thạch anh, fenspat).</li>
+      <li>Dung dịch rắn: olivin (forsterit–fayalit), plagioclas (albit–anortit). Kích thước quan trọng hơn điện tích.</li>
+      <li>Phi silicat: carbonat, oxit, halogenua, sulfua, sulfat, phosphat, nguyên tố tự sinh; nhiều loại là quặng.</li>
+      <li>Nhận dạng: ánh, màu, vết vạch, độ cứng (Mohs 1–10), dạng quen, cát khai/vết vỡ, tính chất đặc biệt (axit, từ tính, vị, tỷ trọng, huỳnh quang...).</li>
+    </ul>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener">Bài ôn tập Chương 3 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<section id="resources">
+  <h2 class="sec">Tài liệu tham khảo</h2>
+  <div class="res">
+    <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener"><b>Chương 3 (giáo trình, tiếng Anh) ↗</b><span>Toàn văn chương, kèm bài kiểm tra tương tác từng mục và mọi hình gốc.</span></a>
+    <a href="https://slcc.pressbooks.pub/introgeology/back-matter/glossary-test/" target="_blank" rel="noopener"><b>Bảng thuật ngữ của giáo trình (tiếng Anh) ↗</b><span>Định nghĩa mọi thuật ngữ in đậm trong sách.</span></a>
+    <a href="https://www.youtube.com/watch?v=DX6ZMPbA09U" target="_blank" rel="noopener"><b>"Calcite and Dolomite Reacting with Hydrochloric Acid" (tiếng Anh) ↗</b><span>Video phép thử axit ở Mục 3.5.6 của chương.</span></a>
+    <a href="https://www.mindat.org/" target="_blank" rel="noopener"><b>Mindat.org (tiếng Anh) ↗</b><span>Cơ sở dữ liệu khoáng vật miễn phí của Viện Khoáng vật học Hudson: tính chất, ảnh và nơi phân bố của mọi khoáng vật đã được công nhận.</span></a>
+    <a href="https://www.usgs.gov/programs/mineral-resources-program" target="_blank" rel="noopener"><b>Chương trình Tài nguyên Khoáng sản USGS (tiếng Anh) ↗</b><span>Nghiên cứu và dữ liệu của Cục Địa chất Hoa Kỳ về khoáng vật và quặng (Chương 16 quay lại chủ đề tài nguyên khoáng sản).</span></a>
+    <a href="https://ptable.com/?lang=vi" target="_blank" rel="noopener"><b>Ptable: bảng tuần hoàn tương tác ↗</b><span>Nhấn vào từng nguyên tố để xem số hiệu, nguyên tử khối, đồng vị và cấu hình lớp electron; có giao diện tiếng Việt.</span></a>
+  </div>
+</section>
+
+<section id="factcheck">
+  <h2 class="sec">Ghi chú kiểm chứng</h2>
+  <p>Mọi nội dung trong tài liệu đã được đối chiếu với chương trong giáo trình. Khi chương khác với tài liệu tham khảo hiện hành hoặc tự mâu thuẫn, tài liệu giữ giá trị của chương (đó là nội dung bạn sẽ được kiểm tra) trừ khi có ghi chú, và liệt kê điểm khác biệt ở đây.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Các giá trị khác với tài liệu hiện hành hoặc mâu thuẫn trong chương.</caption>
+      <thead><tr><th>Chủ đề</th><th>Chương viết</th><th>Ghi chú</th></tr></thead>
+      <tbody>
+        <tr><td>Thang Mohs</td><td>Do "Fredrick Mohs xây dựng đầu thế kỷ 20"</td><td>Friedrich Mohs (1773–1839) đưa ra thang này năm 1812, tức đầu thế kỷ <i>19</i> (<a href="https://www.britannica.com/science/Mohs-hardness" target="_blank" rel="noopener">Britannica, "Mohs hardness"</a>). Tài liệu chỉ ghi tên ông.</td></tr>
+        <tr><td>Định nghĩa khoáng vật</td><td>IMA sửa định nghĩa "năm 1985"</td><td>Câu trích dẫn lấy từ bài báo năm 1995 của E.H. Nickel, "The definition of a mineral" (<i>Canadian Mineralogist</i> 33: 689–690), là chuẩn của ủy ban IMA. Tài liệu không ghi năm.</td></tr>
+        <tr><td>Nguyên tố chuyển tiếp</td><td>"Các cột 3 đến 15"</td><td>Tài liệu hóa học thường định nghĩa nguyên tố chuyển tiếp là cột 3–12 (khối d). <a href="#fig-ptable">Hình 3.3</a> tô cột 3–12 là chuyển tiếp và 13–15 là chủ yếu cộng hóa trị, khớp với một câu khác của chương rằng các cột 3–15 thường liên kết cộng hóa trị.</td></tr>
+        <tr><td>Mafic</td><td>"Ghép từ ký hiệu hóa học Ma và Fe"</td><td>Mafic ghép từ <b>ma</b>gnesium + <b>f</b>erric (sắt); ký hiệu của magie là Mg.</td></tr>
+        <tr><td>Silicat chuỗi</td><td>Chỉ nêu ở phần amphibol</td><td>Cả silicat chuỗi đơn (pyroxen) và chuỗi kép (amphibol) đều là silicat chuỗi (inosilicate). <a href="#fig-silicates">Hình 3.12</a> ghi nhãn amphibol như trong chương.</td></tr>
+        <tr><td>Nguyên tố tự nhiên nặng nhất</td><td>Urani (92)</td><td>Đúng theo quy ước thông dụng; một lượng vết plutoni cũng hình thành tự nhiên trong quặng urani.</td></tr>
+        <tr><td>Ánh ngũ sắc của kim cương</td><td>"Kim cương đã cắt mài có ánh ngũ sắc"</td><td>Giới ngọc học gọi các tia cầu vồng của kim cương đã cắt mài là <i>tán sắc</i> ("lửa"). Tài liệu không xếp kim cương vào danh sách ánh ngũ sắc.</td></tr>
+        <tr><td>Tinh thể Naica</td><td>"39 feet (12 mét) và 55 tones"</td><td>"Tones" là lỗi đánh máy của tons (tấn). Tài liệu chỉ ghi chiều dài.</td></tr>
+        <tr><td>Lỗi đánh máy</td><td>"CaSo<sub>4</sub>·2H<sub>2</sub>O"; "baslt"</td><td>Đã sửa thành CaSO<sub>4</sub>·2H<sub>2</sub>O và basalt (bazan).</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Chương gọi các dạng khối, chùm nho, gương và trứng cá của hematit là "dạng đa hình". Dạng đa hình thường chỉ các <i>cấu trúc</i> tinh thể khác nhau (như canxit và aragonit); các dạng của hematit là những dạng quen khác nhau của cùng một cấu trúc. Apatit hydroxycarbonat được chương viết là Ca<sub>5</sub>(PO<sub>4</sub>)<sub>3</sub>(OH), là công thức của hydroxylapatit; tài liệu không ghi công thức.</p>
+</section>
+
+<section id="credits">
+  <h2 class="sec">Nguồn &amp; trích dẫn</h2>
+  <p class="small">Nội dung tóm tắt từ <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener"><i>An Introduction to Geology</i>, Chương 3</a>, © 2017 Chris Johnson, Matthew D. Affolter, Paul Inkenbrandt và Cam Mosher, theo giấy phép <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. Tài liệu này được chia sẻ theo cùng giấy phép. Hình ảnh lấy từ chương và giữ nguyên giấy phép riêng, ghi trong chú thích từng hình:</p>
+  <ul class="small">
+    <li>CC BY / CC BY-SA / CC0: như ghi trong chú thích từng hình.</li>
+    <li>Phạm vi công cộng: tác phẩm của chính phủ Hoa Kỳ (USGS, NASA, Cục Công viên Quốc gia) và các hình khác như đã ghi.</li>
+    <li>Nguyên tử, bảng tuần hoàn, tứ diện, cấu trúc silicat, thanh dung dịch rắn, hình phác cát khai và sơ đồ phép thử axit: vẽ cho tài liệu này theo nội dung chương.</li>
+    <li>Các hình ghi "All Rights Reserved" hoặc không có giấy phép trong chương (mô hình đám mây electron, biểu đồ tròn hàm lượng nguyên tố và khoáng vật, mô hình tứ diện bằng bóng bàn, "bánh kẹp" mica, cấu trúc fenspat, tứ diện xoay, cúc đá, biotit, bảng tuần hoàn) không được sao chép lại.</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<button class="fab" id="notesBtn" type="button" aria-controls="notes" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Thuật ngữ
+</button>
+<button class="fab hide" id="toTop" type="button" aria-label="Lên đầu trang">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<aside class="notes" id="notes" hidden aria-label="Thuật ngữ">
+  <header>
+    <div><h2>Thuật ngữ · Chương 3</h2><button class="close" id="notesClose" type="button" aria-label="Đóng bảng thuật ngữ">×</button></div>
+    <input id="termSearch" type="search" placeholder="Tìm thuật ngữ và định nghĩa" autocomplete="off" aria-label="Tìm thuật ngữ">
+    <div class="count" id="termCount"></div>
+  </header>
+  <dl id="termList"></dl>
+</aside>
+</div>
+
+<script type="application/json" id="terms">
+[
+ ["khoáng vật","s3-0","Chất rắn có nguồn gốc tự nhiên, vô cơ, kết tinh, có thành phần hóa học xác định. Theo IMA: nguyên tố hoặc hợp chất, thường kết tinh, hình thành do các quá trình địa chất. (EN: mineral)"],
+ ["quá trình thành đá","s3-0","Các biến đổi của trầm tích sau khi bị chôn vùi; sau quá trình này, canxit trong vỏ nghêu được tính là khoáng vật. (EN: diagenesis)"],
+ ["á khoáng vật","s3-0","Chất tự nhiên không thỏa định nghĩa khoáng vật, vd. than đá, ngọc trai, opal, obsidian. (EN: mineraloid)"],
+ ["đá","s3-0","Vật chất chứa một hay nhiều khoáng vật hoặc á khoáng vật; gồm đá magma, trầm tích và biến chất. (EN: rock)"],
+ ["hạt nhân","s3-1-1","Trung tâm nguyên tử, chứa proton, neutron và gần như toàn bộ khối lượng. (EN: nucleus)"],
+ ["proton","s3-1-1","Hạt mang điện dương trong hạt nhân; số khối 1. Số proton là số hiệu nguyên tử. (EN: proton)"],
+ ["neutron","s3-1-1","Hạt không mang điện trong hạt nhân; số khối 1. (EN: neutron)"],
+ ["electron","s3-1-1","Hạt mang điện âm quanh hạt nhân, khối lượng chưa bằng 1/1000 proton. (EN: electron)"],
+ ["nguyên tố","s3-1-2","Loại nguyên tử có số proton xác định; không thể phân tách bằng phương pháp hóa học thành dạng đơn giản hơn. (EN: element)"],
+ ["số hiệu nguyên tử","s3-1-2","Số proton trong hạt nhân nguyên tử (oxy 8, sắt 26). (EN: atomic number)"],
+ ["bảng tuần hoàn","s3-1-2","Bảng mọi nguyên tố đã biết theo thứ tự số hiệu nguyên tử, các nguyên tố tương tự nằm cùng cột; Mendeleev lập lần đầu năm 1869. (EN: periodic table)"],
+ ["nguyên tử khối","s3-1-2","Số proton cộng số neutron; trên bảng tuần hoàn là giá trị trung bình theo các đồng vị. (EN: atomic mass)"],
+ ["đồng vị","s3-1-2","Các dạng của một nguyên tố có cùng số proton nhưng khác số neutron, vd. cacbon-12, -13, -14. (EN: isotope)"],
+ ["hợp chất","s3-1-3","Chất gồm nhiều nguyên tố gắn với nhau bằng liên kết hóa học. (EN: compound)"],
+ ["liên kết hóa học","s3-1-3","Cách các nguyên tử gắn với nhau để tạo hợp chất. (EN: chemical bonding)"],
+ ["phân tử","s3-1-3","Hợp chất được giữ bởi liên kết hóa học, vd. H2O, O2. (EN: molecule)"],
+ ["ion đa nguyên tử","s3-1-3","Nhóm nguyên tử liên kết cộng hóa trị mang điện tích chung, vd. carbonat CO3(2−). (EN: molecular ion)"],
+ ["lớp electron hóa trị","s3-1-3","Lớp electron ngoài cùng; electron của nó tham gia liên kết. (EN: valence shell)"],
+ ["quy tắc bát tử","s3-1-3","Nguyên tử bền nhất khi có 8 electron ở lớp hóa trị (2 khi lớp thứ nhất là lớp hóa trị). (EN: octet rule)"],
+ ["khí hiếm","s3-1-3","Nguyên tố cột VIII (18) có lớp hóa trị đầy; trơ về mặt hóa học. (EN: noble gas)"],
+ ["ion","s3-1-3","Nguyên tử mang điện tích do nhận hoặc mất electron. (EN: ion)"],
+ ["cation","s3-1-3","Ion dương (đã mất electron); bị hút về cực âm (cathode). Các nguyên tố bên trái bảng tuần hoàn. (EN: cation)"],
+ ["anion","s3-1-3","Ion âm (đã nhận electron); bị hút về cực dương (anode). Các nguyên tố bên phải bảng tuần hoàn. (EN: anion)"],
+ ["nguyên tố chuyển tiếp","s3-1-3","Các nguyên tố ở giữa bảng tuần hoàn không tuân thủ quy tắc bát tử một cách nhất quán, vd. sắt (Fe2+ hoặc Fe3+). (EN: transition element)"],
+ ["liên kết ion","s3-1-3","Liên kết chuyển electron: lực hút tĩnh điện giữa các ion trái dấu, thường giữa kim loại và phi kim (NaCl). (EN: ionic bond)"],
+ ["liên kết cộng hóa trị","s3-1-3","Liên kết dùng chung electron, thường giữa các phi kim (O2, CH4). (EN: covalent bond)"],
+ ["dung dịch","s3-2-1","Ion hay phân tử (chất tan) hòa tan trong dung môi, trong tự nhiên thường là nước. (EN: solution)"],
+ ["chất tan","s3-2-1","Các ion hay phân tử được hòa tan trong dung dịch. (EN: solute)"],
+ ["dung môi","s3-2-1","Môi trường hòa tan chất tan; trong tự nhiên thường là nước. (EN: solvent)"],
+ ["kết tủa","s3-2-1","Ion trong dung dịch kết hợp thành khoáng vật rắn; ngược với hòa tan. (EN: precipitation)"],
+ ["bão hòa","s3-2-1","Thời điểm dung môi không thể hòa tan thêm chất tan. (EN: saturation)"],
+ ["tufa","s3-2-1","Đá xốp kết tủa từ suối giàu khoáng, vd. quanh hồ Bonneville thời băng hà ở Utah. (EN: tufa)"],
+ ["macma","s3-2-2","Đá nóng chảy với các ion chuyển động tự do. (EN: magma)"],
+ ["dung nham","s3-2-2","Macma phun trào lên bề mặt Trái Đất. (EN: lava)"],
+ ["dạng đa hình","s3-2-3","Các khoáng vật cùng công thức hóa học nhưng khác cấu trúc tinh thể, vd. canxit và aragonit. (EN: polymorph)"],
+ ["khoáng vật silicat","s3-3","Khoáng vật xây dựng quanh tứ diện silic-oxy; nhóm khoáng vật lớn nhất, chiếm phần lớn vỏ và manti. (EN: silicate mineral)"],
+ ["khoáng vật tạo đá","s3-3","Số ít khoáng vật phổ biến tạo nên hầu hết các loại đá trên bề mặt Trái Đất. (EN: rock-forming minerals)"],
+ ["tứ diện silic-oxy","s3-3","Đơn vị SiO4: một silic (+4) trong bốn oxy (−2) xếp thành hình chóp bốn mặt; điện tích tổng −4. (EN: silicon-oxygen tetrahedron)"],
+ ["polyme","s3-3","Chuỗi, tấm hoặc cấu trúc ba chiều gồm các tứ diện liên kết cộng hóa trị qua oxy ở đỉnh. (EN: polymer)"],
+ ["dung dịch rắn","s3-3-1","Hai hay nhiều nguyên tố có kích thước và tính chất tương tự thay thế tự do ở cùng một vị trí tinh thể, vd. Fe và Mg trong olivin. (EN: solid solution)"],
+ ["thành phần đầu cuối","s3-3-1","Thành phần tinh khiết ở một đầu của dãy dung dịch rắn, vd. forsterit (Mg) và fayalit (Fe). (EN: end member)"],
+ ["sắt-magie","s3-3-1","Giàu sắt (ferro) và magie; các silicat sẫm màu, đặc như olivin, pyroxen, amphibol, biotit. (EN: ferromagnesian)"],
+ ["mafic","s3-3-1","Tên gọi khác của khoáng vật và đá sắt-magie sẫm màu (magnesium + ferric). (EN: mafic)"],
+ ["silicat đảo","s3-3-1","Silicat gồm các tứ diện độc lập (orthosilicate): olivin, granat, topaz, kyanit, zircon. (EN: neosilicate)"],
+ ["silicat đảo kép","s3-3-1","Silicat trong đó hai tứ diện dùng chung một oxy, vd. epidot. (EN: sorosilicate)"],
+ ["silicat vòng","s3-3-1","Silicat gồm các vòng tứ diện, vd. beryl, ngọc lục bảo, aquamarin, turmalin. (EN: cyclosilicate)"],
+ ["pyroxen","s3-3-2","Silicat sắt-magie sẫm màu cấu trúc chuỗi đơn (dùng chung hai đỉnh), vd. augit; công thức chung XZ(Al,Si)2O6. (EN: pyroxene)"],
+ ["amphibol","s3-3-3","Silicat chuỗi kép, thường dạng tấm dài; hornblend là loại phổ biến nhất. Có thể chứa OH−. (EN: amphibole)"],
+ ["silicat chuỗi","s3-3-3","Silicat dạng chuỗi; chương dùng tên này cho amphibol (thực ra bao gồm cả pyroxen). (EN: inosilicate)"],
+ ["silicat lớp","s3-3-4","Silicat có tứ diện dùng chung ba đỉnh tạo thành tấm; Si:O = 2:5. Gồm mica và khoáng vật sét. Còn gọi là silicat tấm. (EN: sheet silicate, phyllosilicate)"],
+ ["mica","s3-3-4","Silicat lớp chủ yếu gồm silica, nhôm và kali (biotit, muscovit), tách được thành tấm mỏng. (EN: mica)"],
+ ["felsic","s3-3-4","Giàu silica (ghép từ feldspar + silica); khoáng vật và đá sáng màu như thạch anh, orthoclas, muscovit. (EN: felsic)"],
+ ["liên kết Van der Waals","s3-3-4","Lực hút yếu giữa nguyên tử, phân tử và bề mặt; giữ các tấm mica với nhau nên mica dễ tách. (EN: Van der Waals bond)"],
+ ["khoáng vật sét","s3-3-4","Silicat lớp alumosilicat ngậm nước hình thành do phong hóa, vd. kaolinit. (EN: clay minerals)"],
+ ["silicat khung","s3-3-5","Silicat trong đó cả bốn oxy ở đỉnh được dùng chung trong khung ba chiều: thạch anh, fenspat; gồm cả fenspatoit và zeolit. (EN: framework silicate, tectosilicate)"],
+ ["đá trầm tích vụn","s3-3-5","Đá gồm các hạt phong hóa cơ học như cát và sỏi. (EN: detrital sedimentary rock)"],
+ ["orthoclas","s3-3-5","Fenspat kali (K-spar), KAlSi3O8; felsic. (EN: orthoclase)"],
+ ["plagioclas","s3-3-5","Fenspat dung dịch rắn (Ca,Na)AlSi3O8 từ albit (Na) đến anortit (Ca); có đường sọc. (EN: plagioclase)"],
+ ["khoáng vật phi silicat","s3-4","Khoáng vật không có tứ diện silica; nhiều loại là quặng và vật liệu công nghiệp. (EN: non-silicate mineral)"],
+ ["carbonat","s3-4-1","Khoáng vật xây dựng quanh ion carbonat CO3(2−), vd. canxit và dolomit. (EN: carbonate)"],
+ ["thạch hóa","s3-4-1","Quá trình trầm tích biến thành đá (đá hóa); đá vôi hình thành do thạch hóa vỏ sinh vật hóa thạch. (EN: lithification)"],
+ ["muối","s3-4-1","Hợp chất tạo ra khi thay hydro trong axit tự nhiên, vd. canxit, halit, thạch cao. (EN: salt)"],
+ ["khoáng vật evaporit","s3-4-1","Khoáng vật muối hình thành do bay hơi, vd. halit, thạch cao. (EN: evaporite)"],
+ ["lưỡng chiết","s3-4-1","Sự tách ánh sáng thành hai tia phân cực với tốc độ khác nhau, tạo ảnh kép (canxit). (EN: birefringence)"],
+ ["oxit","s3-4-2","Ion kim loại liên kết với oxy, vd. hematit, magnetit, corindon, nước đá. (EN: oxide)"],
+ ["halogenua","s3-4-2","Halogen (thường F hoặc Cl) liên kết ion với cation: halit, sylvin, fluorit. (EN: halide)"],
+ ["sulfua","s3-4-2","Kim loại liên kết với lưu huỳnh; quặng quan trọng: galenit, sphalerit, pyrit, chalcopyrit. (EN: sulfide)"],
+ ["quặng","s3-4-2","Khoáng vật được khai thác làm nguồn kim loại, vd. galenit cho chì. (EN: ore)"],
+ ["sulfat","s3-4-3","Ion kim loại liên kết với ion sulfat SO4(2−), vd. thạch cao, anhydrit. (EN: sulfate)"],
+ ["phosphat","s3-4-4","Khoáng vật chứa đơn vị tứ diện PO4(3−), vd. apatit, ngọc lam. (EN: phosphate)"],
+ ["nguyên tố tự sinh","s3-4-5","Nguyên tố tồn tại tinh khiết hoặc gần tinh khiết trong tự nhiên, vd. vàng, đồng, lưu huỳnh, graphit, kim cương. (EN: native element)"],
+ ["ánh","s3-5-1","Vẻ ngoài bề mặt khoáng vật: ánh kim, bán kim hoặc phi kim (thủy tinh, đất, tơ, xà cừ). (EN: luster)"],
+ ["vết vạch","s3-5-2","Màu bột khoáng vật trên tấm sứ; đáng tin cậy hơn màu bề mặt. (EN: streak)"],
+ ["độ cứng","s3-5-3","Khả năng của khoáng vật làm xước vật khác; phụ thuộc độ bền liên kết. (EN: hardness)"],
+ ["thang độ cứng Mohs","s3-5-3","Thang tương đối về khả năng chống xước từ 1 (talc) đến 10 (kim cương); không tuyến tính. (EN: Mohs hardness scale)"],
+ ["dạng quen tinh thể","s3-5-4","Hình dạng điển hình mà tinh thể khoáng vật phát triển, vd. lập phương, tấm dài, lăng trụ. (EN: crystal habit)"],
+ ["tự hình","s3-5-4","Tinh thể có hình dạng hoàn chỉnh, không bị cản trở, có mặt tinh thể. (EN: euhedral)"],
+ ["bán tự hình","s3-5-4","Tinh thể có hình dạng hoàn chỉnh một phần. (EN: subhedral)"],
+ ["tha hình","s3-5-4","Tinh thể bị môi trường xung quanh cản trở, không có dạng quen điển hình. (EN: anhedral)"],
+ ["đường sọc","s3-5-4","Các vạch sáng tối song song trên mặt tinh thể; ở plagioclas do song tinh tạo ra. (EN: striations)"],
+ ["song tinh","s3-5-4","Cấu trúc tinh thể lặp lại đối xứng gương theo một số phương, vd. staurolit, plagioclas. (EN: twinning)"],
+ ["cát khai","s3-5-5","Sự vỡ theo các mặt phẳng nhẵn, song song có liên kết yếu hơn; mô tả bằng mức độ, số phương và góc. (EN: cleavage)"],
+ ["vết vỡ","s3-5-5","Kiểu vỡ không theo mặt cát khai: gồ ghề, dạng mảnh vụn, dạng sợi hoặc vỏ sò. (EN: fracture)"],
+ ["vết vỡ vỏ sò","s3-5-5","Vết vỡ cong, nhẵn như vỏ sò, vd. thạch anh, olivin, obsidian. (EN: conchoidal fracture)"],
+ ["tính chất đặc biệt","s3-5-6","Các đặc điểm riêng như vị, từ tính, phản ứng với axit, huỳnh quang hay khả năng chiếu ảnh. (EN: special properties)"],
+ ["tỷ trọng","s3-5-6","Khối lượng mẫu so với khối lượng của cùng thể tích nước. (EN: specific gravity)"],
+ ["cảm giác nặng tay","s3-5-6","Mẫu cầm thấy nặng thế nào so với kích thước; cách ước lượng tỷ trọng ngoài thực địa. (EN: heft)"],
+ ["ánh ngũ sắc","s3-5-6","Hiệu ứng nhiều màu do ánh sáng tán xạ, vd. labradorit, opal, ngọc trai. (EN: iridescence)"],
+ ["phiến tách","s3-5-6","Các vệt albit song song trong fenspat kali (perthit), hình thành vì Na và K không cùng nằm trong một cấu trúc. (EN: exsolution lamellae)"],
+ ["huỳnh quang","s3-5-6","Phát ánh sáng nhìn thấy dưới tia cực tím (đèn đen). (EN: fluorescence)"],
+ ["lân quang","s3-5-6","Hấp thụ ánh sáng rồi phát ra chậm, như miếng dán dạ quang. (EN: phosphorescence)"]
+]
+</script>
+<script src="assets/guide.js"></script>
+</body>
+</html>

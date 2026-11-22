@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Minerals</title>
+<meta name="description" content="Unit 3 study guide for An Introduction to Geology, Chapter 3: Minerals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/guide.css">
+<style>
+/* Unit 3 palette: amethyst violet (quartz's purple variety) with pyrite gold and ruby red; header bands run clear quartz to deep amethyst. */
+:root{
+  --fig-prefix:"Figure 3."; --tbl-prefix:"Table 3.";
+  --bg:#f6f4f9; --surface:#ffffff; --surface-2:#ece7f3; --fg:#1e1a2b; --muted:#5b5470; --line:#d6cfe2;
+  --accent:#6a3fa0; --accent-soft:#ece2f7; --ochre:#a87a12; --ochre-soft:#f6ecd0; --rust:#b23a48;
+  --s1:#d8c7ef; --s2:#a77bd6; --s3:#6f3fa8; --s4:#3a2160; --s5:#1d1530;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121019; --surface:#1a1724; --surface-2:#242031; --fg:#e8e4f0; --muted:#a49cb8; --line:#352f47;
+  --accent:#b893ec; --accent-soft:#2c2342; --ochre:#e3b448; --ochre-soft:#3a2f14; --rust:#ef7f8c;
+  --s1:#7a6596; --s2:#5f4385; --s3:#47296e; --s4:#2a1a42; --s5:#151020; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121019; --surface:#1a1724; --surface-2:#242031; --fg:#e8e4f0; --muted:#a49cb8; --line:#352f47;
+  --accent:#b893ec; --accent-soft:#2c2342; --ochre:#e3b448; --ochre-soft:#3a2f14; --rust:#ef7f8c;
+  --s1:#7a6596; --s2:#5f4385; --s3:#47296e; --s4:#2a1a42; --s5:#151020; color-scheme:dark}
+</style>
+</head>
+<body>
+<div lang="en">
+<header class="hero" id="top">
+  <div class="strata" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Unit 3 · Chapter 3 · An Introduction to Geology</div>
+      <h1>Minerals</h1>
+      <p>What makes a substance a mineral, how atoms bond to build crystals, how minerals form, the silicate and non-silicate families, and the physical tests geologists use to identify minerals in the field.</p>
+    </div>
+    <div class="hero-tools">
+      <a class="btn" href="unit3-vi.html" lang="vi" hreflang="vi">Tiếng Việt</a>
+      <button class="btn" id="themeBtn" type="button" aria-label="Toggle light or dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Dark mode</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#outcomes">Learning outcomes</a></li>
+      <li><a href="#s3-0"><span class="num">3.0</span>What is a mineral?</a></li>
+      <li><a href="#s3-1"><span class="num">3.1</span>Chemistry of minerals</a>
+        <ol>
+          <li><a href="#s3-1-1"><span class="num">3.1.1</span>The atom</a></li>
+          <li><a href="#s3-1-2"><span class="num">3.1.2</span>Periodic table</a></li>
+          <li><a href="#s3-1-3"><span class="num">3.1.3</span>Chemical bonding</a></li>
+        </ol>
+      </li>
+      <li><a href="#s3-2"><span class="num">3.2</span>Formation of minerals</a>
+        <ol>
+          <li><a href="#s3-2-1"><span class="num">3.2.1</span>From water</a></li>
+          <li><a href="#s3-2-2"><span class="num">3.2.2</span>From magma</a></li>
+          <li><a href="#s3-2-3"><span class="num">3.2.3</span>By organisms</a></li>
+        </ol>
+      </li>
+      <li><a href="#s3-3"><span class="num">3.3</span>Silicate minerals</a>
+        <ol>
+          <li><a href="#s3-3-1"><span class="num">3.3.1</span>Olivine family</a></li>
+          <li><a href="#s3-3-2"><span class="num">3.3.2</span>Pyroxene family</a></li>
+          <li><a href="#s3-3-3"><span class="num">3.3.3</span>Amphibole family</a></li>
+          <li><a href="#s3-3-4"><span class="num">3.3.4</span>Sheet silicates</a></li>
+          <li><a href="#s3-3-5"><span class="num">3.3.5</span>Framework silicates</a></li>
+        </ol>
+      </li>
+      <li><a href="#s3-4"><span class="num">3.4</span>Non-silicate minerals</a>
+        <ol>
+          <li><a href="#s3-4-1"><span class="num">3.4.1</span>Carbonates</a></li>
+          <li><a href="#s3-4-2"><span class="num">3.4.2</span>Oxides, halides, sulfides</a></li>
+          <li><a href="#s3-4-3"><span class="num">3.4.3</span>Sulfates</a></li>
+          <li><a href="#s3-4-4"><span class="num">3.4.4</span>Phosphates</a></li>
+          <li><a href="#s3-4-5"><span class="num">3.4.5</span>Native elements</a></li>
+        </ol>
+      </li>
+      <li><a href="#s3-5"><span class="num">3.5</span>Identifying minerals</a>
+        <ol>
+          <li><a href="#s3-5-1"><span class="num">3.5.1</span>Luster &amp; color</a></li>
+          <li><a href="#s3-5-2"><span class="num">3.5.2</span>Streak</a></li>
+          <li><a href="#s3-5-3"><span class="num">3.5.3</span>Hardness</a></li>
+          <li><a href="#s3-5-4"><span class="num">3.5.4</span>Crystal habit</a></li>
+          <li><a href="#s3-5-5"><span class="num">3.5.5</span>Cleavage &amp; fracture</a></li>
+          <li><a href="#s3-5-6"><span class="num">3.5.6</span>Special properties</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#factcheck">Fact-check notes</a></li>
+      <li><a href="#credits">Credits</a></li>
+    </ol>
+  </nav>
+
+<main>
+
+<section id="outcomes">
+  <h2 class="sec">Learning outcomes</h2>
+  <p class="lead">By the end of Chapter 3 you should be able to do each of these. The tag shows where it is covered.</p>
+  <ul class="outcomes">
+    <li><a class="tag" href="#s3-0">3.0</a><span>Define mineral.</span></li>
+    <li><a class="tag" href="#s3-1-1">3.1.1</a><span>Describe the basic structure of the atom.</span></li>
+    <li><a class="tag" href="#s3-1-2">3.1.2</a><span>Derive basic atomic information from the Periodic Table of Elements.</span></li>
+    <li><a class="tag" href="#s3-1-3">3.1.3</a><span>Describe chemical bonding related to minerals.</span></li>
+    <li><a class="tag" href="#s3-2">3.2</a><span>Describe the main ways minerals form.</span></li>
+    <li><a class="tag" href="#s3-3">3.3</a><span>Describe the silicon-oxygen tetrahedron and how it forms common silicate minerals.</span></li>
+    <li><a class="tag" href="#s3-4">3.4</a><span>List common non-silicate minerals in the oxide, sulfide, sulfate, and carbonate groups.</span></li>
+    <li><a class="tag" href="#s3-5">3.5</a><span>Identify minerals using physical properties and identification tables.</span></li>
+  </ul>
+  <div class="callout">
+    <h4>How to use this guide</h4>
+    <p>Underlined words are key terms. Click one, or open <b>Key terms</b> at the bottom right, to read and search every definition from this chapter. The animated diagrams stop moving if your device is set to reduce motion.</p>
+  </div>
+</section>
+
+<!-- 3.0 -->
+<section id="s3-0">
+  <h2 class="sec"><span class="n">3.0</span>What is a mineral?</h2>
+  <p>"Minerals" on nutrition labels and medicine bottles are not minerals in the geological sense. The classic geological definition has five parts:</p>
+  <div class="spheres">
+    <div class="sphere"><b><span class="dot" style="background:var(--s2)"></span>1. Naturally occurring</b>Made by nature, not in a lab.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s2)"></span>2. Inorganic</b>Not made by living things (see the exceptions below).</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s2)"></span>3. Solid</b>At room temperature.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s2)"></span>4. Regular crystal structure</b>Atoms in an ordered, repeating arrangement.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s2)"></span>5. Defined chemical composition</b>A specific formula, e.g. NaCl.</div>
+  </div>
+  <p><b>Exceptions.</b> Water and mercury are liquid at room temperature but count as minerals because they were classified before the room-temperature rule was added. Calcite is often made by organisms but counts because it is widespread and geologically important. To fix these inconsistencies the <b>International Mineralogical Association</b> amended the definition:</p>
+  <div class="quote"><span>"A mineral is an element or chemical compound that is normally crystalline and that has been formed as a result of geological processes."</span><cite>International Mineralogical Association, as quoted in the chapter</cite></div>
+  <p>So the calcite in a living clam's shell is <i>not</i> a mineral, but once the shell is buried and altered by <button class="term" data-term="diagenesis">diagenesis</button> or other geological processes, it is. Natural substances that do not fit the definition, such as coal, pearl, opal, and obsidian, are called <button class="term" data-term="mineraloid">mineraloids</button>.</p>
+  <p>A <button class="term" data-term="rock">rock</button> contains one or more minerals or mineraloids. The three rock types (covered in later chapters) are <b>igneous</b> (crystallized from molten material), <b>sedimentary</b> (made of products of mechanical weathering, like sand and gravel, and chemical weathering, like things precipitated from solution), and <b>metamorphic</b> (other rocks altered by heat and pressure).</p>
+  <figure>
+    <div class="frame"><img src="images/unit3/naica.webp" alt="A person dwarfed by huge, pale, beam-like gypsum crystals criss-crossing a cave." loading="lazy" width="800" height="533"></div>
+    <figcaption>Selenite (gypsum) crystals in the Cave of the Crystals, Naica, Mexico, among the largest minerals ever found. The largest crystal here is about 12 m (39 ft) long. Note the person for scale.<span class="credit">Alexander Van Driessche, CC BY, via <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+</section>
+
+<!-- 3.1 -->
+<section id="s3-1">
+  <h2 class="sec"><span class="n">3.1</span>Chemistry of minerals</h2>
+  <p>Rocks are made of minerals, and each mineral has a specific chemical composition. To understand that chemistry, start with the fundamental unit of all matter, the atom.</p>
+
+  <h3 id="s3-1-1">3.1.1 The atom</h3>
+  <p>Atoms are made of three subatomic particles. The central <button class="term" data-term="nucleus">nucleus</button> holds <button class="term" data-term="proton">protons</button> (positive charge) and <button class="term" data-term="neutron">neutrons</button> (no charge). A cloud of negatively charged <button class="term" data-term="electron">electrons</button> surrounds it; in a neutral atom the number of electrons equals the number of protons. Protons and neutrons each have a mass number of 1, while an electron has less than 1/1000th of that mass, so <b>almost all of an atom's mass is in the nucleus</b>.</p>
+  <figure id="fig-atom">
+    <div class="frame"><svg viewBox="0 0 640 320" role="img" aria-labelledby="atom-t" style="width:100%;min-width:520px;height:auto"><title id="atom-t">A sodium atom with 2, 8 and 1 electrons in its shells gives its single valence electron to a chlorine atom with 2, 8 and 7 electrons; both end with a full outer shell, becoming Na+ and Cl- ions.</title><defs><marker id="ah-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--rust)"/></marker></defs><circle cx="150" cy="135" r="45" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="150" cy="135" r="75" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="150" cy="135" r="105" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="490" cy="135" r="45" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="490" cy="135" r="75" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="490" cy="135" r="105" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="150" cy="135" r="26" fill="var(--ochre-soft)" stroke="var(--ochre)" stroke-width="2"/><text x="150" y="132" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink">11 p⁺</text><text x="150" y="147" text-anchor="middle" font-size="11" class="svg-muted">12 n</text><circle cx="490" cy="135" r="26" fill="var(--ochre-soft)" stroke="var(--ochre)" stroke-width="2"/><text x="490" y="132" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink">17 p⁺</text><text x="490" y="147" text-anchor="middle" font-size="11" class="svg-muted">18 n</text><circle cx="150.0" cy="90.0" r="6" fill="var(--accent)"/><circle cx="150.0" cy="180.0" r="6" fill="var(--accent)"/><circle cx="150.0" cy="60.0" r="6" fill="var(--accent)"/><circle cx="203.0" cy="82.0" r="6" fill="var(--accent)"/><circle cx="225.0" cy="135.0" r="6" fill="var(--accent)"/><circle cx="203.0" cy="188.0" r="6" fill="var(--accent)"/><circle cx="150.0" cy="210.0" r="6" fill="var(--accent)"/><circle cx="97.0" cy="188.0" r="6" fill="var(--accent)"/><circle cx="75.0" cy="135.0" r="6" fill="var(--accent)"/><circle cx="97.0" cy="82.0" r="6" fill="var(--accent)"/><circle cx="490.0" cy="90.0" r="6" fill="var(--accent)"/><circle cx="490.0" cy="180.0" r="6" fill="var(--accent)"/><circle cx="490.0" cy="60.0" r="6" fill="var(--accent)"/><circle cx="543.0" cy="82.0" r="6" fill="var(--accent)"/><circle cx="565.0" cy="135.0" r="6" fill="var(--accent)"/><circle cx="543.0" cy="188.0" r="6" fill="var(--accent)"/><circle cx="490.0" cy="210.0" r="6" fill="var(--accent)"/><circle cx="437.0" cy="188.0" r="6" fill="var(--accent)"/><circle cx="415.0" cy="135.0" r="6" fill="var(--accent)"/><circle cx="437.0" cy="82.0" r="6" fill="var(--accent)"/><circle cx="415.8" cy="60.8" r="6" fill="var(--accent)"/><circle cx="490.0" cy="30.0" r="6" fill="var(--accent)"/><circle cx="564.2" cy="60.8" r="6" fill="var(--accent)"/><circle cx="595.0" cy="135.0" r="6" fill="var(--accent)"/><circle cx="564.2" cy="209.2" r="6" fill="var(--accent)"/><circle cx="490.0" cy="240.0" r="6" fill="var(--accent)"/><circle cx="415.8" cy="209.2" r="6" fill="var(--accent)"/><g class="hop" style="--hop:130px"><circle cx="255" cy="135" r="7" fill="var(--rust)"/></g><path d="M268 107 Q 320.0 73 372 107" fill="none" stroke="var(--rust)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ah-r)"/><text x="320.0" y="71" text-anchor="middle" font-size="12" class="svg-muted">1 valence electron moves</text><text x="150" y="268" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Sodium (Na): shells 2-8-1</text><text x="150" y="286" text-anchor="middle" font-size="12" class="svg-muted">gives up 1 e⁻ → Na⁺ ion (cation)</text><text x="490" y="268" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Chlorine (Cl): shells 2-8-7</text><text x="490" y="286" text-anchor="middle" font-size="12" class="svg-muted">takes 1 e⁻ → Cl⁻ ion (anion)</text><g font-size="11.5" class="svg-muted"><circle cx="276" cy="304" r="5" fill="var(--accent)"/><text x="286" y="308">electron</text><circle cx="356" cy="304" r="5" fill="var(--rust)"/><text x="366" y="308">valence electron that moves</text></g></svg></div>
+    <figcaption>A simple shell model of sodium and chlorine. Sodium's single valence electron moves to chlorine's outer shell, so both end with a full outer shell and become ions. This is the ionic bond in halite (Section 3.1.3).<span class="credit">Animated diagram drawn for this guide from Section 3.1.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-1-2">3.1.2 The periodic table of the elements</h3>
+  <p>An <button class="term" data-term="element">element</button> is a kind of atom with a specific number of protons, its <button class="term" data-term="atomic number">atomic number</button> (oxygen has 8, iron 26). An element cannot be broken down chemically into a simpler form and keeps its own chemical and physical properties. The <button class="term" data-term="periodic table">periodic table</button> lists all known elements in order of atomic number; Dmitri Mendeleev made the first one in <b>1869</b>. Each entry gives a chemical symbol (often from a Latin or Greek name), name, atomic number, and <button class="term" data-term="atomic mass">atomic mass</button> (protons + neutrons, since electrons weigh so little).</p>
+  <figure id="fig-ptable">
+    <div class="frame"><svg viewBox="0 0 730 298" role="img" aria-labelledby="pt-t" style="width:100%;min-width:600px;height:auto"><title id="pt-t">The first four rows of the periodic table, colored by how each column tends to bond, with the eight most abundant crustal elements outlined.</title><text x="58.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">1</text><text x="58.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">I</text><text x="96.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">2</text><text x="96.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">II</text><text x="134.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">3</text><text x="172.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">4</text><text x="210.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">5</text><text x="248.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">6</text><text x="286.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">7</text><text x="324.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">8</text><text x="362.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">9</text><text x="400.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">10</text><text x="438.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">11</text><text x="476.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">12</text><text x="514.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">13</text><text x="514.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">III</text><text x="552.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">14</text><text x="552.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">IV</text><text x="590.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">15</text><text x="590.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">V</text><text x="628.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">16</text><text x="628.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">VI</text><text x="666.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">17</text><text x="666.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">VII</text><text x="704.0" y="32" text-anchor="middle" font-size="10.5" font-family="var(--mono)" class="svg-muted">18</text><text x="704.0" y="46" text-anchor="middle" font-size="10.5" font-weight="700" class="svg-ink">VIII</text><text x="30" y="76.0" text-anchor="end" font-size="10.5" font-family="var(--mono)" class="svg-muted">1</text><rect x="40" y="54" width="36" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1"/><text x="43" y="64" font-size="8" font-family="var(--mono)" class="svg-muted">1</text><text x="58.0" y="81" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">H</text><rect x="686" y="54" width="36" height="36" rx="4" fill="var(--ochre-soft)" stroke="var(--ochre)" stroke-width="1"/><text x="689" y="64" font-size="8" font-family="var(--mono)" class="svg-muted">2</text><text x="704.0" y="81" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">He</text><text x="30" y="114.0" text-anchor="end" font-size="10.5" font-family="var(--mono)" class="svg-muted">2</text><rect x="40" y="92" width="36" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1"/><text x="43" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">3</text><text x="58.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Li</text><rect x="78" y="92" width="36" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1"/><text x="81" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">4</text><text x="96.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Be</text><rect x="496" y="92" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="499" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">5</text><text x="514.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">B</text><rect x="534" y="92" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="537" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">6</text><text x="552.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">C</text><rect x="572" y="92" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="575" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">7</text><text x="590.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">N</text><rect x="610" y="92" width="36" height="36" rx="4" fill="color-mix(in srgb,var(--rust) 22%,var(--surface))" stroke="var(--fg)" stroke-width="3"/><text x="613" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">8</text><text x="628.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">O</text><rect x="648" y="92" width="36" height="36" rx="4" fill="color-mix(in srgb,var(--rust) 22%,var(--surface))" stroke="var(--rust)" stroke-width="1"/><text x="651" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">9</text><text x="666.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">F</text><rect x="686" y="92" width="36" height="36" rx="4" fill="var(--ochre-soft)" stroke="var(--ochre)" stroke-width="1"/><text x="689" y="102" font-size="8" font-family="var(--mono)" class="svg-muted">10</text><text x="704.0" y="119" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Ne</text><text x="30" y="152.0" text-anchor="end" font-size="10.5" font-family="var(--mono)" class="svg-muted">3</text><rect x="40" y="130" width="36" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--fg)" stroke-width="3"/><text x="43" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">11</text><text x="58.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Na</text><rect x="78" y="130" width="36" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--fg)" stroke-width="3"/><text x="81" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">12</text><text x="96.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Mg</text><rect x="496" y="130" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--fg)" stroke-width="3"/><text x="499" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">13</text><text x="514.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Al</text><rect x="534" y="130" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--fg)" stroke-width="3"/><text x="537" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">14</text><text x="552.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Si</text><rect x="572" y="130" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="575" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">15</text><text x="590.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">P</text><rect x="610" y="130" width="36" height="36" rx="4" fill="color-mix(in srgb,var(--rust) 22%,var(--surface))" stroke="var(--rust)" stroke-width="1"/><text x="613" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">16</text><text x="628.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">S</text><rect x="648" y="130" width="36" height="36" rx="4" fill="color-mix(in srgb,var(--rust) 22%,var(--surface))" stroke="var(--rust)" stroke-width="1"/><text x="651" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">17</text><text x="666.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Cl</text><rect x="686" y="130" width="36" height="36" rx="4" fill="var(--ochre-soft)" stroke="var(--ochre)" stroke-width="1"/><text x="689" y="140" font-size="8" font-family="var(--mono)" class="svg-muted">18</text><text x="704.0" y="157" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Ar</text><text x="30" y="190.0" text-anchor="end" font-size="10.5" font-family="var(--mono)" class="svg-muted">4</text><rect x="40" y="168" width="36" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--fg)" stroke-width="3"/><text x="43" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">19</text><text x="58.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">K</text><rect x="78" y="168" width="36" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--fg)" stroke-width="3"/><text x="81" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">20</text><text x="96.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Ca</text><rect x="116" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="119" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">21</text><text x="134.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Sc</text><rect x="154" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="157" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">22</text><text x="172.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Ti</text><rect x="192" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="195" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">23</text><text x="210.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">V</text><rect x="230" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="233" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">24</text><text x="248.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Cr</text><rect x="268" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="271" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">25</text><text x="286.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Mn</text><rect x="306" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--fg)" stroke-width="3"/><text x="309" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">26</text><text x="324.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Fe</text><rect x="344" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="347" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">27</text><text x="362.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Co</text><rect x="382" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="385" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">28</text><text x="400.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Ni</text><rect x="420" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="423" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">29</text><text x="438.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Cu</text><rect x="458" y="168" width="36" height="36" rx="4" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1"/><text x="461" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">30</text><text x="476.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Zn</text><rect x="496" y="168" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="499" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">31</text><text x="514.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Ga</text><rect x="534" y="168" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="537" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">32</text><text x="552.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Ge</text><rect x="572" y="168" width="36" height="36" rx="4" fill="var(--surface)" stroke="var(--line)" stroke-width="1"/><text x="575" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">33</text><text x="590.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">As</text><rect x="610" y="168" width="36" height="36" rx="4" fill="color-mix(in srgb,var(--rust) 22%,var(--surface))" stroke="var(--rust)" stroke-width="1"/><text x="613" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">34</text><text x="628.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Se</text><rect x="648" y="168" width="36" height="36" rx="4" fill="color-mix(in srgb,var(--rust) 22%,var(--surface))" stroke="var(--rust)" stroke-width="1"/><text x="651" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">35</text><text x="666.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Br</text><rect x="686" y="168" width="36" height="36" rx="4" fill="var(--ochre-soft)" stroke="var(--ochre)" stroke-width="1"/><text x="689" y="178" font-size="8" font-family="var(--mono)" class="svg-muted">36</text><text x="704.0" y="195" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Kr</text><rect x="40" y="217" width="14" height="14" rx="3" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/><text x="62" y="228" font-size="11.5" class="svg-ink">I–II: give up 1–2 electrons → cations (+)</text><rect x="380" y="217" width="14" height="14" rx="3" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.5"/><text x="402" y="228" font-size="11.5" class="svg-ink">3–12: transition elements (e.g. Fe²⁺ / Fe³⁺)</text><rect x="40" y="239" width="14" height="14" rx="3" fill="var(--surface)" stroke="var(--line)" stroke-width="1.5"/><text x="62" y="250" font-size="11.5" class="svg-ink">13–15: usually share electrons (covalent)</text><rect x="380" y="239" width="14" height="14" rx="3" fill="color-mix(in srgb,var(--rust) 22%,var(--surface))" stroke="var(--rust)" stroke-width="1.5"/><text x="402" y="250" font-size="11.5" class="svg-ink">VI–VII: take up 1–2 electrons → anions (−)</text><rect x="40" y="261" width="14" height="14" rx="3" fill="var(--ochre-soft)" stroke="var(--ochre)" stroke-width="1.5"/><text x="62" y="272" font-size="11.5" class="svg-ink">VIII: noble gases, full shell, inert</text><rect x="380" y="261" width="14" height="14" rx="3" fill="var(--surface)" stroke="var(--fg)" stroke-width="3"/><text x="402" y="272" font-size="11.5" class="svg-ink">Thick outline: 8 most abundant elements in the crust</text></svg></div>
+    <figcaption>The first four rows of the periodic table, colored by the bonding behavior described in Section 3.1.3. Columns are numbered 1–18, and the main columns also carry Roman numerals I–VIII. The eight most abundant crustal elements (Table 3.1) have thick outlines.<span class="credit">Diagram drawn for this guide from Section 3.1. The chapter shows the full table from NIST.</span></figcaption>
+  </figure>
+  <p><b>Isotopes.</b> Atomic masses on the periodic table are usually not whole numbers, because they average atoms with different numbers of neutrons. <button class="term" data-term="isotope">Isotopes</button> are forms of an element with the same number of protons but different numbers of neutrons. For carbon, 98.9% of atoms are <b>carbon-12</b> (6 protons, 6 neutrons); a few are <b>carbon-13</b> (7 neutrons); a trace are <b>carbon-14</b> (8 neutrons).</p>
+  <figure>
+    <div class="frame"><img src="images/unit3/c14.webp" style="max-width:520px" alt="Diagram: a nitrogen-14 nucleus absorbs a neutron and releases a proton, becoming carbon-14." loading="lazy" width="732" height="300"></div>
+    <figcaption>Formation of carbon-14 from nitrogen-14: a neutron goes in and a proton comes out, so the atomic number drops from 7 to 6.<span class="credit">Sgbeer, adapted by NikNaks, CC BY-SA, via <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+  <p>Of the <b>118 known elements</b>, the heaviest are short-lived human creations; the heaviest naturally occurring element is <b>uranium</b> (atomic number 92). Just eight elements make up nearly all of the continental crust, and they are the elements found in the common rock-forming minerals.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The eight most abundant elements in Earth's continental crust, % by weight (USGS, as given in the chapter). All other elements are less than 1% each.</caption>
+      <thead><tr><th>Element</th><th>Symbol</th><th>Abundance</th></tr></thead>
+      <tbody>
+        <tr><td>Oxygen</td><td>O</td><td><span class="bar"><i style="width:94px"></i>47%</span></td></tr>
+        <tr><td>Silicon</td><td>Si</td><td><span class="bar"><i style="width:56px"></i>28%</span></td></tr>
+        <tr><td>Aluminum</td><td>Al</td><td><span class="bar"><i style="width:16px"></i>8%</span></td></tr>
+        <tr><td>Iron</td><td>Fe</td><td><span class="bar"><i style="width:10px"></i>5%</span></td></tr>
+        <tr><td>Calcium</td><td>Ca</td><td><span class="bar"><i style="width:8px"></i>4%</span></td></tr>
+        <tr><td>Sodium</td><td>Na</td><td><span class="bar"><i style="width:6px"></i>3%</span></td></tr>
+        <tr><td>Potassium</td><td>K</td><td><span class="bar"><i style="width:6px"></i>3%</span></td></tr>
+        <tr><td>Magnesium</td><td>Mg</td><td><span class="bar"><i style="width:4px"></i>2%</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s3-1-3">3.1.3 Chemical bonding</h3>
+  <p>Most substances on Earth are <button class="term" data-term="compound">compounds</button> of several elements. <button class="term" data-term="chemical bonding">Chemical bonding</button> describes how atoms attach to form them, e.g. sodium and chlorine forming NaCl (table salt). Compounds held together by chemical bonds are called <button class="term" data-term="molecule">molecules</button>. Subscripts count atoms: O<sub>2</sub> is two oxygen atoms, and water (H<sub>2</sub>O) is two hydrogens covalently bonded to one oxygen.</p>
+  <p>Most minerals are compounds too. <b>Calcite, CaCO<sub>3</sub></b>, has one calcium, one carbon, and three oxygens. The carbon and three oxygens are held by covalent bonds into a negatively charged <button class="term" data-term="molecular ion">molecular ion</button>, <b>carbonate (CO<sub>3</sub><sup>2−</sup>)</b>, which attracts the calcium ion (Ca<sup>2+</sup>). In <b>olivine, (Mg,Fe)<sub>2</sub>SiO<sub>4</sub></b>, the comma means Mg and Fe can occupy the same place in the crystal and substitute for each other.</p>
+
+  <h4>Valence and charge</h4>
+  <p>Electrons sit in <b>shells</b> at different energy levels. The outermost is the <button class="term" data-term="valence shell">valence shell</button>, and its electrons take part in bonding. In 1913 Niels Bohr proposed that atoms are more stable when the outer shell is full, so most atoms gain or lose electrons to fill it. In Bohr's model the first shell holds at most 2 electrons and the second and third hold up to 8: the <button class="term" data-term="octet rule">octet rule</button> (for hydrogen and helium, a full first shell of 2).</p>
+  <ul>
+    <li><b>Columns I and II</b> have 1 and 2 valence electrons and readily give them up. Sodium (row 3, column I: shells 2-8-1) loses its one valence electron, leaving 11 protons and 10 electrons: an ion with charge <b>+1</b>. Column II elements become <b>+2</b> ions.</li>
+    <li><b>Columns VI and VII</b> have 6 and 7 valence electrons and readily take up electrons, so they often bond with columns I and II.</li>
+    <li><b>Column VIII (18)</b> holds the <button class="term" data-term="noble gas">noble gases</button>. Their valence shell is already full (helium with 2), so they are chemically inert and do not bond.</li>
+  </ul>
+  <p>An atom with a net charge from gaining or losing electrons is an <button class="term" data-term="ion">ion</button>. Elements on the left of the table lose electrons and become positive <button class="term" data-term="cation">cations</button> (attracted to the cathode in an electrical device); elements on the right gain electrons and become negative <button class="term" data-term="anion">anions</button> (attracted to the anode). Elements in the center do not consistently follow the octet rule; these are the <button class="term" data-term="transition element">transition elements</button>. Iron is the common example: oxidized <b>Fe<sup>3+</sup></b> tends to color rocks <b>red</b>, and reduced <b>Fe<sup>2+</sup></b> tends to color them <b>green</b>.</p>
+  <figure>
+    <div class="frame"><img class="diagram" src="images/unit3/co2.webp" alt="Ball-and-stick model of carbon dioxide: a black carbon atom between two red oxygen atoms." loading="lazy" style="max-width:300px" width="512" height="364"></div>
+    <figcaption>The carbon dioxide molecule. Oxygen is −2 and carbon is +4, so two oxygens bond to one carbon to make a neutral molecule.<span class="credit">Jynto, CC0, via <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+
+  <h4>Ionic bonding</h4>
+  <p><button class="term" data-term="ionic bond">Ionic bonds</button> (electron-transfer bonds) form by electrostatic attraction between oppositely charged ions: one atom transfers electrons to another so both achieve a full valence shell. One Na<sup>+</sup> and one Cl<sup>−</sup> make <b>sodium chloride, NaCl</b>: the mineral <b>halite</b>, table salt (<a href="#fig-nacl">Figure 3.6</a>). One Ca<sup>2+</sup> and two Cl<sup>−</sup> make calcium chloride, <b>CaCl<sub>2</sub></b>. Ionic bonds usually form between a metal and a nonmetal.</p>
+  <h4>Covalent bonding</h4>
+  <p><button class="term" data-term="covalent bond">Covalent bonds</button> (electron-sharing bonds) commonly form between nonmetals, which share electrons to complete their valence shells. Oxygen has 6 valence electrons; two oxygen atoms share 2 electrons to make <b>O<sub>2</sub></b>. In <b>methane (CH<sub>4</sub>)</b>, carbon needs 4 electrons and each hydrogen needs 1, so each hydrogen shares its electron with the carbon.</p>
+  <div class="pair same">
+    <figure id="fig-nacl">
+      <div class="frame"><img class="diagram" src="images/unit3/nacl.webp" alt="Cube of alternating large green chlorine spheres and small purple sodium spheres." loading="lazy" width="768" height="728"></div>
+      <figcaption>Ionic: the cubic arrangement of Na (purple) and Cl (green) in halite.<span class="credit">Benjah-bmm27, CC0.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img class="diagram" src="images/unit3/methane.webp" alt="Diagram of methane: a carbon atom in the center sharing a pair of electrons with each of four hydrogen atoms." loading="lazy" width="665" height="800"></div>
+      <figcaption>Covalent: methane, where each hydrogen shares an electron pair with carbon.<span class="credit">DynaBlast, CC BY-SA.</span></figcaption>
+    </figure>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener">Section 3.1 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 3.2 -->
+<section id="s3-2">
+  <h2 class="sec"><span class="n">3.2</span>Formation of minerals</h2>
+  <p>Minerals form when atoms bond together in a crystalline arrangement. Nature does this in three main ways:</p>
+  <div class="spheres">
+    <div class="sphere"><b><span class="dot" style="background:var(--accent)"></span>From water</b>Precipitation from an aqueous solution, e.g. with a temperature change or evaporation.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--rust)"></span>From magma</b>Crystallization from molten rock as it cools.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--ochre)"></span>By organisms</b>Biological precipitation of shells, bones, and skeletons.</div>
+  </div>
+
+  <h3 id="s3-2-1">3.2.1 Precipitation from aqueous solution</h3>
+  <p>A <button class="term" data-term="solution">solution</button> is made of ions or molecules (<button class="term" data-term="solute">solutes</button>) dissolved in a <button class="term" data-term="solvent">solvent</button>, in nature usually water. When halite dissolves, its Na<sup>+</sup> and Cl<sup>−</sup> ions separate and disperse. <button class="term" data-term="precipitation">Precipitation</button> is the reverse: ions in solution come together to form solid minerals. It depends on ion concentration, temperature, and pressure. The point at which a solvent cannot hold any more solute is <button class="term" data-term="saturation">saturation</button>. Precipitation can happen when the solution cools, when the solvent evaporates, or when the chemistry changes. At home, it is the mineral crust left on faucets, shower heads, and drinking glasses.</p>
+  <ul>
+    <li><b><button class="term" data-term="tufa">Tufa</button></b> in Utah formed where mineral-rich springs entered ice-age Lake Bonneville. Now exposed in dry valleys, this porous rock was used by pioneers as natural insulation for their homes.</li>
+    <li>The <b>travertine terraces</b> at Mammoth Hot Springs, Yellowstone, formed by calcite precipitating at the edges of shallow spring-fed ponds.</li>
+    <li>The <b>Great Salt Lake</b> is nearly eight times saltier than the oceans. Streams bring salt ions in, there is no outlet, and evaporation concentrates the water until it reaches saturation and minerals precipitate as sediment. Mono Lake (California) and the Dead Sea are similar.</li>
+  </ul>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/hard-water.webp" alt="A faucet aerator crusted with white mineral deposits." loading="lazy" width="768" height="512"></div>
+      <figcaption>Calcium carbonate deposits left by hard water on a faucet.<span class="credit">Bbypnda, CC BY-SA.</span></figcaption>
+    </figure>
+    <figure id="fig-saltflats">
+      <div class="frame"><img src="images/unit3/salt-flats.webp" alt="A flat white salt plain stretching to distant mountains under a blue sky." loading="lazy" width="754" height="494"></div>
+      <figcaption>The Bonneville Salt Flats of Utah, left by evaporation.<span class="credit">Public domain.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s3-2-2">3.2.2 Crystallization from magma</h3>
+  <p>Heat is energy that makes atoms vibrate; temperature measures how intense the vibration is. Violent enough vibration breaks chemical bonds, so crystals melt and release their ions into the melt. <button class="term" data-term="magma">Magma</button> is molten rock with freely moving ions. When magma is emplaced at depth, or extruded onto the surface (where it is called <button class="term" data-term="lava">lava</button>), it cools and mineral crystals can form.</p>
+  <figure>
+    <div class="frame"><img src="images/unit3/pahoehoe.webp" alt="A glowing orange toe of fresh lava with a dark cooling skin." loading="lazy" width="800" height="500"></div>
+    <figcaption>Lava, magma at Earth's surface. As it cools, minerals crystallize from the melt.<span class="credit">Public domain, via <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-2-3">3.2.3 Precipitation by organisms</h3>
+  <p>Many organisms build bones, shells, and body coverings by extracting ions from water and precipitating minerals. The most common is <b>calcite (CaCO<sub>3</sub>)</b>, often precipitated as its <button class="term" data-term="polymorph">polymorph</button> <b>aragonite</b> (polymorphs have the same chemical formula but different crystal structures).</p>
+  <ul>
+    <li><b>Corals and clams</b> make aragonite or calcite shells. After death these hard parts pile up on the seafloor and may become <b>limestone</b>. Limestone can form without life, but the vast majority forms this way.</li>
+    <li><b>Radiolaria</b>, a kind of zooplankton, make microscopic silica shells that can accumulate into the rock <b>chert</b>.</li>
+    <li><b>Bone</b> is mostly a type of <b>apatite</b> (phosphate group) called hydroxycarbonate apatite.</li>
+  </ul>
+  <div class="callout warn">
+    <h4>Remember</h4>
+    <p>By the IMA definition, these biological substances are not technically minerals until the organism dies and its hard parts become fossils.</p>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener">Section 3.2 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 3.3 -->
+<section id="s3-3">
+  <h2 class="sec"><span class="n">3.3</span>Silicate minerals</h2>
+  <p>Minerals are grouped by composition and structure. <button class="term" data-term="silicate mineral">Silicate minerals</button>, the largest group on Earth, make up the vast majority of the mantle and crust. Of the nearly 4,000 known minerals, most are rare; only a few, the <button class="term" data-term="rock-forming minerals">rock-forming minerals</button>, make up most of the rocks we are likely to meet.</p>
+  <p>Silicates are built around the <button class="term" data-term="silicon-oxygen tetrahedron">silicon-oxygen tetrahedron</button> (SiO<sub>4</sub>): one small silicon ion (+4) in the center of four large oxygen ions (−2 each) at the corners of a four-sided pyramid. Silicon shares one valence electron with each oxygen in a covalent bond. Because only half of each oxygen's valence electrons are shared, the tetrahedron has a charge of <b>−4</b> and its corners stay chemically active: they bond to other tetrahedra or to cations such as Al<sup>3+</sup>, Fe<sup>2+,3+</sup>, Mg<sup>2+</sup>, K<sup>+</sup>, Na<sup>+</sup>, and Ca<sup>2+</sup>.</p>
+  <figure>
+    <div class="frame"><svg viewBox="0 0 600 232" role="img" aria-labelledby="tet-t" style="width:100%;min-width:520px;height:auto"><title id="tet-t">A silicon ion sits at the center of four oxygen ions arranged as a four-sided pyramid; the charges add to minus four.</title><line x1="150" y1="48" x2="66" y2="178" stroke="var(--muted)" stroke-width="2"/><line x1="150" y1="48" x2="238" y2="182" stroke="var(--muted)" stroke-width="2"/><line x1="66" y1="178" x2="238" y2="182" stroke="var(--muted)" stroke-width="2"/><line x1="150" y1="48" x2="170" y2="132" stroke="var(--muted)" stroke-width="2" stroke-dasharray="5 4"/><line x1="66" y1="178" x2="170" y2="132" stroke="var(--muted)" stroke-width="2" stroke-dasharray="5 4"/><line x1="238" y1="182" x2="170" y2="132" stroke="var(--muted)" stroke-width="2" stroke-dasharray="5 4"/><circle cx="170" cy="132" r="26" fill="var(--rust)" opacity=".35"/><line x1="156" y1="136" x2="150" y2="48" stroke="var(--ochre)" stroke-width="3"/><line x1="156" y1="136" x2="66" y2="178" stroke="var(--ochre)" stroke-width="3"/><line x1="156" y1="136" x2="238" y2="182" stroke="var(--ochre)" stroke-width="3"/><line x1="156" y1="136" x2="170" y2="132" stroke="var(--ochre)" stroke-width="3"/><circle cx="156" cy="136" r="11" fill="var(--ochre)"/><text x="156" y="140" text-anchor="middle" font-size="10" font-weight="700" fill="#1c1a14">Si</text><circle cx="150" cy="48" r="26" fill="var(--rust)" opacity=".85"/><text x="150" y="53" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">O</text><circle cx="66" cy="178" r="26" fill="var(--rust)" opacity=".85"/><text x="66" y="183" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">O</text><circle cx="238" cy="182" r="26" fill="var(--rust)" opacity=".85"/><text x="238" y="187" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">O</text><text x="330" y="56" font-size="14" font-weight="700" class="svg-ink">Silicon-oxygen tetrahedron</text><text x="330" y="92" font-size="13" class="svg-ink">Si⁴⁺ at the center</text><text x="580" y="92" text-anchor="end" font-size="13" font-family="var(--mono)" class="svg-ink">+4</text><text x="330" y="122" font-size="13" class="svg-ink">4 × O²⁻ at the corners</text><text x="580" y="122" text-anchor="end" font-size="13" font-family="var(--mono)" class="svg-ink">−8</text><text x="330" y="152" font-size="13" class="svg-ink" font-weight="700">Net charge of SiO₄</text><text x="580" y="152" text-anchor="end" font-size="13" font-family="var(--mono)" class="svg-ink" font-weight="700">−4</text><line x1="330" y1="132" x2="580" y2="132" stroke="var(--line)"/><text x="330" y="182" font-size="12" class="svg-muted">Each corner O still has one free bond,</text><text x="330" y="198" font-size="12" class="svg-muted">so it can link to another tetrahedron</text><text x="330" y="214" font-size="12" class="svg-muted">or to a cation (Al, Fe, Mg, K, Na, Ca).</text></svg></div>
+    <figcaption>The silicon-oxygen tetrahedron. The silicon ion is so much smaller than the oxygen ions that it fits in the small space between them.<span class="credit">Diagram drawn for this guide from Section 3.3.</span></figcaption>
+  </figure>
+  <p>Depending on factors such as the original magma chemistry, tetrahedra can stay <b>isolated</b> or link into <b>chains, sheets, or three-dimensional frameworks</b>. Linked tetrahedra are <button class="term" data-term="polymer">polymers</button>, bonded covalently through their corner oxygens. Cations fill the spaces in each structure, which creates the different silicate groups.</p>
+  <figure id="fig-silicates">
+    <div class="frame"><svg viewBox="0 0 750 300" role="img" aria-labelledby="sil-t" style="width:100%;min-width:640px;height:auto"><title id="sil-t">Five ways silica tetrahedra link: isolated, single chains, double chains, sheets, and three-dimensional frameworks, sharing more corner oxygens from left to right.</title><defs><marker id="ah-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs><g transform="translate(0,0)"><rect x="4" y="4" width="142" height="246" rx="10" class="flow-step" style="--d:0.0s;stroke-width:1.2"/><text x="75.0" y="28" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Isolated</text><polygon points="22.0,89.4 56.0,89.4 39.0,60.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="39.0" cy="79.6" r="2.6" fill="var(--ochre)"/><polygon points="82.0,69.4 116.0,69.4 99.0,40.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="99.0" cy="59.6" r="2.6" fill="var(--ochre)"/><polygon points="52.0,129.4 86.0,129.4 69.0,100.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="69.0" cy="119.6" r="2.6" fill="var(--ochre)"/><polygon points="100.0,127.4 134.0,127.4 117.0,98.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="117.0" cy="117.6" r="2.6" fill="var(--ochre)"/><text x="75.0" y="184" text-anchor="middle" font-size="11" font-family="var(--mono)" class="svg-muted">0 corners shared</text><text x="75.0" y="210" text-anchor="middle" font-size="11.5" font-style="italic" class="svg-ink">neosilicates</text><text x="75.0" y="230" text-anchor="middle" font-size="11" class="svg-muted">olivine, garnet, zircon</text></g><g transform="translate(150,0)"><rect x="4" y="4" width="142" height="246" rx="10" class="flow-step" style="--d:1.2s;stroke-width:1.2"/><text x="75.0" y="28" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Single chain</text><polygon points="8.0,104.5 34.0,104.5 21.0,82.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="97.0" r="2.6" fill="var(--ochre)"/><polygon points="34.0,104.5 60.0,104.5 47.0,82.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="47.0" cy="97.0" r="2.6" fill="var(--ochre)"/><polygon points="60.0,104.5 86.0,104.5 73.0,82.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="73.0" cy="97.0" r="2.6" fill="var(--ochre)"/><polygon points="86.0,104.5 112.0,104.5 99.0,82.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="99.0" cy="97.0" r="2.6" fill="var(--ochre)"/><polygon points="112.0,104.5 138.0,104.5 125.0,82.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="125.0" cy="97.0" r="2.6" fill="var(--ochre)"/><text x="75.0" y="184" text-anchor="middle" font-size="11" font-family="var(--mono)" class="svg-muted">2 corners shared</text><text x="75.0" y="210" text-anchor="middle" font-size="11.5" font-style="italic" class="svg-ink">pyroxenes</text><text x="75.0" y="230" text-anchor="middle" font-size="11" class="svg-muted">augite, diopside</text></g><g transform="translate(300,0)"><rect x="4" y="4" width="142" height="246" rx="10" class="flow-step" style="--d:2.4s;stroke-width:1.2"/><text x="75.0" y="28" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Double chain</text><polygon points="8.0,60.0 34.0,60.0 21.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="67.5" r="2.6" fill="var(--ochre)"/><polygon points="34.0,60.0 60.0,60.0 47.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="47.0" cy="67.5" r="2.6" fill="var(--ochre)"/><polygon points="60.0,60.0 86.0,60.0 73.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="73.0" cy="67.5" r="2.6" fill="var(--ochre)"/><polygon points="86.0,60.0 112.0,60.0 99.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="99.0" cy="67.5" r="2.6" fill="var(--ochre)"/><polygon points="112.0,60.0 138.0,60.0 125.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="125.0" cy="67.5" r="2.6" fill="var(--ochre)"/><polygon points="8.0,105.0 34.0,105.0 21.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="97.5" r="2.6" fill="var(--ochre)"/><polygon points="34.0,105.0 60.0,105.0 47.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="47.0" cy="97.5" r="2.6" fill="var(--ochre)"/><polygon points="60.0,105.0 86.0,105.0 73.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="73.0" cy="97.5" r="2.6" fill="var(--ochre)"/><polygon points="86.0,105.0 112.0,105.0 99.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="99.0" cy="97.5" r="2.6" fill="var(--ochre)"/><polygon points="112.0,105.0 138.0,105.0 125.0,82.5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="125.0" cy="97.5" r="2.6" fill="var(--ochre)"/><text x="75.0" y="184" text-anchor="middle" font-size="11" font-family="var(--mono)" class="svg-muted">2 or 3 corners shared</text><text x="75.0" y="210" text-anchor="middle" font-size="11.5" font-style="italic" class="svg-ink">amphiboles (inosilicates)</text><text x="75.0" y="230" text-anchor="middle" font-size="11" class="svg-muted">hornblende</text></g><g transform="translate(450,0)"><rect x="4" y="4" width="142" height="246" rx="10" class="flow-step" style="--d:3.5999999999999996s;stroke-width:1.2"/><text x="75.0" y="28" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Sheet</text><polygon points="10.0,65.1 32.0,65.1 21.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="32.0,65.1 54.0,65.1 43.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="43.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="54.0,65.1 76.0,65.1 65.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="65.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="76.0,65.1 98.0,65.1 87.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="87.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="98.0,65.1 120.0,65.1 109.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="109.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="21.0,84.1 43.0,84.1 32.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="32.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="43.0,84.1 65.0,84.1 54.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="54.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="65.0,84.1 87.0,84.1 76.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="76.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="87.0,84.1 109.0,84.1 98.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="98.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="109.0,84.1 131.0,84.1 120.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="120.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="10.0,103.2 32.0,103.2 21.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="32.0,103.2 54.0,103.2 43.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="43.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="54.0,103.2 76.0,103.2 65.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="65.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="76.0,103.2 98.0,103.2 87.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="87.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="98.0,103.2 120.0,103.2 109.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="109.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="21.0,122.2 43.0,122.2 32.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="32.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="43.0,122.2 65.0,122.2 54.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="54.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="65.0,122.2 87.0,122.2 76.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="76.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="87.0,122.2 109.0,122.2 98.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="98.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="109.0,122.2 131.0,122.2 120.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="120.0" cy="115.9" r="2.6" fill="var(--ochre)"/><text x="75.0" y="184" text-anchor="middle" font-size="11" font-family="var(--mono)" class="svg-muted">3 corners shared</text><text x="75.0" y="210" text-anchor="middle" font-size="11.5" font-style="italic" class="svg-ink">phyllosilicates</text><text x="75.0" y="230" text-anchor="middle" font-size="11" class="svg-muted">micas, clays</text></g><g transform="translate(600,0)"><rect x="4" y="4" width="142" height="246" rx="10" class="flow-step" style="--d:4.8s;stroke-width:1.2"/><text x="75.0" y="28" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Framework</text><g transform="translate(6,8)"><polygon points="10.0,65.1 32.0,65.1 21.0,46.0" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="32.0,65.1 54.0,65.1 43.0,46.0" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="43.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="54.0,65.1 76.0,65.1 65.0,46.0" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="65.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="76.0,65.1 98.0,65.1 87.0,46.0" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="87.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="98.0,65.1 120.0,65.1 109.0,46.0" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="109.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="21.0,84.1 43.0,84.1 32.0,65.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="32.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="43.0,84.1 65.0,84.1 54.0,65.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="54.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="65.0,84.1 87.0,84.1 76.0,65.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="76.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="87.0,84.1 109.0,84.1 98.0,65.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="98.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="109.0,84.1 131.0,84.1 120.0,65.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="120.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="10.0,103.2 32.0,103.2 21.0,84.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="32.0,103.2 54.0,103.2 43.0,84.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="43.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="54.0,103.2 76.0,103.2 65.0,84.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="65.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="76.0,103.2 98.0,103.2 87.0,84.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="87.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="98.0,103.2 120.0,103.2 109.0,84.1" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="109.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="21.0,122.2 43.0,122.2 32.0,103.2" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="32.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="43.0,122.2 65.0,122.2 54.0,103.2" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="54.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="65.0,122.2 87.0,122.2 76.0,103.2" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="76.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="87.0,122.2 109.0,122.2 98.0,103.2" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="98.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="109.0,122.2 131.0,122.2 120.0,103.2" fill="none" stroke="var(--ochre)" stroke-dasharray="3 2" stroke-width="1.6" stroke-linejoin="round"/><circle cx="120.0" cy="115.9" r="2.6" fill="var(--ochre)"/></g><polygon points="10.0,65.1 32.0,65.1 21.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="32.0,65.1 54.0,65.1 43.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="43.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="54.0,65.1 76.0,65.1 65.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="65.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="76.0,65.1 98.0,65.1 87.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="87.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="98.0,65.1 120.0,65.1 109.0,46.0" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="109.0" cy="58.7" r="2.6" fill="var(--ochre)"/><polygon points="21.0,84.1 43.0,84.1 32.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="32.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="43.0,84.1 65.0,84.1 54.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="54.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="65.0,84.1 87.0,84.1 76.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="76.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="87.0,84.1 109.0,84.1 98.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="98.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="109.0,84.1 131.0,84.1 120.0,65.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="120.0" cy="77.8" r="2.6" fill="var(--ochre)"/><polygon points="10.0,103.2 32.0,103.2 21.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="21.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="32.0,103.2 54.0,103.2 43.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="43.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="54.0,103.2 76.0,103.2 65.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="65.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="76.0,103.2 98.0,103.2 87.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="87.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="98.0,103.2 120.0,103.2 109.0,84.1" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="109.0" cy="96.8" r="2.6" fill="var(--ochre)"/><polygon points="21.0,122.2 43.0,122.2 32.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="32.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="43.0,122.2 65.0,122.2 54.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="54.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="65.0,122.2 87.0,122.2 76.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="76.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="87.0,122.2 109.0,122.2 98.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="98.0" cy="115.9" r="2.6" fill="var(--ochre)"/><polygon points="109.0,122.2 131.0,122.2 120.0,103.2" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="120.0" cy="115.9" r="2.6" fill="var(--ochre)"/><text x="75.0" y="184" text-anchor="middle" font-size="11" font-family="var(--mono)" class="svg-muted">all 4 corners shared (3-D)</text><text x="75.0" y="210" text-anchor="middle" font-size="11.5" font-style="italic" class="svg-ink">tectosilicates</text><text x="75.0" y="230" text-anchor="middle" font-size="11" class="svg-muted">quartz, feldspars</text></g><line x1="20" y1="270" x2="730" y2="270" stroke="var(--muted)" stroke-width="1.5" marker-end="url(#ah-m)"/><text x="375.0" y="290" text-anchor="middle" font-size="12" class="svg-muted">more corner oxygens shared between tetrahedra (more polymerized)</text></svg></div>
+    <figcaption>How silica tetrahedra link in the main silicate groups, seen from above (each triangle is one tetrahedron; the dot is silicon). The framework panel shows a second layer (dashed) to suggest three dimensions.<span class="credit">Diagram drawn for this guide from Section 3.3.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-3-1">3.3.1 The dark ferromagnesian silicates: the olivine family</h3>
+  <p><b>Olivine, (Fe,Mg)<sub>2</sub>SiO<sub>4</sub></b>, is the primary mineral in mantle rock such as peridotite, and is found in basalt. It is characteristically green when unweathered. Iron and magnesium form a <button class="term" data-term="solid solution">solid solution</button>: elements with similar properties (here, about the same size and charge) substitute freely for each other in the same place in the crystal. This makes olivine a <b>mineral family</b>, a compositional series between two <button class="term" data-term="end member">end members</button>: all-magnesium <b>forsterite</b> and all-iron <b>fayalite</b>. The relative amounts of Fe and Mg in the parent magma decide which minerals in the series form. Rarer elements, such as manganese, can substitute in small amounts; such substitutions create the great variety of minerals and often change color and other properties.</p>
+  <figure>
+    <div class="frame"><svg viewBox="0 0 600 150" role="img" aria-label="Forsterite – Fayalite" style="width:100%;min-width:480px;height:auto"><defs><linearGradient id="ol-g" x1="0" x2="1"><stop offset="0" stop-color="var(--accent)"/><stop offset="1" stop-color="var(--ochre)"/></linearGradient></defs><rect x="40" y="50" width="520" height="22" rx="11" fill="url(#ol-g)" opacity=".85"/><g class="slide" style="--slide:500px"><circle cx="50" cy="61" r="13" fill="var(--surface)" stroke="var(--fg)" stroke-width="2"/></g><text x="40" y="34" font-size="13.5" font-weight="700" class="svg-ink">Forsterite</text><text x="560" y="34" text-anchor="end" font-size="13.5" font-weight="700" class="svg-ink">Fayalite</text><text x="40" y="96" font-size="12.5" font-family="var(--mono)" class="svg-ink">Mg₂SiO₄</text><text x="560" y="96" text-anchor="end" font-size="12.5" font-family="var(--mono)" class="svg-ink">Fe₂SiO₄</text><text x="40" y="114" font-size="11.5" class="svg-muted">all-magnesium end member</text><text x="560" y="114" text-anchor="end" font-size="11.5" class="svg-muted">all-iron end member</text><text x="300" y="140" text-anchor="middle" font-size="12" class="svg-muted">olivine (Mg,Fe)₂SiO₄: Fe and Mg swap freely in the same site</text></svg></div>
+    <figcaption>The olivine solid-solution series. Any mix between the end members is possible, and compositions in between have their own names.<span class="credit">Diagram drawn for this guide from Section 3.3.1.</span></figcaption>
+  </figure>
+  <p>Olivine is mostly Si, O, Fe, and Mg, so it is a dark-colored <button class="term" data-term="ferromagnesian">ferromagnesian</button> (ferro = iron, magnesian = magnesium) or <button class="term" data-term="mafic">mafic</button> mineral. Ferromagnesian silicates tend to be <b>denser</b> than non-ferromagnesian ones. This matters for plate tectonics: whether a plate subducts depends largely on the density of its rocks, which depends on the density of their minerals.</p>
+  <p>Olivine's structure is <b>independent tetrahedra</b>, a <button class="term" data-term="neosilicate">neosilicate</button> (orthosilicate); garnet, topaz, kyanite, and zircon are others. Two related structures lead toward the pyroxenes: <button class="term" data-term="sorosilicate">sorosilicates</button> share one oxygen between two tetrahedra (e.g. pistachio-green epidote), and <button class="term" data-term="cyclosilicate">cyclosilicates</button> form rings of tetrahedra (e.g. beryl, emerald, aquamarine, tourmaline).</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/peridot-basalt.webp" alt="Bright green granular olivine crystals packed inside a dark basalt rock." loading="lazy" width="445" height="334"></div>
+      <figcaption>Olivine crystals in basalt.<span class="credit">Vsmith, CC BY-SA.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/olivine-structure.webp" alt="Crystal structure diagram with separate pink tetrahedra and blue and red atoms between them." loading="lazy" width="300" height="258"></div>
+      <figcaption>Olivine's structure: isolated tetrahedra joined by Fe and Mg ions.<span class="credit">Matanya, public domain.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s3-3-2">3.3.2 Pyroxene family</h3>
+  <p><button class="term" data-term="pyroxene">Pyroxenes</button> are dark ferromagnesian minerals, typically black or dark green, built from <b>single chains</b> of tetrahedra in which each tetrahedron shares <b>two</b> corner oxygens. Metal cations bond the chains together. They occur in mafic igneous rocks (peridotite, basalt, gabbro) and metamorphic rocks (eclogite, blueschist). A common member is <b>augite</b>, (Ca,Na)(Mg,Fe,Al,Ti)(Si,Al)<sub>2</sub>O<sub>6</sub>.</p>
+  <p>The general formula is <b>XZ(Al,Si)<sub>2</sub>O<sub>6</sub></b>, where X = Na, Ca, Mg, or Fe and Z = Mg, Fe, or Al. These ions are similar in size, so many substitutions are possible, but charges must still balance: if Na<sup>+</sup> replaces Ca<sup>2+</sup>, another substitution elsewhere in the crystal must make up the difference. <b>Ionic size matters more than ionic charge</b> for substitution in solid solution series.</p>
+  <figure>
+    <div class="frame"><img src="images/unit3/diopside.webp" alt="Cluster of dark green, glassy, stubby prismatic crystals." loading="lazy" style="max-width:420px" width="800" height="617"></div>
+    <figcaption>Diopside, a member of the pyroxene family.<span class="credit">Rob Lavinsky, iRocks.com, CC BY-SA.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-3-3">3.3.3 Amphibole family</h3>
+  <p><button class="term" data-term="amphibole">Amphiboles</button> are built from <b>double chains</b>: two pyroxene-like chains joined by sharing a third oxygen on each tetrahedron. They are called <button class="term" data-term="inosilicate">inosilicates</button>. Amphiboles occur in igneous and metamorphic rocks and usually have a <b>long-bladed</b> crystal habit. The most common, <b>hornblende</b>, is usually black, but amphiboles come in many colors. They are found in gabbro, basalt, and diorite, often form the black specks in granite, and make up the metamorphic rock <b>amphibolite</b>.</p>
+  <p>The formula is complex, generally written (RSi<sub>4</sub>O<sub>11</sub>)<sub>2</sub>, where R stands for many different cations. Amphiboles can also hold <b>hydroxide ions (OH<sup>−</sup>)</b>, picked up from water dissolved in the magma as the crystals grow.</p>
+  <figure>
+    <div class="frame"><img src="images/unit3/hornblende.webp" alt="Two dark, blocky pieces of black hornblende." loading="lazy" style="max-width:420px" width="360" height="283"></div>
+    <figcaption>Hornblende, the most common amphibole.<span class="credit">Public domain, via <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-3-4">3.3.4 Sheet silicates</h3>
+  <p>In <button class="term" data-term="sheet silicate">sheet silicates</button> (<button class="term" data-term="phyllosilicate">phyllosilicates</button>) each tetrahedron shares all three bottom corner oxygens, making sheets with the top corners free to bond with other atoms. Their Si:O ratio is <b>2:5 (Si<sub>4</sub>O<sub>10</sub>)</b>. The common types are micas and clays.</p>
+  <ul>
+    <li><b><button class="term" data-term="mica">Micas</button></b> are mostly silica, aluminum, and potassium, and occur in igneous and metamorphic rocks. Dark <b>biotite</b> (more Fe and Mg, so ferromagnesian) is common in granite; light <b>muscovite</b> is a <button class="term" data-term="felsic">felsic</button> mineral, found in schist.</li>
+    <li>In mica, tetrahedral sheets sandwich an octahedral layer of Fe, Mg, or Al. Potassium ions between the "sandwiches" hold them together with weak <button class="term" data-term="Van der Waals bond">Van der Waals bonds</button>, so mica <b>splits easily into sheets</b> along the potassium layers.</li>
+    <li><b><button class="term" data-term="clay minerals">Clay minerals</button></b> are hydrous aluminum silicates formed by weathering, and are important in sedimentary rocks. <b>Kaolinite</b> is like an open-faced sandwich: one silica sheet ("bread") with an aluminum octahedral layer ("spread").</li>
+    <li>Other sheet silicates: <b>serpentine</b> and <b>chlorite</b>, in metamorphic rocks.</li>
+  </ul>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/muscovite.webp" alt="A stack of thin, shiny, silvery-brown mica sheets." loading="lazy" width="600" height="451"></div>
+      <figcaption>A crystal of muscovite mica.<span class="credit">USGS "Minerals in Your World", public domain.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img class="diagram" src="images/unit3/sheet-polyhedra.webp" alt="Three-dimensional view of a flat sheet of linked tetrahedra forming hexagonal rings." loading="lazy" width="768" height="505"></div>
+      <figcaption>A sheet of linked tetrahedra, the basic unit of micas and clays.<span class="credit">Benjah-bmm27, public domain.</span></figcaption>
+    </figure>
+  </div>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/mica-structure.webp" alt="Diagram of two tetrahedral sheets with an octahedral layer between them and potassium ions between the sandwiches." loading="lazy" width="768" height="770"></div>
+      <figcaption>Mica structure: tetrahedral sheets around an octahedral layer, held together by potassium (K).<span class="credit">Modified from Grim (1962), public domain.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/kaolinite.webp" alt="Diagram of a single kaolinite layer: one tetrahedral sheet bonded to one aluminum octahedral sheet." loading="lazy" width="768" height="624"></div>
+      <figcaption>Kaolinite: one tetrahedral sheet plus one aluminum layer.<span class="credit">USGS, modified from Grim (1962), public domain.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s3-3-5">3.3.5 Framework silicates</h3>
+  <p><b>Quartz and feldspar</b> are the two most abundant minerals in the continental crust. In these <button class="term" data-term="framework silicate">framework silicates</button> (<button class="term" data-term="tectosilicate">tectosilicates</button>) <b>all four</b> corner oxygens are shared, making a 3-D framework. <b>Feldspar</b> is the single most abundant mineral in the crust, about 50% of it. <b>Quartz</b> is the most abundant mineral at Earth's <i>surface</i>, because it resists weathering; it is especially common in <button class="term" data-term="detrital sedimentary rock">detrital sedimentary rocks</button> (made of mechanically weathered particles like sand and gravel).</p>
+  <ul>
+    <li><b>Quartz</b> is pure silica, <b>SiO<sub>2</sub></b>. Impurities make varieties such as amethyst, rose quartz, and citrine.</li>
+    <li><b><button class="term" data-term="orthoclase">Orthoclase</button></b> (potassium feldspar, K-spar), <b>KAlSi<sub>3</sub>O<sub>8</sub></b>, is abundant in felsic rocks of the continental crust. Quartz and orthoclase are <b>felsic</b> minerals (felsic: rich in silica; the word is a contraction of feldspar and silica).</li>
+    <li><b><button class="term" data-term="plagioclase">Plagioclase</button></b>, <b>(Ca,Na)AlSi<sub>3</sub>O<sub>8</sub></b>, is a solid solution from sodium-rich <b>albite</b> to calcium-rich <b>anorthite</b>, abundant in mafic rocks of oceanic crust.</li>
+  </ul>
+  <figure>
+    <div class="frame"><svg viewBox="0 0 600 150" role="img" aria-label="Albite – Anorthite" style="width:100%;min-width:480px;height:auto"><defs><linearGradient id="pl-g" x1="0" x2="1"><stop offset="0" stop-color="var(--accent)"/><stop offset="1" stop-color="var(--ochre)"/></linearGradient></defs><rect x="40" y="50" width="520" height="22" rx="11" fill="url(#pl-g)" opacity=".85"/><g class="slide" style="--slide:500px"><circle cx="50" cy="61" r="13" fill="var(--surface)" stroke="var(--fg)" stroke-width="2"/></g><text x="40" y="34" font-size="13.5" font-weight="700" class="svg-ink">Albite</text><text x="560" y="34" text-anchor="end" font-size="13.5" font-weight="700" class="svg-ink">Anorthite</text><text x="40" y="96" font-size="12.5" font-family="var(--mono)" class="svg-ink">NaAlSi₃O₈</text><text x="560" y="96" text-anchor="end" font-size="12.5" font-family="var(--mono)" class="svg-ink">CaAl₂Si₂O₈</text><text x="40" y="114" font-size="11.5" class="svg-muted">sodium end member</text><text x="560" y="114" text-anchor="end" font-size="11.5" class="svg-muted">calcium end member</text><text x="300" y="140" text-anchor="middle" font-size="12" class="svg-muted">plagioclase (Ca,Na)AlSi₃O₈: Ca²⁺ and Na⁺ swap; Al and Si adjust to balance charge</text></svg></div>
+    <figcaption>The plagioclase solid-solution series. Aluminum, similar in size to silicon, can take silicon's place inside the tetrahedra, which keeps the charges balanced as Ca<sup>2+</sup> and Na<sup>+</sup> swap.<span class="credit">Diagram drawn for this guide from Section 3.3.5.</span></figcaption>
+  </figure>
+  <p>Why two feldspar families? Potassium ions are much larger than sodium and calcium ions, which are similar in size to each other. The crystal lattice cannot hold both, so feldspars split into <b>orthoclase</b> (K) and <b>plagioclase</b> (Na/Ca). Framework silicates also include the feldspathoids and zeolites.</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/quartz-tibet.webp" alt="Clear, six-sided quartz crystals with pointed tips on a black background." loading="lazy" width="768" height="726"></div>
+      <figcaption>Freely growing quartz crystals showing crystal faces.<span class="credit">JJ Harrison, CC BY-SA.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/orthoclase.webp" alt="Blocky pink-beige orthoclase crystals." loading="lazy" width="768" height="511"></div>
+      <figcaption>Orthoclase (potassium feldspar) crystals.<span class="credit">Didier Descouens, CC BY-SA.</span></figcaption>
+    </figure>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>The silicate groups at a glance (structures from <a href="#fig-silicates">Figure 3.12</a>).</caption>
+      <thead><tr><th>Structure</th><th>Group</th><th>Examples</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Isolated tetrahedra</td><td>Neosilicates</td><td>Olivine, garnet, topaz, kyanite, zircon</td><td>Olivine: Fe–Mg solid solution; mafic, dense, green</td></tr>
+        <tr><td>Pairs / rings</td><td>Sorosilicates / cyclosilicates</td><td>Epidote / beryl, tourmaline</td><td>Transitional toward the chain silicates</td></tr>
+        <tr><td>Single chains</td><td>Pyroxenes</td><td>Augite, diopside</td><td>Dark, mafic; XZ(Al,Si)<sub>2</sub>O<sub>6</sub></td></tr>
+        <tr><td>Double chains</td><td>Amphiboles</td><td>Hornblende, tremolite</td><td>Dark; long-bladed; may contain OH<sup>−</sup></td></tr>
+        <tr><td>Sheets</td><td>Phyllosilicates</td><td>Biotite, muscovite, kaolinite, serpentine, chlorite</td><td>Si:O = 2:5; split into sheets</td></tr>
+        <tr><td>3-D framework</td><td>Tectosilicates</td><td>Quartz, orthoclase, plagioclase</td><td>Most abundant in the continental crust</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener">Section 3.3 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 3.4 -->
+<section id="s3-4">
+  <h2 class="sec"><span class="n">3.4</span>Non-silicate minerals</h2>
+  <p>The crystal structures of <button class="term" data-term="non-silicate mineral">non-silicate minerals</button> have no silica tetrahedra. Many are economically important: they supply metals (copper, lead, iron) and non-metallic products (salt, construction materials, fertilizer).</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Common non-silicate mineral groups (from the chapter).</caption>
+      <thead><tr><th>Group</th><th>Examples</th><th>Formula</th><th>Uses</th></tr></thead>
+      <tbody>
+        <tr><td>Native elements</td><td>gold, silver, copper</td><td>Au, Ag, Cu</td><td>Jewelry, coins, industry</td></tr>
+        <tr><td>Carbonates</td><td>calcite, dolomite</td><td>CaCO<sub>3</sub>, CaMg(CO<sub>3</sub>)<sub>2</sub></td><td>Lime, Portland cement</td></tr>
+        <tr><td>Oxides</td><td>hematite, magnetite, bauxite</td><td>Fe<sub>2</sub>O<sub>3</sub>, Fe<sub>3</sub>O<sub>4</sub>, mixed aluminum oxides</td><td>Ores of iron and aluminum, pigments</td></tr>
+        <tr><td>Halides</td><td>halite, sylvite</td><td>NaCl, KCl</td><td>Table salt, fertilizer</td></tr>
+        <tr><td>Sulfides</td><td>galena, chalcopyrite, cinnabar</td><td>PbS, CuFeS<sub>2</sub>, HgS</td><td>Ores of lead, copper, mercury</td></tr>
+        <tr><td>Sulfates</td><td>gypsum, Epsom salts</td><td>CaSO<sub>4</sub>·2H<sub>2</sub>O, MgSO<sub>4</sub>·7H<sub>2</sub>O</td><td>Sheetrock, therapeutic soak</td></tr>
+        <tr><td>Phosphates</td><td>apatite</td><td>Ca<sub>5</sub>(PO<sub>4</sub>)<sub>3</sub>(F,Cl,OH)</td><td>Fertilizer, teeth, bones</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure>
+    <div class="frame"><img src="images/unit3/hanksite.webp" alt="A pale, six-sided hanksite crystal." loading="lazy" style="max-width:420px" width="640" height="427"></div>
+    <figcaption>Hanksite, Na<sub>22</sub>K(SO<sub>4</sub>)<sub>9</sub>(CO<sub>3</sub>)<sub>2</sub>Cl, one of the few minerals that is both a carbonate and a sulfate.<span class="credit">Matt Affolter (QFL247), CC BY-SA.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-4-1">3.4.1 Carbonates</h3>
+  <p>The two most common <button class="term" data-term="carbonate">carbonate</button> minerals are <b>calcite (CaCO<sub>3</sub>)</b> and <b>dolomite (CaMg(CO<sub>3</sub>)<sub>2</sub>)</b>, found mainly in the sedimentary rocks <b>limestone</b> and <b>dolostone</b>. Some carbonates form by evaporation and precipitation, but most carbonate-rich rock, such as limestone, forms by the <button class="term" data-term="lithification">lithification</button> of fossilized marine organisms: their calcium carbonate shells and skeletons pile up after death, the soft parts decay, and the hard parts become limestone. Most limestones are made of microscopic creatures.</p>
+  <p><b>Salts.</b> Many non-silicates are <button class="term" data-term="salt">salts</button>, compounds made by replacing the hydrogen in natural acids. The most abundant natural acid is <b>carbonic acid (H<sub>2</sub>CO<sub>3</sub>)</b>, from CO<sub>2</sub> dissolved in water; carbonate minerals replace its hydrogen with calcium and/or magnesium. Organisms secrete calcite and its polymorph aragonite from dissolved bicarbonate ions (HCO<sub>3</sub><sup>−</sup>). Halite replaces the hydrogen in hydrochloric acid with sodium, and gypsum replaces the hydrogen in sulfuric acid with calcium. Salts formed by evaporation are <button class="term" data-term="evaporite">evaporite minerals</button>.</p>
+  <p><b>Birefringence.</b> Calcite splits light into two rays vibrating at right angles that travel at different speeds and paths, so you see a <b>double image</b> through a clear crystal. This <button class="term" data-term="birefringence">birefringence</button> is why calcite is used in petrographic microscopes. Calcite also <b>fizzes in dilute hydrochloric acid</b> (Section 3.5.6).</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/calcite-rhomb.webp" alt="A clear calcite rhomb on a label; the text seen through it appears doubled." loading="lazy" width="654" height="800"></div>
+      <figcaption>A calcite rhomb. The word "calcite" seen through it is doubled by birefringence.<span class="credit">Public domain.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img class="diagram" src="images/unit3/birefringence.webp" alt="Diagram of a light ray entering a crystal and splitting into two rays with perpendicular polarization." loading="lazy" width="533" height="568"></div>
+      <figcaption>Birefringence: one ray in, two polarized rays out.<span class="credit">Mikael Häggström, public domain.</span></figcaption>
+    </figure>
+  </div>
+  <p>In calcite's structure, each carbon is covalently bonded to three oxygens in a triangular carbonate unit with a charge of −2, which bonds ionically to a Ca<sup>2+</sup> ion.</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/limestone.webp" alt="Two slabs of gray limestone packed with small shell fragments." loading="lazy" width="749" height="800"></div>
+      <figcaption>Limestone with small fossils.<span class="credit">Jstuby, public domain.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/calcite-structure.webp" alt="Crystal-structure diagram of calcite with calcium, carbon, and oxygen atoms in a repeating cell." loading="lazy" width="546" height="668"></div>
+      <figcaption>Crystal structure of calcite (Ca blue, C small, O red).<span class="credit">Materialscientist, CC BY-SA.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s3-4-2">3.4.2 Oxides, halides, and sulfides</h3>
+  <p>After carbonates, these are the most common non-silicates.</p>
+  <h4>Oxides</h4>
+  <p><button class="term" data-term="oxide">Oxides</button> are metal ions bonded with oxygen. The most familiar is <b>rust</b>: iron oxides (Fe<sub>2</sub>O<sub>3</sub>) plus hydrated oxides that form when iron meets oxygen and water. Smelting iron ore produces metallic iron and CO<sub>2</sub>. Iron oxides make most <b>red rocks</b> red; in Zion National Park and across southern Utah, red sandstone is colorless quartz grains coated and cemented by iron oxide.</p>
+  <p>Iron oxides include <b>limonite</b>, <b>magnetite</b>, and <b>hematite</b>. Hematite comes in many forms with the same formula, Fe<sub>2</sub>O<sub>3</sub>: <b>massive</b> (no external structure), <b>botryoidal</b> (large concentric blobs), <b>specular</b> (shiny metallic crystals), and <b>oolitic</b> (like dull red fish eggs). The chapter calls these forms polymorphs. Other oxides: <b>ice</b> (H<sub>2</sub>O), <b>bauxite</b> (hydrated aluminum oxides, the ore of aluminum), and <b>corundum</b> (Al<sub>2</sub>O<sub>3</sub>, including ruby and sapphire).</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/limonite.webp" alt="An earthy yellow-brown lump of limonite." loading="lazy" width="360" height="307"></div>
+      <figcaption>Limonite, a hydrated iron oxide.<span class="credit">USGS "Minerals in Your World", public domain.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/oolitic-hematite.webp" alt="A red-brown rock made of many tiny rounded grains." loading="lazy" width="528" height="474"></div>
+      <figcaption>Oolitic hematite, like dull red fish eggs.<span class="credit">Dave Dyet, public domain.</span></figcaption>
+    </figure>
+  </div>
+  <h4>Halides</h4>
+  <p><button class="term" data-term="halide">Halides</button> are halogens from column VII, usually fluorine or chlorine, ionically bonded to sodium or other cations: <b>halite</b> (NaCl), <b>sylvite</b> (KCl), and <b>fluorite</b> (CaF<sub>2</sub>). They usually form by evaporation of seawater or other isolated water bodies, as at the Bonneville Salt Flats west of the Great Salt Lake (<a href="#fig-saltflats">Figure 3.9</a>).</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/halite.webp" alt="Pinkish-white halite crystal with cube-shaped faces." loading="lazy" width="360" height="270"></div>
+      <figcaption>Halite crystal showing cubic habit.<span class="credit">Public domain.</span></figcaption>
+    </figure>
+    <figure id="fig-fluorite">
+      <div class="frame"><img src="images/unit3/fluorite-uv.webp" alt="Two photos of the same fluorite: purple in daylight (A) and glowing bright blue under ultraviolet light (B)." loading="lazy" width="652" height="800"></div>
+      <figcaption>Fluorite in normal light (A) and fluorescing under UV light (B).<span class="credit">CC BY-SA, via <i>An Introduction to Geology</i>.</span></figcaption>
+    </figure>
+  </div>
+  <h4>Sulfides</h4>
+  <p>In <button class="term" data-term="sulfide">sulfides</button>, metals are bonded to sulfur. Many are important <button class="term" data-term="ore">ore</button> minerals: <b>galena</b> (lead sulfide, the main source of lead), <b>sphalerite</b> (zinc sulfide, main source of zinc), <b>pyrite</b> (iron sulfide, "fool's gold"), and <b>chalcopyrite</b> (iron-copper sulfide, the main copper ore in porphyry deposits like the Bingham mine; Chapter 16). The largest sources of nickel, antimony, molybdenum, arsenic, and mercury are also sulfides.</p>
+  <figure>
+    <div class="frame"><img src="images/unit3/pyrite.webp" alt="Shiny brassy cubes of pyrite growing out of pale rock." loading="lazy" style="max-width:420px" width="756" height="800"></div>
+    <figcaption>Cubic crystals of pyrite ("fool's gold").<span class="credit">CarlesMillan, CC BY-SA.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-4-3">3.4.3 Sulfates</h3>
+  <p><button class="term" data-term="sulfate">Sulfates</button> contain a metal ion, such as calcium, bonded to the sulfate ion (SO<sub>4</sub><sup>2−</sup>). <b>Gypsum (CaSO<sub>4</sub>·2H<sub>2</sub>O)</b> is used in plaster and drywall, often forms from evaporating water, and holds whole water molecules in its crystal (the "·2H<sub>2</sub>O"). That differs from amphibole, which holds hydroxide (OH<sup>−</sup>), water missing a hydrogen ion. Calcium sulfate without water is a different mineral, <b>anhydrite (CaSO<sub>4</sub>)</b>.</p>
+  <h3 id="s3-4-4">3.4.4 Phosphates</h3>
+  <p><button class="term" data-term="phosphate">Phosphates</button> have a tetrahedral phosphate unit (PO<sub>4</sub><sup>3−</sup>) combined with other ions; arsenic or vanadium sometimes replace phosphorus. They are used in fertilizers, detergents, and paint. The best known is <b>apatite, Ca<sub>5</sub>(PO<sub>4</sub>)<sub>3</sub>(F,Cl,OH)</b>, found in teeth and bones. The gemstone <b>turquoise</b> is a copper-rich phosphate that, like gypsum, contains water molecules.</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/gypsum.webp" alt="A clear, glassy, blocky gypsum (selenite) crystal." loading="lazy" width="360" height="341"></div>
+      <figcaption>Gypsum crystal (selenite).<span class="credit">USGS "Minerals in Your World", public domain.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/apatite.webp" alt="A long, glassy, six-sided green apatite crystal on pink rock." loading="lazy" width="629" height="800"></div>
+      <figcaption>Apatite crystal.<span class="credit">CC BY-SA, via <i>An Introduction to Geology</i>.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s3-4-5">3.4.5 Native element minerals</h3>
+  <p><button class="term" data-term="native element">Native element</button> minerals, usually metals, occur in a pure or nearly pure state. <b>Gold</b> is not very reactive and rarely bonds to other elements. <b>Carbon</b> is found native as graphite and diamond. Mildly reactive elements such as <b>silver, copper, platinum, mercury, and sulfur</b> sometimes occur native, while reactive metals such as <b>iron, lead, and aluminum</b> almost always bond to other elements.</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/sulfur.webp" alt="Bright yellow crusts of sulfur around a volcanic vent." loading="lazy" width="768" height="576"></div>
+      <figcaption>Native sulfur deposited around a volcanic fumarole.<span class="credit">brisk_g, public domain.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/copper.webp" alt="A twisted, branching lump of reddish native copper." loading="lazy" width="768" height="727"></div>
+      <figcaption>Native copper.<span class="credit">CC BY-SA, via <i>An Introduction to Geology</i>.</span></figcaption>
+    </figure>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener">Section 3.4 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 3.5 -->
+<section id="s3-5">
+  <h2 class="sec"><span class="n">3.5</span>Identifying minerals</h2>
+  <p>Geologists identify minerals by their physical properties, which they can test in the field without advanced equipment: <b>luster and color, streak, hardness, crystal habit, cleavage and fracture</b>, and some <b>special properties</b>. Most rocks are made of a few common minerals seen as small grains, so think about which properties still work on a small grain surrounded by other minerals.</p>
+  <figure>
+    <div class="frame"><img src="images/unit3/curiosity.webp" alt="Reddish Martian rock with a small gray drill hole in it." loading="lazy" style="max-width:420px" width="673" height="601"></div>
+    <figcaption>The rover Curiosity drilled this rock on Mars and confirmed hematite, as mapped from satellites.<span class="credit">NASA, public domain.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-5-1">3.5.1 Luster and color</h3>
+  <p><button class="term" data-term="luster">Luster</button> describes how a mineral's surface looks. <b>Metallic</b> luster looks like shiny metal (chrome, steel, silver, gold); <b>submetallic</b> is duller, like pewter. <b>Nonmetallic</b> luster does not look like metal and can still be shiny, but differently from metal.</p>
+  <figure>
+    <div class="frame">
+      <ul class="gallery" style="--cols:3">
+        <li><img src="images/unit3/molybdenite.webp" alt="Shiny silvery hexagonal molybdenite crystal in rock." loading="lazy" width="768" height="576"><span><b>Metallic</b>molybdenite</span></li>
+        <li><img src="images/unit3/luster-submetallic.webp" alt="Dark, dull-metallic sphalerite." loading="lazy" width="372" height="343"><span><b>Submetallic</b>sphalerite</span></li>
+        <li><img src="images/unit3/luster-vitreous.webp" alt="Clear glassy quartz crystals." loading="lazy" width="800" height="681"><span><b>Vitreous (glassy)</b>quartz</span></li>
+        <li><img src="images/unit3/luster-earthy.webp" alt="A dull white lump of kaolin." loading="lazy" width="360" height="287"><span><b>Earthy (dull)</b>kaolin</span></li>
+        <li><img src="images/unit3/luster-silky.webp" alt="Fibrous gypsum with a soft sheen." loading="lazy" width="768" height="588"><span><b>Silky</b>gypsum</span></li>
+        <li><img src="images/unit3/luster-pearly.webp" alt="Mica with a pearly sheen." loading="lazy" width="768" height="557"><span><b>Pearly</b>mica</span></li>
+      </ul>
+    </div>
+    <figcaption>Luster types with the chapter's examples. Tiles are cropped to squares; open an image in a new tab to see it whole.<span class="credit">Molybdenite: John Chapman (Pyrope), CC BY-SA. Sphalerite: Andreas Früh, CC BY-SA. Quartz: Didier Descouens, CC BY-SA. Kaolin: USGS, public domain. Silky gypsum: Ra'ike, CC BY. Pearly mica: Luis Miguel Bugallo Sánchez, CC BY-SA.</span></figcaption>
+  </figure>
+  <div class="tablewrap">
+    <table>
+      <caption>Nonmetallic and submetallic luster.</caption>
+      <thead><tr><th>Luster</th><th>Looks like</th></tr></thead>
+      <tbody>
+        <tr><td>Vitreous / glassy</td><td>Shiny, like glass</td></tr>
+        <tr><td>Earthy / dull</td><td>Dull, like dried mud or clay</td></tr>
+        <tr><td>Silky</td><td>Soft shine, like silk fabric</td></tr>
+        <tr><td>Pearly</td><td>Like the inside of a clam shell (mother-of-pearl)</td></tr>
+        <tr><td>Submetallic</td><td>Dull metal, like pewter. Usually still counted as metallic; can result from weathering of metallic minerals.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><b>Color</b> can help but often varies within a mineral family. It depends on the main elements and on <b>impurities</b>, such as manganese, titanium, chromium, or lithium, or even water molecules (which make normally clear quartz milky). Some minerals have one main color: copper makes <b>malachite green</b> and <b>azurite blue</b>. Others, like the feldspars, show a range (pink, white, green, gray) because of solid solutions. With notable exceptions, <b>color is not a definitive property</b>; streak is more reliable.</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/azurite.webp" alt="Two round, deep-blue azurite nodules in pale siltstone." loading="lazy" width="652" height="800"></div>
+      <figcaption>Azurite is always dark blue and was used for centuries as a blue pigment.<span class="credit">Graeme Churchard, CC BY.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/malachite.webp" alt="Two pieces of green malachite, one polished to show banding." loading="lazy" width="768" height="446"></div>
+      <figcaption>Malachite is green because of its copper.<span class="credit">Didier Descouens, CC BY-SA.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s3-5-2">3.5.2 Streak</h3>
+  <p><button class="term" data-term="streak">Streak</button> is the color of a mineral's powder, made by scraping it on an unglazed porcelain <b>streak plate</b> (a field-notebook page works for some minerals). Minerals harder than the plate scratch it instead of leaving a streak; powder those with a hammer and smear the powder. Streak is <b>more consistent than surface color</b>:</p>
+  <ul>
+    <li><b>Hematite</b> looks anything from shiny metallic silver to earthy red-brown, but its streak is always <b>reddish brown</b>.</li>
+    <li><b>Pyrite</b> is brassy metallic yellow, but its streak is <b>black to greenish-black</b>.</li>
+  </ul>
+  <figure>
+    <div class="frame"><img src="images/unit3/streak.webp" alt="A white and a black streak plate, with pyrite leaving a dark streak and pink rhodochrosite leaving a light one." loading="lazy" style="max-width:480px" width="768" height="581"></div>
+    <figcaption>Different minerals leave different streaks: pyrite and rhodochrosite on streak plates.<span class="credit">CC BY-SA, via <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+
+  <h3 id="s3-5-3">3.5.3 Hardness</h3>
+  <p><button class="term" data-term="hardness">Hardness</button> is a mineral's ability to scratch other substances. The <button class="term" data-term="Mohs hardness scale">Mohs hardness scale</button>, named for German geologist Friedrich Mohs, ranks scratch resistance against ten standard minerals, from 1 to 10. Hardness is set by the strength of the mineral's atomic bonds. The scale is <b>not linear</b>: diamond (10) is about four times harder than corundum (9). A steel pocketknife (5.5) is the usual dividing line between hard and soft minerals on identification keys.</p>
+  <figure id="fig-mohs">
+      <div class="frame"><img src="images/unit3/mohs.webp" alt="National Park Service poster of the Mohs scale listing ten minerals from talc to diamond beside common test objects." loading="lazy" width="800" height="558"></div>
+      <figcaption>The Mohs scale with everyday test objects.<span class="credit">National Park Service, public domain.</span></figcaption>
+    </figure>
+  <div class="callout">
+      <h4>Test kit hardness</h4>
+      <ul class="inline">
+        <li>Fingernail: 2.5</li>
+        <li>Copper penny: 3.5</li>
+        <li>Knife / glass plate: 5.5</li>
+        <li>Steel nail: 6.5</li>
+        <li>Masonry drill bit: 8.5</li>
+      </ul>
+      <p class="small">Values from the poster in <a href="#fig-mohs">Figure 3.44</a>.</p>
+    </div>
+  <div class="tablewrap">
+    <table>
+      <caption>The ten Mohs reference minerals.</caption>
+      <thead><tr><th>Hardness</th><th>Mineral</th><th>Hardness</th><th>Mineral</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Talc</td><td>6</td><td>Orthoclase</td></tr>
+        <tr><td>2</td><td>Gypsum</td><td>7</td><td>Quartz</td></tr>
+        <tr><td>3</td><td>Calcite</td><td>8</td><td>Topaz</td></tr>
+        <tr><td>4</td><td>Fluorite</td><td>9</td><td>Corundum</td></tr>
+        <tr><td>5</td><td>Apatite</td><td>10</td><td>Diamond</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s3-5-4">3.5.4 Crystal habit</h3>
+  <p><button class="term" data-term="crystal habit">Crystal habit</button> is how a mineral's crystals typically grow and look. Shapes follow the internal arrangement of atoms (a cubic arrangement gives cubic crystals), but crowding by other minerals can change them:</p>
+  <ul>
+    <li><button class="term" data-term="euhedral">Euhedral</button>: perfectly formed, unconstrained shape with crystal faces (grown freely).</li>
+    <li><button class="term" data-term="subhedral">Subhedral</button>: partially formed shape.</li>
+    <li><button class="term" data-term="anhedral">Anhedral</button>: constrained, so the typical habit did not develop.</li>
+  </ul>
+  <p>Some minerals, like <b>garnet</b>, grow crystal faces even when surrounded by other crystals. Some form crystals too tiny to show a habit to the naked eye. Others, like <b>pyrite</b>, have many habits (cubic, dodecahedral, octahedral, massive).</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Typical crystal habits (from the chapter).</caption>
+      <thead><tr><th>Habit</th><th>Description</th><th>Examples</th></tr></thead>
+      <tbody>
+        <tr><td>Bladed</td><td>Long and flat</td><td>kyanite, amphibole, gypsum</td></tr>
+        <tr><td>Botryoidal / mammillary</td><td>Blobby, circular</td><td>hematite, malachite, smithsonite</td></tr>
+        <tr><td>Coating / laminae / druse</td><td>Small crystals coating surfaces</td><td>quartz, calcite, malachite, azurite</td></tr>
+        <tr><td>Cubic</td><td>Cube-shaped</td><td>pyrite, galena, halite</td></tr>
+        <tr><td>Dodecahedral</td><td>12-sided</td><td>garnet, pyrite</td></tr>
+        <tr><td>Dendritic</td><td>Branching</td><td>Mn-oxides, copper, gold</td></tr>
+        <tr><td>Equant</td><td>No long direction</td><td>olivine, garnet, pyroxene</td></tr>
+        <tr><td>Fibrous</td><td>Thin, very long</td><td>serpentine, amphibole, zeolite</td></tr>
+        <tr><td>Layered / sheets</td><td>Stacked, very thin, flat</td><td>mica (biotite, muscovite)</td></tr>
+        <tr><td>Lenticular / platy</td><td>Plate-like</td><td>selenite roses, wulfenite, calcite</td></tr>
+        <tr><td>Hexagonal</td><td>Six-sided</td><td>quartz, hanksite, corundum</td></tr>
+        <tr><td>Massive / granular</td><td>No obvious shape; microscopic crystals</td><td>limonite, pyrite, azurite, bornite</td></tr>
+        <tr><td>Octahedral</td><td>Four-sided double pyramid</td><td>diamond, fluorite, magnetite, pyrite</td></tr>
+        <tr><td>Prismatic / columnar</td><td>Very long, column-like</td><td>tourmaline, beryl, barite</td></tr>
+        <tr><td>Radiating</td><td>Grow from a point and fan out</td><td>pyrite "suns", pyrophyllite</td></tr>
+        <tr><td>Rhombohedral</td><td>Like slanted cubes</td><td>calcite, dolomite</td></tr>
+        <tr><td>Tabular / blocky / stubby</td><td>Sharp-sided, no long direction</td><td>feldspar, pyroxene, calcite</td></tr>
+        <tr><td>Tetrahedral</td><td>Three-sided pyramids</td><td>magnetite, spinel, tetrahedrite</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure>
+    <div class="frame">
+      <ul class="gallery" style="--cols:4">
+        <li><img src="images/unit3/kyanite.webp" alt="Blue bladed kyanite crystals." loading="lazy" width="768" height="576"><span><b>Bladed</b>kyanite</span></li>
+        <li><img src="images/unit3/malachite.webp" alt="Green malachite with rounded banding." loading="lazy" width="768" height="446"><span><b>Botryoidal</b>malachite</span></li>
+        <li><img src="images/unit3/galena-cubic.webp" alt="Dark gray cubic galena crystals." loading="lazy" width="347" height="400"><span><b>Cubic</b>galena</span></li>
+        <li><img src="images/unit3/pyrite-dodeca.webp" alt="Brassy pyrite crystals with many faces." loading="lazy" width="768" height="499"><span><b>Dodecahedral</b>pyrite</span></li>
+        <li><img src="images/unit3/dendrites.webp" alt="Black branching manganese dendrites on pale rock." loading="lazy" width="768" height="519"><span><b>Dendritic</b>Mn-oxides</span></li>
+        <li><img src="images/unit3/tourmaline.webp" alt="Long green prismatic tourmaline crystal." loading="lazy" width="307" height="650"><span><b>Prismatic</b>tourmaline</span></li>
+        <li><img src="images/unit3/quartz-tibet.webp" alt="Six-sided quartz crystals." loading="lazy" width="768" height="726"><span><b>Hexagonal</b>quartz</span></li>
+        <li><img src="images/unit3/staurolite.webp" alt="Two brown staurolite crystals crossing each other." loading="lazy" width="466" height="501"><span><b>Twinned</b>staurolite</span></li>
+      </ul>
+    </div>
+    <figcaption>Examples of crystal habits from the chapter.<span class="credit">Kyanite: Aelwyn, CC BY-SA. Malachite, pyrite: Didier Descouens, CC BY-SA. Galena, staurolite: Robert M. Lavinsky, CC BY-SA. Dendrites: Wilson44691, public domain. Tourmaline: Rob Lavinsky, CC BY-SA. Quartz: JJ Harrison, CC BY-SA.</span></figcaption>
+  </figure>
+  <p><b>Striations and twinning.</b> <button class="term" data-term="striations">Striations</button> are parallel light and dark lines on a crystal face. <button class="term" data-term="twinning">Twinning</button> happens when the crystal structure repeats in mirror images along certain directions. The two are linked in <b>plagioclase</b>: twinning makes striations on one of its two cleavage faces (Section 3.5.6).</p>
+
+  <h3 id="s3-5-5">3.5.5 Cleavage and fracture</h3>
+  <p><button class="term" data-term="cleavage">Cleavage</button> is the tendency to break along smooth, flat, parallel planes where atomic bonds are weaker in some directions than others. Because they follow atomic layers, cleavage surfaces are optically smooth and reflect light, even when the break looks jagged: they can appear as a series of steps, like <b>rice terraces</b> all catching the sun at one angle, or as parallel cracks into the crystal. <b>Graphite</b> shows why: strong bonds within its carbon layers and very weak bonds between them let it cleave and slide, which makes it a lubricant.</p>
+  <p>Cleavage is given by its <b>quality</b> (perfect, imperfect, or none), the <b>number</b> of directions, and the <b>angles</b> between them. It is one of the most useful identification properties. Do not confuse cleavage planes with crystal faces: breaking a rock to expose a fresh surface usually breaks crystals along cleavage planes, and some cleavage planes are parallel to crystal faces but many are not.</p>
+  <figure>
+    <div class="frame"><svg viewBox="0 0 720 400" role="img" aria-labelledby="clv-t" style="width:100%;min-width:600px;height:auto"><title id="clv-t">Six sketches: one cleavage direction as in mica; two at 90 degrees as in feldspar; two at 60 and 120 degrees as in amphibole; three at 90 degrees forming a cube as in halite; three at about 75 degrees forming a rhomb as in calcite; and curved conchoidal fracture as in quartz.</title><g transform="translate(0,0)"><rect x="6" y="6" width="228" height="188" rx="10" fill="var(--surface-2)"/><g><polygon points="70,112 170,112 190,100 90,100" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><rect x="70" y="112" width="100" height="5" fill="color-mix(in srgb,var(--accent) 45%,var(--surface))"/></g><g><polygon points="70,101 170,101 190,89 90,89" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><rect x="70" y="101" width="100" height="5" fill="color-mix(in srgb,var(--accent) 45%,var(--surface))"/></g><g><polygon points="70,90 170,90 190,78 90,78" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><rect x="70" y="90" width="100" height="5" fill="color-mix(in srgb,var(--accent) 45%,var(--surface))"/></g><g><polygon points="70,79 170,79 190,67 90,67" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><rect x="70" y="79" width="100" height="5" fill="color-mix(in srgb,var(--accent) 45%,var(--surface))"/></g><g><polygon points="70,68 170,68 190,56 90,56" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><rect x="70" y="68" width="100" height="5" fill="color-mix(in srgb,var(--accent) 45%,var(--surface))"/></g><g transform="rotate(-8 80 57)"><polygon points="80,57 180,57 200,45 100,45" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><rect x="80" y="57" width="100" height="5" fill="color-mix(in srgb,var(--accent) 45%,var(--surface))"/></g><text x="120.0" y="164" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">1 direction</text><text x="120.0" y="182" text-anchor="middle" font-size="11.5" class="svg-muted">mica (perfect, splits into sheets)</text></g><g transform="translate(240,0)"><rect x="6" y="6" width="228" height="188" rx="10" fill="var(--surface-2)"/><rect x="80" y="30" width="80" height="100" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><line x1="80" y1="50" x2="160" y2="50" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="80" y1="70" x2="160" y2="70" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="80" y1="90" x2="160" y2="90" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="80" y1="110" x2="160" y2="110" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="100" y1="30" x2="100" y2="130" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="120" y1="30" x2="120" y2="130" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="140" y1="30" x2="140" y2="130" stroke="var(--accent)" stroke-dasharray="3 3"/><path d="M160 118 h-12 v12" fill="none" stroke="var(--rust)" stroke-width="2"/><text x="170" y="138" font-size="12" font-weight="700" fill="var(--rust)">90°</text><text x="120.0" y="164" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">2 directions at 90°</text><text x="120.0" y="182" text-anchor="middle" font-size="11.5" class="svg-muted">feldspar; pyroxene (imperfect)</text></g><g transform="translate(480,0)"><rect x="6" y="6" width="228" height="188" rx="10" fill="var(--surface-2)"/><polygon points="60,130 130,130 165,69.4 95,69.4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><line x1="68.8" y1="114.8" x2="138.8" y2="114.8" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="77.5" y1="130" x2="112.5" y2="69.4" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="77.5" y1="99.7" x2="147.5" y2="99.7" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="95.0" y1="130" x2="130.0" y2="69.4" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="86.2" y1="84.5" x2="156.2" y2="84.5" stroke="var(--accent)" stroke-dasharray="3 3"/><line x1="112.5" y1="130" x2="147.5" y2="69.4" stroke="var(--accent)" stroke-dasharray="3 3"/><path d="M74 130 A14 14 0 0 0 67 117.9" fill="none" stroke="var(--rust)" stroke-width="2"/><text x="40" y="146" font-size="11.5" font-weight="700" fill="var(--rust)">60°</text><path d="M116 130 A14 14 0 0 1 137 117.9" fill="none" stroke="var(--rust)" stroke-width="2"/><text x="122" y="146" font-size="11.5" font-weight="700" fill="var(--rust)">120°</text><text x="120.0" y="164" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">2 directions at 60°/120°</text><text x="120.0" y="182" text-anchor="middle" font-size="11.5" class="svg-muted">amphibole</text></g><g transform="translate(0,200)"><rect x="6" y="6" width="228" height="188" rx="10" fill="var(--surface-2)"/><polygon points="120,34 162,58 120,82 78,58" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><polygon points="78,58 120,82 120,130 78,106" fill="color-mix(in srgb,var(--accent) 30%,var(--surface))" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><polygon points="162,58 120,82 120,130 162,106" fill="color-mix(in srgb,var(--accent) 50%,var(--surface))" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><text x="172" y="60" font-size="12" font-weight="700" fill="var(--rust)">90°</text><text x="120.0" y="164" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">3 directions at 90°</text><text x="120.0" y="182" text-anchor="middle" font-size="11.5" class="svg-muted">halite, galena, pyrite (cubic)</text></g><g transform="translate(240,200)"><rect x="6" y="6" width="228" height="188" rx="10" fill="var(--surface-2)"/><g transform="translate(120,82) skewX(-20) scale(1,.92) translate(-120,-82)"><polygon points="120,34 162,58 120,82 78,58" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><polygon points="78,58 120,82 120,130 78,106" fill="color-mix(in srgb,var(--accent) 30%,var(--surface))" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><polygon points="162,58 120,82 120,130 162,106" fill="color-mix(in srgb,var(--accent) 50%,var(--surface))" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/></g><text x="166" y="60" font-size="12" font-weight="700" fill="var(--rust)">≈75°</text><text x="120.0" y="164" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">3 directions at ≈75°</text><text x="120.0" y="182" text-anchor="middle" font-size="11.5" class="svg-muted">calcite (rhomb)</text></g><g transform="translate(480,200)"><rect x="6" y="6" width="228" height="188" rx="10" fill="var(--surface-2)"/><path d="M60 128 C 60 60, 120 30, 182 56 C 200 90, 170 130, 60 128 z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/><path d="M70 124 q 10.799999999999999 -18 28.8 -9.9" fill="none" stroke="var(--accent)" stroke-width="1.4"/><path d="M74 122 q 20.4 -34 54.400000000000006 -18.700000000000003" fill="none" stroke="var(--accent)" stroke-width="1.4"/><path d="M78 120 q 30.0 -50 80.0 -27.500000000000004" fill="none" stroke="var(--accent)" stroke-width="1.4"/><path d="M82 118 q 39.6 -66 105.60000000000001 -36.300000000000004" fill="none" stroke="var(--accent)" stroke-width="1.4"/><text x="120.0" y="164" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">No cleavage: conchoidal fracture</text><text x="120.0" y="182" text-anchor="middle" font-size="11.5" class="svg-muted">quartz, olivine, obsidian</text></g></svg></div>
+    <figcaption>Cleavage patterns in common rock-forming minerals. Dashed lines are planes of weakness.<span class="credit">Diagram drawn for this guide from Section 3.5.5.</span></figcaption>
+  </figure>
+  <div class="tablewrap">
+    <table>
+      <caption>Cleavage of common rock-forming minerals (from the chapter).</caption>
+      <thead><tr><th>Mineral</th><th>Cleavage</th></tr></thead>
+      <tbody>
+        <tr><td>Quartz</td><td>None (conchoidal fracture)</td></tr>
+        <tr><td>Olivine</td><td>None (conchoidal fracture)</td></tr>
+        <tr><td>Mica</td><td>1 perfect</td></tr>
+        <tr><td>Feldspar</td><td>2 perfect at 90°</td></tr>
+        <tr><td>Pyroxene</td><td>2 imperfect at 90°</td></tr>
+        <tr><td>Amphibole</td><td>2 perfect at 60°/120°</td></tr>
+        <tr><td>Calcite</td><td>3 perfect at approximately 75° (a rhomb: a cube squashed toward one corner)</td></tr>
+        <tr><td>Halite, galena, pyrite</td><td>3 perfect at 90° (cubic)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/galena-cleavage.webp" alt="Galena showing many parallel, stepped, shiny cleavage surfaces." loading="lazy" width="768" height="668"></div>
+      <figcaption>Cubic cleavage of galena: parallel surfaces at different levels.<span class="credit">Modris Baum, public domain.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/amphibole-cleavage.webp" alt="Microscope view of an amphibole grain crossed by two sets of cracks meeting at about 60 and 120 degrees." loading="lazy" width="468" height="476"></div>
+      <figcaption>Photomicrograph of 60°/120° cleavage in an amphibole grain.<span class="credit">Zimbres, CC BY-SA.</span></figcaption>
+    </figure>
+  </div>
+  <p><button class="term" data-term="fracture">Fracture</button> is breakage that does not follow cleavage. It can be uneven (described as irregular, splintery, or fibrous) or <button class="term" data-term="conchoidal fracture">conchoidal</button>: a smooth, curved surface like a shallow bowl or conch shell, often with curved ridges. Quartz and olivine rarely show cleavage and typically break conchoidally, as does volcanic glass, <b>obsidian</b>.</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit3/citrine.webp" alt="A yellow citrine piece with smooth curved fracture surfaces." loading="lazy" width="768" height="576"></div>
+      <figcaption>Conchoidal fracture in citrine, a variety of quartz.<span class="credit">CC BY, via <i>An Introduction to Geology</i>.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit3/graphite.gif" alt="Animated model of graphite: flat hexagonal layers of carbon atoms stacked with gaps between them." loading="lazy" width="452" height="504"></div>
+      <figcaption>Graphite: carbon layers separated by gaps with weak bonds.<span class="credit">Saumitra R Mehrotra &amp; Gerhard Klimeck, CC BY.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s3-5-6">3.5.6 Special properties</h3>
+  <p><button class="term" data-term="special properties">Special properties</button> are distinctive characteristics that identify some minerals or make them useful.</p>
+  <ul>
+    <li><b>Fiber optics:</b> <b>ulexite</b> projects an image through the crystal like a screen.</li>
+    <li><b>Taste:</b> halite (NaCl) is salty; sylvite (KCl) is more bitter.</li>
+    <li><b><button class="term" data-term="specific gravity">Specific gravity</button>:</b> the weight of a specimen relative to an equal volume of water. Weigh it in grams, submerge it in a graduated cylinder, and read the volume of water displaced; since water weighs 1 g/cm³, the ratio gives specific gravity. It is easy in the lab but less useful in the field, except for very dense minerals like <b>galena and gold</b>, which geologists judge by <button class="term" data-term="heft">heft</button>, how heavy a specimen feels for its size.</li>
+    <li><b>Reaction with acid:</b> calcite fizzes in dilute hydrochloric acid; dolomite fizzes only slowly, and only when powdered (<a href="#fig-acid">Figure 3.51</a>). Geologists who work with carbonate rocks carry a dropper bottle of dilute HCl. Vinegar (weaker acetic acid) also works, with less fizzing.</li>
+    <li><b>Magnetism:</b> <b>magnetite (Fe<sub>3</sub>O<sub>4</sub>)</b> is strongly attracted to magnets and can be magnetized; naturally magnetic iron oxide is called <b>lodestone</b>. Ilmenite (FeTiO<sub>3</sub>) and some hematite are weakly magnetic.</li>
+    <li><b><button class="term" data-term="iridescence">Iridescence</button>:</b> light scattering that gives a play of colors, as in labradorite (a variety of plagioclase), opal, pearls, and seashells.</li>
+    <li><b>Striations vs. exsolution lamellae:</b> separate the two feldspars. <b>Plagioclase</b> shows <b>striations</b> on one cleavage face, from twinning (its cleavage angle is slightly off 90°, so twinned zones reflect light at slightly different angles). <b>Potassium feldspar</b> has no striations but may show <button class="term" data-term="exsolution lamellae">exsolution lamellae</button> (perthite): roughly parallel streaks of sodium feldspar (albite) that separated out because Na and K do not fit in the same feldspar structure.</li>
+    <li><b><button class="term" data-term="fluorescence">Fluorescence</button>:</b> some minerals, or trace elements in them, glow in visible light under ultraviolet (black) light (<a href="#fig-fluorite">Figure 3.33</a>). Rarer <b><button class="term" data-term="phosphorescence">phosphorescence</button></b> absorbs light and releases it slowly, like a glow-in-the-dark sticker.</li>
+  </ul>
+  <figure id="fig-acid">
+    <div class="frame"><svg viewBox="0 0 640 200" role="img" aria-labelledby="acid-t" style="width:100%;min-width:560px;height:auto"><title id="acid-t">Flowchart: put dilute hydrochloric acid on the specimen; if it fizzes it is calcite; if not, powder it and test again; slow fizzing on the powder means dolomite.</title><defs><marker id="ah-a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs><rect x="20" y="30" width="180" height="56" rx="10" class="flow-step" style="--d:0s"/><text x="110.0" y="52.0" text-anchor="middle" font-size="12.5" font-weight="700" class="svg-ink">Drop dilute HCl</text><text x="110.0" y="70.0" text-anchor="middle" font-size="11.5" class="svg-muted">(10–15%) on the specimen</text><rect x="250" y="30" width="170" height="56" rx="10" class="flow-step" style="--d:1.5s"/><text x="335.0" y="62.0" text-anchor="middle" font-size="12.5" font-weight="700" class="svg-ink">Fizzes on the surface?</text><rect x="470" y="30" width="150" height="56" rx="10" class="flow-step" style="--d:3s"/><text x="545.0" y="52.0" text-anchor="middle" font-size="12.5" font-weight="700" class="svg-ink">Calcite</text><text x="545.0" y="70.0" text-anchor="middle" font-size="11.5" class="svg-muted">CaCO₃</text><rect x="250" y="130" width="170" height="56" rx="10" class="flow-step" style="--d:3s"/><text x="335.0" y="152.0" text-anchor="middle" font-size="12.5" font-weight="700" class="svg-ink">Scratch to a powder,</text><text x="335.0" y="170.0" text-anchor="middle" font-size="11.5" class="svg-muted">test again</text><rect x="470" y="130" width="150" height="56" rx="10" class="flow-step" style="--d:4.5s"/><text x="545.0" y="152.0" text-anchor="middle" font-size="12.5" font-weight="700" class="svg-ink">Dolomite</text><text x="545.0" y="170.0" text-anchor="middle" font-size="11.5" class="svg-muted">fizzes slowly</text><line x1="200" y1="58" x2="246" y2="58" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#ah-a)"/><line x1="420" y1="58" x2="466" y2="58" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#ah-a)"/><line x1="335" y1="86" x2="335" y2="126" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#ah-a)"/><line x1="420" y1="158" x2="466" y2="158" stroke="var(--muted)" stroke-width="1.6" marker-end="url(#ah-a)"/><text x="443" y="50" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--accent)">yes</text><text x="343" y="110" font-size="11.5" font-weight="700" fill="var(--rust)">no</text></svg></div>
+    <figcaption>The acid test for calcite and dolomite, using dilute hydrochloric acid (10–15% HCl). Watch it in the textbook's video: <a href="https://www.youtube.com/watch?v=DX6ZMPbA09U" target="_blank" rel="noopener">"Calcite and Dolomite Reacting with Hydrochloric Acid" ↗</a>.<span class="credit">Diagram drawn for this guide from Section 3.5.6.</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame">
+      <ul class="gallery" style="--cols:3">
+        <li><img src="images/unit3/ulexite.webp" alt="A ulexite crystal on printed text, showing the words on its top surface." loading="lazy" width="300" height="274"><span><b>Image projection</b>ulexite</span></li>
+        <li><img src="images/unit3/gold.webp" alt="A golden nugget of native gold." loading="lazy" width="600" height="800"><span><b>High specific gravity</b>native gold</span></li>
+        <li><img src="images/unit3/lodestone.webp" alt="Paperclips stuck to a dark rock." loading="lazy" width="768" height="512"><span><b>Magnetism</b>lodestone (magnetite)</span></li>
+        <li><img src="images/unit3/plagioclase-striations.webp" alt="Blue-gray plagioclase with a color sheen and fine parallel lines." loading="lazy" width="768" height="620"><span><b>Iridescence, striations</b>plagioclase</span></li>
+        <li><img src="images/unit3/perthite.webp" alt="Pale feldspar with wavy, roughly parallel streaks." loading="lazy" width="540" height="390"><span><b>Exsolution lamellae</b>potassium feldspar</span></li>
+        <li><img src="images/unit3/wollastonite-steps.webp" alt="White mineral with stepped cleavage surfaces and a coin for scale." loading="lazy" width="360" height="269"><span><b>Cleavage steps</b>wollastonite</span></li>
+      </ul>
+    </div>
+    <figcaption>Special properties, plus stepped cleavage surfaces along a single cleavage direction (wollastonite).<span class="credit">Ulexite: Sec, public domain. Gold: Gump Stump, CC BY-SA. Lodestone: Ryan Somma, CC BY-SA. Plagioclase: Mike Beauregard, CC BY. Perthite: Jstuby, public domain. Wollastonite: public domain.</span></figcaption>
+  </figure>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener">Section 3.5 quiz in the textbook ↗</a></p>
+</section>
+
+<section id="summary">
+  <h2 class="sec">Summary</h2>
+  <p>Minerals are the building blocks of rocks, and their properties are set by their atomic bonds. Most minerals begin in a fluid, either crystallizing from cooling magma or precipitating from a saturated solution. Silicates are the largest group by number of varieties and by quantity, making up much of the crust and mantle; their tetrahedral structure reflects the fact that oxygen and silicon are Earth's two most abundant crustal elements. Non-silicates are economically important for construction and manufacturing materials. Minerals are identified by their physical properties: luster, color, streak, hardness, crystal habit, fracture, cleavage, and special properties.</p>
+  <div class="callout">
+    <h4>Quick recap</h4>
+    <ul>
+      <li>Mineral: naturally occurring, inorganic, solid, crystalline, defined composition; IMA: "formed as a result of geological processes". Coal, pearl, opal, obsidian are mineraloids.</li>
+      <li>Atom: nucleus (protons +, neutrons 0) and electrons (−). Atomic number = protons; atomic mass ≈ protons + neutrons; isotopes differ in neutrons.</li>
+      <li>Octet rule: columns I–II give electrons (cations), VI–VII take them (anions), VIII is inert. Ionic bonds transfer electrons (NaCl); covalent bonds share them (CH<sub>4</sub>).</li>
+      <li>Minerals form from water (precipitation at saturation), from magma (crystallization), and by organisms (calcite, aragonite, silica, apatite).</li>
+      <li>SiO<sub>4</sub> tetrahedron (−4) links as isolated (olivine) → single chains (pyroxene) → double chains (amphibole) → sheets (mica, clay) → frameworks (quartz, feldspar).</li>
+      <li>Solid solutions: olivine (forsterite–fayalite), plagioclase (albite–anorthite). Size matters more than charge.</li>
+      <li>Non-silicates: carbonates, oxides, halides, sulfides, sulfates, phosphates, native elements; many are ores.</li>
+      <li>Identification: luster, color, streak, hardness (Mohs 1–10), habit, cleavage/fracture, special properties (acid, magnetism, taste, specific gravity, fluorescence...).</li>
+    </ul>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener">Chapter 3 review quiz in the textbook ↗</a></p>
+</section>
+
+<section id="resources">
+  <h2 class="sec">Resources</h2>
+  <div class="res">
+    <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener"><b>Chapter 3 (textbook) ↗</b><span>The full chapter, with interactive section quizzes and all original figures.</span></a>
+    <a href="https://slcc.pressbooks.pub/introgeology/back-matter/glossary-test/" target="_blank" rel="noopener"><b>Textbook glossary ↗</b><span>Definitions for every bolded term in the book.</span></a>
+    <a href="https://www.youtube.com/watch?v=DX6ZMPbA09U" target="_blank" rel="noopener"><b>"Calcite and Dolomite Reacting with Hydrochloric Acid" ↗</b><span>The acid-test video from Section 3.5.6 of the chapter.</span></a>
+    <a href="https://www.mindat.org/" target="_blank" rel="noopener"><b>Mindat.org ↗</b><span>Hudson Institute of Mineralogy's free mineral database: properties, photos, and localities for every recognized mineral.</span></a>
+    <a href="https://www.usgs.gov/programs/mineral-resources-program" target="_blank" rel="noopener"><b>USGS Mineral Resources Program ↗</b><span>The U.S. Geological Survey's research and data on minerals and ores (Chapter 16 returns to mineral resources).</span></a>
+    <a href="https://ptable.com/" target="_blank" rel="noopener"><b>Ptable: interactive periodic table ↗</b><span>Click any element for its atomic number, mass, isotopes, and electron shells.</span></a>
+  </div>
+</section>
+
+<section id="factcheck">
+  <h2 class="sec">Fact-check notes</h2>
+  <p>Every statement in this guide was checked against the textbook chapter. Where the chapter differs from current references or contradicts itself, the guide keeps the chapter's value (that is what you will be tested on) unless noted, and lists the difference here.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Values that differ from current references or within the chapter.</caption>
+      <thead><tr><th>Topic</th><th>Chapter says</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Mohs scale</td><td>Developed by "Fredrick Mohs in the early 20th century"</td><td>Friedrich Mohs (1773–1839) introduced the scale in 1812, the early <i>19th</i> century (<a href="https://www.britannica.com/science/Mohs-hardness" target="_blank" rel="noopener">Britannica, "Mohs hardness"</a>). The guide gives only his name.</td></tr>
+        <tr><td>Mineral definition</td><td>IMA amended the definition "in 1985"</td><td>The quoted wording comes from E.H. Nickel's 1995 paper "The definition of a mineral" (<i>Canadian Mineralogist</i> 33: 689–690), the IMA commission's standard. The guide gives no year.</td></tr>
+        <tr><td>Transition elements</td><td>"Columns 3 through 15"</td><td>Chemistry references usually define the transition elements as columns 3–12 (the d-block). <a href="#fig-ptable">Figure 3.3</a> colors 3–12 as transition and 13–15 as mostly covalent, which matches the chapter's other statement that columns 3–15 usually bond covalently.</td></tr>
+        <tr><td>Mafic</td><td>"A contraction of their chemical symbols Ma and Fe"</td><td>Mafic comes from <b>ma</b>gnesium + <b>f</b>erric (iron); magnesium's symbol is Mg.</td></tr>
+        <tr><td>Inosilicates</td><td>Introduced under amphiboles only</td><td>Both single-chain (pyroxene) and double-chain (amphibole) silicates are inosilicates. <a href="#fig-silicates">Figure 3.12</a> labels amphiboles as in the chapter.</td></tr>
+        <tr><td>Heaviest natural element</td><td>Uranium (92)</td><td>Correct as a common rule; trace plutonium also forms naturally in uranium ores.</td></tr>
+        <tr><td>Diamond iridescence</td><td>"Cut diamonds show iridescence"</td><td>Gemologists call a cut diamond's rainbow flashes <i>dispersion</i> ("fire"). The guide leaves diamonds out of the iridescence list.</td></tr>
+        <tr><td>Naica crystal</td><td>"39 feet (12 meters) and 55 tones"</td><td>"Tones" is a typo for tons. The guide gives only the length.</td></tr>
+        <tr><td>Typos in formulas</td><td>"CaSo<sub>4</sub>·2H<sub>2</sub>O"; "baslt"</td><td>Corrected to CaSO<sub>4</sub>·2H<sub>2</sub>O and basalt.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">The chapter calls hematite's massive, botryoidal, specular, and oolitic forms "polymorphs". Polymorphs normally means different crystal <i>structures</i> (like calcite and aragonite); hematite's forms are different habits of the same structure. Hydroxycarbonate apatite is written in the chapter as Ca<sub>5</sub>(PO<sub>4</sub>)<sub>3</sub>(OH), the formula of hydroxylapatite; the guide does not give a formula.</p>
+</section>
+
+<section id="credits">
+  <h2 class="sec">Credits</h2>
+  <p class="small">Content summarized from <a href="https://slcc.pressbooks.pub/introgeology/chapter/3-minerals/" target="_blank" rel="noopener"><i>An Introduction to Geology</i>, Chapter 3</a>, © 2017 Chris Johnson, Matthew D. Affolter, Paul Inkenbrandt, and Cam Mosher, licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. This guide is shared under the same license. Images are from the chapter and keep their own licenses, listed in each caption:</p>
+  <ul class="small">
+    <li>CC BY / CC BY-SA / CC0: as credited in each figure caption.</li>
+    <li>Public domain: U.S. government works (USGS, NASA, National Park Service) and others as marked.</li>
+    <li>Atom, periodic table, tetrahedron, silicate structures, solid-solution bars, cleavage sketches, and acid-test flowchart: drawn for this guide from the chapter text.</li>
+    <li>Images marked "All Rights Reserved" or without a license in the chapter (electron cloud model, element and mineral abundance pie charts, ping-pong tetrahedron models, mica "sandwich", feldspar structure, rotating tetrahedron, ammonite, biotite, periodic table) are not reproduced.</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<button class="fab" id="notesBtn" type="button" aria-controls="notes" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Key terms
+</button>
+<button class="fab hide" id="toTop" type="button" aria-label="Return to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<aside class="notes" id="notes" hidden aria-label="Key terms">
+  <header>
+    <div><h2>Key terms · Chapter 3</h2><button class="close" id="notesClose" type="button" aria-label="Close key terms">×</button></div>
+    <input id="termSearch" type="search" placeholder="Search terms and definitions" autocomplete="off" aria-label="Search key terms">
+    <div class="count" id="termCount"></div>
+  </header>
+  <dl id="termList"></dl>
+</aside>
+</div>
+
+<script type="application/json" id="terms">
+[
+ ["mineral","s3-0","Naturally occurring, inorganic, solid, crystalline substance with a defined chemical composition. IMA: an element or compound, normally crystalline, formed as a result of geological processes."],
+ ["diagenesis","s3-0","Changes to sediment after burial; once a clam shell undergoes diagenesis, its calcite counts as a mineral."],
+ ["mineraloid","s3-0","Natural substance that does not fit the mineral definition, e.g. coal, pearl, opal, obsidian."],
+ ["rock","s3-0","A substance containing one or more minerals or mineraloids; igneous, sedimentary, or metamorphic."],
+ ["nucleus","s3-1-1","The atom's center, holding protons and neutrons and almost all of its mass."],
+ ["proton","s3-1-1","Positively charged particle in the nucleus; mass number 1. Their number is the atomic number."],
+ ["neutron","s3-1-1","Uncharged particle in the nucleus; mass number 1."],
+ ["electron","s3-1-1","Negatively charged particle around the nucleus, less than 1/1000th the mass of a proton."],
+ ["element","s3-1-2","A kind of atom with a specific number of protons; cannot be broken down chemically into simpler forms."],
+ ["atomic number","s3-1-2","The number of protons in an atom's nucleus (oxygen 8, iron 26)."],
+ ["periodic table","s3-1-2","Table of all known elements in order of atomic number, with similar elements in columns; first made by Mendeleev in 1869."],
+ ["atomic mass","s3-1-2","Number of protons plus neutrons; on the periodic table, an average over the element's isotopes."],
+ ["isotope","s3-1-2","Forms of an element with the same number of protons but different numbers of neutrons, e.g. carbon-12, -13, -14."],
+ ["compound","s3-1-3","A substance made of more than one element joined by chemical bonds."],
+ ["chemical bonding","s3-1-3","How atoms attach to each other to form compounds."],
+ ["molecule","s3-1-3","Compound held together by chemical bonds, e.g. H2O, O2."],
+ ["molecular ion","s3-1-3","A covalently bonded group of atoms with an overall charge, e.g. carbonate CO3(2−)."],
+ ["valence shell","s3-1-3","The outermost electron shell; its electrons take part in bonding."],
+ ["octet rule","s3-1-3","Atoms are most stable with 8 electrons in the valence shell (2 when the first shell is the valence shell)."],
+ ["noble gas","s3-1-3","Column VIII (18) elements with full valence shells; chemically inert."],
+ ["ion","s3-1-3","An atom with a net charge from gaining or losing electrons."],
+ ["cation","s3-1-3","Positive ion (lost electrons); attracted to the cathode. Elements on the left of the periodic table."],
+ ["anion","s3-1-3","Negative ion (gained electrons); attracted to the anode. Elements on the right of the periodic table."],
+ ["transition element","s3-1-3","Elements in the center of the periodic table that do not consistently follow the octet rule, e.g. iron (Fe2+ or Fe3+)."],
+ ["ionic bond","s3-1-3","Electron-transfer bond: electrostatic attraction between oppositely charged ions, usually a metal and a nonmetal (NaCl)."],
+ ["covalent bond","s3-1-3","Electron-sharing bond, commonly between nonmetals (O2, CH4)."],
+ ["solution","s3-2-1","Ions or molecules (solutes) dissolved in a solvent, usually water in nature."],
+ ["solute","s3-2-1","The ions or molecules dissolved in a solution."],
+ ["solvent","s3-2-1","The medium that dissolves solutes; in nature usually water."],
+ ["precipitation","s3-2-1","Ions in solution coming together to form solid minerals; the reverse of dissolving."],
+ ["saturation","s3-2-1","The point at which a solvent cannot hold any more solute."],
+ ["tufa","s3-2-1","Porous rock precipitated from mineral-rich springs, e.g. around ice-age Lake Bonneville in Utah."],
+ ["magma","s3-2-2","Molten rock with freely moving ions."],
+ ["lava","s3-2-2","Magma extruded onto Earth's surface."],
+ ["polymorph","s3-2-3","Minerals with the same chemical formula but different crystal structures, e.g. calcite and aragonite."],
+ ["silicate mineral","s3-3","Mineral built around the silicon-oxygen tetrahedron; the largest mineral group, making up most of the crust and mantle."],
+ ["rock-forming minerals","s3-3","The few common minerals that make up most rocks at Earth's surface."],
+ ["silicon-oxygen tetrahedron","s3-3","SiO4 unit: one silicon (+4) inside four oxygens (−2) in a four-sided pyramid; net charge −4."],
+ ["polymer","s3-3","Chains, sheets, or 3-D structures of tetrahedra covalently bonded through corner oxygens."],
+ ["solid solution","s3-3-1","Two or more elements of similar size and properties substituting freely in the same crystal site, e.g. Fe and Mg in olivine."],
+ ["end member","s3-3-1","Pure composition at one end of a solid solution series, e.g. forsterite (Mg) and fayalite (Fe)."],
+ ["ferromagnesian","s3-3-1","Rich in iron (ferro) and magnesium; dark, dense silicates such as olivine, pyroxene, amphibole, biotite."],
+ ["mafic","s3-3-1","Another word for dark ferromagnesian minerals and rocks (magnesium + ferric)."],
+ ["neosilicate","s3-3-1","Silicate of independent tetrahedra (orthosilicate): olivine, garnet, topaz, kyanite, zircon."],
+ ["sorosilicate","s3-3-1","Silicate in which two tetrahedra share one oxygen, e.g. epidote."],
+ ["cyclosilicate","s3-3-1","Silicate made of rings of tetrahedra, e.g. beryl, emerald, aquamarine, tourmaline."],
+ ["pyroxene","s3-3-2","Dark ferromagnesian single-chain silicates (two corners shared), e.g. augite; general formula XZ(Al,Si)2O6."],
+ ["amphibole","s3-3-3","Double-chain silicates, usually long-bladed; hornblende is the most common. May contain OH−."],
+ ["inosilicate","s3-3-3","Chain silicate; the chapter applies the name to amphiboles (it covers pyroxenes too)."],
+ ["sheet silicate","s3-3-4","Silicate whose tetrahedra share three corners to form sheets; Si:O = 2:5. Micas and clays."],
+ ["phyllosilicate","s3-3-4","Another name for sheet silicates."],
+ ["mica","s3-3-4","Sheet silicates of mostly silica, aluminum, and potassium (biotite, muscovite) that split into thin sheets."],
+ ["felsic","s3-3-4","Rich in silica (from feldspar + silica); light-colored minerals and rocks such as quartz, orthoclase, muscovite."],
+ ["Van der Waals bond","s3-3-4","Weak attraction between atoms, molecules, and surfaces; holds mica sheets together, so mica splits easily."],
+ ["clay minerals","s3-3-4","Hydrous aluminum sheet silicates formed by weathering, e.g. kaolinite."],
+ ["framework silicate","s3-3-5","Silicate in which all four corner oxygens are shared in a 3-D framework: quartz, feldspars."],
+ ["tectosilicate","s3-3-5","Another name for framework silicates; also includes feldspathoids and zeolites."],
+ ["detrital sedimentary rock","s3-3-5","Rock made of mechanically weathered particles such as sand and gravel."],
+ ["orthoclase","s3-3-5","Potassium feldspar (K-spar), KAlSi3O8; felsic."],
+ ["plagioclase","s3-3-5","Feldspar solid solution (Ca,Na)AlSi3O8 from albite (Na) to anorthite (Ca); shows striations."],
+ ["non-silicate mineral","s3-4","Mineral without silica tetrahedra; many are ores and industrial materials."],
+ ["carbonate","s3-4-1","Mineral built around the carbonate ion CO3(2−), e.g. calcite and dolomite."],
+ ["lithification","s3-4-1","Turning sediment into rock; limestone forms by lithification of fossil shells."],
+ ["salt","s3-4-1","Compound made by replacing the hydrogen in a natural acid, e.g. calcite, halite, gypsum."],
+ ["evaporite","s3-4-1","Salt mineral formed by evaporation, e.g. halite, gypsum."],
+ ["birefringence","s3-4-1","Splitting of light into two polarized rays at different speeds, giving a double image (calcite)."],
+ ["oxide","s3-4-2","Metal ions bonded with oxygen, e.g. hematite, magnetite, corundum, ice."],
+ ["halide","s3-4-2","Halogen (usually F or Cl) ionically bonded to a cation: halite, sylvite, fluorite."],
+ ["sulfide","s3-4-2","Metal bonded to sulfur; important ores: galena, sphalerite, pyrite, chalcopyrite."],
+ ["ore","s3-4-2","A mineral mined as a source of a metal, e.g. galena for lead."],
+ ["sulfate","s3-4-3","Metal ion bonded to the sulfate ion SO4(2−), e.g. gypsum, anhydrite."],
+ ["phosphate","s3-4-4","Mineral with the tetrahedral PO4(3−) unit, e.g. apatite, turquoise."],
+ ["native element","s3-4-5","Element found pure or nearly pure in nature, e.g. gold, copper, sulfur, graphite, diamond."],
+ ["luster","s3-5-1","How a mineral's surface looks: metallic, submetallic, or nonmetallic (vitreous, earthy, silky, pearly)."],
+ ["streak","s3-5-2","Color of a mineral's powder on a streak plate; more reliable than surface color."],
+ ["hardness","s3-5-3","A mineral's ability to scratch other substances; depends on bond strength."],
+ ["Mohs hardness scale","s3-5-3","Relative scratch-resistance scale from 1 (talc) to 10 (diamond); not linear."],
+ ["crystal habit","s3-5-4","The typical shape in which a mineral's crystals grow, e.g. cubic, bladed, prismatic."],
+ ["euhedral","s3-5-4","Crystal with a perfectly formed, unconstrained shape and crystal faces."],
+ ["subhedral","s3-5-4","Crystal with a partially formed shape."],
+ ["anhedral","s3-5-4","Crystal constrained by its surroundings, without its typical habit."],
+ ["striations","s3-5-4","Parallel light and dark lines on a crystal face; on plagioclase they come from twinning."],
+ ["twinning","s3-5-4","Crystal structure repeating in mirror images along certain directions, e.g. staurolite, plagioclase."],
+ ["cleavage","s3-5-5","Breaking along smooth, flat, parallel planes of weaker bonds; described by quality, number, and angles."],
+ ["fracture","s3-5-5","Breakage not along cleavage planes: irregular, splintery, fibrous, or conchoidal."],
+ ["conchoidal fracture","s3-5-5","Smooth, curved, shell-like fracture, e.g. quartz, olivine, obsidian."],
+ ["special properties","s3-5-6","Distinctive traits such as taste, magnetism, acid reaction, fluorescence, or image projection."],
+ ["specific gravity","s3-5-6","Weight of a specimen relative to the weight of an equal volume of water."],
+ ["heft","s3-5-6","How heavy a specimen feels for its size; a rough field estimate of specific gravity."],
+ ["iridescence","s3-5-6","Play of colors from light scattering, e.g. labradorite, opal, pearls."],
+ ["exsolution lamellae","s3-5-6","Parallel streaks of albite in potassium feldspar (perthite), formed because Na and K do not share one structure."],
+ ["fluorescence","s3-5-6","Giving off visible light under ultraviolet (black) light."],
+ ["phosphorescence","s3-5-6","Absorbing light and releasing it slowly, like a glow-in-the-dark sticker."]
+]
+</script>
+<script src="assets/guide.js"></script>
+</body>
+</html>
