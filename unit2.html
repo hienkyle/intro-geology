@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plate Tectonics</title>
+<meta name="description" content="Unit 2 study guide for An Introduction to Geology, Chapter 2: Plate Tectonics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/guide.css">
+<style>
+/* Unit 2 palette: deep-ocean blue (the seafloor where plates are born) with molten-mantle orange; header bands run crust to core. */
+:root{
+  --fig-prefix:"Figure 2."; --tbl-prefix:"Table 2.";
+  --bg:#f3f5f9; --surface:#ffffff; --surface-2:#e6ebf3; --fg:#172031; --muted:#525d72; --line:#cbd3e1;
+  --accent:#1f4f91; --accent-soft:#dbe6f6; --ochre:#b8551a; --ochre-soft:#f8e2d2; --rust:#a8321f;
+  --s1:#d9b77a; --s2:#c97b3c; --s3:#9a3b23; --s4:#4a2a3a; --s5:#1b2238;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1420; --surface:#161c2b; --surface-2:#1f2738; --fg:#e3e7ef; --muted:#9ba4b6; --line:#2f3a50;
+  --accent:#74a6ea; --accent-soft:#1c2c48; --ochre:#f0915a; --ochre-soft:#3d2618; --rust:#ef7b6b;
+  --s1:#8c7448; --s2:#85512b; --s3:#6a2a1a; --s4:#33202b; --s5:#141a2b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1420; --surface:#161c2b; --surface-2:#1f2738; --fg:#e3e7ef; --muted:#9ba4b6; --line:#2f3a50;
+  --accent:#74a6ea; --accent-soft:#1c2c48; --ochre:#f0915a; --ochre-soft:#3d2618; --rust:#ef7b6b;
+  --s1:#8c7448; --s2:#85512b; --s3:#6a2a1a; --s4:#33202b; --s5:#141a2b; color-scheme:dark}
+</style>
+</head>
+<body>
+<div lang="en">
+<header class="hero" id="top">
+  <div class="strata" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Unit 2 · Chapter 2 · An Introduction to Geology</div>
+      <h1>Plate Tectonics</h1>
+      <p>How Wegener's continental drift grew into geology's unifying theory, what Earth's layers are, and how plates meeting, splitting, and sliding past each other build mountains and cause earthquakes and volcanoes.</p>
+    </div>
+    <div class="hero-tools">
+      <a class="btn" href="unit2-vi.html" lang="vi" hreflang="vi">Tiếng Việt</a>
+      <button class="btn" id="themeBtn" type="button" aria-label="Toggle light or dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Dark mode</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#outcomes">Learning outcomes</a></li>
+      <li><a href="#s2-0"><span class="num">2.0</span>A revolution in geology</a></li>
+      <li><a href="#s2-1"><span class="num">2.1</span>Continental drift</a>
+        <ol>
+          <li><a href="#s2-1-1"><span class="num">2.1.1</span>Early evidence</a></li>
+          <li><a href="#s2-1-2"><span class="num">2.1.2</span>Missing mechanism</a></li>
+          <li><a href="#s2-1-3"><span class="num">2.1.3</span>Drift to plate tectonics</a></li>
+        </ol>
+      </li>
+      <li><a href="#s2-2"><span class="num">2.2</span>Layers of the Earth</a>
+        <ol>
+          <li><a href="#s2-2-1"><span class="num">2.2.1</span>Chemical layers</a></li>
+          <li><a href="#s2-2-2"><span class="num">2.2.2</span>Physical layers</a></li>
+          <li><a href="#s2-2-3"><span class="num">2.2.3</span>Plate boundaries</a></li>
+        </ol>
+      </li>
+      <li><a href="#s2-3"><span class="num">2.3</span>Convergent boundaries</a>
+        <ol>
+          <li><a href="#s2-3-1"><span class="num">2.3.1</span>Subduction</a></li>
+          <li><a href="#s2-3-2"><span class="num">2.3.2</span>Collisions</a></li>
+        </ol>
+      </li>
+      <li><a href="#s2-4"><span class="num">2.4</span>Divergent boundaries</a>
+        <ol>
+          <li><a href="#s2-4-1"><span class="num">2.4.1</span>Continental rifting</a></li>
+          <li><a href="#s2-4-2"><span class="num">2.4.2</span>Mid-ocean ridges</a></li>
+        </ol>
+      </li>
+      <li><a href="#s2-5"><span class="num">2.5</span>Transform boundaries</a>
+        <ol>
+          <li><a href="#s2-5-1"><span class="num">2.5.1</span>Transpression &amp; transtension</a></li>
+          <li><a href="#s2-5-2"><span class="num">2.5.2</span>Piercing points</a></li>
+        </ol>
+      </li>
+      <li><a href="#s2-6"><span class="num">2.6</span>The Wilson Cycle</a></li>
+      <li><a href="#s2-7"><span class="num">2.7</span>Hotspots</a>
+        <ol>
+          <li><a href="#s2-7-1"><span class="num">2.7.1</span>Hawaii</a></li>
+          <li><a href="#s2-7-2"><span class="num">2.7.2</span>Yellowstone</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#factcheck">Fact-check notes</a></li>
+      <li><a href="#credits">Credits</a></li>
+    </ol>
+  </nav>
+
+<main>
+
+<section id="outcomes">
+  <h2 class="sec">Learning outcomes</h2>
+  <p class="lead">By the end of Chapter 2 you should be able to do each of these. The tag shows where it is covered.</p>
+  <ul class="outcomes">
+    <li><a class="tag" href="#s2-1">2.1</a><span>Describe how the ideas behind plate tectonics started with Alfred Wegener's hypothesis of continental drift.</span></li>
+    <li><a class="tag" href="#s2-2">2.2</a><span>Describe the physical and chemical layers of the Earth and how they affect plate movement.</span></li>
+    <li><a class="tag" href="#s2-2-3">2.2.3</a><span>Explain how movement at the three types of plate boundaries causes earthquakes, volcanoes, and mountain building.</span></li>
+    <li><a class="tag" href="#s2-3">2.3</a><span>Identify convergent boundaries, including subduction and collisions, as places where plates come together.</span></li>
+    <li><a class="tag" href="#s2-4">2.4</a><span>Identify divergent boundaries, including rifts and mid-ocean ridges, as places where plates separate.</span></li>
+    <li><a class="tag" href="#s2-5">2.5</a><span>Explain transform boundaries as places where adjacent plates shear past each other.</span></li>
+    <li><a class="tag" href="#s2-6">2.6</a><span>Describe the Wilson Cycle: continental rifting, ocean basin creation, plate subduction, and ocean basin closure.</span></li>
+    <li><a class="tag" href="#s2-7">2.7</a><span>Explain how the tracks of hotspots (places with continually rising magma) are used to calculate plate motion.</span></li>
+  </ul>
+  <div class="callout">
+    <h4>How to use this guide</h4>
+    <p>Underlined words are key terms. Click one, or open <b>Key terms</b> at the bottom right, to read and search every definition from this chapter. The animated diagrams stop moving if your device is set to reduce motion.</p>
+  </div>
+</section>
+
+<!-- Intro -->
+<section id="s2-0">
+  <h2 class="sec"><span class="n">2.0</span>A revolution in geology</h2>
+  <p>Some ideas force scientists to re-examine an entire field, a <button class="term" data-term="paradigm shift">paradigm shift</button>. Biology had Darwin's <i>On the Origin of Species</i> (1859), Mendel's genetics (1866), and the structure of DNA by Watson, Crick, and Franklin (1953); physics had Einstein's relativity and quantum mechanics. For geology, the revolution was <button class="term" data-term="plate tectonics">plate tectonics</button>: the theory that the movement of massive sections of Earth's outer layers creates earthquakes, mountains, and volcanoes. Many Earth processes make more sense through this lens, which is why the textbook covers it first.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/plate-map.webp" alt="World map showing all known tectonic plates, the type of each boundary, and the direction the plates move." loading="lazy" width="1200" height="603"></div>
+    <figcaption>Detailed map of all known plates, their boundaries, and movements. Open the image in a new tab to zoom in.<span class="credit">Eric Gaba (Sting), CC BY-SA, via <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+</section>
+
+<!-- 2.1 -->
+<section id="s2-1">
+  <h2 class="sec"><span class="n">2.1</span>Alfred Wegener's continental drift hypothesis</h2>
+  <p>Alfred Wegener (1880–1930) was a German scientist who specialized in meteorology and climatology. In 1910 he disagreed with the accepted explanation that the Bering Land Bridge formed by <button class="term" data-term="isostasy">isostasy</button> and that similar land bridges once connected the continents. After reviewing the literature, he published the hypothesis of <button class="term" data-term="continental drift">continental drift</button>: the continents were originally connected and then drifted apart. He did not have a precise mechanism, but he backed the idea with a long list of evidence.</p>
+
+  <h3 id="s2-1-1">2.1.1 Early evidence for continental drift</h3>
+  <p><b>Fit of the continents.</b> People noticed that the coastlines of South America and Africa match on the first world maps, and Antonio Snider-Pellegrini did early work on continental separation and matching fossils in 1858. What Wegener did differently was <b>synthesize a large amount of data in one place</b>, and he fitted the true edges of the continents, the <button class="term" data-term="continental shelf">continental shelves</button>, instead of today's coastlines. This gave a better fit.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/snider-pellegrini.webp" alt="Two globes side by side: one with the Americas joined to Europe and Africa, one with them separated by the Atlantic." loading="lazy" width="640" height="377"></div>
+    <figcaption>Snider-Pellegrini's 1858 map showing the continents fitted together ("avant") and separated ("après").<span class="credit">Antonio Snider-Pellegrini. Public domain.</span></figcaption>
+  </figure>
+  <p><b>Fossils, rocks, and mountains.</b> Wegener compared similar rocks, mountains, fossils, and glacial formations across oceans. Fossils of <i>Mesosaurus</i>, a primitive aquatic reptile, occur on the coasts of both Africa and South America. Fossils of the reptile <i>Lystrosaurus</i> are found in Africa, India, and Antarctica. These were land-dwelling creatures that could not have swum across an ocean.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/fossil-map.webp" alt="Map of the southern continents fitted together, with colored bands showing where fossils of Cynognathus, Mesosaurus, Lystrosaurus, and Glossopteris are found across them." loading="lazy" width="900" height="692"></div>
+    <figcaption>Fossils that connect the continents of Gondwana (the southern continents of Pangea). Each fossil's range forms a continuous band once the continents are fitted together.<span class="credit">Osvaldocangaspadilla. Public domain.</span></figcaption>
+  </figure>
+  <p><b>The land-bridge objection.</b> Opponents said trans-oceanic <button class="term" data-term="land bridge">land bridges</button> let plants and animals cross, then eroded away. The problem: a land bridge tall and long enough to span a broad, deep ocean is improbable.</p>
+  <p><b>Climate evidence.</b> Glaciers once existed in normally very warm areas (southern Africa, India, Australia, Arabia), and Wegener found tropical plant fossils inside the Arctic Circle. Land bridges cannot explain these climate anomalies. Moving continents best fit all the climate, rock, and fossil observations.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Wegener's lines of evidence for continental drift.</caption>
+      <thead><tr><th>Evidence</th><th>Observation</th><th>Why drift explains it</th></tr></thead>
+      <tbody>
+        <tr><td>Continental fit</td><td>South America and Africa match, best along the continental shelves.</td><td>They were once one landmass.</td></tr>
+        <tr><td>Fossils</td><td><i>Mesosaurus</i> in Africa and South America; <i>Lystrosaurus</i> in Africa, India, Antarctica.</td><td>Land animals could not swim across oceans.</td></tr>
+        <tr><td>Rocks and mountains</td><td>Similar rocks and mountain belts on opposite sides of oceans.</td><td>The belts were continuous before the split.</td></tr>
+        <tr><td>Climate (glacial)</td><td>Glacial deposits in warm southern Africa, India, Australia, Arabia.</td><td>These lands were once near the pole.</td></tr>
+        <tr><td>Climate (tropical)</td><td>Tropical plant fossils in the Arctic Circle.</td><td>That land was once in a warm climate.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s2-1-2">2.1.2 The missing mechanism</h3>
+  <p>Wegener's idea was treated as fringe science for his whole life. Its biggest flaw was that it gave <b>no credible mechanism</b> for how continents move, and changing the conservative scientific community needed exceptional evidence. Other supporters invoked Earth's expansion, contraction, or even the Moon's origin. Wegener used centrifugal forces and <button class="term" data-term="precession">precession</button>, a model later proven wrong. He also speculated about seafloor spreading with hints of convection but could not substantiate it. Today we know <button class="term" data-term="convection">convection</button>, along with gravity and density, is one of the major forces driving plates.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/convection.gif" alt="Animation of a fluid heated from one side: material rises over the heat source, spreads across the top, cools, and sinks away from the heat." loading="lazy" width="400" height="300"></div>
+    <figcaption>The basic idea of convection: an uneven heat source in a fluid makes material rise next to the heat and sink far from it.<span class="credit">Oni Lukos, CC BY-SA, via <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+
+  <h3 id="s2-1-3">2.1.3 From continental drift to plate tectonic theory</h3>
+  <p>Wegener died in 1930 on an expedition in Greenland. In the 1950s new evidence began to arrive, and by the 1960s scientists had found the missing mechanism, <button class="term" data-term="seafloor spreading">seafloor spreading</button>, so continental drift was accepted as the <b>theory of plate tectonics</b>. Ongoing GPS and earthquake data still support it.</p>
+  <figure>
+    <div class="frame">
+      <ul class="timeline">
+        <li><time>1858</time><span>Snider-Pellegrini maps the continents fitted together.</span></li>
+        <li><time>1910</time><span>Wegener questions the land-bridge explanation and begins building his drift hypothesis.</span></li>
+        <li><time>1930</time><span>Wegener dies in Greenland; drift is still fringe science.</span></li>
+        <li class="geo"><time>1947</time><span>SONAR mapping of the mid-Atlantic begins; Heezen and Tharp map the Mid-Atlantic Ridge.</span></li>
+        <li><time>1959</time><span>Harry Hess proposes seafloor spreading.</span></li>
+        <li class="geo"><time>1963</time><span>Magnetic reversal stripes are used to support seafloor spreading.</span></li>
+        <li><time>1960s</time><span>Enough evidence: drift is accepted as plate tectonics. J. Tuzo Wilson ties it together.</span></li>
+      </ul>
+      <div class="legend"><span><i></i>Ideas and people</span><span><i class="geo"></i>Key seafloor evidence</span></div>
+    </div>
+    <figcaption>Timeline from continental drift to plate tectonics, using the dates given in the chapter.<span class="credit">Drawn for this guide from Section 2.1.</span></figcaption>
+  </figure>
+
+  <h4>Mapping the ocean floors</h4>
+  <p>From 1947, researchers used an adaptation of <button class="term" data-term="SONAR">SONAR</button> to map the middle of the Atlantic. Bruce Heezen and Marie Tharp made the first detailed ocean-floor map, revealing the <button class="term" data-term="mid-ocean ridge">Mid-Atlantic Ridge</button>: a basaltic mountain range running the length of the Atlantic, with rock chemistry and dimensions unlike continental mountains. In 1959 Harry Hess proposed seafloor spreading: mid-ocean ridges are "plate factories" where new oceanic plate issues from long volcanic ridges. Transform faults perpendicular to the ridges were later added to explain different rates of movement, and earthquake epicenters along the ridges linked earthquakes to plate motion.</p>
+  <p><b>Seafloor sediment</b> gave another clue. Sediment was thinner than expected, and the thinnest layers were close to the ridges. That means the ridges are younger than the surrounding seafloor, so the seafloor is not fixed in place.</p>
+
+  <h4>Paleomagnetism</h4>
+  <p><button class="term" data-term="paleomagnetism">Paleomagnetism</button> is the study of magnetic fields frozen in rocks, basically a fossilized compass, and it gave the <b>first hard evidence</b> for plate motion. Igneous rocks with magnetic minerals such as <button class="term" data-term="magnetite">magnetite</button> are most useful: while the rock is liquid (magma or lava), the minerals align with Earth's magnetic field; when it cools, the alignment is frozen in. The record includes <button class="term" data-term="magnetic inclination">inclination</button> (related to latitude) and <button class="term" data-term="magnetic declination">declination</button> (related to magnetic north).</p>
+  <p>Scientists had long seen <b>striped magnetic anomalies</b> in symmetrical rows on both sides of mid-ocean ridges, with polarity reversed in alternating rows. By 1963 Hess and others used these reversals to support seafloor spreading (see also Lawrence W. Morley; details in <a href="#s2-4-2">Section 2.4.2</a>). Rock magnetism on land also pointed far from today's magnetic north; adding continental movement explained the data better than pole movement alone.</p>
+
+  <h4>Wadati-Benioff zones</h4>
+  <p>Other researchers linked ocean trenches and island arcs to earthquakes. Earthquake epicenters traced the shapes of oceanic plates sinking into the mantle, in planes that start near trenches and angle beneath continents and island arcs. These deep earthquake zones are called <button class="term" data-term="Wadati-Benioff zone">Wadati-Benioff zones</button>.</p>
+  <div class="pair">
+    <figure>
+      <div class="frame"><img src="images/unit2/benioff.gif" alt="Cross-section of oceanic lithosphere sinking under continental lithosphere, with earthquake foci marked along the top of the sinking slab." loading="lazy" width="297" height="243"></div>
+      <figcaption>A Wadati-Benioff zone: earthquakes follow the subducting slab down.<span class="credit">USGS. Public domain.</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>J. Tuzo Wilson</h4>
+      <p>With evidence mounting, J. Tuzo Wilson was the first to put the whole picture together by proposing the <b>opening and closing of ocean basins</b> (<a href="#s2-6">Section 2.6</a>). Others soon modeled plates moving relative to each other with clear boundaries, and the plate tectonic revolution took hold.</p>
+    </div>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Section 2.1 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 2.2 -->
+<section id="s2-2">
+  <h2 class="sec"><span class="n">2.2</span>Layers of the Earth</h2>
+  <p>Direct information about Earth's interior is very limited. Most of what we know comes from models, <button class="term" data-term="seismic wave">seismic wave</button> data, and meteorites. Earth can be divided two ways: by <b>chemical composition</b> and by <b>physical behavior</b>.</p>
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 720 430" role="img" aria-labelledby="lay-t" style="width:100%;min-width:560px;height:auto">
+        <title id="lay-t">Two columns compare Earth's chemical layers (crust, mantle, core) with its physical layers (lithosphere, asthenosphere, mesosphere, outer core, inner core), with boundary depths between them.</title>
+        <text x="225" y="30" text-anchor="middle" font-weight="700" font-size="14" class="svg-ink">Chemical layers</text>
+        <text x="495" y="30" text-anchor="middle" font-weight="700" font-size="14" class="svg-ink">Physical layers</text>
+        <!-- chemical column x 160-290 -->
+        <rect x="160" y="50" width="130" height="12" fill="var(--s1)"/>
+        <rect x="160" y="62" width="130" height="188" fill="var(--s2)" opacity=".8"/>
+        <rect x="160" y="250" width="130" height="80" fill="var(--rust)" opacity=".75"/>
+        <rect x="160" y="330" width="130" height="62" fill="#f2c46a"/>
+        <line x1="160" y1="330" x2="290" y2="330" stroke="var(--fg)" stroke-dasharray="4 3"/>
+        <!-- physical column x 430-560 -->
+        <rect x="430" y="50" width="130" height="36" fill="var(--s1)"/>
+        <rect x="430" y="86" width="130" height="44" fill="var(--ochre)" opacity=".75"/>
+        <rect x="430" y="130" width="130" height="28" fill="var(--s2)" opacity=".6"/>
+        <rect x="430" y="158" width="130" height="92" fill="var(--s3)" opacity=".75"/>
+        <rect x="430" y="250" width="130" height="80" fill="var(--rust)" opacity=".75"/>
+        <rect x="430" y="330" width="130" height="62" fill="#f2c46a"/>
+        <rect x="160" y="50" width="130" height="342" fill="none" stroke="var(--fg)"/>
+        <rect x="430" y="50" width="130" height="342" fill="none" stroke="var(--fg)"/>
+        <!-- depth ticks in the middle -->
+        <g stroke="var(--muted)" stroke-dasharray="2 3">
+          <line x1="290" y1="62" x2="430" y2="62"/><line x1="290" y1="86" x2="430" y2="86"/>
+          <line x1="290" y1="130" x2="430" y2="130"/><line x1="290" y1="158" x2="430" y2="158"/>
+          <line x1="290" y1="250" x2="430" y2="250"/><line x1="290" y1="330" x2="430" y2="330"/>
+        </g>
+        <g font-size="11.5" text-anchor="middle" font-family="var(--mono)" class="svg-muted">
+          <text x="360" y="46">0 km</text>
+          <text x="360" y="59">Moho 5–40 km</text>
+          <text x="360" y="82">lithosphere base</text>
+          <text x="360" y="126">~410 km</text>
+          <text x="360" y="154">~660 km</text>
+          <text x="360" y="246">2,890 km</text>
+          <text x="360" y="326">5,150 km</text>
+          <text x="360" y="408">center</text>
+        </g>
+        <!-- chemical labels left -->
+        <g font-size="13" text-anchor="end">
+          <text x="150" y="60" font-weight="700" class="svg-ink">Crust</text>
+          <text x="150" y="150" font-weight="700" class="svg-ink">Mantle</text>
+          <text x="150" y="166" font-size="11.5" class="svg-muted">mostly peridotite</text>
+          <text x="150" y="182" font-size="11.5" class="svg-muted">largest by volume</text>
+          <text x="150" y="315" font-weight="700" class="svg-ink">Core</text>
+          <text x="150" y="331" font-size="11.5" class="svg-muted">iron, nickel,</text>
+          <text x="150" y="346" font-size="11.5" class="svg-muted">maybe oxygen</text>
+        </g>
+        <!-- physical labels right -->
+        <g font-size="13" text-anchor="start">
+          <text x="570" y="66" font-weight="700" class="svg-ink">Lithosphere</text>
+          <text x="570" y="80" font-size="11.5" class="svg-muted">rigid plates</text>
+          <text x="570" y="108" font-weight="700" class="svg-ink">Asthenosphere</text>
+          <text x="570" y="122" font-size="11.5" class="svg-muted">weak, flows</text>
+          <text x="570" y="148" font-size="11.5" class="svg-muted">transition zone</text>
+          <text x="570" y="200" font-weight="700" class="svg-ink">Mesosphere</text>
+          <text x="570" y="214" font-size="11.5" class="svg-muted">lower mantle, rigid</text>
+          <text x="570" y="286" font-weight="700" class="svg-ink">Outer core</text>
+          <text x="570" y="300" font-size="11.5" class="svg-muted">liquid</text>
+          <text x="570" y="360" font-weight="700" class="svg-ink">Inner core</text>
+          <text x="570" y="374" font-size="11.5" class="svg-muted">solid (pressure)</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Earth's chemical and physical layers side by side. Depths are from the chapter; the vertical scale is stretched near the surface, so the diagram is not to scale. The lithosphere's base varies: up to ~140 km under oceans and 40–280 km under continents.<span class="credit">Diagram drawn for this guide from Section 2.2.</span></figcaption>
+  </figure>
+
+  <h3 id="s2-2-1">2.2.1 Chemical layers</h3>
+  <p>Two major factors, <b>temperature and pressure</b>, create three distinct chemical layers.</p>
+  <h4>Crust</h4>
+  <p>The <button class="term" data-term="crust">crust</button> is the outermost chemical layer. <button class="term" data-term="continental crust">Continental crust</button> has relatively low density and a composition like granite. <button class="term" data-term="oceanic crust">Oceanic crust</button> has relatively high density (especially when cold and old) and a composition like basalt. The upper crust is <button class="term" data-term="brittle">brittle</button> (like glass or pottery, it breaks under force, especially force applied quickly), so most earthquakes happen there. The deeper crust is hotter and under more pressure, so it is <button class="term" data-term="ductile">ductile</button> (like soft plastic or putty, it moves under force).</p>
+  <p>The base of the crust is marked by a large jump in <button class="term" data-term="seismic velocity">seismic velocity</button>. This is the <button class="term" data-term="Moho">Mohorovičić Discontinuity (Moho)</button>, discovered by Andrija Mohorovičić in 1909 from earthquake waves in Croatia. The change is caused by the big chemical difference between crust and mantle. The Moho is roughly <b>5 km</b> below the ocean floor and <b>30–40 km</b> below continents; near large mountain-building events (<button class="term" data-term="orogeny">orogenies</button>) its depth is doubled.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/moho-depth.webp" alt="World map colored by Moho depth: thin crust under the oceans in blue, thicker under continents, and thickest under the Himalaya and Andes." loading="lazy" width="1000" height="555"></div>
+    <figcaption>Global map of the depth of the Moho. It is shallowest under the oceans and deepest under large mountain belts.<span class="credit">AllenMcC., CC BY-SA, via <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+  <h4>Mantle</h4>
+  <p>The <button class="term" data-term="mantle">mantle</button> lies between the crust and the core, down to about <b>2,900 km</b>, and is the largest chemical layer by volume. Most of what we know comes from seismic waves, plus two kinds of samples: <button class="term" data-term="ophiolite">ophiolites</button> (pieces of mantle that rose through the crust and are exposed as part of the ocean floor) and <button class="term" data-term="xenolith">xenoliths</button> (pieces carried up in magma by eruptions). Most xenoliths are <button class="term" data-term="peridotite">peridotite</button>, an ultramafic igneous rock, so scientists hypothesize most of the mantle is peridotite.</p>
+  <h4>Core</h4>
+  <p>The <button class="term" data-term="core">core</button> has liquid and solid layers and is mostly <b>iron and nickel</b>, possibly with some oxygen. It was first detected in seismic data in 1906. Meteorites typically contain more iron than surface rocks, and scientists propose Earth formed from meteoric material; the iron and nickel sank to the center, where the liquid part of the core formed.</p>
+
+  <h3 id="s2-2-2">2.2.2 Physical layers</h3>
+  <p>Earth can also be split into <b>five physical layers</b> by how each responds to stress. The two systems overlap (both share the core–mantle boundary) but differ in important ways.</p>
+  <h4>Lithosphere</h4>
+  <p>The <button class="term" data-term="lithosphere">lithosphere</button> (Greek <i>lithos</i>, stone) is the outermost physical layer. <b>Oceanic lithosphere</b> is thin and relatively rigid: nearly zero thickness at mid-ocean ridges, averaging 140 km elsewhere. <b>Continental lithosphere</b> is thicker (40–280 km) and more plastic, especially deep down. The lithosphere is broken into <button class="term" data-term="plate">plates</button>. A <button class="term" data-term="plate boundary">plate boundary</button> is where two plates meet and move relative to each other; that is where we see mountain building, earthquakes, and volcanoes.</p>
+  <h4>Asthenosphere</h4>
+  <p>The <button class="term" data-term="asthenosphere">asthenosphere</button> (<i>astheno-</i>, lacking strength) lies below the lithosphere. It is mechanically weak, so it moves and flows by convection currents driven by heat from the core. Unlike the lithosphere it is relatively unbroken (shown by seismic waves). Its depth depends on temperature: it is closer to the surface at mid-ocean ridges and much deeper under mountains and plate centers.</p>
+  <h4>Mesosphere</h4>
+  <p>The <button class="term" data-term="mesosphere">mesosphere</button>, sometimes called the lower mantle, is more rigid and immobile than the asthenosphere. Its upper part is a <button class="term" data-term="transition zone">transition zone</button> (about 410 to 660 km) where very high pressure and temperature make minerals continuously change into other forms; seismologists detect it by changes in seismic velocity. Below the transition zone the mesosphere is fairly uniform down to the core.</p>
+  <h4>Outer and inner core</h4>
+  <p>The <button class="term" data-term="outer core">outer core</button> is the <b>only entirely liquid layer</b>, from 2,890 to 5,150 km deep (about 2,300 km thick). In 1936 Danish geophysicist Inge Lehmann used seismic data to prove a solid <button class="term" data-term="inner core">inner core</button> exists inside it; the inner core is about 1,220 km thick. The hottest part of Earth is solid because <b>immense pressure</b> keeps it solid. It grows slowly as the lower outer core solidifies while heat escapes outward.</p>
+  <p>Circulation of molten iron and nickel in the outer core is believed to generate Earth's <button class="term" data-term="magnetic field">magnetic field</button>, which protects the atmosphere and water. If the outer core stopped circulating or froze, Earth would be stripped of life-supporting gases and water, as happened (and is still happening) on Mars.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Chemical vs. physical layers (values from the chapter).</caption>
+      <thead><tr><th>System</th><th>Layer</th><th>Depth or thickness</th><th>Key property</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="3">Chemical</td><td>Crust</td><td>to the Moho: ~5 km (ocean), 30–40 km (continent)</td><td>Granite-like (continental) or basalt-like (oceanic)</td></tr>
+        <tr><td>Mantle</td><td>to ~2,900 km</td><td>Largest by volume; mostly peridotite</td></tr>
+        <tr><td>Core</td><td>below ~2,900 km</td><td>Iron and nickel (maybe oxygen)</td></tr>
+        <tr><td rowspan="5">Physical</td><td>Lithosphere</td><td>oceanic 0–140 km avg.; continental 40–280 km</td><td>Rigid; broken into plates</td></tr>
+        <tr><td>Asthenosphere</td><td>below the lithosphere; depth varies with temperature</td><td>Weak; flows by convection</td></tr>
+        <tr><td>Mesosphere</td><td>transition zone ~410–660 km, then to the core</td><td>Rigid lower mantle</td></tr>
+        <tr><td>Outer core</td><td>2,890–5,150 km (~2,300 km thick)</td><td>Only fully liquid layer; makes the magnetic field</td></tr>
+        <tr><td>Inner core</td><td>~1,220 km thick</td><td>Solid because of pressure (Lehmann, 1936)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s2-2-3">2.2.3 Plate tectonic boundaries</h3>
+  <p>At a <button class="term" data-term="passive margin">passive margin</button> the plates don't move relative to each other: continental lithosphere grades into oceanic lithosphere on the same plate (e.g. the eastern coasts of North and South America). An <button class="term" data-term="active margin">active margin</button> is where oceanic and continental plates meet and move relative to each other (e.g. the western coasts of the Americas), driven by frictional drag between plates and differences in plate density. Most mountain building, earthquakes, and active volcanism happen at active margins.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/passive-margin.webp" alt="Cross-section of a passive margin: continental crust thins through transitional crust into oceanic crust, with thick sediments on top near the hinge zone." loading="lazy" width="900" height="430"></div>
+    <figcaption>A passive margin: continental and oceanic crust joined on one plate, with no boundary between them.<span class="credit">Joshua Doubek, CC BY-SA, via <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+  <p>In a simplified model there are three kinds of boundary: <button class="term" data-term="convergent boundary">convergent</button> (plates move toward each other), <button class="term" data-term="divergent boundary">divergent</button> (plates move apart), and <button class="term" data-term="transform boundary">transform</button> (plates slide past each other).</p>
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 720 250" role="img" aria-labelledby="bt-t" style="width:100%;min-width:560px;height:auto">
+        <title id="bt-t">Animated diagram of the three boundary types: at a convergent boundary two plates move together and one sinks; at a divergent boundary two plates move apart as magma rises between them; at a transform boundary, seen from above, two plates slide past each other.</title>
+        <g font-size="14" font-weight="700" text-anchor="middle" class="svg-ink">
+          <text x="120" y="28">Convergent</text><text x="360" y="28">Divergent</text><text x="600" y="28">Transform</text>
+        </g>
+        <!-- convergent -->
+        <rect x="15" y="140" width="210" height="50" fill="var(--ochre)" opacity=".45"/>
+        <g class="mv-in-l"><polygon points="20,110 112,110 140,150 120,150 100,128 20,128" fill="var(--accent)" opacity=".85"/></g>
+        <g class="mv-in-r"><polygon points="118,100 220,100 220,128 128,128" fill="var(--s1)"/></g>
+        <g fill="var(--fg)"><path d="M40 85 h30 l-6 -5 M70 85 l-6 5" stroke="var(--fg)" stroke-width="2" fill="none"/><path d="M200 85 h-30 l6 -5 M170 85 l6 5" stroke="var(--fg)" stroke-width="2" fill="none"/></g>
+        <!-- divergent -->
+        <rect x="255" y="140" width="210" height="50" fill="var(--ochre)" opacity=".45"/>
+        <g class="mv-in-r"><rect x="260" y="110" width="94" height="22" fill="var(--accent)" opacity=".85"/></g>
+        <g class="mv-in-l"><rect x="366" y="110" width="94" height="22" fill="var(--accent)" opacity=".85"/></g>
+        <g class="rise"><circle cx="360" cy="140" r="6" fill="var(--rust)"/></g>
+        <g class="rise" style="animation-delay:1.2s"><circle cx="360" cy="150" r="5" fill="var(--rust)"/></g>
+        <path d="M330 85 h-30 l6 -5 M300 85 l6 5" stroke="var(--fg)" stroke-width="2" fill="none"/>
+        <path d="M390 85 h30 l-6 -5 M420 85 l-6 5" stroke="var(--fg)" stroke-width="2" fill="none"/>
+        <!-- transform (map view) -->
+        <rect x="495" y="60" width="210" height="140" fill="var(--surface-2)" stroke="var(--line)"/>
+        <g class="mv-in-l"><rect x="510" y="70" width="180" height="56" fill="var(--accent)" opacity=".75"/></g>
+        <g class="mv-in-r"><rect x="510" y="134" width="180" height="56" fill="var(--s1)"/></g>
+        <line x1="495" y1="130" x2="705" y2="130" stroke="var(--rust)" stroke-width="2.5" stroke-dasharray="6 4"/>
+        <path d="M570 98 h40 l-7 -6 M610 98 l-7 6" stroke="var(--bg)" stroke-width="2.5" fill="none"/>
+        <path d="M630 162 h-40 l7 -6 M590 162 l7 6" stroke="var(--fg)" stroke-width="2.5" fill="none"/>
+        <g font-size="12" text-anchor="middle" class="svg-muted">
+          <text x="120" y="212">plates move together;</text><text x="120" y="228">denser plate sinks</text>
+          <text x="360" y="212">plates move apart;</text><text x="360" y="228">magma rises in the gap</text>
+          <text x="600" y="218">map view: plates slide past</text>
+        </g>
+        <g font-size="11" class="svg-muted"><text x="20" y="182">asthenosphere</text><text x="260" y="182">asthenosphere</text></g>
+      </svg>
+    </div>
+    <figcaption>The three types of plate boundary in motion. Convergent and divergent are drawn as cross-sections; transform is drawn from above, because the motion is horizontal.<span class="credit">Animation drawn for this guide from Section 2.2.3.</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="images/unit2/boundary-types.webp" alt="Block diagram of a section of Earth showing a convergent boundary with a trench and volcanoes, a transform boundary, a divergent boundary at an oceanic ridge, and a continental rift, all above the asthenosphere." loading="lazy" width="775" height="429"></div>
+    <figcaption>Schematic of the plate boundary types and the features they make.<span class="credit">José F. Vigil, USGS. Public domain.</span></figcaption>
+  </figure>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Section 2.2 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 2.3 -->
+<section id="s2-3">
+  <h2 class="sec"><span class="n">2.3</span>Convergent boundaries</h2>
+  <p><button class="term" data-term="convergent boundary">Convergent boundaries</button>, also called <b>destructive boundaries</b>, are where two or more plates move toward each other. What happens depends on <b>density</b>. Continental lithosphere is less dense and more buoyant than the asthenosphere. Oceanic lithosphere is denser than continental lithosphere and, when old and cold, may be denser than the asthenosphere.</p>
+  <ul>
+    <li><b>Subduction:</b> plates of different density meet and the denser plate is pushed beneath the more buoyant one.</li>
+    <li><b>Collision:</b> continental plates converge without subduction.</li>
+  </ul>
+
+  <h3 id="s2-3-1">2.3.1 Subduction</h3>
+  <p><button class="term" data-term="subduction">Subduction</button> happens when a dense oceanic plate meets a more buoyant plate (continental, or warmer and younger oceanic) and descends into the mantle. The chapter gives a worldwide average rate of 25 miles per million years. The descending plate pulls the seafloor down into a <button class="term" data-term="trench">trench</button>, which can be more than twice as deep as the nearby ocean basin (usually 3–4 km); the <b>Mariana Trench</b> approaches 11 km.</p>
+  <h4>Accretionary wedge and terranes</h4>
+  <p>In the trench, seafloor sediments are scraped off and squeezed between the plates into an <button class="term" data-term="accretionary wedge">accretionary wedge</button> (also called a mélange or accretionary prism). Fragments of continental material, including microcontinents, riding on the subducting plate may be sutured to the wedge and build a large area of land called a <button class="term" data-term="terrane">terrane</button>. Vast parts of California are accreted terranes.</p>
+  <h4>Flux melting and volcanic arcs</h4>
+  <p>As the subducting <button class="term" data-term="slab">slab</button> sinks, heat and pressure drive volatiles (water, carbon dioxide) out of hydrated minerals and into the <button class="term" data-term="mantle wedge">mantle wedge</button>, the area above the slab and below the overriding plate. The volatiles lower the melting point of the mantle wedge, which melts by <button class="term" data-term="flux melting">flux melting</button>. The buoyant magma rises and erupts, often forming a curved chain of volcanoes, a <button class="term" data-term="volcanic arc">volcanic arc</button> (curved because Earth is curved). Arcs can form on oceanic or continental plates.</p>
+  <div class="callout">
+    <h4>Subduction in four steps</h4>
+    <ol>
+      <li>Dense oceanic slab sinks at the trench; sediment piles into the accretionary wedge.</li>
+      <li>Heat and pressure release water and CO<sub>2</sub> from the slab into the mantle wedge.</li>
+      <li>The volatiles lower the melting point: flux melting makes magma.</li>
+      <li>Buoyant magma rises and builds a volcanic arc on the overriding plate.</li>
+    </ol>
+  </div>
+  <h4>How subduction starts (still debated)</h4>
+  <p>It is generally accepted that subduction zones start as passive margins, and gravity then turns them into active margins. Hypotheses: gravity pulls the denser oceanic plate down, or the plate flows ductilely at a low angle. Evidence suggests a <b>new subduction zone may be forming off Portugal</b>, and some scientists link large earthquakes such as the 1755 Lisbon earthquake to this, though the evidence is not definitive. Another hypothesis has subduction starting at transform boundaries between plates of different density. Some margins look like they should subduct but don't: the dense oceanic plates on either side of the Atlantic are not sinking, possibly because the bond to the continental plate is stronger than the pull from the density difference.</p>
+  <h4>Megathrust earthquakes and tsunamis</h4>
+  <p>Subduction zones have the <b>largest earthquakes and tsunamis</b>; they are the only places with fault surfaces big enough for magnitude-9 earthquakes, which are also very deep. When a slab gets stuck, energy builds up; if it is not released gradually, the plates can suddenly slip along several hundred kilometers. Because these faults are under the ocean, the movement can cause giant tsunamis, such as after the 2004 Indian Ocean and 2011 Tōhoku (Japan) earthquakes.</p>
+  <h4>Forearc, backarc, and back-arc faulting</h4>
+  <figure>
+    <div class="frame"><img src="images/unit2/forearc.gif" alt="Labeled cross-section of an ocean-ocean subduction zone showing, from right to left, the trench, outer arc ridge, forearc, volcanic front, backarc, and back-arc spreading center above the subducting slab." loading="lazy" width="351" height="302"></div>
+    <figcaption>Parts of a subduction zone (ocean-ocean here, but the same features apply to ocean-continent subduction).<span class="credit">USGS. Public domain.</span></figcaption>
+  </figure>
+  <ul>
+    <li>Every subduction zone has a <button class="term" data-term="forearc basin">forearc basin</button> on the overriding plate, between the volcanic arc and the trench, with much faulting and deformation (especially in the accretionary wedge).</li>
+    <li>In some, tension creates a <button class="term" data-term="backarc basin">backarc basin</button> behind the arc. One proposed cause is <button class="term" data-term="slab rollback">slab rollback</button>: the slab rolls back instead of sliding straight under, pulling the overriding plate seaward and stretching it "like pizza dough" until it cracks and collapses. A deep, extensive backarc basin can become a continental rift.</li>
+    <li>Where many young, buoyant oceanic plates subduct fast, the overriding plate can buckle and crack: <button class="term" data-term="back-arc faulting">back-arc faulting</button>. Extensional back-arc faults pull rocks apart; compressional ones, <button class="term" data-term="thrust fault">thrust faults</button>, push them together. The Andes have two spines: the western one is a volcanic arc, and thrust faults deformed the non-volcanic eastern one.</li>
+  </ul>
+  <div class="tablewrap">
+    <table>
+      <caption>Thin-skinned vs. thick-skinned thrust deformation, with the chapter's western U.S. examples.</caption>
+      <thead><tr><th>Style</th><th>What deforms</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Thin-skinned</td><td>Superficial rocks lying on top of the continental plate</td><td>Sevier Orogeny (Cretaceous Period)</td></tr>
+        <tr><td>Thick-skinned</td><td>Faults reach deeper into the crust</td><td>Laramide Orogeny (near the end of and slightly after the Sevier, same region)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pair">
+    <figure>
+      <div class="frame"><img src="images/unit2/laramide.webp" alt="Cross-section of an oceanic plate subducting at a very low angle far under North America, with the Rocky Mountains rising well inland." loading="lazy" width="336" height="159"></div>
+      <figcaption>Shallow (flat-slab) subduction during the Laramide Orogeny raised mountains far inland.<span class="credit">Melanie Moreno. Public domain.</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Flat-slab subduction</h4>
+      <p><button class="term" data-term="flat-slab subduction">Flat-slab (shallow) subduction</button> caused the Laramide Orogeny. A low-angle slab touches more of the overriding plate than usual and deforms it many kilometers away from the subduction zone.</p>
+    </div>
+  </div>
+  <h4>Oceanic-continental vs. oceanic-oceanic subduction</h4>
+  <div class="pair">
+    <figure>
+      <div class="frame"><img src="images/unit2/ocean-continent.gif" alt="Oceanic plate sinking beneath a continental plate at a trench, with a volcanic arc on the continent." loading="lazy" width="302" height="178"></div>
+      <figcaption>Oceanic-continental subduction: trench and continental volcanic arc.<span class="credit">USGS. Public domain.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit2/ocean-ocean.gif" alt="Oceanic plate sinking beneath another oceanic plate at a trench, with an island arc above." loading="lazy" width="302" height="174"></div>
+      <figcaption>Oceanic-oceanic subduction: trench and island arc.<span class="credit">USGS. Public domain.</span></figcaption>
+    </figure>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>The two kinds of subduction compared.</caption>
+      <thead><tr><th></th><th>Oceanic-continental</th><th>Oceanic-oceanic</th></tr></thead>
+      <tbody>
+        <tr><td>Which plate sinks</td><td>The oceanic plate</td><td>Usually the older plate (colder, denser)</td></tr>
+        <tr><td>Features</td><td>Trench, mantle wedge, often a continental volcanic arc</td><td>Trench; volcanoes may stay underwater, or rise to form an <button class="term" data-term="island arc">island arc</button></td></tr>
+        <tr><td>Examples</td><td>Cascade Mountains (Pacific Northwest); western Andes</td><td>Aleutian Islands; Lesser Antilles; island chains of the western Pacific</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s2-3-2">2.3.2 Collisions</h3>
+  <p>When continental plates converge (for example, as an ocean basin closes), neither is dense enough to subduct. The two masses slam together in a <button class="term" data-term="collision">collision</button>. With no subduction there is <b>no magma and almost no volcanism</b>. Collision zones have tall, non-volcanic mountains and a broad zone of frequent, large earthquakes. Continental lithosphere is plastic, so deformation is spread out: collision earthquakes can occur hundreds of kilometers from the boundary, unlike the narrow band at subduction zones. Examples across Eurasia: the Pyrenees (Iberia into France), the Alps (Italy to central Europe), the Zagros (Arabia to Iran), and the Himalaya (India to central Asia).</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/continent-collision.gif" alt="Two continental plates pushing together, crumpling into a mountain range and high plateau, with old oceanic crust trapped beneath." loading="lazy" width="301" height="181"></div>
+    <figcaption>Continental-continental collision builds tall, non-volcanic mountains.<span class="credit">USGS. Public domain.</span></figcaption>
+  </figure>
+  <h4>Supercontinents</h4>
+  <p>When oceanic crust joined to a continent by a passive margin fully subducts, the ocean closes and continental collision begins. Continents eventually join into a <button class="term" data-term="supercontinent">supercontinent</button>. Collision built <button class="term" data-term="Pangea">Pangea</button>, the supercontinent at the heart of Wegener's hypothesis. Continents have repeatedly gathered into supercontinents and split apart throughout Earth's history, the <button class="term" data-term="supercontinent cycle">supercontinent cycle</button>, roughly every 500 million years. Pangea began separating about 200 million years ago; an earlier supercontinent, <b>Rodinia</b>, existed 1.1 billion years ago and began breaking apart 800 to 600 million years ago.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/pangaea.webp" alt="Map of Pangaea with the outlines of today's continents fitted together into one landmass." loading="lazy" width="700" height="788" style="max-width:440px"></div>
+    <figcaption>Reconstruction of Pangaea, showing the approximate positions of modern continents.<span class="credit">User:Kieff, CC BY-SA, via <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+  <h4>Foreland basins, obduction, and ophiolites</h4>
+  <ul>
+    <li>A <button class="term" data-term="foreland basin">foreland basin</button> forms near a mountain belt as the mountains' weight presses a depression into the plate. They can form at subduction zones but are most common at collisions. The <b>Persian Gulf</b>, made by the weight of the Zagros Mountains, is possibly the best modern example.</li>
+    <li>A plate carrying both oceanic and continental lithosphere can partly subduct, but buoyancy stops it. In very rare cases part of a continental plate is trapped beneath a descending oceanic plate: <button class="term" data-term="obduction">obduction</button>. The buoyant continental crust returns to the surface fairly quickly, bringing bits of mantle and ocean floor up onto the continent. These rocks are <b>ophiolites</b>, which reveal the composition of the mantle.</li>
+  </ul>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Section 2.3 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 2.4 -->
+<section id="s2-4">
+  <h2 class="sec"><span class="n">2.4</span>Divergent boundaries</h2>
+  <p>At <button class="term" data-term="divergent boundary">divergent boundaries</button>, also called <b>constructive boundaries</b>, plates move away from each other. There are two types: <b>continental rift zones</b> (in weak spots of continental plates) and <b>mid-ocean ridges</b>. A mid-ocean ridge usually begins as a continental rift that splits the plate apart; seawater fills the gap and the pieces drift apart into separate continents. This is <button class="term" data-term="rift-to-drift">rift-to-drift</button>.</p>
+
+  <h3 id="s2-4-1">2.4.1 Continental rifting</h3>
+  <p>Where continental plates are very thick, they reflect so much heat back into the mantle that strong convection pushes super-heated mantle up against the plate and softens it. Tension from this upwelling pulls the weakened plate apart. It thins and develops deep cracks called <button class="term" data-term="normal fault">extension (normal) faults</button>. Blocks between large faults drop into <button class="term" data-term="rift valley">rift valleys</button>, containing keystone-shaped down-dropped blocks called <button class="term" data-term="graben">grabens</button>; the raised shoulders are <button class="term" data-term="horst">horsts</button>. If only one side of a block drops, it is a <button class="term" data-term="half-graben">half-graben</button>. Rifts can grow into large lakes and even oceans.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/horst-graben.webp" alt="Block diagram of crust being pulled apart: blocks bounded by normal faults alternately stay high (horsts) and drop down (grabens)." loading="lazy" width="900" height="462"></div>
+    <figcaption>Faulting at divergent boundaries: normal faults bound raised horsts and dropped grabens.<span class="credit">USGS. Public domain.</span></figcaption>
+  </figure>
+  <p>Rifting is not random. Two factors control it:</p>
+  <ul>
+    <li>It does <b>not</b> occur in the old, stable interiors of continents, called <button class="term" data-term="craton">cratons</button>.</li>
+    <li>When it does occur, the break-up resembles the seams of a <b>soccer ball</b> (a truncated icosahedron), the most common fracture pattern on an evenly expanding sphere because it uses the least energy.</li>
+  </ul>
+  <p>Rifting tends to grow along one seam and fizzle out along others. Those inactive seams are <button class="term" data-term="failed rift arm">failed rift arms</button>; they stay weak spots and may develop into an <button class="term" data-term="aulacogen">aulacogen</button>. Example: the <b>Mississippi Valley Embayment</b>, the depression the upper Mississippi River flows through. Where the arms don't fail, as in the <b>Afar Triangle</b>, three divergent boundaries meet in a <button class="term" data-term="triple junction">triple junction</button>.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/afar.webp" alt="Shaded-relief map of the Red Sea, Gulf of Aden, and East Africa, with the three rifts meeting at the Afar region." loading="lazy" width="800" height="800" style="max-width:480px"></div>
+    <figcaption>The Afar Triangle (center): the Red Sea ridge (to upper left), Gulf of Aden ridge (to right), and East African Rift (to lower left) form a triple junction about 120° apart.<span class="credit">DEMIS Mapserver. Public domain.</span></figcaption>
+  </figure>
+  <div class="tablewrap">
+    <table>
+      <caption>Narrow vs. broad rifts.</caption>
+      <thead><tr><th>Type</th><th>Character</th><th>Examples</th></tr></thead>
+      <tbody>
+        <tr><td>Narrow rift</td><td>High density of highly active divergent boundaries</td><td>East African Rift Zone (the Horn of Africa pulling away); Lake Baikal, Russia</td></tr>
+        <tr><td>Broad rift</td><td>Many fault zones spread over a wide area of deformation</td><td>Basin and Range (western U.S.); the Wasatch Fault forms its eastern boundary in Utah</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Rifts have earthquakes (smaller and less frequent than at other boundaries) and may have volcanism. Unlike flux-melted subduction magma, rift magma forms by <button class="term" data-term="decompression melting">decompression melting</button>: pulling plates apart lowers the pressure, which melts material and draws it upward through the faulted rift. Young rift volcanoes dot the Basin and Range. Ol Doinyo Lengai in Tanzania erupts unusual lava made largely of <button class="term" data-term="carbonatite">carbonatite</button>, a relatively cold, liquid carbonate.</p>
+
+  <h3 id="s2-4-2">2.4.2 Mid-ocean ridges</h3>
+  <p>As rifting continues, the continental lithosphere becomes more mafic and thinner until the plate under the rift becomes oceanic lithosphere. A new ocean is born, as the narrow <b>Red Sea</b> formed when Arabia moved away from Africa. As it keeps diverging, a <button class="term" data-term="mid-ocean ridge">mid-ocean ridge</button> forms.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/ocean-birth.webp" alt="Three stacked cross-sections: a rift valley in a continent (East Africa), a new narrow ocean basin (Red Sea), and a mature ocean with a mid-ocean ridge (Atlantic)." loading="lazy" width="600" height="848" style="max-width:380px"></div>
+    <figcaption>Progression from rift valley to new ocean basin to mature ocean with a mid-ocean ridge.<span class="credit">Hannes Grobe, Alfred Wegener Institute, vectorised by User:Lichtspielderivative, CC BY-SA.</span></figcaption>
+  </figure>
+  <p>Mid-ocean ridges, also called <button class="term" data-term="spreading center">spreading centers</button>:</p>
+  <ul>
+    <li>are the <b>only places on Earth that create new oceanic lithosphere</b>: decompression melting turns asthenosphere into new lithosphere that oozes up through cracks;</li>
+    <li>produce <b>more lava than all other types of volcanism combined</b>, though most of it is unmapped on the deep seafloor (Iceland is a rare place where this kind of rift is seen on land);</li>
+    <li>stand high because hot new lithosphere is lighter than the asthenosphere below; this <b>isostatically buoyant</b> rock floats partly exposed, like an ice cube in water.</li>
+  </ul>
+  <p>As the lithosphere moves away from the ridge it cools, becomes denser, and settles into wide, low, featureless <button class="term" data-term="abyssal plain">abyssal plains</button>. So the oldest seafloor should be farthest from ridges, and rock ages confirm it. Sediment is also thinner near ridges because it has had less time to build up.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/ocean-age.webp" alt="World map of seafloor age: red (youngest) along the mid-ocean ridges, grading through yellow and green to blue and purple (oldest) far from the ridges." loading="lazy" width="1100" height="702"></div>
+    <figcaption>Age of oceanic lithosphere, in millions of years. Red is youngest, at the ridges. Notice how the Atlantic is symmetrical, with the oldest crust along the continents' coasts.<span class="credit">NOAA. Public domain.</span></figcaption>
+  </figure>
+  <h4>Magnetic striping</h4>
+  <p>The <button class="term" data-term="Vine-Matthews-Morley hypothesis">Vine-Matthews-Morley hypothesis</button> explains the symmetrical magnetic stripes: Earth's magnetic field is imprinted into new rock as it forms at the ridge. Very hot magma has no magnetic field; as the plates pull apart, it cools below the <button class="term" data-term="Curie point">Curie point</button>, the temperature below which a magnetic field gets locked into magnetic minerals. The stripes alternate because Earth's north and south magnetic poles periodically swap (<button class="term" data-term="magnetic reversal">magnetic reversals</button>). This pattern is used to reconstruct past plate motion and measure spreading rates.</p>
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 720 240" role="img" aria-labelledby="ms-t" style="width:100%;min-width:560px;height:auto">
+        <title id="ms-t">Animation of seafloor spreading: new rock forms at the ridge and moves outward on both sides, recording alternating normal and reversed magnetic polarity as mirror-image stripes.</title>
+        <defs>
+          <clipPath id="ms-l"><rect x="20" y="70" width="340" height="80"/></clipPath>
+          <clipPath id="ms-r"><rect x="360" y="70" width="340" height="80"/></clipPath>
+        </defs>
+        <g clip-path="url(#ms-l)"><g class="drift-l">
+          <rect x="-28" y="70" width="436" height="80" fill="var(--surface-2)"/>
+          <rect x="384" y="70" width="24" height="80" fill="var(--accent)"/><rect x="336" y="70" width="24" height="80" fill="var(--accent)"/><rect x="288" y="70" width="24" height="80" fill="var(--accent)"/><rect x="240" y="70" width="24" height="80" fill="var(--accent)"/><rect x="192" y="70" width="24" height="80" fill="var(--accent)"/><rect x="144" y="70" width="24" height="80" fill="var(--accent)"/><rect x="96" y="70" width="24" height="80" fill="var(--accent)"/><rect x="48" y="70" width="24" height="80" fill="var(--accent)"/><rect x="0" y="70" width="24" height="80" fill="var(--accent)"/>
+        </g></g>
+        <g clip-path="url(#ms-r)"><g class="drift-r">
+          <rect x="312" y="70" width="436" height="80" fill="var(--surface-2)"/>
+          <rect x="312" y="70" width="24" height="80" fill="var(--accent)"/><rect x="360" y="70" width="24" height="80" fill="var(--accent)"/><rect x="408" y="70" width="24" height="80" fill="var(--accent)"/><rect x="456" y="70" width="24" height="80" fill="var(--accent)"/><rect x="504" y="70" width="24" height="80" fill="var(--accent)"/><rect x="552" y="70" width="24" height="80" fill="var(--accent)"/><rect x="600" y="70" width="24" height="80" fill="var(--accent)"/><rect x="648" y="70" width="24" height="80" fill="var(--accent)"/><rect x="696" y="70" width="24" height="80" fill="var(--accent)"/>
+        </g></g>
+        <rect x="20" y="70" width="680" height="80" fill="none" stroke="var(--fg)"/>
+        <line x1="360" y1="62" x2="360" y2="158" stroke="var(--rust)" stroke-width="3"/>
+        <g class="rise"><circle cx="360" cy="176" r="6" fill="var(--rust)"/></g>
+        <g class="rise" style="animation-delay:1.2s"><circle cx="360" cy="186" r="5" fill="var(--rust)"/></g>
+        <text x="360" y="44" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Mid-ocean ridge</text>
+        <text x="360" y="58" text-anchor="middle" font-size="11.5" class="svg-muted">new rock, youngest</text>
+        <path d="M250 180 h-90 l8 -6 M160 180 l8 6" stroke="var(--fg)" stroke-width="2" fill="none"/>
+        <path d="M470 180 h90 l-8 -6 M560 180 l-8 6" stroke="var(--fg)" stroke-width="2" fill="none"/>
+        <text x="205" y="200" text-anchor="middle" font-size="12" class="svg-muted">older rock moves away</text>
+        <text x="515" y="200" text-anchor="middle" font-size="12" class="svg-muted">older rock moves away</text>
+        <g font-size="12" class="svg-ink">
+          <rect x="190" y="218" width="14" height="14" fill="var(--accent)"/><text x="210" y="229">normal polarity</text>
+          <rect x="370" y="218" width="14" height="14" fill="var(--surface-2)" stroke="var(--fg)"/><text x="390" y="229">reversed polarity</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Seafloor spreading records magnetic reversals as mirror-image stripes on both sides of the ridge. Simplified: real stripes have uneven widths because reversals happen at irregular intervals.<span class="credit">Animation drawn for this guide from Sections 2.1.3 and 2.4.2.</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="images/unit2/stripes-scheme.webp" alt="Three block diagrams (a, b, c) of a spreading ridge getting wider over time, with stripes of normal and reversed magnetic polarity on both sides." loading="lazy" width="640" height="453"></div>
+    <figcaption>A time progression (a youngest, c oldest) of a spreading center widening while it records changes in Earth's magnetic field.<span class="credit">Chmee2. Public domain.</span></figcaption>
+  </figure>
+  <h4>Hydrothermal vents and life without sunlight</h4>
+  <div class="pair">
+    <figure>
+      <div class="frame"><img src="images/unit2/black-smoker.webp" alt="A black smoker chimney on the dark seafloor, surrounded by a dense colony of tall red-tipped tube worms." loading="lazy" width="700" height="902"></div>
+      <figcaption>A black smoker hydrothermal vent with a colony of giant tube worms.<span class="credit">NOAA Photo Library, CC BY.</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Black smokers</h4>
+      <p>Ridges are studded with <button class="term" data-term="hydrothermal vent">hydrothermal vents</button>: deep fissures where seawater circulates through hot rock and rises again carrying dissolved gases, minerals, and particles, like black underwater smoke. In 1977 scientists in the submersible <i>Alvin</i> found thriving communities there, including tube worms taller than people, living in total darkness. They rely on geothermal energy and bacterial <button class="term" data-term="chemosynthesis">chemosynthesis</button> of sulfur compounds. Before this, scientists thought all life needed photosynthesis. Some suggest such vents could be where life began, and might host life elsewhere, such as on Jupiter's moon Europa.</p>
+    </div>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Section 2.4 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 2.5 -->
+<section id="s2-5">
+  <h2 class="sec"><span class="n">2.5</span>Transform boundaries</h2>
+  <p>At a <button class="term" data-term="transform boundary">transform boundary</button> (also called a <b>strike-slip</b> or <b>conservative boundary</b>), plates slide past each other horizontally. Motion is described by an observer standing on one plate looking across at the other:</p>
+  <ul>
+    <li><button class="term" data-term="dextral">Dextral</button> (right-lateral): the opposite plate moves to the right.</li>
+    <li><button class="term" data-term="sinistral">Sinistral</button> (left-lateral): the opposite plate moves to the left.</li>
+  </ul>
+  <figure>
+    <div class="frame"><img src="images/unit2/strike-slip.webp" alt="Two map-view sketches of a fault: on the left the far block moves left (sinistral), on the right it moves right (dextral)." loading="lazy" width="437" height="200"></div>
+    <figcaption>The two types of transform (strike-slip) fault, seen from above.<span class="credit">Cferrero, CC BY-SA, via <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+  <p>Most transform boundaries are on the ocean floor around mid-ocean ridges. They form <b>aseismic</b> <button class="term" data-term="fracture zone">fracture zones</button> of earthquake-free transform faults that accommodate different spreading rates along the ridge. Others produce significant earthquakes but little mountain building or volcanism: if the plates cannot shear past each other, stress builds up and is released suddenly as an earthquake. The most significant for people are within continents, with moderate-to-large earthquakes: the <b>San Andreas Fault</b> (California), North and East <b>Anatolian Faults</b> (Turkey), <b>Altyn Tagh Fault</b> (central Asia), and <b>Alpine Fault</b> (New Zealand).</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/san-andreas.webp" alt="Shaded-relief map of California with the San Andreas Fault traced in red and arrows showing the Pacific side moving northwest relative to the North American side." loading="lazy" width="362" height="500" style="max-width:320px"></div>
+    <figcaption>Map of the San Andreas Fault, showing relative motion.<span class="credit">Kate Barton, David Howell, and Joe Vigil (USGS). Public domain.</span></figcaption>
+  </figure>
+
+  <h3 id="s2-5-1">2.5.1 Transpression and transtension</h3>
+  <p>Bends in a transform fault add compression or extension and cause secondary faulting.</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit2/transpression.webp" alt="Sketch of a strike-slip fault with a bend where the two sides push together, raising mountains in the bend." loading="lazy" width="422" height="499"></div>
+      <figcaption>Transpression: a restraining bend squeezes the fault and raises mountains.<span class="credit">GeoAsh, CC BY-SA.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit2/transtension.webp" alt="Sketch of a strike-slip fault with a bend where the two sides pull apart." loading="lazy" width="180" height="225"></div>
+      <figcaption>Transtension: a releasing bend pulls the fault apart, making a depression.<span class="credit">K. Martin, CC BY-SA.</span></figcaption>
+    </figure>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Bends along transform faults.</caption>
+      <thead><tr><th></th><th>Transpression</th><th>Transtension</th></tr></thead>
+      <tbody>
+        <tr><td>Extra force</td><td><button class="term" data-term="transpression">Transpression</button>: compression added to shearing</td><td><button class="term" data-term="transtension">Transtension</button>: extension added to shearing</td></tr>
+        <tr><td>Kind of bend</td><td><button class="term" data-term="restraining bend">Restraining bend</button>: plates restricted from sliding past</td><td><button class="term" data-term="releasing bend">Releasing bend</button>: plates pulled apart</td></tr>
+        <tr><td>Result</td><td>Mountains built (and moved, even rotated)</td><td>Depressions (basins), sometimes volcanism</td></tr>
+        <tr><td>Examples</td><td>Big Bend, southern San Andreas Fault</td><td>Dead Sea (Israel–Jordan); Salton Sea (California)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s2-5-2">2.5.2 Piercing points</h3>
+  <p>A <button class="term" data-term="piercing point">piercing point</button> is a geological feature cut by a fault. Matching the two separated parts (best if they have a unique pattern) shows how far the fault has moved. They work especially well on transform faults, because horizontal motion keeps features fairly intact; normal and reverse faults tend to obscure or destroy them. Piercing points show the <b>San Andreas Fault has moved over 225 km in the last 20 million years</b>, along three different fault traces.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/wallace-creek.webp" alt="Aerial photo of a dry creek bed crossing a fault line; the channel jogs sharply sideways where it meets the fault, then continues downhill." loading="lazy" width="962" height="656"></div>
+    <figcaption>Wallace Creek on the Carrizo Plain, California. Where the San Andreas Fault (crossing the middle of the image) cuts the creek, the channel jogs sharply: the fault has shifted the creek over time.<span class="credit">Robert E. Wallace (USGS). Public domain.</span></figcaption>
+  </figure>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Section 2.5 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 2.6 -->
+<section id="s2-6">
+  <h2 class="sec"><span class="n">2.6</span>The Wilson Cycle</h2>
+  <p>The <button class="term" data-term="Wilson Cycle">Wilson Cycle</button>, named for J. Tuzo Wilson, who first described it in 1966, describes the repeated assembly and breakup of supercontinents such as Pangea and Rodinia. It has operated for at least three billion years, possibly longer.</p>
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 720 300" role="img" aria-labelledby="wc-t" style="width:100%;min-width:560px;height:auto">
+        <title id="wc-t">The Wilson Cycle as a loop of six stages: continental rifting, new ocean basin, ocean widens, subduction begins, ocean basin closes, and continental collision forming a supercontinent, which then rifts again.</title>
+        <defs><marker id="wc-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker></defs>
+        <g stroke-linejoin="round">
+          <rect class="flow-step" style="--d:0s" x="20" y="20" width="200" height="66" rx="10"/>
+          <rect class="flow-step" style="--d:1s" x="260" y="20" width="200" height="66" rx="10"/>
+          <rect class="flow-step" style="--d:2s" x="500" y="20" width="200" height="66" rx="10"/>
+          <rect class="flow-step" style="--d:3s" x="500" y="214" width="200" height="66" rx="10"/>
+          <rect class="flow-step" style="--d:4s" x="260" y="214" width="200" height="66" rx="10"/>
+          <rect class="flow-step" style="--d:5s" x="20" y="214" width="200" height="66" rx="10"/>
+        </g>
+        <g stroke="var(--muted)" stroke-width="2" fill="none" marker-end="url(#wc-a)">
+          <line x1="222" y1="53" x2="256" y2="53"/><line x1="462" y1="53" x2="496" y2="53"/>
+          <line x1="600" y1="88" x2="600" y2="210"/>
+          <line x1="498" y1="247" x2="464" y2="247"/><line x1="258" y1="247" x2="224" y2="247"/>
+          <line x1="120" y1="212" x2="120" y2="90"/>
+        </g>
+        <g text-anchor="middle" font-size="13">
+          <text x="120" y="48" font-weight="700" class="svg-ink">1. Continental rifting</text><text x="120" y="68" font-size="11.5" class="svg-muted">supercontinent splits</text>
+          <text x="360" y="48" font-weight="700" class="svg-ink">2. New ocean basin</text><text x="360" y="68" font-size="11.5" class="svg-muted">rift-to-drift (Red Sea)</text>
+          <text x="600" y="48" font-weight="700" class="svg-ink">3. Ocean widens</text><text x="600" y="68" font-size="11.5" class="svg-muted">mid-ocean ridge spreading</text>
+          <text x="600" y="242" font-weight="700" class="svg-ink">4. Subduction begins</text><text x="600" y="262" font-size="11.5" class="svg-muted">passive margin turns active</text>
+          <text x="360" y="242" font-weight="700" class="svg-ink">5. Ocean basin closes</text><text x="360" y="262" font-size="11.5" class="svg-muted">oceanic plate subducts</text>
+          <text x="120" y="242" font-weight="700" class="svg-ink">6. Collision</text><text x="120" y="262" font-size="11.5" class="svg-muted">new supercontinent</text>
+          <text x="360" y="140" font-weight="700" font-size="15" class="svg-ink">Wilson Cycle</text>
+          <text x="360" y="160" font-size="11.5" class="svg-muted">supercontinent cycle ~500 million years</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>The Wilson Cycle as a loop. The highlighted stage steps around the cycle.<span class="credit">Diagram drawn for this guide from Sections 2.3, 2.4, and 2.6.</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="images/unit2/wilson-cycle.webp" alt="Graph of continents drifting apart and coming together over the last 1,000 million years, forming Rodinia and then Pangaea, with the Iapetus and Atlantic oceans opening between." loading="lazy" width="1000" height="546"></div>
+    <figcaption>The Wilson Cycle over the last billion years: rifting and collision phases forming Rodinia, then Pangaea.<span class="credit">Hannes Grobe, adapted by Hardwigg, CC BY-SA.</span></figcaption>
+  </figure>
+  <p><b>Why rifting starts:</b> one proposed mechanism is that continental plates reflect heat much better than oceanic plates. When continents gather together, they reflect more heat back into the mantle, making convection more vigorous and starting rifting. Some geologists think <button class="term" data-term="mantle plume">mantle plumes</button> are remnants of these times of hotter mantle and upwelling.</p>
+  <p><b>What keeps plates moving</b> is still largely a mystery. Three schools of thought:</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Proposed driving forces of plate motion.</caption>
+      <thead><tr><th>Hypothesis</th><th>Idea</th><th>Support</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="ridge push">Ridge push</button></td><td>After rifting, mid-ocean spreading centers and their convection push plates apart.</td><td>Less</td></tr>
+        <tr><td><button class="term" data-term="slab pull">Slab pull</button></td><td>Descending slabs in subduction zones pull the plates.</td><td><b>Best supported</b> by current evidence</td></tr>
+        <tr><td><button class="term" data-term="gravitational sliding">Gravitational sliding</button></td><td>Gravity pulls plates down from the elevated ridges across the asthenosphere.</td><td>Less</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 2.7 -->
+<section id="s2-7">
+  <h2 class="sec"><span class="n">2.7</span>Hotspots</h2>
+  <p>To measure plate motion more precisely, scientists study <button class="term" data-term="hotspot">hotspots</button>. First proposed by J. Tuzo Wilson in 1963, a hotspot is an area where magma breaks through the plate to make a volcanic center (islands at sea, mountains on land). As the plate moves over the hotspot, the volcano moves off its magma source and dies, and magma breaks through elsewhere to build a new one. A moving plate over a stationary hotspot leaves a <b>chain of islands or mountains</b>. Classically hotspots do not move, though recent evidence suggests exceptions.</p>
+  <div class="pair">
+    <figure>
+      <div class="frame"><img src="images/unit2/hotspot.webp" alt="Two stages of a plate moving left over a fixed column of magma: a volcano forms above the plume, then is carried away and a new volcano forms over the plume." loading="lazy" width="600" height="932" style="max-width:260px"></div>
+      <figcaption>A non-moving magma source (mantle plume) under a moving plate makes a chain of volcanoes.<span class="credit">Los688. Public domain.</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Measuring plate motion with a hotspot track</h4>
+      <p>Hotspots are the only volcanism not tied to subduction or rifting at plate boundaries. Because the hotspot stays put, the chain records the plate's path: the <b>age of the eruptions</b> and the <b>shape of the chain</b> give the rate and direction of plate movement relative to the hotspot.</p>
+      <p><b>Rate = distance between two volcanoes ÷ difference in their ages.</b> The direction points from the older volcano toward the younger one, opposite to the plate's motion.</p>
+    </div>
+  </div>
+  <p><b>Open questions.</b> Where hotspot magma comes from is debated: some say super-heated material rises from as deep as the core as a <b>mantle plume</b>; others say it is sourced in the mantle. How hotspots start is also debated: the prevailing idea is that they begin at divergent boundaries during supercontinent rifting; subducting slabs and even large impacts from space have also been suggested. Dozens exist, including Tahiti, the Afar Triangle, Easter Island, Iceland, the Galápagos, and Samoa. The U.S. has two of the largest and best studied: <b>Hawaii</b> and <b>Yellowstone</b>.</p>
+
+  <h3 id="s2-7-1">2.7.1 Hawaiian hotspot</h3>
+  <p>Hawaii is one of the most active hotspots on Earth. Evidence shows it is <b>at least 80 million years old</b> (probably older, but older rocks have been subducted). The Big Island sits over a large mantle plume, and <b>Kīlauea</b> is its main vent (the chapter says it has erupted continuously since 1983; see the fact-check notes). The chain, mostly underwater, stretches almost <b>6,000 km</b> across the Pacific. Its most striking feature is a sharp <b>60° bend</b> at the midpoint, marking a change in plate direction about 50 million years ago, more often linked to plate reconfiguration but also to things like plume migration. Seismic <button class="term" data-term="tomography">tomography</button> has mapped the plume toward the lower mantle, and rock ages, vegetation, and island size all show the <b>oldest islands are farthest from the hotspot</b>.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/hawaii-emperor.webp" alt="Seafloor map of the north Pacific showing the Hawaiian Islands at the southeast end of a long chain of seamounts that bends sharply and continues north as the Emperor Seamounts." loading="lazy" width="700" height="709" style="max-width:520px"></div>
+    <figcaption>The Hawaii-Emperor seamount and island chain. Note the bend where the Hawaiian chain meets the Emperor Seamounts.<span class="credit">Ingo Wölbern. Public domain.</span></figcaption>
+  </figure>
+
+  <h3 id="s2-7-2">2.7.2 Yellowstone hotspot</h3>
+  <p>Yellowstone also forms from magma rising through the lithosphere, but under a <b>thick continental plate</b>. Hawaii's thin oceanic plate is easily breached; at Yellowstone the thick plate is a harder barrier, so eruptions are generally <b>much more violent but less frequent</b>. Over 15 million years of eruptions have carved a curved path across the western United States. It has been suggested the hotspot is connected to the older Columbia River flood basalts and even to 70-million-year-old volcanism in Canada's Yukon.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/yellowstone-track.webp" alt="Shaded-relief map of Idaho and nearby states showing a curved line of volcanic centers labeled with ages from about 16 million years in the southwest to 0.6 million years at Yellowstone." loading="lazy" width="850" height="584"></div>
+    <figcaption>Track of the Yellowstone hotspot, with eruption ages in millions of years. Ages get younger toward Yellowstone, as the North American plate moves southwest over the hotspot.<span class="credit">Kelvin Case, CC BY.</span></figcaption>
+  </figure>
+  <p>The most recent major eruption made the <b>Yellowstone Caldera</b> and the Lava Creek tuff about <b>631,000 years ago</b>, throwing 1,000 km³ of ash and magma into the atmosphere; some ash reached as far as Mississippi. Scientists predict another eruption would also be massive, with effects far beyond the western U.S.: such <button class="term" data-term="supervolcano">super volcanic eruptions</button> fill the atmosphere with gas and ash that block sunlight, drastically altering climates and possibly affecting worldwide food production.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Hawaii vs. Yellowstone hotspots.</caption>
+      <thead><tr><th></th><th>Hawaii</th><th>Yellowstone</th></tr></thead>
+      <tbody>
+        <tr><td>Plate</td><td>Thin oceanic plate, easily breached</td><td>Thick continental plate, hard to breach</td></tr>
+        <tr><td>Eruptions</td><td>Frequent; Kīlauea is the main vent</td><td>Much more violent, less frequent</td></tr>
+        <tr><td>Track</td><td>~6,000 km chain with a 60° bend (~50 Ma); at least 80 million years old</td><td>Curved path across the western U.S.; 15+ million years</td></tr>
+        <tr><td>Notable</td><td>Oldest islands farthest from the hotspot</td><td>Last major eruption ~631,000 years ago, 1,000 km³ of ash and magma</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Sections 2.6 and 2.7 quiz in the textbook ↗</a></p>
+</section>
+
+<section id="summary">
+  <h2 class="sec">Summary</h2>
+  <p>Plate tectonics is a unifying theory: it explains nearly all of Earth's major geologic processes, and has guided geologists since the 1950s and 1960s. Earth's surface layer is broken into a network of solid, relatively brittle plates. Beneath them is a hotter, more ductile layer with convective upwelling driven by Earth's interior heat. These currents move the plates together, apart, and side by side. Earthquakes and volcanoes form where plates interact, except for volcanic hotspots, which are not caused by plate movement.</p>
+  <div class="callout">
+    <h4>Quick recap</h4>
+    <ul>
+      <li>Wegener's drift had strong evidence (fit, fossils, rocks, climate) but no mechanism; seafloor spreading supplied it in the 1960s.</li>
+      <li>Seafloor evidence: the Mid-Atlantic Ridge, thin sediment near ridges, symmetrical magnetic stripes, Wadati-Benioff zones.</li>
+      <li>Chemical layers: crust, mantle, core. Physical layers: lithosphere, asthenosphere, mesosphere, outer core (liquid), inner core (solid).</li>
+      <li>Convergent: subduction (trench, flux melting, volcanic arc, biggest quakes) or collision (tall non-volcanic mountains).</li>
+      <li>Divergent: continental rifts (normal faults, grabens, decompression melting) grow into mid-ocean ridges that make new seafloor.</li>
+      <li>Transform: plates slide past (dextral or sinistral); bends cause transpression or transtension; piercing points measure offset.</li>
+      <li>Wilson Cycle: rifting → new ocean → subduction → closure → collision; slab pull is the best-supported driving force.</li>
+      <li>Hotspot tracks (Hawaii, Yellowstone) give the rate and direction of plate motion.</li>
+    </ul>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Chapter 2 review quiz in the textbook ↗</a></p>
+</section>
+
+<section id="resources">
+  <h2 class="sec">Resources</h2>
+  <div class="res">
+    <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener"><b>Chapter 2 (textbook) ↗</b><span>The full chapter, with interactive section quizzes, animations, and all original figures.</span></a>
+    <a href="https://slcc.pressbooks.pub/introgeology/back-matter/glossary-test/" target="_blank" rel="noopener"><b>Textbook glossary ↗</b><span>Definitions for every bolded term in the book.</span></a>
+    <a href="https://www.youtube.com/watch?v=TgfYjS0OTWw" target="_blank" rel="noopener"><b>"Marie Tharp: Uncovering the Secrets of the Ocean Floor" ↗</b><span>Helen Czerski (Royal Institution) on the first ocean-floor maps. Embedded in Section 2.1.3.</span></a>
+    <a href="https://www.youtube.com/watch?v=6o1HawAOTEI" target="_blank" rel="noopener"><b>"PANGEA Breakup" ↗</b><span>Tanya Atwater's animation of Pangea breaking up and the North Atlantic opening. Embedded in Section 2.4.2.</span></a>
+    <a href="https://www.youtube.com/watch?v=IDTBY5WDELg" target="_blank" rel="noopener"><b>"Plate Tectonics in a Nutshell" ↗</b><span>Tanya Atwater explains how the San Andreas Fault formed. Embedded in Section 2.5.2.</span></a>
+    <a href="https://www.youtube.com/watch?v=6wJBOk9xjto" target="_blank" rel="noopener"><b>"Plate Tectonics Basics 1" ↗</b><span>A short review video embedded in the chapter summary.</span></a>
+    <a href="http://emvc.geol.ucsb.edu/2_infopgs/IP1GTect/cSubduction.html" target="_blank" rel="noopener"><b>UCSB Educational Multimedia Visualization Center ↗</b><span>Tanya Atwater's subduction, collision, and rifting animations used in Sections 2.3 and 2.4.</span></a>
+    <a href="https://pubs.usgs.gov/gip/dynamic/dynamic.html" target="_blank" rel="noopener"><b>USGS: This Dynamic Earth ↗</b><span>The U.S. Geological Survey's free illustrated introduction to plate tectonics, including the history of the theory.</span></a>
+  </div>
+</section>
+
+<section id="factcheck">
+  <h2 class="sec">Fact-check notes</h2>
+  <p>Every statement in this guide was checked against the textbook chapter. Where the chapter differs from current references or contradicts itself, the guide keeps the chapter's value (that is what you will be tested on) and notes it here.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Values that differ from current references or within the chapter.</caption>
+      <thead><tr><th>Topic</th><th>Chapter says</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Average subduction rate</td><td>"25 miles per million years, about a half-inch per year"</td><td>The two numbers disagree: 25 miles per million years is about 4 cm (1.6 in) per year. The guide gives only the 25 mi/Myr figure.</td></tr>
+        <tr><td>Hess and seafloor spreading</td><td>Proposed in 1959</td><td>Hess circulated the idea around 1960 and published it in 1962 ("History of Ocean Basins", listed in the chapter's own references).</td></tr>
+        <tr><td>Mesosphere depth</td><td>"Located at a depth of approximately 410 and 660 km"</td><td>410–660 km is the transition zone at the top of the mesosphere; the lower mantle continues from ~660 km to the core at ~2,890 km (USGS, <a href="https://pubs.usgs.gov/gip/interior/" target="_blank" rel="noopener">The Interior of the Earth</a>). The guide shows it that way.</td></tr>
+        <tr><td>Kīlauea</td><td>"Actively erupting since 1983"</td><td>The Puʻu ʻŌʻō eruption ran from 1983 to 2018; since then Kīlauea has erupted in separate episodes (<a href="https://www.usgs.gov/volcanoes/kilauea" target="_blank" rel="noopener">USGS Hawaiian Volcano Observatory</a>).</td></tr>
+        <tr><td>Hawaiian-Emperor bend</td><td>About 50 million years ago</td><td>Dated to about 47 million years ago (Sharp &amp; Clague, 2006, <i>Science</i> 313: 1281–1284).</td></tr>
+        <tr><td>Giant tube worms</td><td>Text: "10-foot-long"; figure caption: "6'+"</td><td>The chapter is inconsistent; the guide says only "taller than people".</td></tr>
+        <tr><td>Transtension figure</td><td>Caption says it causes "a restraining bend"</td><td>A transtensional fault makes a releasing bend, as the chapter's own text says. The guide's caption uses "releasing bend".</td></tr>
+        <tr><td>Sunda megathrust figure</td><td>Caption: "2006 Mw 9.1–9.3 Indian Ocean Earthquake"</td><td>The earthquake was in 2004, as the chapter's text says (this figure is not reproduced here).</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">The chapter gives the inner core as "about 1,220 km thick"; that number is its radius, since the inner core extends to Earth's center. The Earth's center depth shown in Figure 2.7 (~6,370 km) is the chapter's 5,150 km plus 1,220 km.</p>
+</section>
+
+<section id="credits">
+  <h2 class="sec">Credits</h2>
+  <p class="small">Content summarized from <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener"><i>An Introduction to Geology</i>, Chapter 2</a>, © 2017 Chris Johnson, Matthew D. Affolter, Paul Inkenbrandt, and Cam Mosher, licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. This guide is shared under the same license. Images are from the chapter and keep their own licenses, credited under each figure.</p>
+  <ul class="small">
+    <li>CC BY-SA: plate boundary map (Eric Gaba), convection animation (Oni Lukos), Moho depth map (AllenMcC.), passive margin (Joshua Doubek), Pangaea (User:Kieff), ocean birth (Hannes Grobe / Lichtspielderivative), strike-slip faults (Cferrero), restraining bend (GeoAsh), releasing bend (K. Martin), Wilson Cycle (Hannes Grobe / Hardwigg).</li>
+    <li>CC BY: black smoker (NOAA Photo Library), Yellowstone hotspot track (Kelvin Case).</li>
+    <li>Public domain: Snider-Pellegrini map, fossil map, Wadati-Benioff zone, boundary types, forearc, subduction and collision diagrams (USGS), Laramide subduction (Melanie Moreno), horst and graben (USGS), Afar (DEMIS), seafloor age (NOAA), magnetic stripes scheme (Chmee2), San Andreas map, Wallace Creek (Robert E. Wallace), hotspot diagram (Los688), Hawaii-Emperor chain (Ingo Wölbern).</li>
+    <li>Layers diagram, boundary-type animation, magnetic striping animation, Wilson Cycle loop, and timeline: drawn for this guide from the chapter text.</li>
+    <li>Images marked "All Rights Reserved" in the chapter (opening photo, terrane drawing, Atwater's striping GIF) are not reproduced.</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<button class="fab" id="notesBtn" type="button" aria-controls="notes" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Key terms
+</button>
+<button class="fab hide" id="toTop" type="button" aria-label="Return to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<aside class="notes" id="notes" hidden aria-label="Key terms">
+  <header>
+    <div><h2>Key terms · Chapter 2</h2><button class="close" id="notesClose" type="button" aria-label="Close key terms">×</button></div>
+    <input id="termSearch" type="search" placeholder="Search terms and definitions" autocomplete="off" aria-label="Search key terms">
+    <div class="count" id="termCount"></div>
+  </header>
+  <dl id="termList"></dl>
+</aside>
+</div>
+
+<script type="application/json" id="terms">
+[
+ ["paradigm shift","s2-0","A fundamental change in a field's conventionally held knowledge, such as the acceptance of plate tectonics in geology."],
+ ["plate tectonics","s2-0","The theory that Earth's outer layer is broken into plates whose movement creates earthquakes, mountains, and volcanoes. Geology's unifying theory."],
+ ["isostasy","s2-1","Lithosphere floating in balance on the asthenosphere, like an ice cube in water ('isostatically buoyant'). In 1910 it was the accepted explanation for the Bering Land Bridge, which Wegener disputed."],
+ ["continental drift","s2-1","Wegener's hypothesis that the continents were once connected and then drifted apart; it lacked a mechanism until seafloor spreading."],
+ ["continental shelf","s2-1-1","The shallow, flooded edge of a continent; its outline shows the true shape of the continent and gave Wegener a better fit."],
+ ["land bridge","s2-1-1","Hypothetical trans-oceanic land connection that opponents of drift said let animals cross before eroding away."],
+ ["precession","s2-1-2","A wobble of Earth's spin axis; one of the forces (with centrifugal force) Wegener wrongly proposed to move continents."],
+ ["convection","s2-1-2","Circulation in a fluid heated unevenly: hot material rises near the heat and cooler material sinks away from it. A major driver of plates, with gravity and density."],
+ ["seafloor spreading","s2-1-3","Hess's hypothesis that new oceanic plate forms at mid-ocean ridges and moves away from them; the missing mechanism for drift."],
+ ["SONAR","s2-1-3","Sound-based ranging used from 1947 to map the ocean floor, revealing the Mid-Atlantic Ridge."],
+ ["paleomagnetism","s2-1-3","The study of magnetic fields frozen in rocks (a fossilized compass); gave the first hard evidence for plate motion."],
+ ["magnetite","s2-1-3","Magnetic mineral in igneous rocks that aligns with Earth's magnetic field while the rock is molten."],
+ ["magnetic inclination","s2-1-3","The dip of the magnetic field preserved in a rock; related to the latitude where it formed."],
+ ["magnetic declination","s2-1-3","The direction of the preserved magnetic field relative to magnetic north."],
+ ["Wadati-Benioff zone","s2-1-3","A plane of deep earthquakes that starts near an ocean trench and angles down beneath a continent or island arc, tracing a sinking plate."],
+ ["seismic wave","s2-2","Earthquake wave; its travel through Earth is the main source of information about the interior."],
+ ["crust","s2-2-1","Outermost chemical layer, above the Moho: continental (granite-like, low density) or oceanic (basalt-like, high density)."],
+ ["continental crust","s2-2-1","Crust with relatively low density and a composition similar to granite."],
+ ["oceanic crust","s2-2-1","Crust with relatively high density (especially when cold and old) and a composition similar to basalt."],
+ ["brittle","s2-2-1","Breaks under force, especially force applied quickly (like glass or pottery). The upper crust is brittle, where most earthquakes occur."],
+ ["ductile","s2-2-1","Moves or deforms under force without breaking (like soft plastic or putty). Deeper crust is ductile."],
+ ["seismic velocity","s2-2-1","How fast earthquake waves travel through solid matter; jumps sharply at the base of the crust."],
+ ["Moho","s2-2-1","Mohorovičić Discontinuity: the crust–mantle boundary, found by Mohorovičić in 1909. ~5 km below the ocean floor, 30–40 km under continents, doubled under orogenies."],
+ ["orogeny","s2-2-1","A large mountain-building event, e.g. the Sevier and Laramide Orogenies."],
+ ["mantle","s2-2-1","Chemical layer between crust and core, to ~2,900 km; the largest by volume; probably mostly peridotite."],
+ ["ophiolite","s2-2-1","A piece of mantle and ocean floor brought up and exposed (e.g. by obduction); reveals the mantle's composition."],
+ ["xenolith","s2-2-1","A piece of rock carried up within magma and brought to the surface by an eruption; most mantle xenoliths are peridotite."],
+ ["peridotite","s2-2-1","An ultramafic igneous rock; most xenoliths are made of it, so most of the mantle probably is too."],
+ ["core","s2-2-1","Innermost chemical layer, mostly iron and nickel (maybe some oxygen), with a liquid outer part and solid inner part; detected in 1906."],
+ ["lithosphere","s2-2-2","Outermost physical layer, rigid and broken into plates. Oceanic: up to ~140 km avg.; continental: 40–280 km."],
+ ["plate","s2-2-2","A segment of the broken lithosphere that moves relative to other plates."],
+ ["plate boundary","s2-2-2","Where two plates meet and move relative to each other; site of mountain building, earthquakes, and volcanism."],
+ ["asthenosphere","s2-2-2","Mechanically weak layer below the lithosphere that flows by convection; relatively unbroken; shallower under ridges, deeper under mountains."],
+ ["mesosphere","s2-2-2","The lower mantle: more rigid and immobile than the asthenosphere, with a transition zone at its top."],
+ ["transition zone","s2-2-2","Upper part of the mesosphere (~410–660 km) where pressure and heat continuously change minerals into other forms; seen as changes in seismic velocity."],
+ ["outer core","s2-2-2","The only entirely liquid layer, 2,890–5,150 km deep; its circulating iron and nickel generate the magnetic field."],
+ ["inner core","s2-2-2","Solid center of Earth (~1,220 km), solid because of immense pressure; proven by Inge Lehmann in 1936; grows as the outer core solidifies."],
+ ["magnetic field","s2-2-2","Generated by molten iron and nickel circulating in the outer core; protects Earth's atmosphere and water (Mars lost its own)."],
+ ["passive margin","s2-2-3","Where continental lithosphere grades into oceanic lithosphere on the same plate, with no relative motion (e.g. eastern Americas)."],
+ ["active margin","s2-2-3","Where oceanic and continental plates meet and move relative to each other (e.g. western Americas)."],
+ ["convergent boundary","s2-3","Destructive boundary where plates move toward each other: subduction or collision."],
+ ["divergent boundary","s2-4","Constructive boundary where plates move apart: continental rifts and mid-ocean ridges."],
+ ["transform boundary","s2-5","Strike-slip or conservative boundary where plates slide past each other horizontally."],
+ ["subduction","s2-3-1","A denser plate (usually oceanic) descends beneath a more buoyant plate into the mantle."],
+ ["trench","s2-3-1","Deep seafloor depression where a plate subducts; can be over twice the 3–4 km basin depth (Mariana Trench ~11 km)."],
+ ["accretionary wedge","s2-3-1","Seafloor sediment scraped off and compressed between the plates in a trench; also called a mélange or accretionary prism."],
+ ["terrane","s2-3-1","A large area of land built from continental fragments (e.g. microcontinents) sutured to the accretionary wedge; much of California."],
+ ["slab","s2-3-1","The subducting oceanic plate as it sinks into the mantle."],
+ ["mantle wedge","s2-3-1","Area of mantle above the subducting slab and below the overriding plate, where flux melting happens."],
+ ["flux melting","s2-3-1","Melting caused when volatiles (water, CO2) released from the slab lower the melting point of the mantle wedge."],
+ ["volcanic arc","s2-3-1","Curved chain of volcanoes above a subduction zone, curved because of Earth's curvature."],
+ ["island arc","s2-3-1","A volcanic arc on an oceanic plate whose volcanoes rise above sea level (e.g. Aleutians, Lesser Antilles)."],
+ ["forearc basin","s2-3-1","Part of the overriding plate between the volcanic arc and the trench, with much faulting and deformation."],
+ ["backarc basin","s2-3-1","Basin formed by tension on the interior side of the volcanic arc; may develop into a continental rift."],
+ ["slab rollback","s2-3-1","Proposed mechanism where the slab rolls back instead of sliding under, pulling the overriding plate seaward and stretching it."],
+ ["back-arc faulting","s2-3-1","Buckling and cracking of the overriding plate where young buoyant plates subduct fast; extensional or compressional (thrust)."],
+ ["thrust fault","s2-3-1","Compressional fault that pushes rocks and pieces of plate on top of each other (e.g. eastern Andes). Thin-skinned or thick-skinned."],
+ ["flat-slab subduction","s2-3-1","Shallow, low-angle subduction that deforms the overriding plate far inland; caused the Laramide Orogeny."],
+ ["collision","s2-3-2","Convergence of continental plates without subduction: tall non-volcanic mountains, broad zone of large earthquakes, little volcanism."],
+ ["supercontinent","s2-3-2","A massive accumulation of continents formed as ocean basins close (e.g. Pangea, Rodinia)."],
+ ["Pangea","s2-3-2","The supercontinent formed by collision, central to Wegener's hypothesis; began separating about 200 million years ago."],
+ ["supercontinent cycle","s2-3-2","Repeated gathering of continents into supercontinents and splitting apart, roughly every 500 million years."],
+ ["foreland basin","s2-3-2","Depression in the plate formed by the weight of a nearby mountain belt; e.g. the Persian Gulf beside the Zagros."],
+ ["obduction","s2-3-2","Rare process where part of a continental plate is trapped beneath a descending oceanic plate, then returns, bringing ophiolites up."],
+ ["rift-to-drift","s2-4","A continental rift splits a plate, seawater fills the gap, and the pieces drift apart as separate continents."],
+ ["normal fault","s2-4-1","Extension fault formed as a plate is pulled apart and thinned."],
+ ["rift valley","s2-4-1","Deep depression where blocks between large faults drop down during rifting."],
+ ["graben","s2-4-1","Keystone-shaped block of crust dropped down between faults in a rift."],
+ ["horst","s2-4-1","Raised block (shoulder) between grabens."],
+ ["half-graben","s2-4-1","A block where only one side has dropped down."],
+ ["craton","s2-4-1","The old, stable interior of a continent, where rifting does not occur."],
+ ["failed rift arm","s2-4-1","A rift seam with little or no tectonic activity; remains a weak spot (e.g. Mississippi Valley Embayment)."],
+ ["aulacogen","s2-4-1","What a failed rift arm may develop into: a lasting weak zone in the continental plate."],
+ ["triple junction","s2-4-1","Where three divergent boundaries develop near each other, e.g. the Afar Triangle."],
+ ["decompression melting","s2-4-1","Melting caused by lowering pressure as plates pull apart; the source of rift and mid-ocean ridge magma."],
+ ["carbonatite","s2-4-1","Relatively cold, liquid carbonate lava, erupted by Ol Doinyo Lengai in Tanzania."],
+ ["mid-ocean ridge","s2-4-2","Underwater volcanic mountain range at a divergent boundary; the only place new oceanic lithosphere is made."],
+ ["spreading center","s2-4-2","Another name for a mid-ocean ridge."],
+ ["abyssal plain","s2-4-2","Wide, low, relatively featureless seafloor formed as lithosphere cools and settles away from the ridge."],
+ ["Vine-Matthews-Morley hypothesis","s2-4-2","Explains the symmetrical magnetic stripes at ridges as Earth's field imprinted in new rock as it cools."],
+ ["Curie point","s2-4-2","The temperature below which a magnetic field gets locked into magnetic minerals."],
+ ["magnetic reversal","s2-4-2","Periodic swapping of Earth's magnetic north and south poles, recorded as alternating stripes."],
+ ["hydrothermal vent","s2-4-2","Fissure at a ridge where seawater circulates through hot rock and emerges carrying minerals and gases (a black smoker)."],
+ ["chemosynthesis","s2-4-2","Making food from chemical energy (here, sulfur compounds) instead of sunlight; supports vent communities."],
+ ["dextral","s2-5","Right-lateral: from one plate, the opposite plate moves to the right."],
+ ["sinistral","s2-5","Left-lateral: from one plate, the opposite plate moves to the left."],
+ ["fracture zone","s2-5","Aseismic (earthquake-free) zone of transform faults near mid-ocean ridges that accommodates different spreading rates."],
+ ["restraining bend","s2-5-1","Bend where plates are restricted from sliding past; compression (transpression) builds mountains."],
+ ["releasing bend","s2-5-1","Bend where plates are pulled apart; extension (transtension) forms basins, sometimes volcanism."],
+ ["transpression","s2-5-1","Compression in addition to shearing at a transform fault bend (e.g. Big Bend, San Andreas)."],
+ ["transtension","s2-5-1","Extension in addition to shearing at a releasing bend (e.g. Dead Sea, Salton Sea)."],
+ ["piercing point","s2-5-2","A geological feature cut by a fault; matching the separated parts measures fault movement."],
+ ["Wilson Cycle","s2-6","The repeated opening and closing of ocean basins and assembly and breakup of supercontinents; described by J. Tuzo Wilson in 1966."],
+ ["mantle plume","s2-6","Column of super-heated material rising through the mantle, possibly from as deep as the core; thought to feed hotspots."],
+ ["ridge push","s2-6","Hypothesis that mid-ocean spreading centers and their convection push plates apart."],
+ ["slab pull","s2-6","Hypothesis that descending slabs in subduction zones pull plates; best supported by current evidence."],
+ ["gravitational sliding","s2-6","Hypothesis that gravity pulls plates down from elevated ridges across the asthenosphere."],
+ ["hotspot","s2-7","Area where magma continually breaks through a plate, making a volcanic center; a moving plate leaves a chain of volcanoes. Proposed by Wilson in 1963."],
+ ["tomography","s2-7-1","Three-dimensional seismic imaging, used to map the Hawaiian plume toward the lower mantle."],
+ ["supervolcano","s2-7-2","A volcano capable of a super eruption that fills the atmosphere with gas and ash, blocking sunlight (e.g. Yellowstone)."]
+]
+</script>
+<script src="assets/guide.js"></script>
+</body>
+</html>

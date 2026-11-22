@@ -183,3 +183,31 @@ svg text{font-family:var(--font)}
 .notes .flash{background:var(--accent-soft);border-radius:6px;outline:6px solid var(--accent-soft)}
 .notes mark{background:var(--ochre-soft);color:inherit;border-radius:2px}
 .notes .empty{color:var(--muted);font-size:.9rem;padding:1rem 0}
+
+/* Motion diagrams (from Unit 2): SVG groups that slide back and forth or drift. The reduced-motion rule at the top stops them. */
+.mv-in-l{animation:mvinl 3.4s ease-in-out infinite alternate}
+.mv-in-r{animation:mvinr 3.4s ease-in-out infinite alternate}
+.mv-up{animation:mvup 3.4s ease-in-out infinite alternate}
+.mv-down{animation:mvdown 3.4s ease-in-out infinite alternate}
+@keyframes mvinl{from{transform:translateX(-12px)}to{transform:translateX(0)}}
+@keyframes mvinr{from{transform:translateX(12px)}to{transform:translateX(0)}}
+@keyframes mvup{from{transform:translateY(10px)}to{transform:translateY(-10px)}}
+@keyframes mvdown{from{transform:translateY(-10px)}to{transform:translateY(10px)}}
+.drift-l{animation:driftl 6s linear infinite}
+.drift-r{animation:driftr 6s linear infinite}
+@keyframes driftl{from{transform:translateX(0)}to{transform:translateX(-48px)}}
+@keyframes driftr{from{transform:translateX(0)}to{transform:translateX(48px)}}
+.rise{animation:rise 2.4s ease-out infinite}
+@keyframes rise{0%{transform:translateY(14px);opacity:0}30%{opacity:1}100%{transform:translateY(-6px);opacity:0}}
+
+/* Side-by-side pairs (fix, Unit 2 review): tops line up, and paired frames share one height.
+   Each figure spans two subgrid rows (frame, caption); a callout sits in the frame row and stretches to the frame's height. */
+.pair{grid-template-rows:auto auto;row-gap:0;align-items:stretch;margin:1.6rem 0}
+.pair>figure{grid-row:span 2;display:grid;grid-template-rows:subgrid;margin:0}
+.pair>figure .frame{display:flex;align-items:center;justify-content:center}
+.pair>.callout{margin:0;align-self:stretch!important}
+@media (max-width:560px){.pair>.callout{margin-top:1.2rem}.pair>figure+figure{margin-top:1.2rem}}
+/* .same: images in the pair are shown at one height, so diagrams drawn at different scales match */
+.pair.same figure img{height:260px;width:auto;max-width:100%;object-fit:contain}
+/* Contents rail: never justify link text (wrapped titles spread out otherwise) */
+.toc li,.toc a{text-align:left;hyphens:manual}

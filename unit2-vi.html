@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kiến tạo mảng</title>
+<meta name="description" content="Tài liệu ôn tập Học phần 2, giáo trình An Introduction to Geology, Chương 2: Kiến tạo mảng.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&subset=vietnamese&display=swap">
+<link rel="stylesheet" href="assets/guide.css">
+<style>
+/* Unit 2 palette: deep-ocean blue (the seafloor where plates are born) with molten-mantle orange; header bands run crust to core. */
+:root{
+  --fig-prefix:"Hình 2."; --tbl-prefix:"Bảng 2.";
+  --bg:#f3f5f9; --surface:#ffffff; --surface-2:#e6ebf3; --fg:#172031; --muted:#525d72; --line:#cbd3e1;
+  --accent:#1f4f91; --accent-soft:#dbe6f6; --ochre:#b8551a; --ochre-soft:#f8e2d2; --rust:#a8321f;
+  --s1:#d9b77a; --s2:#c97b3c; --s3:#9a3b23; --s4:#4a2a3a; --s5:#1b2238;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1420; --surface:#161c2b; --surface-2:#1f2738; --fg:#e3e7ef; --muted:#9ba4b6; --line:#2f3a50;
+  --accent:#74a6ea; --accent-soft:#1c2c48; --ochre:#f0915a; --ochre-soft:#3d2618; --rust:#ef7b6b;
+  --s1:#8c7448; --s2:#85512b; --s3:#6a2a1a; --s4:#33202b; --s5:#141a2b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1420; --surface:#161c2b; --surface-2:#1f2738; --fg:#e3e7ef; --muted:#9ba4b6; --line:#2f3a50;
+  --accent:#74a6ea; --accent-soft:#1c2c48; --ochre:#f0915a; --ochre-soft:#3d2618; --rust:#ef7b6b;
+  --s1:#8c7448; --s2:#85512b; --s3:#6a2a1a; --s4:#33202b; --s5:#141a2b; color-scheme:dark}
+</style>
+</head>
+<body>
+<div lang="vi">
+<header class="hero" id="top">
+  <div class="strata" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Học phần 2 · Chương 2 · Nhập môn Địa chất học</div>
+      <h1>Kiến tạo mảng</h1>
+      <p>Thuyết trôi dạt lục địa của Wegener đã trở thành học thuyết thống nhất của địa chất học như thế nào, các lớp của Trái Đất là gì, và các mảng hội tụ, tách xa, trượt qua nhau đã tạo nên núi, động đất và núi lửa ra sao.</p>
+    </div>
+    <div class="hero-tools">
+      <a class="btn" href="unit2.html" lang="en" hreflang="en">English</a>
+      <button class="btn" id="themeBtn" type="button" aria-label="Chuyển chế độ sáng hoặc tối">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Chế độ tối</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="toc" aria-label="Mục lục">
+    <h2>Mục lục</h2>
+    <ol>
+      <li><a href="#outcomes">Mục tiêu học tập</a></li>
+      <li><a href="#s2-0"><span class="num">2.0</span>Cuộc cách mạng địa chất</a></li>
+      <li><a href="#s2-1"><span class="num">2.1</span>Trôi dạt lục địa</a>
+        <ol>
+          <li><a href="#s2-1-1"><span class="num">2.1.1</span>Bằng chứng ban đầu</a></li>
+          <li><a href="#s2-1-2"><span class="num">2.1.2</span>Thiếu cơ chế</a></li>
+          <li><a href="#s2-1-3"><span class="num">2.1.3</span>Đến kiến tạo mảng</a></li>
+        </ol>
+      </li>
+      <li><a href="#s2-2"><span class="num">2.2</span>Các lớp của Trái Đất</a>
+        <ol>
+          <li><a href="#s2-2-1"><span class="num">2.2.1</span>Các lớp hóa học</a></li>
+          <li><a href="#s2-2-2"><span class="num">2.2.2</span>Các lớp vật lý</a></li>
+          <li><a href="#s2-2-3"><span class="num">2.2.3</span>Ranh giới mảng</a></li>
+        </ol>
+      </li>
+      <li><a href="#s2-3"><span class="num">2.3</span>Ranh giới hội tụ</a>
+        <ol>
+          <li><a href="#s2-3-1"><span class="num">2.3.1</span>Hút chìm</a></li>
+          <li><a href="#s2-3-2"><span class="num">2.3.2</span>Va chạm</a></li>
+        </ol>
+      </li>
+      <li><a href="#s2-4"><span class="num">2.4</span>Ranh giới phân kỳ</a>
+        <ol>
+          <li><a href="#s2-4-1"><span class="num">2.4.1</span>Tách giãn lục địa</a></li>
+          <li><a href="#s2-4-2"><span class="num">2.4.2</span>Sống núi giữa đại dương</a></li>
+        </ol>
+      </li>
+      <li><a href="#s2-5"><span class="num">2.5</span>Ranh giới chuyển dạng</a>
+        <ol>
+          <li><a href="#s2-5-1"><span class="num">2.5.1</span>Ép trượt &amp; giãn trượt</a></li>
+          <li><a href="#s2-5-2"><span class="num">2.5.2</span>Điểm xuyên cắt</a></li>
+        </ol>
+      </li>
+      <li><a href="#s2-6"><span class="num">2.6</span>Chu trình Wilson</a></li>
+      <li><a href="#s2-7"><span class="num">2.7</span>Điểm nóng</a>
+        <ol>
+          <li><a href="#s2-7-1"><span class="num">2.7.1</span>Hawaii</a></li>
+          <li><a href="#s2-7-2"><span class="num">2.7.2</span>Yellowstone</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary">Tóm tắt</a></li>
+      <li><a href="#resources">Tài liệu tham khảo</a></li>
+      <li><a href="#factcheck">Ghi chú kiểm chứng</a></li>
+      <li><a href="#credits">Nguồn &amp; trích dẫn</a></li>
+    </ol>
+  </nav>
+
+<main>
+
+<section id="outcomes">
+  <h2 class="sec">Mục tiêu học tập</h2>
+  <p class="lead">Học xong Chương 2, bạn cần làm được từng việc dưới đây. Nhãn cho biết nội dung nằm ở mục nào.</p>
+  <ul class="outcomes">
+    <li><a class="tag" href="#s2-1">2.1</a><span>Mô tả việc các ý tưởng về kiến tạo mảng bắt đầu từ giả thuyết trôi dạt lục địa của Alfred Wegener.</span></li>
+    <li><a class="tag" href="#s2-2">2.2</a><span>Mô tả các lớp vật lý và hóa học của Trái Đất và ảnh hưởng của chúng đến chuyển động của mảng.</span></li>
+    <li><a class="tag" href="#s2-2-3">2.2.3</a><span>Giải thích chuyển động ở ba loại ranh giới mảng gây ra động đất, núi lửa và quá trình tạo núi như thế nào.</span></li>
+    <li><a class="tag" href="#s2-3">2.3</a><span>Nhận biết ranh giới hội tụ, gồm hút chìm và va chạm, là nơi các mảng tiến lại gần nhau.</span></li>
+    <li><a class="tag" href="#s2-4">2.4</a><span>Nhận biết ranh giới phân kỳ, gồm các đới tách giãn và sống núi giữa đại dương, là nơi các mảng tách xa nhau.</span></li>
+    <li><a class="tag" href="#s2-5">2.5</a><span>Giải thích ranh giới chuyển dạng là nơi hai mảng kề nhau trượt cắt qua nhau.</span></li>
+    <li><a class="tag" href="#s2-6">2.6</a><span>Mô tả chu trình Wilson: tách giãn lục địa, hình thành bồn đại dương, hút chìm mảng và khép bồn đại dương.</span></li>
+    <li><a class="tag" href="#s2-7">2.7</a><span>Giải thích cách dùng dấu vết của điểm nóng (nơi mácma liên tục dâng lên) để tính chuyển động của mảng.</span></li>
+  </ul>
+  <div class="callout">
+    <h4>Cách dùng tài liệu này</h4>
+    <p>Các từ gạch chân là thuật ngữ chính. Nhấn vào một từ, hoặc mở <b>Thuật ngữ</b> ở góc dưới bên phải, để đọc và tìm mọi định nghĩa trong chương. Ô tìm kiếm nhận cả tiếng Việt không dấu và tên tiếng Anh. Các sơ đồ động sẽ đứng yên nếu thiết bị của bạn bật chế độ giảm chuyển động.</p>
+  </div>
+</section>
+
+<!-- Intro -->
+<section id="s2-0">
+  <h2 class="sec"><span class="n">2.0</span>Một cuộc cách mạng trong địa chất học</h2>
+  <p>Có những ý tưởng buộc giới khoa học phải xem xét lại toàn bộ một ngành, tức một <button class="term" data-term="chuyển đổi hệ hình">chuyển đổi hệ hình</button> (paradigm shift). Sinh học có cuốn <i>Nguồn gốc các loài</i> của Darwin (1859), các quy luật di truyền của Mendel (1866) và mô hình cấu trúc ADN của Watson, Crick và Franklin (1953); vật lý có thuyết tương đối và cơ học lượng tử của Einstein. Với địa chất học, cuộc cách mạng ấy là <button class="term" data-term="kiến tạo mảng">kiến tạo mảng</button> (plate tectonics): học thuyết cho rằng chuyển động của những khối lớn ở các lớp ngoài của Trái Đất tạo ra động đất, núi và núi lửa. Nhiều quá trình của Trái Đất trở nên dễ hiểu hơn khi nhìn qua lăng kính này, nên giáo trình trình bày nó đầu tiên.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/plate-map.webp" alt="Bản đồ thế giới thể hiện mọi mảng kiến tạo đã biết, loại ranh giới và hướng chuyển động của các mảng." loading="lazy" width="1200" height="603"></div>
+    <figcaption>Bản đồ chi tiết mọi mảng đã biết, ranh giới và chuyển động của chúng (chú thích trên ảnh bằng tiếng Anh). Mở ảnh trong thẻ mới để phóng to.<span class="credit">Eric Gaba (Sting), CC BY-SA, trích từ <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+</section>
+
+<!-- 2.1 -->
+<section id="s2-1">
+  <h2 class="sec"><span class="n">2.1</span>Giả thuyết trôi dạt lục địa của Alfred Wegener</h2>
+  <p>Alfred Wegener (1880–1930) là nhà khoa học người Đức chuyên về khí tượng học và khí hậu học. Năm 1910, ông không đồng ý với cách giải thích được chấp nhận lúc đó rằng cầu đất liền Bering hình thành do <button class="term" data-term="đẳng tĩnh">đẳng tĩnh</button> (isostasy) và các cầu tương tự từng nối các lục địa. Sau khi tổng hợp tài liệu, ông công bố giả thuyết <button class="term" data-term="trôi dạt lục địa">trôi dạt lục địa</button> (continental drift): các lục địa ban đầu nối liền nhau rồi trôi dạt ra xa. Ông chưa có cơ chế cụ thể, nhưng có một danh sách dài bằng chứng.</p>
+
+  <h3 id="s2-1-1">2.1.1 Bằng chứng ban đầu cho thuyết trôi dạt lục địa</h3>
+  <p><b>Các lục địa khớp nhau.</b> Ngay từ những bản đồ thế giới đầu tiên, người ta đã thấy bờ biển Nam Mỹ và châu Phi khớp nhau; năm 1858, Antonio Snider-Pellegrini đã nghiên cứu sơ bộ về sự tách rời lục địa và các hóa thạch tương đồng. Điểm khác biệt của Wegener là <b>tổng hợp một lượng lớn dữ liệu vào một chỗ</b>, và ông ghép theo mép thật của lục địa, tức <button class="term" data-term="thềm lục địa">thềm lục địa</button> (continental shelf), thay vì đường bờ biển hiện nay. Nhờ vậy các mảnh ghép khớp hơn.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/snider-pellegrini.webp" alt="Hai quả địa cầu đặt cạnh nhau: một quả có châu Mỹ nối liền với châu Âu và châu Phi, quả kia có chúng bị Đại Tây Dương ngăn cách." loading="lazy" width="640" height="377"></div>
+    <figcaption>Bản đồ năm 1858 của Snider-Pellegrini cho thấy các lục địa ghép lại ("avant", trước) và tách rời ("après", sau).<span class="credit">Antonio Snider-Pellegrini. Phạm vi công cộng.</span></figcaption>
+  </figure>
+  <p><b>Hóa thạch, đá và núi.</b> Wegener so sánh đá, núi, hóa thạch và dấu vết băng hà giống nhau ở hai bờ đại dương. Hóa thạch <i>Mesosaurus</i>, một loài bò sát sống dưới nước nguyên thủy, có ở bờ biển cả châu Phi lẫn Nam Mỹ. Hóa thạch loài bò sát <i>Lystrosaurus</i> có ở châu Phi, Ấn Độ và châu Nam Cực. Đây là những sinh vật sống trên cạn, không thể bơi qua cả một đại dương.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/fossil-map.webp" alt="Bản đồ các lục địa phía nam ghép lại, với các dải màu cho thấy nơi tìm thấy hóa thạch Cynognathus, Mesosaurus, Lystrosaurus và Glossopteris trải liền qua các lục địa." loading="lazy" width="900" height="692"></div>
+    <figcaption>Các hóa thạch nối liền những lục địa của Gondwana (các lục địa phía nam của Pangaea). Khi ghép các lục địa lại, vùng phân bố của mỗi hóa thạch tạo thành một dải liên tục.<span class="credit">Osvaldocangaspadilla. Phạm vi công cộng.</span></figcaption>
+  </figure>
+  <p><b>Phản bác bằng cầu lục địa.</b> Những người phản đối cho rằng các <button class="term" data-term="cầu lục địa">cầu lục địa</button> (land bridge) vượt đại dương đã cho động thực vật đi qua, rồi bị bào mòn mất. Vấn đề là khó có một cây cầu đất đủ cao và đủ dài để bắc qua một đại dương rộng và sâu.</p>
+  <p><b>Bằng chứng khí hậu.</b> Sông băng từng tồn tại ở những vùng vốn rất nóng (nam châu Phi, Ấn Độ, Úc, bán đảo Ả Rập), và Wegener còn tìm thấy hóa thạch thực vật nhiệt đới trong vòng Bắc Cực. Cầu lục địa không giải thích được các dị thường khí hậu này. Lục địa di chuyển là cách giải thích phù hợp nhất với mọi quan sát về khí hậu, đá và hóa thạch.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Các nhóm bằng chứng của Wegener cho thuyết trôi dạt lục địa.</caption>
+      <thead><tr><th>Bằng chứng</th><th>Quan sát</th><th>Vì sao trôi dạt giải thích được</th></tr></thead>
+      <tbody>
+        <tr><td>Lục địa khớp nhau</td><td>Nam Mỹ và châu Phi khớp nhau, khớp nhất theo thềm lục địa.</td><td>Chúng từng là một khối đất liền.</td></tr>
+        <tr><td>Hóa thạch</td><td><i>Mesosaurus</i> ở châu Phi và Nam Mỹ; <i>Lystrosaurus</i> ở châu Phi, Ấn Độ, châu Nam Cực.</td><td>Động vật trên cạn không thể bơi qua đại dương.</td></tr>
+        <tr><td>Đá và núi</td><td>Đá và dải núi giống nhau ở hai bờ đại dương.</td><td>Các dải này liền mạch trước khi tách ra.</td></tr>
+        <tr><td>Khí hậu (băng hà)</td><td>Trầm tích băng hà ở nam châu Phi, Ấn Độ, Úc, Ả Rập vốn ấm.</td><td>Những vùng này từng nằm gần cực.</td></tr>
+        <tr><td>Khí hậu (nhiệt đới)</td><td>Hóa thạch thực vật nhiệt đới trong vòng Bắc Cực.</td><td>Vùng đất đó từng có khí hậu ấm.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s2-1-2">2.1.2 Thiếu cơ chế</h3>
+  <p>Suốt cuộc đời Wegener, ý tưởng của ông bị coi là khoa học ngoài lề. Điểm yếu lớn nhất là <b>không đưa ra được cơ chế đáng tin</b> cho việc lục địa di chuyển, trong khi muốn thay đổi quan điểm bảo thủ của giới khoa học cần bằng chứng đặc biệt thuyết phục. Những người ủng hộ khác viện dẫn Trái Đất giãn nở, co lại, hay thậm chí nguồn gốc Mặt Trăng. Wegener dùng lực ly tâm và <button class="term" data-term="tiến động">tiến động</button> (precession), một mô hình về sau bị chứng minh là sai. Ông cũng phỏng đoán về sự tách giãn đáy đại dương với gợi ý về đối lưu nhưng không chứng minh được. Ngày nay ta biết <button class="term" data-term="đối lưu">đối lưu</button> (convection), cùng với trọng lực và mật độ, là một trong những lực chính đẩy các mảng.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/convection.gif" alt="Ảnh động một chất lưu được đốt nóng từ một phía: vật chất dâng lên phía trên nguồn nhiệt, lan ra trên đỉnh, nguội đi và chìm xuống ở xa nguồn nhiệt." loading="lazy" width="400" height="300"></div>
+    <figcaption>Ý tưởng cơ bản của đối lưu: nguồn nhiệt không đều trong một chất lưu khiến vật chất dâng lên gần nguồn nhiệt và chìm xuống ở xa nó.<span class="credit">Oni Lukos, CC BY-SA, trích từ <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+
+  <h3 id="s2-1-3">2.1.3 Từ trôi dạt lục địa đến học thuyết kiến tạo mảng</h3>
+  <p>Wegener mất năm 1930 trong một chuyến thám hiểm ở Greenland. Từ thập niên 1950 bắt đầu có bằng chứng mới, và đến thập niên 1960 các nhà khoa học đã tìm ra cơ chế còn thiếu, <button class="term" data-term="tách giãn đáy đại dương">tách giãn đáy đại dương</button> (seafloor spreading), nên thuyết trôi dạt lục địa được chấp nhận thành <b>học thuyết kiến tạo mảng</b>. Dữ liệu GPS và động đất hiện nay vẫn tiếp tục ủng hộ học thuyết này.</p>
+  <figure>
+    <div class="frame">
+      <ul class="timeline">
+        <li><time>1858</time><span>Snider-Pellegrini vẽ bản đồ các lục địa ghép lại với nhau.</span></li>
+        <li><time>1910</time><span>Wegener đặt câu hỏi về thuyết cầu lục địa và bắt đầu xây dựng giả thuyết trôi dạt.</span></li>
+        <li><time>1930</time><span>Wegener qua đời ở Greenland; thuyết trôi dạt vẫn bị coi là ngoài lề.</span></li>
+        <li class="geo"><time>1947</time><span>Bắt đầu đo SONAR giữa Đại Tây Dương; Heezen và Tharp vẽ bản đồ sống núi giữa Đại Tây Dương.</span></li>
+        <li><time>1959</time><span>Harry Hess đề xuất thuyết tách giãn đáy đại dương.</span></li>
+        <li class="geo"><time>1963</time><span>Các dải đảo cực từ được dùng để ủng hộ thuyết tách giãn đáy đại dương.</span></li>
+        <li><time>1960s</time><span>Đủ bằng chứng: trôi dạt được chấp nhận thành kiến tạo mảng. J. Tuzo Wilson ghép nối toàn bộ bức tranh.</span></li>
+      </ul>
+      <div class="legend"><span><i></i>Ý tưởng và con người</span><span><i class="geo"></i>Bằng chứng then chốt từ đáy biển</span></div>
+    </div>
+    <figcaption>Dòng thời gian từ trôi dạt lục địa đến kiến tạo mảng, theo các mốc năm trong chương.<span class="credit">Vẽ cho tài liệu này dựa trên mục 2.1.</span></figcaption>
+  </figure>
+
+  <h4>Lập bản đồ đáy đại dương</h4>
+  <p>Từ năm 1947, các nhà nghiên cứu dùng một dạng cải biến của <button class="term" data-term="SONAR">SONAR</button> để lập bản đồ vùng giữa Đại Tây Dương. Bruce Heezen và Marie Tharp vẽ bản đồ đáy biển chi tiết đầu tiên, cho thấy <button class="term" data-term="sống núi giữa đại dương">sống núi giữa Đại Tây Dương</button> (Mid-Atlantic Ridge): một dãy núi bazan chạy suốt chiều dài Đại Tây Dương, có thành phần hóa học và kích thước khác hẳn núi trên lục địa. Năm 1959, Harry Hess đề xuất thuyết tách giãn đáy đại dương: sống núi giữa đại dương là "nhà máy sản xuất mảng", nơi mảng đại dương mới được tạo ra từ các dãy núi lửa dài. Sau đó các đứt gãy chuyển dạng vuông góc với sống núi được bổ sung để giải thích tốc độ di chuyển khác nhau, và việc phát hiện tâm chấn dọc sống núi đã gắn động đất với chuyển động mảng.</p>
+  <p><b>Trầm tích đáy biển</b> là một manh mối khác. Trầm tích mỏng hơn dự đoán, và lớp mỏng nhất nằm gần sống núi. Điều đó có nghĩa sống núi trẻ hơn đáy biển xung quanh, tức đáy biển không đứng yên một chỗ.</p>
+
+  <h4>Cổ từ học</h4>
+  <p><button class="term" data-term="cổ từ học">Cổ từ học</button> (paleomagnetism) nghiên cứu từ trường "đóng băng" trong đá, giống như một chiếc la bàn hóa thạch, và đã cung cấp <b>bằng chứng xác thực đầu tiên</b> cho chuyển động mảng. Đá mácma chứa khoáng vật từ tính như <button class="term" data-term="magnetit">magnetit</button> (magnetite) hữu ích nhất: khi đá còn lỏng (mácma hoặc dung nham), các khoáng vật định hướng theo từ trường Trái Đất; khi đá nguội, sự định hướng ấy bị giữ lại. Bản ghi gồm <button class="term" data-term="độ từ khuynh">độ từ khuynh</button> (inclination, liên quan đến vĩ độ) và <button class="term" data-term="độ từ thiên">độ từ thiên</button> (declination, liên quan đến hướng bắc từ).</p>
+  <p>Từ lâu các nhà khoa học đã thấy <b>dị thường từ dạng dải</b> xếp đối xứng hai bên sống núi giữa đại dương, với cực từ đảo ngược ở các dải xen kẽ. Đến năm 1963, Hess và những người khác dùng các dải đảo cực này để ủng hộ thuyết tách giãn đáy đại dương (xem thêm Lawrence W. Morley; chi tiết ở <a href="#s2-4-2">mục 2.4.2</a>). Từ tính của đá trên lục địa cũng chỉ về hướng rất xa cực bắc từ hiện nay; thêm yếu tố lục địa di chuyển giải thích dữ liệu tốt hơn là chỉ cho rằng cực từ dịch chuyển.</p>
+
+  <h4>Đới Wadati-Benioff</h4>
+  <p>Các nhà nghiên cứu khác liên hệ rãnh đại dương và cung đảo với động đất. Tâm chấn vạch ra hình dạng của mảng đại dương chìm vào manti, nằm trên những mặt phẳng bắt đầu gần rãnh và nghiêng xuống dưới lục địa hoặc cung đảo. Các đới động đất sâu này gọi là <button class="term" data-term="đới Wadati-Benioff">đới Wadati-Benioff</button> (Wadati-Benioff zone).</p>
+  <div class="pair">
+    <figure>
+      <div class="frame"><img src="images/unit2/benioff.gif" alt="Mặt cắt thạch quyển đại dương chìm dưới thạch quyển lục địa, các chấn tiêu động đất được đánh dấu dọc mặt trên của phiến đang chìm." loading="lazy" width="297" height="243"></div>
+      <figcaption>Đới Wadati-Benioff: động đất xảy ra dọc theo phiến hút chìm đi xuống.<span class="credit">USGS. Phạm vi công cộng.</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>J. Tuzo Wilson</h4>
+      <p>Khi bằng chứng ngày càng nhiều, J. Tuzo Wilson là người đầu tiên ghép nối toàn bộ bức tranh bằng ý tưởng <b>các bồn đại dương mở ra và khép lại</b> (<a href="#s2-6">mục 2.6</a>). Ngay sau đó, các nhà khoa học xây dựng mô hình các mảng chuyển động tương đối với nhau với ranh giới rõ ràng, và cuộc cách mạng kiến tạo mảng bén rễ.</p>
+    </div>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Bài kiểm tra mục 2.1 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<!-- 2.2 -->
+<section id="s2-2">
+  <h2 class="sec"><span class="n">2.2</span>Các lớp của Trái Đất</h2>
+  <p>Thông tin trực tiếp về lòng Trái Đất rất ít. Phần lớn hiểu biết đến từ các mô hình, dữ liệu <button class="term" data-term="sóng địa chấn">sóng địa chấn</button> và thiên thạch. Có hai cách chia lớp Trái Đất: theo <b>thành phần hóa học</b> và theo <b>tính chất vật lý</b>.</p>
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 720 430" role="img" aria-labelledby="lay-t" style="width:100%;min-width:560px;height:auto">
+        <title id="lay-t">Hai cột so sánh các lớp hóa học của Trái Đất (vỏ, manti, nhân) với các lớp vật lý (thạch quyển, quyển mềm, lớp phủ giữa, nhân ngoài, nhân trong), với độ sâu ranh giới ở giữa.</title>
+        <text x="225" y="30" text-anchor="middle" font-weight="700" font-size="14" class="svg-ink">Các lớp hóa học</text>
+        <text x="495" y="30" text-anchor="middle" font-weight="700" font-size="14" class="svg-ink">Các lớp vật lý</text>
+        <rect x="160" y="50" width="130" height="12" fill="var(--s1)"/>
+        <rect x="160" y="62" width="130" height="188" fill="var(--s2)" opacity=".8"/>
+        <rect x="160" y="250" width="130" height="80" fill="var(--rust)" opacity=".75"/>
+        <rect x="160" y="330" width="130" height="62" fill="#f2c46a"/>
+        <line x1="160" y1="330" x2="290" y2="330" stroke="var(--fg)" stroke-dasharray="4 3"/>
+        <rect x="430" y="50" width="130" height="36" fill="var(--s1)"/>
+        <rect x="430" y="86" width="130" height="44" fill="var(--ochre)" opacity=".75"/>
+        <rect x="430" y="130" width="130" height="28" fill="var(--s2)" opacity=".6"/>
+        <rect x="430" y="158" width="130" height="92" fill="var(--s3)" opacity=".75"/>
+        <rect x="430" y="250" width="130" height="80" fill="var(--rust)" opacity=".75"/>
+        <rect x="430" y="330" width="130" height="62" fill="#f2c46a"/>
+        <rect x="160" y="50" width="130" height="342" fill="none" stroke="var(--fg)"/>
+        <rect x="430" y="50" width="130" height="342" fill="none" stroke="var(--fg)"/>
+        <g stroke="var(--muted)" stroke-dasharray="2 3">
+          <line x1="290" y1="62" x2="430" y2="62"/><line x1="290" y1="86" x2="430" y2="86"/>
+          <line x1="290" y1="130" x2="430" y2="130"/><line x1="290" y1="158" x2="430" y2="158"/>
+          <line x1="290" y1="250" x2="430" y2="250"/><line x1="290" y1="330" x2="430" y2="330"/>
+        </g>
+        <g font-size="11.5" text-anchor="middle" font-family="var(--mono)" class="svg-muted">
+          <text x="360" y="46">0 km</text>
+          <text x="360" y="59">Moho 5–40 km</text>
+          <text x="360" y="82">đáy thạch quyển</text>
+          <text x="360" y="126">~410 km</text>
+          <text x="360" y="154">~660 km</text>
+          <text x="360" y="246">2.890 km</text>
+          <text x="360" y="326">5.150 km</text>
+          <text x="360" y="408">tâm Trái Đất</text>
+        </g>
+        <g font-size="13" text-anchor="end">
+          <text x="150" y="60" font-weight="700" class="svg-ink">Vỏ</text>
+          <text x="150" y="150" font-weight="700" class="svg-ink">Manti</text>
+          <text x="150" y="166" font-size="11.5" class="svg-muted">chủ yếu peridotit</text>
+          <text x="150" y="182" font-size="11.5" class="svg-muted">thể tích lớn nhất</text>
+          <text x="150" y="315" font-weight="700" class="svg-ink">Nhân</text>
+          <text x="150" y="331" font-size="11.5" class="svg-muted">sắt, niken,</text>
+          <text x="150" y="346" font-size="11.5" class="svg-muted">có thể có oxy</text>
+        </g>
+        <g font-size="13" text-anchor="start">
+          <text x="570" y="66" font-weight="700" class="svg-ink">Thạch quyển</text>
+          <text x="570" y="80" font-size="11.5" class="svg-muted">các mảng cứng</text>
+          <text x="570" y="108" font-weight="700" class="svg-ink">Quyển mềm</text>
+          <text x="570" y="122" font-size="11.5" class="svg-muted">yếu, chảy được</text>
+          <text x="570" y="148" font-size="11.5" class="svg-muted">đới chuyển tiếp</text>
+          <text x="570" y="200" font-weight="700" class="svg-ink">Lớp phủ giữa</text>
+          <text x="570" y="214" font-size="11.5" class="svg-muted">manti dưới, cứng</text>
+          <text x="570" y="286" font-weight="700" class="svg-ink">Nhân ngoài</text>
+          <text x="570" y="300" font-size="11.5" class="svg-muted">lỏng</text>
+          <text x="570" y="360" font-weight="700" class="svg-ink">Nhân trong</text>
+          <text x="570" y="374" font-size="11.5" class="svg-muted">rắn (do áp suất)</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Các lớp hóa học và vật lý của Trái Đất đặt cạnh nhau. Độ sâu lấy từ chương; thang đứng được kéo giãn gần bề mặt nên sơ đồ không đúng tỉ lệ. Đáy thạch quyển thay đổi: tới khoảng 140 km dưới đại dương và 40–280 km dưới lục địa.<span class="credit">Sơ đồ vẽ cho tài liệu này dựa trên mục 2.2.</span></figcaption>
+  </figure>
+
+  <h3 id="s2-2-1">2.2.1 Các lớp hóa học</h3>
+  <p>Hai yếu tố chính, <b>nhiệt độ và áp suất</b>, tạo ra ba lớp hóa học riêng biệt.</p>
+  <h4>Vỏ Trái Đất</h4>
+  <p><button class="term" data-term="vỏ Trái Đất">Vỏ Trái Đất</button> (crust) là lớp hóa học ngoài cùng. <button class="term" data-term="vỏ lục địa">Vỏ lục địa</button> có mật độ tương đối thấp, thành phần giống granit. <button class="term" data-term="vỏ đại dương">Vỏ đại dương</button> có mật độ tương đối cao (nhất là khi lạnh và già), thành phần giống bazan. Phần trên của vỏ có tính <button class="term" data-term="giòn">giòn</button> (như thủy tinh hay đồ gốm, vỡ khi chịu lực, nhất là lực tác dụng nhanh), nên phần lớn động đất xảy ra ở đây. Phần sâu hơn nóng hơn và chịu áp suất lớn hơn nên có tính <button class="term" data-term="dẻo">dẻo</button> (như nhựa mềm hay ma tít, biến dạng khi chịu lực).</p>
+  <p>Đáy của vỏ được đánh dấu bằng một bước tăng lớn của <button class="term" data-term="vận tốc địa chấn">vận tốc địa chấn</button>. Đó là <button class="term" data-term="mặt gián đoạn Mohorovičić">mặt gián đoạn Mohorovičić (Moho)</button>, được Andrija Mohorovičić phát hiện năm 1909 khi nghiên cứu sóng động đất ở Croatia. Sự thay đổi này do khác biệt hóa học lớn giữa vỏ và manti. Moho nằm khoảng <b>5 km</b> dưới đáy biển và <b>30–40 km</b> dưới lục địa; gần các đợt tạo núi lớn (<button class="term" data-term="kiến tạo sơn">kiến tạo sơn</button>, tức tạo núi, orogeny) độ sâu của nó tăng gấp đôi.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/moho-depth.webp" alt="Bản đồ thế giới tô màu theo độ sâu Moho: vỏ mỏng dưới đại dương màu xanh, dày hơn dưới lục địa và dày nhất dưới dãy Himalaya và Andes." loading="lazy" width="1000" height="555"></div>
+    <figcaption>Bản đồ độ sâu Moho toàn cầu. Moho nông nhất dưới đại dương và sâu nhất dưới các đai núi lớn.<span class="credit">AllenMcC., CC BY-SA, trích từ <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+  <h4>Manti</h4>
+  <p><button class="term" data-term="manti">Manti</button> (mantle) nằm giữa vỏ và nhân, xuống tới khoảng <b>2.900 km</b>, và là lớp hóa học có thể tích lớn nhất. Hiểu biết về manti chủ yếu đến từ sóng địa chấn, cùng hai loại mẫu: <button class="term" data-term="ophiolit">ophiolit</button> (ophiolite, những mảnh manti trồi qua vỏ và lộ ra như một phần đáy đại dương) và <button class="term" data-term="thể tù">thể tù</button> (xenolith, những mảnh đá được mácma mang lên mặt đất khi phun trào). Phần lớn thể tù là <button class="term" data-term="peridotit">peridotit</button>, một loại đá mácma siêu mafic, nên các nhà khoa học cho rằng manti chủ yếu là peridotit.</p>
+  <h4>Nhân</h4>
+  <p><button class="term" data-term="nhân Trái Đất">Nhân Trái Đất</button> (core) có phần lỏng và phần rắn, chủ yếu là <b>sắt và niken</b>, có thể có ít oxy. Nhân được phát hiện lần đầu qua dữ liệu địa chấn năm 1906. Thiên thạch thường chứa nhiều sắt hơn đá trên bề mặt, và các nhà khoa học cho rằng Trái Đất hình thành từ vật chất thiên thạch; sắt và niken chìm vào trung tâm, nơi phần lỏng của nhân hình thành.</p>
+
+  <h3 id="s2-2-2">2.2.2 Các lớp vật lý</h3>
+  <p>Trái Đất cũng có thể chia thành <b>năm lớp vật lý</b> theo cách mỗi lớp phản ứng với ứng suất. Hai hệ thống có phần trùng nhau (cùng chung ranh giới nhân–manti) nhưng khác nhau ở nhiều điểm quan trọng.</p>
+  <h4>Thạch quyển</h4>
+  <p><button class="term" data-term="thạch quyển">Thạch quyển</button> (lithosphere; tiếng Hy Lạp <i>lithos</i> là đá) là lớp vật lý ngoài cùng. <b>Thạch quyển đại dương</b> mỏng và tương đối cứng: dày gần như bằng 0 ở sống núi giữa đại dương, trung bình 140 km ở nơi khác. <b>Thạch quyển lục địa</b> dày hơn (40–280 km) và dẻo hơn nhiều, nhất là ở phần sâu. Thạch quyển bị chia thành các <button class="term" data-term="mảng">mảng</button> (plate). <button class="term" data-term="ranh giới mảng">Ranh giới mảng</button> là nơi hai mảng gặp nhau và chuyển động tương đối với nhau; tại đó ta thấy quá trình tạo núi, động đất và núi lửa.</p>
+  <h4>Quyển mềm</h4>
+  <p><button class="term" data-term="quyển mềm">Quyển mềm</button> (asthenosphere; <i>astheno-</i> nghĩa là thiếu sức bền) nằm dưới thạch quyển. Lớp này yếu về cơ học nên chuyển động và chảy theo các dòng đối lưu do nhiệt từ nhân gây ra. Khác với thạch quyển, quyển mềm tương đối liền khối (thấy qua sóng địa chấn). Độ sâu của nó phụ thuộc nhiệt độ: gần bề mặt hơn ở sống núi giữa đại dương và sâu hơn nhiều dưới núi và trung tâm các mảng.</p>
+  <h4>Lớp phủ giữa</h4>
+  <p><button class="term" data-term="lớp phủ giữa">Lớp phủ giữa</button> (quyển giữa, mesosphere), đôi khi gọi là manti dưới, cứng và kém linh động hơn quyển mềm. Phần trên của nó là <button class="term" data-term="đới chuyển tiếp">đới chuyển tiếp</button> (khoảng 410 đến 660 km), nơi áp suất và nhiệt độ rất cao khiến khoáng vật liên tục biến đổi sang dạng khác; các nhà địa chấn học nhận ra đới này qua sự thay đổi vận tốc địa chấn. Bên dưới đới chuyển tiếp, quyển giữa khá đồng nhất cho đến nhân.</p>
+  <h4>Nhân ngoài và nhân trong</h4>
+  <p><button class="term" data-term="nhân ngoài">Nhân ngoài</button> (outer core) là <b>lớp duy nhất hoàn toàn lỏng</b>, từ độ sâu 2.890 đến 5.150 km (dày khoảng 2.300 km). Năm 1936, nhà địa vật lý Đan Mạch Inge Lehmann dùng dữ liệu địa chấn chứng minh có một <button class="term" data-term="nhân trong">nhân trong</button> (inner core) rắn bên trong; nhân trong dày khoảng 1.220 km. Phần nóng nhất của Trái Đất lại rắn vì <b>áp suất cực lớn</b> giữ nó ở thể rắn. Nhân trong lớn dần khi phần dưới của nhân ngoài đông đặc lại lúc nhiệt thoát ra ngoài.</p>
+  <p>Người ta cho rằng sắt và niken nóng chảy lưu chuyển trong nhân ngoài tạo ra <button class="term" data-term="từ trường">từ trường</button> của Trái Đất, thứ bảo vệ khí quyển và nước. Nếu nhân ngoài ngừng lưu chuyển hoặc đông đặc, Trái Đất sẽ mất các khí và nước nuôi sống sự sống, như điều đã (và đang) xảy ra với Sao Hỏa.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Lớp hóa học và lớp vật lý (số liệu theo chương).</caption>
+      <thead><tr><th>Hệ thống</th><th>Lớp</th><th>Độ sâu hoặc bề dày</th><th>Tính chất chính</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="3">Hóa học</td><td>Vỏ</td><td>đến Moho: ~5 km (đại dương), 30–40 km (lục địa)</td><td>Giống granit (lục địa) hoặc giống bazan (đại dương)</td></tr>
+        <tr><td>Manti</td><td>đến ~2.900 km</td><td>Thể tích lớn nhất; chủ yếu peridotit</td></tr>
+        <tr><td>Nhân</td><td>dưới ~2.900 km</td><td>Sắt và niken (có thể có oxy)</td></tr>
+        <tr><td rowspan="5">Vật lý</td><td>Thạch quyển</td><td>đại dương trung bình 0–140 km; lục địa 40–280 km</td><td>Cứng; bị chia thành các mảng</td></tr>
+        <tr><td>Quyển mềm</td><td>dưới thạch quyển; độ sâu thay đổi theo nhiệt độ</td><td>Yếu; chảy theo đối lưu</td></tr>
+        <tr><td>Lớp phủ giữa</td><td>đới chuyển tiếp ~410–660 km, rồi đến nhân</td><td>Manti dưới cứng</td></tr>
+        <tr><td>Nhân ngoài</td><td>2.890–5.150 km (dày ~2.300 km)</td><td>Lớp duy nhất hoàn toàn lỏng; tạo từ trường</td></tr>
+        <tr><td>Nhân trong</td><td>dày ~1.220 km</td><td>Rắn do áp suất (Lehmann, 1936)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s2-2-3">2.2.3 Các ranh giới kiến tạo mảng</h3>
+  <p>Ở <button class="term" data-term="rìa thụ động">rìa thụ động</button> (passive margin), các mảng không chuyển động tương đối với nhau: thạch quyển lục địa chuyển tiếp dần sang thạch quyển đại dương trên cùng một mảng (ví dụ bờ đông Bắc Mỹ và Nam Mỹ). <button class="term" data-term="rìa chủ động">Rìa chủ động</button> (active margin) là nơi mảng đại dương và mảng lục địa gặp nhau và chuyển động tương đối (ví dụ bờ tây châu Mỹ), do lực ma sát kéo giữa các mảng và chênh lệch mật độ. Phần lớn quá trình tạo núi, động đất và núi lửa hoạt động xảy ra ở rìa chủ động.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/passive-margin.webp" alt="Mặt cắt rìa thụ động: vỏ lục địa mỏng dần qua vỏ chuyển tiếp sang vỏ đại dương, phủ trầm tích dày ở gần đới bản lề." loading="lazy" width="900" height="430"></div>
+    <figcaption>Rìa thụ động: vỏ lục địa và vỏ đại dương nối liền trên một mảng, không có ranh giới giữa chúng.<span class="credit">Joshua Doubek, CC BY-SA, trích từ <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+  <p>Theo mô hình đơn giản có ba loại ranh giới: <button class="term" data-term="ranh giới hội tụ">hội tụ</button> (các mảng tiến về phía nhau), <button class="term" data-term="ranh giới phân kỳ">phân kỳ</button> (các mảng tách xa nhau) và <button class="term" data-term="ranh giới chuyển dạng">chuyển dạng</button> (các mảng trượt qua nhau).</p>
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 720 250" role="img" aria-labelledby="bt-t" style="width:100%;min-width:560px;height:auto">
+        <title id="bt-t">Sơ đồ động ba loại ranh giới: ở ranh giới hội tụ hai mảng tiến lại và một mảng chìm xuống; ở ranh giới phân kỳ hai mảng tách xa khi mácma dâng lên giữa chúng; ở ranh giới chuyển dạng, nhìn từ trên xuống, hai mảng trượt qua nhau.</title>
+        <g font-size="14" font-weight="700" text-anchor="middle" class="svg-ink">
+          <text x="120" y="28">Hội tụ</text><text x="360" y="28">Phân kỳ</text><text x="600" y="28">Chuyển dạng</text>
+        </g>
+        <rect x="15" y="140" width="210" height="50" fill="var(--ochre)" opacity=".45"/>
+        <g class="mv-in-l"><polygon points="20,110 112,110 140,150 120,150 100,128 20,128" fill="var(--accent)" opacity=".85"/></g>
+        <g class="mv-in-r"><polygon points="118,100 220,100 220,128 128,128" fill="var(--s1)"/></g>
+        <g fill="var(--fg)"><path d="M40 85 h30 l-6 -5 M70 85 l-6 5" stroke="var(--fg)" stroke-width="2" fill="none"/><path d="M200 85 h-30 l6 -5 M170 85 l6 5" stroke="var(--fg)" stroke-width="2" fill="none"/></g>
+        <rect x="255" y="140" width="210" height="50" fill="var(--ochre)" opacity=".45"/>
+        <g class="mv-in-r"><rect x="260" y="110" width="94" height="22" fill="var(--accent)" opacity=".85"/></g>
+        <g class="mv-in-l"><rect x="366" y="110" width="94" height="22" fill="var(--accent)" opacity=".85"/></g>
+        <g class="rise"><circle cx="360" cy="140" r="6" fill="var(--rust)"/></g>
+        <g class="rise" style="animation-delay:1.2s"><circle cx="360" cy="150" r="5" fill="var(--rust)"/></g>
+        <path d="M330 85 h-30 l6 -5 M300 85 l6 5" stroke="var(--fg)" stroke-width="2" fill="none"/>
+        <path d="M390 85 h30 l-6 -5 M420 85 l-6 5" stroke="var(--fg)" stroke-width="2" fill="none"/>
+        <rect x="495" y="60" width="210" height="140" fill="var(--surface-2)" stroke="var(--line)"/>
+        <g class="mv-in-l"><rect x="510" y="70" width="180" height="56" fill="var(--accent)" opacity=".75"/></g>
+        <g class="mv-in-r"><rect x="510" y="134" width="180" height="56" fill="var(--s1)"/></g>
+        <line x1="495" y1="130" x2="705" y2="130" stroke="var(--rust)" stroke-width="2.5" stroke-dasharray="6 4"/>
+        <path d="M570 98 h40 l-7 -6 M610 98 l-7 6" stroke="var(--bg)" stroke-width="2.5" fill="none"/>
+        <path d="M630 162 h-40 l7 -6 M590 162 l7 6" stroke="var(--fg)" stroke-width="2.5" fill="none"/>
+        <g font-size="12" text-anchor="middle" class="svg-muted">
+          <text x="120" y="212">các mảng tiến lại;</text><text x="120" y="228">mảng nặng hơn chìm xuống</text>
+          <text x="360" y="212">các mảng tách xa;</text><text x="360" y="228">mácma dâng vào khe hở</text>
+          <text x="600" y="218">nhìn từ trên: mảng trượt qua nhau</text>
+        </g>
+        <g font-size="11" class="svg-muted"><text x="20" y="182">quyển mềm</text><text x="260" y="182">quyển mềm</text></g>
+      </svg>
+    </div>
+    <figcaption>Ba loại ranh giới mảng đang chuyển động. Hội tụ và phân kỳ được vẽ dạng mặt cắt; chuyển dạng được vẽ nhìn từ trên xuống vì chuyển động diễn ra theo phương ngang.<span class="credit">Sơ đồ động vẽ cho tài liệu này dựa trên mục 2.2.3.</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="images/unit2/boundary-types.webp" alt="Khối mô hình một phần Trái Đất với ranh giới hội tụ có rãnh và núi lửa, ranh giới chuyển dạng, ranh giới phân kỳ ở sống núi đại dương và một đới tách giãn lục địa, tất cả nằm trên quyển mềm." loading="lazy" width="775" height="429"></div>
+    <figcaption>Sơ đồ các loại ranh giới mảng và địa hình chúng tạo ra (chú thích trên ảnh bằng tiếng Anh).<span class="credit">José F. Vigil, USGS. Phạm vi công cộng.</span></figcaption>
+  </figure>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Bài kiểm tra mục 2.2 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<!-- 2.3 -->
+<section id="s2-3">
+  <h2 class="sec"><span class="n">2.3</span>Ranh giới hội tụ</h2>
+  <p><button class="term" data-term="ranh giới hội tụ">Ranh giới hội tụ</button> (convergent boundary), còn gọi là <b>ranh giới phá hủy</b>, là nơi hai hay nhiều mảng tiến về phía nhau. Điều gì xảy ra phụ thuộc vào <b>mật độ</b>. Thạch quyển lục địa nhẹ và nổi hơn quyển mềm. Thạch quyển đại dương đặc hơn thạch quyển lục địa và khi già, lạnh thì có thể đặc hơn cả quyển mềm.</p>
+  <ul>
+    <li><b>Hút chìm:</b> hai mảng có mật độ khác nhau gặp nhau, mảng đặc hơn bị đẩy xuống dưới mảng nổi hơn.</li>
+    <li><b>Va chạm:</b> các mảng lục địa hội tụ mà không xảy ra hút chìm.</li>
+  </ul>
+
+  <h3 id="s2-3-1">2.3.1 Hút chìm</h3>
+  <p><button class="term" data-term="hút chìm">Hút chìm</button> (subduction) xảy ra khi một mảng đại dương đặc gặp một mảng nổi hơn (mảng lục địa, hoặc mảng đại dương ấm và trẻ hơn) và chìm vào manti. Chương nêu tốc độ trung bình toàn cầu là 25 dặm mỗi triệu năm. Mảng chìm kéo đáy biển xuống thành một <button class="term" data-term="rãnh đại dương">rãnh đại dương</button> (trench), có thể sâu hơn gấp đôi bồn đại dương bên cạnh (thường 3–4 km); <b>rãnh Mariana</b> sâu gần 11 km.</p>
+  <h4>Nêm bồi kết và lãnh địa kiến tạo</h4>
+  <p>Trong rãnh, trầm tích đáy biển bị nạo lại và ép giữa hai mảng thành <button class="term" data-term="nêm bồi kết">nêm bồi kết</button> (accretionary wedge; còn gọi là mélange hay lăng trụ bồi kết). Các mảnh vật chất lục địa, kể cả vi lục địa, nằm trên mảng hút chìm có thể bị gắn vào nêm và tích tụ thành một vùng đất lớn gọi là <button class="term" data-term="lãnh địa kiến tạo">lãnh địa kiến tạo</button> (terrane). Phần lớn bang California được tạo từ các lãnh địa kiến tạo bồi kết.</p>
+  <h4>Nóng chảy do chất bốc và cung núi lửa</h4>
+  <p>Khi <button class="term" data-term="phiến hút chìm">phiến hút chìm</button> (slab) chìm xuống, nhiệt và áp suất đẩy các chất bốc (nước, khí cacbonic) ra khỏi khoáng vật ngậm nước và đi vào <button class="term" data-term="nêm manti">nêm manti</button> (mantle wedge), vùng nằm trên phiến và dưới mảng phía trên. Chất bốc làm hạ nhiệt độ nóng chảy của nêm manti, khiến nó nóng chảy theo cơ chế <button class="term" data-term="nóng chảy do chất bốc">nóng chảy do chất bốc</button> (flux melting). Mácma nổi dâng lên và phun trào, thường tạo thành một chuỗi núi lửa cong, gọi là <button class="term" data-term="cung núi lửa">cung núi lửa</button> (volcanic arc; cong do bề mặt Trái Đất cong). Cung núi lửa có thể hình thành trên mảng đại dương hoặc mảng lục địa.</p>
+  <div class="callout">
+    <h4>Hút chìm qua bốn bước</h4>
+    <ol>
+      <li>Phiến đại dương đặc chìm xuống ở rãnh; trầm tích dồn thành nêm bồi kết.</li>
+      <li>Nhiệt và áp suất giải phóng nước và CO<sub>2</sub> từ phiến vào nêm manti.</li>
+      <li>Chất bốc hạ nhiệt độ nóng chảy: nóng chảy do chất bốc tạo ra mácma.</li>
+      <li>Mácma nổi dâng lên, tạo cung núi lửa trên mảng phía trên.</li>
+    </ol>
+  </div>
+  <h4>Hút chìm bắt đầu như thế nào (vẫn còn tranh luận)</h4>
+  <p>Nhìn chung người ta chấp nhận rằng đới hút chìm bắt đầu từ rìa thụ động, rồi trọng lực biến chúng thành rìa chủ động. Các giả thuyết: trọng lực kéo mảng đại dương đặc hơn xuống, hoặc mảng chảy dẻo ở góc thấp. Có bằng chứng cho thấy <b>một đới hút chìm mới có thể đang hình thành ngoài khơi Bồ Đào Nha</b>, và một số nhà khoa học liên hệ các trận động đất lớn như động đất Lisbon năm 1755 với quá trình này, dù bằng chứng chưa chắc chắn. Một giả thuyết khác cho rằng hút chìm bắt đầu ở ranh giới chuyển dạng giữa hai mảng khác mật độ. Có những rìa trông như phải hút chìm nhưng không: các mảng đại dương đặc ở hai bên Đại Tây Dương không chìm xuống, có thể vì liên kết với mảng lục địa mạnh hơn lực kéo xuống do chênh lệch mật độ.</p>
+  <h4>Động đất siêu lớn và sóng thần</h4>
+  <p>Đới hút chìm có <b>những trận động đất và sóng thần lớn nhất</b>; đây là nơi duy nhất có mặt đứt gãy đủ lớn cho động đất cấp 9, và chúng cũng rất sâu. Khi phiến bị kẹt, năng lượng tích tụ; nếu không được giải phóng dần, hai mảng có thể đột ngột trượt dọc hàng trăm kilômét. Vì các đứt gãy này nằm dưới đáy biển, chuyển động có thể gây sóng thần khổng lồ, như sau động đất Ấn Độ Dương năm 2004 và động đất Tōhoku (Nhật Bản) năm 2011.</p>
+  <h4>Bồn trũng trước cung, bồn trũng sau cung và đứt gãy sau cung</h4>
+  <figure>
+    <div class="frame"><img src="images/unit2/forearc.gif" alt="Mặt cắt có chú thích của một đới hút chìm đại dương–đại dương, từ phải sang trái: rãnh, sống cung ngoài, trước cung, mặt núi lửa, sau cung và trung tâm tách giãn sau cung phía trên phiến hút chìm." loading="lazy" width="351" height="302"></div>
+    <figcaption>Các phần của một đới hút chìm (đây là đại dương–đại dương, nhưng các đặc điểm giống với hút chìm đại dương–lục địa; chú thích trên ảnh bằng tiếng Anh).<span class="credit">USGS. Phạm vi công cộng.</span></figcaption>
+  </figure>
+  <ul>
+    <li>Mọi đới hút chìm đều có <button class="term" data-term="bồn trũng trước cung">bồn trũng trước cung</button> (forearc basin) trên mảng phía trên, giữa cung núi lửa và rãnh, với nhiều đứt gãy và biến dạng (nhất là trong nêm bồi kết).</li>
+    <li>Ở một số nơi, lực căng tạo ra <button class="term" data-term="bồn trũng sau cung">bồn trũng sau cung</button> (backarc basin) phía sau cung. Một nguyên nhân được đề xuất là <button class="term" data-term="cuộn lùi phiến hút chìm">cuộn lùi phiến hút chìm</button> (slab rollback): phiến cuộn lùi thay vì trượt thẳng xuống, kéo mảng phía trên ra phía biển và kéo giãn nó "như bột bánh pizza" cho đến khi nứt và sụt xuống. Bồn sau cung sâu và rộng có thể trở thành đới tách giãn lục địa.</li>
+    <li>Nơi nhiều mảng đại dương trẻ, nổi bị hút chìm nhanh, mảng phía trên có thể bị uốn và nứt: <button class="term" data-term="đứt gãy sau cung">đứt gãy sau cung</button> (back-arc faulting). Đứt gãy sau cung tách giãn kéo đá rời ra; đứt gãy nén, tức <button class="term" data-term="đứt gãy nghịch chờm">đứt gãy nghịch chờm</button> (thrust fault), đẩy chúng chồng lên nhau. Dãy Andes có hai sống núi: sống phía tây là một cung núi lửa, còn sống phía đông không có núi lửa đã bị các đứt gãy nghịch chờm làm biến dạng.</li>
+  </ul>
+  <div class="tablewrap">
+    <table>
+      <caption>Biến dạng nghịch chờm kiểu "da mỏng" và "da dày", với các ví dụ ở miền tây Hoa Kỳ trong chương.</caption>
+      <thead><tr><th>Kiểu</th><th>Phần bị biến dạng</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td>Da mỏng (thin-skinned)</td><td>Lớp đá nông nằm trên mảng lục địa</td><td>Pha tạo núi Sevier (kỷ Phấn Trắng)</td></tr>
+        <tr><td>Da dày (thick-skinned)</td><td>Đứt gãy ăn sâu vào vỏ</td><td>Pha tạo núi Laramide (gần cuối và ngay sau pha Sevier, cùng khu vực)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pair">
+    <figure>
+      <div class="frame"><img src="images/unit2/laramide.webp" alt="Mặt cắt một mảng đại dương hút chìm ở góc rất thấp, đi xa dưới Bắc Mỹ, với dãy Rocky nhô lên sâu trong lục địa." loading="lazy" width="336" height="159"></div>
+      <figcaption>Hút chìm nông (phiến phẳng) trong pha tạo núi Laramide đã nâng núi ở sâu trong lục địa.<span class="credit">Melanie Moreno. Phạm vi công cộng.</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Hút chìm phiến phẳng</h4>
+      <p><button class="term" data-term="hút chìm phiến phẳng">Hút chìm phiến phẳng</button> (flat-slab subduction, hút chìm nông) đã gây ra pha tạo núi Laramide. Phiến chìm ở góc thấp tiếp xúc với mảng phía trên nhiều hơn bình thường và làm nó biến dạng ở cách đới hút chìm nhiều kilômét.</p>
+    </div>
+  </div>
+  <h4>Hút chìm đại dương–lục địa và đại dương–đại dương</h4>
+  <div class="pair">
+    <figure>
+      <div class="frame"><img src="images/unit2/ocean-continent.gif" alt="Mảng đại dương chìm dưới mảng lục địa tại rãnh, với cung núi lửa trên lục địa." loading="lazy" width="302" height="178"></div>
+      <figcaption>Hút chìm đại dương–lục địa: rãnh và cung núi lửa lục địa.<span class="credit">USGS. Phạm vi công cộng.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit2/ocean-ocean.gif" alt="Mảng đại dương chìm dưới một mảng đại dương khác tại rãnh, với cung đảo phía trên." loading="lazy" width="302" height="174"></div>
+      <figcaption>Hút chìm đại dương–đại dương: rãnh và cung đảo.<span class="credit">USGS. Phạm vi công cộng.</span></figcaption>
+    </figure>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>So sánh hai kiểu hút chìm.</caption>
+      <thead><tr><th></th><th>Đại dương–lục địa</th><th>Đại dương–đại dương</th></tr></thead>
+      <tbody>
+        <tr><td>Mảng nào chìm</td><td>Mảng đại dương</td><td>Thường là mảng già hơn (lạnh hơn, đặc hơn)</td></tr>
+        <tr><td>Đặc điểm</td><td>Rãnh, nêm manti, thường có cung núi lửa lục địa</td><td>Rãnh; núi lửa có thể nằm dưới nước, hoặc nhô lên thành <button class="term" data-term="cung đảo">cung đảo</button></td></tr>
+        <tr><td>Ví dụ</td><td>Dãy Cascade (Tây Bắc Thái Bình Dương); phía tây dãy Andes</td><td>Quần đảo Aleut; Tiểu Antilles; các chuỗi đảo ở tây Thái Bình Dương</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s2-3-2">2.3.2 Va chạm</h3>
+  <p>Khi các mảng lục địa hội tụ (chẳng hạn khi một bồn đại dương khép lại), không mảng nào đủ đặc để hút chìm. Hai khối va mạnh vào nhau trong một cuộc <button class="term" data-term="va chạm lục địa">va chạm</button> (collision). Không có hút chìm thì <b>không có mácma và hầu như không có núi lửa</b>. Đới va chạm có núi cao không phải núi lửa và một vùng rộng thường xuyên xảy ra động đất lớn. Thạch quyển lục địa dẻo nên biến dạng lan rộng: động đất do va chạm có thể xảy ra cách ranh giới hàng trăm kilômét, khác với dải hẹp ở đới hút chìm. Ví dụ ở lục địa Á–Âu: dãy Pyrenees (từ bán đảo Iberia sang Pháp), dãy Alps (từ Ý đến Trung Âu), dãy Zagros (từ Ả Rập đến Iran) và dãy Himalaya (từ tiểu lục địa Ấn Độ đến Trung Á).</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/continent-collision.gif" alt="Hai mảng lục địa ép vào nhau, nhăn lại thành dãy núi và cao nguyên, với vỏ đại dương cổ bị kẹt bên dưới." loading="lazy" width="301" height="181"></div>
+    <figcaption>Va chạm lục địa–lục địa tạo nên núi cao không phải núi lửa.<span class="credit">USGS. Phạm vi công cộng.</span></figcaption>
+  </figure>
+  <h4>Siêu lục địa</h4>
+  <p>Khi vỏ đại dương nối với lục địa qua rìa thụ động bị hút chìm hoàn toàn, đại dương khép lại và va chạm lục địa bắt đầu. Cuối cùng các lục địa hợp lại thành một <button class="term" data-term="siêu lục địa">siêu lục địa</button> (supercontinent). Va chạm đã tạo nên <button class="term" data-term="Pangaea">Pangaea</button> (Toàn Lục Địa), siêu lục địa là trung tâm giả thuyết của Wegener. Trong suốt lịch sử Trái Đất, các lục địa liên tục hợp lại thành siêu lục địa rồi tách ra, gọi là <button class="term" data-term="chu kỳ siêu lục địa">chu kỳ siêu lục địa</button> (supercontinent cycle), khoảng 500 triệu năm một lần. Pangaea bắt đầu tách ra khoảng 200 triệu năm trước; một siêu lục địa trước đó, <b>Rodinia</b>, tồn tại 1,1 tỷ năm trước và bắt đầu vỡ ra 800 đến 600 triệu năm trước.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/pangaea.webp" alt="Bản đồ Pangaea với đường viền các lục địa ngày nay ghép thành một khối đất liền." loading="lazy" width="700" height="788" style="max-width:440px"></div>
+    <figcaption>Phục dựng Pangaea, với vị trí gần đúng của các lục địa ngày nay.<span class="credit">User:Kieff, CC BY-SA, trích từ <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+  <h4>Bồn trước núi, chờm phủ và ophiolit</h4>
+  <ul>
+    <li><button class="term" data-term="bồn trước núi">Bồn trước núi</button> (foreland basin) hình thành gần đai núi khi trọng lượng của núi ép mảng tạo thành vùng trũng. Chúng có thể xuất hiện ở đới hút chìm nhưng phổ biến nhất ở đới va chạm. <b>Vịnh Ba Tư</b>, tạo ra bởi trọng lượng dãy Zagros, có lẽ là ví dụ hiện đại tiêu biểu nhất.</li>
+    <li>Một mảng mang cả thạch quyển đại dương lẫn lục địa có thể hút chìm một phần, nhưng sức nổi ngăn nó chìm hết. Trong những trường hợp rất hiếm, một phần mảng lục địa bị kẹt dưới mảng đại dương đang chìm: <button class="term" data-term="chờm phủ">chờm phủ</button> (obduction). Vỏ lục địa nổi trở lại bề mặt khá nhanh, mang theo những mảnh manti và đáy biển lên trên lục địa. Các đá này là <b>ophiolit</b>, giúp hiểu thành phần của manti.</li>
+  </ul>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Bài kiểm tra mục 2.3 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<!-- 2.4 -->
+<section id="s2-4">
+  <h2 class="sec"><span class="n">2.4</span>Ranh giới phân kỳ</h2>
+  <p>Ở <button class="term" data-term="ranh giới phân kỳ">ranh giới phân kỳ</button> (divergent boundary), còn gọi là <b>ranh giới kiến tạo</b> (constructive boundary), các mảng tách xa nhau. Có hai loại: <b>đới tách giãn lục địa</b> (ở những điểm yếu của mảng lục địa) và <b>sống núi giữa đại dương</b>. Sống núi giữa đại dương thường bắt đầu từ một đới tách giãn lục địa làm mảng tách đôi; nước biển tràn vào khe hở và các phần trôi xa nhau thành những lục địa riêng. Quá trình này là <button class="term" data-term="từ tách giãn đến trôi dạt">từ tách giãn đến trôi dạt</button> (rift-to-drift).</p>
+
+  <h3 id="s2-4-1">2.4.1 Tách giãn lục địa</h3>
+  <p>Ở nơi mảng lục địa rất dày, chúng phản xạ nhiều nhiệt trở lại manti đến mức đối lưu mạnh đẩy vật chất manti siêu nóng lên áp vào mảng và làm mềm nó. Lực căng từ dòng dâng này kéo mảng đã yếu tách ra. Mảng mỏng đi và hình thành các vết nứt sâu gọi là <button class="term" data-term="đứt gãy thuận">đứt gãy thuận</button> (normal fault, đứt gãy tách giãn). Các khối giữa những đứt gãy lớn sụt xuống thành <button class="term" data-term="thung lũng tách giãn">thung lũng tách giãn</button> (rift valley), chứa các khối sụt hình nêm gọi là <button class="term" data-term="địa hào">địa hào</button> (graben); các vai nhô cao là <button class="term" data-term="địa lũy">địa lũy</button> (horst). Nếu chỉ một bên khối sụt xuống thì gọi là <button class="term" data-term="bán địa hào">bán địa hào</button> (half-graben). Đới tách giãn có thể phát triển thành hồ lớn, thậm chí đại dương.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/horst-graben.webp" alt="Khối mô hình vỏ bị kéo giãn: các khối giới hạn bởi đứt gãy thuận lần lượt nằm cao (địa lũy) và sụt xuống (địa hào)." loading="lazy" width="900" height="462"></div>
+    <figcaption>Đứt gãy ở ranh giới phân kỳ: đứt gãy thuận giới hạn các địa lũy nhô cao và địa hào sụt xuống (Horst = địa lũy, Graben = địa hào, Normal fault = đứt gãy thuận).<span class="credit">USGS. Phạm vi công cộng.</span></figcaption>
+  </figure>
+  <p>Tách giãn không xảy ra ngẫu nhiên. Có hai yếu tố chi phối:</p>
+  <ul>
+    <li>Nó <b>không</b> xảy ra ở phần lõi già, ổn định của lục địa, gọi là <button class="term" data-term="nền cổ">nền cổ</button> (craton).</li>
+    <li>Khi xảy ra, kiểu vỡ giống các đường may của <b>quả bóng đá</b> (khối hai mươi mặt cụt), kiểu nứt phổ biến nhất trên một quả cầu giãn nở đều vì tốn ít năng lượng nhất.</li>
+  </ul>
+  <p>Tách giãn thường phát triển dọc một đường may và tắt dần ở các đường khác. Các đường may không hoạt động đó là <button class="term" data-term="nhánh tách giãn thất bại">nhánh tách giãn thất bại</button> (failed rift arm); chúng vẫn là điểm yếu và có thể phát triển thành <button class="term" data-term="aulacogen">aulacogen</button>. Ví dụ: <b>vùng trũng thung lũng Mississippi</b> (Mississippi Valley Embayment), nơi thượng nguồn sông Mississippi chảy qua. Ở nơi các nhánh không thất bại, như <b>tam giác Afar</b>, ba ranh giới phân kỳ gặp nhau tại một <button class="term" data-term="điểm nối ba">điểm nối ba</button> (triple junction).</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/afar.webp" alt="Bản đồ địa hình Biển Đỏ, vịnh Aden và Đông Phi, với ba đới tách giãn gặp nhau ở vùng Afar." loading="lazy" width="800" height="800" style="max-width:480px"></div>
+    <figcaption>Tam giác Afar (ở giữa): sống núi Biển Đỏ (lên trên bên trái), sống núi vịnh Aden (sang phải) và tách giãn Đông Phi (xuống dưới bên trái) tạo thành điểm nối ba, cách nhau khoảng 120°.<span class="credit">DEMIS Mapserver. Phạm vi công cộng.</span></figcaption>
+  </figure>
+  <div class="tablewrap">
+    <table>
+      <caption>Đới tách giãn hẹp và đới tách giãn rộng.</caption>
+      <thead><tr><th>Loại</th><th>Đặc điểm</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td>Hẹp</td><td>Mật độ cao các ranh giới phân kỳ hoạt động mạnh</td><td>Đới tách giãn Đông Phi (Sừng châu Phi đang tách ra); hồ Baikal, Nga</td></tr>
+        <tr><td>Rộng</td><td>Nhiều đới đứt gãy phân bố trên vùng biến dạng rộng</td><td>Vùng Basin and Range (miền tây Hoa Kỳ); đứt gãy Wasatch là ranh giới phía đông ở Utah</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Đới tách giãn có động đất (nhỏ và ít hơn các ranh giới khác) và có thể có núi lửa. Khác với mácma hút chìm sinh ra do chất bốc, mácma tách giãn hình thành do <button class="term" data-term="nóng chảy do giảm áp">nóng chảy do giảm áp</button> (decompression melting): mảng bị kéo ra làm giảm áp suất, khiến vật chất nóng chảy và dâng lên qua đới tách giãn đầy đứt gãy. Các núi lửa tách giãn trẻ rải rác khắp vùng Basin and Range. Núi lửa Ol Doinyo Lengai ở Tanzania phun loại dung nham khác thường chủ yếu là <button class="term" data-term="carbonatit">carbonatit</button>, một dung nham cacbonat lỏng tương đối nguội.</p>
+
+  <h3 id="s2-4-2">2.4.2 Sống núi giữa đại dương</h3>
+  <p>Khi tách giãn tiếp diễn, thạch quyển lục địa trở nên mafic hơn và mỏng hơn cho đến khi phần mảng dưới đới tách giãn trở thành thạch quyển đại dương. Một đại dương mới ra đời, như <b>Biển Đỏ</b> hẹp hình thành khi bán đảo Ả Rập tách khỏi châu Phi. Khi tiếp tục phân kỳ, một <button class="term" data-term="sống núi giữa đại dương">sống núi giữa đại dương</button> (mid-ocean ridge) hình thành.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/ocean-birth.webp" alt="Ba mặt cắt xếp chồng: thung lũng tách giãn trong lục địa (Đông Phi), bồn đại dương mới hẹp (Biển Đỏ) và đại dương trưởng thành có sống núi giữa đại dương (Đại Tây Dương)." loading="lazy" width="600" height="848" style="max-width:380px"></div>
+    <figcaption>Tiến trình từ thung lũng tách giãn đến bồn đại dương mới rồi đại dương trưởng thành có sống núi giữa đại dương.<span class="credit">Hannes Grobe, Viện Alfred Wegener, User:Lichtspielderivative vector hóa, CC BY-SA.</span></figcaption>
+  </figure>
+  <p>Sống núi giữa đại dương, còn gọi là <button class="term" data-term="trung tâm tách giãn">trung tâm tách giãn</button> (spreading center):</p>
+  <ul>
+    <li>là <b>nơi duy nhất trên Trái Đất tạo ra thạch quyển đại dương mới</b>: nóng chảy do giảm áp biến vật chất quyển mềm thành thạch quyển mới trào lên qua các khe nứt;</li>
+    <li>sinh ra <b>nhiều dung nham hơn mọi kiểu núi lửa khác cộng lại</b>, dù phần lớn chưa được lập bản đồ vì nằm sâu dưới đáy biển (Iceland là nơi hiếm hoi thấy kiểu tách giãn này trên đất liền);</li>
+    <li>nhô cao vì thạch quyển mới nóng nhẹ hơn quyển mềm bên dưới; khối đá <b>nổi đẳng tĩnh</b> này nổi một phần, như cục đá nổi trong cốc nước.</li>
+  </ul>
+  <p>Khi thạch quyển di chuyển xa sống núi, nó nguội đi, đặc hơn và lún xuống thành những <button class="term" data-term="đồng bằng biển thẳm">đồng bằng biển thẳm</button> (abyssal plain) rộng, thấp, khá bằng phẳng. Vì vậy đáy biển già nhất phải nằm xa sống núi nhất, và tuổi đá đã xác nhận điều đó. Trầm tích cũng mỏng hơn gần sống núi vì có ít thời gian tích tụ hơn.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/ocean-age.webp" alt="Bản đồ thế giới về tuổi đáy biển: màu đỏ (trẻ nhất) dọc các sống núi giữa đại dương, chuyển dần qua vàng, xanh lá đến xanh lam và tím (già nhất) ở xa sống núi." loading="lazy" width="1100" height="702"></div>
+    <figcaption>Tuổi của thạch quyển đại dương, tính bằng triệu năm. Màu đỏ là trẻ nhất, ở sống núi. Chú ý Đại Tây Dương đối xứng, với vỏ già nhất dọc theo bờ các lục địa.<span class="credit">NOAA. Phạm vi công cộng.</span></figcaption>
+  </figure>
+  <h4>Các dải từ</h4>
+  <p><button class="term" data-term="giả thuyết Vine-Matthews-Morley">Giả thuyết Vine-Matthews-Morley</button> giải thích các dải từ đối xứng: từ trường Trái Đất được in vào đá mới khi nó hình thành ở sống núi. Mácma rất nóng không có từ tính; khi các mảng tách ra, nó nguội xuống dưới <button class="term" data-term="nhiệt độ Curie">nhiệt độ Curie</button> (điểm Curie, Curie point), nhiệt độ mà dưới đó từ trường bị khóa vào khoáng vật từ tính. Các dải xen kẽ vì cực bắc và cực nam từ của Trái Đất định kỳ hoán đổi (<button class="term" data-term="đảo cực địa từ">đảo cực địa từ</button>, magnetic reversal). Kiểu dải này được dùng để tái dựng chuyển động mảng trong quá khứ và đo tốc độ tách giãn.</p>
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 720 240" role="img" aria-labelledby="ms-t" style="width:100%;min-width:560px;height:auto">
+        <title id="ms-t">Ảnh động tách giãn đáy đại dương: đá mới hình thành ở sống núi và di chuyển ra hai bên, ghi lại từ tính thuận và đảo xen kẽ thành các dải đối xứng như ảnh gương.</title>
+        <defs>
+          <clipPath id="ms-l"><rect x="20" y="70" width="340" height="80"/></clipPath>
+          <clipPath id="ms-r"><rect x="360" y="70" width="340" height="80"/></clipPath>
+        </defs>
+        <g clip-path="url(#ms-l)"><g class="drift-l">
+          <rect x="-28" y="70" width="436" height="80" fill="var(--surface-2)"/>
+          <rect x="384" y="70" width="24" height="80" fill="var(--accent)"/><rect x="336" y="70" width="24" height="80" fill="var(--accent)"/><rect x="288" y="70" width="24" height="80" fill="var(--accent)"/><rect x="240" y="70" width="24" height="80" fill="var(--accent)"/><rect x="192" y="70" width="24" height="80" fill="var(--accent)"/><rect x="144" y="70" width="24" height="80" fill="var(--accent)"/><rect x="96" y="70" width="24" height="80" fill="var(--accent)"/><rect x="48" y="70" width="24" height="80" fill="var(--accent)"/><rect x="0" y="70" width="24" height="80" fill="var(--accent)"/>
+        </g></g>
+        <g clip-path="url(#ms-r)"><g class="drift-r">
+          <rect x="312" y="70" width="436" height="80" fill="var(--surface-2)"/>
+          <rect x="312" y="70" width="24" height="80" fill="var(--accent)"/><rect x="360" y="70" width="24" height="80" fill="var(--accent)"/><rect x="408" y="70" width="24" height="80" fill="var(--accent)"/><rect x="456" y="70" width="24" height="80" fill="var(--accent)"/><rect x="504" y="70" width="24" height="80" fill="var(--accent)"/><rect x="552" y="70" width="24" height="80" fill="var(--accent)"/><rect x="600" y="70" width="24" height="80" fill="var(--accent)"/><rect x="648" y="70" width="24" height="80" fill="var(--accent)"/><rect x="696" y="70" width="24" height="80" fill="var(--accent)"/>
+        </g></g>
+        <rect x="20" y="70" width="680" height="80" fill="none" stroke="var(--fg)"/>
+        <line x1="360" y1="62" x2="360" y2="158" stroke="var(--rust)" stroke-width="3"/>
+        <g class="rise"><circle cx="360" cy="176" r="6" fill="var(--rust)"/></g>
+        <g class="rise" style="animation-delay:1.2s"><circle cx="360" cy="186" r="5" fill="var(--rust)"/></g>
+        <text x="360" y="44" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink">Sống núi giữa đại dương</text>
+        <text x="360" y="58" text-anchor="middle" font-size="11.5" class="svg-muted">đá mới, trẻ nhất</text>
+        <path d="M250 180 h-90 l8 -6 M160 180 l8 6" stroke="var(--fg)" stroke-width="2" fill="none"/>
+        <path d="M470 180 h90 l-8 -6 M560 180 l-8 6" stroke="var(--fg)" stroke-width="2" fill="none"/>
+        <text x="205" y="200" text-anchor="middle" font-size="12" class="svg-muted">đá già hơn dịch ra xa</text>
+        <text x="515" y="200" text-anchor="middle" font-size="12" class="svg-muted">đá già hơn dịch ra xa</text>
+        <g font-size="12" class="svg-ink">
+          <rect x="190" y="218" width="14" height="14" fill="var(--accent)"/><text x="210" y="229">từ tính thuận</text>
+          <rect x="370" y="218" width="14" height="14" fill="var(--surface-2)" stroke="var(--fg)"/><text x="390" y="229">từ tính đảo</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Tách giãn đáy đại dương ghi lại các lần đảo cực từ thành những dải đối xứng hai bên sống núi. Đã đơn giản hóa: dải thật có bề rộng không đều vì các lần đảo cực diễn ra không theo chu kỳ cố định.<span class="credit">Sơ đồ động vẽ cho tài liệu này dựa trên mục 2.1.3 và 2.4.2.</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="images/unit2/stripes-scheme.webp" alt="Ba khối mô hình (a, b, c) của một sống núi tách giãn rộng dần theo thời gian, với các dải từ tính thuận và đảo ở hai bên." loading="lazy" width="640" height="453"></div>
+    <figcaption>Tiến trình theo thời gian (a trẻ nhất, c già nhất) của một trung tâm tách giãn mở rộng trong khi ghi lại sự thay đổi từ trường Trái Đất (Normal = thuận, Reversed = đảo).<span class="credit">Chmee2. Phạm vi công cộng.</span></figcaption>
+  </figure>
+  <h4>Miệng phun thủy nhiệt và sự sống không cần ánh sáng</h4>
+  <div class="pair">
+    <figure>
+      <div class="frame"><img src="images/unit2/black-smoker.webp" alt="Một ống khói đen trên đáy biển tối, bao quanh bởi quần thể dày đặc giun ống cao, đầu màu đỏ." loading="lazy" width="700" height="902"></div>
+      <figcaption>Một miệng phun thủy nhiệt "khói đen" với quần thể giun ống khổng lồ.<span class="credit">Thư viện ảnh NOAA, CC BY.</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Khói đen</h4>
+      <p>Sống núi có nhiều <button class="term" data-term="miệng phun thủy nhiệt">miệng phun thủy nhiệt</button> (hydrothermal vent): các khe nứt sâu nơi nước biển lưu thông qua đá nóng rồi trào lên mang theo khí, khoáng chất hòa tan và hạt nhỏ, trông như khói đen dưới nước. Năm 1977, các nhà khoa học trên tàu lặn <i>Alvin</i> phát hiện những quần xã sinh vật phong phú ở đây, kể cả giun ống cao hơn người, sống trong bóng tối hoàn toàn. Chúng dựa vào năng lượng địa nhiệt và quá trình <button class="term" data-term="hóa tổng hợp">hóa tổng hợp</button> (chemosynthesis) của vi khuẩn từ hợp chất lưu huỳnh. Trước đó, người ta cho rằng mọi sự sống đều cần quang hợp. Một số nhà khoa học cho rằng môi trường như vậy có thể là nơi sự sống bắt đầu, và có thể có sự sống ở nơi khác, như trên Europa, vệ tinh của Sao Mộc.</p>
+    </div>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Bài kiểm tra mục 2.4 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<!-- 2.5 -->
+<section id="s2-5">
+  <h2 class="sec"><span class="n">2.5</span>Ranh giới chuyển dạng</h2>
+  <p>Ở <button class="term" data-term="ranh giới chuyển dạng">ranh giới chuyển dạng</button> (transform boundary; còn gọi là ranh giới <b>trượt bằng</b> hay <b>bảo toàn</b>), các mảng trượt qua nhau theo phương ngang. Chuyển động được mô tả theo góc nhìn của người đứng trên một mảng nhìn sang mảng bên kia:</p>
+  <ul>
+    <li><button class="term" data-term="trượt bằng phải">Trượt bằng phải</button> (dextral, right-lateral): mảng đối diện dịch sang phải.</li>
+    <li><button class="term" data-term="trượt bằng trái">Trượt bằng trái</button> (sinistral, left-lateral): mảng đối diện dịch sang trái.</li>
+  </ul>
+  <figure>
+    <div class="frame"><img src="images/unit2/strike-slip.webp" alt="Hai hình vẽ nhìn từ trên xuống của một đứt gãy: bên trái khối phía xa dịch sang trái (trượt bằng trái), bên phải nó dịch sang phải (trượt bằng phải)." loading="lazy" width="437" height="200"></div>
+    <figcaption>Hai kiểu đứt gãy chuyển dạng (trượt bằng), nhìn từ trên xuống (Sinistral = trượt bằng trái, Dextral = trượt bằng phải).<span class="credit">Cferrero, CC BY-SA, trích từ <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+  <p>Phần lớn ranh giới chuyển dạng nằm dưới đáy biển quanh sống núi giữa đại dương. Chúng tạo thành các <button class="term" data-term="đới đứt vỡ">đới đứt vỡ</button> (fracture zone) <b>không động đất</b>, gồm các đứt gãy chuyển dạng không gây động đất, để điều tiết tốc độ tách giãn khác nhau dọc sống núi. Số khác gây động đất đáng kể nhưng ít tạo núi hay núi lửa: nếu các mảng không trượt qua nhau được, ứng suất tích tụ và giải phóng đột ngột thành động đất. Quan trọng nhất với con người là các đứt gãy trong lục địa, gây động đất trung bình đến lớn: <b>đứt gãy San Andreas</b> (California), <b>đứt gãy Bắc và Đông Anatolia</b> (Thổ Nhĩ Kỳ), <b>đứt gãy Altyn Tagh</b> (Trung Á) và <b>đứt gãy Alpine</b> (New Zealand).</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/san-andreas.webp" alt="Bản đồ địa hình California với đứt gãy San Andreas vẽ màu đỏ và mũi tên cho thấy phía Thái Bình Dương dịch về tây bắc so với phía Bắc Mỹ." loading="lazy" width="362" height="500" style="max-width:320px"></div>
+    <figcaption>Bản đồ đứt gãy San Andreas, thể hiện chuyển động tương đối.<span class="credit">Kate Barton, David Howell và Joe Vigil (USGS). Phạm vi công cộng.</span></figcaption>
+  </figure>
+
+  <h3 id="s2-5-1">2.5.1 Ép trượt và giãn trượt</h3>
+  <p>Những khúc uốn trên đứt gãy chuyển dạng tạo thêm lực nén hoặc lực giãn và gây ra các đới đứt gãy thứ cấp.</p>
+  <div class="pair same">
+    <figure>
+      <div class="frame"><img src="images/unit2/transpression.webp" alt="Hình vẽ một đứt gãy trượt bằng có khúc uốn nơi hai bên ép vào nhau, nâng núi lên tại khúc uốn." loading="lazy" width="422" height="499"></div>
+      <figcaption>Ép trượt: khúc uốn nén ép đứt gãy và nâng núi (Restraining Bend = khúc uốn nén).<span class="credit">GeoAsh, CC BY-SA.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit2/transtension.webp" alt="Hình vẽ một đứt gãy trượt bằng có khúc uốn nơi hai bên kéo tách ra." loading="lazy" width="180" height="225"></div>
+      <figcaption>Giãn trượt: khúc uốn giãn kéo đứt gãy tách ra, tạo vùng trũng (Releasing Bend = khúc uốn giãn).<span class="credit">K. Martin, CC BY-SA.</span></figcaption>
+    </figure>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption>Các khúc uốn dọc đứt gãy chuyển dạng.</caption>
+      <thead><tr><th></th><th>Ép trượt</th><th>Giãn trượt</th></tr></thead>
+      <tbody>
+        <tr><td>Lực thêm vào</td><td><button class="term" data-term="ép trượt">Ép trượt</button> (transpression): lực nén cộng với trượt cắt</td><td><button class="term" data-term="giãn trượt">Giãn trượt</button> (transtension): lực giãn cộng với trượt cắt</td></tr>
+        <tr><td>Kiểu khúc uốn</td><td><button class="term" data-term="khúc uốn nén">Khúc uốn nén</button>: các mảng bị cản không trượt qua được</td><td><button class="term" data-term="khúc uốn giãn">Khúc uốn giãn</button>: các mảng bị kéo tách ra</td></tr>
+        <tr><td>Kết quả</td><td>Tạo núi (núi bị dịch chuyển, thậm chí xoay)</td><td>Vùng trũng (bồn), đôi khi có núi lửa</td></tr>
+        <tr><td>Ví dụ</td><td>Vùng Big Bend, phía nam đứt gãy San Andreas</td><td>Biển Chết (Israel–Jordan); hồ Salton Sea (California)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s2-5-2">2.5.2 Điểm xuyên cắt</h3>
+  <p><button class="term" data-term="điểm xuyên cắt">Điểm xuyên cắt</button> (piercing point) là một cấu trúc địa chất bị đứt gãy cắt qua. Ghép hai phần bị tách ra (tốt nhất khi có hình dạng đặc trưng) cho biết đứt gãy đã dịch chuyển bao xa. Phương pháp này đặc biệt hữu ích với đứt gãy chuyển dạng, vì chuyển động ngang giữ cấu trúc tương đối nguyên vẹn; đứt gãy thuận và nghịch thường làm mờ hoặc phá hủy chúng. Các điểm xuyên cắt cho thấy <b>đứt gãy San Andreas đã dịch chuyển hơn 225 km trong 20 triệu năm qua</b>, trên ba vết đứt gãy khác nhau.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/wallace-creek.webp" alt="Ảnh chụp từ trên không một lòng suối khô cắt qua đường đứt gãy; lòng suối gấp khúc đột ngột sang ngang ở chỗ gặp đứt gãy rồi tiếp tục xuống dốc." loading="lazy" width="962" height="656"></div>
+    <figcaption>Suối Wallace trên đồng bằng Carrizo, California. Ở chỗ đứt gãy San Andreas (cắt ngang giữa ảnh) cắt qua suối, lòng suối gấp khúc đột ngột: đứt gãy đã làm dịch chuyển dòng suối theo thời gian.<span class="credit">Robert E. Wallace (USGS). Phạm vi công cộng.</span></figcaption>
+  </figure>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Bài kiểm tra mục 2.5 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<!-- 2.6 -->
+<section id="s2-6">
+  <h2 class="sec"><span class="n">2.6</span>Chu trình Wilson</h2>
+  <p><button class="term" data-term="chu trình Wilson">Chu trình Wilson</button> (Wilson Cycle), đặt theo tên J. Tuzo Wilson, người mô tả nó lần đầu năm 1966, mô tả sự hình thành và tan vỡ lặp đi lặp lại của các siêu lục địa như Pangaea và Rodinia. Chu trình này đã diễn ra ít nhất ba tỷ năm, có thể lâu hơn.</p>
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 720 300" role="img" aria-labelledby="wc-t" style="width:100%;min-width:560px;height:auto">
+        <title id="wc-t">Chu trình Wilson là một vòng sáu giai đoạn: tách giãn lục địa, bồn đại dương mới, đại dương mở rộng, bắt đầu hút chìm, bồn đại dương khép lại, và va chạm lục địa tạo siêu lục địa, rồi lại tách giãn.</title>
+        <defs><marker id="wc-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker></defs>
+        <g stroke-linejoin="round">
+          <rect class="flow-step" style="--d:0s" x="20" y="20" width="200" height="66" rx="10"/>
+          <rect class="flow-step" style="--d:1s" x="260" y="20" width="200" height="66" rx="10"/>
+          <rect class="flow-step" style="--d:2s" x="500" y="20" width="200" height="66" rx="10"/>
+          <rect class="flow-step" style="--d:3s" x="500" y="214" width="200" height="66" rx="10"/>
+          <rect class="flow-step" style="--d:4s" x="260" y="214" width="200" height="66" rx="10"/>
+          <rect class="flow-step" style="--d:5s" x="20" y="214" width="200" height="66" rx="10"/>
+        </g>
+        <g stroke="var(--muted)" stroke-width="2" fill="none" marker-end="url(#wc-a)">
+          <line x1="222" y1="53" x2="256" y2="53"/><line x1="462" y1="53" x2="496" y2="53"/>
+          <line x1="600" y1="88" x2="600" y2="210"/>
+          <line x1="498" y1="247" x2="464" y2="247"/><line x1="258" y1="247" x2="224" y2="247"/>
+          <line x1="120" y1="212" x2="120" y2="90"/>
+        </g>
+        <g text-anchor="middle" font-size="13">
+          <text x="120" y="48" font-weight="700" class="svg-ink">1. Tách giãn lục địa</text><text x="120" y="68" font-size="11.5" class="svg-muted">siêu lục địa tách ra</text>
+          <text x="360" y="48" font-weight="700" class="svg-ink">2. Bồn đại dương mới</text><text x="360" y="68" font-size="11.5" class="svg-muted">tách giãn → trôi dạt (Biển Đỏ)</text>
+          <text x="600" y="48" font-weight="700" class="svg-ink">3. Đại dương mở rộng</text><text x="600" y="68" font-size="11.5" class="svg-muted">sống núi tách giãn</text>
+          <text x="600" y="242" font-weight="700" class="svg-ink">4. Bắt đầu hút chìm</text><text x="600" y="262" font-size="11.5" class="svg-muted">rìa thụ động thành chủ động</text>
+          <text x="360" y="242" font-weight="700" class="svg-ink">5. Bồn đại dương khép</text><text x="360" y="262" font-size="11.5" class="svg-muted">mảng đại dương hút chìm</text>
+          <text x="120" y="242" font-weight="700" class="svg-ink">6. Va chạm</text><text x="120" y="262" font-size="11.5" class="svg-muted">siêu lục địa mới</text>
+          <text x="360" y="140" font-weight="700" font-size="15" class="svg-ink">Chu trình Wilson</text>
+          <text x="360" y="160" font-size="11.5" class="svg-muted">chu kỳ siêu lục địa ~500 triệu năm</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Chu trình Wilson dạng vòng lặp. Ô được tô sáng lần lượt chạy quanh chu trình.<span class="credit">Sơ đồ vẽ cho tài liệu này dựa trên mục 2.3, 2.4 và 2.6.</span></figcaption>
+  </figure>
+  <figure>
+    <div class="frame"><img src="images/unit2/wilson-cycle.webp" alt="Biểu đồ các lục địa tách xa và hợp lại trong 1.000 triệu năm qua, tạo thành Rodinia rồi Pangaea, với đại dương Iapetus và Đại Tây Dương mở ra ở giữa." loading="lazy" width="1000" height="546"></div>
+    <figcaption>Chu trình Wilson trong một tỷ năm qua: các pha tách giãn và va chạm tạo nên Rodinia, rồi Pangaea (apart = tách xa, together = hợp lại, Mountain forming = tạo núi, Million Years = triệu năm).<span class="credit">Hannes Grobe, Hardwigg chỉnh sửa, CC BY-SA.</span></figcaption>
+  </figure>
+  <p><b>Vì sao tách giãn bắt đầu:</b> một cơ chế được đề xuất là mảng lục địa phản xạ nhiệt tốt hơn nhiều so với mảng đại dương. Khi các lục địa tụ lại, chúng phản xạ nhiều nhiệt hơn trở lại manti, làm đối lưu mạnh hơn và khởi động tách giãn. Một số nhà địa chất cho rằng <button class="term" data-term="chùm manti">chùm manti</button> (mantle plume) là tàn dư của những thời kỳ manti nóng hơn và dòng dâng mạnh hơn này.</p>
+  <p><b>Điều gì giữ cho các mảng chuyển động</b> phần lớn vẫn là bí ẩn. Có ba trường phái:</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Các lực được đề xuất là động lực chuyển động mảng.</caption>
+      <thead><tr><th>Giả thuyết</th><th>Ý tưởng</th><th>Mức ủng hộ</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="lực đẩy sống núi">Lực đẩy sống núi</button> (ridge push)</td><td>Sau khi tách giãn, các trung tâm tách giãn giữa đại dương và dòng đối lưu bên dưới đẩy các mảng ra xa.</td><td>Ít hơn</td></tr>
+        <tr><td><button class="term" data-term="lực kéo phiến">Lực kéo phiến</button> (slab pull)</td><td>Các phiến chìm trong đới hút chìm kéo các mảng đi.</td><td><b>Được ủng hộ nhiều nhất</b> theo bằng chứng hiện nay</td></tr>
+        <tr><td><button class="term" data-term="trượt trọng lực">Trượt trọng lực</button> (gravitational sliding)</td><td>Trọng lực kéo mảng trượt xuống từ sống núi cao qua quyển mềm.</td><td>Ít hơn</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 2.7 -->
+<section id="s2-7">
+  <h2 class="sec"><span class="n">2.7</span>Điểm nóng</h2>
+  <p>Để đo chuyển động mảng chính xác hơn, các nhà khoa học nghiên cứu <button class="term" data-term="điểm nóng">điểm nóng</button> (hotspot). Được J. Tuzo Wilson đề xuất lần đầu năm 1963, điểm nóng là vùng mà mácma xuyên qua mảng tạo thành trung tâm núi lửa (đảo trên biển, núi trên đất liền). Khi mảng di chuyển qua điểm nóng, núi lửa rời khỏi nguồn mácma và tắt, còn mácma xuyên qua chỗ khác để tạo núi lửa mới. Mảng di chuyển trên một điểm nóng đứng yên để lại <b>chuỗi đảo hoặc chuỗi núi</b>. Theo định nghĩa cổ điển, điểm nóng không di chuyển, dù bằng chứng gần đây cho thấy có ngoại lệ.</p>
+  <div class="pair">
+    <figure>
+      <div class="frame"><img src="images/unit2/hotspot.webp" alt="Hai giai đoạn của một mảng di chuyển sang trái trên một cột mácma cố định: một núi lửa hình thành trên chùm, rồi bị mang đi và núi lửa mới hình thành trên chùm." loading="lazy" width="600" height="932" style="max-width:260px"></div>
+      <figcaption>Nguồn mácma cố định (chùm manti) dưới một mảng di chuyển tạo nên chuỗi núi lửa.<span class="credit">Los688. Phạm vi công cộng.</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Đo chuyển động mảng bằng dấu vết điểm nóng</h4>
+      <p>Điểm nóng là kiểu núi lửa duy nhất không gắn với hút chìm hay tách giãn ở ranh giới mảng. Vì điểm nóng đứng yên, chuỗi núi lửa ghi lại đường đi của mảng: <b>tuổi các lần phun trào</b> và <b>hình dạng chuỗi</b> cho biết tốc độ và hướng chuyển động của mảng so với điểm nóng.</p>
+      <p><b>Tốc độ = khoảng cách giữa hai núi lửa ÷ chênh lệch tuổi của chúng.</b> Hướng đi từ núi lửa già về núi lửa trẻ ngược với hướng chuyển động của mảng.</p>
+    </div>
+  </div>
+  <p><b>Các câu hỏi còn mở.</b> Nguồn gốc mácma điểm nóng vẫn còn tranh luận: một số cho rằng vật chất siêu nóng dâng lên từ sâu tận nhân thành một <b>chùm manti</b>; số khác cho rằng nguồn nằm trong manti. Cách điểm nóng khởi phát cũng gây tranh cãi: ý kiến phổ biến là chúng bắt đầu ở ranh giới phân kỳ khi siêu lục địa tách giãn; phiến hút chìm và cả va chạm thiên thể lớn cũng được nêu ra. Có hàng chục điểm nóng, gồm Tahiti, tam giác Afar, đảo Phục Sinh, Iceland, Galápagos và Samoa. Hoa Kỳ có hai điểm nóng lớn và được nghiên cứu kỹ nhất: <b>Hawaii</b> và <b>Yellowstone</b>.</p>
+
+  <h3 id="s2-7-1">2.7.1 Điểm nóng Hawaii</h3>
+  <p>Hawaii là một trong những điểm nóng hoạt động mạnh nhất Trái Đất. Bằng chứng cho thấy nó có tuổi <b>ít nhất 80 triệu năm</b> (có thể già hơn, nhưng đá cũ hơn đã bị hút chìm). Đảo Lớn (Big Island) nằm trên một chùm manti lớn, và <b>Kīlauea</b> là miệng phun chính (chương ghi núi lửa phun liên tục từ năm 1983; xem ghi chú kiểm chứng). Chuỗi đảo, phần lớn nằm dưới nước, trải dài gần <b>6.000 km</b> qua Thái Bình Dương. Đặc điểm nổi bật nhất là một khúc gập <b>60°</b> ở giữa chuỗi, đánh dấu sự đổi hướng của mảng khoảng 50 triệu năm trước, thường được gắn với sự tái cấu trúc mảng nhưng cũng có thể do chùm manti dịch chuyển. <button class="term" data-term="chụp cắt lớp địa chấn">Chụp cắt lớp địa chấn</button> (tomography) đã vẽ chùm manti xuống tới manti dưới, và tuổi đá, thảm thực vật, kích thước đảo đều cho thấy <b>các đảo già nhất nằm xa điểm nóng nhất</b>.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/hawaii-emperor.webp" alt="Bản đồ đáy biển bắc Thái Bình Dương: quần đảo Hawaii ở đầu đông nam của một chuỗi núi ngầm dài, chuỗi này gập mạnh rồi tiếp tục lên phía bắc thành chuỗi núi ngầm Emperor." loading="lazy" width="700" height="709" style="max-width:520px"></div>
+    <figcaption>Chuỗi núi ngầm và đảo Hawaii–Emperor. Chú ý khúc gập nơi chuỗi Hawaii gặp chuỗi núi ngầm Emperor.<span class="credit">Ingo Wölbern. Phạm vi công cộng.</span></figcaption>
+  </figure>
+
+  <h3 id="s2-7-2">2.7.2 Điểm nóng Yellowstone</h3>
+  <p>Yellowstone cũng hình thành do mácma dâng lên qua thạch quyển, nhưng nằm dưới một <b>mảng lục địa dày</b>. Mảng đại dương mỏng của Hawaii dễ bị xuyên thủng; ở Yellowstone, mảng dày là rào cản khó vượt hơn, nên các lần phun trào thường <b>dữ dội hơn nhiều nhưng ít xảy ra hơn</b>. Hơn 15 triệu năm phun trào đã tạo một vệt cong ngang miền tây Hoa Kỳ. Có ý kiến cho rằng điểm nóng này liên quan đến các bazan lũ Columbia River cổ hơn, thậm chí đến hoạt động núi lửa 70 triệu năm tuổi ở vùng Yukon, Canada.</p>
+  <figure>
+    <div class="frame"><img src="images/unit2/yellowstone-track.webp" alt="Bản đồ địa hình Idaho và các bang lân cận với một đường cong các trung tâm núi lửa ghi tuổi từ khoảng 16 triệu năm ở phía tây nam đến 0,6 triệu năm ở Yellowstone." loading="lazy" width="850" height="584"></div>
+    <figcaption>Dấu vết điểm nóng Yellowstone, ghi tuổi các lần phun trào theo triệu năm. Tuổi trẻ dần về phía Yellowstone, vì mảng Bắc Mỹ di chuyển về tây nam trên điểm nóng.<span class="credit">Kelvin Case, CC BY.</span></figcaption>
+  </figure>
+  <p>Lần phun trào lớn gần nhất tạo ra <b>miệng núi lửa (caldera) Yellowstone</b> và thành hệ tuf Lava Creek khoảng <b>631.000 năm trước</b>, phóng 1.000 km³ tro và mácma vào khí quyển; tro bay tới tận bang Mississippi. Các nhà khoa học dự đoán nếu phun trào lần nữa cũng sẽ cực lớn, với hậu quả vượt xa miền tây Hoa Kỳ: những vụ phun trào <button class="term" data-term="siêu núi lửa">siêu núi lửa</button> như vậy phủ khí quyển bằng khí và tro, che ánh sáng Mặt Trời, làm thay đổi mạnh khí hậu và có thể ảnh hưởng đến sản xuất lương thực toàn cầu.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>So sánh điểm nóng Hawaii và Yellowstone.</caption>
+      <thead><tr><th></th><th>Hawaii</th><th>Yellowstone</th></tr></thead>
+      <tbody>
+        <tr><td>Mảng</td><td>Mảng đại dương mỏng, dễ xuyên thủng</td><td>Mảng lục địa dày, khó xuyên thủng</td></tr>
+        <tr><td>Phun trào</td><td>Thường xuyên; Kīlauea là miệng phun chính</td><td>Dữ dội hơn nhiều, ít xảy ra hơn</td></tr>
+        <tr><td>Dấu vết</td><td>Chuỗi ~6.000 km, khúc gập 60° (~50 triệu năm trước); ít nhất 80 triệu năm tuổi</td><td>Vệt cong ngang miền tây Hoa Kỳ; hơn 15 triệu năm</td></tr>
+        <tr><td>Đáng chú ý</td><td>Đảo già nhất nằm xa điểm nóng nhất</td><td>Phun trào lớn gần nhất ~631.000 năm trước, 1.000 km³ tro và mácma</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Bài kiểm tra mục 2.6 và 2.7 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<section id="summary">
+  <h2 class="sec">Tóm tắt</h2>
+  <p>Kiến tạo mảng là một học thuyết thống nhất: nó giải thích gần như mọi quá trình địa chất lớn trên Trái Đất và đã dẫn dắt các nhà địa chất từ thập niên 1950–1960. Lớp bề mặt Trái Đất bị chia thành mạng lưới các mảng rắn, tương đối giòn. Bên dưới là một lớp nóng hơn, dẻo hơn với các dòng đối lưu dâng lên do nhiệt bên trong Trái Đất. Các dòng này đưa các mảng lại gần, tách xa và trượt ngang qua nhau. Động đất và núi lửa hình thành nơi các mảng tương tác, trừ núi lửa điểm nóng, vốn không do chuyển động mảng gây ra.</p>
+  <div class="callout">
+    <h4>Tóm tắt nhanh</h4>
+    <ul>
+      <li>Thuyết trôi dạt của Wegener có bằng chứng mạnh (lục địa khớp nhau, hóa thạch, đá, khí hậu) nhưng thiếu cơ chế; tách giãn đáy đại dương bổ sung cơ chế đó vào thập niên 1960.</li>
+      <li>Bằng chứng từ đáy biển: sống núi giữa Đại Tây Dương, trầm tích mỏng gần sống núi, các dải từ đối xứng, đới Wadati-Benioff.</li>
+      <li>Lớp hóa học: vỏ, manti, nhân. Lớp vật lý: thạch quyển, quyển mềm, lớp phủ giữa, nhân ngoài (lỏng), nhân trong (rắn).</li>
+      <li>Hội tụ: hút chìm (rãnh, nóng chảy do chất bốc, cung núi lửa, động đất lớn nhất) hoặc va chạm (núi cao không phải núi lửa).</li>
+      <li>Phân kỳ: đới tách giãn lục địa (đứt gãy thuận, địa hào, nóng chảy do giảm áp) phát triển thành sống núi giữa đại dương tạo đáy biển mới.</li>
+      <li>Chuyển dạng: các mảng trượt qua nhau (trượt bằng phải hoặc trái); khúc uốn gây ép trượt hoặc giãn trượt; điểm xuyên cắt đo độ dịch chuyển.</li>
+      <li>Chu trình Wilson: tách giãn → đại dương mới → hút chìm → khép đại dương → va chạm; lực kéo phiến là động lực được ủng hộ nhiều nhất.</li>
+      <li>Dấu vết điểm nóng (Hawaii, Yellowstone) cho biết tốc độ và hướng chuyển động của mảng.</li>
+    </ul>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Bài kiểm tra ôn tập Chương 2 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<section id="resources">
+  <h2 class="sec">Tài liệu tham khảo</h2>
+  <div class="res">
+    <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener"><b>Chương 2 (giáo trình) ↗</b><span>Toàn văn chương (tiếng Anh), có bài kiểm tra tương tác, ảnh động và mọi hình gốc.</span></a>
+    <a href="https://slcc.pressbooks.pub/introgeology/back-matter/glossary-test/" target="_blank" rel="noopener"><b>Bảng thuật ngữ của giáo trình ↗</b><span>Định nghĩa mọi thuật ngữ in đậm trong sách (tiếng Anh).</span></a>
+    <a href="https://www.youtube.com/watch?v=TgfYjS0OTWw" target="_blank" rel="noopener"><b>"Marie Tharp: Uncovering the Secrets of the Ocean Floor" ↗</b><span>Helen Czerski (Royal Institution) kể về những bản đồ đáy biển đầu tiên (tiếng Anh). Có trong mục 2.1.3.</span></a>
+    <a href="https://www.youtube.com/watch?v=6o1HawAOTEI" target="_blank" rel="noopener"><b>"PANGEA Breakup" ↗</b><span>Ảnh động của Tanya Atwater về Pangaea tan vỡ và Bắc Đại Tây Dương mở ra. Có trong mục 2.4.2.</span></a>
+    <a href="https://www.youtube.com/watch?v=IDTBY5WDELg" target="_blank" rel="noopener"><b>"Plate Tectonics in a Nutshell" ↗</b><span>Tanya Atwater giải thích đứt gãy San Andreas hình thành thế nào (tiếng Anh). Có trong mục 2.5.2.</span></a>
+    <a href="https://www.youtube.com/watch?v=6wJBOk9xjto" target="_blank" rel="noopener"><b>"Plate Tectonics Basics 1" ↗</b><span>Video ôn tập ngắn trong phần tóm tắt của chương (tiếng Anh).</span></a>
+    <a href="http://emvc.geol.ucsb.edu/2_infopgs/IP1GTect/cSubduction.html" target="_blank" rel="noopener"><b>Trung tâm Trực quan hóa Đa phương tiện UCSB ↗</b><span>Các ảnh động của Tanya Atwater về hút chìm, va chạm và tách giãn dùng trong mục 2.3 và 2.4.</span></a>
+    <a href="https://pubs.usgs.gov/gip/dynamic/dynamic.html" target="_blank" rel="noopener"><b>USGS: This Dynamic Earth ↗</b><span>Tài liệu minh họa miễn phí của Cục Khảo sát Địa chất Hoa Kỳ về kiến tạo mảng, gồm cả lịch sử học thuyết (tiếng Anh).</span></a>
+  </div>
+</section>
+
+<section id="factcheck">
+  <h2 class="sec">Ghi chú kiểm chứng</h2>
+  <p>Mọi nội dung trong tài liệu đã được đối chiếu với chương trong giáo trình. Khi chương khác với tài liệu tham khảo hiện hành hoặc tự mâu thuẫn, tài liệu này giữ giá trị của chương (vì đó là nội dung bạn sẽ được kiểm tra) và ghi chú tại đây.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Các giá trị khác với tài liệu tham khảo hiện hành hoặc mâu thuẫn trong chương.</caption>
+      <thead><tr><th>Chủ đề</th><th>Chương ghi</th><th>Ghi chú</th></tr></thead>
+      <tbody>
+        <tr><td>Tốc độ hút chìm trung bình</td><td>"25 dặm mỗi triệu năm, khoảng nửa inch mỗi năm"</td><td>Hai con số không khớp: 25 dặm mỗi triệu năm là khoảng 4 cm (1,6 inch) mỗi năm. Tài liệu chỉ nêu con số 25 dặm/triệu năm.</td></tr>
+        <tr><td>Hess và tách giãn đáy đại dương</td><td>Đề xuất năm 1959</td><td>Hess phổ biến ý tưởng khoảng năm 1960 và công bố năm 1962 ("History of Ocean Basins", có trong danh mục tham khảo của chính chương).</td></tr>
+        <tr><td>Độ sâu lớp phủ giữa</td><td>"Nằm ở độ sâu khoảng 410 và 660 km"</td><td>410–660 km là đới chuyển tiếp ở phần trên của lớp phủ giữa; manti dưới tiếp tục từ ~660 km đến nhân ở ~2.890 km (USGS, <a href="https://pubs.usgs.gov/gip/interior/" target="_blank" rel="noopener">The Interior of the Earth</a>). Tài liệu trình bày theo cách đó.</td></tr>
+        <tr><td>Kīlauea</td><td>"Phun trào liên tục từ năm 1983"</td><td>Đợt phun Puʻu ʻŌʻō kéo dài từ 1983 đến 2018; sau đó Kīlauea phun trào thành từng đợt riêng (<a href="https://www.usgs.gov/volcanoes/kilauea" target="_blank" rel="noopener">Đài quan sát núi lửa Hawaii, USGS</a>).</td></tr>
+        <tr><td>Khúc gập Hawaii–Emperor</td><td>Khoảng 50 triệu năm trước</td><td>Được định tuổi khoảng 47 triệu năm trước (Sharp &amp; Clague, 2006, <i>Science</i> 313: 1281–1284).</td></tr>
+        <tr><td>Giun ống khổng lồ</td><td>Văn bản: "dài 10 foot"; chú thích hình: "trên 6 foot"</td><td>Chương không nhất quán; tài liệu chỉ ghi "cao hơn người".</td></tr>
+        <tr><td>Hình giãn trượt</td><td>Chú thích ghi tạo ra "khúc uốn nén" (restraining bend)</td><td>Đứt gãy giãn trượt tạo khúc uốn giãn (releasing bend), như chính văn bản của chương viết. Chú thích trong tài liệu dùng "khúc uốn giãn".</td></tr>
+        <tr><td>Hình đới siêu đứt gãy Sunda</td><td>Chú thích: "động đất Ấn Độ Dương năm 2006, Mw 9,1–9,3"</td><td>Trận động đất xảy ra năm 2004, như văn bản của chương ghi (hình này không được đưa vào đây).</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Chương ghi nhân trong "dày khoảng 1.220 km"; con số này là bán kính của nó, vì nhân trong kéo dài đến tâm Trái Đất. Độ sâu tâm Trái Đất (~6.370 km) là 5.150 km cộng 1.220 km theo số liệu của chương.</p>
+</section>
+
+<section id="credits">
+  <h2 class="sec">Nguồn &amp; trích dẫn</h2>
+  <p class="small">Nội dung tóm tắt từ <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener"><i>An Introduction to Geology</i>, Chương 2</a>, © 2017 Chris Johnson, Matthew D. Affolter, Paul Inkenbrandt và Cam Mosher, theo giấy phép <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. Tài liệu này được chia sẻ theo cùng giấy phép. Hình ảnh lấy từ chương và giữ giấy phép riêng, ghi dưới mỗi hình.</p>
+  <ul class="small">
+    <li>CC BY-SA: bản đồ ranh giới mảng (Eric Gaba), ảnh động đối lưu (Oni Lukos), bản đồ độ sâu Moho (AllenMcC.), rìa thụ động (Joshua Doubek), Pangaea (User:Kieff), sự ra đời đại dương (Hannes Grobe / Lichtspielderivative), đứt gãy trượt bằng (Cferrero), khúc uốn nén (GeoAsh), khúc uốn giãn (K. Martin), chu trình Wilson (Hannes Grobe / Hardwigg).</li>
+    <li>CC BY: khói đen (Thư viện ảnh NOAA), dấu vết điểm nóng Yellowstone (Kelvin Case).</li>
+    <li>Phạm vi công cộng: bản đồ Snider-Pellegrini, bản đồ hóa thạch, đới Wadati-Benioff, các loại ranh giới, trước cung, sơ đồ hút chìm và va chạm (USGS), hút chìm Laramide (Melanie Moreno), địa lũy và địa hào (USGS), Afar (DEMIS), tuổi đáy biển (NOAA), sơ đồ dải từ (Chmee2), bản đồ San Andreas, suối Wallace (Robert E. Wallace), sơ đồ điểm nóng (Los688), chuỗi Hawaii–Emperor (Ingo Wölbern).</li>
+    <li>Sơ đồ các lớp, sơ đồ động các loại ranh giới, sơ đồ động dải từ, vòng chu trình Wilson và dòng thời gian: vẽ cho tài liệu này dựa trên văn bản của chương.</li>
+    <li>Các hình được ghi "All Rights Reserved" trong chương (ảnh mở đầu, hình lãnh địa kiến tạo, ảnh GIF dải từ của Atwater) không được đưa vào.</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<button class="fab" id="notesBtn" type="button" aria-controls="notes" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Thuật ngữ
+</button>
+<button class="fab hide" id="toTop" type="button" aria-label="Lên đầu trang">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<aside class="notes" id="notes" hidden aria-label="Thuật ngữ">
+  <header>
+    <div><h2>Thuật ngữ · Chương 2</h2><button class="close" id="notesClose" type="button" aria-label="Đóng bảng thuật ngữ">×</button></div>
+    <input id="termSearch" type="search" placeholder="Tìm thuật ngữ và định nghĩa" autocomplete="off" aria-label="Tìm thuật ngữ">
+    <div class="count" id="termCount"></div>
+  </header>
+  <dl id="termList"></dl>
+</aside>
+</div>
+
+<script type="application/json" id="terms">
+[
+ ["chuyển đổi hệ hình","s2-0","Sự thay đổi căn bản trong hiểu biết vốn được chấp nhận của một ngành, như việc chấp nhận kiến tạo mảng trong địa chất học. (EN: paradigm shift)"],
+ ["kiến tạo mảng","s2-0","Học thuyết cho rằng lớp ngoài của Trái Đất bị chia thành các mảng mà chuyển động của chúng tạo ra động đất, núi và núi lửa. Học thuyết thống nhất của địa chất học. (EN: plate tectonics)"],
+ ["đẳng tĩnh","s2-1","Thạch quyển nổi cân bằng trên quyển mềm, như cục đá nổi trong nước ('nổi đẳng tĩnh'). Năm 1910 đây là cách giải thích được chấp nhận cho cầu đất liền Bering, điều Wegener phản đối. (EN: isostasy)"],
+ ["trôi dạt lục địa","s2-1","Giả thuyết của Wegener rằng các lục địa từng nối liền rồi trôi dạt ra xa; thiếu cơ chế cho đến khi có thuyết tách giãn đáy đại dương. (EN: continental drift)"],
+ ["thềm lục địa","s2-1-1","Phần rìa nông, ngập nước của lục địa; đường viền của nó thể hiện hình dạng thật của lục địa và giúp Wegener ghép khớp hơn. (EN: continental shelf)"],
+ ["cầu lục địa","s2-1-1","Dải đất giả định vắt qua đại dương mà những người phản đối thuyết trôi dạt cho rằng đã giúp động vật đi qua trước khi bị bào mòn. (EN: land bridge)"],
+ ["tiến động","s2-1-2","Sự lắc của trục quay Trái Đất; một trong các lực (cùng lực ly tâm) mà Wegener đề xuất sai để giải thích lục địa di chuyển. (EN: precession)"],
+ ["đối lưu","s2-1-2","Sự lưu chuyển trong chất lưu bị đốt nóng không đều: vật chất nóng dâng lên gần nguồn nhiệt, vật chất nguội chìm xuống ở xa. Động lực chính của mảng, cùng trọng lực và mật độ. (EN: convection)"],
+ ["tách giãn đáy đại dương","s2-1-3","Giả thuyết của Hess rằng mảng đại dương mới hình thành ở sống núi giữa đại dương rồi di chuyển ra xa; cơ chế còn thiếu của thuyết trôi dạt. (EN: seafloor spreading)"],
+ ["SONAR","s2-1-3","Kỹ thuật định vị bằng âm thanh, dùng từ năm 1947 để lập bản đồ đáy biển, phát hiện sống núi giữa Đại Tây Dương. (EN: SONAR)"],
+ ["cổ từ học","s2-1-3","Ngành nghiên cứu từ trường lưu giữ trong đá (la bàn hóa thạch); cung cấp bằng chứng xác thực đầu tiên cho chuyển động mảng. (EN: paleomagnetism)"],
+ ["magnetit","s2-1-3","Khoáng vật từ tính trong đá mácma, định hướng theo từ trường Trái Đất khi đá còn nóng chảy. (EN: magnetite)"],
+ ["độ từ khuynh","s2-1-3","Góc nghiêng của từ trường lưu giữ trong đá; liên quan đến vĩ độ nơi đá hình thành. (EN: magnetic inclination)"],
+ ["độ từ thiên","s2-1-3","Hướng của từ trường lưu giữ trong đá so với hướng bắc từ. (EN: magnetic declination)"],
+ ["đới Wadati-Benioff","s2-1-3","Mặt phẳng các trận động đất sâu bắt đầu gần rãnh đại dương và nghiêng xuống dưới lục địa hoặc cung đảo, vạch ra mảng đang chìm. (EN: Wadati-Benioff zone)"],
+ ["sóng địa chấn","s2-2","Sóng động đất; sự lan truyền của nó qua Trái Đất là nguồn thông tin chính về cấu trúc bên trong. (EN: seismic wave)"],
+ ["vỏ Trái Đất","s2-2-1","Lớp hóa học ngoài cùng, phía trên Moho: vỏ lục địa (giống granit, mật độ thấp) hoặc vỏ đại dương (giống bazan, mật độ cao). (EN: crust)"],
+ ["vỏ lục địa","s2-2-1","Vỏ có mật độ tương đối thấp và thành phần giống granit. (EN: continental crust)"],
+ ["vỏ đại dương","s2-2-1","Vỏ có mật độ tương đối cao (nhất là khi lạnh và già) và thành phần giống bazan. (EN: oceanic crust)"],
+ ["giòn","s2-2-1","Vỡ khi chịu lực, nhất là lực tác dụng nhanh (như thủy tinh, đồ gốm). Vỏ trên có tính giòn, nơi phần lớn động đất xảy ra. (EN: brittle)"],
+ ["dẻo","s2-2-1","Biến dạng khi chịu lực mà không vỡ (như nhựa mềm, ma tít). Phần vỏ sâu có tính dẻo. (EN: ductile)"],
+ ["vận tốc địa chấn","s2-2-1","Tốc độ sóng động đất truyền qua vật chất rắn; tăng vọt ở đáy vỏ. (EN: seismic velocity)"],
+ ["mặt gián đoạn Mohorovičić","s2-2-1","Moho: ranh giới vỏ–manti, Mohorovičić phát hiện năm 1909. Khoảng 5 km dưới đáy biển, 30–40 km dưới lục địa, sâu gấp đôi dưới vùng tạo núi. (EN: Mohorovičić Discontinuity, Moho)"],
+ ["kiến tạo sơn","s2-2-1","Tạo núi: một đợt tạo núi lớn, ví dụ pha tạo núi Sevier và Laramide. (EN: orogeny)"],
+ ["manti","s2-2-1","Lớp hóa học giữa vỏ và nhân, đến ~2.900 km; lớn nhất về thể tích; có lẽ chủ yếu là peridotit. (EN: mantle)"],
+ ["ophiolit","s2-2-1","Mảnh manti và đáy đại dương được đưa lên và lộ ra (ví dụ do chờm phủ); cho biết thành phần của manti. (EN: ophiolite)"],
+ ["thể tù","s2-2-1","Mảnh đá được mácma mang lên mặt đất khi phun trào; phần lớn thể tù từ manti là peridotit. (EN: xenolith)"],
+ ["peridotit","s2-2-1","Đá mácma siêu mafic; phần lớn thể tù là peridotit nên có lẽ phần lớn manti cũng vậy. (EN: peridotite)"],
+ ["nhân Trái Đất","s2-2-1","Lớp hóa học trong cùng, chủ yếu là sắt và niken (có thể có ít oxy), gồm phần ngoài lỏng và phần trong rắn; phát hiện năm 1906. (EN: core)"],
+ ["thạch quyển","s2-2-2","Lớp vật lý ngoài cùng, cứng, bị chia thành các mảng. Đại dương: trung bình đến ~140 km; lục địa: 40–280 km. (EN: lithosphere)"],
+ ["mảng","s2-2-2","Một phần của thạch quyển bị chia cắt, chuyển động tương đối với các mảng khác. (EN: plate)"],
+ ["ranh giới mảng","s2-2-2","Nơi hai mảng gặp nhau và chuyển động tương đối; nơi diễn ra tạo núi, động đất và núi lửa. (EN: plate boundary)"],
+ ["quyển mềm","s2-2-2","Lớp yếu về cơ học dưới thạch quyển, chảy theo đối lưu; tương đối liền khối; nông hơn dưới sống núi, sâu hơn dưới núi. (EN: asthenosphere)"],
+ ["lớp phủ giữa","s2-2-2","Còn gọi là quyển giữa, manti dưới: cứng và kém linh động hơn quyển mềm, có đới chuyển tiếp ở phần trên. (EN: mesosphere)"],
+ ["đới chuyển tiếp","s2-2-2","Phần trên của lớp phủ giữa (~410–660 km), nơi áp suất và nhiệt liên tục biến đổi khoáng vật sang dạng khác; nhận ra qua thay đổi vận tốc địa chấn. (EN: transition zone)"],
+ ["nhân ngoài","s2-2-2","Lớp duy nhất hoàn toàn lỏng, sâu 2.890–5.150 km; sắt và niken lưu chuyển trong đó tạo ra từ trường. (EN: outer core)"],
+ ["nhân trong","s2-2-2","Tâm rắn của Trái Đất (~1.220 km), rắn do áp suất cực lớn; Inge Lehmann chứng minh năm 1936; lớn dần khi nhân ngoài đông đặc. (EN: inner core)"],
+ ["từ trường","s2-2-2","Do sắt và niken nóng chảy lưu chuyển trong nhân ngoài tạo ra; bảo vệ khí quyển và nước của Trái Đất (Sao Hỏa đã mất từ trường). (EN: magnetic field)"],
+ ["rìa thụ động","s2-2-3","Nơi thạch quyển lục địa chuyển dần sang thạch quyển đại dương trên cùng một mảng, không có chuyển động tương đối (ví dụ bờ đông châu Mỹ). (EN: passive margin)"],
+ ["rìa chủ động","s2-2-3","Nơi mảng đại dương và mảng lục địa gặp nhau và chuyển động tương đối (ví dụ bờ tây châu Mỹ). (EN: active margin)"],
+ ["ranh giới hội tụ","s2-3","Ranh giới phá hủy, nơi các mảng tiến về phía nhau: hút chìm hoặc va chạm. (EN: convergent boundary)"],
+ ["ranh giới phân kỳ","s2-4","Ranh giới kiến tạo, nơi các mảng tách xa nhau: đới tách giãn lục địa và sống núi giữa đại dương. (EN: divergent boundary)"],
+ ["ranh giới chuyển dạng","s2-5","Ranh giới trượt bằng hay bảo toàn, nơi các mảng trượt qua nhau theo phương ngang. (EN: transform boundary)"],
+ ["hút chìm","s2-3-1","Mảng đặc hơn (thường là đại dương) chìm xuống dưới mảng nổi hơn, đi vào manti. (EN: subduction)"],
+ ["rãnh đại dương","s2-3-1","Vùng trũng sâu ở đáy biển nơi mảng hút chìm; có thể sâu hơn gấp đôi độ sâu bồn 3–4 km (rãnh Mariana ~11 km). (EN: trench)"],
+ ["nêm bồi kết","s2-3-1","Trầm tích đáy biển bị nạo và ép giữa hai mảng trong rãnh; còn gọi là mélange hay lăng trụ bồi kết. (EN: accretionary wedge)"],
+ ["lãnh địa kiến tạo","s2-3-1","Vùng đất lớn tạo từ các mảnh lục địa (như vi lục địa) gắn vào nêm bồi kết; phần lớn California. (EN: terrane)"],
+ ["phiến hút chìm","s2-3-1","Mảng đại dương đang hút chìm khi nó chìm vào manti. (EN: slab)"],
+ ["nêm manti","s2-3-1","Vùng manti phía trên phiến hút chìm và dưới mảng phía trên, nơi xảy ra nóng chảy do chất bốc. (EN: mantle wedge)"],
+ ["nóng chảy do chất bốc","s2-3-1","Nóng chảy xảy ra khi chất bốc (nước, CO2) thoát ra từ phiến làm hạ nhiệt độ nóng chảy của nêm manti. (EN: flux melting)"],
+ ["cung núi lửa","s2-3-1","Chuỗi núi lửa cong phía trên đới hút chìm, cong do bề mặt Trái Đất cong. (EN: volcanic arc)"],
+ ["cung đảo","s2-3-1","Cung núi lửa trên mảng đại dương có núi lửa nhô lên khỏi mặt biển (ví dụ quần đảo Aleut, Tiểu Antilles). (EN: island arc)"],
+ ["bồn trũng trước cung","s2-3-1","Phần mảng phía trên nằm giữa cung núi lửa và rãnh, có nhiều đứt gãy và biến dạng. (EN: forearc basin)"],
+ ["bồn trũng sau cung","s2-3-1","Bồn hình thành do lực căng ở phía trong của cung núi lửa; có thể phát triển thành đới tách giãn lục địa. (EN: backarc basin)"],
+ ["cuộn lùi phiến hút chìm","s2-3-1","Cơ chế đề xuất: phiến cuộn lùi thay vì trượt xuống, kéo mảng phía trên ra phía biển và kéo giãn nó. (EN: slab rollback)"],
+ ["đứt gãy sau cung","s2-3-1","Mảng phía trên bị uốn và nứt nơi các mảng trẻ, nổi bị hút chìm nhanh; có thể là tách giãn hoặc nén (nghịch chờm). (EN: back-arc faulting)"],
+ ["đứt gãy nghịch chờm","s2-3-1","Đứt gãy nén đẩy đá và các mảnh mảng chồng lên nhau (ví dụ phía đông dãy Andes); kiểu da mỏng hoặc da dày. (EN: thrust fault)"],
+ ["hút chìm phiến phẳng","s2-3-1","Hút chìm nông, góc thấp, làm biến dạng mảng phía trên ở sâu trong lục địa; gây ra pha tạo núi Laramide. (EN: flat-slab subduction)"],
+ ["va chạm lục địa","s2-3-2","Các mảng lục địa hội tụ mà không hút chìm: núi cao không phải núi lửa, vùng rộng có động đất lớn, ít núi lửa. (EN: collision)"],
+ ["siêu lục địa","s2-3-2","Khối tập hợp khổng lồ các lục địa hình thành khi bồn đại dương khép lại (ví dụ Pangaea, Rodinia). (EN: supercontinent)"],
+ ["Pangaea","s2-3-2","Siêu lục địa hình thành do va chạm, trung tâm giả thuyết của Wegener; bắt đầu tách ra khoảng 200 triệu năm trước. (EN: Pangea)"],
+ ["chu kỳ siêu lục địa","s2-3-2","Các lục địa lặp lại việc hợp thành siêu lục địa rồi tách ra, khoảng 500 triệu năm một lần. (EN: supercontinent cycle)"],
+ ["bồn trước núi","s2-3-2","Vùng trũng trên mảng do trọng lượng của đai núi bên cạnh; ví dụ vịnh Ba Tư cạnh dãy Zagros. (EN: foreland basin)"],
+ ["chờm phủ","s2-3-2","Quá trình hiếm khi một phần mảng lục địa bị kẹt dưới mảng đại dương đang chìm, rồi trồi lại, đưa ophiolit lên. (EN: obduction)"],
+ ["từ tách giãn đến trôi dạt","s2-4","Đới tách giãn lục địa làm mảng tách đôi, nước biển tràn vào khe hở và các phần trôi xa thành những lục địa riêng. (EN: rift-to-drift)"],
+ ["đứt gãy thuận","s2-4-1","Đứt gãy tách giãn hình thành khi mảng bị kéo giãn và mỏng đi. (EN: normal fault)"],
+ ["thung lũng tách giãn","s2-4-1","Vùng trũng sâu nơi các khối giữa những đứt gãy lớn sụt xuống khi tách giãn. (EN: rift valley)"],
+ ["địa hào","s2-4-1","Khối vỏ hình nêm sụt xuống giữa các đứt gãy trong đới tách giãn. (EN: graben)"],
+ ["địa lũy","s2-4-1","Khối nhô cao (vai) nằm giữa các địa hào. (EN: horst)"],
+ ["bán địa hào","s2-4-1","Khối chỉ có một bên sụt xuống. (EN: half-graben)"],
+ ["nền cổ","s2-4-1","Phần lõi già, ổn định của lục địa, nơi tách giãn không xảy ra. (EN: craton)"],
+ ["nhánh tách giãn thất bại","s2-4-1","Đường may tách giãn có ít hoặc không có hoạt động kiến tạo; vẫn là điểm yếu (ví dụ vùng trũng thung lũng Mississippi). (EN: failed rift arm)"],
+ ["aulacogen","s2-4-1","Dạng mà một nhánh tách giãn thất bại có thể phát triển thành: một đới yếu lâu dài trong mảng lục địa. (EN: aulacogen)"],
+ ["điểm nối ba","s2-4-1","Nơi ba ranh giới phân kỳ phát triển gần nhau, ví dụ tam giác Afar. (EN: triple junction)"],
+ ["nóng chảy do giảm áp","s2-4-1","Nóng chảy do áp suất giảm khi các mảng bị kéo ra; nguồn mácma ở đới tách giãn và sống núi giữa đại dương. (EN: decompression melting)"],
+ ["carbonatit","s2-4-1","Dung nham cacbonat lỏng tương đối nguội, do núi lửa Ol Doinyo Lengai ở Tanzania phun ra. (EN: carbonatite)"],
+ ["sống núi giữa đại dương","s2-4-2","Dãy núi lửa dưới biển ở ranh giới phân kỳ; nơi duy nhất tạo ra thạch quyển đại dương mới. (EN: mid-ocean ridge)"],
+ ["trung tâm tách giãn","s2-4-2","Tên khác của sống núi giữa đại dương. (EN: spreading center)"],
+ ["đồng bằng biển thẳm","s2-4-2","Đáy biển rộng, thấp, khá bằng phẳng, hình thành khi thạch quyển nguội và lún xuống xa sống núi. (EN: abyssal plain)"],
+ ["giả thuyết Vine-Matthews-Morley","s2-4-2","Giải thích các dải từ đối xứng ở sống núi là do từ trường Trái Đất in vào đá mới khi nó nguội. (EN: Vine-Matthews-Morley hypothesis)"],
+ ["nhiệt độ Curie","s2-4-2","Còn gọi là điểm Curie: Nhiệt độ mà dưới đó từ trường bị khóa vào khoáng vật từ tính. (EN: Curie point)"],
+ ["đảo cực địa từ","s2-4-2","Sự hoán đổi định kỳ giữa cực bắc và cực nam từ của Trái Đất, ghi lại thành các dải xen kẽ. (EN: magnetic reversal)"],
+ ["miệng phun thủy nhiệt","s2-4-2","Khe nứt ở sống núi nơi nước biển lưu thông qua đá nóng và trào ra mang theo khoáng chất và khí (khói đen). (EN: hydrothermal vent)"],
+ ["hóa tổng hợp","s2-4-2","Tạo thức ăn từ năng lượng hóa học (ở đây là hợp chất lưu huỳnh) thay vì ánh sáng; nuôi sống quần xã quanh miệng phun. (EN: chemosynthesis)"],
+ ["trượt bằng phải","s2-5","Đứng trên một mảng, mảng đối diện dịch sang phải. (EN: dextral, right-lateral)"],
+ ["trượt bằng trái","s2-5","Đứng trên một mảng, mảng đối diện dịch sang trái. (EN: sinistral, left-lateral)"],
+ ["đới đứt vỡ","s2-5","Đới không động đất gồm các đứt gãy chuyển dạng gần sống núi giữa đại dương, điều tiết tốc độ tách giãn khác nhau. (EN: fracture zone)"],
+ ["khúc uốn nén","s2-5-1","Khúc uốn nơi các mảng bị cản không trượt qua được; lực nén (ép trượt) tạo núi. (EN: restraining bend)"],
+ ["khúc uốn giãn","s2-5-1","Khúc uốn nơi các mảng bị kéo tách ra; lực giãn (giãn trượt) tạo bồn, đôi khi có núi lửa. (EN: releasing bend)"],
+ ["ép trượt","s2-5-1","Lực nén cộng thêm vào trượt cắt ở khúc uốn của đứt gãy chuyển dạng (ví dụ Big Bend, San Andreas). (EN: transpression)"],
+ ["giãn trượt","s2-5-1","Lực giãn cộng thêm vào trượt cắt ở khúc uốn giãn (ví dụ Biển Chết, Salton Sea). (EN: transtension)"],
+ ["điểm xuyên cắt","s2-5-2","Cấu trúc địa chất bị đứt gãy cắt qua; ghép các phần bị tách cho biết độ dịch chuyển của đứt gãy. (EN: piercing point)"],
+ ["chu trình Wilson","s2-6","Sự mở và khép lặp lại của các bồn đại dương, hình thành và tan vỡ của siêu lục địa; J. Tuzo Wilson mô tả năm 1966. (EN: Wilson Cycle)"],
+ ["chùm manti","s2-6","Cột vật chất siêu nóng dâng lên qua manti, có thể từ sâu tận nhân; được cho là nguồn cấp cho điểm nóng. (EN: mantle plume)"],
+ ["lực đẩy sống núi","s2-6","Giả thuyết cho rằng các trung tâm tách giãn giữa đại dương và dòng đối lưu đẩy các mảng ra xa. (EN: ridge push)"],
+ ["lực kéo phiến","s2-6","Giả thuyết cho rằng phiến chìm trong đới hút chìm kéo các mảng; được bằng chứng hiện nay ủng hộ nhiều nhất. (EN: slab pull)"],
+ ["trượt trọng lực","s2-6","Giả thuyết cho rằng trọng lực kéo mảng trượt xuống từ sống núi cao qua quyển mềm. (EN: gravitational sliding)"],
+ ["điểm nóng","s2-7","Vùng mácma liên tục xuyên qua mảng tạo trung tâm núi lửa; mảng di chuyển để lại chuỗi núi lửa. Wilson đề xuất năm 1963. (EN: hotspot)"],
+ ["chụp cắt lớp địa chấn","s2-7-1","Kỹ thuật ảnh địa chấn ba chiều, dùng để vẽ chùm manti Hawaii xuống tới manti dưới. (EN: tomography)"],
+ ["siêu núi lửa","s2-7-2","Núi lửa có thể phun trào cực lớn, phủ khí quyển bằng khí và tro, che ánh sáng Mặt Trời (ví dụ Yellowstone). (EN: supervolcano)"]
+]
+</script>
+<script src="assets/guide.js"></script>
+</body>
+</html>
