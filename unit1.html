@@ -1,0 +1,1070 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Understanding Science</title>
+<meta name="description" content="Unit 1 study guide for An Introduction to Geology, Chapter 1: Understanding Science.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/guide.css">
+<style>
+/* Unit 1 palette: slate and teal (lab glass, field notebook), with ochre highlights. */
+:root{
+  --fig-prefix:"Figure 1."; --tbl-prefix:"Table 1.";
+  --bg:#f4f5f2; --surface:#ffffff; --surface-2:#e9ece6; --fg:#1c2220; --muted:#56605b; --line:#cfd5cd;
+  --accent:#1d6b66; --accent-soft:#d5ebe8; --ochre:#a8701c; --ochre-soft:#f5e6cc; --rust:#a2462a;
+  --s1:#c9b48a; --s2:#9b8a6a; --s3:#6f7a6d; --s4:#4a5752; --s5:#2f3b38;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121715; --surface:#1a201e; --surface-2:#232b28; --fg:#e2e7e3; --muted:#9aa59f; --line:#34403b;
+  --accent:#5cbdb3; --accent-soft:#1d3532; --ochre:#e0ae5a; --ochre-soft:#3a2e1a; --rust:#e08463;
+  --s1:#8a7a58; --s2:#6c5f48; --s3:#4b5650; --s4:#36423d; --s5:#26302d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121715; --surface:#1a201e; --surface-2:#232b28; --fg:#e2e7e3; --muted:#9aa59f; --line:#34403b;
+  --accent:#5cbdb3; --accent-soft:#1d3532; --ochre:#e0ae5a; --ochre-soft:#3a2e1a; --rust:#e08463;
+  --s1:#8a7a58; --s2:#6c5f48; --s3:#4b5650; --s4:#36423d; --s5:#26302d; color-scheme:dark}
+</style>
+</head>
+<body>
+<div lang="en">
+<header class="hero" id="top">
+  <div class="strata" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Unit 1 · Chapter 1 · An Introduction to Geology</div>
+      <h1>Understanding Science</h1>
+      <p>How scientists build reliable knowledge, how modern geology grew out of the scientific revolution, and the big ideas (rock cycle, Earth's layers, deep time) the rest of the course is built on.</p>
+    </div>
+    <div class="hero-tools">
+      <a class="btn" href="unit1-vi.html" lang="vi" hreflang="vi">Tiếng Việt</a>
+      <button class="btn" id="themeBtn" type="button" aria-label="Toggle light or dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Dark mode</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#outcomes">Learning outcomes</a></li>
+      <li><a href="#s1-1"><span class="num">1.1</span>What is science?</a></li>
+      <li><a href="#s1-2"><span class="num">1.2</span>Scientific method</a></li>
+      <li><a href="#s1-3"><span class="num">1.3</span>Early scientific thought</a></li>
+      <li><a href="#s1-4"><span class="num">1.4</span>Foundations of geology</a></li>
+      <li><a href="#s1-5"><span class="num">1.5</span>The study of geology</a>
+        <ol>
+          <li><a href="#s1-5-1"><span class="num">1.5.1</span>Why study geology?</a></li>
+          <li><a href="#s1-5-2"><span class="num">1.5.2</span>Rock cycle</a></li>
+          <li><a href="#s1-5-3"><span class="num">1.5.3</span>Plates &amp; layers</a></li>
+          <li><a href="#s1-5-4"><span class="num">1.5.4</span>Deep time</a></li>
+          <li><a href="#s1-5-5"><span class="num">1.5.5</span>Geologist's tools</a></li>
+        </ol>
+      </li>
+      <li><a href="#s1-6"><span class="num">1.6</span>Denial &amp; sources</a>
+        <ol>
+          <li><a href="#s1-6-1"><span class="num">1.6.1</span>Science denial</a></li>
+          <li><a href="#s1-6-2"><span class="num">1.6.2</span>Evaluating sources</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#factcheck">Fact-check notes</a></li>
+      <li><a href="#credits">Credits</a></li>
+    </ol>
+  </nav>
+
+<main>
+
+<section id="outcomes">
+  <h2 class="sec">Learning outcomes</h2>
+  <p class="lead">By the end of Chapter 1 you should be able to do each of these. The tag shows where it is covered.</p>
+  <ul class="outcomes">
+    <li><a class="tag" href="#s1-1">1.1</a><span>Contrast objective vs. subjective observations, and quantitative vs. qualitative observations.</span></li>
+    <li><a class="tag" href="#s1-1">1.1</a><span>Identify a pseudoscience by its lack of falsifiability.</span></li>
+    <li><a class="tag" href="#s1-3">1.3</a><span>Contrast the methods Aristotle and Galileo used to describe the natural world.</span></li>
+    <li><a class="tag" href="#s1-2">1.2</a><span>Explain the scientific method and apply it to a problem or question.</span></li>
+    <li><a class="tag" href="#s1-4">1.4</a><span>Describe the foundations of modern geology, such as uniformitarianism, and contrast it with catastrophism.</span></li>
+    <li><a class="tag" href="#s1-5">1.5</a><span>Explain why studying geology is important, and how Earth materials change through the rock cycle.</span></li>
+    <li><a class="tag" href="#s1-6">1.6</a><span>Describe the steps of a reputable scientific study and explain the rhetorical arguments used by science deniers.</span></li>
+  </ul>
+  <div class="callout">
+    <h4>How to use this guide</h4>
+    <p>Underlined words are key terms. Click one, or open <b>Key terms</b> at the bottom right, to read and search every definition from this chapter.</p>
+  </div>
+</section>
+
+<!-- 1.1 -->
+<section id="s1-1">
+  <h2 class="sec"><span class="n">1.1</span>What is science?</h2>
+  <p>Scientists seek the fundamental principles behind natural patterns and processes. Science is more than a body of knowledge: it is a way to evaluate and create new knowledge without bias, by relying on objective rather than subjective evidence.</p>
+
+  <h3>Observations: objective vs. subjective</h3>
+  <p>An <button class="term" data-term="objective observation">objective observation</button> is free of personal bias and the same for everyone. A <button class="term" data-term="subjective observation">subjective observation</button> is based on a person's feelings and beliefs and is unique to them. Humans are biased by nature, so the goal is to be as unbiased as possible.</p>
+
+  <figure>
+    <div class="frame"><img src="images/unit1/yellowstone.jpg" alt="A waterfall at the head of a steep canyon in Yellowstone National Park." loading="lazy" width="768" height="576"></div>
+    <figcaption>Grand Canyon of the Yellowstone. Objective: "The picture is of a waterfall." Subjective: "The picture is beautiful," or "The waterfall is there because of erosion" (an interpretation, not an observation).<span class="credit">Photo © Matt Affolter, from <i>An Introduction to Geology</i> (CC BY-NC-SA 4.0).</span></figcaption>
+  </figure>
+
+  <h3>Measurements: quantitative vs. qualitative</h3>
+  <p>Scientists also reduce bias by preferring <button class="term" data-term="quantitative">quantitative</button> measurements (a specific number) over <button class="term" data-term="qualitative">qualitative</button> ones (general or relative descriptions). Numbers are more precise and can be analyzed statistically.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Describing the same rock two ways (examples from the chapter).</caption>
+      <thead><tr><th>Property</th><th>Qualitative</th><th>Quantitative</th></tr></thead>
+      <tbody>
+        <tr><td>Color</td><td>"The rock is red."</td><td>Measure the wavelengths of reflected light.</td></tr>
+        <tr><td>Density</td><td>"The rock is heavy."</td><td>Measure the proportions of minerals it contains.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Falsifiability and pseudoscience</h3>
+  <p>All scientific claims are <button class="term" data-term="falsifiable">falsifiable</button>: any hypothesis can be tested and proven false. Only after false results, competing ideas, and variations are exhaustively eliminated does a hypothesis become a reliable <button class="term" data-term="scientific theory">scientific theory</button>. Proving current ideas wrong has driven many scientific careers.</p>
+  <p>Falsifiability separates science from <button class="term" data-term="pseudoscience">pseudoscience</button>, a collection of ideas that may look scientific but does not use the scientific method. <b>Astrology</b> is an example: it claims celestial movements influence human behavior, but its conclusions are not based on experimental evidence and its statements cannot be falsified. Do not confuse it with <b>astronomy</b>, the scientific study of celestial bodies and the cosmos.</p>
+  <div class="callout warn">
+    <h4>Example from the chapter</h4>
+    <p>Canyons carved into the loose deposit from the May 18, 1980 eruption of Mt. St. Helens are sometimes cited by pseudoscience as evidence of a very young Earth. In reality, that unconsolidated, unlithified volcanic deposit erodes far more easily than rock in canyons like the Grand Canyon.</p>
+  </div>
+
+  <h3>Science is a social process</h3>
+  <p>Scientists share ideas at conferences, in publications, and even on field trips. Submitted papers undergo <button class="term" data-term="peer review">peer review</button> by experts in the same field, which weeds out misinformation, invalid results, and wild speculation. The process is slow, cautious, and conservative: a hypothesis is accepted as theory only after overwhelming evidence from many independent researchers.</p>
+
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/1-understanding-science/" target="_blank" rel="noopener">Section 1.1 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 1.2 -->
+<section id="s1-2">
+  <h2 class="sec"><span class="n">1.2</span>The scientific method</h2>
+  <p>Modern science rests on the <button class="term" data-term="scientific method">scientific method</button>. It has a long history, but was first fully formed by <b>Ibn al-Haytham</b> over 1,000 years ago. Its core is that conclusions come from objective evidence, not opinion or hearsay.</p>
+
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 760 290" role="img" aria-labelledby="sm-t" style="width:100%;min-width:640px;height:auto;display:block">
+        <title id="sm-t">The scientific method: 1 observation, problem or question; 2 hypothesis; 3 experiment and revision; 4 peer review, publication and replication; 5 theory. Contradicting data loop from step 3 back to step 2. Replication or new technology loops from step 4 back to step 1.</title>
+        <defs>
+          <marker id="sm-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--ochre)"/></marker>
+          <marker id="sm-ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--rust)"/></marker>
+        </defs>
+        <g stroke="var(--ochre)" stroke-width="4" stroke-linecap="round" marker-end="url(#sm-ah)"><line x1="131" y1="142" x2="166" y2="142"/><line x1="281" y1="142" x2="316" y2="142"/><line x1="431" y1="142" x2="466" y2="142"/><line x1="581" y1="142" x2="616" y2="142"/></g>
+        <g fill="none" stroke="var(--rust)" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#sm-ah2)">
+          <path d="M374,96 C374,34 224,34 224,92"/>
+          <path d="M524,188 C524,262 74,262 74,194"/>
+        </g>
+        <g font-size="12.5" class="svg-ink">
+          <text x="299" y="22" text-anchor="middle" font-weight="600">↺ Data contradict the hypothesis?</text>
+          <text x="299" y="38" text-anchor="middle" class="svg-muted">Revise it and test again</text>
+          <text x="299" y="262" text-anchor="middle" font-weight="600">↺ Replication or new technology</text>
+          <text x="299" y="278" text-anchor="middle" class="svg-muted">can confirm or overturn published ideas, raising new questions</text>
+        </g>
+        <rect class="flow-step" style="--d:0.0s" x="20" y="100" width="108" height="84" rx="10"/>
+        <text x="74" y="120" text-anchor="middle" font-family="var(--mono)" font-size="11" font-weight="500" fill="var(--accent)">STEP 1</text>
+        <text text-anchor="middle" font-size="13" font-weight="600" class="svg-ink"><tspan x="74" y="138">Observation,</tspan><tspan x="74" y="154">problem, or</tspan><tspan x="74" y="170">question</tspan></text>
+        <rect class="flow-step" style="--d:1.2s" x="170" y="100" width="108" height="84" rx="10"/>
+        <text x="224" y="120" text-anchor="middle" font-family="var(--mono)" font-size="11" font-weight="500" fill="var(--accent)">STEP 2</text>
+        <text text-anchor="middle" font-size="13" font-weight="600" class="svg-ink"><tspan x="224" y="154">Hypothesis</tspan></text>
+        <rect class="flow-step" style="--d:2.4s" x="320" y="100" width="108" height="84" rx="10"/>
+        <text x="374" y="120" text-anchor="middle" font-family="var(--mono)" font-size="11" font-weight="500" fill="var(--accent)">STEP 3</text>
+        <text text-anchor="middle" font-size="13" font-weight="600" class="svg-ink"><tspan x="374" y="146">Experiment &amp;</tspan><tspan x="374" y="162">revision</tspan></text>
+        <rect class="flow-step" style="--d:3.6s" x="470" y="100" width="108" height="84" rx="10"/>
+        <text x="524" y="120" text-anchor="middle" font-family="var(--mono)" font-size="11" font-weight="500" fill="var(--accent)">STEP 4</text>
+        <text text-anchor="middle" font-size="13" font-weight="600" class="svg-ink"><tspan x="524" y="138">Peer review,</tspan><tspan x="524" y="154">publication &amp;</tspan><tspan x="524" y="170">replication</tspan></text>
+        <rect class="flow-step" style="--d:4.8s" x="620" y="100" width="108" height="84" rx="10"/>
+        <text x="674" y="120" text-anchor="middle" font-family="var(--mono)" font-size="11" font-weight="500" fill="var(--accent)">STEP 5</text>
+        <text text-anchor="middle" font-size="13" font-weight="600" class="svg-ink"><tspan x="674" y="154">Theory</tspan></text>
+      </svg>
+    </div>
+    <figcaption>The scientific method as a cycle, not a straight line. Solid arrows show the main sequence; dashed arrows show the two feedback loops. Step names follow the chapter's five headings.<span class="credit">Diagram drawn for this guide from Section 1.2 of <i>An Introduction to Geology</i>.</span></figcaption>
+  </figure>
+
+  <h4>Step 1: Observation, problem, or research question</h4>
+  <p>Identify a problem or question, such as a geological phenomenon the scientific community has not explained well. This usually means reviewing the scientific literature for related previous studies.</p>
+
+  <h4>Step 2: Hypothesis</h4>
+  <p>Propose a possible answer, a <button class="term" data-term="hypothesis">hypothesis</button>, before the experiment or field work. It must be <b>specific</b>, <b>falsifiable</b>, and based on other scientific work. Geologists often use <button class="term" data-term="multiple working hypotheses">multiple working hypotheses</button> because they usually cannot impose strict experimental controls and may have limited chances to visit a field site.</p>
+
+    <figure>
+      <div class="frame"><img src="images/unit1/muybridge-horse.jpg" alt="Twelve sequential photographs of a galloping horse." loading="lazy" width="300" height="187"></div>
+      <figcaption>A famous hypothesis: does a galloping horse lift all four legs off the ground? Eadweard Muybridge's photo sequence showed that it does.<span class="credit">Eadweard Muybridge, 1878. Public domain.</span></figcaption>
+    </figure>
+    <figure>
+      <div class="frame"><img src="images/unit1/pitch-drop.jpg" alt="The pitch drop experiment: black pitch in a glass funnel above a beaker." loading="lazy" width="199" height="300"></div>
+      <figcaption>The University of Queensland pitch drop experiment, running since 1927. Highly viscous pitch drips from the funnel about once per decade.<span class="credit">John Mainstone, CC BY-SA.</span></figcaption>
+    </figure>
+
+  <h4>Step 3: Experiment and hypothesis revision</h4>
+  <p>Design an <button class="term" data-term="experiment">experiment</button> that either supports or refutes the hypothesis. Experiments are not only lab work: observing natural processes in the field counts too. Every experiment involves the systematic gathering of objective data. If the data contradict the hypothesis, it is revised and tested again. A hypothesis that holds up is ready to share with experts.</p>
+
+  <h4>Step 4: Peer review, publication, and replication</h4>
+  <p>Results are published in journals such as <i>Science</i> and <i>Nature</i>, but only after rigorous peer review of the methods, results, and discussion. After publication, other scientists try to <b>replicate</b> the results, which is necessary to confirm reliability. New technology can later confirm or reject once-accepted ideas.</p>
+
+  <h4>Step 5: Theory development</h4>
+  <p>In casual talk, "theory" means a guess. In science, a <button class="term" data-term="scientific theory">theory</button> is the best explanation after a hypothesis has been repeatedly tested by documented, independent studies and widely accepted. A hypothesis is a tentative explanation <i>before</i> an experiment; a theory is confirmed by many experiments <i>after</i>.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Two hypotheses that became theories (from the chapter).</caption>
+      <thead><tr><th>Idea</th><th>Origin</th><th>What happened</th></tr></thead>
+      <tbody>
+        <tr><td>Continental drift → <b>plate tectonics</b></td><td>Alfred Wegener, 1912</td><td>Initially dismissed. After decades of new evidence from more advanced technology, it was accepted and revised as the theory of plate tectonics.</td></tr>
+        <tr><td><b>Evolution</b> by natural selection</td><td>Charles Darwin, mid-19th century</td><td>Has withstood generations of testing; updated with modern technology and still supported by the latest evidence.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/1-understanding-science/" target="_blank" rel="noopener">Section 1.2 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 1.3 -->
+<section id="s1-3">
+  <h2 class="sec"><span class="n">1.3</span>Early scientific thought</h2>
+  <p>Western scientific thought began in ancient <b>Athens</b>, a democracy that encouraged independent thinking. Foremost among early philosopher-scientists was <b>Aristotle</b> (born 384 BCE), who studied under Plato and tutored Alexander the Great. He used <button class="term" data-term="empiricism">empiricism</button>, which values evidence from experimentation and observation.</p>
+
+  <h3>Deductive vs. inductive reasoning</h3>
+  <div class="tablewrap">
+    <table>
+      <caption>Two types of reasoning. Science needs both, because they stress its two key parts: observation and inference.</caption>
+      <thead><tr><th></th><th>Deductive reasoning</th><th>Inductive reasoning</th></tr></thead>
+      <tbody>
+        <tr><td><b>Direction</b></td><td>General principle → specific conclusion</td><td>New observations → general principle</td></tr>
+        <tr><td><b>Basis</b></td><td>A logical connection</td><td>Analysis of measurable evidence</td></tr>
+        <tr><td><b>Example</b></td><td>All birds have feathers; a sparrow is a bird; so a sparrow has feathers. (Also: if A=B and B=C, then A=C.)</td><td>List bird traits (feathers, toothless beak, hollow bones, no forelegs, externally laid eggs), check whether bats share them; they don't, so bats are not birds.</td></tr>
+        <tr><td><b>Weakness</b></td><td>A flawed starting principle gives a flawed conclusion: "All animals that fly are birds; bats fly; so bats are birds."</td><td>Not discussed in the chapter.</td></tr>
+        <tr><td><b>In the chapter</b></td><td>Aristotle's method</td><td>Closer to Galileo's evidence-based approach, which the chapter contrasts with Aristotle's</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>From Rome to the Renaissance</h3>
+  <p>Alexander spread Greek culture, which the Romans absorbed and carried into Europe. After Rome fell in 476 CE, European science stalled; medieval thinkers followed Aristotle's logic faithfully for centuries. Meanwhile science flourished in the <b>Middle East</b> between 800 and 1450 CE. Avicenna (Ibn Sina) was among the first to link mountains to earthquakes and erosion. During the <b>Renaissance</b> (14th–17th centuries), scholars began criticizing the Aristotelian approach, setting up empiricism as a key part of the 17th-century scientific revolution.</p>
+
+  <h3>Geocentric vs. heliocentric</h3>
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 640 250" role="img" aria-labelledby="gh-t" style="width:100%;min-width:480px;height:auto">
+        <title id="gh-t">Geocentric model with Earth at the center compared with heliocentric model with the Sun at the center.</title>
+        <g fill="none" stroke="var(--line)" stroke-width="1.5">
+          <circle cx="160" cy="120" r="40"/><circle cx="160" cy="120" r="70"/><circle cx="160" cy="120" r="98"/>
+          <circle cx="480" cy="120" r="40"/><circle cx="480" cy="120" r="70"/><circle cx="480" cy="120" r="98"/>
+        </g>
+        <circle cx="160" cy="120" r="14" fill="var(--accent)"/>
+        <circle cx="200" cy="120" r="7" fill="var(--muted)"/>
+        <circle cx="160" cy="50" r="11" fill="var(--ochre)"/>
+        <circle cx="91" cy="155" r="6" fill="var(--rust)"/>
+        <circle cx="480" cy="120" r="16" fill="var(--ochre)"/>
+        <circle cx="450" cy="93" r="6" fill="var(--muted)"/>
+        <circle cx="550" cy="120" r="9" fill="var(--accent)"/>
+        <circle cx="400" cy="70" r="7" fill="var(--rust)"/>
+        <text x="160" y="124" text-anchor="middle" font-size="9" fill="var(--bg)" font-weight="700">Earth</text>
+        <text x="160" y="35" text-anchor="middle" font-size="11" class="svg-ink">Sun</text>
+        <text x="212" y="112" font-size="11" class="svg-ink">Moon</text>
+        <text x="480" y="124" text-anchor="middle" font-size="9" fill="#1c1a14" font-weight="700">Sun</text>
+        <text x="564" y="124" font-size="11" class="svg-ink">Earth</text>
+        <text x="160" y="240" text-anchor="middle" font-size="13" font-weight="600" class="svg-ink">Geocentric (Ptolemy, 2nd c.)</text>
+        <text x="480" y="240" text-anchor="middle" font-size="13" font-weight="600" class="svg-ink">Heliocentric (Copernicus, 1507–1515)</text>
+      </svg>
+    </div>
+    <figcaption>Simplified comparison of the two models of the cosmos (not to scale).<span class="credit">Diagram drawn for this guide from Section 1.3.</span></figcaption>
+  </figure>
+  <p>In the 2nd century, Greek astronomer <b>Claudius Ptolemy</b> applied Aristotelian logic and deductively reasoned that all celestial bodies orbit Earth at the center of the universe: the <button class="term" data-term="geocentric model">geocentric model</button>. It persisted until the Renaissance. Between 1507 and 1515, <b>Nicolaus Copernicus</b> (1473–1543) gave mathematical proof for a <button class="term" data-term="heliocentric model">heliocentric</button> (Sun-centered) model. After the telescope was invented in 1608, better observations supported it.</p>
+
+  <h3>Kepler, Galileo, and the scientific revolution</h3>
+  <p><b>Johannes Kepler</b> (1571–1630), a German mathematician and astronomer, improved Copernicus' calculations and described planetary orbits as <b>elliptical</b>. <b>Galileo Galilei</b> (1564–1642), an Italian astronomer, used the new telescope to observe Jupiter's four largest moons. This was the first direct evidence against the geocentric model, since moons orbiting Jupiter could not also orbit Earth. Galileo's support of heliocentrism put him at odds with prevailing views and the Catholic Church; in 1633 he was found guilty of heresy and kept under house arrest until his death in 1642.</p>
+  <div class="pair">
+    <figure>
+      <div class="frame"><img src="images/unit1/galileo-manuscript.png" alt="Galileo's handwritten notes sketching the positions of Jupiter's moons." loading="lazy" width="210" height="300"></div>
+      <figcaption>Galileo's first mention of the moons of Jupiter.<span class="credit">Galileo Galilei. Public domain.</span></figcaption>
+    </figure>
+    <div class="callout" style="align-self:center">
+      <h4>Why Galileo is "the first modern scientist"</h4>
+      <p>He ran experiments to prove or disprove <b>falsifiable</b> ideas and based conclusions on <b>mathematical analysis of quantifiable evidence</b>. That was a radical departure from the deductive thinking of Greek philosophers such as Aristotle, and it began a shift toward evidence and experiment that set the stage for geologists such as Hutton and Steno.</p>
+    </div>
+  </div>
+
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/1-understanding-science/" target="_blank" rel="noopener">Section 1.3 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 1.4 -->
+<section id="s1-4">
+  <h2 class="sec"><span class="n">1.4</span>Foundations of modern geology</h2>
+  <p>Modern geologic principles developed during the 17th and 18th centuries as part of Europe's scientific revolution.</p>
+
+  <figure>
+    <div class="frame">
+      <ol class="timeline">
+        <li><time>384 BCE</time><span><b>Aristotle</b> born; deductive, empirical reasoning.</span></li>
+        <li><time>2nd c.</time><span><b>Ptolemy</b>'s geocentric model.</span></li>
+        <li><time>~1,000 yrs ago</time><span><b>Ibn al-Haytham</b> first fully forms the scientific method.</span></li>
+        <li><time>1507–15</time><span><b>Copernicus</b>'s heliocentric model.</span></li>
+        <li><time>1610s</time><span><b>Galileo</b> observes Jupiter's moons; <b>Kepler</b> describes elliptical orbits. (Telescope invented 1608.)</span></li>
+        <li class="geo"><time>1638–1686</time><span><b>Nicolaus Steno</b>: Earth's surface can change; sedimentary layers form horizontally, oldest at the bottom.</span></li>
+        <li class="geo"><time>1726–1797</time><span><b>James Hutton</b>: uniformitarianism; Earth is very old.</span></li>
+        <li class="geo"><time>1769–1832</time><span><b>Georges Cuvier</b>: catastrophism; first to suggest species can go extinct.</span></li>
+        <li class="geo"><time>early 1830s</time><span><b>Charles Lyell</b>'s <i>Principles of Geology</i> popularizes uniformitarianism.</span></li>
+        <li class="geo"><time>1912</time><span><b>Alfred Wegener</b> proposes continental drift.</span></li>
+        <li class="geo"><time>later</time><span>Sub-sea discoveries by Tharp, Heezen, Hess, Wilson and others lead to <b>plate tectonics</b>.</span></li>
+      </ol>
+      <div class="legend"><span><i></i>Scientific thought</span><span><i class="geo"></i>Geology</span></div>
+    </div>
+    <figcaption>Timeline of the people in Sections 1.2–1.4. The "1610s" entry is approximate; the chapter gives the telescope's invention (1608) and the two men's life dates.<span class="credit">Compiled for this guide from Chapter 1.</span></figcaption>
+  </figure>
+
+  <h3>Steno and Hutton</h3>
+  <p><b>Nicolaus Steno</b> (1638–1686), a Danish priest who studied anatomy and geology, was the first to propose that Earth's surface could change over time. He suggested that sedimentary rocks such as sandstone and shale formed in horizontal layers, with the oldest on the bottom.</p>
+  <figure>
+    <div class="frame"><img src="images/unit1/steno-shark.jpg" alt="Steno's engraving of a shark's head and several teeth." loading="lazy" width="199" height="300"></div>
+    <figcaption>Steno's illustration comparing fossil and modern shark teeth.<span class="credit">Niels Stensen (Steno). Public domain.</span></figcaption>
+  </figure>
+  <p>In the 18th century, Scottish naturalist <b>James Hutton</b> (1726–1797) compared sediments left by rivers and coastlines with exposed sedimentary rock <b>strata</b>. He hypothesized that ancient rocks formed by the same processes seen today. Because those processes are slow, Earth must be very old, possibly hundreds of millions of years.</p>
+  <p>This is the principle of <button class="term" data-term="uniformitarianism">uniformitarianism</button>: natural processes operate the same now as in the past, so the laws of nature are uniform across space and time. Geologists summarize it as <b>"the present is the key to the past."</b></p>
+
+  <h3>Uniformitarianism vs. catastrophism</h3>
+  <div class="tablewrap">
+    <table>
+      <caption>The two competing views of how rocks and landforms formed.</caption>
+      <thead><tr><th></th><th>Catastrophism</th><th>Uniformitarianism</th></tr></thead>
+      <tbody>
+        <tr><td><b>Main idea</b></td><td>Rocks and landforms formed by great catastrophic events; processes of today did not operate in the past.</td><td>Natural processes operate the same now as in the past.</td></tr>
+        <tr><td><b>Key people</b></td><td>Abraham Gottlob Werner (1750–1817), Georges Cuvier (1769–1832)</td><td>James Hutton; popularized by Charles Lyell (1797–1875)</td></tr>
+        <tr><td><b>Earth's age</b></td><td>Not stated in the chapter</td><td>Very old; Lyell suggested possibly over 300 million years</td></tr>
+        <tr><td><b>Legacy</b></td><td>Cuvier, the "father of vertebrate paleontology," was first to suggest species could go extinct, but thought new species appeared by special creation after catastrophic floods.</td><td>Became so dominant that catastrophic change was treated as heresy, which slowed acceptance of ideas like an asteroid impact ending the dinosaurs.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <blockquote class="quote">"The thread of operation is broken; nature has changed course…"<cite>Georges Cuvier, defending catastrophism (quoted in Chapter 1)</cite></blockquote>
+
+  <h3>Lyell and Darwin</h3>
+  <p>Hutton's ideas were fading into obscurity until British lawyer and geologist <b>Charles Lyell</b> wrote <i>Principles of Geology</i> (early 1830s) and later <i>Elements of Geology</i>. His books promoted uniformitarianism and a very old Earth, and the public eventually accepted both. <b>Charles Darwin</b> (1809–1882) took <i>Principles of Geology</i> on his five-year voyage on HMS <i>Beagle</i> and used uniformitarianism and deep time to develop his early ideas about evolution.</p>
+
+  <h3>Plate tectonics: a lesson in dogmatic thinking</h3>
+  <p>The theory of <button class="term" data-term="plate tectonics">plate tectonics</button> and <button class="term" data-term="continental drift">continental drift</button> is perhaps the largest advance in geology's history. Ironically, rigid acceptance of uniformitarianism slowed it, because the continents were assumed to be permanent. The idea took a long time for three reasons:</p>
+  <ol>
+    <li>The movement is so slow it was overlooked.</li>
+    <li>The best evidence was hidden under the ocean.</li>
+    <li>Accepted theories had a lot of inertia; scientists resisted and ridiculed the new idea.</li>
+  </ol>
+  <p><b>Alfred Wegener</b> was the first to compile a large data set showing continents shift over time, but he was mostly ignored. Later workers, including Marie Tharp, Bruce Heezen, Harry Hess, Laurence Morley, Frederick Vine, Drummond Matthews, Kiyoo Wadati, Hugo Benioff, Robert Coats, and J. Tuzo Wilson, used new sub-sea technology to find the <b>mid-ocean ridge</b>, the <b>alignment of earthquakes</b>, and <b>magnetic striping</b>. Together they brought about a <button class="term" data-term="paradigm shift">paradigm shift</button> that made geology the science it is today.</p>
+
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/1-understanding-science/" target="_blank" rel="noopener">Section 1.4 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 1.5 -->
+<section id="s1-5">
+  <h2 class="sec"><span class="n">1.5</span>The study of geology</h2>
+  <p>Geologists apply the scientific method to Earth's materials and processes, often borrowing from physics and chemistry (for example, the forces in a landslide or the chemistry between water and rock). The word <button class="term" data-term="geology">geology</button> comes from the Greek <i>geo</i> (Earth) and <i>logos</i> (to think or reckon with).</p>
+
+  <h3 id="s1-5-1">1.5.1 Why study geology?</h3>
+  <h4>Natural resources</h4>
+  <p>A <button class="term" data-term="natural resource">natural resource</button> is any naturally occurring material that can be extracted from Earth for economic gain. Geologists help extract fossil fuels (coal, petroleum), metals (copper, aluminum, iron), and water from streams and underground reservoirs.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Nonrenewable vs. renewable resources.</caption>
+      <thead><tr><th>Type</th><th>Definition</th><th>Examples in the chapter</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="nonrenewable resource">Nonrenewable</button></td><td>Fixed in quantity; depleted by consumption.</td><td>Petroleum</td></tr>
+        <tr><td><button class="term" data-term="renewable resource">Renewable</button></td><td>Can be replaced or regenerated.</td><td>Solar energy, wind energy, timber</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h4>Environmental impacts</h4>
+  <p>Extracting and using resources affects the environment and human health. Burning fossil fuels releases chemicals that are unhealthy, especially for children. Mining can release toxic heavy metals such as lead and mercury into soil and waterways. Knowing how much of a resource remains, how extractable it is, and whether it is renewable helps us manage resources sustainably.</p>
+  <h4>Natural hazards</h4>
+  <p><button class="term" data-term="natural hazard">Natural hazards</button> are phenomena potentially dangerous to human life or property. No place is completely free of them, so understanding local geology is one of the best protections. Geologic hazards include <b>landslides, earthquakes, tsunamis, floods, volcanic eruptions, and sea-level rise</b>.</p>
+  <figure>
+    <div class="frame"><img src="images/unit1/niigata-liquefaction.jpg" alt="Apartment buildings tipped over on their sides after the ground liquefied." loading="lazy" width="300" height="178"></div>
+    <figcaption>Buildings toppled by liquefaction during a magnitude 7.5 earthquake in Japan.<span class="credit">Ungtss at English Wikipedia. Public domain.</span></figcaption>
+  </figure>
+
+  <h4>Earth System Science</h4>
+  <p>Geology is where other sciences intersect, in <button class="term" data-term="Earth System Science">Earth System Science</button>. A <b>system</b> is a group of interacting objects and processes; Earth System Science views the planet as interacting systems, or spheres, and draws on physics, chemistry, biology, meteorology, hydrology and more.</p>
+  <figure>
+    <div class="frame">
+      <div class="spheres">
+        <div class="sphere"><b><span class="dot" style="background:var(--s2)"></span>Geosphere</b>The solid body of the Earth.</div>
+        <div class="sphere"><b><span class="dot" style="background:var(--muted)"></span>Atmosphere</b>The gas envelope surrounding the Earth.</div>
+        <div class="sphere"><b><span class="dot" style="background:var(--accent)"></span>Hydrosphere</b>Water in all its forms at and near the surface.</div>
+        <div class="sphere"><b><span class="dot" style="background:var(--line);border:1px solid var(--muted)"></span>Cryosphere</b>The frozen water part of Earth.</div>
+        <div class="sphere"><b><span class="dot" style="background:var(--ochre)"></span>Biosphere</b>Life on Earth in all its forms, including humankind.</div>
+      </div>
+    </div>
+    <figcaption>The five basic systems (spheres) of Earth System Science.<span class="credit">Definitions from Section 1.5.1.</span></figcaption>
+  </figure>
+
+  <h3 id="s1-5-2">1.5.2 Rock cycle</h3>
+  <p>The <button class="term" data-term="rock cycle">rock cycle</button> is the most fundamental view of Earth materials: what they are, how they form, and how they relate. Use the diagram as a map while you read the steps below it.</p>
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 620 430" role="img" aria-labelledby="rc-t" style="width:100%;min-width:500px;height:auto">
+        <title id="rc-t">Rock cycle: magma and lava crystallize into igneous rock; weathering and erosion make sediment; deposition and lithification make sedimentary rock; heat and pressure make metamorphic rock; melting makes magma again.</title>
+        <defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--ochre)"/></marker>
+        </defs>
+        <g stroke="var(--ochre)" stroke-width="2.5" fill="none" marker-end="url(#ah)">
+          <path d="M375,62 Q450,80 488,140"/>
+          <path d="M520,195 Q540,280 475,342"/>
+          <path d="M370,372 L240,372"/>
+          <path d="M120,345 Q80,270 100,198"/>
+          <path d="M125,145 Q170,70 235,58"/>
+          <path d="M435,172 L195,172"/>
+          <path d="M160,197 L395,345" stroke-dasharray="6 5"/>
+        </g>
+        <g font-size="12.5" class="svg-muted" font-weight="500">
+          <text x="462" y="86">cooling &amp;</text><text x="462" y="101">crystallization</text>
+          <text x="538" y="262">weathering</text><text x="538" y="277">&amp; erosion</text>
+          <text x="307" y="395" text-anchor="middle">deposition &amp;</text><text x="307" y="410" text-anchor="middle">lithification</text>
+          <text x="28" y="262">heat &amp;</text><text x="28" y="277">pressure</text>
+          <text x="118" y="86">melting</text>
+          <text x="315" y="162" text-anchor="middle">heat &amp; pressure</text>
+          <text x="300" y="248" text-anchor="middle" transform="rotate(32 300 248)">weathering &amp; erosion</text>
+        </g>
+        <g font-size="14" font-weight="700">
+          <rect x="235" y="22" width="140" height="48" rx="24" fill="var(--rust)"/>
+          <text x="305" y="51" text-anchor="middle" fill="#fff">Magma / Lava</text>
+          <rect x="435" y="148" width="150" height="48" rx="10" fill="var(--s4)"/>
+          <text x="510" y="177" text-anchor="middle" fill="#fff">Igneous rock</text>
+          <rect x="370" y="348" width="140" height="48" rx="10" fill="var(--s1)"/>
+          <text x="440" y="377" text-anchor="middle" fill="#1c1a14">Sediment</text>
+          <rect x="85" y="348" width="160" height="48" rx="10" fill="var(--s2)"/>
+          <text x="165" y="377" text-anchor="middle" fill="#fff">Sedimentary rock</text>
+          <rect x="35" y="148" width="160" height="48" rx="10" fill="var(--accent)"/>
+          <text x="115" y="177" text-anchor="middle" fill="var(--bg)">Metamorphic rock</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>The five rock-cycle materials and the processes that turn one into another. Any rock at the surface can be weathered (dashed arrow shows one example). Scroll sideways on small screens.<span class="credit">Diagram drawn for this guide from Section 1.5.2. The textbook's own figure is by Peter Davis, Pacific Lutheran University.</span></figcaption>
+  </figure>
+
+  <ol>
+    <li><b>Molten rock.</b> <button class="term" data-term="magma">Magma</button> is molten rock below the surface (in the crust or mantle); <button class="term" data-term="lava">lava</button> is molten rock erupted onto the surface.</li>
+    <li><b>Igneous rock.</b> As magma or lava cools, minerals grow in it by <button class="term" data-term="crystallization">crystallization</button>, forming <button class="term" data-term="igneous rock">igneous rock</button> (Latin <i>ignis</i>, fire).</li>
+    <li><b>Sediment.</b> Rocks at the surface undergo <button class="term" data-term="weathering">weathering</button> (physical and chemical breakdown into fragments) and <button class="term" data-term="erosion">erosion</button> (removal of fragments from their original location). The fragments are <button class="term" data-term="sediment">sediment</button>: gravel, sand, silt, and clay, carried by streams, rivers, ocean currents, glaciers, and wind.</li>
+    <li><b>Sedimentary rock.</b> Sediment comes to rest by <button class="term" data-term="deposition">deposition</button>, often under water. Burial causes <button class="term" data-term="compaction">compaction</button>, and minerals from groundwater cause <button class="term" data-term="cementation">cementation</button>. Together these are <button class="term" data-term="lithification">lithification</button>, which forms <button class="term" data-term="sedimentary rock">sedimentary rock</button> such as sandstone and shale. <button class="term" data-term="chemical sedimentary rock">Chemical sedimentary rocks</button> form instead by direct chemical precipitation of minerals.</li>
+    <li><b>Metamorphic rock.</b> Extreme increases in temperature or pressure (deep burial, or contact with hot magma or lava) enlarge mineral crystals or alter them into new minerals with similar chemical makeup, forming <button class="term" data-term="metamorphic rock">metamorphic rock</button> (<i>meta-</i>, change; <i>-morphos</i>, form). If rocks melt, the cycle begins again.</li>
+  </ol>
+
+  <h3 id="s1-5-3">1.5.3 Plate tectonics and layers of Earth</h3>
+  <p>Plate tectonics is the <b>fundamental unifying principle</b> of geology and the rock cycle. It describes how Earth's layers move relative to each other, focusing on the <button class="term" data-term="tectonic plate">tectonic (lithospheric) plates</button> of the outer layer. Plates collide, slide past each other, and split apart on the mobile <button class="term" data-term="asthenosphere">asthenosphere</button> below. Major landforms are created at plate boundaries. (Full detail in <a href="https://slcc.pressbooks.pub/introgeology/chapter/2-plate-tectonics/" target="_blank" rel="noopener">Chapter 2</a>.)</p>
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 720 360" role="img" aria-labelledby="ly-t" style="width:100%;min-width:540px;height:auto">
+        <title id="ly-t">Cutaway of Earth showing chemical layers (crust, mantle, outer and inner core) and physical layers (lithosphere, asthenosphere).</title>
+        <path d="M20,340 A230,230 0 0 1 480,340 Z" fill="var(--s1)"/>
+        <path d="M32,340 A218,218 0 0 1 468,340 Z" fill="var(--rust)" opacity=".55"/>
+        <path d="M55,340 A195,195 0 0 1 445,340 Z" fill="var(--rust)" opacity=".75"/>
+        <path d="M124,340 A126,126 0 0 1 376,340 Z" fill="var(--ochre)"/>
+        <path d="M205,340 A45,45 0 0 1 295,340 Z" fill="#f2d48a"/>
+        <path d="M45,340 A205,205 0 0 1 455,340" fill="none" stroke="var(--fg)" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <line x1="10" y1="340" x2="490" y2="340" stroke="var(--fg)" stroke-width="1.5"/>
+        <g stroke="var(--muted)" stroke-width="1" fill="var(--muted)">
+          <line x1="364" y1="146" x2="500" y2="48"/><circle cx="364" cy="146" r="2.5"/>
+          <line x1="397" y1="192" x2="500" y2="112"/><circle cx="397" cy="192" r="2.5"/>
+          <line x1="414" y1="233" x2="500" y2="172"/><circle cx="414" cy="233" r="2.5"/>
+          <line x1="395" y1="285" x2="500" y2="230"/><circle cx="395" cy="285" r="2.5"/>
+          <line x1="345" y1="318" x2="500" y2="284"/><circle cx="345" cy="318" r="2.5"/>
+          <line x1="272" y1="334" x2="500" y2="330"/><circle cx="272" cy="334" r="2.5"/>
+        </g>
+        <g font-size="13.5">
+          <text x="506" y="46" font-weight="700" class="svg-ink">Crust</text>
+          <text x="506" y="62" font-size="12" class="svg-muted">oceanic ~10 km · continental ~50 km</text>
+          <text x="506" y="110" font-weight="700" class="svg-ink">Lithosphere <tspan font-weight="400" font-size="12" class="svg-muted">(physical)</tspan></text>
+          <text x="506" y="126" font-size="12" class="svg-muted">rigid: crust + upper mantle = plates</text>
+          <text x="506" y="170" font-weight="700" class="svg-ink">Asthenosphere <tspan font-weight="400" font-size="12" class="svg-muted">(physical)</tspan></text>
+          <text x="506" y="186" font-size="12" class="svg-muted">hot, flexible, mobile layer</text>
+          <text x="506" y="228" font-weight="700" class="svg-ink">Mantle</text>
+          <text x="506" y="244" font-size="12" class="svg-muted">peridotite · to ~2,900 km deep</text>
+          <text x="506" y="282" font-weight="700" class="svg-ink">Outer core</text>
+          <text x="506" y="298" font-size="12" class="svg-muted">liquid iron and nickel</text>
+          <text x="506" y="328" font-weight="700" class="svg-ink">Inner core</text>
+          <text x="506" y="344" font-size="12" class="svg-muted">solid · core ~3,500 km thick total</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Earth's layers. Chemical layers (crust, mantle, core) are defined by composition; physical layers (lithosphere, asthenosphere) by how they behave. The dashed line marks the base of the lithosphere. Not to scale: the crust is drawn far thicker than it is.<span class="credit">Diagram drawn for this guide from Section 1.5.3.</span></figcaption>
+  </figure>
+  <div class="tablewrap">
+    <table>
+      <caption>Earth's chemical layers.</caption>
+      <thead><tr><th>Layer</th><th>Composition</th><th>Key facts</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="crust">Crust</button></td><td>Mostly silicon, oxygen, aluminum, iron, magnesium</td><td><b>Continental:</b> ~50 km (30 mi) thick, low-density igneous and sedimentary rocks. <b>Oceanic:</b> ~10 km (6 mi) thick, high-density basalt-type igneous rock; covers ~70% of the planet.</td></tr>
+        <tr><td><button class="term" data-term="mantle">Mantle</button></td><td><button class="term" data-term="peridotite">Peridotite</button> (silica, iron, magnesium)</td><td>Largest layer by volume; mostly solid; extends to ~2,900 km (1,800 mi). Its hot, flexible upper part lets plates move.</td></tr>
+        <tr><td><button class="term" data-term="core">Core</button></td><td>Iron and nickel</td><td>~3,500 km (2,200 mi) thick; liquid outer core and solid inner core. Motion in the core generates Earth's magnetic field.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The <button class="term" data-term="lithosphere">lithosphere</button> is the rigid physical layer made of the crust plus part of the upper mantle; tectonic plates are pieces of it. The boundary between crust and mantle is the <button class="term" data-term="moho">Moho</button>, whose depth the chapter maps globally (it is deeper where mountains are building).</p>
+
+  <h3 id="s1-5-4">1.5.4 Geologic time and deep time</h3>
+  <blockquote class="quote">"…we find no vestige of a beginning; no prospect of an end."<cite>James Hutton, 1788</cite></blockquote>
+  <p>Hutton was not exactly right (Earth had a beginning and will have an end), but he captured how hard it is for people to grasp <button class="term" data-term="deep time">deep time</button>. He did not assign Earth an age, though he was first to suggest it was very old. Today we know Earth is about <b>4.54 ± 0.05 billion years old</b>, first calculated in <b>1956</b> by Caltech's <b>Clair Patterson</b>, who radiometrically dated a meteorite recovered in Arizona using lead isotopes. Human records are short by comparison: the study of earthquakes goes back only about 100 years, yet geologic evidence shows large earthquakes thousands of years ago.</p>
+
+  <figure>
+    <div class="frame">
+      <svg viewBox="0 0 680 250" role="img" aria-labelledby="lt-t" style="width:100%;min-width:560px;height:auto">
+        <title id="lt-t">Milestones of life on a bar of Earth's 4,540 million year history, with the Phanerozoic Eon enlarged below.</title>
+        <g font-size="11.5">
+          <text x="40" y="22" font-weight="700" font-size="13" class="svg-ink">All of Earth history (≈4,540 Ma)</text>
+          <rect x="40" y="34" width="600" height="26" rx="4" fill="var(--surface-2)" stroke="var(--line)"/>
+          <rect x="177" y="34" width="391" height="26" fill="var(--s1)" opacity=".8"/>
+          <rect x="568" y="34" width="72" height="26" fill="var(--accent)"/>
+          <text x="372" y="51" text-anchor="middle" fill="#1c1a14" font-weight="600">mostly single-celled life · 88%</text>
+          <text x="604" y="51" text-anchor="middle" fill="var(--bg)" font-weight="600">12%</text>
+          <line x1="177" y1="60" x2="177" y2="74" stroke="var(--fg)"/><line x1="138" y1="28" x2="138" y2="92" stroke="var(--rust)" stroke-width="2"/>
+          <text x="144" y="101" class="svg-ink">life appears <tspan class="svg-muted">&gt;3,800 Ma</tspan></text>
+          <text x="182" y="86" class="svg-muted">3,500 Ma</text>
+          <text x="40" y="78" class="svg-muted">4,540 Ma</text>
+          <text x="640" y="78" text-anchor="end" class="svg-muted">now</text>
+          <text x="568" y="78" text-anchor="middle" class="svg-muted">542</text>
+          <line x1="568" y1="60" x2="40" y2="150" stroke="var(--line)" stroke-dasharray="4 4"/>
+          <line x1="640" y1="60" x2="640" y2="150" stroke="var(--line)" stroke-dasharray="4 4"/>
+          <text x="40" y="242" font-weight="700" font-size="13" class="svg-ink">↑ Phanerozoic Eon enlarged (542 Ma → now)</text>
+          <rect x="40" y="150" width="600" height="26" rx="4" fill="var(--accent)"/>
+                    <line x1="242" y1="146" x2="242" y2="186" stroke="var(--ochre)" stroke-width="3"/>
+          <line x1="568" y1="146" x2="568" y2="186" stroke="var(--ochre)" stroke-width="3"/>
+          <line x1="638" y1="146" x2="638" y2="186" stroke="var(--rust)" stroke-width="3"/>
+          <text x="60" y="167" fill="var(--bg)" font-weight="600">hard-shelled animals → fossils</text>
+          <text x="242" y="202" text-anchor="middle" class="svg-ink">land animals</text><text x="242" y="215" text-anchor="middle" class="svg-muted">360 Ma · 8%</text>
+          <text x="545" y="202" text-anchor="end" class="svg-ink">dinosaurs' demise, mammals rise</text><text x="545" y="215" text-anchor="end" class="svg-muted">≈65 Ma · 1.5%</text>
+          <text x="640" y="236" text-anchor="end" class="svg-ink">genus <tspan font-style="italic">Homo</tspan> ≈2.2 Ma · 0.05%</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Life through geologic time, drawn to scale from the chapter's figures. Percentages are the share of geologic time each group has existed. Ma = million years ago.<span class="credit">Diagram drawn for this guide from Section 1.5.4. See the fact-check notes for updated ages.</span></figcaption>
+  </figure>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Divisions of geologic time named in the chapter, oldest at the top.</caption>
+      <thead><tr><th>Eon</th><th>Era</th><th>Meaning and life</th></tr></thead>
+      <tbody>
+        <tr><td>Hadean</td><td rowspan="3">Together called <b>Precambrian</b> time</td><td rowspan="3">Life appears &gt;3,800 Ma; single-celled organisms such as bacteria dominate from 3,500 to 542 Ma (88% of geologic time).</td></tr>
+        <tr><td>Archean</td></tr>
+        <tr><td>Proterozoic</td></tr>
+        <tr><td rowspan="3">Phanerozoic<br><span class="small">"visible life"; last 542 Myr</span></td><td>Paleozoic</td><td>"Ancient life": invertebrates, fish, amphibians, reptiles.</td></tr>
+        <tr><td>Mesozoic</td><td>"Middle life"; the Age of Reptiles. Dinosaurs abound, many evolving into birds. Ends with the mass extinction of dinosaurs.</td></tr>
+        <tr><td>Cenozoic</td><td>"New life"; the Age of Mammals. Early human (hominid) fossils appear only in its last few million years.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><button class="term" data-term="eon">Eons</button> are the largest divisions of time. The Phanerozoic (<i>phaneros</i>, visible; <i>zoic</i>, life) marks the spread of multicellular animals with hard parts such as shells, which are preserved as <button class="term" data-term="fossil">fossils</button>. Chapters <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener">7</a> and <a href="https://slcc.pressbooks.pub/introgeology/chapter/8-earth-history/" target="_blank" rel="noopener">8</a> cover geologic time in depth.</p>
+
+  <h3 id="s1-5-5">1.5.5 The geologist's tools</h3>
+  <div class="tablewrap">
+    <table>
+      <caption>Field and laboratory tools named in the chapter.</caption>
+      <thead><tr><th>Tool</th><th>Setting</th><th>Used for</th></tr></thead>
+      <tbody>
+        <tr><td>Rock hammer</td><td>Field</td><td>Sampling a fresh rock surface</td></tr>
+        <tr><td>Magnifying lens</td><td>Field</td><td>Looking at mineral details</td></tr>
+        <tr><td>Compass</td><td>Field</td><td>Measuring orientation of geologic features</td></tr>
+        <tr><td>Map</td><td>Field</td><td>Documenting the local distribution of rocks and minerals</td></tr>
+        <tr><td>Magnet</td><td>Field</td><td>Identifying magnetic minerals such as magnetite</td></tr>
+        <tr><td>Dilute hydrochloric acid</td><td>Field</td><td>Identifying carbonate minerals such as calcite, or limestone</td></tr>
+        <tr><td>Optical microscope</td><td>Lab</td><td>Mineral composition and grain size of rocks and soil</td></tr>
+        <tr><td>Laser and mass spectrometers</td><td>Lab</td><td>Chemical composition and geologic age of minerals</td></tr>
+        <tr><td>Seismograph (+ ground-penetrating radar)</td><td>Field/Lab</td><td>Recording and locating earthquakes; locating buried objects</td></tr>
+        <tr><td>Computer simulations</td><td>Lab</td><td>Turning data into testable theoretical models</td></tr>
+        <tr><td>Wells</td><td>Field</td><td>Hydrogeologists sample underground water quality and availability</td></tr>
+        <tr><td>Scanning electron microscope</td><td>Lab</td><td>Geochemists analyze minerals at the atomic level via x-rays</td></tr>
+        <tr><td>Gas chromatography</td><td>Lab</td><td>Liquids and gases trapped in glacial ice or rocks</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure>
+    <div class="frame"><img src="images/unit1/archaeopteryx.jpg" alt="Fossil skeleton of Archaeopteryx in limestone, with feather impressions." loading="lazy" width="222" height="300"></div>
+    <figcaption>The iconic <i>Archaeopteryx lithographica</i> fossil from Germany.<span class="credit">H. Raab (User: Vesta), CC BY-SA.</span></figcaption>
+  </figure>
+  <p>New technology brings new observations, which help revise or refute old ideas. Because the ultimate technology will never be invented, the ultimate observation will never be made: science keeps advancing.</p>
+
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/1-understanding-science/" target="_blank" rel="noopener">Section 1.5 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 1.6 -->
+<section id="s1-6">
+  <h2 class="sec"><span class="n">1.6</span>Science denial and evaluating sources</h2>
+  <p>Introductory courses teach accepted theory, without the opposing ideas advanced students meet later. Some groups, however, argue that established theories are wrong for ideological rather than scientific reasons. This section is about telling evidence-based information apart from pseudoscience.</p>
+
+  <h3 id="s1-6-1">1.6.1 Science denial</h3>
+  <p><button class="term" data-term="science denial">Science denial</button> is arguing that established theories are wrong based on subjective ideology (social, political, or economic reasons) rather than scientific merit. The chapter's three examples are opposition to teaching <b>evolution</b> in public schools, to linking <b>tobacco smoke to cancer</b>, and to linking <b>human activity to climate change</b>. Climate change denial is the one most closely tied to geology.</p>
+  <figure>
+    <div class="frame">
+      <div class="pillars">
+        <div class="pillar"><h4>1. Undermine the science</h4><p>Claim the methods are flawed or the science is "unsettled." But scientists avoid claiming universal truths because science is falsifiable; that caution is not the same as uncertainty.</p></div>
+        <div class="pillar"><h4>2. Attack the researchers</h4><p>Claim scientists are biased by ideology or money (for example, inflating results to win grants). This is an <button class="term" data-term="ad hominem">ad hominem</button> argument.</p></div>
+        <div class="pillar"><h4>3. Demand "balance"</h4><p>Demand equal time in media and classrooms, creating the false illusion of two equally valid sides even when evidence is lopsided.</p></div>
+      </div>
+    </div>
+    <figcaption>The three false rhetorical arguments of science denial.<span class="credit">Redrawn for this guide from the chapter's figure, which credits Josh Rosenau, National Center for Science Education.</span></figcaption>
+  </figure>
+  <p>Conclusions from ideology have no place in science research and education. A flat-Earth model is not taught alongside plate tectonics, because it has been disproved by the scientific method and its supporters do not follow that method. The only way to change a scientific conclusion is a new conclusion reached through the scientific method.</p>
+  <div class="pair">
+    <figure>
+      <div class="frame"><img src="images/unit1/smoking-cancer-graph.png" alt="Graph showing cigarette consumption rising, followed decades later by a similar rise in lung cancer deaths." loading="lazy" width="300" height="293"></div>
+      <figcaption>The lag between smoking and cancer, plus the ethics of human trials, delayed government action on tobacco.<span class="credit">Sakurambo, from NIH data. Public domain.</span></figcaption>
+    </figure>
+    <div class="callout" style="align-self:center">
+      <h4>Case study: tobacco</h4>
+      <p>From the 1960s for about three decades, the tobacco industry used rhetorical arguments to deny a link between tobacco and cancer. Once studies overwhelmingly showed the link, the industry shifted to manufacturing doubt ("more study is needed") to delay warning labels and legislation. The chapter notes the same tactic is used today to deny human involvement in climate change.</p>
+    </div>
+  </div>
+
+  <h3 id="s1-6-2">1.6.2 Evaluating sources of information</h3>
+  <p>Information is plentiful online, so anyone doing scientific inquiry must separate valid sources from pseudoscience and misinformation. Quality information comes from the scientific method. A valid <button class="term" data-term="inference">inference</button> (interpretation) is based on objective data, and credible data and inferences are clearly labeled and kept separate.</p>
+  <figure>
+    <div class="frame"><img src="images/unit1/induced-seismicity.png" alt="Graph of cumulative earthquake counts showing a sharp increase in recent years." loading="lazy" width="300" height="228"></div>
+    <figcaption>Earthquake data. The graph itself is data; calling these earthquakes "induced by fracking" would be an interpretation.<span class="credit">USGS. Public domain.</span></figcaption>
+  </figure>
+  <h4>Checklist for a reputable study</h4>
+  <ul class="checks">
+    <li><input type="checkbox" id="c1"><label for="c1"><b>Method:</b> procedures are clearly defined so the work can be replicated or extended.</label></li>
+    <li><input type="checkbox" id="c2"><label for="c2"><b>Data vs. interpretation:</b> data and inferences are labeled and separated, so a reader can follow the reasoning or reach a different conclusion.</label></li>
+    <li><input type="checkbox" id="c3"><label for="c3"><b>Author:</b> has a degree in a relevant field and unbiased funding.</label></li>
+    <li><input type="checkbox" id="c4"><label for="c4"><b>Publisher:</b> easy to identify, shows recent papers and contact details, explains its peer review, has a recognizable editorial board, and is often tied to a trade group, association, or open-source initiative. Beware <button class="term" data-term="predatory journal">predatory journals</button> that charge unexplained fees.</label></li>
+    <li><input type="checkbox" id="c5"><label for="c5"><b>Peer review:</b> the research is transparent to peer review, so results can be reproduced, errors corrected or retracted, and theories validated.</label></li>
+    <li><input type="checkbox" id="c6"><label for="c6"><b>Citations:</b> come from reputable research. Citation counts are said to measure influence, though the chapter notes this is inherently biased.</label></li>
+  </ul>
+  <p class="small">Your ticks are not saved; this list is for working through a source as you read.</p>
+  <div class="callout warn">
+    <h4>Even good journals slip</h4>
+    <p>A 1998 article in the reputable journal <i>The Lancet</i> linked the MMR vaccine to autism. Journalists found the author had multiple conflicts of interest and had fabricated data, and the article was retracted in 2010.</p>
+  </div>
+
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/1-understanding-science/" target="_blank" rel="noopener">Section 1.6 quiz in the textbook ↗</a></p>
+</section>
+
+<section id="summary">
+  <h2 class="sec">Summary</h2>
+  <p>Science is a process with no beginning and no end: a full truth can never be known, but the scientific method is the best way to understand the universe. Scientists draw conclusions from objective evidence and consolidate them into unifying models. Geologists, starting with Hutton, likewise treat the study of Earth as ongoing: its 4.5-billion-year history, its resources, and its hazards. Geology also teaches how to reach credible conclusions and how to spot and stop misinformation.</p>
+  <div class="callout">
+    <h4>Quick recap</h4>
+    <ul>
+      <li>Objective + quantitative evidence beats subjective + qualitative.</li>
+      <li>Falsifiability separates science from pseudoscience.</li>
+      <li>Question → hypothesis → experiment → peer review → theory, repeating as evidence grows.</li>
+      <li>Aristotle reasoned deductively; Galileo tested falsifiable ideas with quantitative evidence.</li>
+      <li>Uniformitarianism ("the present is the key to the past") replaced catastrophism.</li>
+      <li>Rock cycle: igneous, sedimentary, and metamorphic rocks transform into one another.</li>
+      <li>Plate tectonics unifies geology; Earth is about 4.54 billion years old.</li>
+      <li>Science denial: undermine the science, attack the scientists, demand false balance.</li>
+    </ul>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/1-understanding-science/" target="_blank" rel="noopener">Chapter 1 review quiz in the textbook ↗</a></p>
+</section>
+
+<section id="resources">
+  <h2 class="sec">Resources</h2>
+  <div class="res">
+    <a href="https://slcc.pressbooks.pub/introgeology/chapter/1-understanding-science/" target="_blank" rel="noopener"><b>Chapter 1 (textbook) ↗</b><span>The full chapter, with interactive section quizzes and all original figures.</span></a>
+    <a href="https://slcc.pressbooks.pub/introgeology/back-matter/glossary-test/" target="_blank" rel="noopener"><b>Textbook glossary ↗</b><span>Definitions for every bolded term in the book.</span></a>
+    <a href="https://www.youtube.com/watch?v=8MqTOEospfo" target="_blank" rel="noopener"><b>"Science in America" ↗</b><span>Neil deGrasse Tyson (StarTalk) on science literacy and denial. This video is embedded in Section 1.6 of the chapter.</span></a>
+    <a href="https://undsci.berkeley.edu/" target="_blank" rel="noopener"><b>Understanding Science ↗</b><span>UC Berkeley Museum of Paleontology's free guide to how science really works: testing ideas, peer review, theories.</span></a>
+    <a href="https://stratigraphy.org/chart" target="_blank" rel="noopener"><b>International Chronostratigraphic Chart ↗</b><span>The official, current geologic time scale from the International Commission on Stratigraphy.</span></a>
+  </div>
+</section>
+
+<section id="factcheck">
+  <h2 class="sec">Fact-check notes</h2>
+  <p>Every statement in this guide was checked against the textbook chapter. Where the chapter's numbers differ from current references, the guide keeps the chapter's value (that is what you will be tested on) and notes the update here.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Values that differ from current references.</caption>
+      <thead><tr><th>Topic</th><th>Chapter says</th><th>Current reference</th></tr></thead>
+      <tbody>
+        <tr><td>Start of the Phanerozoic Eon</td><td>542 Ma</td><td>538.8 Ma (<a href="https://stratigraphy.org/chart" target="_blank" rel="noopener">ICS chart</a>)</td></tr>
+        <tr><td>End of the Mesozoic (dinosaurs' demise)</td><td>around 65 Ma</td><td>66.0 Ma (<a href="https://stratigraphy.org/chart" target="_blank" rel="noopener">ICS chart</a>)</td></tr>
+        <tr><td>First genus <i>Homo</i></td><td>about 2.2 Ma</td><td>The oldest known <i>Homo</i> fossil, a jaw from Ledi-Geraru, Ethiopia, is about 2.8 Ma (Villmoare et al., 2015, <i>Science</i> 347: 1352–1355).</td></tr>
+        <tr><td>A. G. Werner's birth year</td><td>1750</td><td>1749 (<i>Encyclopaedia Britannica</i>, "Abraham Gottlob Werner")</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">The chapter says Steno was "the first to propose the Earth's surface could change over time." That is the textbook's framing; the guide repeats it as written.</p>
+</section>
+
+<section id="credits">
+  <h2 class="sec">Credits</h2>
+  <p class="small">Content summarized from <a href="https://slcc.pressbooks.pub/introgeology/chapter/1-understanding-science/" target="_blank" rel="noopener"><i>An Introduction to Geology</i>, Chapter 1</a>, © 2017 Chris Johnson, Matthew D. Affolter, Paul Inkenbrandt, and Cam Mosher, licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. This guide is shared under the same license.</p>
+  <ul class="small">
+    <li>Fig. 1.1: Grand Canyon of the Yellowstone © Matt Affolter (book license).</li>
+    <li>Fig. 1.3: Eadweard Muybridge, <i>Sallie Gardner</i>, 1878, public domain.</li>
+    <li>Fig. 1.4: University of Queensland pitch drop experiment, John Mainstone, CC BY-SA.</li>
+    <li>Fig. 1.6: Galileo's manuscript on Jupiter's moons, public domain.</li>
+    <li>Fig. 1.8: Steno's shark teeth illustration, public domain.</li>
+    <li>Fig. 1.9: Liquefaction at Niigata, Ungtss at English Wikipedia, public domain.</li>
+    <li>Fig. 1.14: <i>Archaeopteryx lithographica</i> (Berlin specimen), H. Raab, CC BY-SA.</li>
+    <li>Fig. 1.16: Smoking and lung cancer correlation, Sakurambo from NIH data, public domain.</li>
+    <li>Fig. 1.17: Cumulative induced seismicity, USGS, public domain.</li>
+    <li>Figs. 1.2, 1.5, 1.7, 1.10–1.13, 1.15: drawn for this guide from the chapter text.</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<button class="fab" id="notesBtn" type="button" aria-controls="notes" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Key terms
+</button>
+<button class="fab hide" id="toTop" type="button" aria-label="Return to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<aside class="notes" id="notes" hidden aria-label="Key terms">
+  <header>
+    <div><h2>Key terms · Chapter 1</h2><button class="close" id="notesClose" type="button" aria-label="Close key terms">×</button></div>
+    <input id="termSearch" type="search" placeholder="Search terms and definitions" autocomplete="off" aria-label="Search key terms">
+    <div class="count" id="termCount"></div>
+  </header>
+  <dl id="termList"></dl>
+</aside>
+</div>
+
+<script type="application/json" id="terms">
+[
+ [
+"objective observation",
+"s1-1",
+"An observation without personal bias that would be the same for all individuals."
+],
+ [
+"subjective observation",
+"s1-1",
+"An observation based on a person's feelings and beliefs; unique to that individual."
+],
+ [
+"quantitative",
+"s1-1",
+"An observation or measurement expressed as a specific numerical value. Preferred because it can be used in calculations and statistics."
+],
+ [
+"qualitative",
+"s1-1",
+"A general or relative description, not numerical (e.g. 'the rock is red'). Less useful than quantitative data, but still useful."
+],
+ [
+"falsifiable",
+"s1-1",
+"The idea that any scientific claim can be tested and proved wrong with proper evidence."
+],
+ [
+"pseudoscience",
+"s1-1",
+"Ideas that may appear scientific but do not use the scientific method or hold up to scientific scrutiny; e.g. astrology."
+],
+ [
+"astrology",
+"s1-1",
+"A pseudoscience claiming the movement of celestial bodies influences human behavior; its statements are not falsifiable."
+],
+ [
+"astronomy",
+"s1-1",
+"The scientific study of celestial bodies and the cosmos."
+],
+ [
+"peer review",
+"s1-1",
+"Experts in the same field scrutinize a study's methods, results, and discussion before it is published."
+],
+ [
+"scientific method",
+"s1-2",
+"Procedure for building knowledge: question, hypothesis, experiment, analysis, peer review, and theory, based on objective evidence."
+],
+ [
+"hypothesis",
+"s1-2",
+"A proposed, testable explanation made before an experiment. Must be specific, falsifiable, and based on other scientific work."
+],
+ [
+"multiple working hypotheses",
+"s1-2",
+"Developing several hypotheses at once, common in geology because strict experimental controls and field visits are limited."
+],
+ [
+"experiment",
+"s1-2",
+"A test that systematically gathers objective data to support or refute a hypothesis; can be in the lab or by observing nature in the field."
+],
+ [
+"replication",
+"s1-2",
+"Other scientists repeating a published study to confirm its results are reliable."
+],
+ [
+"scientific theory",
+"s1-2",
+"An explanation supported by repeated, independent testing and widely accepted by the scientific community; the best available explanation."
+],
+ [
+"empiricism",
+"s1-3",
+"Emphasizes the value of evidence gained from experimentation and observation."
+],
+ [
+"deductive reasoning",
+"s1-3",
+"Starting from general known principles and logically extending them to specific conclusions. A flawed premise gives a flawed conclusion."
+],
+ [
+"inductive reasoning",
+"s1-3",
+"Starting from new observations and measurable evidence to infer general underlying principles."
+],
+ [
+"geocentric model",
+"s1-3",
+"Model of the cosmos with Earth at the center (Ptolemy)."
+],
+ [
+"heliocentric model",
+"s1-3",
+"Sun-centered model of the solar system (Copernicus; supported by Kepler and Galileo)."
+],
+ [
+"uniformitarianism",
+"s1-4",
+"Hutton's principle that natural processes operate the same now as in the past: 'the present is the key to the past.'"
+],
+ [
+"catastrophism",
+"s1-4",
+"The idea that rocks and landforms were formed mainly by large catastrophic events, and that past processes differed from today's (Werner, Cuvier)."
+],
+ [
+"continental drift",
+"s1-4",
+"Wegener's 1912 hypothesis that continents shift positions over time; revised into plate tectonics."
+],
+ [
+"plate tectonics",
+"s1-4",
+"Theory that Earth's lithosphere is broken into plates that move relative to one another, creating major landforms and most earthquakes and volcanoes. Geology's unifying principle."
+],
+ [
+"paradigm shift",
+"s1-4",
+"A fundamental change in a field's accepted framework, such as the acceptance of plate tectonics."
+],
+ [
+"geology",
+"s1-5",
+"The study of Earth's materials and processes; from Greek geo (Earth) and logos (to think or reckon with)."
+],
+ [
+"natural resource",
+"s1-5-1",
+"Any naturally occurring material that can be extracted from Earth for economic gain, e.g. coal, metals, water."
+],
+ [
+"nonrenewable resource",
+"s1-5-1",
+"A resource fixed in quantity and depleted by use (not replaced on human time scales), e.g. petroleum."
+],
+ [
+"renewable resource",
+"s1-5-1",
+"A resource that can be replaced or regenerated on human time scales, e.g. solar, wind, timber."
+],
+ [
+"natural hazard",
+"s1-5-1",
+"A phenomenon potentially dangerous to life or property, e.g. landslides, earthquakes, tsunamis, floods, eruptions, sea-level rise."
+],
+ [
+"Earth System Science",
+"s1-5-1",
+"Views Earth as interacting systems (spheres) and studies how they relate and change."
+],
+ [
+"geosphere",
+"s1-5-1",
+"The solid body of the Earth: crust, mantle, and core."
+],
+ [
+"atmosphere",
+"s1-5-1",
+"The gas envelope surrounding the Earth."
+],
+ [
+"hydrosphere",
+"s1-5-1",
+"Water in all its forms at and near Earth's surface."
+],
+ [
+"cryosphere",
+"s1-5-1",
+"The frozen water part of Earth."
+],
+ [
+"biosphere",
+"s1-5-1",
+"Life on Earth in all its forms and interactions, including humans."
+],
+ [
+"rock cycle",
+"s1-5-2",
+"Describes Earth's major materials, the processes that form them, and how igneous, sedimentary, and metamorphic rocks change into one another."
+],
+ [
+"magma",
+"s1-5-2",
+"Molten (liquid) rock below Earth's surface, in the crust or mantle."
+],
+ [
+"lava",
+"s1-5-2",
+"Molten rock that has erupted onto Earth's surface."
+],
+ [
+"crystallization",
+"s1-5-2",
+"Solidification of magma or lava as minerals grow within it."
+],
+ [
+"igneous rock",
+"s1-5-2",
+"Rock formed from cooled magma or lava (Latin ignis, fire)."
+],
+ [
+"weathering",
+"s1-5-2",
+"Physical and chemical breakdown of rocks into smaller fragments."
+],
+ [
+"erosion",
+"s1-5-2",
+"Removal and transport of weathered fragments from their original location."
+],
+ [
+"sediment",
+"s1-5-2",
+"Broken-down, transported fragments or grains of rock: gravel, sand, silt, clay."
+],
+ [
+"deposition",
+"s1-5-2",
+"Sediment coming to rest and accumulating, often under water."
+],
+ [
+"compaction",
+"s1-5-2",
+"Sediment squeezed together by the weight of overlying deposits."
+],
+ [
+"cementation",
+"s1-5-2",
+"Grains 'glued' together by minerals precipitated from groundwater."
+],
+ [
+"lithification",
+"s1-5-2",
+"Turning sediment into sedimentary rock by compaction and cementation."
+],
+ [
+"sedimentary rock",
+"s1-5-2",
+"Rock formed from lithified sediments (e.g. sandstone, shale) or chemical precipitation."
+],
+ [
+"chemical sedimentary rock",
+"s1-5-2",
+"Sedimentary rock formed by direct chemical precipitation of minerals rather than from eroded sediment."
+],
+ [
+"metamorphic rock",
+"s1-5-2",
+"Rock changed by high temperature or pressure into enlarged or new minerals (meta, change; morphos, form)."
+],
+ [
+"tectonic plate",
+"s1-5-3",
+"A rigid piece of the lithosphere (crust plus upper mantle) that moves on the asthenosphere."
+],
+ [
+"lithosphere",
+"s1-5-3",
+"Rigid outer physical layer: the crust plus the uppermost mantle, broken into tectonic plates."
+],
+ [
+"asthenosphere",
+"s1-5-3",
+"Hot, flexible (ductile) physical layer below the lithosphere on which plates move."
+],
+ [
+"crust",
+"s1-5-3",
+"Outermost chemical layer. Continental: ~50 km, low density. Oceanic: ~10 km, high-density basalt."
+],
+ [
+"mantle",
+"s1-5-3",
+"Chemical layer below the crust to ~2,900 km; largest by volume; mostly solid peridotite."
+],
+ [
+"core",
+"s1-5-3",
+"Innermost chemical layer, ~3,500 km thick, iron and nickel; liquid outer core and solid inner core generate the magnetic field."
+],
+ [
+"peridotite",
+"s1-5-3",
+"High-density rock of silica, iron, and magnesium that makes up most of the mantle."
+],
+ [
+"moho",
+"s1-5-3",
+"Short for Mohorovičić Discontinuity: the boundary where the crust ends and the mantle begins."
+],
+ [
+"deep time",
+"s1-5-4",
+"Geologic time: the vast span of Earth's ~4.54-billion-year history, hard to grasp on human time scales."
+],
+ [
+"eon",
+"s1-5-4",
+"The largest division of geologic time: Hadean, Archean, Proterozoic, Phanerozoic."
+],
+ [
+"Precambrian",
+"s1-5-4",
+"Collective name for the three oldest eons: Hadean, Archean, Proterozoic."
+],
+ [
+"Phanerozoic",
+"s1-5-4",
+"Current eon ('visible life'), the last 542 million years in the chapter; divided into Paleozoic, Mesozoic, Cenozoic eras."
+],
+ [
+"fossil",
+"s1-5-4",
+"Preserved remains of ancient life, such as shells and hard body parts, in the geologic record."
+],
+ [
+"science denial",
+"s1-6-1",
+"Arguing established theories are wrong for ideological (social, political, economic) reasons rather than scientific merit."
+],
+ [
+"ad hominem",
+"s1-6-1",
+"An argument that attacks a person's character instead of the merit of their argument."
+],
+ [
+"inference",
+"s1-6-2",
+"An interpretation or conclusion drawn from data; valid when based on objective evidence."
+],
+ [
+"predatory journal",
+"s1-6-2",
+"A journal that charges unexplained or unnecessary fees to submit or access papers and lacks the marks of a reputable publisher."
+]
+]
+</script>
+<script src="assets/guide.js"></script>
+</body>
+</html>

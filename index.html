@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Geology Study Guides</title>
+<meta name="description" content="Unit study guides for An Introduction to Geology (SLCC Pressbooks).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/guide.css">
+<style>
+/* Index palette: neutral stone, so each unit card can show its own color. */
+:root{
+  --bg:#f4f4f1; --surface:#ffffff; --surface-2:#e8e8e3; --fg:#1f211f; --muted:#5b5e58; --line:#d2d3cc;
+  --accent:#3d5a6c; --accent-soft:#dbe4ea; --ochre:#a8701c; --ochre-soft:#f5e6cc; --rust:#a2462a;
+  --s1:#c9b48a; --s2:#9b8a6a; --s3:#6f7a6d; --s4:#4a5752; --s5:#2b2f2d;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141615; --surface:#1c1f1d; --surface-2:#252926; --fg:#e4e6e2; --muted:#9ea29b; --line:#363b37;
+  --accent:#8fb3c8; --accent-soft:#22313a; --ochre:#e0ae5a; --ochre-soft:#3a2e1a; --rust:#e08463;
+  --s1:#8a7a58; --s2:#6c5f48; --s3:#4b5650; --s4:#36423d; --s5:#202422; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141615; --surface:#1c1f1d; --surface-2:#252926; --fg:#e4e6e2; --muted:#9ea29b; --line:#363b37;
+  --accent:#8fb3c8; --accent-soft:#22313a; --ochre:#e0ae5a; --ochre-soft:#3a2e1a; --rust:#e08463;
+  --s1:#8a7a58; --s2:#6c5f48; --s3:#4b5650; --s4:#36423d; --s5:#202422; color-scheme:dark}
+.wrap{max-width:900px;margin:0 auto;padding-block:1.5rem 4rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.units{list-style:none;padding:0;margin:1rem 0 0;display:grid;gap:.8rem}
+.unit a{display:grid;grid-template-columns:4.2rem minmax(0,1fr);gap:1rem;align-items:center;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;transition:border-color .15s}
+.unit a:hover{border-color:var(--accent)}
+.unit .sw{height:3.2rem;border-radius:8px;display:grid;place-items:center;font-family:var(--mono);font-weight:500;color:#fff;font-size:1.05rem}
+.unit h2{font-size:1.15rem;margin:0}
+.unit p{margin:.2rem 0 0;color:var(--muted);font-size:.92rem;text-align:left}
+.unit .langs{margin:.4rem 0 0 1.1rem;font-size:.85rem;color:var(--muted)}
+.unit .langs a{font-weight:600}
+.foot{margin-top:2.5rem;font-size:.85rem;color:var(--muted)}
+.foot p{text-align:left}
+</style>
+</head>
+<body>
+<div lang="en">
+<header class="hero">
+  <div class="strata" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">An Introduction to Geology</div>
+      <h1>Geology Study Guides</h1>
+      <p>One page per unit, following the chapters of the free SLCC Pressbooks textbook.</p>
+    </div>
+    <div class="hero-tools">
+      <button class="btn" id="themeBtn" type="button" aria-label="Toggle light or dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Dark mode</span>
+      </button>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <h2 class="sec">Units</h2>
+  <ul class="units" id="units">
+    <!-- unit:1 -->
+    <li class="unit"><a href="unit1.html"><span class="sw" style="background:#1d6b66">1</span><span><h2>Understanding Science</h2><p>Scientific method, early science, foundations of geology, rock cycle, Earth's layers, deep time, science denial.</p></span></a><p class="langs">Read in: <a href="unit1.html" hreflang="en">English</a> · <a href="unit1-vi.html" lang="vi" hreflang="vi">Tiếng Việt</a></p></li>
+    <!-- /unit:1 -->
+  </ul>
+  <div class="foot">
+    <p>Content summarized from <a href="https://slcc.pressbooks.pub/introgeology/" target="_blank" rel="noopener"><i>An Introduction to Geology</i></a> by Chris Johnson, Matthew D. Affolter, Paul Inkenbrandt, and Cam Mosher, licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. These guides are shared under the same license.</p>
+  </div>
+</main>
+</div>
+<script>
+(function(){
+  var root=document.documentElement, b=document.getElementById('themeBtn'), l=document.getElementById('themeLabel');
+  var mq=window.matchMedia('(prefers-color-scheme: dark)');
+  function dark(){var t=root.getAttribute('data-theme');return t?t==='dark':mq.matches}
+  function sync(){l.textContent=dark()?'Light mode':'Dark mode'}
+  try{var s=localStorage.getItem('geol-theme');if(s==='dark'||s==='light')root.setAttribute('data-theme',s)}catch(e){}
+  b.addEventListener('click',function(){var n=dark()?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('geol-theme',n)}catch(e){}sync()});
+  sync();
+})();
+</script>
+</body>
+</html>
