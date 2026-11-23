@@ -48,10 +48,20 @@ main{min-width:0;max-width:760px}
 .toc a.active{color:var(--accent);border-left-color:var(--accent);background:var(--accent-soft);font-weight:600}
 .toc .num{font-family:var(--mono);font-size:.8em;margin-right:.35rem}
 
+/* Page tools: "All units" + language switch + theme toggle. Top of the contents rail on desktop; sticky header bar on phones. */
+.navbar{position:sticky;top:0;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:.4rem;padding:0 0 .75rem;margin:0 0 .9rem;background:var(--bg);border-bottom:1px solid var(--line)}
+.toc .navbar .tbtn,.tbtn{display:inline-flex;justify-content:center;font-size:.8rem;line-height:1.3;padding:.4rem .55rem;gap:.35rem;border:1px solid var(--line);border-radius:999px;color:var(--fg);border-color:var(--line);background:var(--surface);text-decoration:none;white-space:nowrap}
+.toc .navbar .tbtn:hover,.tbtn:hover{border-color:var(--accent);color:var(--accent)}
+.tbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tbtn svg{width:16px;height:16px;flex:none}
+.navbar>.tbtn:first-child{grid-column:1/-1}
+
 @media (max-width:900px){
   .page{grid-template-columns:minmax(0,1fr);gap:1rem;padding-top:0}
   .toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;max-height:none;overflow:visible;margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px))) 0;padding:0;background:var(--bg);border-bottom:1px solid var(--line)}
   .toc h2{display:none}
+  .navbar>.tbtn:first-child{margin-right:auto}
+  .navbar{position:static;display:flex;gap:.4rem;justify-content:flex-end;margin:0;padding:.5rem max(16px,env(safe-area-inset-left,0px));background:var(--surface);border-bottom:1px solid var(--line)}
   .toc>ol{display:flex;overflow-x:auto;gap:.25rem;padding:.5rem max(16px,env(safe-area-inset-left,0px));scrollbar-width:none}
   .toc>ol::-webkit-scrollbar{display:none}
   .toc ol ol{display:none}
@@ -232,3 +242,4 @@ figure img.diagram{background:#fff;padding:4px}
 @media (max-width:560px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .callout ul.inline{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;padding-left:1.1rem}
 .callout ul.inline li{margin:0}
+@media (max-width:430px){#themeBtn span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}

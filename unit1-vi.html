@@ -37,18 +37,19 @@
       <h1>Hiểu về khoa học</h1>
       <p>Các nhà khoa học xây dựng tri thức đáng tin cậy như thế nào, địa chất học hiện đại ra đời từ cuộc cách mạng khoa học ra sao, và những ý tưởng nền tảng (chu trình thạch học, các lớp của Trái Đất, thời gian sâu) cho cả khóa học.</p>
     </div>
-    <div class="hero-tools">
-      <a class="btn" href="unit1.html" lang="en" hreflang="en">English</a>
-      <button class="btn" id="themeBtn" type="button" aria-label="Chuyển chế độ sáng hoặc tối">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-        <span id="themeLabel">Chế độ tối</span>
-      </button>
-    </div>
   </div>
 </header>
 
 <div class="page">
   <nav class="toc" aria-label="Mục lục">
+    <div class="navbar" role="group" aria-label="Thanh điều hướng">
+      <a class="btn tbtn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Tất cả học phần</span></a>
+      <a class="btn tbtn lbtn" href="unit1.html" lang="en" hreflang="en"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>English</span></a>
+      <button class="btn tbtn" id="themeBtn" type="button" aria-label="Chuyển chế độ sáng hoặc tối">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Chế độ tối</span>
+      </button>
+    </div>
     <h2>Mục lục</h2>
     <ol>
       <li><a href="#outcomes">Mục tiêu học tập</a></li>
@@ -152,9 +153,9 @@
           <marker id="sm-ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--rust)"/></marker>
         </defs>
         <g stroke="var(--ochre)" stroke-width="4" stroke-linecap="round" marker-end="url(#sm-ah)"><line x1="131" y1="142" x2="166" y2="142"/><line x1="281" y1="142" x2="316" y2="142"/><line x1="431" y1="142" x2="466" y2="142"/><line x1="581" y1="142" x2="616" y2="142"/></g>
-        <g fill="none" stroke="var(--rust)" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#sm-ah2)">
-          <path d="M374,96 C374,34 224,34 224,92"/>
-          <path d="M524,188 C524,262 74,262 74,194"/>
+        <g fill="none" stroke="var(--rust)" stroke-width="3" stroke-dasharray="7 5" stroke-linejoin="round" marker-end="url(#sm-ah2)">
+          <path d="M374,98 V56 H224 V95"/>
+          <path d="M524,186 V234 H74 V189"/>
         </g>
         <g font-size="12.5" class="svg-ink">
           <text x="299" y="22" text-anchor="middle" font-weight="600">↺ Dữ liệu mâu thuẫn với giả thuyết?</text>
@@ -222,7 +223,7 @@
 <!-- 1.3 -->
 <section id="s1-3">
   <h2 class="sec"><span class="n">1.3</span>Tư tưởng khoa học thời kỳ đầu</h2>
-  <p>Tư tưởng khoa học phương Tây bắt đầu ở <b>Athens</b> cổ đại, một nền dân chủ khuyến khích tư duy độc lập. Nổi bật nhất trong các nhà triết học kiêm khoa học thời đầu là <b>Aristotle</b> (sinh năm 384 TCN), học trò của Plato và thầy dạy của Alexander Đại đế. Ông dùng <button class="term" data-term="Chủ nghĩa kinh nghiệm">chủ nghĩa kinh nghiệm</button>, coi trọng bằng chứng từ thí nghiệm và quan sát.</p>
+  <p>Tư tưởng khoa học phương Tây bắt đầu ở <b>Athens</b> cổ đại, một nền dân chủ khuyến khích tư duy độc lập. Nổi bật nhất trong các nhà triết học kiêm khoa học thời đầu là <b>Aristotle</b> (sinh năm 384 TCN), học trò của Plato và thầy dạy của Alexander Đại đế. Chương gọi ông là người tiêu biểu nhất thời đầu áp dụng <button class="term" data-term="Chủ nghĩa kinh nghiệm">chủ nghĩa kinh nghiệm</button>, vốn coi trọng bằng chứng từ thí nghiệm và quan sát. Tuy nhiên, trên thực tế phương pháp của ông chủ yếu là <b>suy luận diễn dịch</b>: xuất phát từ các nguyên lý đã được chấp nhận rồi lập luận logic đến kết luận.</p>
 
   <h3>Suy luận diễn dịch và quy nạp</h3>
   <div class="tablewrap">
@@ -240,7 +241,11 @@
   </div>
 
   <h3>Từ La Mã đến thời Phục hưng</h3>
-  <p>Alexander truyền bá văn hóa Hy Lạp, được người La Mã tiếp thu và mang vào châu Âu. Sau khi La Mã sụp đổ năm 476, khoa học châu Âu đình trệ; các học giả trung cổ trung thành đi theo logic của Aristotle suốt nhiều thế kỷ. Trong khi đó, khoa học phát triển rực rỡ ở <b>Trung Đông</b> từ năm 800 đến 1450. Avicenna (Ibn Sina) là một trong những người đầu tiên liên hệ núi non với động đất và xói mòn. Trong thời <b>Phục hưng</b> (thế kỷ 14–17), giới học giả bắt đầu phê phán cách tiếp cận của Aristotle, mở đường cho chủ nghĩa kinh nghiệm trở thành trụ cột của cuộc cách mạng khoa học thế kỷ 17.</p>
+  <p>Alexander truyền bá văn hóa Hy Lạp, được người La Mã tiếp thu và mang vào châu Âu. Sau khi La Mã sụp đổ năm 476, khoa học châu Âu đình trệ; các học giả trung cổ trung thành đi theo logic của Aristotle suốt nhiều thế kỷ. Trong khi đó, khoa học phát triển rực rỡ ở <b>Trung Đông</b> từ năm 800 đến 1450. Avicenna (Ibn Sina) là một trong những người đầu tiên liên hệ núi non với động đất và xói mòn. Trong thời <b>Phục hưng</b> (thế kỷ 14–17), giới học giả bắt đầu phê phán cách tiếp cận truyền thống theo Aristotle, tức thói quen thời trung cổ suy ra kết luận từ các nguyên lý của Aristotle thay vì kiểm chứng chúng. Việc kiểm chứng ý tưởng bằng thí nghiệm và đo lường sau đó trở thành trụ cột của cuộc cách mạng khoa học thế kỷ 17.</p>
+  <div class="callout">
+    <h4>Aristotle và chủ nghĩa kinh nghiệm: điều gì đã thay đổi?</h4>
+    <p>Thời Phục hưng không bác bỏ việc quan sát; điều bị bác bỏ là việc coi các kết luận của Aristotle như chân lý đã định. Aristotle có quan sát tự nhiên, nhưng rút ra kết luận chủ yếu bằng diễn dịch, và các học giả trung cổ lặp lại những kết luận đó suốt nhiều thế kỷ mà không kiểm chứng. Galileo và các nhà khoa học sau ông giữ lại phần kinh nghiệm và làm cho nó chặt chẽ hơn: mọi ý tưởng phải có tính khả phủ chứng và được đối chiếu với bằng chứng định lượng (xem khung về Galileo bên dưới).</p>
+  </div>
 
   <h3>Thuyết địa tâm và thuyết nhật tâm</h3>
   <figure>
