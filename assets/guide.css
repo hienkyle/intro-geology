@@ -243,3 +243,9 @@ figure img.diagram{background:#fff;padding:4px}
 .callout ul.inline{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;padding-left:1.1rem}
 .callout ul.inline li{margin:0}
 @media (max-width:430px){#themeBtn span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+
+/* Unit 4 additions (shared): a 2-D move for SVG parts (a rock rising, a crystal sinking, a melting curve shifting). Set --dx / --dy in user units. */
+.nudge{animation:nudge 4.5s ease-in-out infinite}
+@keyframes nudge{0%,15%{transform:translate(0,0)}65%,100%{transform:translate(var(--dx,0px),var(--dy,0px))}}
+/* SVG labels that sit on top of drawings get a halo in the page background color */
+svg .halo{paint-order:stroke;stroke:var(--surface);stroke-width:4px;stroke-linejoin:round}
