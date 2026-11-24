@@ -1,0 +1,1076 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thời gian địa chất</title>
+<meta name="description" content="Tài liệu ôn tập Học phần 7 cho An Introduction to Geology, Chương 7: Thời gian địa chất.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/guide.css">
+<style>
+/* Unit 7 palette: olive green of the geologic time chart with fossil-amber gold and Grand Canyon rust; header bands run from Kaibab cream down to Vishnu schist. */
+:root{
+  --fig-prefix:"Hình 7."; --tbl-prefix:"Bảng 7.";
+  --bg:#f6f6f0; --surface:#ffffff; --surface-2:#ecede2; --fg:#1d2016; --muted:#5a5f4c; --line:#d8dac9;
+  --accent:#4a6418; --accent-soft:#e5edd3; --ochre:#a8700f; --ochre-soft:#f6e8c8; --rust:#a3402a;
+  --s1:#efe0bf; --s2:#d6a46a; --s3:#b0553a; --s4:#6e3a2c; --s5:#24231f;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#13140f; --surface:#1b1d16; --surface-2:#25281e; --fg:#ecede2; --muted:#b0b49d; --line:#383b2e;
+  --accent:#a9c96a; --accent-soft:#2b3519; --ochre:#e0b24f; --ochre-soft:#3a2e14; --rust:#e98a70;
+  --s1:#a8916a; --s2:#8c6440; --s3:#6e3a2a; --s4:#43281f; --s5:#12120e; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#13140f; --surface:#1b1d16; --surface-2:#25281e; --fg:#ecede2; --muted:#b0b49d; --line:#383b2e;
+  --accent:#a9c96a; --accent-soft:#2b3519; --ochre:#e0b24f; --ochre-soft:#3a2e14; --rust:#e98a70;
+  --s1:#a8916a; --s2:#8c6440; --s3:#6e3a2a; --s4:#43281f; --s5:#12120e; color-scheme:dark}
+ol.steps{padding-left:1.6rem}
+ol.steps li{margin:.35rem 0}
+</style>
+</head>
+<body>
+<div lang="vi">
+<header class="hero" id="top">
+  <div class="strata" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Học phần 7 · Chương 7 · An Introduction to Geology</div>
+      <h1>Thời gian địa chất</h1>
+      <p>Cách các nhà địa chất sắp xếp thứ tự đá và sự kiện, cách phân rã phóng xạ biến khoáng vật thành đồng hồ, cách hóa thạch hình thành và dùng để đối sánh đá ở xa nhau, và cách xây dựng thang tuổi địa chất.</p>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="toc" aria-label="Mục lục">
+    <div class="navbar" role="group" aria-label="Công cụ trang">
+      <a class="btn tbtn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Tất cả học phần</span></a>
+      <a class="btn tbtn lbtn" href="unit7.html" lang="en" hreflang="en"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>English</span></a>
+      <button class="btn tbtn" id="themeBtn" type="button" aria-label="Chuyển chế độ sáng hoặc tối">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Chế độ tối</span>
+      </button>
+    </div>
+    <h2>Mục lục</h2>
+    <ol>
+      <li><a href="#outcomes">Mục tiêu học tập</a></li>
+      <li><a href="#s7-1"><span class="num">7.1</span>Định tuổi tương đối</a>
+        <ol>
+          <li><a href="#s7-1-1"><span class="num">7.1.1</span>Các nguyên lý</a></li>
+          <li><a href="#s7-1-2"><span class="num">7.1.2</span>Grand Canyon</a></li>
+          <li><a href="#s7-1-3"><span class="num">7.1.3</span>Bất chỉnh hợp</a></li>
+          <li><a href="#s7-1-4"><span class="num">7.1.4</span>Áp dụng nguyên lý</a></li>
+        </ol>
+      </li>
+      <li><a href="#s7-2"><span class="num">7.2</span>Định tuổi tuyệt đối</a>
+        <ol>
+          <li><a href="#s7-2-1"><span class="num">7.2.1</span>Phân rã phóng xạ</a></li>
+          <li><a href="#s7-2-2"><span class="num">7.2.2</span>Định tuổi đồng vị</a></li>
+          <li><a href="#s7-2-3"><span class="num">7.2.3</span>Tuổi Trái Đất</a></li>
+          <li><a href="#s7-2-4"><span class="num">7.2.4</span>Định tuổi sự kiện</a></li>
+          <li><a href="#s7-2-5"><span class="num">7.2.5</span>Kỹ thuật khác</a></li>
+        </ol>
+      </li>
+      <li><a href="#s7-3"><span class="num">7.3</span>Hóa thạch và tiến hóa</a>
+        <ol>
+          <li><a href="#s7-3-1"><span class="num">7.3.1</span>Các kiểu bảo tồn</a></li>
+          <li><a href="#s7-3-2"><span class="num">7.3.2</span>Tiến hóa</a></li>
+        </ol>
+      </li>
+      <li><a href="#s7-4"><span class="num">7.4</span>Đối sánh địa tầng</a>
+        <ol>
+          <li><a href="#s7-4-1"><span class="num">7.4.1</span>Theo vị trí</a></li>
+          <li><a href="#s7-4-2"><span class="num">7.4.2</span>Thạch địa tầng</a></li>
+          <li><a href="#s7-4-3"><span class="num">7.4.3</span>Thời địa tầng</a></li>
+          <li><a href="#s7-4-4"><span class="num">7.4.4</span>Sinh địa tầng</a></li>
+          <li><a href="#s7-4-5"><span class="num">7.4.5</span>Thang tuổi địa chất</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary">Tóm tắt</a></li>
+      <li><a href="#resources">Tài liệu tham khảo</a></li>
+      <li><a href="#factcheck">Ghi chú kiểm chứng</a></li>
+      <li><a href="#credits">Nguồn &amp; trích dẫn</a></li>
+    </ol>
+  </nav>
+
+<main>
+<section id="outcomes">
+  <h2 class="sec">Mục tiêu học tập</h2>
+  <p class="lead">Học xong Chương 7, bạn cần làm được từng việc dưới đây. Nhãn cho biết mục nào trình bày nội dung đó.</p>
+  <ul class="outcomes">
+    <li><a class="tag" href="#s7-1">7.1</a><span>Giải thích sự khác nhau giữa thời gian tương đối và thời gian bằng số.</span></li>
+    <li><a class="tag" href="#s7-1-1">7.1.1</a><span>Mô tả các nguyên lý của địa tầng học (chương sách nói năm, nhưng liệt kê sáu).</span></li>
+    <li><a class="tag" href="#s7-1-4">7.1.4</a><span>Áp dụng các nguyên lý định tuổi tương đối cho một sơ đồ khối và diễn giải trình tự các sự kiện địa chất.</span></li>
+    <li><a class="tag" href="#s7-2-1">7.2.1</a><span>Định nghĩa đồng vị; giải thích phân rã alpha, phân rã beta và bắt giữ electron như các cơ chế phân rã phóng xạ.</span></li>
+    <li><a class="tag" href="#s7-2-2">7.2.2</a><span>Mô tả cách tiến hành định tuổi bằng đồng vị phóng xạ và kể tên bốn đồng vị chính được sử dụng.</span></li>
+    <li><a class="tag" href="#s7-2-2">7.2.2</a><span>Giải thích carbon-14 hình thành trong khí quyển như thế nào và được dùng để định tuổi các sự kiện gần đây ra sao.</span></li>
+    <li><a class="tag" href="#s7-2-3">7.2.3</a><span>Giải thích làm sao các nhà khoa học biết tuổi bằng số của Trái Đất và của các sự kiện khác trong lịch sử Trái Đất.</span></li>
+    <li><a class="tag" href="#s7-2-4">7.2.4</a><span>Giải thích cách định tuổi các loạt trầm tích bằng đồng vị phóng xạ và các kỹ thuật khác.</span></li>
+    <li><a class="tag" href="#s7-3-1">7.3.1</a><span>Định nghĩa hóa thạch và mô tả các kiểu bảo tồn hóa thạch.</span></li>
+    <li><a class="tag" href="#s7-3-2">7.3.2</a><span>Trình bày khái quát cách chọn lọc tự nhiên diễn ra như một cơ chế của tiến hóa.</span></li>
+    <li><a class="tag" href="#s7-4">7.4</a><span>Mô tả đối sánh địa tầng.</span></li>
+    <li><a class="tag" href="#s7-4-5">7.4.5</a><span>Kể tên các liên đại, đại và kỷ của thang tuổi địa chất và giải thích mục đích của việc phân chia.</span></li>
+    <li><a class="tag" href="#s7-4-3">7.4.3</a><span>Giải thích quan hệ giữa đơn vị thời gian và đơn vị đá tương ứng: thời địa tầng so với thạch địa tầng.</span></li>
+  </ul>
+  <div class="callout">
+    <h4>Cách dùng tài liệu này</h4>
+    <p>Các từ gạch chân là thuật ngữ. Bấm vào một từ, hoặc mở <b>Thuật ngữ</b> ở góc dưới bên phải, để đọc và tìm kiếm mọi định nghĩa của chương. Nhà địa chất đo thời gian theo hai cách: <b>thời gian tương đối</b> sắp xếp các sự kiện theo thứ tự (cổ hơn hay trẻ hơn) mà không cần con số, còn <b>thời gian bằng số (tuyệt đối)</b> cho biết tuổi tính bằng năm. Thang tuổi địa chất và khung lịch sử Trái Đất đã được xây dựng bằng thời gian tương đối từ rất lâu trước khi người ta đo được tuổi bằng năm.</p>
+  </div>
+  <div class="spheres">
+    <div class="sphere"><b><span class="dot" style="background:var(--accent)"></span>Tương đối</b>Cái nào có trước? Các nguyên lý địa tầng học.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--ochre)"></span>Tuyệt đối</b>Cách đây bao nhiêu năm? Phân rã phóng xạ và các “đồng hồ” khác.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--rust)"></span>Hóa thạch</b>Dấu tích sự sống xưa, dùng để đối sánh đá.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s4)"></span>Đối sánh</b>Ghép các lớp đá cùng tuổi ở những nơi khác nhau.</div>
+  </div>
+  <figure id="fig-hero">
+    <div class="frame"><img src="images/unit7/hero.webp" alt="Các vách đá phân lớp màu đỏ, cam và kem của Grand Canyon dưới trời xanh, phía trước là cây thông." loading="lazy" width="1000" height="667"></div>
+    <figcaption>Grand Canyon, Arizona: có lẽ không nơi nào trên Trái Đất minh họa rõ hơn các nguyên lý mà nhà địa chất dùng để xác định tuổi của đá.<span class="credit">John Kees, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+  <p><b>Đôi nét lịch sử.</b> Nicolas Steno (1638–1686) đưa ra các nguyên lý cơ bản của <button class="term" data-term="địa tầng học">địa tầng học</button> (stratigraphy), ngành nghiên cứu các lớp đá, vào năm 1669. William Smith (1769–1839), khi làm việc trong các mỏ than ở Anh, nhận thấy các <button class="term" data-term="tầng đá">tầng đá</button> và thứ tự của chúng giống nhau trong cả vùng; ông lập bản đồ địa chất quốc gia đầu tiên của Anh và được gọi là “cha đẻ của địa chất học Anh”. Các nhà khoa học thế kỷ 19 dùng nguyên lý của Steno để xây dựng thang thời gian tương đối, đặt tên các đơn vị theo đá ở vùng nơi chúng được mô tả (<a href="#s7-4-5">7.4.5</a>). Bản thân lịch sử Trái Đất là chủ đề của Chương 8.</p>
+</section>
+
+<!-- 7.1 -->
+<section id="s7-1">
+  <h2 class="sec"><span class="n">7.1</span>Định tuổi tương đối</h2>
+  <p><button class="term" data-term="định tuổi tương đối">Định tuổi tương đối</button> (relative dating) xác định một đá hay một sự kiện cổ hơn hay trẻ hơn một đá, sự kiện khác, mà không cần biết mỗi thứ hình thành cách đây bao nhiêu năm. Các nguyên lý này nay trông hiển nhiên, nhưng giới học giả chỉ chấp nhận rộng rãi chúng vào thời cách mạng khoa học thế kỷ 17–18. Thuyết <button class="term" data-term="đồng nhất luận">đồng nhất luận</button> của James Hutton (“hiện tại là chìa khóa của quá khứ”; Học phần 1) là nền tảng để đọc đá theo các nguyên lý khoa học.</p>
+
+  <h3 id="s7-1-1">7.1.1 Các nguyên lý định tuổi tương đối</h3>
+  <p>Các nguyên lý này được dùng trong mọi lĩnh vực địa chất nhưng hữu ích nhất trong địa tầng học (<a href="#fig-principles">Hình 7.2</a>).</p>
+  <ol>
+    <li><b><button class="term" data-term="nguyên lý chồng chất">Chồng chất</button>.</b> Trong một loạt tầng trầm tích không bị xáo trộn, lớp ở dưới cùng là cổ nhất, các lớp phía trên trẻ hơn.</li>
+    <li><b><button class="term" data-term="nguyên lý nằm ngang ban đầu">Nằm ngang ban đầu</button>.</b> Các lớp lắng đọng từ trên xuống, như trầm tích và dòng dung nham, ban đầu nằm ngang. Ngoại lệ là ở rìa bồn, nơi tầng đá có thể hơi dốc xuống phía <button class="term" data-term="bồn trầm tích">bồn trầm tích</button>.</li>
+    <li><b><button class="term" data-term="nguyên lý liên tục theo phương ngang">Liên tục theo phương ngang</button>.</b> Trong bồn lắng đọng, tầng đá liên tục theo mọi hướng cho tới khi vát mỏng ở rìa bồn. Lớp nào rồi cũng kết thúc, khi gặp vật cản như một dải núi hoặc khi ở quá xa nguồn trầm tích hay núi lửa. Tầng đá về sau bị hẻm vực cắt qua vẫn liên tục ở hai bên.</li>
+    <li><b><button class="term" data-term="nguyên lý quan hệ cắt xuyên">Quan hệ cắt xuyên</button>.</b> Nếp uốn, đứt gãy và thể xâm nhập magma cắt qua đá thì trẻ hơn đá mà chúng cắt.</li>
+    <li><b><button class="term" data-term="thể bao">Thể bao</button>.</b> Khi một hệ tầng đá chứa mảnh của một đá khác, đá bị bao cổ hơn <button class="term" data-term="đá chủ">đá chủ</button>.</li>
+    <li><b><button class="term" data-term="nguyên lý kế tục hóa thạch">Kế tục hóa thạch</button>.</b> Tiến hóa đã tạo ra một chuỗi hóa thạch đặc trưng tương ứng với các đơn vị của thang tuổi địa chất. Các <b>tổ hợp hóa thạch</b> (nhóm nhiều hóa thạch khác nhau cùng xuất hiện) là duy nhất cho thời gian chúng sống, nên dùng để đối sánh các đá cùng tuổi trên diện rộng.</li>
+  </ol>
+  <figure id="fig-principles">
+    <div class="frame"><svg viewBox="0 0 900 540" role="img" aria-labelledby="pr-t-vi" style="width:100%;min-width:620px;height:auto;display:block"><title id="pr-t-vi">Sáu nguyên lý định tuổi tương đối, mỗi nguyên lý một mặt cắt nhỏ.</title><g transform="translate(0,0)"><rect x="6" y="6" width="288" height="258" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><rect x="34" y="36" width="232" height="38" fill="#efe0b9" stroke="#5b4a37" stroke-width="1"/><rect x="105.6" y="44.0" width="88.9" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="150.0" y="59.7" text-anchor="middle" font-size="13" fill="#151515">4 · trẻ nhất</text><rect x="34" y="74" width="232" height="38" fill="#b9c79f" stroke="#5b4a37" stroke-width="1"/><rect x="139.5" y="82.0" width="21.0" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="150.0" y="97.7" text-anchor="middle" font-size="13" fill="#151515">3</text><rect x="34" y="112" width="232" height="38" fill="#e3c38f" stroke="#5b4a37" stroke-width="1"/><rect x="139.5" y="120.0" width="21.0" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="150.0" y="135.7" text-anchor="middle" font-size="13" fill="#151515">2</text><rect x="34" y="150" width="232" height="38" fill="#c99a6b" stroke="#5b4a37" stroke-width="1"/><rect x="109.1" y="158.0" width="81.9" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="150.0" y="173.7" text-anchor="middle" font-size="13" fill="#151515">1 · cổ nhất</text><text x="150.0" y="222.0" font-size="15" class="svg-ink" text-anchor="middle" font-weight="600">Chồng chất</text><text x="150.0" y="241.0" font-size="13" class="svg-muted" text-anchor="middle">Lớp nằm dưới cổ hơn.</text></g><g transform="translate(300,0)"><rect x="6" y="6" width="288" height="258" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><defs><clipPath id="basinvi"><path d="M30 40 L80 190 L220 190 L270 40 Z"/></clipPath></defs><path d="M20 40 L30 40 L80 190 L220 190 L270 40 L280 40 L280 200 L20 200 Z" fill="#8f8a85" stroke="#4a4541"/><path d="M10 56 L70 68 Q90 70 110 70 L190 70 Q210 70 230 68 L290 56 L290 200 L10 200 Z" fill="#efe0b9" stroke="#5b4a37" stroke-width="1" clip-path="url(#basinvi)"/><path d="M10 91 L70 103 Q90 105 110 105 L190 105 Q210 105 230 103 L290 91 L290 200 L10 200 Z" fill="#b9c79f" stroke="#5b4a37" stroke-width="1" clip-path="url(#basinvi)"/><path d="M10 126 L70 138 Q90 140 110 140 L190 140 Q210 140 230 138 L290 126 L290 200 L10 200 Z" fill="#e3c38f" stroke="#5b4a37" stroke-width="1" clip-path="url(#basinvi)"/><path d="M10 151 L70 163 Q90 165 110 165 L190 165 Q210 165 230 163 L290 151 L290 200 L10 200 Z" fill="#c99a6b" stroke="#5b4a37" stroke-width="1" clip-path="url(#basinvi)"/><path d="M30 40 L80 190 L220 190 L270 40" fill="none" stroke="#4a4541" stroke-width="2"/><text x="150.0" y="222.0" font-size="15" class="svg-ink" text-anchor="middle" font-weight="600">Nằm ngang ban đầu</text><text x="150.0" y="241.0" font-size="13" class="svg-muted" text-anchor="middle">Lắng đọng nằm ngang; chỉ hơi</text><text x="150.0" y="258.0" font-size="13" class="svg-muted" text-anchor="middle">dốc ở rìa bồn trầm tích.</text></g><g transform="translate(600,0)"><rect x="6" y="6" width="288" height="258" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><path d="M30 40 L120 40 L127 80 L30 80 Z" fill="#efe0b9" stroke="#5b4a37"/><path d="M270 40 L180 40 L173 80 L270 80 Z" fill="#efe0b9" stroke="#5b4a37"/><path d="M30 80 L127 80 L134 120 L30 120 Z" fill="#b9c79f" stroke="#5b4a37"/><path d="M270 80 L173 80 L166 120 L270 120 Z" fill="#b9c79f" stroke="#5b4a37"/><path d="M30 120 L134 120 L141 160 L30 160 Z" fill="#e3c38f" stroke="#5b4a37"/><path d="M270 120 L166 120 L159 160 L270 160 Z" fill="#e3c38f" stroke="#5b4a37"/><path d="M30 160 L141 160 L148 200 L30 200 Z" fill="#c99a6b" stroke="#5b4a37"/><path d="M270 160 L159 160 L152 200 L270 200 Z" fill="#c99a6b" stroke="#5b4a37"/><path d="M127 80 L173 80" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/><path d="M134 120 L166 120" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/><path d="M141 160 L159 160" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/><rect x="63.7" y="89.0" width="22.6" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="75.0" y="104.7" text-anchor="middle" font-size="13" font-weight="600" fill="#151515">A</text><rect x="213.7" y="89.0" width="22.6" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="225.0" y="104.7" text-anchor="middle" font-size="13" font-weight="600" fill="#151515">A</text><text x="150.0" y="222.0" font-size="15" class="svg-ink" text-anchor="middle" font-weight="600">Liên tục theo phương ngang</text><text x="150.0" y="241.0" font-size="13" class="svg-muted" text-anchor="middle">Lớp bị hẻm vực cắt qua</text><text x="150.0" y="258.0" font-size="13" class="svg-muted" text-anchor="middle">vẫn tiếp tục ở hai bên.</text></g><g transform="translate(0,270)"><rect x="6" y="6" width="288" height="258" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><path d="M30 60 L203.7 60 L199.2 95 L30 95 Z" fill="#efe0b9" stroke="#5b4a37"/><path d="M201.4 78 L270 78 L270 113 L196.9 113 Z" fill="#efe0b9" stroke="#5b4a37"/><path d="M30 95 L199.2 95 L194.7 130 L30 130 Z" fill="#b9c79f" stroke="#5b4a37"/><path d="M196.9 113 L270 113 L270 148 L192.4 148 Z" fill="#b9c79f" stroke="#5b4a37"/><path d="M30 130 L194.7 130 L190.2 165 L30 165 Z" fill="#e3c38f" stroke="#5b4a37"/><path d="M192.4 148 L270 148 L270 183 L187.8 183 Z" fill="#e3c38f" stroke="#5b4a37"/><path d="M30 165 L190.2 165 L185.6 200 L30 200 Z" fill="#c99a6b" stroke="#5b4a37"/><path d="M187.8 183 L270 183 L270 200 L185.6 200 Z" fill="#c99a6b" stroke="#5b4a37"/><path d="M100 60 L124 60 L116 200 L92 200 Z" fill="#3b3b3b" stroke="#111"/><path d="M204.5 54 L185.1 204" stroke="#b3261e" stroke-width="3"/><text x="70.0" y="34.0" font-size="12.5" class="svg-ink" text-anchor="middle">thể tường (trẻ hơn)</text><path d="M90.0 40.0 L110.0 72.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M90.0 40.0 L110.0 72.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="110.0" cy="72.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="236.0" y="34.0" font-size="12.5" class="svg-ink" text-anchor="middle">đứt gãy (trẻ hơn)</text><path d="M226.0 40.0 L197.3 110.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M226.0 40.0 L197.3 110.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="197.3" cy="110.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="150.0" y="222.0" font-size="15" class="svg-ink" text-anchor="middle" font-weight="600">Quan hệ cắt xuyên</text><text x="150.0" y="241.0" font-size="13" class="svg-muted" text-anchor="middle">Thứ cắt qua đá thì</text><text x="150.0" y="258.0" font-size="13" class="svg-muted" text-anchor="middle">trẻ hơn đá đó.</text></g><g transform="translate(300,270)"><rect x="6" y="6" width="288" height="258" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><rect x="30" y="56" width="240" height="144" fill="#e9b9a9" stroke="#6b3b30"/><circle cx="110" cy="82" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="184" cy="72" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="158" cy="110" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="49" cy="129" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="45" cy="119" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="52" cy="74" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="133" cy="171" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="64" cy="91" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="179" cy="187" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="168" cy="114" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="259" cy="68" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="232" cy="100" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="69" cy="78" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="106" cy="170" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="77" cy="139" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="182" cy="111" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="161" cy="70" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="50" cy="89" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="191" cy="118" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="108" cy="139" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="139" cy="102" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="217" cy="154" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="92" cy="138" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="156" cy="178" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="202" cy="100" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="259" cy="78" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="131" cy="162" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="71" cy="127" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="45" cy="150" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="210" cy="138" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="236" cy="103" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="195" cy="140" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="168" cy="122" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="228" cy="187" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="144" cy="150" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="50" cy="155" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="184" cy="193" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="223" cy="100" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="124" cy="150" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="41" cy="123" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="74" cy="77" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="49" cy="163" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="65" cy="95" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="125" cy="177" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="54" cy="121" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="161" cy="179" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="223" cy="176" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="99" cy="117" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="118" cy="179" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="254" cy="82" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="76" cy="93" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="89" cy="126" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="170" cy="97" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="37" cy="117" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="120" cy="137" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="253" cy="153" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="154" cy="144" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="190" cy="69" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="241" cy="165" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="235" cy="167" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="125" cy="115" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="60" cy="146" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="50" cy="71" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="84" cy="83" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="114" cy="69" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="36" cy="82" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="59" cy="110" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="42" cy="177" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="176" cy="82" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="94" cy="108" r="1.6" fill="#7a4a40" opacity=".55"/><path d="M60 80 L92 72 L100 98 L70 108 Z" fill="#4d5560" stroke="#22262b"/><path d="M140 96 L170 88 L176 116 L150 124 L136 112 Z" fill="#4d5560" stroke="#22262b"/><path d="M206 70 L236 76 L230 100 L204 96 Z" fill="#4d5560" stroke="#22262b"/><rect x="96.6" y="159.0" width="106.8" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="150.0" y="174.7" text-anchor="middle" font-size="13" fill="#151515">đá chủ: trẻ hơn</text><text x="150.0" y="34.0" font-size="12.5" class="svg-ink" text-anchor="middle">thể bao: cổ hơn</text><path d="M140.0 40.0 L155.0 104.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M140.0 40.0 L155.0 104.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="155.0" cy="104.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><path d="M122.0 40.0 L82.0 90.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M122.0 40.0 L82.0 90.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="82.0" cy="90.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="150.0" y="222.0" font-size="15" class="svg-ink" text-anchor="middle" font-weight="600">Thể bao</text><text x="150.0" y="241.0" font-size="13" class="svg-muted" text-anchor="middle">Mảnh đá bị bao cổ hơn</text><text x="150.0" y="258.0" font-size="13" class="svg-muted" text-anchor="middle">đá chủ chứa nó.</text></g><g transform="translate(600,270)"><rect x="6" y="6" width="288" height="258" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><rect x="34" y="40" width="90" height="44" fill="#efe0b9" stroke="#5b4a37"/><path d="M79 62 m0 0 a3 3 0 1 1 3 3 a6 6 0 1 1 -6 -6 a9 9 0 1 1 9 9" fill="none" stroke="#2b2118" stroke-width="2"/><rect x="34" y="84" width="90" height="44" fill="#e3c38f" stroke="#5b4a37"/><path d="M67 113 Q79 90 91 113 Z" fill="none" stroke="#2b2118" stroke-width="2"/><path d="M79 113 L73 100" stroke="#2b2118" stroke-width="1.3"/><path d="M79 113 L79 100" stroke="#2b2118" stroke-width="1.3"/><path d="M79 113 L85 100" stroke="#2b2118" stroke-width="1.3"/><rect x="34" y="128" width="90" height="44" fill="#c99a6b" stroke="#5b4a37"/><ellipse cx="79" cy="150" rx="9" ry="13" fill="none" stroke="#2b2118" stroke-width="2"/><path d="M70 148 L88 148 M71 154 L87 154 M79 137 L79 163" stroke="#2b2118" stroke-width="1.3"/><rect x="176" y="70" width="90" height="44" fill="#efe0b9" stroke="#5b4a37"/><path d="M221 92 m0 0 a3 3 0 1 1 3 3 a6 6 0 1 1 -6 -6 a9 9 0 1 1 9 9" fill="none" stroke="#2b2118" stroke-width="2"/><rect x="176" y="114" width="90" height="44" fill="#e3c38f" stroke="#5b4a37"/><path d="M209 143 Q221 120 233 143 Z" fill="none" stroke="#2b2118" stroke-width="2"/><path d="M221 143 L215 130" stroke="#2b2118" stroke-width="1.3"/><path d="M221 143 L221 130" stroke="#2b2118" stroke-width="1.3"/><path d="M221 143 L227 130" stroke="#2b2118" stroke-width="1.3"/><rect x="176" y="158" width="90" height="44" fill="#c99a6b" stroke="#5b4a37"/><ellipse cx="221" cy="180" rx="9" ry="13" fill="none" stroke="#2b2118" stroke-width="2"/><path d="M212 178 L230 178 M213 184 L229 184 M221 167 L221 193" stroke="#2b2118" stroke-width="1.3"/><path d="M124 40 L176 70" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/><path d="M124 84 L176 114" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/><path d="M124 128 L176 158" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/><path d="M124 172 L176 202" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/><text x="150.0" y="222.0" font-size="15" class="svg-ink" text-anchor="middle" font-weight="600">Kế tục hóa thạch</text><text x="150.0" y="241.0" font-size="13" class="svg-muted" text-anchor="middle">Cùng tổ hợp hóa thạch</text><text x="150.0" y="258.0" font-size="13" class="svg-muted" text-anchor="middle">→ cùng tuổi.</text></g></svg></div>
+    <figcaption>Các nguyên lý định tuổi tương đối, vẽ thành những mặt cắt đơn giản.<span class="credit">Vẽ cho tài liệu này theo mô tả của chương sách.</span></figcaption>
+  </figure>
+  <figure id="fig-superposition">
+    <div class="frame"><img src="images/unit7/superposition.webp" alt="Sườn núi dốc bằng đá xám gồm nhiều lớp nằm ngang nhô lên từ mặt biển." loading="lazy" width="761" height="1000" style="max-height:520px;width:auto"></div>
+    <figcaption>Chồng chất: các tầng đá bên dưới cổ hơn các tầng nằm trên chúng (Isfjorden, Svalbard).<span class="credit">Mark A. Wilson, phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+  <figure id="fig-lateral">
+    <div class="frame"><img src="images/unit7/lateral.webp" alt="Toàn cảnh Grand Canyon, các dải đá cùng màu chạy dọc hai vách hẻm vực." loading="lazy" width="800" height="281"></div>
+    <figcaption>Liên tục theo phương ngang, nhìn từ Grandview Point, Grand Canyon: các lớp giống nhau thẳng hàng ở hai bên hẻm vực.<span class="credit">Ron Clausen, CC0 (qua giáo trình).</span></figcaption>
+  </figure>
+  <figure id="fig-faunal">
+    <div class="frame"><img class="diagram" src="images/unit7/faunal.webp" alt="Hai cột đá ở hai bên một thung lũng, các hình hóa thạch giống nhau trong các lớp tương ứng được nối bằng đường thẳng." loading="lazy" width="717" height="525"></div>
+    <figcaption>Kế tục hóa thạch: các lớp chứa cùng loại hóa thạch được đối sánh qua khoảng trống.<span class="credit">דקי, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-1-2">7.1.2 Ví dụ Grand Canyon</h3>
+  <p>Grand Canyon thể hiện rõ các nguyên lý. Các lớp đá xếp chồng từ cổ nhất ở dưới đến trẻ nhất ở trên (chồng chất). Lớp màu trắng ngay dưới mép vực, <b>cát kết Coconino</b>, xuất hiện ở cả hai bên hẻm vực do sông Colorado khoét (liên tục theo phương ngang).</p>
+  <figure id="fig-gc2013">
+    <div class="frame"><img src="images/unit7/gc2013.webp" alt="Cảnh Grand Canyon với một dải đá trắng sáng chạy dọc vách dưới mép vực." loading="lazy" width="640" height="427"></div>
+    <figcaption>Grand Canyon, Arizona. Dải màu nhạt dưới mép vực là cát kết Coconino.<span class="credit">Tomas Castelazo, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+  <p><a href="#fig-gcstrat">Hình 7.7</a> cho thấy ba nhóm đá. Dưới cùng là <b>đá móng Vishnu</b>: <b>đá phiến (#16)</b> biến chất, đơn vị cổ nhất, bị một <b>thể xâm nhập granit (#17)</b> cắt qua nên granit trẻ hơn (cắt xuyên). Bên trên, các lớp trầm tích được đánh số ngược, <b>#15 cổ nhất và #1 trẻ nhất</b> (chồng chất). Vùng này nằm trên <b>cao nguyên Colorado</b>, nơi tầng đá nằm ngang hoặc gần ngang (nằm ngang ban đầu); ngoài một đợt nâng lên trên diện rộng, chúng hầu như không bị xáo trộn.</p>
+  <figure id="fig-gcstrat">
+    <div class="frame"><img class="diagram" src="images/unit7/gcstrat.webp" alt="Biểu đồ mặt cắt các đơn vị đá Grand Canyon đánh số 1 đến 18, chia thành đá Cổ sinh phân lớp, nhóm đá Grand Canyon Supergroup và đá móng Vishnu, kèm tuổi và bề dày." loading="lazy" width="600" height="819" style="max-height:760px;width:auto"></div>
+    <figcaption>Ba nhóm đá của Grand Canyon (nhãn gốc tiếng Anh), với tuổi (triệu năm) và bề dày từng lớp. Đường lượn sóng giữa các đơn vị là bất chỉnh hợp; Bất chỉnh hợp Lớn được đánh dấu ở bên trái.<span class="credit">Cục Vườn quốc gia Hoa Kỳ (NPS), phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+  <p>Các tầng đá được lắng đọng nằm ngang trên <button class="term" data-term="móng">móng</button> magma và biến chất cổ hơn. Vì biến chất, xâm nhập và bào mòn đã làm đứt quãng bản ghi giữa móng và tầng đá, mặt tiếp xúc này là một <button class="term" data-term="bất chỉnh hợp">bất chỉnh hợp</button>: một khoảng thời gian không có lắng đọng, hoặc trầm tích đã bị bào mòn, nên ở nơi đó không có đá ghi lại thời gian ấy. Trên mặt cắt và cột địa tầng, bất chỉnh hợp được vẽ bằng <b>đường lượn sóng</b>.</p>
+  <figure id="fig-gcnonconf">
+    <div class="frame"><img src="images/unit7/gcnonconf.webp" alt="Hẻm sâu bên trong Grand Canyon: đá phân lớp màu đỏ nằm nghiêng phủ trên đá kết tinh sẫm màu." loading="lazy" width="1000" height="750"></div>
+    <figcaption>Các lớp đỏ của Grand Canyon Supergroup trên đá phiến Vishnu sẫm màu: bất chỉnh hợp trên đá kết tinh.<span class="credit">Simeon87, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-1-3">7.1.3 Bất chỉnh hợp</h3>
+  <p>Có ba kiểu (<a href="#tbl-unconf">Bảng 7.1</a>, <a href="#fig-unconf">Hình 7.9</a>).</p>
+  <div class="tablewrap" id="tbl-unconf">
+    <table>
+      <caption>Ba kiểu bất chỉnh hợp.</caption>
+      <thead><tr><th>Kiểu</th><th>Đá bên dưới</th><th>Đá bên trên</th><th>Ví dụ ở Grand Canyon</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="bất chỉnh hợp trên đá kết tinh">Bất chỉnh hợp trên đá kết tinh</button> (nonconformity)</td><td>Đá magma hoặc biến chất (kết tinh)</td><td>Tầng đá trầm tích</td><td>Tầng đá trên móng Vishnu</td></tr>
+        <tr><td><button class="term" data-term="bất chỉnh hợp song song">Bất chỉnh hợp song song</button> (disconformity)</td><td>Tầng trầm tích, song song</td><td>Tầng trầm tích, song song; giữa có gián đoạn lắng đọng hoặc bào mòn</td><td>Giữa các hệ tầng Muav, Temple Butte và Redwall</td></tr>
+        <tr><td><button class="term" data-term="bất chỉnh hợp góc">Bất chỉnh hợp góc</button> (angular unconformity)</td><td>Tầng trầm tích bị nghiêng, uốn nếp và/hoặc đứt gãy, rồi bị bào mòn</td><td>Tầng trầm tích nằm ngang</td><td>Bất chỉnh hợp Lớn (Great Unconformity)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure id="fig-unconf">
+    <div class="frame">
+      <ul class="gallery" style="--cols:3">
+        <li><img class="diagram" src="images/unit7/disconf.webp" alt="Các lớp xám song song với một đường lượn sóng đen dày giữa hai lớp." loading="lazy" width="597" height="451" style="aspect-ratio:4/3;object-fit:contain"><span><b>Bất chỉnh hợp song song</b>gián đoạn giữa các tầng song song</span></li>
+        <li><img class="diagram" src="images/unit7/nonconf.webp" alt="Đá phân lớp nằm trên một đường lượn sóng đen, bên dưới là đá kết tinh không phân lớp." loading="lazy" width="596" height="449" style="aspect-ratio:4/3;object-fit:contain"><span><b>Bất chỉnh hợp trên đá kết tinh</b>tầng đá trên đá magma hoặc biến chất</span></li>
+        <li><img class="diagram" src="images/unit7/angular.webp" alt="Các lớp nằm ngang trên một đường lượn sóng đen, bên dưới là các lớp nghiêng." loading="lazy" width="595" height="450" style="aspect-ratio:4/3;object-fit:contain"><span><b>Bất chỉnh hợp góc</b>tầng nằm ngang trên tầng nghiêng</span></li>
+      </ul>
+    </div>
+    <figcaption>Ba kiểu bất chỉnh hợp. Đường lượn sóng đậm là mặt bất chỉnh hợp.<span class="credit">דקי, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+  <p><b>Bất chỉnh hợp song song ở Grand Canyon.</b> Các tầng đá ghi lại những đợt <button class="term" data-term="biển tiến">biển tiến</button> và <button class="term" data-term="biển thoái">biển thoái</button> khi mực nước biển dâng và hạ qua hàng triệu năm. Khi mực nước biển cao, tầng trầm tích biển được lắng đọng; khi biển rút, đất liền lộ ra và bị bào mòn. Những lớp lẽ ra có mặt đã không còn, và thời gian chúng lẽ ra ghi lại được thể hiện bằng bất chỉnh hợp (các đường lượn sóng đậm trong <a href="#fig-gcstrat">Hình 7.7</a>).</p>
+  <p><b>Bất chỉnh hợp Lớn.</b> Phần lớn tầng đá Hiển sinh trong hẻm vực nằm ngang, nhưng gần đáy chúng phủ lên các tầng <b>nằm nghiêng</b>. Quá trình kiến tạo làm nghiêng các tầng bên dưới, sau đó chúng bị bào mòn; về sau các tầng nằm ngang được lắng đọng lên trên.</p>
+  <div class="pair">
+    <figure id="fig-redwall">
+      <div class="frame"><img src="images/unit7/redwall.webp" alt="Vách đá nhuộm đỏ ghi nhãn Redwall Limestone, bên dưới là một nêm mỏng ghi Temple Butte Formation và Muav Limestone." loading="lazy" width="800" height="600"></div>
+      <figcaption>Bất chỉnh hợp song song ở cả hai mặt tiếp xúc của hệ tầng Temple Butte, giữa đá vôi Muav và đá vôi Redwall. Lớp Temple Butte vát nhọn cho thấy rõ nhất sự bào mòn.<span class="credit">NPS, phạm vi công cộng (qua giáo trình).</span></figcaption>
+    </figure>
+    <figure id="fig-lipan">
+      <div class="frame"><img src="images/unit7/lipan.webp" alt="Toàn cảnh Grand Canyon, các lớp nằm ngang phủ lên các lớp nằm nghiêng gần đáy." loading="lazy" width="1000" height="748"></div>
+      <figcaption>Bất chỉnh hợp Lớn nhìn từ Lipan Point: tầng nằm ngang trên tầng nằm nghiêng, một bất chỉnh hợp góc.<span class="credit">Doug Dolde, phạm vi công cộng (qua giáo trình).</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s7-1-4">7.1.4 Áp dụng các nguyên lý định tuổi tương đối</h3>
+  <p>Dùng các nguyên lý và hiểu biết về đá magma, trầm tích, biến chất (Học phần 4–6), đọc các sự kiện trong <a href="#fig-block">Hình 7.12</a> từ cổ nhất đến trẻ nhất:</p>
+  <figure id="fig-block">
+    <div class="frame"><img class="diagram" src="images/unit7/block.webp" alt="Sơ đồ khối: gneis uốn nếp lượn sóng bị đứt gãy A và khối granit B hình dạng bất thường cắt qua, phủ lên trên là lớp C rồi lớp E; thể tường sẫm D cắt C nhưng không cắt E; đứt gãy F cắt qua tất cả và tạo bậc trên mặt đất." loading="lazy" width="1400" height="740"></div>
+    <figcaption>Sơ đồ khối để luyện tập. Đá lượn sóng là gneis biến chất cổ; A và F là đứt gãy; B là granit; D là thể tường bazan; C và E là tầng trầm tích.<span class="credit">Woudloper, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+  <ol class="steps">
+    <li><b>Gneis</b> hình thành và bị uốn nếp (cổ nhất).</li>
+    <li><b>Đứt gãy A</b> cắt và làm xê dịch gneis.</li>
+    <li><b>Thể nền B</b> (granit) xâm nhập dưới dạng magma; đường viền bất thường của nó cắt cả gneis lẫn đứt gãy A, nên nó trẻ hơn cả hai.</li>
+    <li>Gneis, đứt gãy A và B bị <b>bào mòn</b>, tạo một <b>bất chỉnh hợp trên đá kết tinh</b> (đường lượn sóng), tức một mặt đất cổ.</li>
+    <li><b>Lớp C</b> lắng đọng trên mặt đó, có thể do một đợt biển tiến.</li>
+    <li><b>Thể tường D</b> cắt qua mọi đá trừ E.</li>
+    <li><b>Bào mòn</b> san phẳng địa hình: đỉnh D ngang với đỉnh C, nên có một <b>bất chỉnh hợp song song</b> giữa C/D và E.</li>
+    <li><b>Lớp E</b> lắng đọng.</li>
+    <li><b>Đứt gãy F</b> cắt B, C và E, tạo một <button class="term" data-term="vách đứt gãy">vách đứt gãy</button> (gờ thấp ở phía trên bên trái).</li>
+    <li><b>Bào mòn hiện nay</b> làm tròn mép vách và tạo nên địa hình ngày nay (trẻ nhất).</li>
+  </ol>
+  <p class="quiz">Kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener">Câu hỏi Mục 7.1 trong giáo trình ↗</a></p>
+</section>
+
+<!-- 7.2 -->
+<section id="s7-2">
+  <h2 class="sec"><span class="n">7.2</span>Định tuổi tuyệt đối</h2>
+  <p>Thời gian tương đối kể câu chuyện theo thứ tự nhưng không có con số, nên không cho biết <b>tốc độ</b> của các quá trình địa chất. Từ đồng nhất luận, các nhà địa chất thời đầu suy ra rằng các quá trình diễn ra chậm và Trái Đất rất già; định tuổi tương đối là phương pháp duy nhất cho đến cuối thế kỷ 19. Việc phát hiện <button class="term" data-term="tính phóng xạ">tính phóng xạ</button> vào cuối những năm 1800 mang lại công cụ mới, <b>định tuổi bằng đồng vị phóng xạ</b>, cho phép gán tuổi tính bằng năm cho các hạt khoáng vật. Các con số này không phụ thuộc vào việc so sánh với đá khác, nên phương pháp được gọi là <button class="term" data-term="định tuổi tuyệt đối">định tuổi tuyệt đối</button>. Định tuổi bằng đồng vị phóng xạ là kiểu phổ biến nhất và là trọng tâm của mục này.</p>
+  <figure id="fig-nuvv">
+    <div class="frame"><img src="images/unit7/nuvv.webp" alt="Mỏm đá xám thấp có các dải xoắn bên cạnh một mặt hồ phẳng lặng." loading="lazy" width="452" height="339"></div>
+    <figcaption>Đai đá lục Nuvvuagittuq ở Canada có thể chứa những đá cổ nhất và bằng chứng sự sống cổ nhất trên Trái Đất, theo các nghiên cứu gần đây.<span class="credit">NASA, phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-2-1">7.2.1 Phân rã phóng xạ</h3>
+  <p><button class="term" data-term="đồng vị">Đồng vị</button> là nguyên tử của một nguyên tố có số <b>neutron</b> khác nhau. Hydro luôn có 1 proton (số nguyên tử của nó), nhưng có thể có 0, 1 hoặc 2 neutron. Số neutron cộng số nguyên tử cho <b>số khối</b>: proti (<sup>1</sup>H), deuteri (<sup>2</sup>H) và triti (<sup>3</sup>H) (<a href="#fig-hiso">Hình 7.14</a>).</p>
+  <figure id="fig-hiso">
+    <div class="frame"><img class="diagram" src="images/unit7/hiso.webp" alt="Ba hình nguyên tử: proti với một proton, deuteri với một proton và một neutron, triti với một proton và hai neutron, mỗi nguyên tử một electron." loading="lazy" width="1000" height="513"></div>
+    <figcaption>Ba đồng vị của hydro (nhãn gốc tiếng Anh: Protium = proti, Deuterium = deuteri, Tritium = triti).<span class="credit">Dirk Hünniger, Balajijagadesh chỉnh sửa, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+  <p>Nhiều nguyên tố có cả đồng vị bền và không bền; <sup>1</sup>H và <sup>2</sup>H bền, <sup>3</sup>H thì không. Các <b>đồng vị phóng xạ</b> không bền tự phát giải phóng hạt hoặc năng lượng, gọi là <button class="term" data-term="phân rã phóng xạ">phân rã phóng xạ</button>, và trở thành đồng vị bền hơn của một nguyên tố khác (ví dụ <sup>14</sup>C → <sup>14</sup>N).</p>
+  <p>Thời điểm một nguyên tử riêng lẻ phân rã là ngẫu nhiên, không đoán trước được. Nhưng một mẫu đá có thể chứa hàng nghìn tỉ nguyên tử phóng xạ, và một nhóm lớn như vậy phân rã theo quy luật đoán trước được. <button class="term" data-term="chu kỳ bán rã">Chu kỳ bán rã</button> là thời gian để một nửa số nguyên tử không bền phân rã thành đồng vị bền. Nó không đổi và đo được với mỗi đồng vị, nên có thể dùng để tính tuổi đá: ví dụ 4,5 tỉ năm với urani-238 (<sup>238</sup>U) và 5.730 năm với <sup>14</sup>C.</p>
+  <div class="pair">
+    <figure id="fig-halfsim">
+      <div class="frame"><img src="images/unit7/halfsim.gif" alt="Hoạt hình: các ô chấm đổi màu ngẫu nhiên; nhóm nhỏ thay đổi không đều, nhóm lớn mất một nửa theo nhịp đều đặn." loading="lazy" width="100" height="188" style="width:150px;height:auto;image-rendering:pixelated"></div>
+      <figcaption>Mô phỏng chu kỳ bán rã. Trái: 4 lần chạy với rất ít nguyên tử. Phải: 4 lần chạy với nhiều nguyên tử, khi đó sự phân rã trở nên đoán trước được.<span class="credit">Steve Byrnes, phạm vi công cộng (qua giáo trình).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Hai giả định then chốt</h4>
+      <ol>
+        <li>Các hạt khoáng vật chứa đồng vị hình thành <b>cùng lúc với đá</b>, như khoáng vật kết tinh từ magma.</li>
+        <li>Tinh thể vẫn là một <button class="term" data-term="hệ kín">hệ kín</button>: không nguyên tố nào đi vào hay đi ra sau đó.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="tablewrap" id="tbl-rocks">
+    <table>
+      <caption>Đá nào định tuổi được? Đá magma là tốt nhất.</caption>
+      <thead><tr><th>Đá hoặc vật liệu</th><th>Phù hợp?</th><th>Lý do</th></tr></thead>
+      <tbody>
+        <tr><td>Đá magma</td><td>Tốt nhất</td><td>Khoáng vật cho biết thời điểm kết tinh từ magma.</td></tr>
+        <tr><td>Đá biến chất</td><td>Hạn chế</td><td>Biến chất có thể “đặt lại đồng hồ”; tuổi đo được có thể là hỗn hợp của nhiều đợt biến chất, không phải tuổi kết tinh ban đầu.</td></tr>
+        <tr><td>Đá trầm tích <button class="term" data-term="vụn">vụn</button></td><td>Không</td><td>Mảnh vụn đến từ nhiều đá mẹ ở những nơi không rõ, nên tuổi đo được vô nghĩa đối với lớp trầm tích.</td></tr>
+        <tr><td>Trầm tích kết tủa (ví dụ <button class="term" data-term="evaporit">evaporit</button>)</td><td>Có</td><td>Khoáng vật mọc tại chỗ có thể chứa nguyên tố phù hợp.</td></tr>
+        <tr><td>Lớp vụn núi lửa, dòng dung nham, đá magma cắt xuyên, thể vỉa</td><td>Có</td><td>Dùng để định tuổi hoặc kẹp tuổi các đá trầm tích quanh chúng (<a href="#s7-2-4">7.2.4</a>).</td></tr>
+        <tr><td>Hạt <button class="term" data-term="zircon">zircon</button></td><td>Có</td><td>Rất bền; cho tuổi rất cổ, kể cả vật chất cổ nhất được biết trên Trái Đất, và tuổi đá nguồn của trầm tích đã bị biến chất.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h4>Ba cách nguyên tử phân rã</h4>
+  <div class="tablewrap" id="tbl-modes">
+    <table>
+      <caption>Phân rã alpha, phân rã beta và bắt giữ electron.</caption>
+      <thead><tr><th>Kiểu</th><th>Điều xảy ra trong hạt nhân</th><th>Số nguyên tử</th><th>Số khối</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="phân rã alpha">Phân rã alpha</button></td><td>Phát ra một hạt alpha (2 proton + 2 neutron, tức hạt nhân heli)</td><td>−2</td><td>−4</td><td><sup>238</sup>U → <sup>234</sup>Th</td></tr>
+        <tr><td><button class="term" data-term="phân rã beta">Phân rã beta</button></td><td>Một neutron tách thành một proton và một electron; electron thoát ra dưới dạng tia beta</td><td>+1</td><td>Không đổi</td><td><sup>234</sup>Th → <sup>234</sup>Pa → <sup>234</sup>U</td></tr>
+        <tr><td><button class="term" data-term="bắt giữ electron">Bắt giữ electron</button></td><td>Một proton bắt một electron từ lớp vỏ và trở thành neutron</td><td>−1</td><td>Không đổi</td><td><sup>40</sup>K → <sup>40</sup>Ar</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><b>Phân rã alpha.</b> Hạt nhân heli thoát ra có thể để lại khí heli bị giữ trong mạng tinh thể của khoáng vật. Mất 2 proton làm nguyên tử lùi hai ô trong Bảng tuần hoàn; mất 4 hạt làm khối lượng giảm 4. <sup>238</sup>U (92 proton, số khối 238) phát một hạt alpha và trở thành thori-234. Sản phẩm phân rã là <button class="term" data-term="đồng vị con">đồng vị con</button>; đồng vị ban đầu là <button class="term" data-term="đồng vị mẹ">đồng vị mẹ</button>. Với chu kỳ bán rã 4,5 tỉ năm, <sup>238</sup>U dùng để định tuổi những vật chất cổ nhất trên Trái Đất, thiên thạch và các sự kiện sớm nhất của Hệ Mặt Trời.</p>
+  <figure id="fig-alpha">
+    <div class="frame"><img class="diagram" src="images/unit7/alpha.webp" alt="Một cụm lớn các quả cầu đỏ và xanh, một cụm nhỏ gồm hai quả đỏ và hai quả xanh bay ra." loading="lazy" width="500" height="340"></div>
+    <figcaption>Phân rã alpha: hai proton và hai neutron rời khỏi hạt nhân.<span class="credit">Inductiveload, phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+  <figure id="fig-ecap">
+    <div class="frame"><img class="diagram" src="images/unit7/ecap.webp" alt="Sơ đồ nguyên tử: hạt nhân bắt một electron, rồi rẽ thành hai khả năng: phát tia X hoặc bật ra một electron khác." loading="lazy" width="847" height="1000" style="max-height:340px;width:auto"></div>
+    <figcaption>Hai khả năng sau bắt giữ electron: phát tia X, hoặc hiệu ứng Auger (nhãn gốc tiếng Anh).<span class="credit">Pamputt, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+  <p><b>Phân rã beta và chuỗi phân rã.</b> Đồng vị của các nguyên tố khác nhau có thể cùng số khối, như <sup>234</sup>Th, <sup>234</sup>Pa và <sup>234</sup>U. Phân rã tiếp tục sinh ra các đồng vị mẹ và con phóng xạ cho tới khi tạo thành một đồng vị con bền; loạt này gọi là <button class="term" data-term="chuỗi phân rã">chuỗi phân rã</button>. <sup>238</sup>U trải qua một loạt phân rã alpha (mũi tên đỏ) và beta (mũi tên xanh) để thành chì-206 bền (<a href="#fig-u238">Hình 7.18</a>).</p>
+  <figure id="fig-u238">
+    <div class="frame"><img class="diagram" src="images/unit7/u238.webp" alt="Biểu đồ các vòng tròn đồng vị từ urani-238 xuống chì-206, nối bằng mũi tên alpha màu đỏ và beta màu xanh, ghi chu kỳ bán rã trong mỗi vòng." loading="lazy" width="660" height="1000" style="max-height:700px;width:auto"></div>
+    <figcaption>Chuỗi phân rã từ U-238 thành Pb-206 bền qua một loạt phân rã alpha và beta (tên nguyên tố ở cột phải bằng tiếng Anh).<span class="credit">ThaLibster, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+  <p><b>Bắt giữ electron.</b> Sau khi bắt giữ, hoặc một electron khác nhảy vào chỗ trống và phát ra tia X, hoặc theo <b>hiệu ứng Auger</b>, một electron khác bị bật ra và nguyên tử trở thành <button class="term" data-term="ion">ion</button>. Kali-40 (<sup>40</sup>K) phân rã theo cách này thành argon-40 với chu kỳ bán rã 1,25 tỉ năm, rất hữu ích để định tuổi các sự kiện địa chất. <sup>40</sup>K chỉ chiếm một phần rất nhỏ (0,012%) của kali tự nhiên; phần lớn kali không phóng xạ.</p>
+  <div class="tablewrap" id="tbl-isotopes">
+    <table>
+      <caption>Một số đồng vị thường dùng để định tuổi bằng đồng vị phóng xạ (theo chương sách).</caption>
+      <thead><tr><th>Nguyên tố</th><th>Ký hiệu mẹ</th><th>Ký hiệu con</th><th>Chu kỳ bán rã</th></tr></thead>
+      <tbody>
+        <tr><td>Urani-238 / Chì-206</td><td><sup>238</sup>U</td><td><sup>206</sup>Pb</td><td>4,5 tỉ năm</td></tr>
+        <tr><td>Urani-235 / Chì-207</td><td><sup>235</sup>U</td><td><sup>207</sup>Pb</td><td>704 triệu năm</td></tr>
+        <tr><td>Kali-40 / Argon-40</td><td><sup>40</sup>K</td><td><sup>40</sup>Ar</td><td>1,25 tỉ năm</td></tr>
+        <tr><td>Rubidi-87 / Stronti-87</td><td><sup>87</sup>Rb</td><td><sup>87</sup>Sr</td><td>48,8 tỉ năm</td></tr>
+        <tr><td>Carbon-14 / Nitơ-14</td><td><sup>14</sup>C</td><td><sup>14</sup>N</td><td>5.730 năm</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s7-2-2">7.2.2 Định tuổi bằng đồng vị phóng xạ</h3>
+  <p>Đồng vị mẹ và con được tách khỏi khoáng vật bằng chiết tách hóa học. Với urani, <sup>238</sup>U và <sup>235</sup>U được tách cùng nhau, <sup>206</sup>Pb và <sup>207</sup>Pb cũng vậy, rồi đo bằng <button class="term" data-term="khối phổ kế">khối phổ kế</button>.</p>
+  <figure id="fig-massspec">
+    <div class="frame"><img src="images/unit7/massspec.webp" alt="Thiết bị phòng thí nghiệm gồm các buồng kim loại, nam châm và ống dẫn trên một khung." loading="lazy" width="586" height="417"></div>
+    <figcaption>Một khối phổ kế.<span class="credit">CAMECA Archives, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+  <p><b>Tỉ số con/mẹ.</b> Khoáng vật mới hình thành có 100% mẹ và 0% con, nên con/mẹ (D/P) = 0. Sau một chu kỳ bán rã: mỗi loại 50%, D/P = 1. Sau hai chu kỳ: 75% con, 25% mẹ, D/P = 3 (<a href="#fig-halflife">Hình 7.20</a>, <a href="#tbl-halflife">Bảng 7.5</a>). Sau khoảng 10 chu kỳ, lượng mẹ còn lại quá ít để đo chính xác. Các phép đo hiện đại đạt khoảng ±2 triệu năm trên 2,5 tỉ năm.</p>
+  <figure id="fig-halflife">
+    <div class="frame"><svg viewBox="0 0 720 462" role="img" aria-labelledby="hl-t-vi" style="width:100%;min-width:520px;height:auto;display:block"><title id="hl-t-vi">Đồ thị: tỉ lệ đồng vị con tăng từ 0 tiến dần tới 1 trong 4 chu kỳ bán rã (0,5 sau một, 0,75 sau hai, 0,875 sau ba), còn đồng vị mẹ giảm một nửa sau mỗi chu kỳ.</title><rect x="78" y="26" width="612" height="346" fill="var(--surface)"/><path d="M78 328.8 H690" stroke="var(--line)" stroke-width="0.8"/><path d="M78 285.5 H690" stroke="var(--line)" stroke-width="1.4"/><path d="M78 242.2 H690" stroke="var(--line)" stroke-width="0.8"/><path d="M78 199.0 H690" stroke="var(--line)" stroke-width="1.4"/><path d="M78 155.8 H690" stroke="var(--line)" stroke-width="0.8"/><path d="M78 112.5 H690" stroke="var(--line)" stroke-width="1.4"/><path d="M78 69.2 H690" stroke="var(--line)" stroke-width="0.8"/><path d="M231.0 26 V372" stroke="var(--line)" stroke-width="1.4"/><path d="M384.0 26 V372" stroke="var(--line)" stroke-width="1.4"/><path d="M537.0 26 V372" stroke="var(--line)" stroke-width="1.4"/><text x="70.0" y="290.0" font-size="13" class="svg-ink" text-anchor="end">0,25</text><text x="70.0" y="203.5" font-size="13" class="svg-ink" text-anchor="end">0,5</text><text x="70.0" y="117.0" font-size="13" class="svg-ink" text-anchor="end">0,75</text><text x="70.0" y="30.5" font-size="13" class="svg-ink" text-anchor="end">1,0</text><text x="78.0" y="392.0" font-size="13" class="svg-ink" text-anchor="middle">0</text><text x="231.0" y="392.0" font-size="13" class="svg-ink" text-anchor="middle">1</text><text x="384.0" y="392.0" font-size="13" class="svg-ink" text-anchor="middle">2</text><text x="537.0" y="392.0" font-size="13" class="svg-ink" text-anchor="middle">3</text><text x="690.0" y="392.0" font-size="13" class="svg-ink" text-anchor="middle">4</text><text x="70.0" y="376.5" font-size="13" class="svg-ink" text-anchor="end">0</text><path d="M78 26.0 H690" stroke="#2f6fd6" stroke-width="3"/><path d="M78.0 26.0 L81.1 30.8 L84.1 35.5 L87.2 40.1 L90.2 44.7 L93.3 49.2 L96.4 53.6 L99.4 58.0 L102.5 62.3 L105.5 66.6 L108.6 70.8 L111.7 74.9 L114.7 79.0 L117.8 83.1 L120.8 87.0 L123.9 91.0 L127.0 94.8 L130.0 98.6 L133.1 102.4 L136.1 106.1 L139.2 109.8 L142.3 113.4 L145.3 117.0 L148.4 120.5 L151.4 123.9 L154.5 127.3 L157.6 130.7 L160.6 134.0 L163.7 137.3 L166.7 140.5 L169.8 143.7 L172.9 146.9 L175.9 150.0 L179.0 153.0 L182.0 156.0 L185.1 159.0 L188.2 161.9 L191.2 164.8 L194.3 167.7 L197.3 170.5 L200.4 173.3 L203.5 176.0 L206.5 178.7 L209.6 181.4 L212.6 184.0 L215.7 186.6 L218.8 189.1 L221.8 191.7 L224.9 194.1 L227.9 196.6 L231.0 199.0 L234.1 201.4 L237.1 203.7 L240.2 206.0 L243.2 208.3 L246.3 210.6 L249.4 212.8 L252.4 215.0 L255.5 217.2 L258.5 219.3 L261.6 221.4 L264.7 223.5 L267.7 225.5 L270.8 227.5 L273.8 229.5 L276.9 231.5 L280.0 233.4 L283.0 235.3 L286.1 237.2 L289.1 239.1 L292.2 240.9 L295.3 242.7 L298.3 244.5 L301.4 246.2 L304.4 248.0 L307.5 249.7 L310.6 251.4 L313.6 253.0 L316.7 254.7 L319.7 256.3 L322.8 257.9 L325.9 259.4 L328.9 261.0 L332.0 262.5 L335.0 264.0 L338.1 265.5 L341.2 267.0 L344.2 268.4 L347.3 269.8 L350.3 271.3 L353.4 272.6 L356.5 274.0 L359.5 275.4 L362.6 276.7 L365.6 278.0 L368.7 279.3 L371.8 280.6 L374.8 281.8 L377.9 283.1 L380.9 284.3 L384.0 285.5 L387.1 286.7 L390.1 287.9 L393.2 289.0 L396.2 290.2 L399.3 291.3 L402.4 292.4 L405.4 293.5 L408.5 294.6 L411.5 295.6 L414.6 296.7 L417.7 297.7 L420.7 298.8 L423.8 299.8 L426.8 300.8 L429.9 301.7 L433.0 302.7 L436.0 303.7 L439.1 304.6 L442.1 305.5 L445.2 306.4 L448.3 307.3 L451.3 308.2 L454.4 309.1 L457.4 310.0 L460.5 310.8 L463.6 311.7 L466.6 312.5 L469.7 313.3 L472.7 314.1 L475.8 314.9 L478.9 315.7 L481.9 316.5 L485.0 317.3 L488.0 318.0 L491.1 318.8 L494.2 319.5 L497.2 320.2 L500.3 320.9 L503.3 321.6 L506.4 322.3 L509.5 323.0 L512.5 323.7 L515.6 324.3 L518.6 325.0 L521.7 325.6 L524.8 326.3 L527.8 326.9 L530.9 327.5 L533.9 328.1 L537.0 328.8 L540.1 329.3 L543.1 329.9 L546.2 330.5 L549.2 331.1 L552.3 331.6 L555.4 332.2 L558.4 332.7 L561.5 333.3 L564.5 333.8 L567.6 334.3 L570.7 334.9 L573.7 335.4 L576.8 335.9 L579.8 336.4 L582.9 336.9 L586.0 337.4 L589.0 337.8 L592.1 338.3 L595.1 338.8 L598.2 339.2 L601.3 339.7 L604.3 340.1 L607.4 340.6 L610.4 341.0 L613.5 341.4 L616.6 341.8 L619.6 342.3 L622.7 342.7 L625.7 343.1 L628.8 343.5 L631.9 343.9 L634.9 344.2 L638.0 344.6 L641.0 345.0 L644.1 345.4 L647.2 345.7 L650.2 346.1 L653.3 346.5 L656.3 346.8 L659.4 347.2 L662.5 347.5 L665.5 347.8 L668.6 348.2 L671.6 348.5 L674.7 348.8 L677.8 349.1 L680.8 349.5 L683.9 349.8 L686.9 350.1 L690.0 350.4" stroke="var(--accent)" stroke-width="3" stroke-dasharray="9 6" fill="none"/><path d="M78.0 372.0 L81.1 367.2 L84.1 362.5 L87.2 357.9 L90.2 353.3 L93.3 348.8 L96.4 344.4 L99.4 340.0 L102.5 335.7 L105.5 331.4 L108.6 327.2 L111.7 323.1 L114.7 319.0 L117.8 314.9 L120.8 311.0 L123.9 307.0 L127.0 303.2 L130.0 299.4 L133.1 295.6 L136.1 291.9 L139.2 288.2 L142.3 284.6 L145.3 281.0 L148.4 277.5 L151.4 274.1 L154.5 270.7 L157.6 267.3 L160.6 264.0 L163.7 260.7 L166.7 257.5 L169.8 254.3 L172.9 251.1 L175.9 248.0 L179.0 245.0 L182.0 242.0 L185.1 239.0 L188.2 236.1 L191.2 233.2 L194.3 230.3 L197.3 227.5 L200.4 224.7 L203.5 222.0 L206.5 219.3 L209.6 216.6 L212.6 214.0 L215.7 211.4 L218.8 208.9 L221.8 206.3 L224.9 203.9 L227.9 201.4 L231.0 199.0 L234.1 196.6 L237.1 194.3 L240.2 192.0 L243.2 189.7 L246.3 187.4 L249.4 185.2 L252.4 183.0 L255.5 180.8 L258.5 178.7 L261.6 176.6 L264.7 174.5 L267.7 172.5 L270.8 170.5 L273.8 168.5 L276.9 166.5 L280.0 164.6 L283.0 162.7 L286.1 160.8 L289.1 158.9 L292.2 157.1 L295.3 155.3 L298.3 153.5 L301.4 151.8 L304.4 150.0 L307.5 148.3 L310.6 146.6 L313.6 145.0 L316.7 143.3 L319.7 141.7 L322.8 140.1 L325.9 138.6 L328.9 137.0 L332.0 135.5 L335.0 134.0 L338.1 132.5 L341.2 131.0 L344.2 129.6 L347.3 128.2 L350.3 126.7 L353.4 125.4 L356.5 124.0 L359.5 122.6 L362.6 121.3 L365.6 120.0 L368.7 118.7 L371.8 117.4 L374.8 116.2 L377.9 114.9 L380.9 113.7 L384.0 112.5 L387.1 111.3 L390.1 110.1 L393.2 109.0 L396.2 107.8 L399.3 106.7 L402.4 105.6 L405.4 104.5 L408.5 103.4 L411.5 102.4 L414.6 101.3 L417.7 100.3 L420.7 99.2 L423.8 98.2 L426.8 97.2 L429.9 96.3 L433.0 95.3 L436.0 94.3 L439.1 93.4 L442.1 92.5 L445.2 91.6 L448.3 90.7 L451.3 89.8 L454.4 88.9 L457.4 88.0 L460.5 87.2 L463.6 86.3 L466.6 85.5 L469.7 84.7 L472.7 83.9 L475.8 83.1 L478.9 82.3 L481.9 81.5 L485.0 80.7 L488.0 80.0 L491.1 79.2 L494.2 78.5 L497.2 77.8 L500.3 77.1 L503.3 76.4 L506.4 75.7 L509.5 75.0 L512.5 74.3 L515.6 73.7 L518.6 73.0 L521.7 72.4 L524.8 71.7 L527.8 71.1 L530.9 70.5 L533.9 69.9 L537.0 69.2 L540.1 68.7 L543.1 68.1 L546.2 67.5 L549.2 66.9 L552.3 66.4 L555.4 65.8 L558.4 65.3 L561.5 64.7 L564.5 64.2 L567.6 63.7 L570.7 63.1 L573.7 62.6 L576.8 62.1 L579.8 61.6 L582.9 61.1 L586.0 60.6 L589.0 60.2 L592.1 59.7 L595.1 59.2 L598.2 58.8 L601.3 58.3 L604.3 57.9 L607.4 57.4 L610.4 57.0 L613.5 56.6 L616.6 56.2 L619.6 55.7 L622.7 55.3 L625.7 54.9 L628.8 54.5 L631.9 54.1 L634.9 53.8 L638.0 53.4 L641.0 53.0 L644.1 52.6 L647.2 52.3 L650.2 51.9 L653.3 51.5 L656.3 51.2 L659.4 50.8 L662.5 50.5 L665.5 50.2 L668.6 49.8 L671.6 49.5 L674.7 49.2 L677.8 48.9 L680.8 48.5 L683.9 48.2 L686.9 47.9 L690.0 47.6" stroke="#d1342b" stroke-width="4" fill="none"/><path d="M78 372 H690 M78 372 V26" stroke="var(--fg)" stroke-width="2"/><circle cx="231.0" cy="199.0" r="5" fill="#d1342b" stroke="var(--surface)" stroke-width="2"/><path d="M231.0 205.0 V289.0" stroke="var(--fg)" stroke-width="1.4"/><text x="231.0" y="305.0" font-size="13" class="svg-ink halo" text-anchor="middle">50% : 50%</text><circle cx="384.0" cy="112.5" r="5" fill="#d1342b" stroke="var(--surface)" stroke-width="2"/><circle cx="384.0" cy="285.5" r="5" fill="var(--accent)" stroke="var(--surface)" stroke-width="2"/><text x="375.0" y="101.5" font-size="13" text-anchor="end" class="svg-ink halo">75%</text><text x="393.0" y="274.5" font-size="13" class="svg-ink halo" text-anchor="start">25%</text><circle cx="537.0" cy="69.2" r="5" fill="#d1342b" stroke="var(--surface)" stroke-width="2"/><circle cx="537.0" cy="328.8" r="5" fill="var(--accent)" stroke="var(--surface)" stroke-width="2"/><text x="528.0" y="58.2" font-size="13" text-anchor="end" class="svg-ink halo">87,5%</text><text x="546.0" y="317.8" font-size="13" class="svg-ink halo" text-anchor="start">12,5%</text><text x="384.0" y="416.0" font-size="14" class="svg-ink" text-anchor="middle" font-weight="600">Số chu kỳ bán rã đã trôi qua</text><text transform="translate(20 199.0) rotate(-90)" font-size="14" font-weight="600" class="svg-ink" text-anchor="middle">Tỉ lệ so với số nguyên tử ban đầu</text><path d="M78 442 h30" stroke="#d1342b" stroke-width="3.5"/><text x="116.0" y="447.0" font-size="13" class="svg-ink" text-anchor="start">Đồng vị con (đường cong của giáo trình)</text><path d="M396.3799999999998 442 h30" stroke="var(--accent)" stroke-width="3.5" stroke-dasharray="9 6"/><text x="434.4" y="447.0" font-size="13" class="svg-ink" text-anchor="start">Đồng vị mẹ</text><path d="M533.9299999999998 442 h30" stroke="#2f6fd6" stroke-width="3.5"/><text x="571.9" y="447.0" font-size="13" class="svg-ink" text-anchor="start">Mẹ + con (tổng)</text></svg></div>
+    <figcaption>Số chu kỳ bán rã so với lượng đồng vị con, trên cùng hệ trục với đồ thị của chương (0–4 chu kỳ, 0–1,0). Đường đồng vị mẹ và đường tổng được thêm vào để so sánh.<span class="credit">Vẽ lại cho tài liệu này theo đồ thị “HalfLife” của Krishnavedala (phạm vi công cộng) dùng trong giáo trình.</span></figcaption>
+  </figure>
+  <div class="tablewrap" id="tbl-halflife">
+    <table>
+      <caption>Tỉ lệ mẹ và con theo số chu kỳ bán rã (đủ mọi hàng của bảng trong chương).</caption>
+      <thead><tr><th>Số chu kỳ bán rã</th><th>Mẹ còn lại (%)</th><th>Con hiện có (%)</th><th>Tỉ số con/mẹ</th><th>Tỉ số mẹ/con</th></tr></thead>
+      <tbody>
+        <tr><td>Bắt đầu tính giờ</td><td>100</td><td>0</td><td>0</td><td>vô cùng</td></tr>
+        <tr><td>1</td><td>50</td><td>50</td><td>1</td><td>1</td></tr>
+        <tr><td>2</td><td>25</td><td>75</td><td>3</td><td>0,33</td></tr>
+        <tr><td>3</td><td>12,5</td><td>87,5</td><td>7</td><td>0,143</td></tr>
+        <tr><td>4</td><td>6,25</td><td>93,75</td><td>15</td><td>0,0667</td></tr>
+        <tr><td>5</td><td>3,125</td><td>96,875</td><td>31</td><td>0,0325</td></tr>
+        <tr><td>10</td><td>0,098</td><td>99,9</td><td>1023</td><td>0,00098</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout" id="hl-tool">
+    <h4>Thử nghiệm: máy tính chu kỳ bán rã</h4>
+    <p style="text-align:left"><label for="hlRange">Số chu kỳ bán rã đã trôi qua: <b id="hlN">1</b></label></p>
+    <input id="hlRange" type="range" min="0" max="10" step="1" value="1" style="width:100%;accent-color:var(--accent)">
+    <div class="hlbar" aria-hidden="true" style="display:flex;height:22px;border-radius:6px;overflow:hidden;margin:.6rem 0;border:1px solid var(--line)"><i id="hlP" style="background:var(--accent);width:50%"></i><i id="hlD" style="background:#d1342b;width:50%"></i></div>
+    <p id="hlOut" style="text-align:left;margin:0" aria-live="polite"></p>
+    <p class="small" id="hlAge" style="text-align:left"></p>
+  </div>
+  <p><b>Hai đồng hồ trong một mẫu.</b> Phương pháp urani–chì chạy đồng thời <sup>238</sup>U và <sup>235</sup>U, nên mỗi mẫu tự kiểm tra chéo. Nhiều mẫu chứa nhiều cặp mẹ–con, và việc kiểm tra chéo các đồng hồ này xác nhận rằng định tuổi bằng đồng vị phóng xạ có độ tin cậy cao.</p>
+  <h4>Định tuổi bằng carbon-14</h4>
+  <p><button class="term" data-term="định tuổi bằng carbon-14">Định tuổi bằng carbon-14</button> (định tuổi carbon phóng xạ) dùng cho các mẫu khảo cổ chứa chất hữu cơ như gỗ, xương, dựa trên <sup>14</sup>C không bền và <sup>12</sup>C bền (<a href="#fig-c14">Hình 7.21</a>).</p>
+  <figure id="fig-c14">
+    <div class="frame"><svg viewBox="0 0 920 196" role="img" aria-labelledby="c14-t-vi" style="width:100%;min-width:640px;height:auto;display:block"><title id="c14-t-vi">Carbon phóng xạ qua bốn bước: sinh ra trong khí quyển từ nitơ-14, đi vào CO2, được sinh vật hấp thụ, và phân rã sau khi sinh vật chết.</title><rect class="flow-step" style="--d:0.0s" x="8" y="14" width="196" height="168" rx="12"/><text x="22.0" y="42.0" font-size="14.5" class="svg-ink" text-anchor="start" font-weight="600">1 · Trong khí quyển</text><text x="22.0" y="70.0" font-size="13.5" class="svg-ink" text-anchor="start">Neutron từ tia vũ trụ</text><text x="22.0" y="91.0" font-size="13.5" class="svg-ink" text-anchor="start">va vào hạt nhân ¹⁴N</text><text x="22.0" y="112.0" font-size="13.5" class="svg-ink" text-anchor="start">và đánh bật một proton:</text><text x="22.0" y="133.0" font-size="13.5" class="svg-ink" text-anchor="start">¹⁴N trở thành ¹⁴C.</text><path d="M210 98.0 H236" stroke="var(--accent)" stroke-width="3"/><path d="M234 91.0 L244 98.0 L234 105.0 Z" fill="var(--accent)"/><rect class="flow-step" style="--d:1.5s" x="244" y="14" width="196" height="168" rx="12"/><text x="258.0" y="42.0" font-size="14.5" class="svg-ink" text-anchor="start" font-weight="600">2 · Vào CO₂</text><text x="258.0" y="70.0" font-size="13.5" class="svg-ink" text-anchor="start">¹⁴C liên kết với oxy</text><text x="258.0" y="91.0" font-size="13.5" class="svg-ink" text-anchor="start">tạo ¹⁴CO₂, khí này</text><text x="258.0" y="112.0" font-size="13.5" class="svg-ink" text-anchor="start">hòa lẫn với ¹²CO₂</text><text x="258.0" y="133.0" font-size="13.5" class="svg-ink" text-anchor="start">thông thường.</text><path d="M446 98.0 H472" stroke="var(--accent)" stroke-width="3"/><path d="M470 91.0 L480 98.0 L470 105.0 Z" fill="var(--accent)"/><rect class="flow-step" style="--d:3.0s" x="480" y="14" width="196" height="168" rx="12"/><text x="494.0" y="42.0" font-size="14.5" class="svg-ink" text-anchor="start" font-weight="600">3 · Khi còn sống</text><text x="494.0" y="70.0" font-size="13.5" class="svg-ink" text-anchor="start">Sinh vật hấp thụ</text><text x="494.0" y="91.0" font-size="13.5" class="svg-ink" text-anchor="start">carbon này và liên tục</text><text x="494.0" y="112.0" font-size="13.5" class="svg-ink" text-anchor="start">trao đổi CO₂, nên tỉ số</text><text x="494.0" y="133.0" font-size="13.5" class="svg-ink" text-anchor="start">¹⁴C/¹²C không đổi.</text><path d="M682 98.0 H708" stroke="var(--accent)" stroke-width="3"/><path d="M706 91.0 L716 98.0 L706 105.0 Z" fill="var(--accent)"/><rect class="flow-step" style="--d:4.5s" x="716" y="14" width="196" height="168" rx="12"/><text x="730.0" y="42.0" font-size="14.5" class="svg-ink" text-anchor="start" font-weight="600">4 · Sau khi chết</text><text x="730.0" y="70.0" font-size="13.5" class="svg-ink" text-anchor="start">Đồng hồ bắt đầu chạy:</text><text x="730.0" y="91.0" font-size="13.5" class="svg-ink" text-anchor="start">¹⁴C phân rã beta thành</text><text x="730.0" y="112.0" font-size="13.5" class="svg-ink" text-anchor="start">¹⁴N (chu kỳ 5.730 năm);</text><text x="730.0" y="133.0" font-size="13.5" class="svg-ink" text-anchor="start">dùng được tới khoảng</text><text x="730.0" y="154.0" font-size="13.5" class="svg-ink" text-anchor="start">57.300 năm.</text></svg></div>
+    <figcaption>Carbon phóng xạ hình thành và trở thành đồng hồ như thế nào. Hạt vũ trụ đổi số nguyên tử 7 (nitơ) thành 6 (carbon), còn số khối vẫn là 14.<span class="credit">Vẽ cho tài liệu này theo nội dung chương sách.</span></figcaption>
+  </figure>
+  <p>Vì giới hạn hữu ích là khoảng 10 chu kỳ bán rã, carbon-14 dùng được tới khoảng <b>57.300 năm</b>. Thời đầu người ta giả định lượng <sup>14</sup>C trong khí quyển gần như không đổi trong 50.000 năm qua, nhưng thực tế nó đã thay đổi. Việc so sánh tuổi carbon với <b>vòng sinh trưởng của cây</b> (<button class="term" data-term="niên đại học thụ mộc">niên đại học thụ mộc</button>) và các sự kiện đã biết đã giúp hiệu chỉnh phương pháp, và carbon-14 đã hiệu chỉnh là đáng tin cậy với mẫu khảo cổ và các sự kiện địa chất rất gần đây. Mẫu được đo bằng phổ khối gia tốc (<a href="#fig-ams">Hình 7.22</a>).</p>
+  <figure id="fig-ams">
+    <div class="frame"><img class="diagram" src="images/unit7/ams.webp" alt="Sơ đồ máy phổ khối gia tốc: nguồn ion, nam châm bẻ cong chùm tia, máy gia tốc và các đầu dò đồng vị carbon." loading="lazy" width="1000" height="370"></div>
+    <figcaption>Sơ đồ carbon đi qua máy phổ khối gia tốc (nhãn gốc tiếng Anh).<span class="credit">Mike Christie, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-2-3">7.2.3 Tuổi của Trái Đất</h3>
+  <ul class="timeline">
+    <li><time>Cuối 1700</time><span>Hutton và những người khác mở ra ý tưởng về một Trái Đất rất cổ (Học phần 1).</span></li>
+    <li><time>Cuối 1800</time><span><b>Lord Kelvin</b> (William Thomson) giả định Trái Đất ban đầu là một quả cầu nóng chảy rồi nguội đi: khoảng <b>98 triệu năm</b>, nêu thành khoảng <b>20–400 triệu năm</b>.</span></li>
+    <li class="geo"><time>Cuối 1800</time><span>Tính phóng xạ được phát hiện, cho cách đo tuổi cổ chính xác hơn.</span></li>
+    <li><time>Thập niên 1950</time><span><b>Clair Patterson</b>, khi còn là nghiên cứu sinh tại Đại học Chicago, định tuổi thiên thạch (tàn dư từ lúc Hệ Mặt Trời hình thành) bằng phương pháp urani–chì với khối phổ kế: <b>4,55 tỉ năm ± khoảng 70 triệu (±1,5%)</b>.</span></li>
+    <li class="geo"><time>Ngày nay</time><span>Ước tính hiện tại: <b>4,54 tỉ năm ± 50 triệu (±1,1%)</b>, hầu như không đổi sau hơn 60 năm.</span></li>
+  </ul>
+  <p>Con số của Kelvin sai lệch nhiều vì nhiệt truyền không đều bên trong Trái Đất, và ông không tính đến việc manti có thể chảy dẻo và truyền nhiệt bằng <button class="term" data-term="đối lưu">đối lưu</button>. Ước tính của ông được xem là hợp lý, dù bị tranh luận.</p>
+  <figure id="fig-hadean">
+    <div class="frame"><img src="images/unit7/hadean.webp" alt="Tranh minh họa một vùng đất tối với dung nham phát sáng, núi lửa, tia chớp và Mặt Trăng lớn ở chân trời." loading="lazy" width="1000" height="538"></div>
+    <figcaption>Tranh minh họa Trái Đất trong Liên đại Hỏa thành, thời kỳ sớm của lịch sử Trái Đất.<span class="credit">Tim Bertelink, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-2-4">7.2.4 Định tuổi các sự kiện địa chất</h3>
+  <p>Đồng vị của các nguyên tố phổ biến trong khoáng vật là tốt nhất. Phương pháp urani–chì, với hai đồng hồ, chủ yếu dùng trên <b>zircon</b> (ZrSiO<sub>4</sub>), nơi urani có thể thay thế zirconi trong mạng tinh thể. Zircon bền với phong hóa. Trong các đợt biến chất, zircon có thể mọc thêm các lớp mới, mỗi lớp ghi lại tuổi của một sự kiện.</p>
+  <div class="pair">
+    <figure id="fig-zircon">
+      <div class="frame"><img src="images/unit7/zircon.webp" alt="Một tinh thể trong suốt, thuôn dài, tròn cạnh dưới kính hiển vi, bên trong có các mảng tối." loading="lazy" width="490" height="692" style="max-height:320px;width:auto"></div>
+      <figcaption>Ảnh hiển vi một tinh thể zircon.<span class="credit">Foto Chd, CC BY-SA (qua giáo trình).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Zircon cổ cho ta biết gì</h4>
+      <ul>
+        <li><b>4,4 tỉ năm</b>: zircon ở Tây Úc, hình thành khi vỏ Trái Đất lần đầu tách khỏi manti, nằm trong đá chủ trầm tích biến chất trẻ hơn nhiều. Chúng cho thấy đá lục địa đã nhô trên mực nước biển và Trái Đất đủ nguội để có nước lỏng, nên phong hóa và bào mòn đã có thể diễn ra.</li>
+        <li><b>4,1 tỉ năm</b>: các nhà nghiên cứu UCLA tìm thấy carbon trong zircon có thể có <b>nguồn gốc sinh học</b>, gợi ý sự sống xuất hiện sớm hơn ta từng nghĩ.</li>
+      </ul>
+    </div>
+  </div>
+  <p><b>Định tuổi các loạt trầm tích.</b> Đá magma cho tuổi kết tinh; biến chất có xu hướng đặt lại và làm nhòe tuổi; trầm tích vụn trộn lẫn nhiều nguồn. Vì vậy nhà địa chất định tuổi trầm tích nhờ các đá magma quanh chúng (<a href="#fig-bracket">Hình 7.25</a>). Kali, phổ biến trong evaporit, cũng đã được dùng để định tuổi kali–argon.</p>
+  <figure id="fig-bracket">
+    <div class="frame"><svg viewBox="0 0 900 252" role="img" aria-labelledby="br-t-vi" style="width:100%;min-width:620px;height:auto;display:block"><title id="br-t-vi">Hai cách định tuổi tầng trầm tích bằng đá magma: tầng nằm giữa dòng dung nham 54 triệu năm và lớp tro 50 triệu năm hình thành trong khoảng 54–50 triệu năm; tầng bị thể tường 65 triệu năm cắt qua thì cổ hơn 65 triệu năm.</title><text x="225.0" y="22.0" font-size="14.5" class="svg-ink" text-anchor="middle" font-weight="600">A · Kẹp giữa hai lớp đã định tuổi</text><rect x="30" y="40" width="170" height="36" fill="#efe0b9" stroke="#4a3d30"/><rect x="30" y="76" width="170" height="14" fill="#f4f4f0" stroke="#4a3d30"/><rect x="30" y="90" width="170" height="40" fill="#e3c38f" stroke="#4a3d30"/><rect x="30" y="130" width="170" height="40" fill="#c99a6b" stroke="#4a3d30"/><rect x="30" y="170" width="170" height="34" fill="#4a4a4a" stroke="#4a3d30"/><rect x="30" y="204" width="170" height="36" fill="#b9c79f" stroke="#4a3d30"/><path d="M70 116.0 Q80 98.0 90 116.0 Z" fill="none" stroke="#2b2118" stroke-width="1.8"/><path d="M70 156.0 Q80 138.0 90 156.0 Z" fill="none" stroke="#2b2118" stroke-width="1.8"/><path d="M170.0 83.0 L214.0 83.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M170.0 83.0 L214.0 83.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="170.0" cy="83.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="220.0" y="87.5" font-size="13" class="svg-ink" text-anchor="start" font-weight="600">Lớp tro: 50 Ma</text><path d="M170.0 130.0 L214.0 130.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M170.0 130.0 L214.0 130.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="170.0" cy="130.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="220.0" y="126.0" font-size="13" class="svg-ink" text-anchor="start">Tầng đá và hóa thạch:</text><text x="220.0" y="143.0" font-size="13" class="svg-ink" text-anchor="start" font-weight="600">hình thành 54–50 Ma</text><path d="M170.0 187.0 L214.0 187.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M170.0 187.0 L214.0 187.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="170.0" cy="187.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="220.0" y="191.5" font-size="13" class="svg-ink" text-anchor="start" font-weight="600">Dòng dung nham: 54 Ma</text><text x="665.0" y="22.0" font-size="14.5" class="svg-ink" text-anchor="middle" font-weight="600">B · Bị thể tường đã định tuổi cắt qua</text><rect x="470" y="40" width="170" height="40" fill="#efe0b9" stroke="#4a3d30"/><rect x="470" y="80" width="170" height="40" fill="#e3c38f" stroke="#4a3d30"/><rect x="470" y="120" width="170" height="40" fill="#c99a6b" stroke="#4a3d30"/><rect x="470" y="160" width="170" height="40" fill="#b9c79f" stroke="#4a3d30"/><rect x="470" y="200" width="170" height="40" fill="#e3c38f" stroke="#4a3d30"/><path d="M530 40 L554 40 L566 240 L542 240 Z" fill="#3b3b3b" stroke="#111"/><path d="M550.0 100.0 L684.0 100.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M550.0 100.0 L684.0 100.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="550.0" cy="100.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="690.0" y="104.5" font-size="13" class="svg-ink" text-anchor="start" font-weight="600">Thể tường: 65 Ma</text><path d="M620.0 180.0 L684.0 180.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M620.0 180.0 L684.0 180.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="620.0" cy="180.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="690.0" y="176.0" font-size="13" class="svg-ink" text-anchor="start">Tầng đá bị cắt:</text><text x="690.0" y="193.0" font-size="13" class="svg-ink" text-anchor="start" font-weight="600">cổ hơn 65 Ma</text></svg></div>
+    <figcaption>Hai ví dụ của chương sách. A: tầng đá và hóa thạch nằm giữa dòng dung nham 54 triệu năm (54 Ma) và lớp tro 50 Ma hình thành trong khoảng 54–50 Ma. B: thể tường 65 Ma cho giới hạn trên; các tầng bị nó cắt qua cổ hơn 65 Ma.<span class="credit">Vẽ cho tài liệu này theo nội dung chương sách.</span></figcaption>
+  </figure>
+  <figure id="fig-ash">
+    <div class="frame"><img class="diagram" src="images/unit7/ash.webp" alt="Bản đồ miền tây và miền trung Hoa Kỳ với các vùng tô màu nơi tro rơi từ các vụ phun Yellowstone, tuf Bishop và núi St. Helens." loading="lazy" width="580" height="377"></div>
+    <figcaption>Các lớp tro phân bố rộng là lớp mốc tuổi rất tốt: ba vụ phun Yellowstone (hồng: Mesa Falls, Huckleberry Ridge, Lava Creek), tuf Bishop (nét đứt nâu) và tro núi St. Helens ngày 18/5/1980 (vàng).<span class="credit">Cục Địa chất Hoa Kỳ (USGS), phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-2-5">7.2.5 Các kỹ thuật định tuổi tuyệt đối khác</h3>
+  <p><b><button class="term" data-term="định tuổi bằng phát quang">Định tuổi bằng phát quang</button> (nhiệt phát quang)</b> đo thời gian kể từ khi các khoáng vật silicat trong trầm tích hạt thô được phơi ánh sáng mặt trời hoặc nhiệt lần cuối ở bề mặt. Bức xạ nền từ phân rã đặt electron vào các “bẫy” trong mạng tinh thể của khoáng vật như thạch anh. Ánh sáng mặt trời (tia UV) và nhiệt ở bề mặt làm trống các bẫy; khi bị chôn chỉ vài inch, hạt lại bắt đầu bẫy electron. Trong phòng thí nghiệm, mẫu lấy ở độ sâu vài feet được kích thích bằng ánh sáng, giải phóng electron dưới dạng photon: <b>sự phát quang</b>. Càng nhiều ánh sáng, thời gian chôn vùi càng dài. Phương pháp dùng cho trầm tích <b>dưới 1 triệu năm</b> tuổi. Ở Utah, nó định tuổi các lớp hạt thô bị chôn gần các đứt gãy như <b>đứt gãy Wasatch</b>, nơi thiếu đất hữu cơ bị chôn để dùng carbon-14, nhằm tìm <button class="term" data-term="chu kỳ lặp lại">chu kỳ lặp lại</button> của các trận động đất lớn.</p>
+  <figure id="fig-tl">
+    <div class="frame"><img src="images/unit7/tl.webp" alt="Sơ đồ tiêu đề Thermoluminescence, có cấu trúc tinh thể thạch anh và các khung chữ Irradiation, Storage, Eviction." loading="lazy" width="873" height="720" style="max-height:520px;width:auto"></div>
+    <figcaption>Nhiệt phát quang (nhãn gốc tiếng Anh): chiếu xạ (Irradiation) làm đầy bẫy electron, chúng được lưu giữ (Storage) khi bị chôn, và ánh sáng hoặc nhiệt giải phóng chúng (Eviction).<span class="credit">Zkeizars, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+  <div class="pair">
+    <figure id="fig-apatite">
+      <div class="frame"><img src="images/unit7/apatite.webp" alt="Tinh thể apatit sáu cạnh màu vàng lục trên nền đen." loading="lazy" width="486" height="432"></div>
+      <figcaption>Apatit từ Mexico, khoáng vật chứa urani dùng để định tuổi bằng vết phân hạch.<span class="credit">Robert M. Lavinsky, CC BY-SA (qua giáo trình).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Định tuổi bằng vết phân hạch</h4>
+      <p><button class="term" data-term="định tuổi bằng vết phân hạch">Định tuổi bằng vết phân hạch</button>: phân rã urani trong các hạt khoáng vật như <b>apatit</b> để lại các vệt hư hại trong mạng tinh thể, đủ lớn để đếm dưới kính hiển vi quang học. Càng nhiều vết, hạt càng cổ. Khoảng áp dụng: khoảng <b>100.000 đến 2 tỉ năm</b> (1 × 10<sup>5</sup> đến 2 × 10<sup>9</sup>). Phương pháp cũng là đồng hồ thứ hai để xác nhận tuổi từ phương pháp khác. (Các vết do <sup>238</sup>U phân hạch tạo ra; xem <a href="#factcheck">ghi chú kiểm chứng</a>.)</p>
+    </div>
+  </div>
+  <div class="tablewrap" id="tbl-methods">
+    <table>
+      <caption>Các phương pháp định tuổi tuyệt đối trong chương và khoảng tuổi chương sách nêu.</caption>
+      <thead><tr><th>Phương pháp</th><th>Đại lượng đo</th><th>Khoảng áp dụng</th><th>Vật liệu điển hình</th></tr></thead>
+      <tbody>
+        <tr><td>Urani–chì</td><td>Tỉ số <sup>238</sup>U→<sup>206</sup>Pb và <sup>235</sup>U→<sup>207</sup>Pb (hai đồng hồ)</td><td>Tới vật chất cổ nhất của Trái Đất và thiên thạch</td><td>Zircon</td></tr>
+        <tr><td>Kali–argon</td><td>Tỉ số <sup>40</sup>K→<sup>40</sup>Ar</td><td>Các sự kiện địa chất (chu kỳ bán rã 1,25 tỉ năm)</td><td>Đá magma, evaporit</td></tr>
+        <tr><td>Carbon-14</td><td>Lượng <sup>14</sup>C còn lại so với <sup>12</sup>C</td><td>Tới khoảng 57.300 năm</td><td>Gỗ, xương, chất hữu cơ</td></tr>
+        <tr><td>Phát quang</td><td>Ánh sáng do electron bị bẫy phát ra</td><td>Dưới 1 triệu năm</td><td>Trầm tích hạt thô giàu thạch anh bị chôn vùi</td></tr>
+        <tr><td>Vết phân hạch</td><td>Số vết hư hại</td><td>Khoảng 100.000 đến 2 tỉ năm</td><td>Apatit và các hạt chứa urani khác</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="quiz">Kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener">Câu hỏi Mục 7.2 trong giáo trình ↗</a></p>
+</section>
+
+<!-- 7.3 -->
+<section id="s7-3">
+  <h2 class="sec"><span class="n">7.3</span>Hóa thạch và tiến hóa</h2>
+  <p><button class="term" data-term="hóa thạch">Hóa thạch</button> là mọi bằng chứng về sự sống trong quá khứ được bảo tồn trong đá: phần cơ thể thật (hiếm), dấu in của phần mềm, khuôn và bản đúc (phổ biến hơn), phần cơ thể bị khoáng vật thay thế (phổ biến), hoặc dấu vết hoạt động như dấu chân và hang đào. Phần lớn sự sống ngày nay thân mềm hoặc đơn bào, khó được bảo tồn trừ trong điều kiện đặc biệt. Đại dương là nơi bảo tồn tốt nhất, nhưng các quá trình ở biển hòa tan phần cứng và động vật ăn xác làm mất di tích; trên đất liền cơ hội còn thấp hơn. Vì vậy hồ sơ hóa thạch <b>không đầy đủ</b>, nhưng vẫn được dùng để đối sánh (kế tục hóa thạch) và xếp các hệ tầng vào thang tuổi địa chất.</p>
+  <figure id="fig-archaeopteryx">
+    <div class="frame"><img src="images/unit7/archaeopteryx.webp" alt="Bộ xương hóa thạch của một loài vật có lông vũ, cánh dang rộng, ép trong phiến đá vôi màu nhạt." loading="lazy" width="740" height="1000" style="max-height:520px;width:auto"></div>
+    <figcaption><i>Archaeopteryx lithographica</i>, mẫu trưng bày tại Bảo tàng Lịch sử Tự nhiên (Museum für Naturkunde), Berlin.<span class="credit">H. Raab, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-3-1">7.3.1 Các kiểu bảo tồn</h3>
+  <p>Phần cứng như vỏ trai hay xương khủng long là loại hóa thạch phổ biến nhất, và vật chất ban đầu hầu như luôn bị khoáng vật mới thay thế nhưng vẫn giữ hình dạng.</p>
+  <div class="tablewrap" id="tbl-preserve">
+    <table>
+      <caption>Các kiểu bảo tồn hóa thạch phổ biến.</caption>
+      <thead><tr><th>Kiểu</th><th>Cách hình thành</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="bảo tồn nguyên trạng">Bảo tồn nguyên trạng</button></td><td>Hiếm. Vật chất ban đầu hoặc phần cứng còn nguyên; mô mềm thường bị vi khuẩn phân hủy.</td><td>Côn trùng trong hổ phách; xà cừ trong vỏ; da và lông voi ma mút trong trầm tích sau băng hà ở Bắc Cực; mô mềm khủng long bị ướp xác tự nhiên hiếm gặp, có protein và có thể có mảnh DNA</td></tr>
+        <tr><td><button class="term" data-term="khoáng hóa thấm">Khoáng hóa thấm</button></td><td>Sau khi bị chôn, các nguyên tố trong nước dưới đất lấp đầy mọi khoảng trống trong cơ thể, kể cả tế bào; xương và răng dễ được bảo tồn nhất.</td><td>Gỗ hóa đá (giữ cấu trúc cellulose)</td></tr>
+        <tr><td><button class="term" data-term="khuôn">Khuôn</button> và <button class="term" data-term="bản đúc">bản đúc</button></td><td>Sinh vật bị hòa tan, để lại một hốc (khuôn ngoài); trầm tích hoặc khoáng vật lấp hốc tạo bản đúc. Bản đúc trong của trai, ốc, thậm chí hộp sọ có thể cho thấy cấu trúc mềm. Nếu hóa học phù hợp và bị chôn nhanh, các kết hạch khoáng vật hình thành quanh phần mềm và giữ chi tiết ba chiều: <button class="term" data-term="khoáng hóa tại chỗ">khoáng hóa tại chỗ</button>.</td><td>Khuôn ngoài của một con trai</td></tr>
+        <tr><td><button class="term" data-term="carbon hóa">Carbon hóa</button></td><td>Mô bị nén, chất bốc bị đẩy ra, chỉ còn lại hình bóng bằng carbon.</td><td>Hóa thạch lá cây và dương xỉ</td></tr>
+        <tr><td><button class="term" data-term="hóa thạch dấu vết">Hóa thạch dấu vết</button></td><td>Bằng chứng gián tiếp do sinh vật để lại khi sống; được nghiên cứu trong <button class="term" data-term="cổ dấu vết học">cổ dấu vết học</button>.</td><td>Dấu chân khủng long (kích thước, dáng đi, tốc độ, tập tính), hang đào, <button class="term" data-term="phân hóa thạch">phân hóa thạch</button>, <button class="term" data-term="sỏi dạ dày">sỏi dạ dày</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure id="fig-preserve">
+    <div class="frame">
+      <ul class="gallery" style="--cols:3">
+        <li><img src="images/unit7/amber.webp" alt="Một con muỗi chân dài trong miếng hổ phách màu cam." loading="lazy" width="1000" height="686"><span><b>Bảo tồn nguyên trạng</b>muỗi trong hổ phách</span></li>
+        <li><img src="images/unit7/petrified.webp" alt="Mặt cắt một khúc gỗ hóa đá màu đỏ, cam và trắng." loading="lazy" width="1000" height="1000"><span><b>Khoáng hóa thấm</b>gỗ hóa đá</span></li>
+        <li><img src="images/unit7/trilobite.webp" alt="Hóa thạch bọ ba thùy sẫm màu trên đá nhạt, thước tỉ lệ 0,5 cm." loading="lazy" width="809" height="1000"><span><b>Khoáng hóa thấm</b>bọ ba thùy, bộ xương ngoài cứng</span></li>
+        <li><img src="images/unit7/mold.webp" alt="Dấu in hình quạt có gân của một vỏ giống sò trên đá màu nâu nhạt." loading="lazy" width="1000" height="998"><span><b>Khuôn</b>khuôn ngoài của một con trai</span></li>
+        <li><img src="images/unit7/leaf.webp" alt="Dấu lá màu nâu có gân mảnh trên một phiến đá." loading="lazy" width="1000" height="716"><span><b>Carbon hóa</b>lá bị carbon hóa</span></li>
+        <li><img src="images/unit7/tracks.webp" alt="Những dấu chân nhỏ năm ngón băng qua mặt đá màu nâu nhạt." loading="lazy" width="629" height="1000"><span><b>Hóa thạch dấu vết</b>dấu chân <i>Chirotherium</i></span></li>
+      </ul>
+    </div>
+    <figcaption>Các kiểu bảo tồn. Bọ ba thùy có bộ xương ngoài cứng và thường được bảo tồn bằng khoáng hóa thấm. Phân hóa thạch (coprolite) là một kiểu hóa thạch dấu vết khác.<span class="credit">Didier Desouens (hổ phách), Moondigger (gỗ hóa đá), Ballista (dấu chân): CC BY-SA. Mark A. Wilson (bọ ba thùy, khuôn, lá): phạm vi công cộng. Tất cả qua giáo trình.</span></figcaption>
+  </figure>
+  <figure id="fig-coprolite">
+    <div class="frame"><img src="images/unit7/coprolite.webp" alt="Một khối phân hóa thạch sần sùi màu nâu xám trên giá, cạnh thước tỉ lệ." loading="lazy" width="1000" height="667" style="max-height:300px;width:auto"></div>
+    <figcaption>Phân động vật hóa thạch (coprolite); cho biết về thức ăn và môi trường sống.<span class="credit">USGS, phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-3-2">7.3.2 Tiến hóa</h3>
+  <p>Tiến hóa tạo nên sự đa dạng hóa thạch giúp việc đối sánh khả thi. Charles Darwin (1809–1882) nhận ra rằng các dạng sống tiến hóa thành dạng mới và đề xuất <button class="term" data-term="chọn lọc tự nhiên">chọn lọc tự nhiên</button> là cơ chế, tác động lên sinh vật có môi trường thách thức sự sống còn của chúng. <button class="term" data-term="loài">Loài</button> là đơn vị cơ bản: một quần thể có chung đặc điểm và có thể sinh con hữu thụ.</p>
+  <ol class="steps">
+    <li><b>Biến dị.</b> Các cá thể trong quần thể khác nhau, do sự tổ hợp gen trong sinh sản hữu tính và do <b>đột biến</b> tự nhiên.</li>
+    <li><b>Thử thách.</b> Mỗi cá thể phải sống sót trước môi trường đủ lâu để sinh sản.</li>
+    <li><b>Lợi thế.</b> Cá thể có đặc điểm có lợi dễ sinh sản hơn và truyền đặc điểm đó lại.</li>
+    <li><b>Kết cục.</b> Nếu quá ít cá thể sống sót và quần thể không sinh đủ con có sức sống, loài bị <button class="term" data-term="tuyệt chủng">tuyệt chủng</button>. Nếu các đặc điểm có lợi tích lũy, các quần thể có thể bị cách ly di truyền (đôi khi bởi rào cản địa lý như một hòn đảo) và tiến hóa thành các loài riêng (hình thành loài).</li>
+  </ol>
+  <p>Một loài trong hồ sơ hóa thạch tồn tại trung bình khoảng <b>một triệu năm</b>. Có loài hầu như không đổi hình thái theo thời gian; loài khác biến đổi từ từ hoặc theo từng bước nhảy, với các dạng trung gian nhìn thấy được. Darwin trình bày học thuyết trong <i>Nguồn gốc các loài</i> (Học phần 1). Các công cụ hiện đại không ngừng bổ sung cách nghiên cứu tiến hóa và hình thành loài; tiến hóa là một <button class="term" data-term="lý thuyết khoa học">lý thuyết khoa học</button> vững chắc, đã vượt xa giai đoạn <button class="term" data-term="giả thuyết">giả thuyết</button>.</p>
+  <p class="quiz">Kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener">Câu hỏi Mục 7.3 trong giáo trình ↗</a></p>
+</section>
+
+<!-- 7.4 -->
+<section id="s7-4">
+  <h2 class="sec"><span class="n">7.4</span>Đối sánh địa tầng</h2>
+  <p><button class="term" data-term="đối sánh địa tầng">Đối sánh địa tầng</button> (correlation) xác định những tầng trầm tích nào ở các nơi tách biệt có cùng tuổi. Có thể dùng đảo cực từ (Học phần 2), loại đá, trình tự đá đặc trưng, hoặc hóa thạch chỉ đạo. Có bốn kiểu chính (<a href="#tbl-correl">Bảng 7.8</a>).</p>
+  <figure id="fig-gondwana">
+    <div class="frame"><img class="diagram" src="images/unit7/gondwana.webp" alt="Bản đồ các lục địa phương nam ghép lại, các dải màu cho thấy nơi có cùng loài bò sát và thực vật hóa thạch ở châu Phi, Nam Mỹ, Ấn Độ, châu Nam Cực và Úc." loading="lazy" width="1000" height="769"></div>
+    <figcaption>Hóa thạch nối liền các lục địa Gondwana (các lục địa phía nam của Pangaea), cũng dùng trong Học phần 2 (nhãn gốc tiếng Anh).<span class="credit">Osvaldocangaspadilla, phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+  <div class="tablewrap" id="tbl-correl">
+    <table>
+      <caption>Bốn kiểu đối sánh chính.</caption>
+      <thead><tr><th>Kiểu</th><th>Ghép tầng đá dựa vào</th><th>Ví dụ trong chương</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="đối sánh địa tầng">Địa tầng</button></td><td>Vị trí trong trình tự (quan hệ địa tầng)</td><td>Wingate (Canyonlands) = Moenave (Zion)</td></tr>
+        <tr><td><button class="term" data-term="thạch địa tầng">Thạch địa tầng</button></td><td>Thạch học: thành phần và tính chất vật lý</td><td>Cát kết Navajo ở Zion và Canyonlands</td></tr>
+        <tr><td><button class="term" data-term="thời địa tầng">Thời địa tầng</button></td><td>Cùng tuổi, dù khác thạch học</td><td>Ám tiêu Capitan kỷ Permi, Texas</td></tr>
+        <tr><td><button class="term" data-term="sinh địa tầng">Sinh địa tầng</button></td><td>Hóa thạch chỉ đạo</td><td>Trùng lỗ; răng nón</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s7-4-1">7.4.1 Đối sánh địa tầng theo vị trí</h3>
+  <p>Nhà địa chất lập bản đồ và xây dựng <b>cột địa tầng</b>, bản mô tả chi tiết các tầng đá từ dưới lên. Ở <b>Vườn quốc gia Canyonlands</b>, cát kết Navajo nằm trên hệ tầng Kayenta, hệ tầng này nằm trên hệ tầng <b>Wingate</b> tạo vách. Ở <b>Vườn quốc gia Zion</b>, Navajo nằm trên Kayenta, Kayenta nằm trên hệ tầng <b>Moenave</b> tạo vách. Theo vị trí, Wingate và Moenave tương ứng nhau; chúng mang tên riêng vì thành phần và kiểu lộ ra hơi khác nhau (<a href="#fig-correl">Hình 7.33</a>). Tầng đá của cao nguyên Colorado có thể đối sánh theo cách này trên hàng nghìn dặm vuông.</p>
+  <figure id="fig-correl">
+    <div class="frame"><svg viewBox="0 0 660 320" role="img" aria-labelledby="co-t-vi" style="width:100%;min-width:520px;height:auto;display:block"><title id="co-t-vi">Đối sánh địa tầng: ở cả hai vườn quốc gia, cát kết Navajo nằm trên hệ tầng Kayenta, nên lớp tạo vách bên dưới (Wingate ở Canyonlands, Moenave ở Zion) tương ứng nhau.</title><text x="140.0" y="36.0" font-size="14.5" class="svg-ink" text-anchor="middle" font-weight="600">VQG Canyonlands</text><rect x="40" y="50" width="200" height="80" fill="#f1dcb4" stroke="#4a3d30"/><rect x="85.4" y="79.0" width="109.2" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="140.0" y="94.7" text-anchor="middle" font-size="13" fill="#151515">Cát kết Navajo</text><rect x="40" y="130" width="200" height="56" fill="#d89a7c" stroke="#4a3d30"/><rect x="81.9" y="147.0" width="116.2" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="140.0" y="162.7" text-anchor="middle" font-size="13" fill="#151515">Hệ tầng Kayenta</text><rect x="40" y="186" width="200" height="80" fill="#e0ae7e" stroke="#4a3d30"/><rect x="82.2" y="215.0" width="115.5" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="140.0" y="230.7" text-anchor="middle" font-size="13" fill="#151515">Cát kết Wingate</text><text x="520.0" y="76.0" font-size="14.5" class="svg-ink" text-anchor="middle" font-weight="600">VQG Zion</text><rect x="420" y="90" width="200" height="80" fill="#f1dcb4" stroke="#4a3d30"/><rect x="465.4" y="119.0" width="109.2" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="520.0" y="134.7" text-anchor="middle" font-size="13" fill="#151515">Cát kết Navajo</text><rect x="420" y="170" width="200" height="56" fill="#d89a7c" stroke="#4a3d30"/><rect x="461.9" y="187.0" width="116.2" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="520.0" y="202.7" text-anchor="middle" font-size="13" fill="#151515">Hệ tầng Kayenta</text><rect x="420" y="226" width="200" height="80" fill="#e0ae7e" stroke="#4a3d30"/><rect x="460.7" y="255.0" width="118.7" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="520.0" y="270.7" text-anchor="middle" font-size="13" fill="#151515">Hệ tầng Moenave</text><path d="M240 50 L420 90" stroke="var(--muted)" stroke-dasharray="5 5" fill="none"/><path d="M240 130 L420 170" stroke="var(--muted)" stroke-dasharray="5 5" fill="none"/><path d="M240 186 L420 226" stroke="var(--muted)" stroke-dasharray="5 5" fill="none"/><path d="M240 266 L420 306" stroke="var(--muted)" stroke-dasharray="5 5" fill="none"/><rect x="257.8" y="235.2" width="144.5" height="21.5" rx="10.8" fill="var(--accent-soft)" fill-opacity="1" stroke="#151515" stroke-opacity=".25"/><text x="330.0" y="250.5" text-anchor="middle" font-size="12.5" fill="var(--fg)">cùng vị trí → đối sánh</text></svg></div>
+    <figcaption>Đối sánh địa tầng giữa Canyonlands và Zion. Bề dày chỉ mang tính sơ đồ.<span class="credit">Vẽ cho tài liệu này theo nội dung chương sách.</span></figcaption>
+  </figure>
+  <figure id="fig-staircase">
+    <div class="frame"><img class="diagram" src="images/unit7/staircase.webp" alt="Mặt cắt dài tiêu đề The Grand Staircase, các lớp đá màu bậc thang đi lên từ Grand Canyon ở phía nam tới Bryce Canyon ở phía bắc." loading="lazy" width="1400" height="398"></div>
+    <figcaption>Đối sánh tầng đá dọc “Cầu thang Lớn” (Grand Staircase) từ Grand Canyon tới các hẻm vực Zion, Bryce và Cedar Breaks (nhãn gốc tiếng Anh).<span class="credit">NPS, phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-4-2">7.4.2 Đối sánh thạch địa tầng</h3>
+  <p>Đối sánh thạch địa tầng ghép tầng đá theo <b>thạch học</b> (tiếng Hy Lạp <i>lithos</i>: đá): thành phần và tính chất vật lý. Có thể ghép cả hệ tầng qua khoảng cách xa, hoặc lần theo các lớp nhỏ trong hệ tầng để biết phạm vi và môi trường lắng đọng của chúng. Cát kết Navajo tạo nên vách đá Zion chính là đá ở Canyonlands, cách hàng trăm dặm, và ở các vườn quốc gia Capitol Reef và Arches. Cùng hệ tầng ấy được gọi là <b>cát kết Aztec</b> ở Nevada và <b>cát kết Nugget</b> gần Salt Lake City, nơi nó đủ khác biệt để mang tên riêng.</p>
+  <figure id="fig-navajo">
+    <div class="frame">
+      <ul class="gallery" style="--cols:2">
+        <li><img src="images/unit7/navajo.webp" alt="Nhìn xuống một hẻm vực sâu có vách cát kết nâu nhạt và đỏ sừng sững, đáy thung lũng xanh." loading="lazy" width="976" height="1000"><span><b>Vườn quốc gia Zion</b>nhìn từ Angels Landing</span></li>
+        <li><img src="images/unit7/stevens.webp" alt="Một vòm đá tự nhiên lớn bằng cát kết màu cam trên một hẻm vực." loading="lazy" width="849" height="600"><span><b>Vòm Stevens, Coyote Gulch</b>cách Zion khoảng 125 dặm</span></li>
+      </ul>
+    </div>
+    <figcaption>Cùng một cát kết Navajo ở hai nơi.<span class="credit">David Iliff (Zion), CC BY-SA. G. Thomas (vòm Stevens), phạm vi công cộng. Cả hai qua giáo trình.</span></figcaption>
+  </figure>
+
+  <h3 id="s7-4-3">7.4.3 Đối sánh thời địa tầng</h3>
+  <p>Đối sánh thời địa tầng ghép các đá <b>cùng tuổi</b>, kể cả khi thạch học khác nhau. Môi trường lắng đọng thay đổi theo không gian, nên cùng một lúc có thể hình thành các đá trầm tích khác nhau: ở môi trường biển, từ bãi biển đến vùng gần bờ, đầm phá nông, ám tiêu, sườn dốc và biển sâu, mỗi nơi một hệ tầng riêng. Ở <b>ám tiêu Capitan</b> kỷ Permi thuộc dãy núi Guadalupe, Tây Texas, một đường thời gian màu đỏ đánh dấu một thời điểm khi đầm phá/sau ám tiêu, ám tiêu và bột kết biển sâu cùng đang hình thành (<a href="#fig-capitan">Hình 7.36</a>). Đây là quan hệ giữa đơn vị thời gian và đơn vị đá: một đơn vị <b>thạch địa tầng</b> là một loại đá, có thể khác tuổi ở các nơi khác nhau, còn một đơn vị <b>thời địa tầng</b> là toàn bộ đá hình thành trong một khoảng thời gian.</p>
+  <figure id="fig-capitan">
+    <div class="frame"><img class="diagram" src="images/unit7/capitan.webp" style="width:min(100%,489px)" alt="Mặt cắt một ám tiêu: các lớp đầm phá xanh nhạt bên trái, khối ám tiêu xanh đậm ở giữa, các lớp nước sâu màu vàng bên phải, có một đường đỏ cắt ngang." loading="lazy" width="326" height="200"></div>
+    <figcaption>Ám tiêu Capitan kỷ Permi: đầm phá/sau ám tiêu (xanh nhạt), ám tiêu chính (xanh đậm) và bột kết biển sâu (vàng) cùng lắng đọng tại thời điểm của đường đỏ (nhãn gốc tiếng Anh).<span class="credit">NPS, phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+  <figure id="fig-transreg">
+    <div class="frame"><img class="diagram" src="images/unit7/transreg.webp" alt="Hai mặt cắt đáy biển dốc: trên ghi onlap với các lớp lấn dần vào đất liền, dưới ghi offlap với các lớp lùi dần ra biển." loading="lazy" width="500" height="331"></div>
+    <figcaption>Biển tiến tạo trầm tích phủ lấn (onlap); biển thoái tạo trầm tích phủ lùi (offlap). Cát kết (màu da bò), đá vôi (xám) và đá phiến sét (vàng mù tạt) hình thành cùng lúc ở các độ sâu nước khác nhau.<span class="credit">Woudloper, CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-4-4">7.4.4 Đối sánh sinh địa tầng</h3>
+  <p>Đối sánh sinh địa tầng dùng <button class="term" data-term="hóa thạch chỉ đạo">hóa thạch chỉ đạo</button>, những tổ hợp sinh vật chỉ có mặt trong các khoảng thời gian xác định, để định tuổi tầng đá. Hóa thạch giúp xếp một hệ tầng vào một khoảng tuổi, như kỷ Jura (201–145 triệu năm trước); phần lớn thang tuổi địa chất gắn với các tổ hợp hóa thạch. Hóa thạch chỉ đạo tốt nhất là của sinh vật <b>phân bố rộng về địa lý</b> nhưng chỉ sống trong một <b>khoảng thời gian ngắn</b> (<a href="#fig-indexf">Hình 7.38</a>).</p>
+  <figure id="fig-indexf">
+    <div class="frame"><img class="diagram" src="images/unit7/indexf.gif" alt="Bảng các kỷ địa chất từ Cambri đến Đệ Tam, kèm hình vẽ và tên hóa thạch chỉ đạo của từng kỷ." loading="lazy" width="675" height="533"></div>
+    <figcaption>Các hóa thạch chỉ đạo dùng trong đối sánh sinh địa tầng (nhãn gốc tiếng Anh).<span class="credit">USGS, phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+  <p><b>Vi hóa thạch</b>, phần lớn từ sinh vật đơn bào, thuộc loại tốt nhất: phân bố rộng, và loài có vỏ cứng thì dễ bảo tồn. <button class="term" data-term="trùng lỗ">Trùng lỗ</button> (foraminifera), sinh vật đơn bào vỏ vôi, đặc biệt hữu ích cho kỷ Phấn Trắng và đại Tân sinh. <button class="term" data-term="răng nón">Răng nón</button> (conodont) là phần cứng dạng răng bằng phosphat của một loài vật giống lươn không có phần cứng nào khác; chúng dùng để đối sánh tầng đá từ kỷ Cambri đến kỷ Tam Điệp. Loài vật này sống ở biển nông khắp thế giới, tiến hóa nhanh, và các “răng” rải rác của chúng dễ tách khỏi đá vôi trong phòng thí nghiệm.</p>
+  <figure id="fig-micro">
+    <div class="frame">
+      <ul class="gallery" style="--cols:3">
+        <li><img src="images/unit7/foram.webp" alt="Ba vỏ nhỏ hình bầu dục màu trắng trên nền đen." loading="lazy" width="1000" height="750"><span><b>Trùng lỗ</b><i>Quinqueloculina seminula</i></span></li>
+        <li><img src="images/unit7/conodonts.webp" alt="Lưới nhiều hóa thạch nhỏ dạng răng màu xám trên nền đen." loading="lazy" width="484" height="580"><span><b>Răng nón</b>từ Alaska</span></li>
+        <li><img class="diagram" src="images/unit7/conoanimal.gif" alt="Hình vẽ một con vật giống lươn mắt to, bên cạnh hình các bộ phận dạng răng của nó." loading="lazy" width="299" height="234" style="object-fit:contain"><span><b>Con vật mang răng nón</b>tranh phục dựng</span></li>
+      </ul>
+    </div>
+    <figcaption>Các vi hóa thạch dùng làm hóa thạch chỉ đạo.<span class="credit">Hans Hillewaert (trùng lỗ), CC BY-SA. USGS (răng nón), phạm vi công cộng. Philippe Janvier (phục dựng), CC BY. Tất cả qua giáo trình.</span></figcaption>
+  </figure>
+  <p>Trong thập niên 1960, một nghiên cứu then chốt đã gắn <b>các đới răng nón kỷ Tam Điệp</b> với <b>cúc đá</b> (họ hàng đã tuyệt chủng của ốc anh vũ), vốn là chuẩn duy nhất để đối sánh kỷ Tam Điệp trước đó. Việc đối chiếu vi và đại hóa thạch chỉ đạo làm cả hai đáng tin cậy hơn, và răng nón sau đó được dùng để đối sánh tầng đá kỷ Tam Điệp ở phạm vi quốc tế: châu Âu, miền tây Bắc Mỹ và các đảo Bắc Cực của Canada.</p>
+
+  <h3 id="s7-4-5">7.4.5 Thang tuổi địa chất</h3>
+  <p>Nhà địa chất chia thời gian thành các đơn vị lồng nhau: <button class="term" data-term="liên đại">liên đại</button> (lớn nhất), <button class="term" data-term="đại">đại</button>, <button class="term" data-term="kỷ">kỷ</button>, <button class="term" data-term="thế">thế</button> và <b>kỳ</b> (<a href="#tbl-units">Bảng 7.9</a>, <a href="#fig-timescale">Hình 7.40</a>). Cách phân chia giống nhau ở mọi nơi trên Trái Đất, nhưng đá của một khoảng thời gian có thể vắng mặt ở một nơi nào đó: <b>thời gian liên tục không gián đoạn, còn bản ghi đá thì có khoảng trống</b>.</p>
+  <div class="tablewrap" id="tbl-units">
+    <table>
+      <caption>Đơn vị thời gian, đơn vị đá tương ứng và vị trí hiện nay của chúng ta.</caption>
+      <thead><tr><th>Đơn vị thời gian</th><th>Đá của đơn vị đó gọi là</th><th>Hiện nay chúng ta ở</th></tr></thead>
+      <tbody>
+        <tr><td>Liên đại (lớn nhất)</td><td>Liên giới</td><td>Liên đại Hiển sinh</td></tr>
+        <tr><td>Đại</td><td>Giới</td><td>Đại Tân sinh</td></tr>
+        <tr><td>Kỷ</td><td>Hệ</td><td>Kỷ Đệ Tứ</td></tr>
+        <tr><td>Thế</td><td>Thống</td><td>Thế Holocen</td></tr>
+        <tr><td>Kỳ (nhỏ nhất)</td><td>Bậc*</td><td>Kỳ Meghalaya*</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">*Không có trong chương; theo bảng của Ủy ban Địa tầng Quốc tế (ICS, stratigraphy.org/chart).</p>
+  <figure id="fig-timescale">
+    <div class="frame"><svg viewBox="0 0 880 984" role="img" aria-labelledby="ts-t-vi" style="width:100%;min-width:640px;height:auto;display:block"><title id="ts-t-vi">Thang thời gian địa chất vẽ lại theo biểu đồ của giáo trình: bên trái là toàn bộ lịch sử Trái Đất từ 4.600 triệu năm trước đến nay theo liên đại và đại; bên phải là Liên đại Hiển sinh phóng to, cho thấy các đại, kỷ và tuổi ranh giới.</title><text x="150.0" y="30.0" font-size="14" class="svg-ink" text-anchor="middle" font-weight="600">Liên đại</text><text x="330.0" y="30.0" font-size="14" class="svg-ink" text-anchor="middle" font-weight="600">Đại</text><path d="M70 70 V950.0" stroke="var(--fg)" stroke-width="2"/><path d="M64 70.0 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="74.5" font-size="12" class="svg-ink" text-anchor="end">Nay</text><path d="M64 165.7 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="170.2" font-size="12" class="svg-ink" text-anchor="end">500</text><path d="M64 261.3 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="265.8" font-size="12" class="svg-ink" text-anchor="end">1.000</text><path d="M64 357.0 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="361.5" font-size="12" class="svg-ink" text-anchor="end">1.500</text><path d="M64 452.6 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="457.1" font-size="12" class="svg-ink" text-anchor="end">2.000</text><path d="M64 548.3 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="552.8" font-size="12" class="svg-ink" text-anchor="end">2.500</text><path d="M64 643.9 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="648.4" font-size="12" class="svg-ink" text-anchor="end">3.000</text><path d="M64 739.6 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="744.1" font-size="12" class="svg-ink" text-anchor="end">3.500</text><path d="M64 835.2 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="839.7" font-size="12" class="svg-ink" text-anchor="end">4.000</text><path d="M64 950.0 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="954.5" font-size="12" class="svg-ink" text-anchor="end">4.600</text><text x="61.0" y="970.0" font-size="12" class="svg-ink" text-anchor="end">Ma</text><rect x="82" y="173.1" width="34" height="776.9" rx="3" fill="#8db54a" stroke="#ffffff" stroke-width="1.5"/><text transform="translate(103.0 561.6) rotate(-90)" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">TIỀN CAMBRI</text><rect x="82" y="70.0" width="102" height="103.1" rx="3" fill="#a6ee86" stroke="#ffffff" stroke-width="1.5"/><text x="133.0" y="125.6" font-size="10.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">HIỂN SINH</text><rect x="120" y="173.1" width="64" height="375.1" rx="3" fill="#a2dc72" stroke="#ffffff" stroke-width="1.5"/><text transform="translate(156.0 360.7) rotate(-90)" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">NGUYÊN SINH</text><rect x="120" y="548.3" width="64" height="287.0" rx="3" fill="#7fdcc4" stroke="#ffffff" stroke-width="1.5"/><text transform="translate(156.0 691.7) rotate(-90)" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">THÁI CỔ</text><rect x="120" y="835.2" width="300" height="114.8" rx="3" fill="#e0336f" stroke="#ffffff" stroke-width="1.5"/><text x="270.0" y="896.6" font-size="11.5" fill="#ffffff" text-anchor="middle" letter-spacing=".08em" font-weight="600">HỎA THÀNH</text><text x="415.0" y="847.2" font-size="10.5" fill="#ffffff" text-anchor="end" opacity=".85">4.000</text><rect x="188" y="70.0" width="232" height="12.6" rx="3" fill="#f5f02a" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="80.3" font-size="10" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">TÂN SINH</text><rect x="188" y="82.6" width="232" height="35.6" rx="3" fill="#93dd62" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="104.4" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">TRUNG SINH</text><text x="415.0" y="94.6" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">66</text><rect x="188" y="118.2" width="232" height="54.9" rx="3" fill="#86d6f2" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="149.7" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">CỔ SINH</text><text x="415.0" y="130.2" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">252</text><rect x="188" y="173.1" width="232" height="88.2" rx="3" fill="#ebe1e1" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="221.2" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">TÂN NGUYÊN SINH</text><text x="415.0" y="185.1" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">539</text><rect x="188" y="261.3" width="232" height="114.8" rx="3" fill="#b8955f" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="322.7" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">TRUNG NGUYÊN SINH</text><text x="415.0" y="273.3" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">1.000</text><rect x="188" y="376.1" width="232" height="172.2" rx="3" fill="#bccd72" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="466.2" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">CỔ NGUYÊN SINH</text><text x="415.0" y="388.1" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">1.600</text><rect x="188" y="548.3" width="232" height="57.4" rx="3" fill="#e2eaea" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="581.0" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">TÂN THÁI CỔ</text><text x="415.0" y="560.3" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">2.500</text><rect x="188" y="605.7" width="232" height="76.5" rx="3" fill="#a9d2d2" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="647.9" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">TRUNG THÁI CỔ</text><text x="415.0" y="617.7" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">2.800</text><rect x="188" y="682.2" width="232" height="76.5" rx="3" fill="#aebebe" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="724.4" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">CỔ THÁI CỔ</text><text x="415.0" y="694.2" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">3.200</text><rect x="188" y="758.7" width="232" height="76.5" rx="3" fill="#a9d6d6" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="801.0" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">TIỀN THÁI CỔ</text><text x="415.0" y="770.7" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">3.600</text><path d="M420 70.0 L526 56 M420 173.1 H470 V950.0 H526" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="5 4" fill="none"/><text x="565.0" y="30.0" font-size="14" class="svg-ink" text-anchor="middle" font-weight="600">Đại</text><text x="715.0" y="30.0" font-size="14" class="svg-ink" text-anchor="middle" font-weight="600">Kỷ</text><path d="M526 56 V950.0" stroke="var(--fg)" stroke-width="2"/><path d="M520 162.3 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="166.8" font-size="12" class="svg-ink" text-anchor="end">50</text><path d="M520 242.9 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="247.4" font-size="12" class="svg-ink" text-anchor="end">100</text><path d="M520 323.4 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="327.9" font-size="12" class="svg-ink" text-anchor="end">150</text><path d="M520 404.0 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="408.5" font-size="12" class="svg-ink" text-anchor="end">200</text><path d="M520 484.5 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="489.0" font-size="12" class="svg-ink" text-anchor="end">250</text><path d="M520 565.0 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="569.5" font-size="12" class="svg-ink" text-anchor="end">300</text><path d="M520 645.6 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="650.1" font-size="12" class="svg-ink" text-anchor="end">350</text><path d="M520 726.1 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="730.6" font-size="12" class="svg-ink" text-anchor="end">400</text><path d="M520 806.6 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="811.1" font-size="12" class="svg-ink" text-anchor="end">450</text><path d="M520 887.2 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="891.7" font-size="12" class="svg-ink" text-anchor="end">500</text><path d="M520 950.0 H526" stroke="var(--fg)" stroke-width="2"/><rect x="540" y="70.0" width="44" height="118.1" rx="3" fill="#f5f02a" stroke="#ffffff" stroke-width="1.5"/><text transform="translate(566.0 129.1) rotate(-90)" font-size="10.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">TÂN SINH</text><rect x="540" y="188.1" width="44" height="299.6" rx="3" fill="#93dd62" stroke="#ffffff" stroke-width="1.5"/><text transform="translate(566.0 337.9) rotate(-90)" font-size="10.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">TRUNG SINH</text><rect x="540" y="487.7" width="44" height="462.3" rx="3" fill="#86d6f2" stroke="#ffffff" stroke-width="1.5"/><text transform="translate(566.0 718.9) rotate(-90)" font-size="10.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">CỔ SINH</text><rect x="588" y="70.0" width="290" height="16.0" rx="3" fill="#f5f02a" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="82.0" font-size="10.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">ĐỆ TỨ</text><rect x="588" y="86.0" width="290" height="32.9" rx="3" fill="#fdcca4" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="106.4" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">NEOGEN</text><text x="873.0" y="98.0" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">2,6</text><rect x="588" y="118.9" width="290" height="69.3" rx="3" fill="#fbb23a" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="157.5" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">PALEOGEN</text><text x="873.0" y="130.9" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">23</text><rect x="588" y="188.1" width="290" height="127.2" rx="3" fill="#a5e3a0" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="255.7" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">PHẤN TRẮNG</text><text x="873.0" y="200.1" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">66</text><rect x="588" y="315.4" width="290" height="90.2" rx="3" fill="#5cf27f" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="364.5" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">JURA</text><text x="873.0" y="327.4" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">145</text><rect x="588" y="405.6" width="290" height="82.1" rx="3" fill="#79f5d2" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="450.6" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">TAM ĐIỆP</text><text x="873.0" y="417.6" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">201</text><rect x="588" y="487.7" width="290" height="75.7" rx="3" fill="#7af1f4" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="529.6" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">PERMI</text><text x="873.0" y="499.7" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">252</text><rect x="588" y="563.4" width="62" height="96.6" rx="3" fill="#a5d8f3" stroke="#ffffff" stroke-width="1.5"/><text transform="translate(623.0 611.7) rotate(-90)" font-size="9.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">THAN ĐÁ</text><rect x="652" y="563.4" width="226" height="30.6" rx="3" fill="#6fc4f2" stroke="#ffffff" stroke-width="1.5"/><text x="765.0" y="582.7" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">PENNSYLVANIA</text><text x="873.0" y="575.4" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">299</text><rect x="652" y="594.0" width="226" height="66.0" rx="3" fill="#8db3e2" stroke="#ffffff" stroke-width="1.5"/><text x="765.0" y="631.0" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">MISSISSIPPI</text><text x="873.0" y="606.0" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">318</text><rect x="588" y="660.1" width="290" height="96.6" rx="3" fill="#a9b8f6" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="712.4" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">DEVON</text><text x="873.0" y="672.1" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">359</text><rect x="588" y="756.7" width="290" height="40.3" rx="3" fill="#bd97f4" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="780.8" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">SILUR</text><text x="873.0" y="768.7" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">419</text><rect x="588" y="797.0" width="290" height="66.0" rx="3" fill="#f594e2" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="834.0" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">ORDOVIC</text><text x="873.0" y="809.0" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">444</text><rect x="588" y="863.0" width="290" height="87.0" rx="3" fill="#f58a8a" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="910.5" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">CAMBRI</text><text x="873.0" y="875.0" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">485</text><text x="526.0" y="970.0" font-size="12" class="svg-ink" text-anchor="middle">539 Ma</text><text x="878.0" y="972.0" font-size="11.5" class="svg-muted" text-anchor="end">Số: tuổi ranh giới trên (trẻ hơn) của mỗi đơn vị, triệu năm</text></svg></div>
+    <figcaption>Thang tuổi địa chất, ghi tuổi ranh giới trên bằng triệu năm (Ma). Trái: toàn bộ lịch sử Trái Đất; phải: Liên đại Hiển sinh phóng to. Dải kỷ Đệ Tứ được nới rộng để đọc được, như bản gốc.<span class="credit">Vẽ lại cho tài liệu này theo “Geologic Time Scale” của Belinda C. Madsen cho Salt Lake Community College (2017, cập nhật 2023), dựa trên Bảng Thời địa tầng Quốc tế của ICS (Cohen và cộng sự, 2013; cập nhật 2023).</span></figcaption>
+  </figure>
+  <figure id="fig-clock">
+    <div class="frame"><img class="diagram" src="images/unit7/clock.webp" alt="Sơ đồ tròn của thời gian địa chất như mặt đồng hồ, các liên đại là những hình quạt màu, có nhãn các sự kiện như sự hình thành Mặt Trăng và động vật đầu tiên." loading="lazy" width="801" height="768" style="max-height:560px;width:auto"></div>
+    <figcaption>Thời gian địa chất vẽ như một chiếc đồng hồ, cho thấy các đơn vị và sự kiện quan trọng (nhãn gốc tiếng Anh). Ga = tỉ năm trước, Ma = triệu năm trước.<span class="credit">Woudloper, Hardwigg chỉnh sửa, phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+  <p><button class="term" data-term="thang tuổi địa chất">Thang tuổi địa chất</button> được xây dựng vào thế kỷ 19 từ các nguyên lý địa tầng học; thứ tự các đơn vị đã được biết trước khi có thể gán con số. Đối sánh sinh địa tầng dùng hóa thạch để đặt tên đại và kỷ cho đá trầm tích trên toàn thế giới. Ngày nay, một số nhà địa chất cho rằng con người tác động mạnh đến các quá trình tự nhiên đến mức nên bổ sung một đơn vị mới, <button class="term" data-term="Anthropocene (Thế Nhân sinh)">Anthropocene (Thế Nhân sinh)</button>.</p>
+  <p class="quiz">Kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener">Câu hỏi Mục 7.4 trong giáo trình ↗</a></p>
+</section>
+
+<section id="summary">
+  <h2 class="sec">Tóm tắt</h2>
+  <p>Các sự kiện trong lịch sử Trái Đất có thể được sắp xếp theo thứ tự nhờ các nguyên lý định tuổi tương đối, và thang tuổi địa chất đã được xây dựng hoàn chỉnh vào thế kỷ 19 theo cách này, không cần tuổi bằng số. Việc phát hiện tính phóng xạ cuối những năm 1800 cho phép định tuổi tuyệt đối từ sự phân rã của các đồng vị không bền; diễn giải đúng phụ thuộc vào loại đá và các giả định chính xác về lượng đồng vị ban đầu. Kết hợp định tuổi tương đối và tuyệt đối đã cho biết lịch sử các sự kiện địa chất, tuổi Trái Đất và thang tuổi địa chất với độ chính xác đáng kể. Đối sánh cho thấy môi trường lắng đọng thay đổi theo không gian ra sao. Thời gian địa chất vô cùng dài, đủ để sự sống tiến hóa, và một số dạng sống được bảo tồn thành hóa thạch dùng cho đối sánh sinh địa tầng. Thang thời gian liên tục, dù bản ghi đá có chỗ đứt quãng.</p>
+  <div class="callout">
+    <h4>Tóm tắt nhanh</h4>
+    <ul>
+      <li>Nguyên lý tương đối: chồng chất, nằm ngang ban đầu, liên tục theo phương ngang, cắt xuyên, thể bao, kế tục hóa thạch.</li>
+      <li>Bất chỉnh hợp: trên đá kết tinh (tầng đá trên đá magma/biến chất), song song (giữa các tầng song song), góc (tầng ngang trên tầng nghiêng).</li>
+      <li>Phân rã: alpha (Z −2, A −4), beta (Z +1), bắt giữ electron (Z −1). Chu kỳ bán rã: thời gian để một nửa đồng vị mẹ phân rã. Con/mẹ = 1, 3, 7, 15 … sau 1, 2, 3, 4 chu kỳ.</li>
+      <li>Đồng hồ: U–Pb (zircon, hai đồng hồ), K–Ar, Rb–Sr, <sup>14</sup>C (tới ~57.300 năm), phát quang (&lt;1 triệu năm), vết phân hạch (10<sup>5</sup>–2 × 10<sup>9</sup> năm).</li>
+      <li>Trái Đất: 4,54 ± 0,05 tỉ năm (Patterson: 4,55, từ thiên thạch). Zircon cổ nhất 4,4 tỉ năm.</li>
+      <li>Bảo tồn: nguyên trạng, khoáng hóa thấm, khuôn và bản đúc, carbon hóa, hóa thạch dấu vết.</li>
+      <li>Đối sánh: địa tầng, thạch địa tầng, thời địa tầng, sinh địa tầng (hóa thạch chỉ đạo: phân bố rộng, sống ngắn).</li>
+      <li>Đơn vị thời gian: liên đại › đại › kỷ › thế › kỳ; đơn vị đá: liên giới › giới › hệ › thống (› bậc).</li>
+    </ul>
+  </div>
+  <p class="quiz">Kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener">Câu hỏi ôn tập Chương 7 trong giáo trình ↗</a></p>
+</section>
+
+<section id="resources">
+  <h2 class="sec">Tài liệu tham khảo</h2>
+  <div class="res">
+    <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener"><b>Chương 7 (giáo trình) ↗</b><span>Toàn bộ chương, có câu hỏi từng mục và mọi hình gốc (tiếng Anh).</span></a>
+    <a href="https://slcc.pressbooks.pub/introgeology/back-matter/glossary-test/" target="_blank" rel="noopener"><b>Bảng thuật ngữ của giáo trình ↗</b><span>Định nghĩa mọi thuật ngữ in đậm trong sách (tiếng Anh).</span></a>
+    <a href="https://youtu.be/mOSpRzW2i_4" target="_blank" rel="noopener"><b>Video: Kelvin và tuổi Trái Đất ↗</b><span>Hoạt hình mà chương sách dẫn tới, giải thích cách Kelvin tính khoảng tuổi và vì sao sai lệch (tiếng Anh).</span></a>
+    <a href="http://www.ucmp.berkeley.edu/paleo/fossils/permin.html" target="_blank" rel="noopener"><b>UC Berkeley: Khoáng hóa thấm ↗</b><span>Trang về hóa thạch mà chương sách giới thiệu (tiếng Anh).</span></a>
+    <a href="https://stratigraphy.org/chart" target="_blank" rel="noopener"><b>ICS International Chronostratigraphic Chart ↗</b><span>Thang tuổi địa chất chính thức, dạng tương tác, có tuổi của mọi ranh giới (nguồn ngoài, tiếng Anh).</span></a>
+    <a href="https://opentextbc.ca/physicalgeology2ed/part/chapter-8-measuring-geological-time/" target="_blank" rel="noopener"><b>Physical Geology: Measuring geological time ↗</b><span>Giáo trình mở của Earle (tái bản lần 2), chương 8, về định tuổi tương đối, định tuổi bằng hóa thạch và bằng đồng vị (nguồn ngoài, tiếng Anh).</span></a>
+    <a href="https://www.nps.gov/grca/learn/nature/grca-geology.htm" target="_blank" rel="noopener"><b>NPS: Grand Canyon geology ↗</b><span>Hướng dẫn của chính vườn quốc gia về các tầng đá và bất chỉnh hợp ở Grand Canyon (nguồn ngoài, tiếng Anh).</span></a>
+  </div>
+</section>
+
+<section id="factcheck">
+  <h2 class="sec">Ghi chú kiểm chứng</h2>
+  <p>Mọi nội dung trong tài liệu này đã được đối chiếu với chương sách. Chỗ nào chương sách khác với tài liệu hiện hành hoặc tự mâu thuẫn, tài liệu ghi lại ở đây để bạn biết sách viết gì.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Những điểm chương sách khác với tài liệu hiện hành hoặc tự mâu thuẫn.</caption>
+      <thead><tr><th>Chủ đề</th><th>Chương sách viết</th><th>Ghi chú</th></tr></thead>
+      <tbody>
+        <tr><td>Số nguyên lý</td><td>“Mô tả năm nguyên lý của địa tầng học”</td><td>Mục 7.1.1 liệt kê sáu nguyên lý (chồng chất, nằm ngang ban đầu, liên tục theo phương ngang, cắt xuyên, thể bao, kế tục hóa thạch). Tài liệu trình bày đủ sáu.</td></tr>
+        <tr><td>Số mục</td><td>“7.1.3 Unconformities” và “7.1.3 Applying Relative Dating Principles”</td><td>Hai mục trùng số; tài liệu đánh số mục thứ hai là 7.1.4.</td></tr>
+        <tr><td>Độ chính xác định tuổi</td><td>“cộng trừ hai triệu năm trên 2,5 tỉ năm (tức ±0,055%)”</td><td>2 triệu ÷ 2,5 tỉ = 0,08%. Tài liệu chỉ ghi các giá trị, không ghi tỉ lệ phần trăm.</td></tr>
+        <tr><td>Tỉ lệ mẹ/con sau 5 chu kỳ bán rã</td><td>0,0325</td><td>3,125 ÷ 96,875 = 0,0323. Bảng giữ giá trị của chương sách.</td></tr>
+        <tr><td>Kali-40</td><td>Phân rã thành argon-40 bằng bắt giữ electron</td><td>Phần lớn <sup>40</sup>K (khoảng 89%) phân rã thành calci-40 bằng phân rã beta; khoảng 11% thành <sup>40</sup>Ar bằng bắt giữ electron. Chu kỳ bán rã 1,25 tỉ năm tính cho cả hai nhánh (Nuclear Data Sheets).</td></tr>
+        <tr><td>Vết phân hạch</td><td>Hình thành khi <sup>238</sup>U “phân rã thành sản phẩm con <sup>234</sup>Th và giải phóng một hạt alpha”</td><td>Vết phân hạch do <b>phân hạch tự phát</b> của <sup>238</sup>U, khi hạt nhân tách thành hai mảnh lớn bay ra; hư hại do giật lùi của phân rã alpha quá nhỏ để thấy dưới kính hiển vi quang học (Gallagher, Brown &amp; Johnson, 1998, <i>Annual Review of Earth and Planetary Sciences</i> 26). Tài liệu viết “urani phân rã … phân hạch của <sup>238</sup>U”.</td></tr>
+        <tr><td>Đá cổ nhất</td><td>Các zircon 4,4 tỉ năm “được xác định là đá cổ nhất đã biết”</td><td>Đó là <b>hạt khoáng vật</b> cổ nhất đã biết, nằm trong đá chủ trẻ hơn nhiều (như chương sách viết tiếp theo). Tài liệu gọi chúng là vật chất cổ nhất đã biết của Trái Đất.</td></tr>
+        <tr><td>Tuổi kỷ Jura</td><td>“Kỷ Jura (199 đến 145 triệu năm trước)”</td><td>Thang tuổi của chính chương sách và bảng ICS cho kỷ Jura bắt đầu ở 201 Ma; tài liệu dùng 201–145. Bảng ICS hiện hành cũng dời đáy kỷ Phấn Trắng về 143,1 ± 0,6 Ma; tài liệu giữ 145 của chương sách.</td></tr>
+        <tr><td>Bắt đầu liên đại Hiển sinh</td><td>Bảng thuật ngữ: 541 triệu năm trước; hình thang tuổi: 539 Ma</td><td>Bảng ICS ghi 538,8 Ma; tài liệu dùng 539 theo hình.</td></tr>
+        <tr><td>Guadalupe</td><td>“Guadalupe National Monument”</td><td>Ám tiêu Capitan nằm trong Vườn quốc gia Guadalupe Mountains, Texas.</td></tr>
+        <tr><td>Phân rã beta</td><td>“một neutron … tách thành một electron và một proton”</td><td>Còn có một phản neutrino được giải phóng; chương sách bỏ qua và tài liệu cũng vậy.</td></tr>
+        <tr><td>Vị trí hình</td><td>Một đồ thị CO<sub>2</sub> trong 400.000 năm qua nằm ở mục carbon-14</td><td>Đồ thị nói về khí hậu, không về định tuổi, và văn bản không nhắc đến nó, nên tài liệu bỏ qua. Hình đường cong chuông của sách (“Variation within a population”) thể hiện “trường hợp hiếm” theo thống kê chứ không phải một đặc điểm sinh học, nên cũng được bỏ qua.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><b>Thuật ngữ tiếng Việt.</b> Các thuật ngữ sau đã được đối chiếu với tên bài trên vi.wikipedia (qua liên kết ngôn ngữ từ en.wikipedia): địa tầng học, bất chỉnh hợp, bất chỉnh hợp góc, phân rã alpha, phân rã beta, bắt giữ electron, chu kỳ bán rã, chuỗi phân rã, định tuổi bằng carbon-14, định tuổi bằng đồng vị phóng xạ, định tuổi bằng phát quang, phương pháp khối phổ, sinh địa tầng, thạch địa tầng, trùng lỗ, chọn lọc tự nhiên, thang tuổi địa chất, móng, hệ/thống/bậc, niên đại học thụ mộc, đồng nhất luận, biển tiến, đồng vị, apatit, zircon, hổ phách, bọ ba thùy, cùng tên các đại, kỷ và thế. Những thuật ngữ chưa tìm thấy trong nguồn chính thức được ghi rõ trong bảng thuật ngữ: tên các nguyên lý (chồng chất, nằm ngang ban đầu, liên tục theo phương ngang, cắt xuyên, kế tục hóa thạch), bất chỉnh hợp song song, bất chỉnh hợp trên đá kết tinh, biển thoái, vách đứt gãy, thời địa tầng, hóa thạch chỉ đạo, các kiểu bảo tồn hóa thạch, hóa thạch dấu vết, cổ dấu vết học, phân hóa thạch, sỏi dạ dày, răng nón, định tuổi bằng vết phân hạch, chu kỳ lặp lại, hệ kín, liên giới, giới và Thế Nhân sinh.</p>
+</section>
+
+<section id="credits">
+  <h2 class="sec">Nguồn &amp; trích dẫn</h2>
+  <p class="small">Nội dung tóm tắt từ <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener"><i>An Introduction to Geology</i>, Chương 7</a>, © 2017 Chris Johnson, Matthew D. Affolter, Paul Inkenbrandt và Cam Mosher, giấy phép <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. Nguồn ảnh ghi ở chú thích từng hình; các ảnh chương sách ghi “All Rights Reserved” (chân dung Steno, granit và gneis) không được dùng.</p>
+  <ul class="small">
+    <li>Từ chương sách, theo giấy phép ghi trong phần ghi nguồn hình ảnh: Grand Canyon (ảnh bìa, tháng 3/2013, bất chỉnh hợp trên đá kết tinh, Lipan Point), chồng chất ở Isfjorden, Grandview Point, kế tục hóa thạch, địa tầng Grand Canyon, Redwall/Temple Butte/Muav, ba hình vẽ bất chỉnh hợp, sơ đồ khối, Nuvvuagittuq, đồng vị hydro, mô phỏng chu kỳ bán rã, phân rã alpha, chuỗi phân rã U-238, bắt giữ electron, khối phổ kế, khối phổ kế gia tốc, Trái Đất thời Hỏa thành, zircon, các lớp tro Yellowstone, nhiệt phát quang, apatit, <i>Archaeopteryx</i>, bọ ba thùy, hổ phách, gỗ hóa đá, khuôn ngoài, lá carbon hóa, dấu chân <i>Chirotherium</i>, phân hóa thạch, bản đồ hóa thạch Gondwana, Grand Staircase, sa thạch Navajo (Zion, Stevens Arch), ám tiêu Capitan, phủ chờm/phủ lùi, hóa thạch chỉ đạo, trùng lỗ, răng nón, động vật răng nón, đồng hồ địa chất.</li>
+    <li>Vẽ lại cho tài liệu này từ hình của chương sách: đồ thị chu kỳ bán rã (theo Krishnavedala, phạm vi công cộng) và thang tuổi địa chất (theo B. C. Madsen cho SLCC).</li>
+    <li>Vẽ riêng cho tài liệu này: các nguyên lý định tuổi tương đối, các bước định tuổi carbon-14, định tuổi tầng đá bằng đá magma, đối sánh Canyonlands–Zion.</li>
+    <li>Tài liệu ngoài dùng để kiểm chứng: bảng của Ủy ban Địa tầng Quốc tế (stratigraphy.org/chart); Gallagher, Brown &amp; Johnson (1998) về vết phân hạch; Nuclear Data Sheets về các nhánh phân rã của <sup>40</sup>K; vi.wikipedia cho thuật ngữ tiếng Việt.</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<button class="fab" id="notesBtn" type="button" aria-controls="notes" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Thuật ngữ
+</button>
+<button class="fab hide" id="toTop" type="button" aria-label="Lên đầu trang">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<aside class="notes" id="notes" hidden aria-label="Thuật ngữ">
+  <header>
+    <div><h2>Thuật ngữ · Chương 7</h2><button class="close" id="notesClose" type="button" aria-label="Đóng bảng thuật ngữ">×</button></div>
+    <input id="termSearch" type="search" placeholder="Tìm thuật ngữ và định nghĩa" autocomplete="off" aria-label="Tìm thuật ngữ và định nghĩa">
+    <div class="count" id="termCount"></div>
+  </header>
+  <dl id="termList"></dl>
+</aside>
+</div>
+
+<script type="application/json" id="terms">
+[
+ [
+ "địa tầng học",
+ "outcomes",
+ "Ngành nghiên cứu các tầng đá và quan hệ giữa chúng trong một khu vực nhất định. (EN: stratigraphy)"
+ ],
+ [
+ "tầng đá",
+ "outcomes",
+ "Các lớp đá phân biệt được, thường là đá trầm tích. (EN: strata, số ít stratum)"
+ ],
+ [
+ "định tuổi tương đối",
+ "s7-1",
+ "Xác định một đá hay sự kiện cổ hơn hay trẻ hơn đá, sự kiện khác, không cần tuổi bằng số. (EN: relative dating)"
+ ],
+ [
+ "đồng nhất luận",
+ "s7-1",
+ "Quan điểm của Hutton: hiện tại là chìa khóa của quá khứ; các định luật và quá trình ngày nay cũng đã diễn ra trong quá khứ. (EN: uniformitarianism)"
+ ],
+ [
+ "nguyên lý chồng chất",
+ "s7-1-1",
+ "Trong một loạt tầng không bị xáo trộn, đá ở dưới cổ hơn đá ở trên. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: principle of superposition)"
+ ],
+ [
+ "nguyên lý nằm ngang ban đầu",
+ "s7-1-1",
+ "Các lớp lắng đọng từ trên xuống (trầm tích, dòng dung nham) nằm ngang khi hình thành; ở rìa bồn có thể hơi nghiêng. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: principle of original horizontality)"
+ ],
+ [
+ "bồn trầm tích",
+ "s7-1-1",
+ "Vùng vỏ Trái Đất bị võng xuống, nơi trầm tích tích tụ. (EN: basin)"
+ ],
+ [
+ "nguyên lý liên tục theo phương ngang",
+ "s7-1-1",
+ "Các tầng kéo dài mọi hướng trong bồn cho đến khi vát mỏng ở rìa; một lớp bị hẻm núi cắt vẫn tiếp tục ở hai bên. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: principle of lateral continuity)"
+ ],
+ [
+ "nguyên lý quan hệ cắt xuyên",
+ "s7-1-1",
+ "Các cấu trúc cắt xuyên qua đá (nếp uốn, đứt gãy, xâm nhập magma) trẻ hơn đá bị cắt. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: principle of cross-cutting relationships)"
+ ],
+ [
+ "thể bao",
+ "s7-1-1",
+ "Mảnh của một đá nằm trong đá khác. Nguyên lý thể bao: đá bị bao cổ hơn đá chủ. vi.wikipedia dùng “thể tù”. (EN: inclusions)"
+ ],
+ [
+ "đá chủ",
+ "s7-1-1",
+ "Đá chứa các thể bao, hoặc bao quanh một khối đá khác. (EN: host rock)"
+ ],
+ [
+ "nguyên lý kế tục hóa thạch",
+ "s7-1-1",
+ "Tiến hóa tạo ra một chuỗi hóa thạch riêng biệt, nên mỗi tổ hợp hóa thạch đặc trưng cho thời gian sinh vật sống và dùng để đối sánh đá cùng tuổi (còn gọi là nguyên lý kế tục động vật). Thuật ngữ chưa thấy trong nguồn chính thức. (EN: principle of fossil / faunal succession)"
+ ],
+ [
+ "móng",
+ "s7-1-2",
+ "Đá nằm dưới cùng của một vùng, thường là đá kết tinh (magma và biến chất, không phân lớp) bên dưới các tầng trầm tích. (EN: basement)"
+ ],
+ [
+ "bất chỉnh hợp",
+ "s7-1-2",
+ "Khoảng thời gian bị thiếu trong hồ sơ đá do không lắng đọng và/hoặc bị bào mòn; vẽ bằng đường lượn sóng. (EN: unconformity)"
+ ],
+ [
+ "bất chỉnh hợp trên đá kết tinh",
+ "s7-1-3",
+ "Bất chỉnh hợp mà các tầng trầm tích nằm trên đá magma hoặc biến chất (kết tinh). Thuật ngữ chưa thấy trong nguồn chính thức. (EN: nonconformity)"
+ ],
+ [
+ "bất chỉnh hợp song song",
+ "s7-1-3",
+ "Bất chỉnh hợp giữa các tầng trầm tích song song, đánh dấu thời gian không lắng đọng hoặc bị bào mòn; vi.wikipedia gọi là “bất chỉnh hợp địa tầng”. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: disconformity)"
+ ],
+ [
+ "bất chỉnh hợp góc",
+ "s7-1-3",
+ "Bất chỉnh hợp mà các tầng nằm ngang phủ lên tầng cổ hơn đã bị nghiêng, uốn nếp và/hoặc đứt gãy rồi bào mòn. (EN: angular unconformity)"
+ ],
+ [
+ "biển tiến",
+ "s7-1-3",
+ "Mực nước biển dâng theo thời gian, đường bờ lùi vào đất liền; tạo trầm tích phủ chờm (onlap). (EN: transgression)"
+ ],
+ [
+ "biển thoái",
+ "s7-1-3",
+ "Mực nước biển hạ theo thời gian, đường bờ tiến ra biển; tạo trầm tích phủ lùi (offlap). Thuật ngữ chưa thấy trong nguồn chính thức. (EN: regression)"
+ ],
+ [
+ "vách đứt gãy",
+ "s7-1-4",
+ "Bậc hoặc gờ thấp nơi chuyển động của đứt gãy cắt lên bề mặt Trái Đất. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: fault scarp)"
+ ],
+ [
+ "tính phóng xạ",
+ "s7-2",
+ "Sự phân hủy tự phát, ngẫu nhiên của hạt nhân không bền, giải phóng hạt hoặc năng lượng; được phát hiện cuối thế kỷ 19. (EN: radioactivity)"
+ ],
+ [
+ "định tuổi tuyệt đối",
+ "s7-2",
+ "Xác định một đá hay sự kiện xảy ra cách đây bao nhiêu năm (tuổi bằng số), chủ yếu bằng định tuổi đồng vị phóng xạ. (EN: absolute dating)"
+ ],
+ [
+ "đồng vị",
+ "s7-2-1",
+ "Các nguyên tử của cùng một nguyên tố (cùng số proton) nhưng khác số neutron, ví dụ ¹H, ²H, ³H. (EN: isotope)"
+ ],
+ [
+ "phân rã phóng xạ",
+ "s7-2-1",
+ "Sự biến đổi đồng vị không bền (phóng xạ) thành đồng vị bền hơn của nguyên tố khác, kèm giải phóng hạt hoặc năng lượng. (EN: radioactive decay)"
+ ],
+ [
+ "chu kỳ bán rã",
+ "s7-2-1",
+ "Thời gian để một nửa số nguyên tử của đồng vị mẹ phóng xạ phân rã thành đồng vị con; không đổi với mỗi đồng vị. (EN: half-life)"
+ ],
+ [
+ "hệ kín",
+ "s7-2-1",
+ "Khoáng vật không có nguyên tố nào đi vào hay đi ra kể từ khi hình thành; điều kiện bắt buộc để định tuổi đồng vị phóng xạ. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: closed system)"
+ ],
+ [
+ "vụn",
+ "s7-2-1",
+ "Đá trầm tích gồm các hạt phong hóa từ đá có trước (cát, sỏi); hạt đến từ nhiều nguồn nên không định tuổi trực tiếp được. (EN: detrital)"
+ ],
+ [
+ "evaporit",
+ "s7-2-1",
+ "Đá trầm tích hóa học hình thành khi nước bay hơi; có thể chứa khoáng vật định tuổi được (ví dụ chứa kali). (EN: evaporite)"
+ ],
+ [
+ "zircon",
+ "s7-2-1",
+ "ZrSiO₄; khoáng vật bền (độ cứng 8,5), trong đó urani có thể thay thế zirconi; khoáng vật chính để định tuổi urani–chì. (EN: zircon)"
+ ],
+ [
+ "phân rã alpha",
+ "s7-2-1",
+ "Phân rã trong đó một hạt alpha (2 proton + 2 neutron, tức hạt nhân heli) thoát ra; số hiệu nguyên tử −2, số khối −4. (EN: alpha decay)"
+ ],
+ [
+ "phân rã beta",
+ "s7-2-1",
+ "Phân rã trong đó một neutron biến thành proton và electron (phát ra dưới dạng tia beta); số hiệu nguyên tử +1, số khối không đổi. (EN: beta decay)"
+ ],
+ [
+ "bắt giữ electron",
+ "s7-2-1",
+ "Phân rã trong đó một proton bắt một electron và trở thành neutron; số hiệu nguyên tử −1, số khối không đổi (ví dụ ⁴⁰K → ⁴⁰Ar). (EN: electron capture)"
+ ],
+ [
+ "đồng vị mẹ",
+ "s7-2-1",
+ "Đồng vị phóng xạ ban đầu, chất bị phân rã. (EN: parent isotope)"
+ ],
+ [
+ "đồng vị con",
+ "s7-2-1",
+ "Đồng vị được tạo ra do phân rã phóng xạ. (EN: daughter isotope)"
+ ],
+ [
+ "chuỗi phân rã",
+ "s7-2-1",
+ "Một loạt phân rã phóng xạ kết thúc ở một đồng vị bền, ví dụ ²³⁸U thành ²⁰⁶Pb. (EN: decay chain)"
+ ],
+ [
+ "ion",
+ "s7-2-1",
+ "Nguyên tử hoặc phân tử mang điện do mất hoặc nhận electron. (EN: ion)"
+ ],
+ [
+ "khối phổ kế",
+ "s7-2-2",
+ "Thiết bị đo lượng các đồng vị khác nhau trong một mẫu. (EN: mass spectrometer)"
+ ],
+ [
+ "định tuổi bằng carbon-14",
+ "s7-2-2",
+ "Định tuổi vật chất hữu cơ (gỗ, xương) theo lượng ¹⁴C còn lại so với ¹²C; chu kỳ bán rã 5.730 năm, dùng được đến khoảng 57.300 năm; hiệu chỉnh bằng vòng gỗ. (EN: radiocarbon dating)"
+ ],
+ [
+ "niên đại học thụ mộc",
+ "s7-2-2",
+ "Xác định niên đại bằng cách đếm và đối sánh vòng gỗ hằng năm; dùng để hiệu chỉnh tuổi carbon-14. (EN: dendrochronology)"
+ ],
+ [
+ "đối lưu",
+ "s7-2-3",
+ "Dòng chảy trong vật chất bị nung nóng không đều: phần nóng, nhẹ hơn dâng lên và nguội đi, phần đặc hơn chìm xuống; Kelvin bỏ qua đối lưu manti trong ước tính của mình. (EN: convection)"
+ ],
+ [
+ "định tuổi bằng phát quang",
+ "s7-2-5",
+ "Đo thời gian từ lần cuối trầm tích giàu thạch anh tiếp xúc ánh sáng mặt trời hoặc nhiệt, dựa trên ánh sáng do electron bị bẫy phát ra; cho trầm tích dưới 1 triệu năm tuổi. (EN: luminescence dating)"
+ ],
+ [
+ "định tuổi bằng vết phân hạch",
+ "s7-2-5",
+ "Đếm các vết hư hại do urani phân rã để lại trong hạt khoáng vật như apatit; khoảng 100.000 đến 2 tỉ năm. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: fission-track dating)"
+ ],
+ [
+ "chu kỳ lặp lại",
+ "s7-2-5",
+ "Thời gian trung bình giữa các trận động đất lớn trên một đứt gãy, tính từ hồ sơ động đất trong quá khứ. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: recurrence interval)"
+ ],
+ [
+ "hóa thạch",
+ "s7-3",
+ "Mọi bằng chứng về sự sống trong quá khứ được bảo tồn trong đá. (EN: fossil)"
+ ],
+ [
+ "bảo tồn nguyên trạng",
+ "s7-3-1",
+ "Kiểu hóa thạch hiếm, trong đó vật liệu gốc hoặc phần cứng còn nguyên không đổi (côn trùng trong hổ phách, lông voi ma mút). Thuật ngữ chưa thấy trong nguồn chính thức. (EN: actual preservation)"
+ ],
+ [
+ "khoáng hóa thấm",
+ "s7-3-1",
+ "Kiểu hóa thạch trong đó khoáng vật từ nước ngầm lấp đầy mọi khoảng trống trong di tích bị chôn vùi, kể cả tế bào (gỗ hóa đá). Thuật ngữ chưa thấy trong nguồn chính thức. (EN: permineralization)"
+ ],
+ [
+ "khuôn",
+ "s7-3-1",
+ "Hốc hoặc dấu in để lại trong đá khi sinh vật bị hòa tan đi (khuôn ngoài). Thuật ngữ chưa thấy trong nguồn chính thức. (EN: mold)"
+ ],
+ [
+ "bản đúc",
+ "s7-3-1",
+ "Trầm tích hoặc khoáng vật lấp đầy khuôn, giữ lại hình dạng sinh vật. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: cast)"
+ ],
+ [
+ "khoáng hóa tại chỗ",
+ "s7-3-1",
+ "Các kết hạch khoáng vật hình thành quanh cấu trúc mềm sau khi bị chôn vùi nhanh, giữ lại chi tiết ba chiều. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: authigenic mineralization)"
+ ],
+ [
+ "carbon hóa",
+ "s7-3-1",
+ "Kiểu hóa thạch trong đó sự nén ép đẩy các chất bay hơi ra ngoài, chỉ để lại màng carbon (lá cây, dương xỉ). Thuật ngữ chưa thấy trong nguồn chính thức. (EN: carbonization)"
+ ],
+ [
+ "hóa thạch dấu vết",
+ "s7-3-1",
+ "Bằng chứng gián tiếp về đời sống sinh vật, không phải bản thân sinh vật: dấu chân, hang đào, phân hóa thạch, sỏi dạ dày. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: trace fossils)"
+ ],
+ [
+ "cổ dấu vết học",
+ "s7-3-1",
+ "Ngành nghiên cứu hóa thạch dấu vết, nhất là dấu chân động vật tiền sử. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: ichnology)"
+ ],
+ [
+ "phân hóa thạch",
+ "s7-3-1",
+ "Phân động vật đã hóa thạch; cho biết về thức ăn và môi trường sống. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: coprolite)"
+ ],
+ [
+ "sỏi dạ dày",
+ "s7-3-1",
+ "Đá do động vật nuốt vào dạ dày; một loại hóa thạch dấu vết. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: gastrolith)"
+ ],
+ [
+ "chọn lọc tự nhiên",
+ "s7-3-2",
+ "Cơ chế tiến hóa của Darwin: cá thể có đặc điểm giúp vượt qua thử thách của môi trường sinh sản nhiều hơn và truyền lại đặc điểm đó. (EN: natural selection)"
+ ],
+ [
+ "loài",
+ "s7-3-2",
+ "Quần thể sinh vật có chung đặc điểm và có thể sinh ra con cái hữu thụ. (EN: species)"
+ ],
+ [
+ "tuyệt chủng",
+ "s7-3-2",
+ "Chỉ một loài không còn tồn tại. (EN: extinct)"
+ ],
+ [
+ "lý thuyết khoa học",
+ "s7-3-2",
+ "Ý tưởng khoa học được chấp nhận, giải thích một quá trình dựa trên thông tin tốt nhất hiện có. (EN: theory)"
+ ],
+ [
+ "giả thuyết",
+ "s7-3-2",
+ "Lời giải thích đề xuất, có thể kiểm chứng, cho một quan sát. (EN: hypothesis)"
+ ],
+ [
+ "đối sánh địa tầng",
+ "s7-4",
+ "Xác định những tầng ở các nơi tách biệt có cùng tuổi (ghép đá cùng tuổi, cùng loại…). Theo vị trí trong trình tự: đối sánh địa tầng theo vị trí. (EN: correlation; stratigraphic correlation)"
+ ],
+ [
+ "thạch địa tầng",
+ "s7-4",
+ "Đối sánh theo thạch học: thành phần và tính chất vật lý của đá. (EN: lithostratigraphy)"
+ ],
+ [
+ "thời địa tầng",
+ "s7-4",
+ "Đối sánh các đá cùng tuổi, kể cả khi thạch học khác nhau. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: chronostratigraphy)"
+ ],
+ [
+ "sinh địa tầng",
+ "s7-4",
+ "Đối sánh dùng hóa thạch chỉ đạo để ghép và định tuổi các tầng. (EN: biostratigraphic correlation)"
+ ],
+ [
+ "hóa thạch chỉ đạo",
+ "s7-4-4",
+ "Hóa thạch của sinh vật phân bố rộng về địa lý nhưng sống trong thời gian ngắn, nên khoanh tầng đá vào một khoảng thời gian hẹp. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: index fossils)"
+ ],
+ [
+ "trùng lỗ",
+ "s7-4-4",
+ "Sinh vật đơn bào có vỏ vôi; hóa thạch chỉ đạo cho kỷ Phấn Trắng và đại Tân sinh. (EN: foraminifera)"
+ ],
+ [
+ "răng nón",
+ "s7-4-4",
+ "Phần cứng dạng răng, bằng phosphat, của một loài động vật giống lươn đã tuyệt chủng; hóa thạch chỉ đạo từ kỷ Cambri đến kỷ Tam Điệp. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: conodonts)"
+ ],
+ [
+ "liên đại",
+ "s7-4-5",
+ "Đơn vị thời gian địa chất lớn nhất (hiện nay là Hiển sinh); đá tương ứng gọi là liên giới. Tên “liên giới” chưa thấy trong nguồn chính thức. (EN: eon; eonothem)"
+ ],
+ [
+ "đại",
+ "s7-4-5",
+ "Đơn vị thời gian địa chất lớn thứ hai (hiện nay là Tân sinh); đá tương ứng gọi là giới. Tên “giới” chưa thấy trong nguồn chính thức. (EN: era; erathem)"
+ ],
+ [
+ "kỷ",
+ "s7-4-5",
+ "Đơn vị thời gian địa chất lớn thứ ba (hiện nay là Đệ Tứ); đá tương ứng gọi là hệ. (EN: period; system)"
+ ],
+ [
+ "thế",
+ "s7-4-5",
+ "Đơn vị thời gian địa chất nhỏ hơn kỷ và lớn hơn kỳ (hiện nay là Holocen); đá tương ứng gọi là thống. (EN: epoch; series)"
+ ],
+ [
+ "thang tuổi địa chất",
+ "s7-4-5",
+ "Các phân chia có thứ tự của lịch sử Trái Đất (liên đại, đại, kỷ, thế, kỳ), xây dựng từ địa tầng học rồi sau đó được gán tuổi bằng số. (EN: geologic time scale)"
+ ],
+ [
+ "Anthropocene (Thế Nhân sinh)",
+ "s7-4-5",
+ "Đơn vị thời gian địa chất mới được đề xuất cho giai đoạn con người đã thay đổi các quá trình tự nhiên và để lại dấu vết trong hồ sơ đá. Tên “Thế Nhân sinh” chưa thấy trong nguồn chính thức. (EN: Anthropocene)"
+ ]
+ ]
+</script>
+<script>
+(function(){
+  var r=document.getElementById('hlRange'); if(!r) return;
+  var vi=document.querySelector('body [lang]').getAttribute('lang')==='vi';
+  function f(x,d){var s=x.toFixed(d).replace(/\.?0+$/,'');return vi?s.replace('.',','):s}
+  function big(n){var s=Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,vi?'.':',');return s}
+  function upd(){
+    var n=+r.value, p=100*Math.pow(.5,n), d=100-p;
+    document.getElementById('hlN').textContent=n;
+    document.getElementById('hlP').style.width=p+'%';
+    document.getElementById('hlD').style.width=d+'%';
+    var dp=Math.pow(2,n)-1;
+    document.getElementById('hlOut').innerHTML=vi
+      ? 'Mẹ: <b>'+f(p,3)+'%</b> · Con: <b>'+f(d,3)+'%</b> · Con/Mẹ = <b>'+big(dp)+'</b>'
+      : 'Parent: <b>'+f(p,3)+'%</b> · Daughter: <b>'+f(d,3)+'%</b> · D/P = <b>'+big(dp)+'</b>';
+    var c=n*5730, u=n*4.5;
+    document.getElementById('hlAge').textContent=vi
+      ? 'Với ¹⁴C: '+big(c)+' năm. Với ²³⁸U: '+f(u,1)+' tỉ năm.'
+      : 'For ¹⁴C that is '+big(c)+' years; for ²³⁸U, '+f(u,1)+' billion years.';
+  }
+  r.addEventListener('input',upd); upd();
+})();
+</script>
+<script src="assets/guide.js"></script>
+</body>
+</html>

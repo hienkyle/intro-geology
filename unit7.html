@@ -1,0 +1,1075 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Geologic Time</title>
+<meta name="description" content="Unit 7 study guide for An Introduction to Geology, Chapter 7: Geologic Time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/guide.css">
+<style>
+/* Unit 7 palette: olive green of the geologic time chart with fossil-amber gold and Grand Canyon rust; header bands run from Kaibab cream down to Vishnu schist. */
+:root{
+  --fig-prefix:"Figure 7."; --tbl-prefix:"Table 7.";
+  --bg:#f6f6f0; --surface:#ffffff; --surface-2:#ecede2; --fg:#1d2016; --muted:#5a5f4c; --line:#d8dac9;
+  --accent:#4a6418; --accent-soft:#e5edd3; --ochre:#a8700f; --ochre-soft:#f6e8c8; --rust:#a3402a;
+  --s1:#efe0bf; --s2:#d6a46a; --s3:#b0553a; --s4:#6e3a2c; --s5:#24231f;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#13140f; --surface:#1b1d16; --surface-2:#25281e; --fg:#ecede2; --muted:#b0b49d; --line:#383b2e;
+  --accent:#a9c96a; --accent-soft:#2b3519; --ochre:#e0b24f; --ochre-soft:#3a2e14; --rust:#e98a70;
+  --s1:#a8916a; --s2:#8c6440; --s3:#6e3a2a; --s4:#43281f; --s5:#12120e; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#13140f; --surface:#1b1d16; --surface-2:#25281e; --fg:#ecede2; --muted:#b0b49d; --line:#383b2e;
+  --accent:#a9c96a; --accent-soft:#2b3519; --ochre:#e0b24f; --ochre-soft:#3a2e14; --rust:#e98a70;
+  --s1:#a8916a; --s2:#8c6440; --s3:#6e3a2a; --s4:#43281f; --s5:#12120e; color-scheme:dark}
+ol.steps{padding-left:1.6rem}
+ol.steps li{margin:.35rem 0}
+</style>
+</head>
+<body>
+<div lang="en">
+<header class="hero" id="top">
+  <div class="strata" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Unit 7 · Chapter 7 · An Introduction to Geology</div>
+      <h1>Geologic Time</h1>
+      <p>How geologists put rocks and events in order, how radioactive decay turns minerals into clocks, how fossils form and match rocks across distances, and how the geologic time scale is built.</p>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="toc" aria-label="Contents">
+    <div class="navbar" role="group" aria-label="Page tools">
+      <a class="btn tbtn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>All units</span></a>
+      <a class="btn tbtn lbtn" href="unit7-vi.html" lang="vi" hreflang="vi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Tiếng Việt</span></a>
+      <button class="btn tbtn" id="themeBtn" type="button" aria-label="Toggle light or dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Dark mode</span>
+      </button>
+    </div>
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#outcomes">Learning outcomes</a></li>
+      <li><a href="#s7-1"><span class="num">7.1</span>Relative dating</a>
+        <ol>
+          <li><a href="#s7-1-1"><span class="num">7.1.1</span>Principles</a></li>
+          <li><a href="#s7-1-2"><span class="num">7.1.2</span>Grand Canyon</a></li>
+          <li><a href="#s7-1-3"><span class="num">7.1.3</span>Unconformities</a></li>
+          <li><a href="#s7-1-4"><span class="num">7.1.4</span>Applying the principles</a></li>
+        </ol>
+      </li>
+      <li><a href="#s7-2"><span class="num">7.2</span>Absolute dating</a>
+        <ol>
+          <li><a href="#s7-2-1"><span class="num">7.2.1</span>Radioactive decay</a></li>
+          <li><a href="#s7-2-2"><span class="num">7.2.2</span>Radioisotopic dating</a></li>
+          <li><a href="#s7-2-3"><span class="num">7.2.3</span>Age of the Earth</a></li>
+          <li><a href="#s7-2-4"><span class="num">7.2.4</span>Dating geological events</a></li>
+          <li><a href="#s7-2-5"><span class="num">7.2.5</span>Other techniques</a></li>
+        </ol>
+      </li>
+      <li><a href="#s7-3"><span class="num">7.3</span>Fossils and evolution</a>
+        <ol>
+          <li><a href="#s7-3-1"><span class="num">7.3.1</span>Preservation</a></li>
+          <li><a href="#s7-3-2"><span class="num">7.3.2</span>Evolution</a></li>
+        </ol>
+      </li>
+      <li><a href="#s7-4"><span class="num">7.4</span>Correlation</a>
+        <ol>
+          <li><a href="#s7-4-1"><span class="num">7.4.1</span>Stratigraphic</a></li>
+          <li><a href="#s7-4-2"><span class="num">7.4.2</span>Lithostratigraphic</a></li>
+          <li><a href="#s7-4-3"><span class="num">7.4.3</span>Chronostratigraphic</a></li>
+          <li><a href="#s7-4-4"><span class="num">7.4.4</span>Biostratigraphic</a></li>
+          <li><a href="#s7-4-5"><span class="num">7.4.5</span>Geologic time scale</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#factcheck">Fact-check notes</a></li>
+      <li><a href="#credits">Credits</a></li>
+    </ol>
+  </nav>
+
+<main>
+<section id="outcomes">
+  <h2 class="sec">Learning outcomes</h2>
+  <p class="lead">By the end of Chapter 7 you should be able to do each of these. The tag shows where it is covered.</p>
+  <ul class="outcomes">
+    <li><a class="tag" href="#s7-1">7.1</a><span>Explain the difference between relative time and numeric time.</span></li>
+    <li><a class="tag" href="#s7-1-1">7.1.1</a><span>Describe the principles of stratigraphy (the chapter says five; it lists six).</span></li>
+    <li><a class="tag" href="#s7-1-4">7.1.4</a><span>Apply relative dating principles to a block diagram and interpret the sequence of geologic events.</span></li>
+    <li><a class="tag" href="#s7-2-1">7.2.1</a><span>Define an isotope, and explain alpha decay, beta decay, and electron capture as mechanisms of radioactive decay.</span></li>
+    <li><a class="tag" href="#s7-2-2">7.2.2</a><span>Describe how radioisotopic dating is accomplished and list the four key isotopes used.</span></li>
+    <li><a class="tag" href="#s7-2-2">7.2.2</a><span>Explain how carbon-14 forms in the atmosphere and how it is used in dating recent events.</span></li>
+    <li><a class="tag" href="#s7-2-3">7.2.3</a><span>Explain how scientists know the numeric age of the Earth and other events in Earth history.</span></li>
+    <li><a class="tag" href="#s7-2-4">7.2.4</a><span>Explain how sedimentary sequences can be dated using radioisotopes and other techniques.</span></li>
+    <li><a class="tag" href="#s7-3-1">7.3.1</a><span>Define a fossil and describe types of fossil preservation.</span></li>
+    <li><a class="tag" href="#s7-3-2">7.3.2</a><span>Outline how natural selection takes place as a mechanism of evolution.</span></li>
+    <li><a class="tag" href="#s7-4">7.4</a><span>Describe stratigraphic correlation.</span></li>
+    <li><a class="tag" href="#s7-4-5">7.4.5</a><span>List the eons, eras, and periods of the geologic time scale and explain the purpose behind the divisions.</span></li>
+    <li><a class="tag" href="#s7-4-3">7.4.3</a><span>Explain the relationship between time units and corresponding rock units: chronostratigraphy versus lithostratigraphy.</span></li>
+  </ul>
+  <div class="callout">
+    <h4>How to use this guide</h4>
+    <p>Underlined words are key terms. Click one, or open <b>Key terms</b> at the bottom right, to read and search every definition from this chapter. Geologists tell time in two ways: <b>relative time</b> puts events in order (older or younger) without numbers, and <b>numeric (absolute) time</b> gives an age in years. The geologic time scale and the outline of Earth history were worked out with relative time long before anyone could measure an age in years.</p>
+  </div>
+  <div class="spheres">
+    <div class="sphere"><b><span class="dot" style="background:var(--accent)"></span>Relative</b>Which came first? Principles of stratigraphy.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--ochre)"></span>Absolute</b>How many years ago? Radioactive decay and other clocks.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--rust)"></span>Fossils</b>Evidence of past life, used to match rocks.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s4)"></span>Correlation</b>Matching rocks of the same age from place to place.</div>
+  </div>
+  <figure id="fig-hero">
+    <div class="frame"><img src="images/unit7/hero.webp" alt="Layered red, orange and cream cliffs of the Grand Canyon under a blue sky, with green pines in the foreground." loading="lazy" width="1000" height="667"></div>
+    <figcaption>The Grand Canyon, Arizona: perhaps no place on Earth better shows the principles geologists use to work out the ages of rocks.<span class="credit">John Kees, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <p><b>A short history.</b> Nicolas Steno (1638–1686) introduced the basic principles of <button class="term" data-term="stratigraphy">stratigraphy</button>, the study of layered rocks, in 1669. William Smith (1769–1839), working in English coal mines, saw that <button class="term" data-term="strata">strata</button> and their order were the same across the region; he made the first national geologic map of Britain and became "the Father of English Geology". Nineteenth-century scientists used Steno's principles to build a relative time scale, naming units after the rocks of the areas where they were described (<a href="#s7-4-5">7.4.5</a>). Earth's history itself is the topic of Chapter 8.</p>
+</section>
+
+<!-- 7.1 -->
+<section id="s7-1">
+  <h2 class="sec"><span class="n">7.1</span>Relative dating</h2>
+  <p><button class="term" data-term="relative dating">Relative dating</button> decides whether one rock or event is older or younger than another, without knowing how many years ago either formed. Its principles look obvious now, but scholars did not generally accept them until the scientific revolution of the 17th and 18th centuries. James Hutton's <button class="term" data-term="uniformitarianism">uniformitarianism</button> ("the present is the key to the past"; Unit 1) gave the basis for reading rocks with scientific principles.</p>
+
+  <h3 id="s7-1-1">7.1.1 Relative dating principles</h3>
+  <p>These principles are used across geology but are most useful in stratigraphy (<a href="#fig-principles">Figure 7.2</a>).</p>
+  <ol>
+    <li><b><button class="term" data-term="principle of superposition">Superposition</button>.</b> In an undisturbed sequence of sedimentary strata, the bottom layers are the oldest and the layers above them are younger.</li>
+    <li><b><button class="term" data-term="principle of original horizontality">Original horizontality</button>.</b> Layers deposited from above, such as sediments and lava flows, are laid down horizontally. The exception is at a basin's margins, where strata can slope slightly down into the <button class="term" data-term="basin">basin</button>.</li>
+    <li><b><button class="term" data-term="principle of lateral continuity">Lateral continuity</button>.</b> Within the depositional basin, strata continue in all directions until they thin out at the basin's edge. Every layer ends somewhere, at a barrier such as a ridge or where it gets too far from its sediment source or volcano. Strata later cut by a canyon stay continuous on both sides.</li>
+    <li><b><button class="term" data-term="principle of cross-cutting relationships">Cross-cutting relationships</button>.</b> Folds, faults, and igneous intrusions that cut across rocks are younger than the rocks they cut.</li>
+    <li><b><button class="term" data-term="inclusions">Inclusions</button>.</b> When one rock formation contains pieces of another rock, the included rock is older than the <button class="term" data-term="host rock">host rock</button>.</li>
+    <li><b><button class="term" data-term="principle of fossil succession">Fossil succession</button>.</b> Evolution has produced a succession of unique fossils that match units of the geologic time scale. <b>Assemblages</b> (groups of several distinct fossils found together) are unique to the time they lived, so they correlate rocks of the same age over wide areas.</li>
+  </ol>
+  <figure id="fig-principles">
+    <div class="frame"><svg viewBox="0 0 900 540" role="img" aria-labelledby="pr-t-en" style="width:100%;min-width:620px;height:auto;display:block"><title id="pr-t-en">Six principles of relative dating, each shown as a small cross-section.</title><g transform="translate(0,0)"><rect x="6" y="6" width="288" height="258" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><rect x="34" y="36" width="232" height="38" fill="#efe0b9" stroke="#5b4a37" stroke-width="1"/><rect x="104.0" y="44.0" width="92.0" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="150.0" y="59.7" text-anchor="middle" font-size="13" fill="#151515">4 · youngest</text><rect x="34" y="74" width="232" height="38" fill="#b9c79f" stroke="#5b4a37" stroke-width="1"/><rect x="139.5" y="82.0" width="21.0" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="150.0" y="97.7" text-anchor="middle" font-size="13" fill="#151515">3</text><rect x="34" y="112" width="232" height="38" fill="#e3c38f" stroke="#5b4a37" stroke-width="1"/><rect x="139.5" y="120.0" width="21.0" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="150.0" y="135.7" text-anchor="middle" font-size="13" fill="#151515">2</text><rect x="34" y="150" width="232" height="38" fill="#c99a6b" stroke="#5b4a37" stroke-width="1"/><rect x="112.6" y="158.0" width="74.8" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="150.0" y="173.7" text-anchor="middle" font-size="13" fill="#151515">1 · oldest</text><text x="150.0" y="222.0" font-size="15" class="svg-ink" text-anchor="middle" font-weight="600">Superposition</text><text x="150.0" y="241.0" font-size="13" class="svg-muted" text-anchor="middle">Lower layers are older.</text></g><g transform="translate(300,0)"><rect x="6" y="6" width="288" height="258" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><defs><clipPath id="basinen"><path d="M30 40 L80 190 L220 190 L270 40 Z"/></clipPath></defs><path d="M20 40 L30 40 L80 190 L220 190 L270 40 L280 40 L280 200 L20 200 Z" fill="#8f8a85" stroke="#4a4541"/><path d="M10 56 L70 68 Q90 70 110 70 L190 70 Q210 70 230 68 L290 56 L290 200 L10 200 Z" fill="#efe0b9" stroke="#5b4a37" stroke-width="1" clip-path="url(#basinen)"/><path d="M10 91 L70 103 Q90 105 110 105 L190 105 Q210 105 230 103 L290 91 L290 200 L10 200 Z" fill="#b9c79f" stroke="#5b4a37" stroke-width="1" clip-path="url(#basinen)"/><path d="M10 126 L70 138 Q90 140 110 140 L190 140 Q210 140 230 138 L290 126 L290 200 L10 200 Z" fill="#e3c38f" stroke="#5b4a37" stroke-width="1" clip-path="url(#basinen)"/><path d="M10 151 L70 163 Q90 165 110 165 L190 165 Q210 165 230 163 L290 151 L290 200 L10 200 Z" fill="#c99a6b" stroke="#5b4a37" stroke-width="1" clip-path="url(#basinen)"/><path d="M30 40 L80 190 L220 190 L270 40" fill="none" stroke="#4a4541" stroke-width="2"/><text x="150.0" y="222.0" font-size="15" class="svg-ink" text-anchor="middle" font-weight="600">Original horizontality</text><text x="150.0" y="241.0" font-size="13" class="svg-muted" text-anchor="middle">Laid down flat; slight slope</text><text x="150.0" y="258.0" font-size="13" class="svg-muted" text-anchor="middle">only at the basin margin.</text></g><g transform="translate(600,0)"><rect x="6" y="6" width="288" height="258" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><path d="M30 40 L120 40 L127 80 L30 80 Z" fill="#efe0b9" stroke="#5b4a37"/><path d="M270 40 L180 40 L173 80 L270 80 Z" fill="#efe0b9" stroke="#5b4a37"/><path d="M30 80 L127 80 L134 120 L30 120 Z" fill="#b9c79f" stroke="#5b4a37"/><path d="M270 80 L173 80 L166 120 L270 120 Z" fill="#b9c79f" stroke="#5b4a37"/><path d="M30 120 L134 120 L141 160 L30 160 Z" fill="#e3c38f" stroke="#5b4a37"/><path d="M270 120 L166 120 L159 160 L270 160 Z" fill="#e3c38f" stroke="#5b4a37"/><path d="M30 160 L141 160 L148 200 L30 200 Z" fill="#c99a6b" stroke="#5b4a37"/><path d="M270 160 L159 160 L152 200 L270 200 Z" fill="#c99a6b" stroke="#5b4a37"/><path d="M127 80 L173 80" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/><path d="M134 120 L166 120" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/><path d="M141 160 L159 160" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/><rect x="63.7" y="89.0" width="22.6" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="75.0" y="104.7" text-anchor="middle" font-size="13" font-weight="600" fill="#151515">A</text><rect x="213.7" y="89.0" width="22.6" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="225.0" y="104.7" text-anchor="middle" font-size="13" font-weight="600" fill="#151515">A</text><text x="150.0" y="222.0" font-size="15" class="svg-ink" text-anchor="middle" font-weight="600">Lateral continuity</text><text x="150.0" y="241.0" font-size="13" class="svg-muted" text-anchor="middle">A layer cut by a canyon</text><text x="150.0" y="258.0" font-size="13" class="svg-muted" text-anchor="middle">continues on both sides.</text></g><g transform="translate(0,270)"><rect x="6" y="6" width="288" height="258" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><path d="M30 60 L203.7 60 L199.2 95 L30 95 Z" fill="#efe0b9" stroke="#5b4a37"/><path d="M201.4 78 L270 78 L270 113 L196.9 113 Z" fill="#efe0b9" stroke="#5b4a37"/><path d="M30 95 L199.2 95 L194.7 130 L30 130 Z" fill="#b9c79f" stroke="#5b4a37"/><path d="M196.9 113 L270 113 L270 148 L192.4 148 Z" fill="#b9c79f" stroke="#5b4a37"/><path d="M30 130 L194.7 130 L190.2 165 L30 165 Z" fill="#e3c38f" stroke="#5b4a37"/><path d="M192.4 148 L270 148 L270 183 L187.8 183 Z" fill="#e3c38f" stroke="#5b4a37"/><path d="M30 165 L190.2 165 L185.6 200 L30 200 Z" fill="#c99a6b" stroke="#5b4a37"/><path d="M187.8 183 L270 183 L270 200 L185.6 200 Z" fill="#c99a6b" stroke="#5b4a37"/><path d="M100 60 L124 60 L116 200 L92 200 Z" fill="#3b3b3b" stroke="#111"/><path d="M204.5 54 L185.1 204" stroke="#b3261e" stroke-width="3"/><text x="70.0" y="34.0" font-size="12.5" class="svg-ink" text-anchor="middle">dike (younger)</text><path d="M90.0 40.0 L110.0 72.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M90.0 40.0 L110.0 72.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="110.0" cy="72.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="236.0" y="34.0" font-size="12.5" class="svg-ink" text-anchor="middle">fault (younger)</text><path d="M226.0 40.0 L197.3 110.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M226.0 40.0 L197.3 110.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="197.3" cy="110.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="150.0" y="222.0" font-size="15" class="svg-ink" text-anchor="middle" font-weight="600">Cross-cutting relationships</text><text x="150.0" y="241.0" font-size="13" class="svg-muted" text-anchor="middle">Whatever cuts a rock is</text><text x="150.0" y="258.0" font-size="13" class="svg-muted" text-anchor="middle">younger than that rock.</text></g><g transform="translate(300,270)"><rect x="6" y="6" width="288" height="258" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><rect x="30" y="56" width="240" height="144" fill="#e9b9a9" stroke="#6b3b30"/><circle cx="110" cy="82" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="184" cy="72" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="158" cy="110" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="49" cy="129" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="45" cy="119" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="52" cy="74" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="133" cy="171" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="64" cy="91" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="179" cy="187" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="168" cy="114" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="259" cy="68" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="232" cy="100" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="69" cy="78" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="106" cy="170" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="77" cy="139" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="182" cy="111" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="161" cy="70" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="50" cy="89" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="191" cy="118" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="108" cy="139" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="139" cy="102" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="217" cy="154" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="92" cy="138" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="156" cy="178" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="202" cy="100" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="259" cy="78" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="131" cy="162" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="71" cy="127" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="45" cy="150" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="210" cy="138" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="236" cy="103" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="195" cy="140" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="168" cy="122" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="228" cy="187" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="144" cy="150" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="50" cy="155" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="184" cy="193" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="223" cy="100" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="124" cy="150" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="41" cy="123" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="74" cy="77" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="49" cy="163" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="65" cy="95" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="125" cy="177" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="54" cy="121" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="161" cy="179" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="223" cy="176" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="99" cy="117" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="118" cy="179" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="254" cy="82" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="76" cy="93" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="89" cy="126" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="170" cy="97" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="37" cy="117" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="120" cy="137" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="253" cy="153" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="154" cy="144" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="190" cy="69" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="241" cy="165" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="235" cy="167" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="125" cy="115" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="60" cy="146" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="50" cy="71" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="84" cy="83" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="114" cy="69" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="36" cy="82" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="59" cy="110" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="42" cy="177" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="176" cy="82" r="1.6" fill="#7a4a40" opacity=".55"/><circle cx="94" cy="108" r="1.6" fill="#7a4a40" opacity=".55"/><path d="M60 80 L92 72 L100 98 L70 108 Z" fill="#4d5560" stroke="#22262b"/><path d="M140 96 L170 88 L176 116 L150 124 L136 112 Z" fill="#4d5560" stroke="#22262b"/><path d="M206 70 L236 76 L230 100 L204 96 Z" fill="#4d5560" stroke="#22262b"/><rect x="84.5" y="159.0" width="131.0" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="150.0" y="174.7" text-anchor="middle" font-size="13" fill="#151515">host rock: younger</text><text x="150.0" y="34.0" font-size="12.5" class="svg-ink" text-anchor="middle">inclusions: older</text><path d="M140.0 40.0 L155.0 104.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M140.0 40.0 L155.0 104.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="155.0" cy="104.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><path d="M122.0 40.0 L82.0 90.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M122.0 40.0 L82.0 90.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="82.0" cy="90.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="150.0" y="222.0" font-size="15" class="svg-ink" text-anchor="middle" font-weight="600">Inclusions</text><text x="150.0" y="241.0" font-size="13" class="svg-muted" text-anchor="middle">An included piece is older</text><text x="150.0" y="258.0" font-size="13" class="svg-muted" text-anchor="middle">than its host rock.</text></g><g transform="translate(600,270)"><rect x="6" y="6" width="288" height="258" rx="10" fill="var(--surface-2)" stroke="var(--line)"/><rect x="34" y="40" width="90" height="44" fill="#efe0b9" stroke="#5b4a37"/><path d="M79 62 m0 0 a3 3 0 1 1 3 3 a6 6 0 1 1 -6 -6 a9 9 0 1 1 9 9" fill="none" stroke="#2b2118" stroke-width="2"/><rect x="34" y="84" width="90" height="44" fill="#e3c38f" stroke="#5b4a37"/><path d="M67 113 Q79 90 91 113 Z" fill="none" stroke="#2b2118" stroke-width="2"/><path d="M79 113 L73 100" stroke="#2b2118" stroke-width="1.3"/><path d="M79 113 L79 100" stroke="#2b2118" stroke-width="1.3"/><path d="M79 113 L85 100" stroke="#2b2118" stroke-width="1.3"/><rect x="34" y="128" width="90" height="44" fill="#c99a6b" stroke="#5b4a37"/><ellipse cx="79" cy="150" rx="9" ry="13" fill="none" stroke="#2b2118" stroke-width="2"/><path d="M70 148 L88 148 M71 154 L87 154 M79 137 L79 163" stroke="#2b2118" stroke-width="1.3"/><rect x="176" y="70" width="90" height="44" fill="#efe0b9" stroke="#5b4a37"/><path d="M221 92 m0 0 a3 3 0 1 1 3 3 a6 6 0 1 1 -6 -6 a9 9 0 1 1 9 9" fill="none" stroke="#2b2118" stroke-width="2"/><rect x="176" y="114" width="90" height="44" fill="#e3c38f" stroke="#5b4a37"/><path d="M209 143 Q221 120 233 143 Z" fill="none" stroke="#2b2118" stroke-width="2"/><path d="M221 143 L215 130" stroke="#2b2118" stroke-width="1.3"/><path d="M221 143 L221 130" stroke="#2b2118" stroke-width="1.3"/><path d="M221 143 L227 130" stroke="#2b2118" stroke-width="1.3"/><rect x="176" y="158" width="90" height="44" fill="#c99a6b" stroke="#5b4a37"/><ellipse cx="221" cy="180" rx="9" ry="13" fill="none" stroke="#2b2118" stroke-width="2"/><path d="M212 178 L230 178 M213 184 L229 184 M221 167 L221 193" stroke="#2b2118" stroke-width="1.3"/><path d="M124 40 L176 70" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/><path d="M124 84 L176 114" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/><path d="M124 128 L176 158" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/><path d="M124 172 L176 202" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/><text x="150.0" y="222.0" font-size="15" class="svg-ink" text-anchor="middle" font-weight="600">Fossil succession</text><text x="150.0" y="241.0" font-size="13" class="svg-muted" text-anchor="middle">Same fossil assemblage</text><text x="150.0" y="258.0" font-size="13" class="svg-muted" text-anchor="middle">→ same age.</text></g></svg></div>
+    <figcaption>The principles of relative dating, drawn as simple cross-sections.<span class="credit">Drawn for this guide from the chapter's descriptions.</span></figcaption>
+  </figure>
+  <figure id="fig-superposition">
+    <div class="frame"><img src="images/unit7/superposition.webp" alt="A steep mountainside of grey rock in many horizontal layers rising from the sea." loading="lazy" width="761" height="1000" style="max-height:520px;width:auto"></div>
+    <figcaption>Superposition: lower strata are older than those lying on top of them (Isfjorden, Svalbard).<span class="credit">Mark A. Wilson, public domain (via the textbook).</span></figcaption>
+  </figure>
+  <figure id="fig-lateral">
+    <div class="frame"><img src="images/unit7/lateral.webp" alt="Panorama of the Grand Canyon where the same coloured rock bands run along both canyon walls." loading="lazy" width="800" height="281"></div>
+    <figcaption>Lateral continuity from Grandview Point, Grand Canyon: the same layers line up on either side of the canyon.<span class="credit">Ron Clausen, CC0 (via the textbook).</span></figcaption>
+  </figure>
+  <figure id="fig-faunal">
+    <div class="frame"><img class="diagram" src="images/unit7/faunal.webp" alt="Two rock columns on either side of a valley, with matching fossil drawings in matching layers joined by lines." loading="lazy" width="717" height="525"></div>
+    <figcaption>Fossil succession: layers holding the same fossils are correlated across a gap.<span class="credit">דקי, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-1-2">7.1.2 Grand Canyon example</h3>
+  <p>The Grand Canyon shows the principles at work. Its layers are stacked from oldest at the bottom to youngest at the top (superposition). The white layer just below the rim, the <b>Coconino Sandstone</b>, appears on both sides of the canyon carved by the Colorado River (lateral continuity).</p>
+  <figure id="fig-gc2013">
+    <div class="frame"><img src="images/unit7/gc2013.webp" alt="Grand Canyon view with a bright white band of rock running along the cliffs below the rim." loading="lazy" width="640" height="427"></div>
+    <figcaption>The Grand Canyon of Arizona. The pale band below the rim is the Coconino Sandstone.<span class="credit">Tomas Castelazo, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <p><a href="#fig-gcstrat">Figure 7.7</a> shows three sets of rocks. At the bottom are the <b>Vishnu Basement Rocks</b>: metamorphic <b>schist (#16)</b>, the oldest unit, cut by a <b>granite intrusion (#17)</b>, which is therefore younger (cross-cutting). Above them, the sedimentary layers are numbered in reverse, <b>#15 the oldest and #1 the youngest</b> (superposition). The region lies on the <b>Colorado Plateau</b>, where strata are horizontal or nearly so (original horizontality); apart from a broad regional uplift they have barely been disturbed.</p>
+  <figure id="fig-gcstrat">
+    <div class="frame"><img class="diagram" src="images/unit7/gcstrat.webp" alt="Cross-section chart of the Grand Canyon rock units numbered 1 to 18, grouped as Layered Paleozoic Rocks, Grand Canyon Supergroup Rocks and Vishnu Basement Rocks, with ages and thicknesses." loading="lazy" width="600" height="819" style="max-height:760px;width:auto"></div>
+    <figcaption>Grand Canyon's three sets of rocks, with each layer's age (millions of years) and thickness. Wavy lines between units are unconformities; the Great Unconformity is marked at left.<span class="credit">National Park Service, public domain (via the textbook).</span></figcaption>
+  </figure>
+  <p>The strata were laid flat on older igneous and metamorphic <button class="term" data-term="basement">basement</button>. Because metamorphism, intrusion, and erosion broke the record between the basement and the strata, the contact is an <button class="term" data-term="unconformity">unconformity</button>: a span when nothing was deposited or when deposits were eroded, so no rock records that time at that place. Cross-sections and stratigraphic columns show unconformities as <b>wavy lines</b>.</p>
+  <figure id="fig-gcnonconf">
+    <div class="frame"><img src="images/unit7/gcnonconf.webp" alt="Inner gorge of the Grand Canyon: tilted red layered rock resting on dark crystalline rock." loading="lazy" width="1000" height="750"></div>
+    <figcaption>Red layers of the Grand Canyon Supergroup on the dark Vishnu Schist: a nonconformity.<span class="credit">Simeon87, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-1-3">7.1.3 Unconformities</h3>
+  <p>There are three types (<a href="#tbl-unconf">Table 7.1</a>, <a href="#fig-unconf">Figure 7.9</a>).</p>
+  <div class="tablewrap" id="tbl-unconf">
+    <table>
+      <caption>The three types of unconformity.</caption>
+      <thead><tr><th>Type</th><th>Rock below</th><th>Rock above</th><th>Grand Canyon example</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="nonconformity">Nonconformity</button></td><td>Igneous or metamorphic (crystalline)</td><td>Sedimentary strata</td><td>Strata on the Vishnu basement</td></tr>
+        <tr><td><button class="term" data-term="disconformity">Disconformity</button></td><td>Sedimentary strata, parallel</td><td>Sedimentary strata, parallel; a break with no deposition or with erosion between</td><td>Between the Muav, Temple Butte, and Redwall formations</td></tr>
+        <tr><td><button class="term" data-term="angular unconformity">Angular unconformity</button></td><td>Sedimentary strata tilted, folded, and/or faulted, then eroded</td><td>Horizontal sedimentary strata</td><td>The Great Unconformity</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure id="fig-unconf">
+    <div class="frame">
+      <ul class="gallery" style="--cols:3">
+        <li><img class="diagram" src="images/unit7/disconf.webp" alt="Parallel grey layers with a thick wavy black line between two of them." loading="lazy" width="597" height="451" style="aspect-ratio:4/3;object-fit:contain"><span><b>Disconformity</b>a break between parallel strata</span></li>
+        <li><img class="diagram" src="images/unit7/nonconf.webp" alt="Layered rock resting on a wavy black line above unlayered crystalline rock." loading="lazy" width="596" height="449" style="aspect-ratio:4/3;object-fit:contain"><span><b>Nonconformity</b>strata on igneous or metamorphic rock</span></li>
+        <li><img class="diagram" src="images/unit7/angular.webp" alt="Horizontal layers resting on a wavy black line above tilted layers." loading="lazy" width="595" height="450" style="aspect-ratio:4/3;object-fit:contain"><span><b>Angular unconformity</b>flat strata on tilted strata</span></li>
+      </ul>
+    </div>
+    <figcaption>The three types of unconformity. The heavy wavy line is the unconformity.<span class="credit">דקי, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <p><b>Disconformities in the Grand Canyon.</b> The strata record marine <button class="term" data-term="transgression">transgressions</button> and <button class="term" data-term="regression">regressions</button> as sea level rose and fell over millions of years. High sea level laid down marine strata; when the sea fell, the land was exposed and eroded. Layers that could have been there are missing, and the time they would have recorded is represented by the disconformity (heavy wavy lines in <a href="#fig-gcstrat">Figure 7.7</a>).</p>
+  <p><b>The Great Unconformity.</b> Most Phanerozoic strata in the canyon are horizontal, but near the bottom they lie on <b>tilted</b> strata. Tectonic processes tilted the lower strata, which were then eroded; later horizontal strata were deposited on top.</p>
+  <div class="pair">
+    <figure id="fig-redwall">
+      <div class="frame"><img src="images/unit7/redwall.webp" alt="Cliff of red-stained rock labelled Redwall Limestone above a thin wedge labelled Temple Butte Formation and Muav Limestone below." loading="lazy" width="800" height="600"></div>
+      <figcaption>Disconformities at both contacts of the Temple Butte Formation, between the Muav and Redwall limestones. The pinching-out Temple Butte shows the erosion most clearly.<span class="credit">National Park Service, public domain (via the textbook).</span></figcaption>
+    </figure>
+    <figure id="fig-lipan">
+      <div class="frame"><img src="images/unit7/lipan.webp" alt="Wide Grand Canyon view where flat-lying layers rest on tilted layers near the bottom." loading="lazy" width="1000" height="748"></div>
+      <figcaption>The Great Unconformity from Lipan Point: flat-lying strata over dipping strata, an angular unconformity.<span class="credit">Doug Dolde, public domain (via the textbook).</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s7-1-4">7.1.4 Applying relative dating principles</h3>
+  <p>Using the principles and what you know about igneous, sedimentary, and metamorphic rock (Units 4–6), read the events in <a href="#fig-block">Figure 7.12</a> from oldest to youngest:</p>
+  <figure id="fig-block">
+    <div class="frame"><img class="diagram" src="images/unit7/block.webp" alt="Block diagram: wavy folded gneiss cut by fault A and an irregular granite body B, covered by layer C and then layer E; a dark dike D cuts C but not E; fault F cuts everything and forms a step at the surface." loading="lazy" width="1400" height="740"></div>
+    <figcaption>Block diagram for practice. The wavy rock is old metamorphic gneiss; A and F are faults; B is granite; D is a basaltic dike; C and E are sedimentary strata.<span class="credit">Woudloper, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <ol class="steps">
+    <li><b>Gneiss</b> forms and is folded (oldest).</li>
+    <li><b>Fault A</b> cuts and displaces the gneiss.</li>
+    <li><b>Batholith B</b> (granite) intrudes as magma; its irregular outline cuts both the gneiss and fault A, so it is younger than both.</li>
+    <li><b>Erosion</b> of gneiss, fault A, and B makes a <b>nonconformity</b> (the wavy line), an ancient land surface.</li>
+    <li><b>Layer C</b> is deposited on that surface, perhaps by a marine transgression.</li>
+    <li><b>Dike D</b> cuts every rock except E.</li>
+    <li><b>Erosion</b> flattens the land: the top of D is level with the top of C, so there is a <b>disconformity</b> between C/D and E.</li>
+    <li><b>Layer E</b> is deposited.</li>
+    <li><b>Fault F</b> cuts B, C, and E, making a <button class="term" data-term="fault scarp">fault scarp</button> (the low ridge, upper left).</li>
+    <li><b>Present-day erosion</b> rounds off the scarp and shapes the modern landscape (youngest).</li>
+  </ol>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener">Section 7.1 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 7.2 -->
+<section id="s7-2">
+  <h2 class="sec"><span class="n">7.2</span>Absolute dating</h2>
+  <p>Relative time tells the story in order but gives no numbers, so it cannot give the <b>rate</b> of geologic processes. From uniformitarianism, early geologists reasoned that processes are slow and Earth is very old, and relative dating was the only method until the end of the 19th century. The discovery of <button class="term" data-term="radioactivity">radioactivity</button> in the late 1800s gave a new tool, <b>radioisotopic dating</b>, which assigns ages in years to mineral grains. These numbers do not depend on comparison with other rocks, so the method is called <button class="term" data-term="absolute dating">absolute dating</button>. Radioisotopic dating is the most common type and the focus of this section.</p>
+  <figure id="fig-nuvv">
+    <div class="frame"><img src="images/unit7/nuvv.webp" alt="Low grey rock outcrop with swirling bands beside a calm lake." loading="lazy" width="452" height="339"></div>
+    <figcaption>Canada's Nuvvuagittuq Greenstone Belt may hold the oldest rocks and the oldest evidence of life on Earth, according to recent studies.<span class="credit">NASA, public domain (via the textbook).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-2-1">7.2.1 Radioactive decay</h3>
+  <p>An <button class="term" data-term="isotope">isotope</button> is an atom of an element with a different number of <b>neutrons</b>. Hydrogen always has 1 proton (its atomic number), but it can have 0, 1, or 2 neutrons. Neutrons plus the atomic number give the atomic <b>mass number</b>: protium (<sup>1</sup>H), deuterium (<sup>2</sup>H), and tritium (<sup>3</sup>H) (<a href="#fig-hiso">Figure 7.14</a>).</p>
+  <figure id="fig-hiso">
+    <div class="frame"><img class="diagram" src="images/unit7/hiso.webp" alt="Three atom drawings: protium with one proton, deuterium with a proton and a neutron, tritium with a proton and two neutrons, each with one electron." loading="lazy" width="1000" height="513"></div>
+    <figcaption>The three isotopes of hydrogen.<span class="credit">Dirk Hünniger, adapted by Balajijagadesh, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <p>Many elements have stable and unstable isotopes; <sup>1</sup>H and <sup>2</sup>H are stable, <sup>3</sup>H is not. Unstable, <b>radioactive isotopes</b> spontaneously release particles or energy, <button class="term" data-term="radioactive decay">radioactive decay</button>, and become a more stable isotope of another element (for example <sup>14</sup>C → <sup>14</sup>N).</p>
+  <p>When any one atom decays is random and unpredictable. But a rock can hold trillions of radioactive atoms, and such a large group decays in a predictable way. The <button class="term" data-term="half-life">half-life</button> is the time for half of the unstable atoms to decay to a stable isotope. It is constant and measurable for each isotope, so it can be used to calculate a rock's age: for example 4.5 billion years for uranium-238 (<sup>238</sup>U) and 5,730 years for <sup>14</sup>C.</p>
+  <div class="pair">
+    <figure id="fig-halfsim">
+      <div class="frame"><img src="images/unit7/halfsim.gif" alt="Animation: boxes of dots change colour at random; small groups change unevenly while large groups lose half in a steady rhythm." loading="lazy" width="100" height="188" style="width:150px;height:auto;image-rendering:pixelated"></div>
+      <figcaption>Half-life simulation. Left: 4 runs with only a few atoms. Right: 4 runs with many atoms, where the decay becomes predictable.<span class="credit">Steve Byrnes, public domain (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Two key assumptions</h4>
+      <ol>
+        <li>The mineral grains holding the isotope formed <b>at the same time as the rock</b>, like minerals crystallizing from magma.</li>
+        <li>The crystals stayed a <button class="term" data-term="closed system">closed system</button>: no elements moved in or out afterward.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="tablewrap" id="tbl-rocks">
+    <table>
+      <caption>Which rocks can be dated? Igneous rock is the best.</caption>
+      <thead><tr><th>Rock or material</th><th>Suitable?</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Igneous rock</td><td>Best</td><td>Its minerals give the date of crystallization from magma.</td></tr>
+        <tr><td>Metamorphic rock</td><td>Limited</td><td>Metamorphism can reset the clock; ages may be a smear of several metamorphic events, not the original crystallization age.</td></tr>
+        <tr><td><button class="term" data-term="detrital">Detrital</button> sedimentary rock</td><td>No</td><td>Clasts come from many parent rocks in unknown places, so ages are meaningless for the deposit.</td></tr>
+        <tr><td>Precipitated sediments (e.g. <button class="term" data-term="evaporite">evaporites</button>)</td><td>Yes</td><td>Minerals that grew in place may hold suitable elements.</td></tr>
+        <tr><td>Pyroclastic layers, lava flows, cross-cutting igneous rocks, sills</td><td>Yes</td><td>Used to date or bracket the sedimentary rocks around them (<a href="#s7-2-4">7.2.4</a>).</td></tr>
+        <tr><td><button class="term" data-term="zircon">Zircon</button> grains</td><td>Yes</td><td>Very resistant; give very old dates, including Earth's oldest known material, and the age of source rocks of metamorphosed sediments.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h4>Three ways atoms decay</h4>
+  <div class="tablewrap" id="tbl-modes">
+    <table>
+      <caption>Alpha decay, beta decay, and electron capture.</caption>
+      <thead><tr><th>Mode</th><th>What happens in the nucleus</th><th>Atomic number</th><th>Mass number</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="alpha decay">Alpha decay</button></td><td>An alpha particle (2 protons + 2 neutrons, a helium nucleus) is emitted</td><td>−2</td><td>−4</td><td><sup>238</sup>U → <sup>234</sup>Th</td></tr>
+        <tr><td><button class="term" data-term="beta decay">Beta decay</button></td><td>A neutron splits into a proton and an electron; the electron leaves as a beta ray</td><td>+1</td><td>No change</td><td><sup>234</sup>Th → <sup>234</sup>Pa → <sup>234</sup>U</td></tr>
+        <tr><td><button class="term" data-term="electron capture">Electron capture</button></td><td>A proton captures an electron from a shell and becomes a neutron</td><td>−1</td><td>No change</td><td><sup>40</sup>K → <sup>40</sup>Ar</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><b>Alpha decay.</b> The emitted helium nucleus can leave helium gas trapped in the mineral's crystal lattice. Losing 2 protons moves the atom two places down the Periodic Table; losing 4 particles lowers its mass by 4. <sup>238</sup>U (92 protons, mass 238) emits an alpha particle and becomes thorium-234. The product of decay is the <button class="term" data-term="daughter isotope">daughter isotope</button>; the original is the <button class="term" data-term="parent isotope">parent isotope</button>. With its 4.5-billion-year half-life, <sup>238</sup>U dates the oldest materials on Earth, meteorites, and the earliest events of the solar system.</p>
+  <figure id="fig-alpha">
+      <div class="frame"><img class="diagram" src="images/unit7/alpha.webp" alt="A large cluster of red and blue spheres with a small cluster of two red and two blue spheres flying away." loading="lazy" width="500" height="340"></div>
+      <figcaption>Alpha decay: two protons and two neutrons leave the nucleus.<span class="credit">Inductiveload, public domain (via the textbook).</span></figcaption>
+    </figure>
+  <figure id="fig-ecap">
+      <div class="frame"><img class="diagram" src="images/unit7/ecap.webp" alt="An atom diagram with a nucleus capturing an electron, then branching into two outcomes: an X-ray emitted, or another electron ejected." loading="lazy" width="847" height="1000" style="max-height:340px;width:auto"></div>
+      <figcaption>The two paths after electron capture: an X-ray, or the Auger process.<span class="credit">Pamputt, CC BY-SA (via the textbook).</span></figcaption>
+    </figure>
+  <p><b>Beta decay and decay chains.</b> Isotopes of different elements can share a mass number, like <sup>234</sup>Th, <sup>234</sup>Pa, and <sup>234</sup>U. Decay keeps producing radioactive parents and daughters until a stable daughter forms; the series is a <button class="term" data-term="decay chain">decay chain</button>. <sup>238</sup>U passes through a series of alpha (red arrows) and beta (blue arrows) decays to stable lead-206 (<a href="#fig-u238">Figure 7.18</a>).</p>
+  <figure id="fig-u238">
+    <div class="frame"><img class="diagram" src="images/unit7/u238.webp" alt="Chart of circles for isotopes from uranium-238 down to lead-206, joined by red alpha arrows and blue beta arrows, with half-lives in each circle." loading="lazy" width="660" height="1000" style="max-height:700px;width:auto"></div>
+    <figcaption>Decay chain of U-238 to stable Pb-206 through a series of alpha and beta decays.<span class="credit">ThaLibster, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <p><b>Electron capture.</b> After the capture, either another electron drops into the empty spot and an X-ray is emitted, or, in the <b>Auger process</b>, another electron is released and the atom becomes an <button class="term" data-term="ion">ion</button>. Potassium-40 (<sup>40</sup>K) decays this way to argon-40 with a half-life of 1.25 billion years, very useful for dating geologic events. <sup>40</sup>K is a tiny part (0.012%) of natural potassium; most potassium is not radioactive.</p>
+  <div class="tablewrap" id="tbl-isotopes">
+    <table>
+      <caption>Some common isotopes used for radioisotopic dating (as given in the chapter).</caption>
+      <thead><tr><th>Elements</th><th>Parent symbol</th><th>Daughter symbol</th><th>Half-life</th></tr></thead>
+      <tbody>
+        <tr><td>Uranium-238 / Lead-206</td><td><sup>238</sup>U</td><td><sup>206</sup>Pb</td><td>4.5 billion years</td></tr>
+        <tr><td>Uranium-235 / Lead-207</td><td><sup>235</sup>U</td><td><sup>207</sup>Pb</td><td>704 million years</td></tr>
+        <tr><td>Potassium-40 / Argon-40</td><td><sup>40</sup>K</td><td><sup>40</sup>Ar</td><td>1.25 billion years</td></tr>
+        <tr><td>Rubidium-87 / Strontium-87</td><td><sup>87</sup>Rb</td><td><sup>87</sup>Sr</td><td>48.8 billion years</td></tr>
+        <tr><td>Carbon-14 / Nitrogen-14</td><td><sup>14</sup>C</td><td><sup>14</sup>N</td><td>5,730 years</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s7-2-2">7.2.2 Radioisotopic dating</h3>
+  <p>The parent and daughter isotopes are separated from the mineral by chemical extraction. For uranium, <sup>238</sup>U and <sup>235</sup>U are separated together, and so are <sup>206</sup>Pb and <sup>207</sup>Pb, measured with a <button class="term" data-term="mass spectrometer">mass spectrometer</button>.</p>
+  <figure id="fig-massspec">
+    <div class="frame"><img src="images/unit7/massspec.webp" alt="A laboratory instrument made of metal chambers, magnets and tubes on a frame." loading="lazy" width="586" height="417"></div>
+    <figcaption>A mass spectrometer.<span class="credit">CAMECA Archives, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <p><b>The daughter-to-parent ratio.</b> A new mineral has 100% parent and 0% daughter, so D/P = 0. After one half-life: 50% each, D/P = 1. After two: 75% daughter, 25% parent, D/P = 3 (<a href="#fig-halflife">Figure 7.20</a>, <a href="#tbl-halflife">Table 7.5</a>). After about 10 half-lives so little parent is left that it is too hard to measure accurately. Modern work reaches about ±2 million years in 2.5 billion years.</p>
+  <figure id="fig-halflife">
+    <div class="frame"><svg viewBox="0 0 720 486" role="img" aria-labelledby="hl-t-en" style="width:100%;min-width:520px;height:auto;display:block"><title id="hl-t-en">Graph: the fraction of daughter isotope rises from 0 toward 1 over 4 half-lives (0.5 after one, 0.75 after two, 0.875 after three), while the parent falls from 1 by half each half-life.</title><rect x="78" y="26" width="612" height="346" fill="var(--surface)"/><path d="M78 328.8 H690" stroke="var(--line)" stroke-width="0.8"/><path d="M78 285.5 H690" stroke="var(--line)" stroke-width="1.4"/><path d="M78 242.2 H690" stroke="var(--line)" stroke-width="0.8"/><path d="M78 199.0 H690" stroke="var(--line)" stroke-width="1.4"/><path d="M78 155.8 H690" stroke="var(--line)" stroke-width="0.8"/><path d="M78 112.5 H690" stroke="var(--line)" stroke-width="1.4"/><path d="M78 69.2 H690" stroke="var(--line)" stroke-width="0.8"/><path d="M231.0 26 V372" stroke="var(--line)" stroke-width="1.4"/><path d="M384.0 26 V372" stroke="var(--line)" stroke-width="1.4"/><path d="M537.0 26 V372" stroke="var(--line)" stroke-width="1.4"/><text x="70.0" y="290.0" font-size="13" class="svg-ink" text-anchor="end">0.25</text><text x="70.0" y="203.5" font-size="13" class="svg-ink" text-anchor="end">0.5</text><text x="70.0" y="117.0" font-size="13" class="svg-ink" text-anchor="end">0.75</text><text x="70.0" y="30.5" font-size="13" class="svg-ink" text-anchor="end">1.0</text><text x="78.0" y="392.0" font-size="13" class="svg-ink" text-anchor="middle">0</text><text x="231.0" y="392.0" font-size="13" class="svg-ink" text-anchor="middle">1</text><text x="384.0" y="392.0" font-size="13" class="svg-ink" text-anchor="middle">2</text><text x="537.0" y="392.0" font-size="13" class="svg-ink" text-anchor="middle">3</text><text x="690.0" y="392.0" font-size="13" class="svg-ink" text-anchor="middle">4</text><text x="70.0" y="376.5" font-size="13" class="svg-ink" text-anchor="end">0</text><path d="M78 26.0 H690" stroke="#2f6fd6" stroke-width="3"/><path d="M78.0 26.0 L81.1 30.8 L84.1 35.5 L87.2 40.1 L90.2 44.7 L93.3 49.2 L96.4 53.6 L99.4 58.0 L102.5 62.3 L105.5 66.6 L108.6 70.8 L111.7 74.9 L114.7 79.0 L117.8 83.1 L120.8 87.0 L123.9 91.0 L127.0 94.8 L130.0 98.6 L133.1 102.4 L136.1 106.1 L139.2 109.8 L142.3 113.4 L145.3 117.0 L148.4 120.5 L151.4 123.9 L154.5 127.3 L157.6 130.7 L160.6 134.0 L163.7 137.3 L166.7 140.5 L169.8 143.7 L172.9 146.9 L175.9 150.0 L179.0 153.0 L182.0 156.0 L185.1 159.0 L188.2 161.9 L191.2 164.8 L194.3 167.7 L197.3 170.5 L200.4 173.3 L203.5 176.0 L206.5 178.7 L209.6 181.4 L212.6 184.0 L215.7 186.6 L218.8 189.1 L221.8 191.7 L224.9 194.1 L227.9 196.6 L231.0 199.0 L234.1 201.4 L237.1 203.7 L240.2 206.0 L243.2 208.3 L246.3 210.6 L249.4 212.8 L252.4 215.0 L255.5 217.2 L258.5 219.3 L261.6 221.4 L264.7 223.5 L267.7 225.5 L270.8 227.5 L273.8 229.5 L276.9 231.5 L280.0 233.4 L283.0 235.3 L286.1 237.2 L289.1 239.1 L292.2 240.9 L295.3 242.7 L298.3 244.5 L301.4 246.2 L304.4 248.0 L307.5 249.7 L310.6 251.4 L313.6 253.0 L316.7 254.7 L319.7 256.3 L322.8 257.9 L325.9 259.4 L328.9 261.0 L332.0 262.5 L335.0 264.0 L338.1 265.5 L341.2 267.0 L344.2 268.4 L347.3 269.8 L350.3 271.3 L353.4 272.6 L356.5 274.0 L359.5 275.4 L362.6 276.7 L365.6 278.0 L368.7 279.3 L371.8 280.6 L374.8 281.8 L377.9 283.1 L380.9 284.3 L384.0 285.5 L387.1 286.7 L390.1 287.9 L393.2 289.0 L396.2 290.2 L399.3 291.3 L402.4 292.4 L405.4 293.5 L408.5 294.6 L411.5 295.6 L414.6 296.7 L417.7 297.7 L420.7 298.8 L423.8 299.8 L426.8 300.8 L429.9 301.7 L433.0 302.7 L436.0 303.7 L439.1 304.6 L442.1 305.5 L445.2 306.4 L448.3 307.3 L451.3 308.2 L454.4 309.1 L457.4 310.0 L460.5 310.8 L463.6 311.7 L466.6 312.5 L469.7 313.3 L472.7 314.1 L475.8 314.9 L478.9 315.7 L481.9 316.5 L485.0 317.3 L488.0 318.0 L491.1 318.8 L494.2 319.5 L497.2 320.2 L500.3 320.9 L503.3 321.6 L506.4 322.3 L509.5 323.0 L512.5 323.7 L515.6 324.3 L518.6 325.0 L521.7 325.6 L524.8 326.3 L527.8 326.9 L530.9 327.5 L533.9 328.1 L537.0 328.8 L540.1 329.3 L543.1 329.9 L546.2 330.5 L549.2 331.1 L552.3 331.6 L555.4 332.2 L558.4 332.7 L561.5 333.3 L564.5 333.8 L567.6 334.3 L570.7 334.9 L573.7 335.4 L576.8 335.9 L579.8 336.4 L582.9 336.9 L586.0 337.4 L589.0 337.8 L592.1 338.3 L595.1 338.8 L598.2 339.2 L601.3 339.7 L604.3 340.1 L607.4 340.6 L610.4 341.0 L613.5 341.4 L616.6 341.8 L619.6 342.3 L622.7 342.7 L625.7 343.1 L628.8 343.5 L631.9 343.9 L634.9 344.2 L638.0 344.6 L641.0 345.0 L644.1 345.4 L647.2 345.7 L650.2 346.1 L653.3 346.5 L656.3 346.8 L659.4 347.2 L662.5 347.5 L665.5 347.8 L668.6 348.2 L671.6 348.5 L674.7 348.8 L677.8 349.1 L680.8 349.5 L683.9 349.8 L686.9 350.1 L690.0 350.4" stroke="var(--accent)" stroke-width="3" stroke-dasharray="9 6" fill="none"/><path d="M78.0 372.0 L81.1 367.2 L84.1 362.5 L87.2 357.9 L90.2 353.3 L93.3 348.8 L96.4 344.4 L99.4 340.0 L102.5 335.7 L105.5 331.4 L108.6 327.2 L111.7 323.1 L114.7 319.0 L117.8 314.9 L120.8 311.0 L123.9 307.0 L127.0 303.2 L130.0 299.4 L133.1 295.6 L136.1 291.9 L139.2 288.2 L142.3 284.6 L145.3 281.0 L148.4 277.5 L151.4 274.1 L154.5 270.7 L157.6 267.3 L160.6 264.0 L163.7 260.7 L166.7 257.5 L169.8 254.3 L172.9 251.1 L175.9 248.0 L179.0 245.0 L182.0 242.0 L185.1 239.0 L188.2 236.1 L191.2 233.2 L194.3 230.3 L197.3 227.5 L200.4 224.7 L203.5 222.0 L206.5 219.3 L209.6 216.6 L212.6 214.0 L215.7 211.4 L218.8 208.9 L221.8 206.3 L224.9 203.9 L227.9 201.4 L231.0 199.0 L234.1 196.6 L237.1 194.3 L240.2 192.0 L243.2 189.7 L246.3 187.4 L249.4 185.2 L252.4 183.0 L255.5 180.8 L258.5 178.7 L261.6 176.6 L264.7 174.5 L267.7 172.5 L270.8 170.5 L273.8 168.5 L276.9 166.5 L280.0 164.6 L283.0 162.7 L286.1 160.8 L289.1 158.9 L292.2 157.1 L295.3 155.3 L298.3 153.5 L301.4 151.8 L304.4 150.0 L307.5 148.3 L310.6 146.6 L313.6 145.0 L316.7 143.3 L319.7 141.7 L322.8 140.1 L325.9 138.6 L328.9 137.0 L332.0 135.5 L335.0 134.0 L338.1 132.5 L341.2 131.0 L344.2 129.6 L347.3 128.2 L350.3 126.7 L353.4 125.4 L356.5 124.0 L359.5 122.6 L362.6 121.3 L365.6 120.0 L368.7 118.7 L371.8 117.4 L374.8 116.2 L377.9 114.9 L380.9 113.7 L384.0 112.5 L387.1 111.3 L390.1 110.1 L393.2 109.0 L396.2 107.8 L399.3 106.7 L402.4 105.6 L405.4 104.5 L408.5 103.4 L411.5 102.4 L414.6 101.3 L417.7 100.3 L420.7 99.2 L423.8 98.2 L426.8 97.2 L429.9 96.3 L433.0 95.3 L436.0 94.3 L439.1 93.4 L442.1 92.5 L445.2 91.6 L448.3 90.7 L451.3 89.8 L454.4 88.9 L457.4 88.0 L460.5 87.2 L463.6 86.3 L466.6 85.5 L469.7 84.7 L472.7 83.9 L475.8 83.1 L478.9 82.3 L481.9 81.5 L485.0 80.7 L488.0 80.0 L491.1 79.2 L494.2 78.5 L497.2 77.8 L500.3 77.1 L503.3 76.4 L506.4 75.7 L509.5 75.0 L512.5 74.3 L515.6 73.7 L518.6 73.0 L521.7 72.4 L524.8 71.7 L527.8 71.1 L530.9 70.5 L533.9 69.9 L537.0 69.2 L540.1 68.7 L543.1 68.1 L546.2 67.5 L549.2 66.9 L552.3 66.4 L555.4 65.8 L558.4 65.3 L561.5 64.7 L564.5 64.2 L567.6 63.7 L570.7 63.1 L573.7 62.6 L576.8 62.1 L579.8 61.6 L582.9 61.1 L586.0 60.6 L589.0 60.2 L592.1 59.7 L595.1 59.2 L598.2 58.8 L601.3 58.3 L604.3 57.9 L607.4 57.4 L610.4 57.0 L613.5 56.6 L616.6 56.2 L619.6 55.7 L622.7 55.3 L625.7 54.9 L628.8 54.5 L631.9 54.1 L634.9 53.8 L638.0 53.4 L641.0 53.0 L644.1 52.6 L647.2 52.3 L650.2 51.9 L653.3 51.5 L656.3 51.2 L659.4 50.8 L662.5 50.5 L665.5 50.2 L668.6 49.8 L671.6 49.5 L674.7 49.2 L677.8 48.9 L680.8 48.5 L683.9 48.2 L686.9 47.9 L690.0 47.6" stroke="#d1342b" stroke-width="4" fill="none"/><path d="M78 372 H690 M78 372 V26" stroke="var(--fg)" stroke-width="2"/><circle cx="231.0" cy="199.0" r="5" fill="#d1342b" stroke="var(--surface)" stroke-width="2"/><path d="M231.0 205.0 V289.0" stroke="var(--fg)" stroke-width="1.4"/><text x="231.0" y="305.0" font-size="13" class="svg-ink halo" text-anchor="middle">50% : 50%</text><circle cx="384.0" cy="112.5" r="5" fill="#d1342b" stroke="var(--surface)" stroke-width="2"/><circle cx="384.0" cy="285.5" r="5" fill="var(--accent)" stroke="var(--surface)" stroke-width="2"/><text x="375.0" y="101.5" font-size="13" text-anchor="end" class="svg-ink halo">75%</text><text x="393.0" y="274.5" font-size="13" class="svg-ink halo" text-anchor="start">25%</text><circle cx="537.0" cy="69.2" r="5" fill="#d1342b" stroke="var(--surface)" stroke-width="2"/><circle cx="537.0" cy="328.8" r="5" fill="var(--accent)" stroke="var(--surface)" stroke-width="2"/><text x="528.0" y="58.2" font-size="13" text-anchor="end" class="svg-ink halo">87.5%</text><text x="546.0" y="317.8" font-size="13" class="svg-ink halo" text-anchor="start">12.5%</text><text x="384.0" y="416.0" font-size="14" class="svg-ink" text-anchor="middle" font-weight="600">Number of half-lives elapsed</text><text transform="translate(20 199.0) rotate(-90)" font-size="14" font-weight="600" class="svg-ink" text-anchor="middle">Fraction of the original atoms</text><path d="M78 442 h30" stroke="#d1342b" stroke-width="3.5"/><text x="116.0" y="447.0" font-size="13" class="svg-ink" text-anchor="start">Daughter isotope (the textbook curve)</text><path d="M391.6999999999998 442 h30" stroke="var(--accent)" stroke-width="3.5" stroke-dasharray="9 6"/><text x="429.7" y="447.0" font-size="13" class="svg-ink" text-anchor="start">Parent isotope</text><path d="M78 466 h30" stroke="#2f6fd6" stroke-width="3.5"/><text x="116.0" y="471.0" font-size="13" class="svg-ink" text-anchor="start">Parent + daughter (total)</text></svg></div>
+    <figcaption>Half-lives elapsed versus amount of daughter isotope, on the chapter graph's axes (0–4 half-lives, 0–1.0). The parent curve and total line are added for comparison.<span class="credit">Redrawn for this guide from Krishnavedala's "HalfLife" graph (public domain), used in the textbook.</span></figcaption>
+  </figure>
+  <div class="tablewrap" id="tbl-halflife">
+    <table>
+      <caption>Ratio of parent to daughter in terms of half-life (all rows of the chapter's table).</caption>
+      <thead><tr><th>Half-lives (#)</th><th>Parent present (%)</th><th>Daughter present (%)</th><th>Daughter/Parent ratio</th><th>Parent/Daughter ratio</th></tr></thead>
+      <tbody>
+        <tr><td>Start the clock</td><td>100</td><td>0</td><td>0</td><td>infinite</td></tr>
+        <tr><td>1</td><td>50</td><td>50</td><td>1</td><td>1</td></tr>
+        <tr><td>2</td><td>25</td><td>75</td><td>3</td><td>0.33</td></tr>
+        <tr><td>3</td><td>12.5</td><td>87.5</td><td>7</td><td>0.143</td></tr>
+        <tr><td>4</td><td>6.25</td><td>93.75</td><td>15</td><td>0.0667</td></tr>
+        <tr><td>5</td><td>3.125</td><td>96.875</td><td>31</td><td>0.0325</td></tr>
+        <tr><td>10</td><td>0.098</td><td>99.9</td><td>1023</td><td>0.00098</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout" id="hl-tool">
+    <h4>Try it: half-life calculator</h4>
+    <p style="text-align:left"><label for="hlRange">Half-lives elapsed: <b id="hlN">1</b></label></p>
+    <input id="hlRange" type="range" min="0" max="10" step="1" value="1" style="width:100%;accent-color:var(--accent)">
+    <div class="hlbar" aria-hidden="true" style="display:flex;height:22px;border-radius:6px;overflow:hidden;margin:.6rem 0;border:1px solid var(--line)"><i id="hlP" style="background:var(--accent);width:50%"></i><i id="hlD" style="background:#d1342b;width:50%"></i></div>
+    <p id="hlOut" style="text-align:left;margin:0" aria-live="polite"></p>
+    <p class="small" id="hlAge" style="text-align:left"></p>
+  </div>
+  <p><b>Two clocks in one sample.</b> The uranium–lead method runs <sup>238</sup>U and <sup>235</sup>U at the same time, so each sample cross-checks itself. Many samples hold several parent–daughter pairs, and cross-checking these clocks confirms that radioisotopic dating is highly reliable.</p>
+  <h4>Radiocarbon (carbon) dating</h4>
+  <p><button class="term" data-term="radiocarbon dating">Radiocarbon dating</button> dates archaeological samples with organic substances like wood or bone, using unstable <sup>14</sup>C and stable <sup>12</sup>C (<a href="#fig-c14">Figure 7.21</a>).</p>
+  <figure id="fig-c14">
+    <div class="frame"><svg viewBox="0 0 920 196" role="img" aria-labelledby="c14-t-en" style="width:100%;min-width:640px;height:auto;display:block"><title id="c14-t-en">Radiocarbon in four steps: made in the atmosphere from nitrogen-14, joins carbon dioxide, is taken up by living things, and decays after death.</title><rect class="flow-step" style="--d:0.0s" x="8" y="14" width="196" height="168" rx="12"/><text x="22.0" y="42.0" font-size="14.5" class="svg-ink" text-anchor="start" font-weight="600">1 · Made in the air</text><text x="22.0" y="70.0" font-size="13.5" class="svg-ink" text-anchor="start">A cosmic-ray neutron</text><text x="22.0" y="91.0" font-size="13.5" class="svg-ink" text-anchor="start">strikes a ¹⁴N nucleus</text><text x="22.0" y="112.0" font-size="13.5" class="svg-ink" text-anchor="start">and knocks out a proton:</text><text x="22.0" y="133.0" font-size="13.5" class="svg-ink" text-anchor="start">¹⁴N becomes ¹⁴C.</text><path d="M210 98.0 H236" stroke="var(--accent)" stroke-width="3"/><path d="M234 91.0 L244 98.0 L234 105.0 Z" fill="var(--accent)"/><rect class="flow-step" style="--d:1.5s" x="244" y="14" width="196" height="168" rx="12"/><text x="258.0" y="42.0" font-size="14.5" class="svg-ink" text-anchor="start" font-weight="600">2 · Into CO₂</text><text x="258.0" y="70.0" font-size="13.5" class="svg-ink" text-anchor="start">¹⁴C bonds with oxygen</text><text x="258.0" y="91.0" font-size="13.5" class="svg-ink" text-anchor="start">to form ¹⁴CO₂, which</text><text x="258.0" y="112.0" font-size="13.5" class="svg-ink" text-anchor="start">mixes with ordinary</text><text x="258.0" y="133.0" font-size="13.5" class="svg-ink" text-anchor="start">¹²CO₂ in the air.</text><path d="M446 98.0 H472" stroke="var(--accent)" stroke-width="3"/><path d="M470 91.0 L480 98.0 L470 105.0 Z" fill="var(--accent)"/><rect class="flow-step" style="--d:3.0s" x="480" y="14" width="196" height="168" rx="12"/><text x="494.0" y="42.0" font-size="14.5" class="svg-ink" text-anchor="start" font-weight="600">3 · While alive</text><text x="494.0" y="70.0" font-size="13.5" class="svg-ink" text-anchor="start">Living things take in</text><text x="494.0" y="91.0" font-size="13.5" class="svg-ink" text-anchor="start">this carbon and keep</text><text x="494.0" y="112.0" font-size="13.5" class="svg-ink" text-anchor="start">exchanging CO₂, so their</text><text x="494.0" y="133.0" font-size="13.5" class="svg-ink" text-anchor="start">¹⁴C/¹²C stays steady.</text><path d="M682 98.0 H708" stroke="var(--accent)" stroke-width="3"/><path d="M706 91.0 L716 98.0 L706 105.0 Z" fill="var(--accent)"/><rect class="flow-step" style="--d:4.5s" x="716" y="14" width="196" height="168" rx="12"/><text x="730.0" y="42.0" font-size="14.5" class="svg-ink" text-anchor="start" font-weight="600">4 · After death</text><text x="730.0" y="70.0" font-size="13.5" class="svg-ink" text-anchor="start">The clock starts: ¹⁴C</text><text x="730.0" y="91.0" font-size="13.5" class="svg-ink" text-anchor="start">decays to ¹⁴N by beta</text><text x="730.0" y="112.0" font-size="13.5" class="svg-ink" text-anchor="start">decay (half-life 5,730 yr),</text><text x="730.0" y="133.0" font-size="13.5" class="svg-ink" text-anchor="start">usable to ~57,300 yr.</text></svg></div>
+    <figcaption>How radiocarbon forms and becomes a clock. Cosmic particles change atomic number 7 (nitrogen) into 6 (carbon) while the mass number stays 14.<span class="credit">Drawn for this guide from the chapter text.</span></figcaption>
+  </figure>
+  <p>Because about 10 half-lives is the useful limit, radiocarbon works back to about <b>57,300 years</b>. Early users assumed atmospheric <sup>14</sup>C stayed fairly constant over the last 50,000 years, but it has varied. Comparing carbon ages with <b>tree rings</b> and other known events has calibrated the method, and calibrated radiocarbon is reliable for archaeological specimens and very recent geologic events. Samples are measured in an accelerator mass spectrometer (<a href="#fig-ams">Figure 7.22</a>).</p>
+  <figure id="fig-ams">
+    <div class="frame"><img class="diagram" src="images/unit7/ams.webp" alt="Schematic of an accelerator mass spectrometer: ion source, magnets bending the beam, an accelerator, and detectors for carbon isotopes." loading="lazy" width="1000" height="370"></div>
+    <figcaption>Schematic of carbon going through an accelerator mass spectrometer.<span class="credit">Mike Christie, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-2-3">7.2.3 Age of the Earth</h3>
+  <ul class="timeline">
+    <li><time>Late 1700s</time><span>Hutton and others open the idea of an ancient Earth (Unit 1).</span></li>
+    <li><time>Late 1800s</time><span><b>Lord Kelvin</b> (William Thomson) assumes Earth began as a hot molten sphere and cooled: about <b>98 million years</b>, stated as a range of <b>20–400 million</b>.</span></li>
+    <li class="geo"><time>Late 1800s</time><span>Radioactivity is discovered, giving a more accurate way to measure ancient ages.</span></li>
+    <li><time>1950s</time><span><b>Clair Patterson</b>, a graduate student at the University of Chicago, dates meteorites (left over from the solar system's formation) by uranium–lead with a mass spectrometer: <b>4.55 billion years ± about 70 million (±1.5%)</b>.</span></li>
+    <li class="geo"><time>Today</time><span>Current estimate: <b>4.54 billion years ± 50 million (±1.1%)</b>, little changed in over 60 years.</span></li>
+  </ul>
+  <p>Kelvin's numbers were far off because heat moves unequally inside Earth, and he did not consider that the mantle can flow and carry heat by <button class="term" data-term="convection">convection</button>. His estimate was thought plausible, though challenged.</p>
+  <figure id="fig-hadean">
+    <div class="frame"><img src="images/unit7/hadean.webp" alt="Artist's view of a dark landscape with glowing lava, volcanoes, lightning and a large Moon on the horizon." loading="lazy" width="1000" height="538"></div>
+    <figcaption>Artist's impression of Earth in the Hadean Eon, early in Earth's history.<span class="credit">Tim Bertelink, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-2-4">7.2.4 Dating geological events</h3>
+  <p>Isotopes of elements common in minerals work best. The uranium–lead method, with its two clocks, is used mostly on <b>zircon</b> (ZrSiO<sub>4</sub>), where uranium can take the place of zirconium in the lattice. Zircon resists weathering. During metamorphic events, zircon may grow new layers, each recording the age of an event.</p>
+  <div class="pair">
+    <figure id="fig-zircon">
+      <div class="frame"><img src="images/unit7/zircon.webp" alt="A clear, elongated, rounded crystal seen under a microscope, with dark patches inside." loading="lazy" width="490" height="692" style="max-height:320px;width:auto"></div>
+      <figcaption>Photomicrograph of a zircon crystal.<span class="credit">Foto Chd, CC BY-SA (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>What old zircons tell us</h4>
+      <ul>
+        <li><b>4.4 billion years</b>: zircons from Western Australia, formed when crust first separated from the mantle, inside much younger metasedimentary host rock. They show continental rock stood above sea level and Earth was cool enough for liquid water, so weathering and erosion could happen.</li>
+        <li><b>4.1 billion years</b>: UCLA researchers found carbon in zircons that may be <b>biogenic</b>, a hint that life began earlier than thought.</li>
+      </ul>
+    </div>
+  </div>
+  <p><b>Dating sedimentary sequences.</b> Igneous rocks give crystallization dates; metamorphism tends to reset and smear them; detrital sediments mix many sources. So geologists date sediments with the igneous rocks around them (<a href="#fig-bracket">Figure 7.25</a>). Potassium, common in evaporites, has also been used for potassium–argon dates.</p>
+  <figure id="fig-bracket">
+    <div class="frame"><svg viewBox="0 0 900 252" role="img" aria-labelledby="br-t-en" style="width:100%;min-width:620px;height:auto;display:block"><title id="br-t-en">Two ways to date sedimentary strata with igneous rocks: strata between a 54 Ma lava flow and a 50 Ma ash bed formed between 54 and 50 Ma; strata cut by a 65 Ma dike are older than 65 Ma.</title><text x="225.0" y="22.0" font-size="14.5" class="svg-ink" text-anchor="middle" font-weight="600">A · Between two dated layers</text><rect x="30" y="40" width="170" height="36" fill="#efe0b9" stroke="#4a3d30"/><rect x="30" y="76" width="170" height="14" fill="#f4f4f0" stroke="#4a3d30"/><rect x="30" y="90" width="170" height="40" fill="#e3c38f" stroke="#4a3d30"/><rect x="30" y="130" width="170" height="40" fill="#c99a6b" stroke="#4a3d30"/><rect x="30" y="170" width="170" height="34" fill="#4a4a4a" stroke="#4a3d30"/><rect x="30" y="204" width="170" height="36" fill="#b9c79f" stroke="#4a3d30"/><path d="M70 116.0 Q80 98.0 90 116.0 Z" fill="none" stroke="#2b2118" stroke-width="1.8"/><path d="M70 156.0 Q80 138.0 90 156.0 Z" fill="none" stroke="#2b2118" stroke-width="1.8"/><path d="M170.0 83.0 L214.0 83.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M170.0 83.0 L214.0 83.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="170.0" cy="83.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="220.0" y="87.5" font-size="13" class="svg-ink" text-anchor="start" font-weight="600">Ash bed: 50 Ma</text><path d="M170.0 130.0 L214.0 130.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M170.0 130.0 L214.0 130.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="170.0" cy="130.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="220.0" y="126.0" font-size="13" class="svg-ink" text-anchor="start">Strata and fossils:</text><text x="220.0" y="143.0" font-size="13" class="svg-ink" text-anchor="start" font-weight="600">formed 54–50 Ma</text><path d="M170.0 187.0 L214.0 187.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M170.0 187.0 L214.0 187.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="170.0" cy="187.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="220.0" y="191.5" font-size="13" class="svg-ink" text-anchor="start" font-weight="600">Lava flow: 54 Ma</text><text x="665.0" y="22.0" font-size="14.5" class="svg-ink" text-anchor="middle" font-weight="600">B · Cut by a dated dike</text><rect x="470" y="40" width="170" height="40" fill="#efe0b9" stroke="#4a3d30"/><rect x="470" y="80" width="170" height="40" fill="#e3c38f" stroke="#4a3d30"/><rect x="470" y="120" width="170" height="40" fill="#c99a6b" stroke="#4a3d30"/><rect x="470" y="160" width="170" height="40" fill="#b9c79f" stroke="#4a3d30"/><rect x="470" y="200" width="170" height="40" fill="#e3c38f" stroke="#4a3d30"/><path d="M530 40 L554 40 L566 240 L542 240 Z" fill="#3b3b3b" stroke="#111"/><path d="M550.0 100.0 L684.0 100.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M550.0 100.0 L684.0 100.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="550.0" cy="100.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="690.0" y="104.5" font-size="13" class="svg-ink" text-anchor="start" font-weight="600">Dike: 65 Ma</text><path d="M620.0 180.0 L684.0 180.0" stroke="var(--surface)" stroke-width="4" fill="none"/><path d="M620.0 180.0 L684.0 180.0" stroke="var(--fg)" stroke-width="1.4" fill="none"/><circle cx="620.0" cy="180.0" r="4" fill="#fff" stroke="#151515" stroke-width="1.6"/><text x="690.0" y="176.0" font-size="13" class="svg-ink" text-anchor="start">Strata it cuts:</text><text x="690.0" y="193.0" font-size="13" class="svg-ink" text-anchor="start" font-weight="600">older than 65 Ma</text></svg></div>
+    <figcaption>The chapter's two examples. A: strata and their fossils between a 54 Ma lava flow and a 50 Ma ash bed formed 54–50 Ma. B: a 65 Ma dike gives an upper limit; the strata it cuts are older than 65 Ma.<span class="credit">Drawn for this guide from the chapter text.</span></figcaption>
+  </figure>
+  <figure id="fig-ash">
+    <div class="frame"><img class="diagram" src="images/unit7/ash.webp" alt="Map of the western and central United States with shaded areas of ash fall from Yellowstone eruptions, the Bishop Tuff and Mount St. Helens." loading="lazy" width="580" height="377"></div>
+    <figcaption>Widespread ash beds make excellent dated layers: three Yellowstone eruptions (pink: Mesa Falls, Huckleberry Ridge, Lava Creek), the Bishop Tuff (brown dashed line), and the 18 May 1980 Mount St. Helens ash (yellow).<span class="credit">U.S. Geological Survey, public domain (via the textbook).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-2-5">7.2.5 Other absolute dating techniques</h3>
+  <p><b><button class="term" data-term="luminescence dating">Luminescence</button> (thermoluminescence) dating</b> measures the time since silicate minerals in coarse sediment were last exposed to sunlight or heat at the surface. Background radiation from decay places electrons in traps in the lattice of minerals like quartz. Sunlight (UV) and heat at the surface empty the traps; once buried a few inches, the grains start trapping electrons again. In the lab, samples taken a few feet down are stimulated with light, releasing the electrons as photons: <b>luminescence</b>. The more light, the longer the burial. It works for sediments <b>under 1 million years</b> old. In Utah it dates coarse layers buried near faults like the <b>Wasatch Fault</b>, which lack buried organic soils for radiocarbon, to find the <button class="term" data-term="recurrence interval">recurrence interval</button> of large earthquakes.</p>
+  <figure id="fig-tl">
+    <div class="frame"><img src="images/unit7/tl.webp" alt="Diagram titled Thermoluminescence with a quartz crystal structure and text panels Irradiation, Storage and Eviction." loading="lazy" width="873" height="720" style="max-height:520px;width:auto"></div>
+    <figcaption>Thermoluminescence: irradiation fills electron traps, they are stored while buried, and light or heat evicts them.<span class="credit">Zkeizars, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <div class="pair">
+    <figure id="fig-apatite">
+      <div class="frame"><img src="images/unit7/apatite.webp" alt="A yellow-green six-sided apatite crystal on a black background." loading="lazy" width="486" height="432"></div>
+      <figcaption>Apatite from Mexico, a uranium-bearing mineral used for fission-track dating.<span class="credit">Robert M. Lavinsky, CC BY-SA (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Fission-track dating</h4>
+      <p><button class="term" data-term="fission-track dating">Fission-track dating</button>: uranium decay in mineral grains such as <b>apatite</b> leaves trails of lattice damage, large enough to count under an optical microscope. More tracks mean an older grain. Range: about <b>100,000 to 2 billion years</b> (1 × 10<sup>5</sup> to 2 × 10<sup>9</sup>). It is also used as a second clock to confirm other dates. (The tracks come from fission of <sup>238</sup>U; see <a href="#factcheck">fact-check notes</a>.)</p>
+    </div>
+  </div>
+  <div class="tablewrap" id="tbl-methods">
+    <table>
+      <caption>Absolute dating methods in this chapter and the ranges it gives.</caption>
+      <thead><tr><th>Method</th><th>What is measured</th><th>Useful range</th><th>Typical material</th></tr></thead>
+      <tbody>
+        <tr><td>Uranium–lead</td><td><sup>238</sup>U→<sup>206</sup>Pb and <sup>235</sup>U→<sup>207</sup>Pb ratios (two clocks)</td><td>Up to the oldest Earth materials and meteorites</td><td>Zircon</td></tr>
+        <tr><td>Potassium–argon</td><td><sup>40</sup>K→<sup>40</sup>Ar ratio</td><td>Geologic events (half-life 1.25 billion years)</td><td>Igneous rocks, evaporites</td></tr>
+        <tr><td>Radiocarbon</td><td><sup>14</sup>C left, compared with <sup>12</sup>C</td><td>To about 57,300 years</td><td>Wood, bone, organic matter</td></tr>
+        <tr><td>Luminescence</td><td>Light released by trapped electrons</td><td>Less than 1 million years</td><td>Buried quartz-rich coarse sediment</td></tr>
+        <tr><td>Fission track</td><td>Number of damage tracks</td><td>About 100,000 to 2 billion years</td><td>Apatite and other uranium-bearing grains</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener">Section 7.2 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 7.3 -->
+<section id="s7-3">
+  <h2 class="sec"><span class="n">7.3</span>Fossils and evolution</h2>
+  <p><button class="term" data-term="fossil">Fossils</button> are any evidence of past life preserved in rocks: actual body parts (rare), impressions of soft parts, casts and molds (more common), body parts replaced by minerals (common), or traces of behavior like footprints and burrows. Most life today is soft-bodied or single-celled and is unlikely to be preserved except in unusual conditions. The ocean is the best place for preservation, yet marine processes dissolve hard parts and scavengers remove remains; on land the chances are even lower. The fossil record is therefore <b>incomplete</b>, but it is still used for correlation (fossil succession) and for placing formations on the geologic time scale.</p>
+  <figure id="fig-archaeopteryx">
+    <div class="frame"><img src="images/unit7/archaeopteryx.webp" alt="Fossil skeleton of a feathered animal with spread wings pressed into a pale limestone slab." loading="lazy" width="740" height="1000" style="max-height:520px;width:auto"></div>
+    <figcaption><i>Archaeopteryx lithographica</i>, specimen at the Museum für Naturkunde, Berlin.<span class="credit">H. Raab, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-3-1">7.3.1 Types of preservation</h3>
+  <p>Hard parts such as clam shells or dinosaur bones are the most common fossils, and their original material has almost always been replaced by new minerals that keep the shape.</p>
+  <div class="tablewrap" id="tbl-preserve">
+    <table>
+      <caption>The common types of fossil preservation.</caption>
+      <thead><tr><th>Type</th><th>How it forms</th><th>Examples</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="actual preservation">Actual preservation</button></td><td>Rare. Original material or hard parts survive; soft tissue usually vanishes by bacterial decay.</td><td>Insects in amber; mother-of-pearl in shells; mammoth skin and hair in Arctic post-glacial deposits; rare mummified dinosaur soft tissue, with proteins and possible DNA fragments</td></tr>
+        <tr><td><button class="term" data-term="permineralization">Permineralization</button></td><td>After burial, elements in groundwater fill every space in the body, even cells; bone and teeth are most likely to be preserved.</td><td>Petrified wood (cellulose structure kept)</td></tr>
+        <tr><td><button class="term" data-term="mold">Molds</button> and <button class="term" data-term="cast">casts</button></td><td>The organism dissolves, leaving a cavity (external mold); sediment or minerals filling it make a cast. Internal casts of clams, snails, even skulls can show soft structures. With the right chemistry and rapid burial, mineral nodules form around soft parts in 3-D: <button class="term" data-term="authigenic mineralization">authigenic mineralization</button>.</td><td>External mold of a clam</td></tr>
+        <tr><td><button class="term" data-term="carbonization">Carbonization</button></td><td>Tissues are compressed, volatiles driven out, and only a carbon silhouette is left.</td><td>Leaf and fern fossils</td></tr>
+        <tr><td><button class="term" data-term="trace fossils">Trace fossils</button></td><td>Indirect evidence left by a living organism; studied in <button class="term" data-term="ichnology">ichnology</button>.</td><td>Dinosaur tracks (size, gait, speed, behavior), burrows, <button class="term" data-term="coprolite">coprolites</button> (fossil feces), <button class="term" data-term="gastrolith">gastroliths</button> (stomach stones)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure id="fig-preserve">
+    <div class="frame">
+      <ul class="gallery" style="--cols:3">
+        <li><img src="images/unit7/amber.webp" alt="A mosquito with long legs inside a piece of orange amber." loading="lazy" width="1000" height="686"><span><b>Actual preservation</b>mosquito in amber</span></li>
+        <li><img src="images/unit7/petrified.webp" alt="Cross-section of a petrified log in red, orange and white stone." loading="lazy" width="1000" height="1000"><span><b>Permineralization</b>petrified wood</span></li>
+        <li><img src="images/unit7/trilobite.webp" alt="A dark trilobite fossil on pale rock with a 0.5 cm scale." loading="lazy" width="809" height="1000"><span><b>Permineralization</b>trilobite, hard exoskeleton</span></li>
+        <li><img src="images/unit7/mold.webp" alt="Fan-shaped ribbed impression of a scallop-like shell in tan rock." loading="lazy" width="1000" height="998"><span><b>Mold</b>external mold of a clam</span></li>
+        <li><img src="images/unit7/leaf.webp" alt="Brown leaf impression with fine veins on a slab of rock." loading="lazy" width="1000" height="716"><span><b>Carbonization</b>carbonized leaf</span></li>
+        <li><img src="images/unit7/tracks.webp" alt="Small five-toed footprints crossing a tan rock surface." loading="lazy" width="629" height="1000"><span><b>Trace fossil</b><i>Chirotherium</i> footprints</span></li>
+      </ul>
+    </div>
+    <figcaption>Types of preservation. Trilobites had a hard exoskeleton and are often preserved by permineralization. A coprolite (fossil animal dropping) is another trace fossil.<span class="credit">Didier Desouens (amber), Moondigger (petrified wood), Ballista (footprints): CC BY-SA. Mark A. Wilson (trilobite, mold, leaf): public domain. All via the textbook.</span></figcaption>
+  </figure>
+  <figure id="fig-coprolite">
+    <div class="frame"><img src="images/unit7/coprolite.webp" alt="A lumpy grey-brown fossil dropping on a stand next to a scale bar." loading="lazy" width="1000" height="667" style="max-height:300px;width:auto"></div>
+    <figcaption>Fossil animal dropping (coprolite); it tells about diet and habitat.<span class="credit">USGS, public domain (via the textbook).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-3-2">7.3.2 Evolution</h3>
+  <p>Evolution produced the variety of fossils that make correlation possible. Charles Darwin (1809–1882) recognized that life forms evolve into new forms and proposed <button class="term" data-term="natural selection">natural selection</button> as the mechanism, working on organisms whose environments challenge their survival. A <button class="term" data-term="species">species</button> is the basic unit: a population with shared characteristics that can produce fertile offspring.</p>
+  <ol class="steps">
+    <li><b>Variation.</b> Individuals in a population differ, through the mixing of genes in sexual reproduction and through natural mutations.</li>
+    <li><b>Challenge.</b> Each individual must survive the environment long enough to reproduce.</li>
+    <li><b>Advantage.</b> Individuals with helpful traits are more likely to reproduce and pass those traits on.</li>
+    <li><b>Outcome.</b> If too few individuals survive and the population cannot produce enough viable offspring, the species goes <button class="term" data-term="extinct">extinct</button>. If favored traits build up, populations can become genetically isolated (sometimes by a geographic barrier such as an island) and evolve into separate species.</li>
+  </ol>
+  <p>The average species in the fossil record lasts about <b>a million years</b>. Some species show little change in form over time; others show gradual or punctuated change with visible intermediate forms. Darwin set out the theory in <i>On the Origin of Species</i> (Unit 1). Modern tools keep adding ways to study evolution and speciation; evolution is a well-established <button class="term" data-term="theory">theory</button>, far beyond the <button class="term" data-term="hypothesis">hypothesis</button> stage.</p>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener">Section 7.3 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 7.4 -->
+<section id="s7-4">
+  <h2 class="sec"><span class="n">7.4</span>Correlation</h2>
+  <p><button class="term" data-term="correlation">Correlation</button> establishes which sedimentary strata in separate places are the same age. It can use magnetic polarity reversals (Unit 2), rock types, unique rock sequences, or index fossils. There are four main types (<a href="#tbl-correl">Table 7.8</a>).</p>
+  <figure id="fig-gondwana">
+    <div class="frame"><img class="diagram" src="images/unit7/gondwana.webp" alt="Map of the southern continents fitted together with coloured bands showing where the same fossil reptiles and plants are found across Africa, South America, India, Antarctica and Australia." loading="lazy" width="1000" height="769"></div>
+    <figcaption>Fossils that connect the continents of Gondwana (the southern continents of Pangaea), also used in Unit 2.<span class="credit">Osvaldocangaspadilla, public domain (via the textbook).</span></figcaption>
+  </figure>
+  <div class="tablewrap" id="tbl-correl">
+    <table>
+      <caption>The four main types of correlation.</caption>
+      <thead><tr><th>Type</th><th>Matches strata by</th><th>Chapter example</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="stratigraphic correlation">Stratigraphic</button></td><td>Position in the sequence (stratigraphic relationship)</td><td>Wingate (Canyonlands) = Moenave (Zion)</td></tr>
+        <tr><td><button class="term" data-term="lithostratigraphy">Lithostratigraphic</button></td><td>Lithology: composition and physical properties</td><td>Navajo Sandstone in Zion and Canyonlands</td></tr>
+        <tr><td><button class="term" data-term="chronostratigraphy">Chronostratigraphic</button></td><td>Same age, even in different lithologies</td><td>Permian Capitan Reef, Texas</td></tr>
+        <tr><td><button class="term" data-term="biostratigraphic correlation">Biostratigraphic</button></td><td>Index fossils</td><td>Foraminifera; conodonts</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s7-4-1">7.4.1 Stratigraphic correlation</h3>
+  <p>Geologists map areas and build <b>stratigraphic columns</b>, detailed descriptions of strata from bottom to top. At <b>Canyonlands National Park</b>, the Navajo Sandstone overlies the Kayenta Formation, which overlies the cliff-forming <b>Wingate</b> Formation. At <b>Zion National Park</b>, the Navajo overlies the Kayenta, which overlies the cliff-forming <b>Moenave</b> Formation. By their position, the Wingate and Moenave correlate; they keep separate names because their composition and outcrop pattern differ slightly (<a href="#fig-correl">Figure 7.33</a>). Colorado Plateau strata can be correlated like this over thousands of square miles.</p>
+  <figure id="fig-correl">
+    <div class="frame"><svg viewBox="0 0 660 320" role="img" aria-labelledby="co-t-en" style="width:100%;min-width:520px;height:auto;display:block"><title id="co-t-en">Stratigraphic correlation: at both parks the Navajo Sandstone lies on the Kayenta Formation, so the cliff-forming layer beneath, Wingate at Canyonlands and Moenave at Zion, correlate.</title><text x="140.0" y="36.0" font-size="14.5" class="svg-ink" text-anchor="middle" font-weight="600">Canyonlands NP</text><rect x="40" y="50" width="200" height="80" fill="#f1dcb4" stroke="#4a3d30"/><rect x="76.8" y="79.0" width="126.3" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="140.0" y="94.7" text-anchor="middle" font-size="13" fill="#151515">Navajo Sandstone</text><rect x="40" y="130" width="200" height="56" fill="#d89a7c" stroke="#4a3d30"/><rect x="72.9" y="147.0" width="134.2" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="140.0" y="162.7" text-anchor="middle" font-size="13" fill="#151515">Kayenta Formation</text><rect x="40" y="186" width="200" height="80" fill="#e0ae7e" stroke="#4a3d30"/><rect x="73.7" y="215.0" width="132.7" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="140.0" y="230.7" text-anchor="middle" font-size="13" fill="#151515">Wingate Sandstone</text><text x="520.0" y="76.0" font-size="14.5" class="svg-ink" text-anchor="middle" font-weight="600">Zion NP</text><rect x="420" y="90" width="200" height="80" fill="#f1dcb4" stroke="#4a3d30"/><rect x="456.8" y="119.0" width="126.3" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="520.0" y="134.7" text-anchor="middle" font-size="13" fill="#151515">Navajo Sandstone</text><rect x="420" y="170" width="200" height="56" fill="#d89a7c" stroke="#4a3d30"/><rect x="452.9" y="187.0" width="134.2" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="520.0" y="202.7" text-anchor="middle" font-size="13" fill="#151515">Kayenta Formation</text><rect x="420" y="226" width="200" height="80" fill="#e0ae7e" stroke="#4a3d30"/><rect x="451.6" y="255.0" width="136.7" height="22" rx="11.0" fill="#ffffff" fill-opacity="0.93" stroke="#151515" stroke-opacity=".25"/><text x="520.0" y="270.7" text-anchor="middle" font-size="13" fill="#151515">Moenave Formation</text><path d="M240 50 L420 90" stroke="var(--muted)" stroke-dasharray="5 5" fill="none"/><path d="M240 130 L420 170" stroke="var(--muted)" stroke-dasharray="5 5" fill="none"/><path d="M240 186 L420 226" stroke="var(--muted)" stroke-dasharray="5 5" fill="none"/><path d="M240 266 L420 306" stroke="var(--muted)" stroke-dasharray="5 5" fill="none"/><rect x="245.7" y="235.2" width="168.6" height="21.5" rx="10.8" fill="var(--accent-soft)" fill-opacity="1" stroke="#151515" stroke-opacity=".25"/><text x="330.0" y="250.5" text-anchor="middle" font-size="12.5" fill="var(--fg)">same position → correlate</text></svg></div>
+    <figcaption>Stratigraphic correlation between Canyonlands and Zion. Thicknesses are schematic.<span class="credit">Drawn for this guide from the chapter text.</span></figcaption>
+  </figure>
+  <figure id="fig-staircase">
+    <div class="frame"><img class="diagram" src="images/unit7/staircase.webp" alt="Long cross-section titled The Grand Staircase, showing coloured rock layers stepping up from the Grand Canyon in the south to Bryce Canyon in the north." loading="lazy" width="1400" height="398"></div>
+    <figcaption>Correlation of strata along the Grand Staircase from the Grand Canyon to Zion Canyon, Bryce Canyon, and Cedar Breaks.<span class="credit">National Park Service, public domain (via the textbook).</span></figcaption>
+  </figure>
+
+  <h3 id="s7-4-2">7.4.2 Lithostratigraphic correlation</h3>
+  <p>Lithostratigraphic correlation matches strata by <b>lithology</b> (Greek <i>lithos</i>, stone): their composition and physical properties. It can match whole formations over long distances or trace smaller strata within formations to map their extent and depositional environments. The Navajo Sandstone that forms Zion's walls is the same rock in Canyonlands, hundreds of miles away, and in Capitol Reef and Arches National Parks. The same formation is called the <b>Aztec Sandstone</b> in Nevada and the <b>Nugget Sandstone</b> near Salt Lake City, where it is distinct enough to get its own name.</p>
+  <figure id="fig-navajo">
+    <div class="frame">
+      <ul class="gallery" style="--cols:2">
+        <li><img src="images/unit7/navajo.webp" alt="View down a deep canyon with towering tan and red sandstone walls and a green valley floor." loading="lazy" width="976" height="1000"><span><b>Zion National Park</b>view from Angels Landing</span></li>
+        <li><img src="images/unit7/stevens.webp" alt="A large natural arch of orange sandstone above a canyon." loading="lazy" width="849" height="600"><span><b>Stevens Arch, Coyote Gulch</b>about 125 miles from Zion</span></li>
+      </ul>
+    </div>
+    <figcaption>The same Navajo Sandstone in two places.<span class="credit">David Iliff (Zion), CC BY-SA. G. Thomas (Stevens Arch), public domain. Both via the textbook.</span></figcaption>
+  </figure>
+
+  <h3 id="s7-4-3">7.4.3 Chronostratigraphic correlation</h3>
+  <p>Chronostratigraphic correlation matches rocks of the <b>same age</b>, even when their lithologies differ. Depositional environments change from place to place, so different sedimentary rocks form at the same time: in a marine setting, from beach to near-shore, shallow lagoon, reef, slope, and deep marine, each with its own formation. In the Permian <b>Capitan Reef</b> of the Guadalupe Mountains, West Texas, a red time line marks one moment when lagoon/back-reef, reef, and deep-water siltstone were all forming (<a href="#fig-capitan">Figure 7.36</a>). This is how time units relate to rock units: a <b>lithostratigraphic</b> unit is one kind of rock, which can be different ages in different places, while a <b>chronostratigraphic</b> unit is all the rock formed in one span of time.</p>
+  <figure id="fig-capitan">
+      <div class="frame"><img class="diagram" src="images/unit7/capitan.webp" style="width:min(100%,489px)" alt="Cross-section of a reef: light blue lagoon layers on the left, a dark blue reef mass in the middle, yellow deep-water layers on the right, crossed by a red line." loading="lazy" width="326" height="200"></div>
+      <figcaption>Permian Capitan Reef: lagoon/back-reef (light blue), main reef (dark blue), and deep marine siltstone (yellow) all deposited at the time of the red line.<span class="credit">National Park Service, public domain (via the textbook).</span></figcaption>
+    </figure>
+    <figure id="fig-transreg">
+      <div class="frame"><img class="diagram" src="images/unit7/transreg.webp" alt="Two cross-sections of a sloping sea floor: top labelled onlap with layers stepping landward, bottom labelled offlap with layers stepping seaward." loading="lazy" width="500" height="331"></div>
+      <figcaption>Transgressions make onlapping sediments; regressions make offlapping. Sandstone (buff), limestone (gray), and shale (mustard) form at the same time at different water depths.<span class="credit">Woudloper, CC BY-SA (via the textbook).</span></figcaption>
+    </figure>
+
+  <h3 id="s7-4-4">7.4.4 Biostratigraphic correlation</h3>
+  <p>Biostratigraphic correlation uses <button class="term" data-term="index fossils">index fossils</button>, assemblages of organisms present only during specific intervals of time, to date strata. Fossils let geologists assign a formation to a dated range, such as the Jurassic Period (201–145 million years ago); most of the time scale is mapped to fossil assemblages. The best index fossils were <b>geographically widespread</b> but lived for only a <b>narrow time</b> (<a href="#fig-indexf">Figure 7.38</a>).</p>
+  <figure id="fig-indexf">
+    <div class="frame"><img class="diagram" src="images/unit7/indexf.gif" alt="Chart of geologic periods from Cambrian to Tertiary with drawings and names of index fossils for each period." loading="lazy" width="675" height="533"></div>
+    <figcaption>Index fossils used for biostratigraphic correlation.<span class="credit">U.S. Geological Survey, public domain (via the textbook).</span></figcaption>
+  </figure>
+  <p><b>Microfossils</b>, mostly from single-celled organisms, are some of the best: widely distributed, and those with hard shells preserve well. <button class="term" data-term="foraminifera">Foraminifera</button>, single-celled organisms with calcareous shells, are especially useful for the Cretaceous Period and Cenozoic Era. <button class="term" data-term="conodonts">Conodonts</button> are tooth-like phosphatic parts of an eel-like animal with no other hard parts; they correlate Cambrian to Triassic strata. The animals lived in shallow seas worldwide, evolved rapidly, and their scattered "teeth" are easy to separate from limestone in the lab.</p>
+  <figure id="fig-micro">
+    <div class="frame">
+      <ul class="gallery" style="--cols:3">
+        <li><img src="images/unit7/foram.webp" alt="Three small white oval shells on a black background." loading="lazy" width="1000" height="750"><span><b>Foraminifera</b><i>Quinqueloculina seminula</i></span></li>
+        <li><img src="images/unit7/conodonts.webp" alt="Grid of many small grey tooth-like fossils on black." loading="lazy" width="484" height="580"><span><b>Conodonts</b>from Alaska</span></li>
+        <li><img class="diagram" src="images/unit7/conoanimal.gif" alt="Drawing of an eel-like animal with large eyes, beside drawings of its tooth-like elements." loading="lazy" width="299" height="234" style="object-fit:contain"><span><b>Conodont animal</b>artist's reconstruction</span></li>
+      </ul>
+    </div>
+    <figcaption>Microfossils used as index fossils.<span class="credit">Hans Hillewaert (foraminifera), CC BY-SA. USGS (conodonts), public domain. Philippe Janvier (reconstruction), CC BY. All via the textbook.</span></figcaption>
+  </figure>
+  <p>In the 1960s, a key study tied <b>Triassic conodont zones</b> to <b>ammonoids</b> (extinct cousins of the pearly nautilus), until then the only standard for Triassic correlation. Cross-referencing micro- and macro-index fossils made both more reliable, and conodonts went on to correlate Triassic strata internationally, across Europe, western North America, and the Canadian Arctic Islands.</p>
+
+  <h3 id="s7-4-5">7.4.5 Geologic time scale</h3>
+  <p>Geologists divide time into nested units: <button class="term" data-term="eon">eon</button> (largest), <button class="term" data-term="era">era</button>, <button class="term" data-term="period">period</button>, <button class="term" data-term="epoch">epoch</button>, and <b>age</b> (<a href="#tbl-units">Table 7.9</a>, <a href="#fig-timescale">Figure 7.40</a>). The divisions are the same everywhere on Earth, but rocks for a given span may be missing in a given place: <b>time is an unbroken continuum, while the rock record has gaps</b>.</p>
+  <div class="tablewrap" id="tbl-units">
+    <table>
+      <caption>Time units, their rock units, and where we are now.</caption>
+      <thead><tr><th>Time unit</th><th>Rocks of that unit are called</th><th>We are now in the</th></tr></thead>
+      <tbody>
+        <tr><td>Eon (largest)</td><td>Eonothem</td><td>Phanerozoic Eon</td></tr>
+        <tr><td>Era</td><td>Erathem</td><td>Cenozoic Era</td></tr>
+        <tr><td>Period</td><td>System</td><td>Quaternary Period</td></tr>
+        <tr><td>Epoch</td><td>Series</td><td>Holocene Epoch</td></tr>
+        <tr><td>Age (smallest)</td><td>Stage*</td><td>Meghalayan Age*</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">*Not in the chapter; from the International Commission on Stratigraphy chart (stratigraphy.org/chart).</p>
+  <figure id="fig-timescale">
+    <div class="frame"><svg viewBox="0 0 880 984" role="img" aria-labelledby="ts-t-en" style="width:100%;min-width:640px;height:auto;display:block"><title id="ts-t-en">Geologic time scale redrawn from the textbook chart: left, all of Earth history from 4,600 million years ago to the present, by eon and era; right, the Phanerozoic Eon enlarged to show its eras and periods with boundary ages.</title><text x="150.0" y="30.0" font-size="14" class="svg-ink" text-anchor="middle" font-weight="600">Eon</text><text x="330.0" y="30.0" font-size="14" class="svg-ink" text-anchor="middle" font-weight="600">Era</text><path d="M70 70 V950.0" stroke="var(--fg)" stroke-width="2"/><path d="M64 70.0 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="74.5" font-size="12" class="svg-ink" text-anchor="end">Present</text><path d="M64 165.7 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="170.2" font-size="12" class="svg-ink" text-anchor="end">500</text><path d="M64 261.3 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="265.8" font-size="12" class="svg-ink" text-anchor="end">1,000</text><path d="M64 357.0 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="361.5" font-size="12" class="svg-ink" text-anchor="end">1,500</text><path d="M64 452.6 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="457.1" font-size="12" class="svg-ink" text-anchor="end">2,000</text><path d="M64 548.3 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="552.8" font-size="12" class="svg-ink" text-anchor="end">2,500</text><path d="M64 643.9 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="648.4" font-size="12" class="svg-ink" text-anchor="end">3,000</text><path d="M64 739.6 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="744.1" font-size="12" class="svg-ink" text-anchor="end">3,500</text><path d="M64 835.2 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="839.7" font-size="12" class="svg-ink" text-anchor="end">4,000</text><path d="M64 950.0 H70" stroke="var(--fg)" stroke-width="2"/><text x="61.0" y="954.5" font-size="12" class="svg-ink" text-anchor="end">4,600</text><text x="61.0" y="970.0" font-size="12" class="svg-ink" text-anchor="end">Ma</text><rect x="82" y="173.1" width="34" height="776.9" rx="3" fill="#8db54a" stroke="#ffffff" stroke-width="1.5"/><text transform="translate(103.0 561.6) rotate(-90)" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">PRECAMBRIAN</text><rect x="82" y="70.0" width="102" height="103.1" rx="3" fill="#a6ee86" stroke="#ffffff" stroke-width="1.5"/><text x="133.0" y="125.6" font-size="10.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">PHANEROZOIC</text><rect x="120" y="173.1" width="64" height="375.1" rx="3" fill="#a2dc72" stroke="#ffffff" stroke-width="1.5"/><text transform="translate(156.0 360.7) rotate(-90)" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">PROTEROZOIC</text><rect x="120" y="548.3" width="64" height="287.0" rx="3" fill="#7fdcc4" stroke="#ffffff" stroke-width="1.5"/><text transform="translate(156.0 691.7) rotate(-90)" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">ARCHEAN</text><rect x="120" y="835.2" width="300" height="114.8" rx="3" fill="#e0336f" stroke="#ffffff" stroke-width="1.5"/><text x="270.0" y="896.6" font-size="11.5" fill="#ffffff" text-anchor="middle" letter-spacing=".08em" font-weight="600">HADEAN</text><text x="415.0" y="847.2" font-size="10.5" fill="#ffffff" text-anchor="end" opacity=".85">4000</text><rect x="188" y="70.0" width="232" height="12.6" rx="3" fill="#f5f02a" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="80.3" font-size="10" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">CENOZOIC</text><rect x="188" y="82.6" width="232" height="35.6" rx="3" fill="#93dd62" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="104.4" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">MESOZOIC</text><text x="415.0" y="94.6" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">66</text><rect x="188" y="118.2" width="232" height="54.9" rx="3" fill="#86d6f2" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="149.7" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">PALEOZOIC</text><text x="415.0" y="130.2" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">252</text><rect x="188" y="173.1" width="232" height="88.2" rx="3" fill="#ebe1e1" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="221.2" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">NEOPROTEROZOIC</text><text x="415.0" y="185.1" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">539</text><rect x="188" y="261.3" width="232" height="114.8" rx="3" fill="#b8955f" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="322.7" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">MESOPROTEROZOIC</text><text x="415.0" y="273.3" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">1000</text><rect x="188" y="376.1" width="232" height="172.2" rx="3" fill="#bccd72" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="466.2" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">PALEOPROTEROZOIC</text><text x="415.0" y="388.1" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">1600</text><rect x="188" y="548.3" width="232" height="57.4" rx="3" fill="#e2eaea" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="581.0" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">NEOARCHEAN</text><text x="415.0" y="560.3" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">2500</text><rect x="188" y="605.7" width="232" height="76.5" rx="3" fill="#a9d2d2" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="647.9" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">MESOARCHEAN</text><text x="415.0" y="617.7" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">2800</text><rect x="188" y="682.2" width="232" height="76.5" rx="3" fill="#aebebe" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="724.4" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">PALEOARCHEAN</text><text x="415.0" y="694.2" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">3200</text><rect x="188" y="758.7" width="232" height="76.5" rx="3" fill="#a9d6d6" stroke="#ffffff" stroke-width="1.5"/><text x="304.0" y="801.0" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">EOARCHEAN</text><text x="415.0" y="770.7" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">3600</text><path d="M420 70.0 L526 56 M420 173.1 H470 V950.0 H526" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="5 4" fill="none"/><text x="565.0" y="30.0" font-size="14" class="svg-ink" text-anchor="middle" font-weight="600">Era</text><text x="715.0" y="30.0" font-size="14" class="svg-ink" text-anchor="middle" font-weight="600">Period</text><path d="M526 56 V950.0" stroke="var(--fg)" stroke-width="2"/><path d="M520 162.3 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="166.8" font-size="12" class="svg-ink" text-anchor="end">50</text><path d="M520 242.9 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="247.4" font-size="12" class="svg-ink" text-anchor="end">100</text><path d="M520 323.4 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="327.9" font-size="12" class="svg-ink" text-anchor="end">150</text><path d="M520 404.0 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="408.5" font-size="12" class="svg-ink" text-anchor="end">200</text><path d="M520 484.5 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="489.0" font-size="12" class="svg-ink" text-anchor="end">250</text><path d="M520 565.0 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="569.5" font-size="12" class="svg-ink" text-anchor="end">300</text><path d="M520 645.6 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="650.1" font-size="12" class="svg-ink" text-anchor="end">350</text><path d="M520 726.1 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="730.6" font-size="12" class="svg-ink" text-anchor="end">400</text><path d="M520 806.6 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="811.1" font-size="12" class="svg-ink" text-anchor="end">450</text><path d="M520 887.2 H526" stroke="var(--fg)" stroke-width="2"/><text x="517.0" y="891.7" font-size="12" class="svg-ink" text-anchor="end">500</text><path d="M520 950.0 H526" stroke="var(--fg)" stroke-width="2"/><rect x="540" y="70.0" width="44" height="118.1" rx="3" fill="#f5f02a" stroke="#ffffff" stroke-width="1.5"/><text transform="translate(566.0 129.1) rotate(-90)" font-size="10.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">CENOZOIC</text><rect x="540" y="188.1" width="44" height="299.6" rx="3" fill="#93dd62" stroke="#ffffff" stroke-width="1.5"/><text transform="translate(566.0 337.9) rotate(-90)" font-size="10.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">MESOZOIC</text><rect x="540" y="487.7" width="44" height="462.3" rx="3" fill="#86d6f2" stroke="#ffffff" stroke-width="1.5"/><text transform="translate(566.0 718.9) rotate(-90)" font-size="10.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">PALEOZOIC</text><rect x="588" y="70.0" width="290" height="16.0" rx="3" fill="#f5f02a" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="82.0" font-size="10.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">QUATERNARY</text><rect x="588" y="86.0" width="290" height="32.9" rx="3" fill="#fdcca4" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="106.4" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">NEOGENE</text><text x="873.0" y="98.0" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">2.6</text><rect x="588" y="118.9" width="290" height="69.3" rx="3" fill="#fbb23a" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="157.5" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">PALEOGENE</text><text x="873.0" y="130.9" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">23</text><rect x="588" y="188.1" width="290" height="127.2" rx="3" fill="#a5e3a0" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="255.7" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">CRETACEOUS</text><text x="873.0" y="200.1" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">66</text><rect x="588" y="315.4" width="290" height="90.2" rx="3" fill="#5cf27f" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="364.5" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">JURASSIC</text><text x="873.0" y="327.4" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">145</text><rect x="588" y="405.6" width="290" height="82.1" rx="3" fill="#79f5d2" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="450.6" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">TRIASSIC</text><text x="873.0" y="417.6" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">201</text><rect x="588" y="487.7" width="290" height="75.7" rx="3" fill="#7af1f4" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="529.6" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">PERMIAN</text><text x="873.0" y="499.7" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">252</text><rect x="588" y="563.4" width="62" height="96.6" rx="3" fill="#a5d8f3" stroke="#ffffff" stroke-width="1.5"/><text transform="translate(623.0 611.7) rotate(-90)" font-size="9.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">CARBONIFEROUS</text><rect x="652" y="563.4" width="226" height="30.6" rx="3" fill="#6fc4f2" stroke="#ffffff" stroke-width="1.5"/><text x="765.0" y="582.7" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">PENNSYLVANIAN</text><text x="873.0" y="575.4" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">299</text><rect x="652" y="594.0" width="226" height="66.0" rx="3" fill="#8db3e2" stroke="#ffffff" stroke-width="1.5"/><text x="765.0" y="631.0" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">MISSISSIPPIAN</text><text x="873.0" y="606.0" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">318</text><rect x="588" y="660.1" width="290" height="96.6" rx="3" fill="#a9b8f6" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="712.4" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">DEVONIAN</text><text x="873.0" y="672.1" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">359</text><rect x="588" y="756.7" width="290" height="40.3" rx="3" fill="#bd97f4" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="780.8" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">SILURIAN</text><text x="873.0" y="768.7" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">419</text><rect x="588" y="797.0" width="290" height="66.0" rx="3" fill="#f594e2" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="834.0" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">ORDOVICIAN</text><text x="873.0" y="809.0" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">444</text><rect x="588" y="863.0" width="290" height="87.0" rx="3" fill="#f58a8a" stroke="#ffffff" stroke-width="1.5"/><text x="733.0" y="910.5" font-size="11.5" fill="#151515" text-anchor="middle" letter-spacing=".08em" font-weight="600">CAMBRIAN</text><text x="873.0" y="875.0" font-size="10.5" fill="#151515" text-anchor="end" opacity=".85">485</text><text x="526.0" y="970.0" font-size="12" class="svg-ink" text-anchor="middle">539 Ma</text><text x="878.0" y="972.0" font-size="11.5" class="svg-muted" text-anchor="end">Numbers: age of each unit’s upper (younger) boundary, Ma</text></svg></div>
+    <figcaption>Geologic time scale, with ages of upper boundaries in millions of years (Ma). Left: all of Earth history; right: the Phanerozoic enlarged. The Quaternary band is widened so it can be read, as in the original.<span class="credit">Redrawn for this guide from "Geologic Time Scale" by Belinda C. Madsen for Salt Lake Community College (2017, updated 2023), after the ICS International Chronostratigraphic Chart (Cohen et al., 2013; updated 2023).</span></figcaption>
+  </figure>
+  <figure id="fig-clock">
+    <div class="frame"><img class="diagram" src="images/unit7/clock.webp" alt="Circular diagram of geologic time like a clock face, with eons as coloured sectors and labels for events such as the formation of the Moon and the first animals." loading="lazy" width="801" height="768" style="max-height:560px;width:auto"></div>
+    <figcaption>Geologic time drawn as a clock, showing the divisions and important events. Ga = billion years ago, Ma = million years ago.<span class="credit">Woudloper, adapted by Hardwigg, public domain (via the textbook).</span></figcaption>
+  </figure>
+  <p>The <button class="term" data-term="geologic time scale">geologic time scale</button> was built in the 19th century from the principles of stratigraphy; the order of its units was known before anyone could assign numbers. Biostratigraphic correlation used fossils to give era and period names to sedimentary rocks worldwide. Today some geologists think humans affect natural processes so strongly that a new unit, the <button class="term" data-term="anthropocene">Anthropocene</button>, should be added.</p>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener">Section 7.4 quiz in the textbook ↗</a></p>
+</section>
+
+<section id="summary">
+  <h2 class="sec">Summary</h2>
+  <p>Events in Earth history can be placed in order with the principles of relative dating, and the geologic time scale was fully worked out in the 19th century this way, without any numeric ages. The discovery of radioactivity in the late 1800s allowed absolute dating from the decay of unstable isotopes; interpreting it correctly depends on the type of rock and on accurate assumptions about starting isotope levels. Together, relative and absolute dating have given the history of geologic events, the age of Earth, and the time scale with considerable accuracy. Correlation shows how depositional environments change from place to place. Geologic time is vast, leaving plenty of time for life to evolve, and some life forms, preserved as fossils, are used for biostratigraphic correlation. The time scale is continuous even where the rock record is broken.</p>
+  <div class="callout">
+    <h4>Quick recap</h4>
+    <ul>
+      <li>Relative principles: superposition, original horizontality, lateral continuity, cross-cutting, inclusions, fossil succession.</li>
+      <li>Unconformities: nonconformity (strata on crystalline rock), disconformity (between parallel strata), angular (flat on tilted).</li>
+      <li>Decay: alpha (Z −2, A −4), beta (Z +1), electron capture (Z −1). Half-life: time for half the parent to decay. D/P = 1, 3, 7, 15 … after 1, 2, 3, 4 half-lives.</li>
+      <li>Clocks: U–Pb (zircon, two clocks), K–Ar, Rb–Sr, <sup>14</sup>C (to ~57,300 yr), luminescence (&lt;1 Myr), fission track (10<sup>5</sup>–2 × 10<sup>9</sup> yr).</li>
+      <li>Earth: 4.54 ± 0.05 billion years (Patterson, 4.55, from meteorites). Oldest zircons 4.4 billion years.</li>
+      <li>Preservation: actual, permineralization, molds and casts, carbonization, trace fossils.</li>
+      <li>Correlation: stratigraphic, lithostratigraphic, chronostratigraphic, biostratigraphic (index fossils: widespread, short-lived).</li>
+      <li>Time units: eon › era › period › epoch › age; rock units: eonothem › erathem › system › series (› stage).</li>
+    </ul>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener">Chapter 7 review quiz in the textbook ↗</a></p>
+</section>
+
+<section id="resources">
+  <h2 class="sec">Resources</h2>
+  <div class="res">
+    <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener"><b>Chapter 7 (textbook) ↗</b><span>The full chapter, with section quizzes and all original figures.</span></a>
+    <a href="https://slcc.pressbooks.pub/introgeology/back-matter/glossary-test/" target="_blank" rel="noopener"><b>Textbook glossary ↗</b><span>Definitions for every bolded term in the book.</span></a>
+    <a href="https://youtu.be/mOSpRzW2i_4" target="_blank" rel="noopener"><b>Video: Kelvin's age of the Earth ↗</b><span>The animation the chapter links to, on how Kelvin got his range and why it was off.</span></a>
+    <a href="http://www.ucmp.berkeley.edu/paleo/fossils/permin.html" target="_blank" rel="noopener"><b>UC Berkeley: Permineralization ↗</b><span>The fossil page the chapter recommends.</span></a>
+    <a href="https://stratigraphy.org/chart" target="_blank" rel="noopener"><b>ICS International Chronostratigraphic Chart ↗</b><span>The official, interactive geologic time scale with every boundary age (outside source).</span></a>
+    <a href="https://opentextbc.ca/physicalgeology2ed/part/chapter-8-measuring-geological-time/" target="_blank" rel="noopener"><b>Physical Geology: Measuring geological time ↗</b><span>Earle's open textbook (2nd ed.), chapter 8, on relative, fossil, and isotopic dating (outside source).</span></a>
+    <a href="https://www.nps.gov/grca/learn/nature/grca-geology.htm" target="_blank" rel="noopener"><b>NPS: Grand Canyon geology ↗</b><span>The park's own guide to its rock layers and unconformities (outside source).</span></a>
+  </div>
+</section>
+
+<section id="factcheck">
+  <h2 class="sec">Fact-check notes</h2>
+  <p>Every statement in this guide was checked against the textbook chapter. Where the chapter differs from current references or from itself, the guide says so here, so you know what the textbook says.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Points where the chapter differs from current references or within itself.</caption>
+      <thead><tr><th>Topic</th><th>Chapter says</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Number of principles</td><td>"Describe the five principles of stratigraphy"</td><td>Section 7.1.1 lists six (superposition, original horizontality, lateral continuity, cross-cutting, inclusions, fossil succession). The guide shows all six.</td></tr>
+        <tr><td>Section numbers</td><td>"7.1.3 Unconformities" and "7.1.3 Applying Relative Dating Principles"</td><td>Two sections share a number; the guide numbers the second 7.1.4.</td></tr>
+        <tr><td>Dating accuracy</td><td>"plus or minus two million years in 2.5 billion years (that's ±0.055%)"</td><td>2 million ÷ 2.5 billion = 0.08%. The guide gives the plain values without the percentage.</td></tr>
+        <tr><td>Parent/daughter ratio after 5 half-lives</td><td>0.0325</td><td>3.125 ÷ 96.875 = 0.0323. The table keeps the chapter's value.</td></tr>
+        <tr><td>Potassium-40</td><td>Decays to argon-40 by electron capture</td><td>Most <sup>40</sup>K (about 89%) decays to calcium-40 by beta decay; about 11% becomes <sup>40</sup>Ar by electron capture. The 1.25-billion-year half-life covers both branches (Nuclear Data Sheets).</td></tr>
+        <tr><td>Fission tracks</td><td>Made when <sup>238</sup>U "decays to the daughter product <sup>234</sup>Th and releases an alpha particle"</td><td>Fission tracks are made by <b>spontaneous fission</b> of <sup>238</sup>U, which splits the nucleus into two large fragments that fly apart; alpha-decay recoil damage is far too small to see in an optical microscope (Gallagher, Brown &amp; Johnson, 1998, <i>Annual Review of Earth and Planetary Sciences</i> 26). The guide says "uranium decay … fission of <sup>238</sup>U".</td></tr>
+        <tr><td>Oldest rocks</td><td>4.4-billion-year zircons "have been determined to be the oldest known rocks"</td><td>They are the oldest known <b>mineral grains</b>, held in much younger host rock (as the chapter goes on to say). The guide calls them Earth's oldest known material.</td></tr>
+        <tr><td>Jurassic dates</td><td>"Jurassic Period (199 to 145 million years ago)"</td><td>The chapter's own time scale, and the ICS chart, start the Jurassic at 201 Ma; the guide uses 201–145. The current ICS chart also moves the base of the Cretaceous to 143.1 ± 0.6 Ma; the guide keeps the chapter's 145.</td></tr>
+        <tr><td>Start of the Phanerozoic</td><td>Glossary: 541 million years ago; time-scale figure: 539 Ma</td><td>The ICS chart gives 538.8 Ma; the guide uses the figure's 539.</td></tr>
+        <tr><td>Guadalupe</td><td>"Guadalupe National Monument"</td><td>The Capitan Reef is in Guadalupe Mountains National Park, Texas.</td></tr>
+        <tr><td>Beta decay</td><td>"a neutron … splits into an electron and a proton"</td><td>An antineutrino is also released; the chapter leaves it out, and so does the guide.</td></tr>
+        <tr><td>Figure placement</td><td>A graph of CO<sub>2</sub> over the last 400,000 years appears in the radiocarbon section</td><td>The graph is about climate, not dating, and the text never refers to it, so the guide leaves it out. The textbook's bell-curve image (labeled "Variation within a population") shows statistical "rare cases" rather than a biological trait, so it is also left out.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="credits">
+  <h2 class="sec">Credits</h2>
+  <p class="small">Content summarized from <a href="https://slcc.pressbooks.pub/introgeology/chapter/7-geologic-time/" target="_blank" rel="noopener"><i>An Introduction to Geology</i>, Chapter 7</a>, © 2017 Chris Johnson, Matthew D. Affolter, Paul Inkenbrandt, and Cam Mosher, licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. Images are credited in each caption; images the chapter marks "All Rights Reserved" (Steno portrait, granite and gneiss) are not used.</p>
+  <ul class="small">
+    <li>From the chapter, under the licenses in its media attributions: Grand Canyon (hero, March 2013, nonconformity, Lipan Point), Isfjorden superposition, Grandview Point, fossil succession, Grand Canyon stratigraphy, Redwall/Temple Butte/Muav, the three unconformity drawings, block diagram, Nuvvuagittuq, hydrogen isotopes, half-life simulation, alpha decay, U-238 decay chain, electron capture, mass spectrometer, accelerator mass spectrometer, Hadean Earth, zircon, Yellowstone ash beds, thermoluminescence, apatite, <i>Archaeopteryx</i>, trilobite, amber, petrified wood, external mold, carbonized leaf, <i>Chirotherium</i> prints, coprolite, Gondwana fossil map, Grand Staircase, Navajo Sandstone (Zion, Stevens Arch), Capitan Reef, onlap/offlap, index fossils, foraminifera, conodonts, conodont animal, geologic clock.</li>
+    <li>Redrawn for this guide from chapter figures: half-life graph (after Krishnavedala, public domain) and geologic time scale (after B. C. Madsen for SLCC).</li>
+    <li>Drawn for this guide: principles of relative dating, radiocarbon steps, dating strata with igneous rocks, Canyonlands–Zion correlation.</li>
+    <li>Outside references for checking: International Commission on Stratigraphy chart (stratigraphy.org/chart); Gallagher, Brown &amp; Johnson (1998) on fission tracks; Nuclear Data Sheets for <sup>40</sup>K decay branches.</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<button class="fab" id="notesBtn" type="button" aria-controls="notes" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Key terms
+</button>
+<button class="fab hide" id="toTop" type="button" aria-label="Return to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<aside class="notes" id="notes" hidden aria-label="Key terms">
+  <header>
+    <div><h2>Key terms · Chapter 7</h2><button class="close" id="notesClose" type="button" aria-label="Close key terms">×</button></div>
+    <input id="termSearch" type="search" placeholder="Search terms and definitions" autocomplete="off" aria-label="Search terms and definitions">
+    <div class="count" id="termCount"></div>
+  </header>
+  <dl id="termList"></dl>
+</aside>
+</div>
+
+<script type="application/json" id="terms">
+[
+ [
+ "stratigraphy",
+ "outcomes",
+ "The study of rock layers (strata) and their relationships to each other within a specific area."
+ ],
+ [
+ "strata",
+ "outcomes",
+ "Discernible layers of rock, typically sedimentary (singular: stratum)."
+ ],
+ [
+ "relative dating",
+ "s7-1",
+ "Determining whether a rock or event is older or younger than another, without a numeric age."
+ ],
+ [
+ "uniformitarianism",
+ "s7-1",
+ "Hutton's idea that the present is the key to the past: the laws and processes operating today also operated in the past."
+ ],
+ [
+ "principle of superposition",
+ "s7-1-1",
+ "In an undisturbed sequence of strata, the rocks on the bottom are older than the rocks on top."
+ ],
+ [
+ "principle of original horizontality",
+ "s7-1-1",
+ "Layers deposited from above (sediments, lava flows) are laid down flat; strata may slope slightly at basin margins."
+ ],
+ [
+ "basin",
+ "s7-1-1",
+ "A down-warped feature in the crust where sediment collects."
+ ],
+ [
+ "principle of lateral continuity",
+ "s7-1-1",
+ "Strata continue in all directions within their basin until they thin out at its edge; a layer cut by a canyon continues on both sides."
+ ],
+ [
+ "principle of cross-cutting relationships",
+ "s7-1-1",
+ "Features that cut across rocks (folds, faults, igneous intrusions) are younger than the rocks they cut."
+ ],
+ [
+ "inclusions",
+ "s7-1-1",
+ "Pieces of one rock caught inside another. Principle of inclusions: the included rock is older than the host rock."
+ ],
+ [
+ "host rock",
+ "s7-1-1",
+ "The rock that contains inclusions, or that surrounds another rock body."
+ ],
+ [
+ "principle of fossil succession",
+ "s7-1-1",
+ "Evolution produced a succession of unique fossils, so fossil assemblages are unique to the time they lived and correlate rocks of the same age (also called the principle of faunal succession)."
+ ],
+ [
+ "basement",
+ "s7-1-2",
+ "The underlying rocks of an area, often the deeper crystalline (igneous and metamorphic, non-layered) rocks below sedimentary strata."
+ ],
+ [
+ "unconformity",
+ "s7-1-2",
+ "Missing time in the rock record, from a lack of deposition and/or erosion; drawn as a wavy line."
+ ],
+ [
+ "nonconformity",
+ "s7-1-3",
+ "Unconformity where sedimentary strata lie on igneous or metamorphic (crystalline) rock."
+ ],
+ [
+ "disconformity",
+ "s7-1-3",
+ "Unconformity between parallel sedimentary strata, marking a time of no deposition or of erosion."
+ ],
+ [
+ "angular unconformity",
+ "s7-1-3",
+ "Unconformity where flat strata lie on older strata that were tilted, folded and/or faulted, then eroded."
+ ],
+ [
+ "transgression",
+ "s7-1-3",
+ "A rise of sea level over time that moves the shoreline inland; makes onlapping sediments."
+ ],
+ [
+ "regression",
+ "s7-1-3",
+ "A fall of sea level over time that moves the shoreline seaward; makes offlapping sediments."
+ ],
+ [
+ "fault scarp",
+ "s7-1-4",
+ "The step or low ridge where fault movement cuts the Earth's surface."
+ ],
+ [
+ "radioactivity",
+ "s7-2",
+ "Spontaneous, random breakdown of unstable atomic nuclei, releasing particles or energy; discovered in the late 1800s."
+ ],
+ [
+ "absolute dating",
+ "s7-2",
+ "Dating a rock or event to a specific number of years ago (numeric age), mainly by radioisotopic dating."
+ ],
+ [
+ "isotope",
+ "s7-2-1",
+ "Atoms of one element (same number of protons) with different numbers of neutrons, e.g. ¹H, ²H, ³H."
+ ],
+ [
+ "radioactive decay",
+ "s7-2-1",
+ "The change of an unstable (radioactive) isotope into a more stable isotope of another element by releasing particles or energy."
+ ],
+ [
+ "half-life",
+ "s7-2-1",
+ "The time it takes for half of the atoms of a radioactive parent isotope to decay to the daughter isotope; constant for each isotope."
+ ],
+ [
+ "closed system",
+ "s7-2-1",
+ "A mineral that no elements have moved into or out of since it formed; required for radioisotopic dating."
+ ],
+ [
+ "detrital",
+ "s7-2-1",
+ "Sedimentary rock made of grains weathered from previous rocks (sand, gravel); its grains come from many sources, so it cannot be dated directly."
+ ],
+ [
+ "evaporite",
+ "s7-2-1",
+ "Chemical sedimentary rock that forms as water evaporates; may hold datable minerals (e.g. with potassium)."
+ ],
+ [
+ "zircon",
+ "s7-2-1",
+ "ZrSiO₄; a resistant mineral (hardness 8.5) in which uranium can replace zirconium, the main mineral for uranium–lead dating."
+ ],
+ [
+ "alpha decay",
+ "s7-2-1",
+ "Decay in which an alpha particle (2 protons + 2 neutrons, a helium nucleus) leaves; atomic number −2, mass number −4."
+ ],
+ [
+ "beta decay",
+ "s7-2-1",
+ "Decay in which a neutron becomes a proton and an electron (emitted as a beta ray); atomic number +1, mass unchanged."
+ ],
+ [
+ "electron capture",
+ "s7-2-1",
+ "Decay in which a proton captures an electron and becomes a neutron; atomic number −1, mass unchanged (e.g. ⁴⁰K → ⁴⁰Ar)."
+ ],
+ [
+ "parent isotope",
+ "s7-2-1",
+ "The original radioactive isotope that decays."
+ ],
+ [
+ "daughter isotope",
+ "s7-2-1",
+ "The isotope produced by radioactive decay."
+ ],
+ [
+ "decay chain",
+ "s7-2-1",
+ "A series of radioactive decays that ends in a stable isotope, e.g. ²³⁸U to ²⁰⁶Pb."
+ ],
+ [
+ "ion",
+ "s7-2-1",
+ "An atom or molecule with an electric charge from losing or gaining electrons."
+ ],
+ [
+ "mass spectrometer",
+ "s7-2-2",
+ "An instrument that measures the amounts of different isotopes in a sample."
+ ],
+ [
+ "radiocarbon dating",
+ "s7-2-2",
+ "Dating organic material (wood, bone) by its remaining ¹⁴C compared with ¹²C; half-life 5,730 years, useful to about 57,300 years; calibrated with tree rings."
+ ],
+ [
+ "convection",
+ "s7-2-3",
+ "Flow in unevenly heated material: warm, less dense parts rise and cool, denser parts sink; Kelvin left mantle convection out of his estimate."
+ ],
+ [
+ "luminescence dating",
+ "s7-2-5",
+ "Measures time since quartz-rich sediment was last exposed to sunlight or heat, from the light released by trapped electrons; for sediments under 1 million years old."
+ ],
+ [
+ "fission-track dating",
+ "s7-2-5",
+ "Counts damage tracks left by uranium decay in grains such as apatite; about 100,000 to 2 billion years."
+ ],
+ [
+ "recurrence interval",
+ "s7-2-5",
+ "The average time between large earthquakes on a fault, worked out from past earthquake records."
+ ],
+ [
+ "fossil",
+ "s7-3",
+ "Any evidence of past life preserved in rocks."
+ ],
+ [
+ "actual preservation",
+ "s7-3-1",
+ "Rare fossilization in which original materials or hard parts survive unchanged (insects in amber, mammoth hair)."
+ ],
+ [
+ "permineralization",
+ "s7-3-1",
+ "Fossilization in which minerals from groundwater fill all spaces in buried remains, even cells (petrified wood)."
+ ],
+ [
+ "mold",
+ "s7-3-1",
+ "Cavity or impression left in rock when an organism dissolves away (external mold)."
+ ],
+ [
+ "cast",
+ "s7-3-1",
+ "Sediment or mineral that fills a mold, preserving the organism's shape."
+ ],
+ [
+ "authigenic mineralization",
+ "s7-3-1",
+ "Mineral nodules forming around soft structures after rapid burial, preserving them in 3-D detail."
+ ],
+ [
+ "carbonization",
+ "s7-3-1",
+ "Fossilization in which compression drives out volatiles, leaving only a carbon film (leaves, ferns)."
+ ],
+ [
+ "trace fossils",
+ "s7-3-1",
+ "Indirect evidence of an organism's life, not the organism itself: tracks, burrows, coprolites, gastroliths."
+ ],
+ [
+ "ichnology",
+ "s7-3-1",
+ "The study of trace fossils, especially prehistoric animal tracks."
+ ],
+ [
+ "coprolite",
+ "s7-3-1",
+ "Fossilized feces; tells about diet and habitat."
+ ],
+ [
+ "gastrolith",
+ "s7-3-1",
+ "Stomach stone swallowed by an animal; a trace fossil."
+ ],
+ [
+ "natural selection",
+ "s7-3-2",
+ "Darwin's mechanism of evolution: individuals with traits that help them survive environmental challenges reproduce more and pass those traits on."
+ ],
+ [
+ "species",
+ "s7-3-2",
+ "A population of organisms with shared characteristics that can produce fertile offspring."
+ ],
+ [
+ "extinct",
+ "s7-3-2",
+ "Describes a species that no longer exists."
+ ],
+ [
+ "theory",
+ "s7-3-2",
+ "An accepted scientific idea that explains a process using the best available information."
+ ],
+ [
+ "hypothesis",
+ "s7-3-2",
+ "A proposed, testable explanation for an observation."
+ ],
+ [
+ "correlation",
+ "s7-4",
+ "Establishing which strata in separate places are the same age (matching rocks of similar age, type, etc.)."
+ ],
+ [
+ "stratigraphic correlation",
+ "s7-4",
+ "Matching strata of the same age in distant areas by their stratigraphic relationship (position in the sequence)."
+ ],
+ [
+ "lithostratigraphy",
+ "s7-4",
+ "Correlation by lithology: the composition and physical properties of the rocks."
+ ],
+ [
+ "chronostratigraphy",
+ "s7-4",
+ "Correlation of rocks of the same age, even when their lithologies differ."
+ ],
+ [
+ "biostratigraphic correlation",
+ "s7-4",
+ "Correlation that uses index fossils to match and date strata."
+ ],
+ [
+ "index fossils",
+ "s7-4-4",
+ "Fossils of organisms that were geographically widespread but lived for a short time span, so they pin strata to a narrow time interval."
+ ],
+ [
+ "foraminifera",
+ "s7-4-4",
+ "Single-celled organisms with calcareous shells; index fossils for the Cretaceous and Cenozoic."
+ ],
+ [
+ "conodonts",
+ "s7-4-4",
+ "Tooth-like phosphatic parts of an extinct eel-like animal; index fossils for the Cambrian to Triassic."
+ ],
+ [
+ "eon",
+ "s7-4-5",
+ "The largest unit of geologic time (now the Phanerozoic); its rocks form an eonothem."
+ ],
+ [
+ "era",
+ "s7-4-5",
+ "Second-largest unit of geologic time (now the Cenozoic); its rocks form an erathem."
+ ],
+ [
+ "period",
+ "s7-4-5",
+ "Third-largest unit of geologic time (now the Quaternary); its rocks form a system."
+ ],
+ [
+ "epoch",
+ "s7-4-5",
+ "Unit of geologic time smaller than a period and larger than an age (now the Holocene); its rocks form a series."
+ ],
+ [
+ "geologic time scale",
+ "s7-4-5",
+ "The ordered divisions of Earth history (eons, eras, periods, epochs, ages), built from stratigraphy and later given numeric ages."
+ ],
+ [
+ "anthropocene",
+ "s7-4-5",
+ "A proposed new unit of geologic time for the period in which humans have changed natural processes and left evidence in the rock record."
+ ]
+ ]
+</script>
+<script>
+(function(){
+  var r=document.getElementById('hlRange'); if(!r) return;
+  var vi=document.querySelector('body [lang]').getAttribute('lang')==='vi';
+  function f(x,d){var s=x.toFixed(d).replace(/\.?0+$/,'');return vi?s.replace('.',','):s}
+  function big(n){var s=Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,vi?'.':',');return s}
+  function upd(){
+    var n=+r.value, p=100*Math.pow(.5,n), d=100-p;
+    document.getElementById('hlN').textContent=n;
+    document.getElementById('hlP').style.width=p+'%';
+    document.getElementById('hlD').style.width=d+'%';
+    var dp=Math.pow(2,n)-1;
+    document.getElementById('hlOut').innerHTML=vi
+      ? 'Mẹ: <b>'+f(p,3)+'%</b> · Con: <b>'+f(d,3)+'%</b> · Con/Mẹ = <b>'+big(dp)+'</b>'
+      : 'Parent: <b>'+f(p,3)+'%</b> · Daughter: <b>'+f(d,3)+'%</b> · D/P = <b>'+big(dp)+'</b>';
+    var c=n*5730, u=n*4.5;
+    document.getElementById('hlAge').textContent=vi
+      ? 'Với ¹⁴C: '+big(c)+' năm. Với ²³⁸U: '+f(u,1)+' tỉ năm.'
+      : 'For ¹⁴C that is '+big(c)+' years; for ²³⁸U, '+f(u,1)+' billion years.';
+  }
+  r.addEventListener('input',upd); upd();
+})();
+</script>
+<script src="assets/guide.js"></script>
+</body>
+</html>
