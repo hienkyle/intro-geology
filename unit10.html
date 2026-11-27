@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mass Wasting</title>
+<meta name="description" content="Unit 10 study guide for An Introduction to Geology, Chapter 10: Mass Wasting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/guide.css">
+<style>
+/* Unit 10 palette: a hillside in cross section. Pine-slope green with hazard amber and wet-mud red; header bands run from grass through soil and regolith down to bedrock. */
+:root{
+  --fig-prefix:"Figure 10."; --tbl-prefix:"Table 10.";
+  --bg:#f5f4ef; --surface:#ffffff; --surface-2:#ebe9e0; --fg:#1e2320; --muted:#5b625c; --line:#d6d4c8;
+  --accent:#2e6a4f; --accent-soft:#dcebe2; --ochre:#b06d12; --ochre-soft:#f6e7cc; --rust:#a24a26;
+  --s1:#a9c48a; --s2:#d2ae74; --s3:#a07548; --s4:#6b6862; --s5:#2d2c2a;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121513; --surface:#1a1f1c; --surface-2:#232a26; --fg:#e7ebe7; --muted:#a6b0a9; --line:#34403a;
+  --accent:#7fc8a3; --accent-soft:#1c3a2c; --ochre:#e6a94c; --ochre-soft:#3a2c14; --rust:#ec8c69;
+  --s1:#5d7449; --s2:#7d6440; --s3:#5a4128; --s4:#3a3835; --s5:#0f0f0f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121513; --surface:#1a1f1c; --surface-2:#232a26; --fg:#e7ebe7; --muted:#a6b0a9; --line:#34403a;
+  --accent:#7fc8a3; --accent-soft:#1c3a2c; --ochre:#e6a94c; --ochre-soft:#3a2c14; --rust:#ec8c69;
+  --s1:#5d7449; --s2:#7d6440; --s3:#5a4128; --s4:#3a3835; --s5:#0f0f0f; color-scheme:dark}
+/* slope-angle slider (forces figure) */
+.slider{max-width:560px;margin:.8rem auto 0;font-size:.92rem}
+.slider label{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.82rem;color:var(--muted)}
+.slider label b{color:var(--fg)}
+.slider input{width:100%;accent-color:var(--accent);margin:.3rem 0 .6rem}
+.meter{display:grid;grid-template-columns:8.5rem 1fr 2.6rem;gap:.6rem;align-items:center;margin:.25rem 0}
+.meter span{font-size:.85rem;color:var(--muted);text-align:left}
+.meter i{display:block;height:10px;border-radius:5px;background:var(--surface-2);overflow:hidden}
+.meter i b{display:block;height:100%;border-radius:5px;transition:width .1s}
+.meter output{font-family:var(--mono);font-size:.85rem;text-align:right}
+.slider p.small{margin:.4rem 0 0;text-align:left}
+/* numbered hotspots on the landslide diagram (parts figure) */
+.hot{position:relative;max-width:100%;margin:0 auto}
+.hot img{width:100%}
+.hot .spot{position:absolute;transform:translate(-50%,-50%);width:1.7rem;height:1.7rem;border-radius:50%;border:2px solid #fff;background:var(--rust);color:#fff;font:600 .8rem/1 var(--mono);display:grid;place-items:center;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.4);padding:0}
+.hot .spot:hover,.hot .spot.on{background:var(--accent)}
+.hot .tip{position:absolute;left:50%;bottom:.5rem;transform:translateX(-50%);width:min(92%,30rem);background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:.5rem .7rem;font-size:.86rem;line-height:1.45;box-shadow:0 4px 14px rgba(0,0,0,.18);text-align:left}
+@media (max-width:560px){.hot .spot{width:1.35rem;height:1.35rem;font-size:.7rem}}
+</style>
+</head>
+<body>
+<div lang="en">
+<header class="hero" id="top">
+  <div class="strata" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Unit 10 · Chapter 10 · An Introduction to Geology</div>
+      <h1>Mass Wasting</h1>
+      <p>Why slopes fail: how gravity, slope angle, material strength, and water decide whether rock and soil stay put, what triggers landslides and how to reduce the hazard, the kinds of mass wasting, and lessons from famous landslides.</p>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="toc" aria-label="Contents">
+    <div class="navbar" role="group" aria-label="Page tools">
+      <a class="btn tbtn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>All units</span></a>
+      <a class="btn tbtn lbtn" href="unit10-vi.html" lang="vi" hreflang="vi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Tiếng Việt</span></a>
+      <button class="btn tbtn" id="themeBtn" type="button" aria-label="Toggle light or dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Dark mode</span>
+      </button>
+    </div>
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#outcomes">Learning outcomes</a></li>
+      <li><a href="#s10-1"><span class="num">10.1</span>Slope strength</a>
+        <ol>
+          <li><a href="#s10-1-1"><span class="num">10.1.1</span>Forces on a slope</a></li>
+          <li><a href="#s10-1-2"><span class="num">10.1.2</span>Angle of repose</a></li>
+          <li><a href="#s10-1-3"><span class="num">10.1.3</span>Water and weak planes</a></li>
+        </ol>
+      </li>
+      <li><a href="#s10-2"><span class="num">10.2</span>Triggers and mitigation</a>
+        <ol>
+          <li><a href="#s10-2-1"><span class="num">10.2.1</span>Triggers</a></li>
+          <li><a href="#s10-2-2"><span class="num">10.2.2</span>Mitigation</a></li>
+        </ol>
+      </li>
+      <li><a href="#s10-3"><span class="num">10.3</span>Classification</a>
+        <ol>
+          <li><a href="#s10-3-1"><span class="num">10.3.1</span>Types of mass wasting</a></li>
+          <li><a href="#s10-3-2"><span class="num">10.3.2</span>Parts of a landslide</a></li>
+        </ol>
+      </li>
+      <li><a href="#s10-4"><span class="num">10.4</span>Examples of landslides</a>
+        <ol>
+          <li><a href="#s10-4-1"><span class="num">10.4.1</span>United States</a></li>
+          <li><a href="#s10-4-2"><span class="num">10.4.2</span>Utah</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#factcheck">Fact-check notes</a></li>
+      <li><a href="#credits">Credits</a></li>
+    </ol>
+  </nav>
+
+<main>
+<section id="outcomes">
+  <h2 class="sec">Learning outcomes</h2>
+  <p class="lead">By the end of Chapter 10 you should be able to do each of these. The tag shows where it is covered.</p>
+  <ul class="outcomes">
+    <li><a class="tag" href="#s10-1">10.1</a><span>Explain what mass wasting is and why it occurs on a slope.</span></li>
+    <li><a class="tag" href="#s10-2">10.2</a><span>Explain the basic triggers of mass-wasting events and how they occur.</span></li>
+    <li><a class="tag" href="#s10-3">10.3</a><span>Identify types of mass wasting.</span></li>
+    <li><a class="tag" href="#s10-2-2">10.2.2</a><span>Identify risk factors for mass-wasting events.</span></li>
+    <li><a class="tag" href="#s10-4">10.4</a><span>Evaluate landslides and their contributing factors.</span></li>
+  </ul>
+  <div class="callout">
+    <h4>How to use this guide</h4>
+    <p>Underlined words are key terms. Click one, or open <b>Key terms</b> at the bottom right, to read and search every definition from this chapter. The whole chapter rests on one balance: gravity pulls material down a slope, and the strength of the material holds it in place. Anything that steepens the slope or weakens the material tips that balance (10.1–10.2). The rest of the chapter names the kinds of movement (10.3) and walks through real landslides (10.4).</p>
+  </div>
+  <div class="spheres">
+    <div class="sphere"><b><span class="dot" style="background:var(--accent)"></span>Gravity</b>The constant pull that drives every mass-wasting event.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--ochre)"></span>Slope angle</b>Steeper slopes put more of gravity's pull downhill.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--rust)"></span>Material strength</b>Grain size, composition, and planes of weakness.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s4)"></span>Water</b>The most common trigger: it weakens slopes and adds weight.</div>
+  </div>
+  <figure id="fig-hero">
+    <div class="frame"><img src="images/unit10/thistle.webp" alt="A valley with a large lake in the background held back by a mound of landslide debris in the foreground; a railroad and highway were buried." loading="lazy" width="800" height="543"></div>
+    <figcaption>The 1983 Thistle landslide (foreground) dammed the Spanish Fork River, and the lake behind it covered the town of Thistle, Utah. The slide buried Highway 6 and the main railroad between Salt Lake City and Denver.<span class="credit">R.L. Schuster, U.S. Geological Survey, public domain (via the textbook).</span></figcaption>
+  </figure>
+  <p><button class="term" data-term="mass wasting">Mass wasting</button> is the downhill movement of rock and soil material due to gravity. <button class="term" data-term="landslide">Landslide</button> is often used as a synonym, but geologically it is the general term for mass wasting of <i>fast-moving</i> material; mass wasting covers <i>all</i> downslope movement, slow or rapid. What usually moves is loose material and the soil above it (<button class="term" data-term="regolith">regolith</button>). Moving blocks of bedrock are called rock topples, rock slides, or rock falls, depending on their main motion; movements of mostly liquid material are called flows. Rapid movement, such as a debris flow, is dangerous. Areas with steep topography and heavy rainfall, such as the California coast, the Rocky Mountain region, and the Pacific Northwest, are especially prone to hazardous mass wasting.</p>
+</section>
+
+<!-- 10.1 -->
+<section id="s10-1">
+  <h2 class="sec"><span class="n">10.1</span>Slope strength</h2>
+  <p>Mass wasting happens when a slope <i>fails</i>: it is too steep and unstable for its material and conditions. <button class="term" data-term="slope stability">Slope stability</button> comes down to two factors: the <b>slope angle</b> and the <b>strength of the underlying material</b>. Gravity is nearly constant at Earth's surface (it varies slightly with elevation and the density of the rock below).</p>
+
+  <h3 id="s10-1-1">10.1.1 Forces on a slope</h3>
+  <p>A block of rock on a slope is pulled toward Earth's center by the <button class="term" data-term="force of gravity">force of gravity</button> (fg). This force splits into two parts (<a href="#fig-forces">Figure 10.2</a>):</p>
+  <ul>
+    <li><b><button class="term" data-term="shear force">Shear force</button></b> (fs), the <i>driving force</i>, pushes the block down the slope.</li>
+    <li><b><button class="term" data-term="normal force">Normal force</button></b> (fn) pushes the block into the slope. It does not hold the block back by itself, but it produces <i>friction</i>, the resisting force, which is proportional to fn.</li>
+  </ul>
+  <p>The material's resistance to sliding is its <button class="term" data-term="shear strength">shear strength</button>: friction (a fraction of fn) plus any cohesion that binds the grains. While the shear strength is greater than the shear force, the block stays put. If the slope gets steeper or the material gets weaker, the shear force wins and the block moves downslope. As the slope steepens, fg stays the same while fn shrinks and fs grows.</p>
+  <figure id="fig-forces">
+    <div class="frame">
+      <svg viewBox="0 0 680 400" role="img" aria-labelledby="forces-en" style="width:100%;max-width:680px;min-width:320px;height:auto;display:block;margin:0 auto"><title id="forces-en">A block on a slope. The force of gravity fg points straight down; it splits into fs, pushing the block down the slope, and fn, pushing it into the slope. Drag the slider to change the slope angle.</title><g id="fz"><rect x="20" y="330" width="640" height="70" fill="#cfa86e"/><line x1="20" y1="330" x2="660" y2="330" stroke="#9c7444" stroke-width="1.5"/><polygon id="fz-tri" points="274.2,165.0 560,330 274.2,330" fill="#cfa86e" stroke="#9c7444" stroke-width="1.5"/><path id="fz-arc" fill="none" stroke="var(--fg)" stroke-width="1.6"/><text x="0.0" y="0.0" dy=".35em" text-anchor="end" font-size="15" font-weight="600" class="svg-ink halo" id="fz-ang"></text><polygon id="fz-block" fill="#9a9c98" stroke="#6f716d" stroke-width="1.6"/><line id="fz-d1" stroke="var(--muted)" stroke-width="1.4" stroke-dasharray="5 4"/><line id="fz-d2" stroke="var(--muted)" stroke-width="1.4" stroke-dasharray="5 4"/><line id="fz-g" stroke="#c0392b" stroke-width="3.4"/><polygon id="fz-gh" fill="#c0392b"/><line id="fz-s" stroke="var(--accent)" stroke-width="3.4"/><polygon id="fz-sh" fill="var(--accent)"/><line id="fz-n" stroke="var(--ochre)" stroke-width="3.4"/><polygon id="fz-nh" fill="var(--ochre)"/><text x="0.0" y="0.0" dy=".35em" text-anchor="start" font-size="17" font-weight="700" fill="#c0392b" class="halo" id="fz-tg">fg</text><text x="0.0" y="0.0" dy=".35em" text-anchor="start" font-size="17" font-weight="700" fill="var(--accent)" class="halo" id="fz-ts">fs</text><text x="0.0" y="0.0" dy=".35em" text-anchor="start" font-size="17" font-weight="700" fill="var(--ochre)" class="halo" id="fz-tn">fn</text></g></svg>
+      <div class="slider" id="slopeOut">
+        <label for="slopeAngle">Slope angle <b data-v="a">30°</b></label>
+        <input id="slopeAngle" type="range" min="10" max="75" step="1" value="30">
+        <div class="meter"><span>fs (downslope)</span><i><b data-b="s" style="background:var(--accent)"></b></i><output data-v="s">0.50</output></div>
+        <div class="meter"><span>fn (into slope)</span><i><b data-b="n" style="background:var(--ochre)"></b></i><output data-v="n">0.87</output></div>
+        <p class="small">Values are fractions of fg (fs = fg × sin of the angle; fn = fg × cos of the angle).</p>
+      </div>
+    </div>
+    <figcaption>Forces on a block on an inclined plane: fg = force of gravity, fs = shear force, fn = normal force. Drag the slider: fg never changes, but a steeper slope turns more of it into fs and less into fn.<span class="credit">Interactive redrawing for this guide after Paul Inkenbrandt's two figures in the textbook.</span></figcaption>
+  </figure>
+
+  <h3 id="s10-1-2">10.1.2 Angle of repose</h3>
+  <p>The steepest angle at which rock and soil stay stable and do not move downslope is the <button class="term" data-term="angle of repose">angle of repose</button>, measured from the horizontal. At this angle the shear force is in equilibrium with the friction that the normal force produces; a slightly steeper slope lets the shear force win, and material starts to move. The angle varies with grain size, grain composition, and water content. Sand poured onto a flat surface cascades down the sides of the pile until it comes to rest at the angle of repose; the pile's base and height keep growing, but the angle of its sides stays the same (<a href="#fig-repose">Figure 10.3</a>, <a href="#fig-pile">Figure 10.4</a>).</p>
+  <div class="pair">
+    <figure id="fig-repose">
+      <div class="frame"><img class="diagram" src="images/unit10/repose.webp" alt="A cone-shaped pile of sand on a flat surface, with the slope of its side marked as the angle of repose." loading="lazy" width="430" height="240"></div>
+      <figcaption>Angle of repose in a pile of sand.<span class="credit">Captain Sprite, CC BY-SA (via the textbook).</span></figcaption>
+    </figure>
+    <figure id="fig-pile">
+      <div class="frame"><svg viewBox="0 0 430 240" role="img" aria-labelledby="pile-en" style="width:100%;max-width:430px;min-width:0px;height:auto;display:block;margin:0 auto"><title id="pile-en">Animation: sand poured onto a flat surface builds a pile whose sides keep the same angle, the angle of repose, as the pile grows.</title><rect x="0" y="200" width="430" height="40" fill="#9a9c98" opacity=".35"/><line x1="0" y1="200" x2="430" y2="200" stroke="var(--fg)" stroke-width="1.5"/><line x1="215" y1="8" x2="215" y2="167.5" stroke="#9c7444" stroke-width="3" stroke-dasharray="2 6"><animate attributeName="y2" values="167.5;102.6;102.6" keyTimes="0;0.8;1" dur="9s" repeatCount="indefinite"/><animate attributeName="stroke-dashoffset" values="0;-80" dur="1s" repeatCount="indefinite"/></line><polygon points="165.0,200 215,167.5 265.0,200" fill="#dcbc80" stroke="#9c7444" stroke-width="1.5"><animate attributeName="points" values="165.0,200 215,167.5 265.0,200;65.0,200 215,102.6 365.0,200;65.0,200 215,102.6 365.0,200" keyTimes="0;0.8;1" dur="9s" repeatCount="indefinite"/></polygon><path d="M199.0,200 A34,34 0 0,0 193.5,181.5" fill="none" stroke="var(--rust)" stroke-width="2.4"><animate attributeName="d" values="M199.0,200 A34,34 0 0,0 193.5,181.5;M99.0,200 A34,34 0 0,0 93.5,181.5;M99.0,200 A34,34 0 0,0 93.5,181.5" keyTimes="0;0.8;1" dur="9s" repeatCount="indefinite"/></path><text x="165.0" y="220" dy=".35em" font-size="14" font-weight="600" fill="var(--rust)">angle of repose<animate attributeName="x" values="165.0;65.0;65.0" keyTimes="0;0.8;1" dur="9s" repeatCount="indefinite"/></text><text x="12.0" y="22.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >The pile grows wider</text><text x="12.0" y="41.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >and taller, but its sides</text><text x="12.0" y="60.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >keep the same angle.</text></svg></div>
+      <figcaption>Animation: as more sand falls, the pile grows wider and taller but keeps the same side angle.<span class="credit">Drawn for this guide from the chapter's description.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s10-1-3">10.1.3 Water and planes of weakness</h3>
+  <p><b>Water</b> can change the shear strength of a slope a great deal. It sits in <button class="term" data-term="pore space">pore spaces</button>, the empty spaces between grains in sediment or rock. Suppose dry sand has an angle of repose of 30°. A little water raises the angle, possibly to 60° or even 90°, as in a sandcastle on a beach. Too much water filling the pores <i>lowers</i> the shear strength and the angle of repose, and the sandcastle collapses.</p>
+  <p><button class="term" data-term="bedding plane">Bedding planes</button> in sedimentary rock (Unit 5) are <button class="term" data-term="plane of weakness">planes of weakness</button>. They matter most when they run <b>parallel</b> to the slope and least when they are <b>perpendicular</b> to it (<a href="#fig-bedding">Figure 10.5</a>). Clay minerals along bedding planes can absorb water and become slick; a saturated shale bed can lower the shear strength of a whole rock mass and cause a landslide, as at Gros Ventre, Wyoming, in 1925 (<a href="#s10-4-1">10.4.1</a>).</p>
+  <figure id="fig-bedding">
+    <div class="frame"><img class="diagram" src="images/unit10/stability.webp" alt="Cross section of a valley cut into layered rock, with four labelled slope locations A to D showing bedding at different angles to the slope." loading="lazy" width="1191" height="414"></div>
+    <figcaption>Slope stability depends on how the bedding lies against the slope. A and B: bedding nearly perpendicular to the slope, relatively stable. C: bedding nearly horizontal, intermediate. D: bedding nearly parallel to the slope, quite unstable.<span class="credit">Steven Earle, CC BY (via the textbook).</span></figcaption>
+  </figure>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/10-mass-wasting/" target="_blank" rel="noopener">Section 10.1 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 10.2 -->
+<section id="s10-2">
+  <h2 class="sec"><span class="n">10.2</span>Mass-wasting triggers and mitigation</h2>
+  <h3 id="s10-2-1">10.2.1 Triggers</h3>
+  <p>A mass-wasting event often has a <button class="term" data-term="trigger">trigger</button>: a change that makes a landslide happen at a particular time. Triggers include rapid snowmelt, intense rainfall, earthquake shaking, volcanic eruption, storm waves, rapid stream erosion, and human activity such as grading a new road.</p>
+  <ul>
+    <li><b>More water in the slope</b> is the most common trigger. It comes from fast-melting snow or ice or an intense rain event. Intense rain is more frequent in <button class="term" data-term="El Niño">El Niño</button> years, when the west coast of North America gets more precipitation than normal and landslides become more common. Earthquakes, earlier slope failures that dam streams, and structures that interfere with <button class="term" data-term="runoff">runoff</button> (buildings, roads, parking lots) can also send extra water into a slope. At Madison Canyon, Montana, in 1959, earthquake shaking may have weakened the slope.</li>
+    <li><b>An <button class="term" data-term="oversteepened slope">oversteepened slope</button></b>. Erosion can steepen a slope naturally: flooding streams and storm waves cut into its base, and river undercutting was proposed as part of the trigger at Gros Ventre in 1925. People steepen slopes when they cut into the bottom of a slope to build a road or level a lot and dump the excavated material at the top (<a href="#fig-cutfill">Figure 10.6</a>). Done carefully, this is useful in land development; done badly, it can be devastating. At North Salt Lake, Utah, a former gravel pit regraded for a road and building lots may have been oversteepened, and in 2014 a slow-moving landslide destroyed a home at the bottom of the slope.</li>
+  </ul>
+  <figure id="fig-cutfill">
+    <div class="frame"><svg viewBox="0 0 760 300" role="img" aria-labelledby="cutfill-en" style="width:100%;max-width:760px;min-width:560px;height:auto;display:block;margin:0 auto"><title id="cutfill-en">Two cross sections of a hillside. Before: a natural slope. After grading: the toe is cut for a road and the excavated material is dumped at the top, making both new faces steeper than the original slope.</title><polygon points="10.0,250.0 60.0,250.0 300.0,90.0 360.0,90.0 360,290 10,290" fill="#cfa86e" stroke="#9c7444" stroke-width="1.6"/><text x="14.0" y="22.0" dy=".35em" text-anchor="start" font-size="15" font-weight="700" class="svg-ink" >A. Before</text><text x="30.0" y="120.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >natural slope</text><line x1="96.0" y1="130.0" x2="170.0" y2="176.7" stroke="var(--fg)" stroke-width="1.1"/><circle cx="170.0" cy="176.7" r="2.8" fill="var(--fg)"/><polygon points="400.0,250.0 530.0,250.0 565.0,173.3 605.0,146.7 652.0,78.0 750.0,78.0 750,290 400,290" fill="#cfa86e" stroke="#9c7444" stroke-width="1.6"/><text x="404.0" y="22.0" dy=".35em" text-anchor="start" font-size="15" font-weight="700" class="svg-ink" >B. After grading</text><polygon points="605.0,146.7 652.0,78.0 750.0,78.0 750.0,90.0 690.0,90.0" fill="#9c7444" stroke="#6b4c2a" stroke-width="1.4"/><rect x="400" y="244" width="130" height="6" fill="#55585c"/><line x1="408" y1="247" x2="522" y2="247" stroke="#f2d16b" stroke-width="1.2" stroke-dasharray="8 6"/><polyline points="450,250 690,90" fill="none" stroke="var(--fg)" stroke-width="1.6" stroke-dasharray="6 5"/><line x1="530" y1="250" x2="565" y2="173.3" stroke="var(--rust)" stroke-width="4"/><line x1="605" y1="146.7" x2="652" y2="78" stroke="var(--rust)" stroke-width="4"/><text x="404.0" y="55.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >fill (excavated material dumped on top)</text><line x1="510.0" y1="64.0" x2="690.0" y2="84.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="690.0" cy="84.0" r="2.8" fill="var(--fg)"/><text x="404.0" y="112.0" dy=".35em" text-anchor="start" font-size="13" font-weight="600" fill="var(--rust)" class="halo" >oversteepened faces</text><line x1="450.0" y1="122.0" x2="547.5" y2="212.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="547.5" cy="212.0" r="2.8" fill="var(--fg)"/><line x1="582.0" y1="112.0" x2="628.5" y2="112.2" stroke="var(--fg)" stroke-width="1.1"/><circle cx="628.5" cy="112.2" r="2.8" fill="var(--fg)"/><text x="540.0" y="272.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >road on the cut bench</text><line x1="538.0" y1="272.0" x2="500.0" y2="250.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="500.0" cy="250.0" r="2.8" fill="var(--fg)"/><text x="615.0" y="196.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >original slope</text><line x1="613.0" y1="196.0" x2="580.0" y2="163.3" stroke="var(--fg)" stroke-width="1.1"/><circle cx="580.0" cy="163.3" r="2.8" fill="var(--fg)"/></svg></div>
+    <figcaption>Oversteepening by grading. Cutting into the toe of a slope for a road and dumping the excavated material at the top leaves two faces (red) that are steeper than the original slope (dashed).<span class="credit">Drawn for this guide from the chapter's description.</span></figcaption>
+  </figure>
+
+  <h3 id="s10-2-2">10.2.2 Mitigation</h3>
+  <p>Because water is the main trigger, <b>most landslide mitigation diverts and drains water away from slide areas</b>. Tarps and plastic sheeting shed water off a slide body and stop <button class="term" data-term="infiltration">infiltration</button>; drains dewater a landslide; shallow wells monitor the water content of some active slides. Two other approaches (<a href="#fig-mitig">Figure 10.7</a>):</p>
+  <ul>
+    <li><b>Reinforce the slope.</b> Long steel <button class="term" data-term="rock bolt">rock bolts</button>, drilled a few meters into a rock face, pin loose pieces in rockfall-prone areas. <button class="term" data-term="shotcrete">Shotcrete</button>, a reinforced spray-on concrete, strengthens a slope face. <button class="term" data-term="buttressing">Buttressing</button> adds weight at the toe of a slide and removes weight from its head. <button class="term" data-term="terracing">Terracing</button> cuts a stair-step topography; it helps only when built at the right scale.</li>
+    <li><b>Shield, catch, and divert the runout.</b> Stretchable fencing catches falling rock to protect pedestrians and vehicles. Runout channels, diversion structures, and <button class="term" data-term="check dam">check dams</button> slow debris flows and steer them around structures. Some highways have tunnels (rock sheds) that carry landslides over the road.</li>
+  </ul>
+  <figure id="fig-mitig">
+    <div class="frame"><svg viewBox="0 0 760 520" role="img" aria-labelledby="mit-en" style="width:100%;max-width:760px;min-width:600px;height:auto;display:block;margin:0 auto"><title id="mit-en">Four ways to reduce landslide hazard: rock bolts and shotcrete on a cliff; a drain, unloading of the head and a buttress at the toe of a soil slide; terracing; and a rockfall fence and rock shed that catch and divert falling rock.</title><rect x="0.5" y="0.5" width="369" height="249" rx="8" fill="none" stroke="var(--line)"/><text x="12.0" y="20.0" dy=".35em" text-anchor="start" font-size="14" font-weight="700" class="svg-ink" >A. Rock bolts and shotcrete</text><rect x="390.5" y="0.5" width="369" height="249" rx="8" fill="none" stroke="var(--line)"/><text x="402.0" y="20.0" dy=".35em" text-anchor="start" font-size="14" font-weight="700" class="svg-ink" >B. Drain, unload head, buttress toe</text><rect x="0.5" y="270.5" width="369" height="249" rx="8" fill="none" stroke="var(--line)"/><text x="12.0" y="290.0" dy=".35em" text-anchor="start" font-size="14" font-weight="700" class="svg-ink" >C. Terracing</text><rect x="390.5" y="270.5" width="369" height="249" rx="8" fill="none" stroke="var(--line)"/><text x="402.0" y="290.0" dy=".35em" text-anchor="start" font-size="14" font-weight="700" class="svg-ink" >D. Catch and divert</text><polygon points="10,40 150,40 160,120 172,235 10,235" fill="#9a9c98" stroke="#6f716d" stroke-width="1.5"/><polyline points="112,40 118,90 161,130" fill="none" stroke="#2f3133" stroke-width="2.2"/><polygon points="112,40 150,40 160,120 161,130 118,90" fill="#b4b6b2" stroke="none"/><polyline points="112,40 118,90 161,130" fill="none" stroke="#2f3133" stroke-width="2.2"/><line x1="151" y1="62" x2="70" y2="66" stroke="#1f2a33" stroke-width="3.2"/><rect x="149" y="54" width="6" height="16" fill="#1f2a33"/><line x1="155" y1="98" x2="78" y2="104" stroke="#1f2a33" stroke-width="3.2"/><rect x="153" y="90" width="6" height="16" fill="#1f2a33"/><polygon points="160.5,140 170.5,235 181,235 171,140" fill="#6d8fa3" stroke="#3d5a6b" stroke-width="1"/><text x="210.0" y="58.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >loose block</text><line x1="208.0" y1="58.0" x2="140.0" y2="55.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="140.0" cy="55.0" r="2.8" fill="var(--fg)"/><text x="210.0" y="100.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >rock bolt</text><line x1="208.0" y1="100.0" x2="120.0" y2="102.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="120.0" cy="102.0" r="2.8" fill="var(--fg)"/><text x="210.0" y="142.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >fracture</text><line x1="208.0" y1="142.0" x2="145.0" y2="115.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="145.0" cy="115.0" r="2.8" fill="var(--fg)"/><text x="210.0" y="190.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >shotcrete</text><line x1="208.0" y1="190.0" x2="177.0" y2="190.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="177.0" cy="190.0" r="2.8" fill="var(--fg)"/><polygon points="400,60 480,60 690,200 750,200 750,240 400,240" fill="#cfa86e" stroke="#9c7444" stroke-width="1.5"/><polygon points="460,60 480,60 522,88.0 460,88" fill="var(--surface)" stroke="none"/><polyline points="460,88 522,88.0" fill="none" stroke="#9c7444" stroke-width="1.5"/><polyline points="460,60 480,60 522,88.0" fill="none" stroke="var(--fg)" stroke-width="1.4" stroke-dasharray="5 4"/><line x1="460" y1="60" x2="460" y2="88" stroke="#9c7444" stroke-width="1.5"/><path d="M486,88 Q530,215 675,190.0" fill="none" stroke="var(--rust)" stroke-width="2.6" stroke-dasharray="8 5"/><polygon points="630.0,160.0 652.0,150.0 712.0,150.0 735.0,200.0 690.0,200.0" fill="#9a9c98" stroke="#6f716d" stroke-width="1.5"/><circle cx="665" cy="165" r="7" fill="#b8bab6" stroke="#6f716d"/><circle cx="688" cy="162" r="8" fill="#b8bab6" stroke="#6f716d"/><circle cx="708" cy="180" r="7" fill="#b8bab6" stroke="#6f716d"/><circle cx="680" cy="185" r="6" fill="#b8bab6" stroke="#6f716d"/><circle cx="652" cy="178" r="6" fill="#b8bab6" stroke="#6f716d"/><g ><line x1="496.0" y1="106.0" x2="510.5" y2="111.5" stroke="#3f86c2" stroke-width="2"/><polygon points="517.0,114.0 509.3,114.6 511.7,108.4" fill="#3f86c2"/></g><g ><line x1="502.0" y1="140.0" x2="520.0" y2="129.5" stroke="#3f86c2" stroke-width="2"/><polygon points="526.0,126.0 521.6,132.4 518.3,126.6" fill="#3f86c2"/></g><line x1="522" y1="118" x2="597" y2="135.0" stroke="#2f3133" stroke-width="5" stroke-linecap="round"/><path d="M599,135.0 Q607,137.0 611,147.3" fill="none" stroke="#3f86c2" stroke-width="2.4"/><g ><line x1="612.0" y1="146.5" x2="624.2" y2="154.6" stroke="#3f86c2" stroke-width="2.2"/><polygon points="630.0,158.5 622.3,157.4 626.0,151.8" fill="#3f86c2"/></g><text x="404.0" y="100.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" fill="#3f86c2" class="halo" >groundwater</text><text x="550.0" y="42.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >remove weight at the head</text><line x1="548.0" y1="46.0" x2="494.0" y2="70.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="494.0" cy="70.0" r="2.8" fill="var(--fg)"/><text x="404.0" y="128.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >slip surface</text><line x1="450.0" y1="136.0" x2="529.2" y2="159.6" stroke="var(--fg)" stroke-width="1.1"/><circle cx="529.2" cy="159.6" r="2.8" fill="var(--fg)"/><text x="595.0" y="98.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >drain pipe</text><line x1="612.0" y1="106.0" x2="570.0" y2="129.5" stroke="var(--fg)" stroke-width="1.1"/><circle cx="570.0" cy="129.5" r="2.8" fill="var(--fg)"/><text x="510.0" y="226.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >buttress (weight added)</text><line x1="630.0" y1="218.0" x2="688.0" y2="192.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="688.0" cy="192.0" r="2.8" fill="var(--fg)"/><polygon points="10.0,330.0 20.0,330.0 42.4,362.0 84.0,362.0 106.4,394.0 148.0,394.0 170.4,426.0 212.0,426.0 234.4,458.0 276.0,458.0 298.4,490.0 340.0,490.0 360.0,490.0 360.0,510.0 10.0,510.0" fill="#cfa86e" stroke="#9c7444" stroke-width="1.5"/><line x1="20" y1="330" x2="340" y2="490" stroke="var(--fg)" stroke-width="1.4" stroke-dasharray="6 5"/><text x="170.0" y="340.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >original slope</text><line x1="168.0" y1="346.0" x2="140.0" y2="390.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="140.0" cy="390.0" r="2.8" fill="var(--fg)"/><text x="250.0" y="390.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >bench</text><line x1="248.0" y1="396.0" x2="192.8" y2="426.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="192.8" cy="426.0" r="2.8" fill="var(--fg)"/><polygon points="400.0,310.0 410.0,310.0 620.0,431.2 620.0,485.0 720.0,485.0 750.0,502.0 750.0,518.0 400.0,518.0" fill="#9a9c98" stroke="#6f716d" stroke-width="1.5"/><rect x="620" y="479" width="100" height="6" fill="#55585c"/><rect x="648" y="460" width="36" height="17" rx="3" fill="#3f6fa0" stroke="#24415e"/><rect x="652" y="456" width="28" height="8" rx="2" fill="#9cc3e4" stroke="#24415e"/><rect x="649" y="467" width="5" height="3" fill="#e0453a"/><rect x="678" y="467" width="5" height="3" fill="#e0453a"/><rect x="651" y="475" width="7" height="4" fill="#222"/><rect x="674" y="475" width="7" height="4" fill="#222"/><polygon points="616,430.2 716,455.7 716,463.7 616,438.2" fill="#b9bdc2" stroke="#7d8287" stroke-width="1.3"/><rect x="702" y="460.1" width="7" height="18.9" fill="#b9bdc2" stroke="#7d8287"/><circle cx="652" cy="433.3" r="6" fill="#7b6a58" stroke="#3d342b"/><g ><line x1="664.0" y1="434.4" x2="701.3" y2="443.9" stroke="var(--rust)" stroke-width="2.2"/><polygon points="710.0,446.1 700.2,448.1 702.3,439.7" fill="var(--rust)"/></g><g ><line x1="720.0" y1="455.7" x2="732.2" y2="481.8" stroke="var(--rust)" stroke-width="2.2"/><polygon points="736.0,490.0 728.3,483.7 736.1,480.0" fill="var(--rust)"/></g><line x1="510" y1="367.7" x2="514" y2="333.7" stroke="#2f3133" stroke-width="3"/><path d="M512,363.7 l-14,-6 M513,353.7 l-14,-6 M513,343.7 l-14,-6" stroke="#2f3133" stroke-width="1"/><circle cx="501" cy="353.5" r="8" fill="#7b6a58" stroke="#3d342b"/><path d="M430,300 Q452,292 462,338.0 Q478,312 494,344.5" fill="none" stroke="var(--fg)" stroke-width="1.3" stroke-dasharray="3 4"/><text x="540.0" y="322.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >rockfall fence</text><line x1="538.0" y1="328.0" x2="513.0" y2="345.7" stroke="var(--fg)" stroke-width="1.1"/><circle cx="513.0" cy="345.7" r="2.8" fill="var(--fg)"/><text x="568.0" y="366.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >rock shed: debris slides</text><line x1="672.0" y1="390.0" x2="680.0" y2="450.5" stroke="var(--fg)" stroke-width="1.1"/><circle cx="680.0" cy="450.5" r="2.8" fill="var(--fg)"/><text x="568.0" y="382.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" fill="var(--muted)" class="halo" >over the roof, past the road</text><text x="502.0" y="502.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" class="svg-ink halo" >road (runs into the page)</text><line x1="640.0" y1="500.0" x2="638.0" y2="482.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="638.0" cy="482.0" r="2.8" fill="var(--fg)"/></svg></div>
+    <figcaption>Ways to reduce landslide hazard. A: rock bolts pin a loose block across a fracture; shotcrete coats the face. B: a drain removes water, weight is taken off the head, and a buttress adds weight at the toe. C: terracing. D: a rockfall fence catches bouncing rock, and a rock shed lets debris pass over the highway.<span class="credit">Drawn for this guide from the chapter's descriptions.</span></figcaption>
+  </figure>
+  <div class="callout warn">
+    <h4>Scale matters</h4>
+    <p>Any shield or catch structure has to be engineered to a scale <b>greater than the slide</b>; otherwise it can fail with catastrophic loss of property and life.</p>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/10-mass-wasting/" target="_blank" rel="noopener">Section 10.2 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 10.3 -->
+<section id="s10-3">
+  <h2 class="sec"><span class="n">10.3</span>Landslide classification and identification</h2>
+  <p>Mass-wasting events are classified by <b>type of movement</b> and <b>type of material</b> (<a href="#tbl-types">Table 10.1</a>). Many types share features you can see at the surface: a <button class="term" data-term="head scarp">head scarp</button>, often a crescent on a cliff face; <button class="term" data-term="hummocky terrain">hummocky</button> (uneven) ground; piles of <button class="term" data-term="talus">talus</button>, loose rock fallen from above; and a <button class="term" data-term="toe">toe</button> that covers the existing surface.</p>
+
+  <h3 id="s10-3-1">10.3.1 Types of mass wasting</h3>
+  <div class="tablewrap" id="tbl-types">
+    <table>
+      <caption>Mass-wasting types by movement and main material, with the common name of each slide (modified in the textbook from Highland, 2004, and Hungr et al., 2013).</caption>
+      <thead>
+        <tr><th rowspan="2">Type of movement</th><th rowspan="2">Bedrock</th><th colspan="2">Soil types</th></tr>
+        <tr><th>Mostly coarse-grained</th><th>Mostly fine-grained</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Falls</td><td>Rock fall</td><td>—</td><td>—</td></tr>
+        <tr><td>Rock avalanche</td><td>Rock avalanche</td><td>—</td><td>—</td></tr>
+        <tr><td>Rotational slide (slump)</td><td>—</td><td>Rotational debris slide (slump)</td><td>Rotational earth slide (slump)</td></tr>
+        <tr><td>Translational slide</td><td>Translational rock slide</td><td>Translational debris slide</td><td>Translational earth slide</td></tr>
+        <tr><td>Flows</td><td>—</td><td>Debris flow</td><td>Earthflow</td></tr>
+        <tr><td>Soil creep</td><td>—</td><td>Creep</td><td>Creep</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The most common types are falls, rotational and translational slides, flows, and creep (<a href="#fig-types">Figure 10.8</a>):</p>
+  <ul>
+    <li><b><button class="term" data-term="fall">Falls</button></b>: abrupt movements of rock that detach from steep slopes or cliffs along existing breaks such as fractures or bedding planes. The rock free-falls, bounces, and rolls. Gravity, mechanical weathering, and water control falls.</li>
+    <li><b><button class="term" data-term="rotational slide">Rotational slides</button></b> (slumps): usually slow movement along a <i>curved</i> rupture surface.</li>
+    <li><b><button class="term" data-term="translational slide">Translational slides</button></b>: often rapid movement along a <i>plane</i> of distinct weakness between the slide material and more stable material below. Slides are subdivided into rock, debris, or earth slides by material.</li>
+    <li><b>Flows</b>: rapid movements of loose material mixed with plenty of water, with long runouts at the base of the slope. A <button class="term" data-term="debris flow">debris flow</button> carries coarse material; an <button class="term" data-term="earthflow">earthflow</button> carries fine material. Some of the largest and fastest flows on land are <button class="term" data-term="sturzstrom">sturzstroms</button> (long-runout landslides); they are still poorly understood but travel long distances, even on bodies without much atmosphere, such as the Moon.</li>
+    <li><b><button class="term" data-term="creep">Creep</button></b>: imperceptibly slow downslope movement of loose material such as soil, driven by a cycle of nighttime freezing and daytime thawing. Freezing ice pushes soil particles out, away from the slope; after the thaw, gravity pulls them straight down. The net effect is a slow drift downhill (<a href="#fig-creep">Figure 10.9</a>). Signs of creep are curved tree trunks, bent fences or retaining walls, tilted poles or fences, and small soil ripples or ridges. <button class="term" data-term="solifluction">Solifluction</button> is a special type of creep: slow movement of soil lobes on low-angle slopes from seasonal freezing and thawing at high latitudes (sub-Arctic, Arctic, and Antarctic).</li>
+  </ul>
+  <figure id="fig-types">
+    <div class="frame"><img class="diagram" src="images/unit10/types.webp" alt="Ten block diagrams labelled A to J: rotational landslide, translational landslide, block slide, rockfall, topple, debris flow, debris avalanche, earthflow, creep, and lateral spread." loading="lazy" width="548" height="663"></div>
+    <figcaption>Examples of landslide types: (A) rotational, (B) translational, (C) block slide, (D) rockfall, (E) topple, (F) debris flow, (G) debris avalanche, (H) earthflow, (I) creep, (J) lateral spread.<span class="credit">Margo Johnson, U.S. Geological Survey, public domain (via the textbook).</span></figcaption>
+  </figure>
+  <figure id="fig-creep">
+    <div class="frame"><svg viewBox="0 0 760 300" role="img" aria-labelledby="creep-en" style="width:100%;max-width:760px;min-width:560px;height:auto;display:block;margin:0 auto"><title id="creep-en">Left: a soil grain on a slope is lifted at right angles to the slope when the ground freezes and pulled straight down when it thaws, so each cycle moves it a little downhill. Right: signs of creep: soil ripples, a tree trunk curved at its base, a tilted pole and tilted fence posts.</title><polygon points="10,85.0 380,270.0 380,290 10,290" fill="#cfa86e" stroke="#9c7444" stroke-width="1.6"/><text x="14.0" y="20.0" dy=".35em" text-anchor="start" font-size="15" font-weight="700" class="svg-ink" >A. Freeze–thaw moves a grain</text><circle cx="133.1" cy="138.7" r="7" fill="none" stroke="#5b4a3a" stroke-width="1.3" stroke-dasharray="3 2"/><circle cx="153.7" cy="149.0" r="7" fill="none" stroke="#5b4a3a" stroke-width="1.3" stroke-dasharray="3 2"/><circle cx="174.3" cy="159.3" r="7" fill="none" stroke="#5b4a3a" stroke-width="1.3" stroke-dasharray="3 2"/><g ><line x1="137.2" y1="130.7" x2="148.9" y2="106.5" stroke="#2f7fbf" stroke-width="2.4"/><polygon points="152.8,98.4 152.8,108.4 145.0,104.6" fill="#2f7fbf"/></g><g ><line x1="153.7" y1="106.6" x2="153.7" y2="132.0" stroke="var(--rust)" stroke-width="2.4"/><polygon points="153.7,141.0 149.4,132.0 158.0,132.0" fill="var(--rust)"/></g><g ><line x1="157.7" y1="141.0" x2="169.5" y2="116.8" stroke="#2f7fbf" stroke-width="2.4"/><polygon points="173.4,108.7 173.3,118.7 165.6,114.9" fill="#2f7fbf"/></g><g ><line x1="174.3" y1="116.9" x2="174.3" y2="142.3" stroke="var(--rust)" stroke-width="2.4"/><polygon points="174.3,151.3 170.0,142.3 178.6,142.3" fill="var(--rust)"/></g><g ><line x1="121.1" y1="162.9" x2="152.4" y2="178.5" stroke="var(--accent)" stroke-width="3"/><polygon points="162.2,183.5 150.0,183.3 154.7,173.8" fill="var(--accent)"/></g><circle r="7" fill="#7b5a3a" stroke="#3d2c1c" stroke-width="1.2"><animateMotion dur="6s" repeatCount="indefinite" path="M133.1,138.7 L153.7,97.6 L153.7,149.0 L174.3,107.9 L174.3,159.3" keyPoints="0;0.25;0.5;0.75;1;1" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="linear"/></circle><g ><line x1="22.0" y1="218.0" x2="43.0" y2="218.0" stroke="#2f7fbf" stroke-width="2.6"/><polygon points="52.0,218.0 43.0,222.3 43.0,213.7" fill="#2f7fbf"/></g><text x="58.0" y="218.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" class="svg-ink halo" >freeze: ice lifts grain out</text><g ><line x1="22.0" y1="240.0" x2="43.0" y2="240.0" stroke="var(--rust)" stroke-width="2.6"/><polygon points="52.0,240.0 43.0,244.3 43.0,235.7" fill="var(--rust)"/></g><text x="58.0" y="240.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" class="svg-ink halo" >thaw: gravity pulls it down</text><g ><line x1="22.0" y1="262.0" x2="43.0" y2="262.0" stroke="var(--accent)" stroke-width="2.6"/><polygon points="52.0,262.0 43.0,266.3 43.0,257.7" fill="var(--accent)"/></g><text x="58.0" y="262.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" class="svg-ink halo" >net: grain creeps downslope</text><line x1="385" y1="12" x2="385" y2="290" stroke="var(--line)"/><polygon points="400,95.0 760,275.0 760,290 400,290" fill="#cfa86e" stroke="#9c7444" stroke-width="1.6"/><text x="404.0" y="20.0" dy=".35em" text-anchor="start" font-size="15" font-weight="700" class="svg-ink" >B. Signs of creep</text><path d="M425,107.5 Q432,104.0 439,114.5 Q446,111.0 453,121.5 Q460,118.0 467,128.5 Q474,125.0 481,135.5" fill="#cfa86e" stroke="#9c7444" stroke-width="1.6"/><path d="M520,155.0 Q534,141.0 531,119.0 L531,77.0" fill="none" stroke="#6b4a2b" stroke-width="6" stroke-linecap="round"/><circle cx="531" cy="63.0" r="19" fill="#7aa957" stroke="#4d7a35"/><line x1="605" y1="197.5" x2="627" y2="141.5" stroke="#4a4a4a" stroke-width="4" stroke-linecap="round"/><line x1="615" y1="147.5" x2="637" y2="155.5" stroke="#4a4a4a" stroke-width="3"/><line x1="668" y1="229.0" x2="675" y2="191.0" stroke="#6b4a2b" stroke-width="4" stroke-linecap="round"/><line x1="700" y1="245.0" x2="713" y2="207.0" stroke="#6b4a2b" stroke-width="4" stroke-linecap="round"/><line x1="732" y1="261.0" x2="751" y2="223.0" stroke="#6b4a2b" stroke-width="4" stroke-linecap="round"/><polyline points="675.0,191.0 713.0,207.0 751.0,223.0" fill="none" stroke="#3d3d3d" stroke-width="1.3"/><text x="412.0" y="64.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" class="svg-ink halo" >soil ripples</text><line x1="440.0" y1="72.0" x2="446.0" y2="114.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="446.0" cy="114.0" r="2.8" fill="var(--fg)"/><text x="554.0" y="120.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" class="svg-ink halo" >curved tree trunk</text><line x1="552.0" y1="124.0" x2="532.0" y2="129.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="532.0" cy="129.0" r="2.8" fill="var(--fg)"/><text x="640.0" y="148.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" class="svg-ink halo" >tilted pole</text><line x1="638.0" y1="152.0" x2="618.0" y2="164.5" stroke="var(--fg)" stroke-width="1.1"/><circle cx="618.0" cy="164.5" r="2.8" fill="var(--fg)"/><text x="755.0" y="172.0" dy=".35em" text-anchor="end" font-size="12.5" font-weight="400" class="svg-ink halo" >fence out of line</text><line x1="705.0" y1="180.0" x2="706.5" y2="226.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="706.5" cy="226.0" r="2.8" fill="var(--fg)"/></svg></div>
+    <figcaption>Creep. A (animated): each freeze lifts a grain at right angles to the slope; each thaw drops it straight down, so it ends up a little farther downhill. Motion is exaggerated. B: the signs of creep named in the chapter.<span class="credit">Drawn for this guide from the chapter's description.</span></figcaption>
+  </figure>
+
+  <h3 id="s10-3-2">10.3.2 Parts of a landslide</h3>
+  <p>Many landslides share identifying features, though there are many exceptions. A landslide removes material uphill and deposits it downhill, and structures or natural features that should be vertical or in place end up tilted or offset. The parts are shown in <a href="#fig-parts">Figure 10.10</a> and listed in <a href="#tbl-parts">Table 10.2</a>.</p>
+  <ul>
+    <li><b>Scarps.</b> Like fault scarps, landslide scarps are steep ground exposed where the adjacent land has moved away. The <button class="term" data-term="main scarp">main scarp</button> marks the uphill extent of the landslide; it is the visible part of the rupture surface.</li>
+    <li><b><button class="term" data-term="rupture surface">Rupture surface</button></b>: the boundary of the moving body. Material below it does not move. It is bounded on the sides by the <button class="term" data-term="flank">flanks</button> and at the end by the toe.</li>
+    <li><b>Toe</b>: the end of the moving material, marking the <button class="term" data-term="runout">runout</button> (the maximum distance traveled). In rotational slides it is often a large, disturbed mound formed as the slide moves past its original rupture surface.</li>
+    <li><b>Surface features</b> of rotational and translational slides: <button class="term" data-term="extensional cracks">extensional cracks</button> (the toe moves forward faster than the rest, pulling the slide apart), <button class="term" data-term="sag pond">sag ponds</button> (water filling depressions where movement blocked drainage), hummocky terrain (uneven ground), and <button class="term" data-term="pressure ridge">pressure ridges</button> (material pushed up into ridges at the margins).</li>
+  </ul>
+  <figure id="fig-parts">
+    <div class="frame">
+      <div class="hot">
+        <img class="diagram" src="images/unit10/parts.webp" alt="Block diagram of a rotational landslide on a grassy hillside above a road, with numbered markers on its parts." loading="lazy" width="1400" height="899">
+        <button class="spot" type="button" style="left:86%;top:9%" data-n="1" data-name="Crown" data-text="The undisturbed material uphill of the main scarp." aria-label="1. Crown">1</button><button class="spot" type="button" style="left:70%;top:14%" data-n="2" data-name="Main scarp" data-text="Steep slope at the upper edge (head) of the landslide, made as the displaced material moved away from undisturbed ground; the visible part of the slide surface." aria-label="2. Main scarp">2</button><button class="spot" type="button" style="left:38%;top:30%" data-n="3" data-name="Flank" data-text="Undisplaced material beside the landslide; the left and right edges of the moving mass." aria-label="3. Flank">3</button><button class="spot" type="button" style="left:60%;top:40%" data-n="4" data-name="Main body" data-text="Part of the landslide that lies on the rupture surface." aria-label="4. Main body">4</button><button class="spot" type="button" style="left:69%;top:47%" data-n="5" data-name="Rupture surface" data-text="The lower boundary of the moving material, below the original ground surface; the surface along which material slides." aria-label="5. Rupture surface">5</button><button class="spot" type="button" style="left:40%;top:51%" data-n="6" data-name="Tension cracks" data-text="Cracks where the middle of the slide is pulled apart; usually in the middle of the slide." aria-label="6. Tension cracks">6</button><button class="spot" type="button" style="left:45%;top:68%" data-n="7" data-name="Separation surface" data-text="Part of the original ground surface now covered by landslide material." aria-label="7. Separation surface">7</button><button class="spot" type="button" style="left:34%;top:70%" data-n="8" data-name="Foot" data-text="Part of the landslide lying on the original ground surface (the separation surface)." aria-label="8. Foot">8</button><button class="spot" type="button" style="left:21%;top:72%" data-n="9" data-name="Toe" data-text="The downhill end of the slide, farthest from the main scarp." aria-label="9. Toe">9</button><div class="tip" hidden></div>
+      </div>
+    </div>
+    <figcaption>Parts of a rotational landslide. Tap or hover over a number to read its description; the same parts are listed in Table 10.2.<span class="credit">Utah Geological Survey (2011), CC BY-NC-SA 4.0, from the textbook's interactive figure; numbers added for this guide.</span></figcaption>
+  </figure>
+  <div class="tablewrap" id="tbl-parts">
+    <table>
+      <caption>Parts of a landslide, numbered as in Figure 10.10.</caption>
+      <thead><tr><th>#</th><th>Part</th><th>What it is</th></tr></thead>
+      <tbody><tr><td>1</td><td>Crown</td><td>The undisturbed material uphill of the main scarp.</td></tr><tr><td>2</td><td>Main scarp</td><td>Steep slope at the upper edge (head) of the landslide, made as the displaced material moved away from undisturbed ground; the visible part of the slide surface.</td></tr><tr><td>3</td><td>Flank</td><td>Undisplaced material beside the landslide; the left and right edges of the moving mass.</td></tr><tr><td>4</td><td>Main body</td><td>Part of the landslide that lies on the rupture surface.</td></tr><tr><td>5</td><td>Rupture surface</td><td>The lower boundary of the moving material, below the original ground surface; the surface along which material slides.</td></tr><tr><td>6</td><td>Tension cracks</td><td>Cracks where the middle of the slide is pulled apart; usually in the middle of the slide.</td></tr><tr><td>7</td><td>Separation surface</td><td>Part of the original ground surface now covered by landslide material.</td></tr><tr><td>8</td><td>Foot</td><td>Part of the landslide lying on the original ground surface (the separation surface).</td></tr><tr><td>9</td><td>Toe</td><td>The downhill end of the slide, farthest from the main scarp.</td></tr></tbody>
+    </table>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/10-mass-wasting/" target="_blank" rel="noopener">Section 10.3 quiz in the textbook ↗</a></p>
+</section>
+
+<!-- 10.4 -->
+<section id="s10-4">
+  <h2 class="sec"><span class="n">10.4</span>Examples of landslides</h2>
+  <p>Famous landslides show how the factors in 10.1–10.2 combine. <a href="#tbl-cases">Table 10.3</a> at the end of this section sums them up.</p>
+
+  <h3 id="s10-4-1">10.4.1 Landslides in the United States</h3>
+  <p><b>1925, Gros Ventre, Wyoming.</b> On June 23, 1925, a 38 million m³ (50 million yd³) translational rock slide came down beside the Gros Ventre River (pronounced "grow vont") near Jackson Hole. Large boulders dammed the river and ran several hundred vertical feet up the opposite side of the valley. The <button class="term" data-term="landslide dam">landslide dam</button> created Slide Lake; in 1927 the lake rose high enough to destabilize the dam, which failed and sent a flood that killed six people downstream in Kelly, Wyoming.</p>
+  <div class="pair">
+    <figure id="fig-gv">
+      <div class="frame"><img src="images/unit10/grosventre.webp" alt="A forested mountainside with a large bare scar where the slide came from, and rough landslide deposits in the foreground." loading="lazy" width="981" height="622"></div>
+      <figcaption>Scar of the Gros Ventre landslide (background) and its deposits (foreground).<span class="credit">Paul Inkenbrandt (textbook author), CC BY-NC-SA (via the textbook); cropped.</span></figcaption>
+    </figure>
+    <figure id="fig-gvsec">
+      <div class="frame"><img class="diagram" src="images/unit10/gvsection.webp" alt="Before-and-after cross sections of the Gros Ventre slope with sandstone and shale layers dipping parallel to the slope toward the river." loading="lazy" width="550" height="349"></div>
+      <figcaption>Cross section of the 1925 Gros Ventre slide: layers parallel to the slope, undercut by the river.<span class="credit">U.S. Geological Survey, public domain (via the textbook).</span></figcaption>
+    </figure>
+  </div>
+  <p>Three factors combined: (1) heavy rain and fast snowmelt saturated the Tensleep Sandstone, so the shale of the Amsden Formation below lost its shear strength; (2) the river cut through the sandstone, oversteepening the slope; (3) soil on the mountaintop became saturated because of poor drainage. The bedding planes between the sandstone and the shale were parallel to the slope and gave little friction once the river undercut it. An earthquake may have been the final trigger.</p>
+
+  <p><b>1959, Madison Canyon, Montana.</b> The magnitude 7.5 Hebgen Lake earthquake, the largest in recorded Rocky Mountain history, caused a destructive seiche on Hebgen Lake (Unit 9) and a rock avalanche that dammed the Madison River, forming Quake Lake. The avalanche ran hundreds of vertical feet up the other side of the valley; house-sized boulders still sit on the slope opposite where they started. It moved at up to 160.9 km/h (100 mph) and pushed an air blast through the Rock Creek Campground. Twenty-eight people died, most of them in the campground, where they remain buried. As at Gros Ventre, planes of weakness (here <button class="term" data-term="foliation">foliation</button> in metamorphic rock) were parallel to the slope.</p>
+  <figure id="fig-madison">
+    <div class="frame"><img src="images/unit10/madison.webp" alt="Panorama of a steep mountainside with a broad bare scar where the 1959 rock avalanche broke away." loading="lazy" width="1600" height="564"></div>
+    <figcaption>The 1959 Madison Canyon landslide scar, photographed from the landslide material.<span class="credit">Paul Inkenbrandt, CC BY (via the textbook).</span></figcaption>
+  </figure>
+
+  <p><b>1980, Mount St. Helens, Washington.</b> On May 18, 1980, a magnitude 5.1 earthquake triggered the largest landslide in the historical record: 2.8 km³ (0.67 mi³) of material. The landslide was followed by the volcano's lateral eruption, and the eruption by volcanic debris flows called <button class="term" data-term="lahar">lahars</button> (Unit 4).</p>
+
+  <p><b>1995 and 2005, La Conchita, California.</b> On March 4, 1995, a fast-moving earthflow damaged nine houses in this coastal community; a week later a debris flow in the same place damaged five more. Tension cracks at the top of the slide gave early warning in summer 1994 and widened during the wet winter; the likely trigger was unusually heavy rain and rising <button class="term" data-term="groundwater">groundwater</button>. In 2005, after 15 days of near-record rain, a rapid debris flow damaged 36 houses and killed 10 people. Vegetation rode intact on top of the flow, which suggests the mass was carried on a much more saturated, fluidized layer beneath (<a href="#fig-lidar">Figure 10.14</a>).</p>
+  <figure id="fig-lidar">
+    <div class="frame"><img src="images/unit10/conchitalidar.webp" alt="Oblique shaded lidar view of the La Conchita bluff with the 1995 slide outlined in blue, the 2005 slide in yellow, and the scarp of an older landslide in red." loading="lazy" width="1056" height="547"></div>
+    <figcaption>Oblique <button class="term" data-term="LiDAR">lidar</button> image of La Conchita after the 2005 landslide: 1995 slide outlined in blue, 2005 in yellow; arrows mark other landslides; the red line outlines the main scarp of an ancient landslide covering the whole bluff.<span class="credit">Todd Stennett, Airborne 1 Corp., public domain (via the textbook).</span></figcaption>
+  </figure>
+  <div class="pair">
+    <figure id="fig-conchita">
+      <div class="frame"><img src="images/unit10/conchita1995.webp" alt="A steep bare scarp above a lobe of slide material that has pushed into several houses." loading="lazy" width="451" height="672"></div>
+      <figcaption>The 1995 La Conchita slide: a distinct scarp, with slide material covering several houses.<span class="credit">U.S. Geological Survey, public domain (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>La Conchita, two events</h4>
+      <ul>
+        <li><b>1994</b>: surface tension cracks at the top of the slope; they widen over winter.</li>
+        <li><b>March 1995</b>: earthflow damages 9 houses; a week later a debris flow damages 5 more. Trigger: heavy winter rain and rising groundwater.</li>
+        <li><b>2005</b>: rapid debris flow after 15 days of near-record rain; 36 houses damaged, 10 people killed.</li>
+        <li><b>Lesson</b>: the whole bluff sits inside an ancient landslide, and slides there recur when it is very wet.</li>
+      </ul>
+    </div>
+  </div>
+
+  <p><b>2014, Oso, Washington.</b> On March 22, 2014, about 18 million tons (10 million yd³) of material moved at 64 km/h (40 mph) for nearly 1.6 km (1 mile) and dammed the North Fork of the Stillaguamish River. It covered 40 homes and killed 43 people in the Steelhead Haven community, a volume like 600 football fields buried 3 m (10 ft) deep. The winter of 2013–2014 had almost double the average precipitation, and the valley had a history of many landslides, though earlier ones had been small.</p>
+  <figure id="fig-oso">
+      <div class="frame"><img src="images/unit10/oso.webp" alt="Aerial view of a broad muddy landslide that spread across a river valley, with a distinct head scarp and flooded river." loading="lazy" width="800" height="521"></div>
+      <figcaption>The 2014 Oso slide killed 43 people and buried many homes.<span class="credit">U.S. Geological Survey, public domain (via the textbook).</span></figcaption>
+    </figure>
+    <figure id="fig-osolidar">
+      <div class="frame"><img src="images/unit10/osolidar.webp" alt="Shaded relief lidar map of the Oso slide showing its extent, flow direction arrows, and the homes it covered." loading="lazy" width="1300" height="841"></div>
+      <figcaption>Annotated lidar map of the 2014 Oso slide.<span class="credit">U.S. Geological Survey, public domain (via the textbook).</span></figcaption>
+    </figure>
+
+  <p><b>Yosemite National Park rock falls.</b> Yosemite's steep cliffs have frequent rock falls. Fractures from tectonic stress and <button class="term" data-term="exfoliation">exfoliation</button>, widened by <button class="term" data-term="frost wedging">frost wedging</button>, can free house-sized blocks of granite from the cliff faces. The park models potential runout to assess the risk to its millions of visitors.</p>
+
+  <h3 id="s10-4-2">10.4.2 Utah landslides</h3>
+  <p><b>Markagunt Gravity Slide.</b> About 21–22 million years ago, one of the largest land-based landslides yet found in the geologic record moved more than 1,700 km³ (408 mi³) of material in one relatively fast event, over an area the size of Rhode Island, from near Cedar City to Panguitch (<a href="#fig-markagunt">Figure 10.18</a>). The evidence: <button class="term" data-term="breccia">breccia</button> and conglomerates (Unit 5), glassy <button class="term" data-term="pseudotachylyte">pseudotachylytes</button> (Unit 6), slip surfaces like faults (Unit 9), and dikes. It was probably material released from the side of a growing <button class="term" data-term="laccolith">laccolith</button> (Unit 4) after an eruption-related earthquake.</p>
+  <figure id="fig-markagunt">
+    <div class="frame"><img class="diagram" src="images/unit10/markagunt.webp" alt="Map of southwestern Utah showing the approximate extent of the Markagunt gravity slide between Cedar City and Panguitch." loading="lazy" width="1030" height="741"></div>
+    <figcaption>Approximate extent of the Markagunt Gravity Slide.<span class="credit">Robert F. Biek, Utah Geological Survey, <i>Survey Notes</i> v. 45 no. 2 (2013), CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+
+  <p><b>1983, Thistle.</b> From April into May 1983, a slow-moving landslide traveled 305 m (1,000 ft) downhill and blocked Spanish Fork Canyon with an earthflow dam 61 m (200 ft) high (<a href="#fig-hero">Figure 10.1</a>). Flooding upstream in the Soldier Creek and Thistle Creek valleys submerged the town of Thistle. A spillway kept the new lake from breaching the dam, a tunnel later drained it, and the river still flows through that tunnel. Relocating the rail line and US-6 cost more than $200 million.</p>
+
+  <p><b>2013, Rockville rock fall.</b> In December 2013, a 2,700-ton (1,400 yd³) block of Shinarump Conglomerate fell from the Rockville Bench cliff near Zion National Park, landed on the 35° slope below, and broke into large pieces that kept rolling at high speed. They destroyed a house 375 ft below the cliff and killed two people inside. Earlier rock falls in the area are mapped in <a href="#fig-rockmap">Figure 10.20</a>.</p>
+  <figure id="fig-rockville">
+    <div class="frame"><img src="images/unit10/rockville1.webp" alt="Two photos side by side: a house below a cliff before the rock fall, and the same site after, with the house destroyed by boulders." loading="lazy" width="1100" height="475"></div>
+    <figcaption>The house before and after the 2013 Rockville rock fall.<span class="credit">William R. Lund, Tyler R. Knudsen, and Steve D. Bowman (Utah Geological Survey), CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <figure id="fig-rockmap">
+    <div class="frame"><img src="images/unit10/rockville2.webp" alt="Topographic map of Rockville showing the track of the 2013 rock fall and the paths of earlier documented rock falls." loading="lazy" width="1100" height="994"></div>
+    <figcaption>Tracks of the deadly 2013 Rockville rock fall and earlier documented rock falls.<span class="credit">William R. Lund, Tyler R. Knudsen, and Steve D. Bowman (Utah Geological Survey), CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+
+  <p><b>2014, North Salt Lake.</b> In August 2014, after a particularly wet period, a slow-moving rotational landslide destroyed one home and damaged nearby tennis courts (<a href="#fig-parkview">Figure 10.21</a>). Residents had seen ground cracks near the top of the slope at least a year earlier. Easily drained sand and gravel over less permeable clay (weathered from volcanic ash), plus recent regrading of the slope, may have contributed; local heavy rain seems to have been the trigger. The slope was partly regraded, but parts moved again in January 2017. Nearby, residents reported damage to homes from 1996 until 2012, when 18 homes became uninhabitable and were removed; the vacant area is now a geologic park.</p>
+  <figure id="fig-parkview">
+    <div class="frame"><img src="images/unit10/parkview.webp" alt="A curved scarp of bare earth on a hillside with jumbled displaced material below it, near houses." loading="lazy" width="1100" height="770"></div>
+    <figcaption>Scarp and displaced material of the 2014 North Salt Lake (Parkview) slide.<span class="credit">Gregg Beukelman, CC BY (via the textbook).</span></figcaption>
+  </figure>
+
+  <p><b>2013, Bingham Canyon copper mine.</b> At 9:30 p.m. on April 10, 2013, more than 65 million m³ of steep terraced mine wall slid into the engineered pit of Bingham Canyon <button class="term" data-term="mine">mine</button>, one of the largest historic landslides not associated with a volcano. The mine operator's radar systems warned that the wall was moving, so no one died and property losses were limited (<a href="#fig-bingham">Figure 10.22</a>, <a href="#fig-bingham2">Figure 10.23</a>).</p>
+  <div class="pair">
+    <figure id="fig-bingham">
+      <div class="frame"><img src="images/unit10/bingham1.webp" alt="Satellite image of the terraced Bingham Canyon pit and the green hills around it before the landslide." loading="lazy" width="720" height="480"></div>
+      <figcaption>Bingham Canyon Mine on July 20, 2011, before the landslide.<span class="credit">NASA Earth Observatory, public domain (via the textbook).</span></figcaption>
+    </figure>
+    <figure id="fig-bingham2">
+      <div class="frame"><img src="images/unit10/bingham2.webp" alt="Closer satellite view of the pit on May 2, 2013, with the landslide scarp and a lobe of debris covering the mining benches." loading="lazy" width="720" height="480"></div>
+      <figcaption>The pit on May 2, 2013, after the April 10 landslide (a closer view; note the labelled scarp).<span class="credit">NASA Earth Observatory, public domain (via the textbook).</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="tablewrap" id="tbl-cases">
+    <table style="min-width:640px">
+      <caption>The chapter's landslide examples at a glance.</caption>
+      <thead><tr><th>Event</th><th>Type</th><th>Causes and trigger</th><th>Impact</th></tr></thead>
+      <tbody>
+        <tr><td>Gros Ventre, WY, 1925</td><td>Translational rock slide</td><td>Saturated shale under sandstone; bedding parallel to slope; river undercutting; maybe an earthquake</td><td>Dammed river; dam failed in 1927, flood killed 6</td></tr>
+        <tr><td>Madison Canyon, MT, 1959</td><td>Rock avalanche</td><td>M7.5 earthquake; foliation parallel to slope</td><td>28 killed; Quake Lake formed</td></tr>
+        <tr><td>Mount St. Helens, WA, 1980</td><td>Landslide, then eruption and lahars</td><td>M5.1 earthquake</td><td>Largest historical landslide, 2.8 km³</td></tr>
+        <tr><td>La Conchita, CA, 1995 and 2005</td><td>Earthflow, debris flows</td><td>Heavy rain, rising groundwater</td><td>2005: 36 houses damaged, 10 killed</td></tr>
+        <tr><td>Oso, WA, 2014</td><td>Landslide (debris)</td><td>Winter with nearly double average precipitation; slide-prone valley</td><td>43 killed, 40 homes covered; river dammed</td></tr>
+        <tr><td>Yosemite, CA</td><td>Rock falls</td><td>Tectonic and exfoliation fractures widened by frost wedging</td><td>Ongoing risk to visitors; runout modeled</td></tr>
+        <tr><td>Markagunt, UT, 21–22 Ma</td><td>Gravity slide</td><td>Flank of a growing laccolith; eruption-related earthquake</td><td>Over 1,700 km³ moved</td></tr>
+        <tr><td>Thistle, UT, 1983</td><td>Slow earthflow</td><td>(Not given in the chapter)</td><td>River dammed, town flooded; over $200 million</td></tr>
+        <tr><td>Rockville, UT, 2013</td><td>Rock fall</td><td>Block of conglomerate fell from a cliff</td><td>House destroyed, 2 killed</td></tr>
+        <tr><td>North Salt Lake, UT, 2014</td><td>Slow rotational slide</td><td>Sand and gravel over clay; regrading; heavy rain</td><td>1 home destroyed; reactivated 2017</td></tr>
+        <tr><td>Bingham Canyon, UT, 2013</td><td>Mine-wall slide</td><td>Steep terraced pit wall</td><td>Over 65 million m³; no deaths thanks to radar warning</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/10-mass-wasting/" target="_blank" rel="noopener">Section 10.4 quiz in the textbook ↗</a></p>
+</section>
+
+<section id="summary">
+  <h2 class="sec">Summary</h2>
+  <p>Mass wasting is all downhill movement of rock and soil due to gravity. It happens when a slope is too steep to stay stable with its material and conditions; loose rock and soil (regolith) are what usually move. Slope stability depends on the slope angle and the shear strength of the material. Events are triggered by changes that oversteepen slopes or weaken them: rapid snowmelt, intense rain, earthquake shaking, eruptions, storm waves, stream erosion, and human activity. Excess water is the most common trigger. Events are classified by movement and material and share surface features; the most common are rock falls, slides, flows, and creep. Movement ranges from slow to dangerously rapid. Studying past events helps predict where and how landslides will happen and how to protect people.</p>
+  <div class="callout">
+    <h4>Quick recap</h4>
+    <ul>
+      <li>fg is constant; steepening the slope raises fs (driving) and lowers fn, and with it the friction (resisting force) that is proportional to fn.</li>
+      <li>Angle of repose = steepest stable angle; depends on grain size, composition, and water.</li>
+      <li>A little water strengthens sand (sandcastle); too much weakens it.</li>
+      <li>Bedding or foliation parallel to the slope = unstable (Gros Ventre, Madison Canyon).</li>
+      <li>Triggers: water (most common), oversteepening, shaking. Mitigation: drain water, reinforce, or shield, catch, and divert.</li>
+      <li>Falls (free fall) · rotational slides (curved surface) · translational slides (planar surface) · flows (water-rich) · creep (freeze–thaw, very slow).</li>
+      <li>Landslide anatomy: crown → main scarp → main body over the rupture surface → foot → toe; flanks on the sides.</li>
+    </ul>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/10-mass-wasting/" target="_blank" rel="noopener">Chapter 10 review quiz in the textbook ↗</a></p>
+</section>
+
+<section id="resources">
+  <h2 class="sec">Resources</h2>
+  <div class="res">
+    <a href="https://slcc.pressbooks.pub/introgeology/chapter/10-mass-wasting/" target="_blank" rel="noopener"><b>Chapter 10 (textbook) ↗</b><span>The full chapter, with section quizzes, videos, and the interactive landslide figures.</span></a>
+    <a href="https://slcc.pressbooks.pub/introgeology/back-matter/glossary-test/" target="_blank" rel="noopener"><b>Textbook glossary ↗</b><span>Definitions for every bolded term in the book.</span></a>
+    <a href="https://www.youtube.com/watch?v=MVwSpGVfWVo" target="_blank" rel="noopener"><b>Landslide Hazards (video) ↗</b><span>David Applegate on landslide hazards; the video linked in Section 10.3.</span></a>
+    <a href="https://www.youtube.com/watch?v=H0YhlqP1BgE" target="_blank" rel="noopener"><b>Rockfalls in Yosemite (video) ↗</b><span>Yosemite Nature Notes on how and why the park's cliffs shed rock.</span></a>
+    <a href="https://www.youtube.com/watch?v=NQs_OWgNshg" target="_blank" rel="noopener"><b>North Salt Lake landslide (video) ↗</b><span>Time-lapse of the 2014 slide destroying a home.</span></a>
+    <a href="https://pubs.usgs.gov/circ/1325/" target="_blank" rel="noopener"><b>The Landslide Handbook (USGS) ↗</b><span>Highland and Bobrowsky (2008), one of the chapter's references: types, causes, and mitigation in plain language.</span></a>
+    <a href="https://www.usgs.gov/programs/landslide-hazards" target="_blank" rel="noopener"><b>USGS Landslide Hazards Program ↗</b><span>Maps, current landslide information, and post-wildfire debris-flow hazards.</span></a>
+    <a href="https://geology.utah.gov/hazards/landslides/" target="_blank" rel="noopener"><b>Utah Geological Survey: landslides ↗</b><span>Utah landslide maps and reports, including Rockville and North Salt Lake.</span></a>
+  </div>
+</section>
+
+<section id="factcheck">
+  <h2 class="sec">Fact-check notes</h2>
+  <p class="small">Each fact in this guide comes from Chapter 10. These notes flag places where the chapter simplifies, has a typo, or differs from other reliable sources. The guide keeps the chapter's values in the main text.</p>
+  <div class="tablewrap">
+    <table style="min-width:600px">
+      <caption>Fact-check notes for Unit 10.</caption>
+      <thead><tr><th>Chapter says</th><th>Check</th></tr></thead>
+      <tbody>
+        <tr><td>The chapter says the normal force (friction) resists the shear force, and that at the angle of repose the shear force equals the normal force.</td><td>Corrected in this guide. The resisting force is friction, which is proportional to the normal force but is not the normal force (it is a fraction of fn, plus any cohesion), so material slides when fs exceeds that resistance, not fn itself. That is why the angle of repose is often near 30–35° for dry sand rather than the 45° at which fs = fn (Steven Earle, <i>Physical Geology</i>, BCcampus, CC BY). The slider in Figure 10.2 shows only the two components.</td></tr>
+        <tr><td>"Shockcrete"</td><td>Typo: the material is <b>shotcrete</b> (sprayed concrete).</td></tr>
+        <tr><td>Creep is caused by nighttime freezing and daytime thawing.</td><td>That is one cause. Other references add wetting and drying and warming and cooling cycles, which also swell and shrink soil (USGS Landslide Handbook, 2008).</td></tr>
+        <tr><td>1959 Hebgen Lake earthquake, magnitude 7.5; 28 killed.</td><td>USGS gives M7.3 (its event page now lists 7.2); the University of Utah lists 7.5. The 28 deaths are the total for the earthquake; most occurred in the Madison Slide.</td></tr>
+        <tr><td>Mount St. Helens landslide, 2.8 km³ (0.67 mi³).</td><td>USGS usually gives about 2.5 km³ (0.6 mi³) for the 1980 debris avalanche. Both agree it is the largest landslide in recorded history.</td></tr>
+        <tr><td>Oso slide "extended for nearly a 1.6 km (1 m)".</td><td>Typo: 1 <b>mile</b>. USGS gives a volume of about 8 million m³ (about 10 million yd³), matching the chapter.</td></tr>
+        <tr><td>Bingham Canyon, more than 65 million m³.</td><td>Matches Utah Geological Survey and NASA Earth Observatory reports (about 165 million tons). In the textbook's comparison figure the "after" image is dated May 2, 2013, after the April 10 slide.</td></tr>
+        <tr><td>Section 10.3 quiz option "Transitional slide".</td><td>Typo for <b>translational</b> slide.</td></tr>
+        <tr><td>Pseudotachylyte, lidar, check dam, landslide dam.</td><td>Not defined in the chapter; the key-terms panel defines them from the USGS Landslide Handbook and standard geology references.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="credits">
+  <h2 class="sec">Credits</h2>
+  <p class="small">Content summarized from <a href="https://slcc.pressbooks.pub/introgeology/chapter/10-mass-wasting/" target="_blank" rel="noopener"><i>An Introduction to Geology</i>, Chapter 10</a>, © 2017 Chris Johnson, Matthew D. Affolter, Paul Inkenbrandt, and Cam Mosher, licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. Every photo and drawing taken from the chapter is credited in its caption, with the license given in the chapter's media attributions. No Chapter 10 figure is marked "All Rights Reserved".</p>
+  <ul class="small">
+    <li>Drawn for this guide from the chapter's descriptions: forces on a slope (Figure 10.2, after Paul Inkenbrandt's figures), growing sand pile (Figure 10.4), oversteepening by grading (Figure 10.6), mitigation methods (Figure 10.7), and creep (Figure 10.9). The numbers on Figure 10.10 rebuild the textbook's interactive figure; its before-and-after slider is shown as Figure 10.22 and Figure 10.23 because the two NASA images cover different areas.</li>
+    <li>Outside sources are named where they are used: USGS (Landslide Handbook; Hebgen Lake, Mount St. Helens, and Oso pages), Utah Geological Survey, NASA Earth Observatory, and Steven Earle, <i>Physical Geology</i> (BCcampus, CC BY).</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<button class="fab" id="notesBtn" type="button" aria-controls="notes" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Key terms
+</button>
+<button class="fab hide" id="toTop" type="button" aria-label="Return to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<aside class="notes" id="notes" hidden aria-label="Key terms">
+  <header>
+    <div><h2>Key terms · Chapter 10</h2><button class="close" id="notesClose" type="button" aria-label="Close key terms">×</button></div>
+    <input id="termSearch" type="search" placeholder="Search terms and definitions" autocomplete="off" aria-label="Search terms and definitions">
+    <div class="count" id="termCount"></div>
+  </header>
+  <dl id="termList"></dl>
+</aside>
+</div>
+
+<script type="application/json" id="terms">
+[
+ [
+  "mass wasting",
+  "outcomes",
+  "Any downhill movement of rock and soil material caused by gravity, slow or fast."
+ ],
+ [
+  "landslide",
+  "outcomes",
+  "General term for mass wasting of fast-moving material; often used loosely for all mass wasting."
+ ],
+ [
+  "regolith",
+  "outcomes",
+  "Loose material that is a mixture of soil and weathered bedrock sediment; what usually moves in mass wasting."
+ ],
+ [
+  "slope stability",
+  "s10-1",
+  "How well a slope resists failing; set by the slope angle and the strength of the material."
+ ],
+ [
+  "force of gravity",
+  "s10-1-1",
+  "fg: the pull toward Earth's center on material on a slope; nearly constant at the surface."
+ ],
+ [
+  "shear force",
+  "s10-1-1",
+  "fs, the driving force: the part of gravity that pushes material down the slope."
+ ],
+ [
+  "normal force",
+  "s10-1-1",
+  "fn: the part of gravity that pushes material into the slope, perpendicular to it. It produces friction (the resisting force), which is proportional to fn."
+ ],
+ [
+  "shear strength",
+  "s10-1-1",
+  "A material's resistance to sliding: friction (proportional to the normal force) plus cohesion. When shear force exceeds shear strength, mass wasting can occur."
+ ],
+ [
+  "angle of repose",
+  "s10-1-2",
+  "The steepest angle, measured from the horizontal, at which rock and soil stay stable; varies with grain size, composition, and water."
+ ],
+ [
+  "pore space",
+  "s10-1-3",
+  "Empty space between grains in sediment or rock; can hold air, water, or hydrocarbons."
+ ],
+ [
+  "bedding plane",
+  "s10-1-3",
+  "Surface between layers of sedimentary rock; a plane of weakness when parallel to a slope."
+ ],
+ [
+  "plane of weakness",
+  "s10-1-3",
+  "A surface in rock, such as bedding or foliation, along which it breaks or slides easily."
+ ],
+ [
+  "trigger",
+  "s10-2-1",
+  "An event that makes a landslide happen at a particular time; water is the most common."
+ ],
+ [
+  "El Niño",
+  "s10-2-1",
+  "Climate pattern; in El Niño years the west coast of North America gets more precipitation, and landslides become more common."
+ ],
+ [
+  "runoff",
+  "s10-2-1",
+  "Water that flows over the land surface."
+ ],
+ [
+  "oversteepened slope",
+  "s10-2-1",
+  "A slope made steeper than its angle of repose by natural erosion or human activity."
+ ],
+ [
+  "infiltration",
+  "s10-2-2",
+  "Water working its way down into the subsurface."
+ ],
+ [
+  "rock bolt",
+  "s10-2-2",
+  "Long steel bolt drilled a few meters into a rock face to secure loose pieces."
+ ],
+ [
+  "shotcrete",
+  "s10-2-2",
+  "Reinforced concrete sprayed onto a slope face to strengthen it (misspelled 'shockcrete' in the chapter)."
+ ],
+ [
+  "buttressing",
+  "s10-2-2",
+  "Stabilizing a slide by adding weight at its toe and removing weight from its head."
+ ],
+ [
+  "terracing",
+  "s10-2-2",
+  "Cutting a slope into a stair-step shape to stabilize it; works only at the proper scale."
+ ],
+ [
+  "check dam",
+  "s10-2-2",
+  "A small dam across a channel that slows a debris flow and traps its material."
+ ],
+ [
+  "runout",
+  "s10-3-2",
+  "The maximum distance landslide material travels; marked by the toe."
+ ],
+ [
+  "head scarp",
+  "s10-3",
+  "Steep scarp at the top of a landslide, often a crescent on a cliff face."
+ ],
+ [
+  "hummocky terrain",
+  "s10-3",
+  "Undulating, uneven ground formed where a landslide disturbed the surface."
+ ],
+ [
+  "talus",
+  "s10-3",
+  "Loose rocky material fallen from steep surfaces above and covering the slope below."
+ ],
+ [
+  "toe",
+  "s10-3-2",
+  "The downhill end of a landslide, farthest from the main scarp."
+ ],
+ [
+  "fall",
+  "s10-3-1",
+  "Abrupt movement of rock detached from a steep slope or cliff along fractures or bedding; it free-falls, bounces, and rolls."
+ ],
+ [
+  "rock avalanche",
+  "s10-3-1",
+  "Very fast, large flow of broken bedrock, such as the 1959 Madison Canyon slide."
+ ],
+ [
+  "rotational slide",
+  "s10-3-1",
+  "Slide (slump) that usually moves slowly along a curved rupture surface."
+ ],
+ [
+  "translational slide",
+  "s10-3-1",
+  "Slide that moves, often rapidly, along a planar surface of weakness."
+ ],
+ [
+  "debris flow",
+  "s10-3-1",
+  "Rapid, channeled flow of coarse material mixed with water."
+ ],
+ [
+  "earthflow",
+  "s10-3-1",
+  "Flow of fine-grained material that moves plastically."
+ ],
+ [
+  "sturzstrom",
+  "s10-3-1",
+  "Very large, fast, long-runout landslide; still poorly understood."
+ ],
+ [
+  "creep",
+  "s10-3-1",
+  "Very slow downhill movement of soil, driven in the chapter by freeze–thaw cycles; shown by curved trees and tilted poles and fences."
+ ],
+ [
+  "solifluction",
+  "s10-3-1",
+  "Slow movement of soil lobes on low-angle slopes from seasonal freezing and thawing at high latitudes."
+ ],
+ [
+  "main scarp",
+  "s10-3-2",
+  "Steep slope at the upper edge of a landslide; the visible part of the rupture surface."
+ ],
+ [
+  "crown",
+  "s10-3-2",
+  "Undisturbed material uphill of the main scarp."
+ ],
+ [
+  "rupture surface",
+  "s10-3-2",
+  "Surface along which the landslide moves; material below it stays in place."
+ ],
+ [
+  "flank",
+  "s10-3-2",
+  "Undisplaced material beside the left and right edges of a landslide."
+ ],
+ [
+  "main body",
+  "s10-3-2",
+  "Part of the landslide that lies on the rupture surface."
+ ],
+ [
+  "foot",
+  "s10-3-2",
+  "Part of the landslide lying on the original ground surface beyond the rupture surface."
+ ],
+ [
+  "separation surface",
+  "s10-3-2",
+  "Part of the original ground surface now covered by the foot of the landslide."
+ ],
+ [
+  "extensional cracks",
+  "s10-3-2",
+  "Cracks formed where the toe moves faster than the rest of the slide, pulling it apart (tension cracks)."
+ ],
+ [
+  "sag pond",
+  "s10-3-2",
+  "Small pond filling a depression where landslide movement has blocked drainage."
+ ],
+ [
+  "pressure ridge",
+  "s10-3-2",
+  "Ridge at a landslide's margin where material is forced upward."
+ ],
+ [
+  "landslide dam",
+  "s10-4-1",
+  "Landslide debris that blocks a river and impounds a lake (Gros Ventre, Madison Canyon, Thistle, Oso)."
+ ],
+ [
+  "foliation",
+  "s10-4-1",
+  "Planar alignment of minerals in metamorphic rock (Unit 6); a plane of weakness when parallel to a slope."
+ ],
+ [
+  "lahar",
+  "s10-4-1",
+  "Volcanic debris flow of water, ash, and rock (Unit 4)."
+ ],
+ [
+  "groundwater",
+  "s10-4-1",
+  "Water below the land surface."
+ ],
+ [
+  "LiDAR",
+  "s10-4-1",
+  "Laser mapping of the ground surface from the air; reveals landslide scarps under vegetation."
+ ],
+ [
+  "exfoliation",
+  "s10-4-1",
+  "Mechanical weathering in which outer rock layers, roughly parallel to the surface, fracture off."
+ ],
+ [
+  "frost wedging",
+  "s10-4-1",
+  "Water freezing in cracks, expanding, and pushing rock apart."
+ ],
+ [
+  "breccia",
+  "s10-4-2",
+  "Rock made of angular broken fragments (Unit 5)."
+ ],
+ [
+  "pseudotachylyte",
+  "s10-4-2",
+  "Glassy rock formed by frictional melting on a fast-moving slip surface (Unit 6)."
+ ],
+ [
+  "laccolith",
+  "s10-4-2",
+  "Igneous intrusion wedged between sedimentary layers that bulges them upward (Unit 4)."
+ ],
+ [
+  "mine",
+  "s10-4-2",
+  "Place where material is extracted from the Earth for human use."
+ ]
+]
+</script>
+<script src="assets/guide.js"></script>
+
+<script>
+
+(function(){
+  var sl=document.getElementById('slopeAngle'); if(!sl) return;
+  var out=document.getElementById('slopeOut');
+  function $(i){return document.getElementById(i)}
+  function f(v){return v.toFixed(1)}
+  function arr(id,x1,y1,x2,y2){var dx=x2-x1,dy=y2-y1,L=Math.hypot(dx,dy)||1,ux=dx/L,uy=dy/L,h=Math.min(13,L*.45),bx=x2-ux*h,by=y2-uy*h,px=-uy,py=ux,w=h*.5;
+    var l=$(id);l.setAttribute('x1',f(x1));l.setAttribute('y1',f(y1));l.setAttribute('x2',f(bx));l.setAttribute('y2',f(by));
+    $(id+'h').setAttribute('points',f(x2)+','+f(y2)+' '+f(bx+px*w)+','+f(by+py*w)+' '+f(bx-px*w)+','+f(by-py*w));}
+  function lbl(id,x,y){var t=$(id);t.setAttribute('x',f(x));t.setAttribute('y',f(y));}
+  function draw(deg){
+    var th=deg*Math.PI/180,L=330,bx=560,by=330,c=Math.cos(th),s=Math.sin(th);
+    var tx=bx-L*c,ty=by-L*s;
+    $('fz-tri').setAttribute('points',f(tx)+','+f(ty)+' '+bx+','+by+' '+f(tx)+','+by);
+    var dx=c,dy=s,nx=s,ny=-c,Px=tx+dx*L*.3,Py=ty+dy*L*.3,S=46,Cx=Px+nx*S/2,Cy=Py+ny*S/2;
+    var h=S/2,pts=[[-h,-h],[h,-h],[h,h],[-h,h]].map(function(p){return f(Cx+p[0]*dx+p[1]*(-nx))+','+f(Cy+p[0]*dy+p[1]*(-ny))});
+    $('fz-block').setAttribute('points',pts.join(' '));
+    var G=110,gx=Cx,gy=Cy+G,sx=Cx+dx*G*s,sy=Cy+dy*G*s,qx=Cx-nx*G*c,qy=Cy-ny*G*c;
+    arr('fz-g',Cx,Cy,gx,gy);arr('fz-s',Cx,Cy,sx,sy);arr('fz-n',Cx,Cy,qx,qy);
+    var d1=$('fz-d1'),d2=$('fz-d2');
+    d1.setAttribute('x1',f(sx));d1.setAttribute('y1',f(sy));d1.setAttribute('x2',f(gx));d1.setAttribute('y2',f(gy));
+    d2.setAttribute('x1',f(qx));d2.setAttribute('y1',f(qy));d2.setAttribute('x2',f(gx));d2.setAttribute('y2',f(gy));
+    lbl('fz-tg',gx+8,gy+12);lbl('fz-ts',sx+dx*10+8,sy+dy*10);lbl('fz-tn',qx-nx*14-30,qy-ny*14+4);
+    var r=58;$('fz-arc').setAttribute('d','M'+(bx-r)+','+by+' A'+r+','+r+' 0 0,1 '+f(bx-r*c)+','+f(by-r*s));
+    var a=$('fz-ang');a.setAttribute('x',f(bx-r-10));a.setAttribute('y',f(by-14));a.textContent=deg+'°';
+    var vs=s, vn=c;
+    out.querySelector('[data-v=a]').textContent=deg+'°';
+    out.querySelector('[data-v=s]').textContent=vs.toFixed(2);
+    out.querySelector('[data-v=n]').textContent=vn.toFixed(2);
+    out.querySelector('[data-b=s]').style.width=(vs*100)+'%';
+    out.querySelector('[data-b=n]').style.width=(vn*100)+'%';
+  }
+  sl.addEventListener('input',function(){draw(+sl.value)});draw(+sl.value);
+})();
+
+(function(){var h=document.querySelector('.hot');if(!h)return;var tip=h.querySelector('.tip');var cur=null;
+  function show(b){if(cur)cur.classList.remove('on');if(cur===b){cur=null;tip.hidden=true;return}cur=b;b.classList.add('on');tip.innerHTML='<b>'+b.dataset.n+'. '+b.dataset.name+'</b>: '+b.dataset.text;tip.hidden=false;}
+  h.querySelectorAll('.spot').forEach(function(b){b.addEventListener('click',function(){show(b)});b.addEventListener('mouseenter',function(){if(cur!==b)show(b)});});
+})();
+</script>
+
+</body>
+</html>

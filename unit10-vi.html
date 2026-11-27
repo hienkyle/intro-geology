@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Di chuyển khối trên sườn</title>
+<meta name="description" content="Đề cương học tập Học phần 10, giáo trình An Introduction to Geology, Chương 10: Di chuyển khối trên sườn (Mass Wasting).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/guide.css">
+<style>
+/* Unit 10 palette: a hillside in cross section. Pine-slope green with hazard amber and wet-mud red; header bands run from grass through soil and regolith down to bedrock. */
+:root{
+  --fig-prefix:"Hình 10."; --tbl-prefix:"Bảng 10.";
+  --bg:#f5f4ef; --surface:#ffffff; --surface-2:#ebe9e0; --fg:#1e2320; --muted:#5b625c; --line:#d6d4c8;
+  --accent:#2e6a4f; --accent-soft:#dcebe2; --ochre:#b06d12; --ochre-soft:#f6e7cc; --rust:#a24a26;
+  --s1:#a9c48a; --s2:#d2ae74; --s3:#a07548; --s4:#6b6862; --s5:#2d2c2a;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121513; --surface:#1a1f1c; --surface-2:#232a26; --fg:#e7ebe7; --muted:#a6b0a9; --line:#34403a;
+  --accent:#7fc8a3; --accent-soft:#1c3a2c; --ochre:#e6a94c; --ochre-soft:#3a2c14; --rust:#ec8c69;
+  --s1:#5d7449; --s2:#7d6440; --s3:#5a4128; --s4:#3a3835; --s5:#0f0f0f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121513; --surface:#1a1f1c; --surface-2:#232a26; --fg:#e7ebe7; --muted:#a6b0a9; --line:#34403a;
+  --accent:#7fc8a3; --accent-soft:#1c3a2c; --ochre:#e6a94c; --ochre-soft:#3a2c14; --rust:#ec8c69;
+  --s1:#5d7449; --s2:#7d6440; --s3:#5a4128; --s4:#3a3835; --s5:#0f0f0f; color-scheme:dark}
+/* slope-angle slider (forces figure) */
+.slider{max-width:560px;margin:.8rem auto 0;font-size:.92rem}
+.slider label{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.82rem;color:var(--muted)}
+.slider label b{color:var(--fg)}
+.slider input{width:100%;accent-color:var(--accent);margin:.3rem 0 .6rem}
+.meter{display:grid;grid-template-columns:8.5rem 1fr 2.6rem;gap:.6rem;align-items:center;margin:.25rem 0}
+.meter span{font-size:.85rem;color:var(--muted);text-align:left}
+.meter i{display:block;height:10px;border-radius:5px;background:var(--surface-2);overflow:hidden}
+.meter i b{display:block;height:100%;border-radius:5px;transition:width .1s}
+.meter output{font-family:var(--mono);font-size:.85rem;text-align:right}
+.slider p.small{margin:.4rem 0 0;text-align:left}
+/* numbered hotspots on the landslide diagram (parts figure) */
+.hot{position:relative;max-width:100%;margin:0 auto}
+.hot img{width:100%}
+.hot .spot{position:absolute;transform:translate(-50%,-50%);width:1.7rem;height:1.7rem;border-radius:50%;border:2px solid #fff;background:var(--rust);color:#fff;font:600 .8rem/1 var(--mono);display:grid;place-items:center;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.4);padding:0}
+.hot .spot:hover,.hot .spot.on{background:var(--accent)}
+.hot .tip{position:absolute;left:50%;bottom:.5rem;transform:translateX(-50%);width:min(92%,30rem);background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:.5rem .7rem;font-size:.86rem;line-height:1.45;box-shadow:0 4px 14px rgba(0,0,0,.18);text-align:left}
+@media (max-width:560px){.hot .spot{width:1.35rem;height:1.35rem;font-size:.7rem}}
+</style>
+</head>
+<body>
+<div lang="vi">
+<header class="hero" id="top">
+  <div class="strata" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Học phần 10 · Chương 10 · An Introduction to Geology</div>
+      <h1>Di chuyển khối trên sườn</h1>
+      <p>Vì sao sườn dốc bị phá hủy: trọng lực, góc dốc, độ bền vật liệu và nước quyết định đất đá đứng yên hay dịch chuyển ra sao, điều gì kích hoạt sạt lở và cách giảm hiểm họa, các kiểu di chuyển khối, và bài học từ những vụ sạt lở nổi tiếng.</p>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="toc" aria-label="Mục lục">
+    <div class="navbar" role="group" aria-label="Công cụ trang">
+      <a class="btn tbtn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Tất cả học phần</span></a>
+      <a class="btn tbtn lbtn" href="unit10.html" lang="en" hreflang="en"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>English</span></a>
+      <button class="btn tbtn" id="themeBtn" type="button" aria-label="Chuyển chế độ sáng hoặc tối">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Chế độ tối</span>
+      </button>
+    </div>
+    <h2>Mục lục</h2>
+    <ol>
+      <li><a href="#outcomes">Mục tiêu học tập</a></li>
+      <li><a href="#s10-1"><span class="num">10.1</span>Độ bền sườn dốc</a>
+        <ol>
+          <li><a href="#s10-1-1"><span class="num">10.1.1</span>Các lực trên sườn</a></li>
+          <li><a href="#s10-1-2"><span class="num">10.1.2</span>Góc nghỉ tự nhiên</a></li>
+          <li><a href="#s10-1-3"><span class="num">10.1.3</span>Nước và mặt yếu</a></li>
+        </ol>
+      </li>
+      <li><a href="#s10-2"><span class="num">10.2</span>Tác nhân và giảm thiểu</a>
+        <ol>
+          <li><a href="#s10-2-1"><span class="num">10.2.1</span>Tác nhân kích hoạt</a></li>
+          <li><a href="#s10-2-2"><span class="num">10.2.2</span>Giảm thiểu</a></li>
+        </ol>
+      </li>
+      <li><a href="#s10-3"><span class="num">10.3</span>Phân loại</a>
+        <ol>
+          <li><a href="#s10-3-1"><span class="num">10.3.1</span>Các kiểu di chuyển khối</a></li>
+          <li><a href="#s10-3-2"><span class="num">10.3.2</span>Các bộ phận khối trượt</a></li>
+        </ol>
+      </li>
+      <li><a href="#s10-4"><span class="num">10.4</span>Các vụ sạt lở</a>
+        <ol>
+          <li><a href="#s10-4-1"><span class="num">10.4.1</span>Hoa Kỳ</a></li>
+          <li><a href="#s10-4-2"><span class="num">10.4.2</span>Utah</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary">Tóm tắt</a></li>
+      <li><a href="#resources">Tài liệu tham khảo</a></li>
+      <li><a href="#factcheck">Ghi chú kiểm chứng</a></li>
+      <li><a href="#credits">Nguồn &amp; trích dẫn</a></li>
+    </ol>
+  </nav>
+
+<main>
+<section id="outcomes">
+  <h2 class="sec">Mục tiêu học tập</h2>
+  <p class="lead">Học xong Chương 10, bạn cần làm được các việc sau. Nhãn cho biết mục trình bày nội dung đó.</p>
+  <ul class="outcomes">
+    <li><a class="tag" href="#s10-1">10.1</a><span>Giải thích di chuyển khối trên sườn là gì và vì sao nó xảy ra trên sườn dốc.</span></li>
+    <li><a class="tag" href="#s10-2">10.2</a><span>Giải thích các tác nhân kích hoạt cơ bản của di chuyển khối và cách chúng xảy ra.</span></li>
+    <li><a class="tag" href="#s10-3">10.3</a><span>Nhận biết các kiểu di chuyển khối.</span></li>
+    <li><a class="tag" href="#s10-2-2">10.2.2</a><span>Nhận biết các yếu tố rủi ro của di chuyển khối.</span></li>
+    <li><a class="tag" href="#s10-4">10.4</a><span>Đánh giá các vụ sạt lở và những yếu tố góp phần gây ra chúng.</span></li>
+  </ul>
+  <div class="callout">
+    <h4>Cách dùng đề cương</h4>
+    <p>Các từ gạch chân là thuật ngữ. Bấm vào một từ, hoặc mở <b>Thuật ngữ</b> ở góc dưới bên phải, để đọc và tìm mọi định nghĩa của chương. Cả chương xoay quanh một thế cân bằng: trọng lực kéo vật liệu xuống dốc, còn độ bền của vật liệu giữ nó tại chỗ. Bất cứ điều gì làm sườn dốc hơn hoặc làm vật liệu yếu đi đều phá vỡ thế cân bằng đó (10.1–10.2). Phần còn lại của chương gọi tên các kiểu chuyển động (10.3) và phân tích các vụ sạt lở có thật (10.4).</p>
+  </div>
+  <div class="spheres">
+    <div class="sphere"><b><span class="dot" style="background:var(--accent)"></span>Trọng lực</b>Lực kéo không đổi, động lực của mọi vụ di chuyển khối.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--ochre)"></span>Góc dốc</b>Sườn càng dốc, phần lực kéo xuống dốc càng lớn.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--rust)"></span>Độ bền vật liệu</b>Cỡ hạt, thành phần và các mặt yếu.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s4)"></span>Nước</b>Tác nhân phổ biến nhất: làm yếu sườn và tăng tải.</div>
+  </div>
+  <figure id="fig-hero">
+    <div class="frame"><img src="images/unit10/thistle.webp" alt="Thung lũng có một hồ lớn ở phía sau, bị chặn bởi gò vật liệu sạt lở ở phía trước; đường sắt và quốc lộ bị vùi lấp." loading="lazy" width="800" height="543"></div>
+    <figcaption>Vụ sạt lở Thistle năm 1983 (phía trước) chặn sông Spanish Fork, và hồ hình thành phía sau nhấn chìm thị trấn Thistle, Utah. Khối trượt vùi lấp Quốc lộ 6 và tuyến đường sắt chính giữa Salt Lake City và Denver.<span class="credit">R.L. Schuster, Cục Khảo sát Địa chất Hoa Kỳ (USGS), phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+  <p><button class="term" data-term="di chuyển khối trên sườn">Di chuyển khối trên sườn</button> (EN: mass wasting) là chuyển động xuống dốc của đất đá do trọng lực. <button class="term" data-term="sạt lở đất">Sạt lở đất</button> (còn gọi là trượt lở đất, EN: landslide) thường được dùng như từ đồng nghĩa, nhưng về địa chất đây là thuật ngữ chung cho di chuyển khối của vật liệu <i>chuyển động nhanh</i>; còn di chuyển khối bao gồm <i>mọi</i> chuyển động xuống dốc, dù chậm hay nhanh. Thứ thường dịch chuyển là vật liệu bở rời cùng lớp đất phía trên (<button class="term" data-term="lớp phủ phong hóa (regolith)">lớp phủ phong hóa</button>). Các khối đá gốc chuyển động được gọi là đá đổ nghiêng (topple), trượt đá hoặc đá rơi, tùy chuyển động chính; chuyển động của vật liệu chủ yếu ở dạng lỏng được gọi là dòng (flow). Chuyển động nhanh, như lũ bùn đá, rất nguy hiểm. Những vùng địa hình dốc và mưa lớn như bờ biển California, vùng núi Rocky và Tây Bắc Thái Bình Dương đặc biệt dễ xảy ra di chuyển khối nguy hiểm.</p>
+</section>
+
+<!-- 10.1 -->
+<section id="s10-1">
+  <h2 class="sec"><span class="n">10.1</span>Độ bền sườn dốc</h2>
+  <p>Di chuyển khối xảy ra khi sườn dốc bị <i>phá hủy</i>: nó quá dốc và kém ổn định so với vật liệu và điều kiện hiện có. <button class="term" data-term="độ ổn định sườn dốc">Độ ổn định sườn dốc</button> rốt cuộc do hai yếu tố quyết định: <b>góc dốc</b> và <b>độ bền của vật liệu bên dưới</b>. Trọng lực gần như không đổi ở bề mặt Trái Đất (chỉ thay đổi chút ít theo độ cao và mật độ đá bên dưới).</p>
+
+  <h3 id="s10-1-1">10.1.1 Các lực trên sườn</h3>
+  <p>Một khối đá trên sườn bị <button class="term" data-term="trọng lực">trọng lực</button> (fg) kéo về phía tâm Trái Đất. Lực này tách thành hai thành phần (<a href="#fig-forces">Hình 10.2</a>):</p>
+  <ul>
+    <li><b><button class="term" data-term="lực cắt">Lực cắt</button></b> (fs), <i>lực gây trượt</i>, đẩy khối xuống dốc.</li>
+    <li><b><button class="term" data-term="lực pháp tuyến">Lực pháp tuyến</button></b> (fn) ép khối vào sườn. Tự nó không giữ khối lại, nhưng nó tạo ra <i>ma sát</i>, tức lực kháng trượt, có độ lớn tỉ lệ với fn.</li>
+  </ul>
+  <p>Khả năng chống trượt của vật liệu là <button class="term" data-term="sức kháng cắt">sức kháng cắt</button> (EN: shear strength): ma sát (một phần của fn) cộng lực dính kết giữa các hạt nếu có. Khi sức kháng cắt còn lớn hơn lực cắt, khối đứng yên. Nếu sườn dốc hơn hoặc vật liệu yếu đi, lực cắt thắng và khối trượt xuống. Khi sườn dốc dần, fg giữ nguyên trong khi fn giảm và fs tăng.</p>
+  <figure id="fig-forces">
+    <div class="frame">
+      <svg viewBox="0 0 680 400" role="img" aria-labelledby="forces-vi" style="width:100%;max-width:680px;min-width:320px;height:auto;display:block;margin:0 auto"><title id="forces-vi">Một khối đá trên sườn dốc. Trọng lực fg hướng thẳng xuống; nó tách thành fs đẩy khối xuống dốc và fn ép khối vào sườn. Kéo thanh trượt để đổi góc dốc.</title><g id="fz"><rect x="20" y="330" width="640" height="70" fill="#cfa86e"/><line x1="20" y1="330" x2="660" y2="330" stroke="#9c7444" stroke-width="1.5"/><polygon id="fz-tri" points="274.2,165.0 560,330 274.2,330" fill="#cfa86e" stroke="#9c7444" stroke-width="1.5"/><path id="fz-arc" fill="none" stroke="var(--fg)" stroke-width="1.6"/><text x="0.0" y="0.0" dy=".35em" text-anchor="end" font-size="15" font-weight="600" class="svg-ink halo" id="fz-ang"></text><polygon id="fz-block" fill="#9a9c98" stroke="#6f716d" stroke-width="1.6"/><line id="fz-d1" stroke="var(--muted)" stroke-width="1.4" stroke-dasharray="5 4"/><line id="fz-d2" stroke="var(--muted)" stroke-width="1.4" stroke-dasharray="5 4"/><line id="fz-g" stroke="#c0392b" stroke-width="3.4"/><polygon id="fz-gh" fill="#c0392b"/><line id="fz-s" stroke="var(--accent)" stroke-width="3.4"/><polygon id="fz-sh" fill="var(--accent)"/><line id="fz-n" stroke="var(--ochre)" stroke-width="3.4"/><polygon id="fz-nh" fill="var(--ochre)"/><text x="0.0" y="0.0" dy=".35em" text-anchor="start" font-size="17" font-weight="700" fill="#c0392b" class="halo" id="fz-tg">fg</text><text x="0.0" y="0.0" dy=".35em" text-anchor="start" font-size="17" font-weight="700" fill="var(--accent)" class="halo" id="fz-ts">fs</text><text x="0.0" y="0.0" dy=".35em" text-anchor="start" font-size="17" font-weight="700" fill="var(--ochre)" class="halo" id="fz-tn">fn</text></g></svg>
+      <div class="slider" id="slopeOut">
+        <label for="slopeAngle">Góc dốc <b data-v="a">30°</b></label>
+        <input id="slopeAngle" type="range" min="10" max="75" step="1" value="30">
+        <div class="meter"><span>fs (xuống dốc)</span><i><b data-b="s" style="background:var(--accent)"></b></i><output data-v="s">0.50</output></div>
+        <div class="meter"><span>fn (ép vào sườn)</span><i><b data-b="n" style="background:var(--ochre)"></b></i><output data-v="n">0.87</output></div>
+        <p class="small">Giá trị tính theo tỉ lệ của fg (fs = fg × sin góc dốc; fn = fg × cos góc dốc).</p>
+      </div>
+    </div>
+    <figcaption>Các lực tác dụng lên một khối trên mặt nghiêng: fg = trọng lực, fs = lực cắt, fn = lực pháp tuyến. Kéo thanh trượt: fg không đổi, nhưng sườn càng dốc thì phần fs càng lớn và phần fn càng nhỏ.<span class="credit">Hình tương tác vẽ lại cho đề cương theo hai hình của Paul Inkenbrandt trong giáo trình.</span></figcaption>
+  </figure>
+
+  <h3 id="s10-1-2">10.1.2 Góc nghỉ tự nhiên</h3>
+  <p>Góc dốc lớn nhất mà đất đá còn ổn định, không trượt xuống, là <button class="term" data-term="góc nghỉ tự nhiên">góc nghỉ tự nhiên</button> (EN: angle of repose), đo từ phương ngang. Ở góc này lực cắt cân bằng với lực ma sát do lực pháp tuyến tạo ra; chỉ cần dốc hơn một chút là lực cắt thắng và vật liệu bắt đầu chuyển động. Góc này thay đổi theo cỡ hạt, thành phần hạt và lượng nước. Cát đổ lên mặt phẳng lăn xuống sườn đống cát cho tới khi dừng lại ở góc nghỉ; đáy và chiều cao đống cát tiếp tục tăng, nhưng góc của sườn thì giữ nguyên (<a href="#fig-repose">Hình 10.3</a>, <a href="#fig-pile">Hình 10.4</a>).</p>
+  <div class="pair">
+    <figure id="fig-repose">
+      <div class="frame"><img class="diagram" src="images/unit10/repose.webp" alt="Đống cát hình nón trên mặt phẳng, độ dốc của sườn được đánh dấu là góc nghỉ (angle of repose)." loading="lazy" width="430" height="240"></div>
+      <figcaption>Góc nghỉ tự nhiên của một đống cát (chữ trong ảnh: angle of repose).<span class="credit">Captain Sprite, CC BY-SA (qua giáo trình).</span></figcaption>
+    </figure>
+    <figure id="fig-pile">
+      <div class="frame"><svg viewBox="0 0 430 240" role="img" aria-labelledby="pile-vi" style="width:100%;max-width:430px;min-width:0px;height:auto;display:block;margin:0 auto"><title id="pile-vi">Hoạt hình: cát đổ lên mặt phẳng tạo thành đống có sườn luôn giữ cùng một góc, góc nghỉ, khi đống lớn dần.</title><rect x="0" y="200" width="430" height="40" fill="#9a9c98" opacity=".35"/><line x1="0" y1="200" x2="430" y2="200" stroke="var(--fg)" stroke-width="1.5"/><line x1="215" y1="8" x2="215" y2="167.5" stroke="#9c7444" stroke-width="3" stroke-dasharray="2 6"><animate attributeName="y2" values="167.5;102.6;102.6" keyTimes="0;0.8;1" dur="9s" repeatCount="indefinite"/><animate attributeName="stroke-dashoffset" values="0;-80" dur="1s" repeatCount="indefinite"/></line><polygon points="165.0,200 215,167.5 265.0,200" fill="#dcbc80" stroke="#9c7444" stroke-width="1.5"><animate attributeName="points" values="165.0,200 215,167.5 265.0,200;65.0,200 215,102.6 365.0,200;65.0,200 215,102.6 365.0,200" keyTimes="0;0.8;1" dur="9s" repeatCount="indefinite"/></polygon><path d="M199.0,200 A34,34 0 0,0 193.5,181.5" fill="none" stroke="var(--rust)" stroke-width="2.4"><animate attributeName="d" values="M199.0,200 A34,34 0 0,0 193.5,181.5;M99.0,200 A34,34 0 0,0 93.5,181.5;M99.0,200 A34,34 0 0,0 93.5,181.5" keyTimes="0;0.8;1" dur="9s" repeatCount="indefinite"/></path><text x="165.0" y="220" dy=".35em" font-size="14" font-weight="600" fill="var(--rust)">góc nghỉ<animate attributeName="x" values="165.0;65.0;65.0" keyTimes="0;0.8;1" dur="9s" repeatCount="indefinite"/></text><text x="12.0" y="22.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >Đống cát rộng và cao dần,</text><text x="12.0" y="41.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >nhưng sườn vẫn giữ</text><text x="12.0" y="60.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >nguyên một góc.</text></svg></div>
+      <figcaption>Hoạt hình: cát càng rơi xuống, đống cát càng rộng và cao nhưng góc sườn vẫn giữ nguyên.<span class="credit">Vẽ cho đề cương theo mô tả trong chương.</span></figcaption>
+    </figure>
+  </div>
+
+  <h3 id="s10-1-3">10.1.3 Nước và mặt yếu</h3>
+  <p><b>Nước</b> có thể làm thay đổi mạnh sức kháng cắt của sườn. Nước nằm trong các <button class="term" data-term="lỗ rỗng">lỗ rỗng</button>, khoảng trống giữa các hạt trong trầm tích hoặc đá. Giả sử cát khô có góc nghỉ 30°. Thêm một ít nước làm góc nghỉ tăng, có thể lên 60° hoặc thậm chí 90°, như lâu đài cát trên bãi biển. Quá nhiều nước lấp đầy lỗ rỗng lại <i>làm giảm</i> sức kháng cắt và góc nghỉ, và lâu đài cát sụp đổ.</p>
+  <p><button class="term" data-term="mặt lớp">Mặt lớp</button> trong đá trầm tích (Học phần 5) là những <button class="term" data-term="mặt yếu">mặt yếu</button>. Chúng nguy hiểm nhất khi <b>song song</b> với sườn và ít nguy hiểm nhất khi <b>vuông góc</b> với sườn (<a href="#fig-bedding">Hình 10.5</a>). Khoáng vật sét dọc mặt lớp có thể hút nước và trở nên trơn; một lớp đá phiến sét bão hòa nước có thể làm giảm sức kháng cắt của cả khối đá và gây sạt lở, như ở Gros Ventre, Wyoming, năm 1925 (<a href="#s10-4-1">10.4.1</a>).</p>
+  <figure id="fig-bedding">
+    <div class="frame"><img class="diagram" src="images/unit10/stability.webp" alt="Mặt cắt thung lũng cắt vào đá phân lớp, với bốn vị trí sườn A đến D có mặt lớp nghiêng các góc khác nhau so với sườn." loading="lazy" width="1191" height="414"></div>
+    <figcaption>Độ ổn định của sườn phụ thuộc vào thế nằm của mặt lớp so với sườn. A và B: mặt lớp gần vuông góc với sườn, tương đối ổn định. C: mặt lớp gần nằm ngang, ổn định trung bình. D: mặt lớp gần song song với sườn, rất kém ổn định.<span class="credit">Steven Earle, CC BY (qua giáo trình).</span></figcaption>
+  </figure>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/10-mass-wasting/" target="_blank" rel="noopener">Bài kiểm tra Mục 10.1 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<!-- 10.2 -->
+<section id="s10-2">
+  <h2 class="sec"><span class="n">10.2</span>Tác nhân kích hoạt và giảm thiểu di chuyển khối</h2>
+  <h3 id="s10-2-1">10.2.1 Tác nhân kích hoạt</h3>
+  <p>Một vụ di chuyển khối thường có <button class="term" data-term="tác nhân kích hoạt">tác nhân kích hoạt</button> (EN: trigger): một thay đổi khiến sạt lở xảy ra vào một thời điểm cụ thể. Các tác nhân gồm tuyết tan nhanh, mưa lớn, rung lắc động đất, phun trào núi lửa, sóng bão, xói lở nhanh do dòng chảy và hoạt động của con người như san ủi làm đường mới.</p>
+  <ul>
+    <li><b>Lượng nước trong sườn tăng</b> là tác nhân phổ biến nhất. Nước đến từ tuyết hoặc băng tan nhanh hay một trận mưa lớn. Mưa lớn xảy ra thường hơn vào các năm <button class="term" data-term="El Niño">El Niño</button>, khi bờ tây Bắc Mỹ mưa nhiều hơn bình thường và sạt lở xảy ra nhiều hơn. Động đất, các vụ trượt trước đó chặn dòng suối, và các công trình cản trở <button class="term" data-term="dòng chảy mặt">dòng chảy mặt</button> (nhà cửa, đường sá, bãi đỗ xe) cũng có thể đưa thêm nước vào sườn. Ở Madison Canyon, Montana, năm 1959, rung lắc động đất có thể đã làm sườn yếu đi.</li>
+    <li><b><button class="term" data-term="sườn bị làm dốc quá mức">Sườn bị làm dốc quá mức</button></b> (EN: oversteepened slope). Xói mòn có thể làm sườn dốc hơn một cách tự nhiên: suối lũ và sóng bão khoét vào chân sườn, và việc sông khoét chân sườn được cho là một phần nguyên nhân ở Gros Ventre năm 1925. Con người làm sườn dốc hơn khi cắt vào chân sườn để làm đường hoặc san nền rồi đổ đất đào lên đỉnh sườn (<a href="#fig-cutfill">Hình 10.6</a>). Làm cẩn thận thì cách này hữu ích cho phát triển đất đai; làm ẩu thì hậu quả có thể rất nặng nề. Ở North Salt Lake, Utah, một mỏ sỏi cũ được san lại để làm đường và lô đất xây dựng có thể đã bị làm dốc quá mức, và năm 2014 một vụ trượt chậm đã phá hủy một ngôi nhà ở chân sườn.</li>
+  </ul>
+  <figure id="fig-cutfill">
+    <div class="frame"><svg viewBox="0 0 760 300" role="img" aria-labelledby="cutfill-vi" style="width:100%;max-width:760px;min-width:560px;height:auto;display:block;margin:0 auto"><title id="cutfill-vi">Hai mặt cắt sườn đồi. Trước: sườn tự nhiên. Sau san lấp: chân sườn bị cắt để làm đường, vật liệu đào được đổ lên đỉnh, khiến cả hai mặt mới dốc hơn sườn ban đầu.</title><polygon points="10.0,250.0 60.0,250.0 300.0,90.0 360.0,90.0 360,290 10,290" fill="#cfa86e" stroke="#9c7444" stroke-width="1.6"/><text x="14.0" y="22.0" dy=".35em" text-anchor="start" font-size="15" font-weight="700" class="svg-ink" >A. Trước</text><text x="30.0" y="120.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >sườn tự nhiên</text><line x1="96.0" y1="130.0" x2="170.0" y2="176.7" stroke="var(--fg)" stroke-width="1.1"/><circle cx="170.0" cy="176.7" r="2.8" fill="var(--fg)"/><polygon points="400.0,250.0 530.0,250.0 565.0,173.3 605.0,146.7 652.0,78.0 750.0,78.0 750,290 400,290" fill="#cfa86e" stroke="#9c7444" stroke-width="1.6"/><text x="404.0" y="22.0" dy=".35em" text-anchor="start" font-size="15" font-weight="700" class="svg-ink" >B. Sau khi san lấp</text><polygon points="605.0,146.7 652.0,78.0 750.0,78.0 750.0,90.0 690.0,90.0" fill="#9c7444" stroke="#6b4c2a" stroke-width="1.4"/><rect x="400" y="244" width="130" height="6" fill="#55585c"/><line x1="408" y1="247" x2="522" y2="247" stroke="#f2d16b" stroke-width="1.2" stroke-dasharray="8 6"/><polyline points="450,250 690,90" fill="none" stroke="var(--fg)" stroke-width="1.6" stroke-dasharray="6 5"/><line x1="530" y1="250" x2="565" y2="173.3" stroke="var(--rust)" stroke-width="4"/><line x1="605" y1="146.7" x2="652" y2="78" stroke="var(--rust)" stroke-width="4"/><text x="404.0" y="55.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >đất đắp (vật liệu đào đổ lên đỉnh)</text><line x1="510.0" y1="64.0" x2="690.0" y2="84.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="690.0" cy="84.0" r="2.8" fill="var(--fg)"/><text x="404.0" y="112.0" dy=".35em" text-anchor="start" font-size="13" font-weight="600" fill="var(--rust)" class="halo" >các mặt bị làm dốc quá mức</text><line x1="450.0" y1="122.0" x2="547.5" y2="212.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="547.5" cy="212.0" r="2.8" fill="var(--fg)"/><line x1="582.0" y1="112.0" x2="628.5" y2="112.2" stroke="var(--fg)" stroke-width="1.1"/><circle cx="628.5" cy="112.2" r="2.8" fill="var(--fg)"/><text x="540.0" y="272.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >đường trên bậc cắt</text><line x1="538.0" y1="272.0" x2="500.0" y2="250.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="500.0" cy="250.0" r="2.8" fill="var(--fg)"/><text x="615.0" y="196.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >sườn ban đầu</text><line x1="613.0" y1="196.0" x2="580.0" y2="163.3" stroke="var(--fg)" stroke-width="1.1"/><circle cx="580.0" cy="163.3" r="2.8" fill="var(--fg)"/></svg></div>
+    <figcaption>Làm dốc quá mức do san lấp. Cắt vào chân sườn để làm đường và đổ vật liệu đào lên đỉnh để lại hai mặt (đỏ) dốc hơn sườn ban đầu (nét đứt).<span class="credit">Vẽ cho đề cương theo mô tả trong chương.</span></figcaption>
+  </figure>
+
+  <h3 id="s10-2-2">10.2.2 Giảm thiểu</h3>
+  <p>Vì nước là tác nhân chính, <b>phần lớn biện pháp giảm thiểu sạt lở là chuyển hướng và tiêu thoát nước khỏi vùng trượt</b>. Bạt và tấm nhựa giúp nước chảy khỏi thân khối trượt và ngăn <button class="term" data-term="thấm">thấm</button>; rãnh và ống thoát nước làm khô khối trượt; giếng nông dùng để theo dõi lượng nước trong một số khối trượt đang hoạt động. Có thêm hai cách tiếp cận (<a href="#fig-mitig">Hình 10.7</a>):</p>
+  <ul>
+    <li><b>Gia cố sườn.</b> Các thanh <button class="term" data-term="neo đá">neo đá</button> bằng thép dài, khoan vào vách đá vài mét, giữ chặt các khối long rời ở vùng hay có đá rơi. <button class="term" data-term="bê tông phun">Bê tông phun</button> (shotcrete) gia cố mặt sườn. Biện pháp <button class="term" data-term="phản áp">phản áp</button> (EN: buttressing) thêm tải ở chân khối trượt và bớt tải ở phần đầu. <button class="term" data-term="tạo bậc thang">Tạo bậc thang</button> (terracing) cắt sườn thành dạng bậc; chỉ hiệu quả khi làm đúng quy mô.</li>
+    <li><b>Che chắn, hứng và chuyển hướng vật liệu trượt.</b> Hàng rào lưới co giãn hứng đá rơi để bảo vệ người đi bộ và xe cộ. Kênh dẫn, công trình chuyển hướng và <button class="term" data-term="đập chắn bùn đá">đập chắn bùn đá</button> (check dam) làm chậm lũ bùn đá và lái nó tránh công trình. Một số quốc lộ có đường hầm (mái che đá đổ) để vật liệu trượt đi qua phía trên mặt đường.</li>
+  </ul>
+  <figure id="fig-mitig">
+    <div class="frame"><svg viewBox="0 0 760 520" role="img" aria-labelledby="mit-vi" style="width:100%;max-width:760px;min-width:600px;height:auto;display:block;margin:0 auto"><title id="mit-vi">Bốn cách giảm hiểm họa sạt lở: neo đá và bê tông phun trên vách đá; rãnh thoát nước, giảm tải phần đầu và tường phản áp ở chân khối trượt đất; tạo bậc thang; hàng rào chắn đá lăn và mái che đá đổ để hứng và chuyển hướng đá rơi.</title><rect x="0.5" y="0.5" width="369" height="249" rx="8" fill="none" stroke="var(--line)"/><text x="12.0" y="20.0" dy=".35em" text-anchor="start" font-size="14" font-weight="700" class="svg-ink" >A. Neo đá và bê tông phun</text><rect x="390.5" y="0.5" width="369" height="249" rx="8" fill="none" stroke="var(--line)"/><text x="402.0" y="20.0" dy=".35em" text-anchor="start" font-size="14" font-weight="700" class="svg-ink" >B. Thoát nước, giảm tải, phản áp</text><rect x="0.5" y="270.5" width="369" height="249" rx="8" fill="none" stroke="var(--line)"/><text x="12.0" y="290.0" dy=".35em" text-anchor="start" font-size="14" font-weight="700" class="svg-ink" >C. Tạo bậc thang</text><rect x="390.5" y="270.5" width="369" height="249" rx="8" fill="none" stroke="var(--line)"/><text x="402.0" y="290.0" dy=".35em" text-anchor="start" font-size="14" font-weight="700" class="svg-ink" >D. Hứng và chuyển hướng</text><polygon points="10,40 150,40 160,120 172,235 10,235" fill="#9a9c98" stroke="#6f716d" stroke-width="1.5"/><polyline points="112,40 118,90 161,130" fill="none" stroke="#2f3133" stroke-width="2.2"/><polygon points="112,40 150,40 160,120 161,130 118,90" fill="#b4b6b2" stroke="none"/><polyline points="112,40 118,90 161,130" fill="none" stroke="#2f3133" stroke-width="2.2"/><line x1="151" y1="62" x2="70" y2="66" stroke="#1f2a33" stroke-width="3.2"/><rect x="149" y="54" width="6" height="16" fill="#1f2a33"/><line x1="155" y1="98" x2="78" y2="104" stroke="#1f2a33" stroke-width="3.2"/><rect x="153" y="90" width="6" height="16" fill="#1f2a33"/><polygon points="160.5,140 170.5,235 181,235 171,140" fill="#6d8fa3" stroke="#3d5a6b" stroke-width="1"/><text x="210.0" y="58.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >khối đá long rời</text><line x1="208.0" y1="58.0" x2="140.0" y2="55.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="140.0" cy="55.0" r="2.8" fill="var(--fg)"/><text x="210.0" y="100.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >neo đá</text><line x1="208.0" y1="100.0" x2="120.0" y2="102.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="120.0" cy="102.0" r="2.8" fill="var(--fg)"/><text x="210.0" y="142.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >khe nứt</text><line x1="208.0" y1="142.0" x2="145.0" y2="115.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="145.0" cy="115.0" r="2.8" fill="var(--fg)"/><text x="210.0" y="190.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >bê tông phun</text><line x1="208.0" y1="190.0" x2="177.0" y2="190.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="177.0" cy="190.0" r="2.8" fill="var(--fg)"/><polygon points="400,60 480,60 690,200 750,200 750,240 400,240" fill="#cfa86e" stroke="#9c7444" stroke-width="1.5"/><polygon points="460,60 480,60 522,88.0 460,88" fill="var(--surface)" stroke="none"/><polyline points="460,88 522,88.0" fill="none" stroke="#9c7444" stroke-width="1.5"/><polyline points="460,60 480,60 522,88.0" fill="none" stroke="var(--fg)" stroke-width="1.4" stroke-dasharray="5 4"/><line x1="460" y1="60" x2="460" y2="88" stroke="#9c7444" stroke-width="1.5"/><path d="M486,88 Q530,215 675,190.0" fill="none" stroke="var(--rust)" stroke-width="2.6" stroke-dasharray="8 5"/><polygon points="630.0,160.0 652.0,150.0 712.0,150.0 735.0,200.0 690.0,200.0" fill="#9a9c98" stroke="#6f716d" stroke-width="1.5"/><circle cx="665" cy="165" r="7" fill="#b8bab6" stroke="#6f716d"/><circle cx="688" cy="162" r="8" fill="#b8bab6" stroke="#6f716d"/><circle cx="708" cy="180" r="7" fill="#b8bab6" stroke="#6f716d"/><circle cx="680" cy="185" r="6" fill="#b8bab6" stroke="#6f716d"/><circle cx="652" cy="178" r="6" fill="#b8bab6" stroke="#6f716d"/><g ><line x1="496.0" y1="106.0" x2="510.5" y2="111.5" stroke="#3f86c2" stroke-width="2"/><polygon points="517.0,114.0 509.3,114.6 511.7,108.4" fill="#3f86c2"/></g><g ><line x1="502.0" y1="140.0" x2="520.0" y2="129.5" stroke="#3f86c2" stroke-width="2"/><polygon points="526.0,126.0 521.6,132.4 518.3,126.6" fill="#3f86c2"/></g><line x1="522" y1="118" x2="597" y2="135.0" stroke="#2f3133" stroke-width="5" stroke-linecap="round"/><path d="M599,135.0 Q607,137.0 611,147.3" fill="none" stroke="#3f86c2" stroke-width="2.4"/><g ><line x1="612.0" y1="146.5" x2="624.2" y2="154.6" stroke="#3f86c2" stroke-width="2.2"/><polygon points="630.0,158.5 622.3,157.4 626.0,151.8" fill="#3f86c2"/></g><text x="404.0" y="100.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" fill="#3f86c2" class="halo" >nước dưới đất</text><text x="550.0" y="42.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >giảm tải ở phần đầu</text><line x1="548.0" y1="46.0" x2="494.0" y2="70.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="494.0" cy="70.0" r="2.8" fill="var(--fg)"/><text x="404.0" y="128.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >mặt trượt</text><line x1="450.0" y1="136.0" x2="529.2" y2="159.6" stroke="var(--fg)" stroke-width="1.1"/><circle cx="529.2" cy="159.6" r="2.8" fill="var(--fg)"/><text x="595.0" y="98.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >ống thoát nước</text><line x1="612.0" y1="106.0" x2="570.0" y2="129.5" stroke="var(--fg)" stroke-width="1.1"/><circle cx="570.0" cy="129.5" r="2.8" fill="var(--fg)"/><text x="510.0" y="226.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >khối phản áp (thêm tải)</text><line x1="630.0" y1="218.0" x2="688.0" y2="192.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="688.0" cy="192.0" r="2.8" fill="var(--fg)"/><polygon points="10.0,330.0 20.0,330.0 42.4,362.0 84.0,362.0 106.4,394.0 148.0,394.0 170.4,426.0 212.0,426.0 234.4,458.0 276.0,458.0 298.4,490.0 340.0,490.0 360.0,490.0 360.0,510.0 10.0,510.0" fill="#cfa86e" stroke="#9c7444" stroke-width="1.5"/><line x1="20" y1="330" x2="340" y2="490" stroke="var(--fg)" stroke-width="1.4" stroke-dasharray="6 5"/><text x="170.0" y="340.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >sườn ban đầu</text><line x1="168.0" y1="346.0" x2="140.0" y2="390.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="140.0" cy="390.0" r="2.8" fill="var(--fg)"/><text x="250.0" y="390.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >bậc (cơ)</text><line x1="248.0" y1="396.0" x2="192.8" y2="426.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="192.8" cy="426.0" r="2.8" fill="var(--fg)"/><polygon points="400.0,310.0 410.0,310.0 620.0,431.2 620.0,485.0 720.0,485.0 750.0,502.0 750.0,518.0 400.0,518.0" fill="#9a9c98" stroke="#6f716d" stroke-width="1.5"/><rect x="620" y="479" width="100" height="6" fill="#55585c"/><rect x="648" y="460" width="36" height="17" rx="3" fill="#3f6fa0" stroke="#24415e"/><rect x="652" y="456" width="28" height="8" rx="2" fill="#9cc3e4" stroke="#24415e"/><rect x="649" y="467" width="5" height="3" fill="#e0453a"/><rect x="678" y="467" width="5" height="3" fill="#e0453a"/><rect x="651" y="475" width="7" height="4" fill="#222"/><rect x="674" y="475" width="7" height="4" fill="#222"/><polygon points="616,430.2 716,455.7 716,463.7 616,438.2" fill="#b9bdc2" stroke="#7d8287" stroke-width="1.3"/><rect x="702" y="460.1" width="7" height="18.9" fill="#b9bdc2" stroke="#7d8287"/><circle cx="652" cy="433.3" r="6" fill="#7b6a58" stroke="#3d342b"/><g ><line x1="664.0" y1="434.4" x2="701.3" y2="443.9" stroke="var(--rust)" stroke-width="2.2"/><polygon points="710.0,446.1 700.2,448.1 702.3,439.7" fill="var(--rust)"/></g><g ><line x1="720.0" y1="455.7" x2="732.2" y2="481.8" stroke="var(--rust)" stroke-width="2.2"/><polygon points="736.0,490.0 728.3,483.7 736.1,480.0" fill="var(--rust)"/></g><line x1="510" y1="367.7" x2="514" y2="333.7" stroke="#2f3133" stroke-width="3"/><path d="M512,363.7 l-14,-6 M513,353.7 l-14,-6 M513,343.7 l-14,-6" stroke="#2f3133" stroke-width="1"/><circle cx="501" cy="353.5" r="8" fill="#7b6a58" stroke="#3d342b"/><path d="M430,300 Q452,292 462,338.0 Q478,312 494,344.5" fill="none" stroke="var(--fg)" stroke-width="1.3" stroke-dasharray="3 4"/><text x="540.0" y="322.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >hàng rào chắn đá lăn</text><line x1="538.0" y1="328.0" x2="513.0" y2="345.7" stroke="var(--fg)" stroke-width="1.1"/><circle cx="513.0" cy="345.7" r="2.8" fill="var(--fg)"/><text x="568.0" y="366.0" dy=".35em" text-anchor="start" font-size="13" font-weight="400" class="svg-ink halo" >mái che đá đổ: vật liệu</text><line x1="672.0" y1="390.0" x2="680.0" y2="450.5" stroke="var(--fg)" stroke-width="1.1"/><circle cx="680.0" cy="450.5" r="2.8" fill="var(--fg)"/><text x="568.0" y="382.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" fill="var(--muted)" class="halo" >trượt qua mái, vượt mặt đường</text><text x="502.0" y="502.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" class="svg-ink halo" >đường (chạy vào trong trang)</text><line x1="640.0" y1="500.0" x2="638.0" y2="482.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="638.0" cy="482.0" r="2.8" fill="var(--fg)"/></svg></div>
+    <figcaption>Các cách giảm hiểm họa sạt lở. A: neo đá giữ khối đá long rời qua khe nứt; bê tông phun phủ mặt vách. B: ống thoát nước rút nước, phần đầu được giảm tải và khối phản áp thêm tải ở chân. C: tạo bậc thang. D: hàng rào chắn đá lăn hứng đá nảy, mái che đá đổ cho vật liệu trượt qua phía trên quốc lộ.<span class="credit">Vẽ cho đề cương theo mô tả trong chương.</span></figcaption>
+  </figure>
+  <div class="callout warn">
+    <h4>Quy mô là then chốt</h4>
+    <p>Mọi công trình che chắn hay hứng đều phải được thiết kế với quy mô <b>lớn hơn khối trượt</b>; nếu không, nó có thể thất bại và gây thiệt hại thảm khốc về người và của.</p>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/10-mass-wasting/" target="_blank" rel="noopener">Bài kiểm tra Mục 10.2 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<!-- 10.3 -->
+<section id="s10-3">
+  <h2 class="sec"><span class="n">10.3</span>Phân loại và nhận dạng sạt lở</h2>
+  <p>Di chuyển khối được phân loại theo <b>kiểu chuyển động</b> và <b>loại vật liệu</b> (<a href="#tbl-types">Bảng 10.1</a>). Nhiều kiểu có chung các đặc điểm nhìn thấy trên mặt đất: <button class="term" data-term="vách đầu">vách đầu</button> (head scarp), thường có dạng lưỡi liềm trên vách đá; địa hình <button class="term" data-term="địa hình gò đống">gò đống</button> (hummocky) lồi lõm; đống <button class="term" data-term="sườn tích">sườn tích</button> (talus), đá vụn rơi từ trên xuống; và <button class="term" data-term="chân khối trượt">chân khối trượt</button> (toe) phủ lên mặt đất có sẵn.</p>
+
+  <h3 id="s10-3-1">10.3.1 Các kiểu di chuyển khối</h3>
+  <div class="tablewrap" id="tbl-types">
+    <table>
+      <caption>Các kiểu di chuyển khối theo chuyển động và vật liệu chính, kèm tên gọi thông thường (giáo trình chỉnh sửa từ Highland, 2004, và Hungr và cộng sự, 2013).</caption>
+      <thead>
+        <tr><th rowspan="2">Kiểu chuyển động</th><th rowspan="2">Đá gốc</th><th colspan="2">Các loại đất</th></tr>
+        <tr><th>Chủ yếu hạt thô</th><th>Chủ yếu hạt mịn</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Rơi (đổ)</td><td>Đá đổ (đá rơi)</td><td>—</td><td>—</td></tr>
+        <tr><td>Lở đá</td><td>Lở đá</td><td>—</td><td>—</td></tr>
+        <tr><td>Trượt xoay (sụt)</td><td>—</td><td>Trượt xoay mảnh vụn (sụt)</td><td>Trượt xoay đất (sụt)</td></tr>
+        <tr><td>Trượt tịnh tiến</td><td>Trượt tịnh tiến đá</td><td>Trượt tịnh tiến mảnh vụn</td><td>Trượt tịnh tiến đất</td></tr>
+        <tr><td>Dòng</td><td>—</td><td>Lũ bùn đá</td><td>Dòng đất</td></tr>
+        <tr><td>Bò đất</td><td>—</td><td>Bò đất</td><td>Bò đất</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Các kiểu phổ biến nhất là đá đổ, trượt xoay và trượt tịnh tiến, dòng, và bò đất (<a href="#fig-types">Hình 10.8</a>):</p>
+  <ul>
+    <li><b><button class="term" data-term="đá đổ (đá rơi)">Đá đổ</button></b> (EN: falls): đá tách đột ngột khỏi sườn dốc hoặc vách đá dọc các mặt nứt có sẵn như khe nứt hay mặt lớp. Đá rơi tự do, nảy và lăn. Trọng lực, phong hóa cơ học và nước chi phối đá đổ.</li>
+    <li><b><button class="term" data-term="trượt xoay">Trượt xoay</button></b> (sụt, EN: rotational slide): thường chuyển động chậm dọc một mặt trượt <i>cong</i>.</li>
+    <li><b><button class="term" data-term="trượt tịnh tiến">Trượt tịnh tiến</button></b> (EN: translational slide): thường chuyển động nhanh dọc một <i>mặt phẳng</i> yếu rõ rệt giữa vật liệu trượt và vật liệu ổn định hơn bên dưới. Theo vật liệu, trượt được chia thành trượt đá, trượt mảnh vụn hoặc trượt đất.</li>
+    <li><b>Dòng</b> (EN: flows): vật liệu bở rời trộn với nhiều nước, chuyển động nhanh và đi rất xa khỏi chân sườn. <button class="term" data-term="lũ bùn đá">Lũ bùn đá</button> (debris flow) mang vật liệu thô; <button class="term" data-term="dòng đất">dòng đất</button> (earthflow) mang vật liệu mịn. Một số dòng lớn nhất và nhanh nhất trên đất liền là <button class="term" data-term="sturzstrom (sạt lở quãng xa)">sturzstrom</button> (sạt lở quãng xa); chúng vẫn chưa được hiểu rõ nhưng đi rất xa, kể cả trên những thiên thể gần như không có khí quyển như Mặt Trăng.</li>
+    <li><b><button class="term" data-term="bò đất">Bò đất</button></b> (EN: creep): chuyển động xuống dốc chậm đến mức không nhận thấy của vật liệu bở rời như đất, do chu kỳ đóng băng ban đêm và tan băng ban ngày. Băng nở ra đẩy các hạt đất ra xa khỏi sườn; khi tan, trọng lực kéo chúng thẳng xuống. Kết quả là hạt dần dần trôi xuống dốc (<a href="#fig-creep">Hình 10.9</a>). Dấu hiệu của bò đất là thân cây cong, hàng rào hoặc tường chắn bị uốn, cột hoặc hàng rào nghiêng, và các gợn hay gờ đất nhỏ. <button class="term" data-term="dòng chảy đất (solifluction)">Dòng chảy đất</button> (solifluction) là một kiểu bò đất đặc biệt: các thùy đất di chuyển chậm trên sườn thoải do đóng băng – tan băng theo mùa ở vĩ độ cao (cận Bắc Cực, Bắc Cực và Nam Cực).</li>
+  </ul>
+  <figure id="fig-types">
+    <div class="frame"><img class="diagram" src="images/unit10/types.webp" alt="Mười sơ đồ khối từ A đến J: trượt xoay, trượt tịnh tiến, trượt khối, đá rơi, đá đổ nghiêng, lũ bùn đá, lở mảnh vụn, dòng đất, bò đất và trượt lan ngang." loading="lazy" width="548" height="663"></div>
+    <figcaption>Ví dụ các kiểu sạt lở (nhãn tiếng Anh trong hình): (A) trượt xoay, (B) trượt tịnh tiến, (C) trượt khối, (D) đá rơi, (E) đá đổ nghiêng (topple), (F) lũ bùn đá, (G) lở mảnh vụn (debris avalanche), (H) dòng đất, (I) bò đất, (J) trượt lan ngang (lateral spread).<span class="credit">Margo Johnson, USGS, phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+  <figure id="fig-creep">
+    <div class="frame"><svg viewBox="0 0 760 300" role="img" aria-labelledby="creep-vi" style="width:100%;max-width:760px;min-width:560px;height:auto;display:block;margin:0 auto"><title id="creep-vi">Trái: hạt đất trên sườn bị nâng vuông góc với sườn khi đất đóng băng và bị kéo thẳng xuống khi tan băng, nên mỗi chu kỳ dịch xuống dốc một chút. Phải: dấu hiệu của bò đất: gợn đất, gốc cây cong, cột nghiêng và cọc hàng rào nghiêng.</title><polygon points="10,85.0 380,270.0 380,290 10,290" fill="#cfa86e" stroke="#9c7444" stroke-width="1.6"/><text x="14.0" y="20.0" dy=".35em" text-anchor="start" font-size="15" font-weight="700" class="svg-ink" >A. Đóng băng – tan băng đẩy hạt</text><circle cx="133.1" cy="138.7" r="7" fill="none" stroke="#5b4a3a" stroke-width="1.3" stroke-dasharray="3 2"/><circle cx="153.7" cy="149.0" r="7" fill="none" stroke="#5b4a3a" stroke-width="1.3" stroke-dasharray="3 2"/><circle cx="174.3" cy="159.3" r="7" fill="none" stroke="#5b4a3a" stroke-width="1.3" stroke-dasharray="3 2"/><g ><line x1="137.2" y1="130.7" x2="148.9" y2="106.5" stroke="#2f7fbf" stroke-width="2.4"/><polygon points="152.8,98.4 152.8,108.4 145.0,104.6" fill="#2f7fbf"/></g><g ><line x1="153.7" y1="106.6" x2="153.7" y2="132.0" stroke="var(--rust)" stroke-width="2.4"/><polygon points="153.7,141.0 149.4,132.0 158.0,132.0" fill="var(--rust)"/></g><g ><line x1="157.7" y1="141.0" x2="169.5" y2="116.8" stroke="#2f7fbf" stroke-width="2.4"/><polygon points="173.4,108.7 173.3,118.7 165.6,114.9" fill="#2f7fbf"/></g><g ><line x1="174.3" y1="116.9" x2="174.3" y2="142.3" stroke="var(--rust)" stroke-width="2.4"/><polygon points="174.3,151.3 170.0,142.3 178.6,142.3" fill="var(--rust)"/></g><g ><line x1="121.1" y1="162.9" x2="152.4" y2="178.5" stroke="var(--accent)" stroke-width="3"/><polygon points="162.2,183.5 150.0,183.3 154.7,173.8" fill="var(--accent)"/></g><circle r="7" fill="#7b5a3a" stroke="#3d2c1c" stroke-width="1.2"><animateMotion dur="6s" repeatCount="indefinite" path="M133.1,138.7 L153.7,97.6 L153.7,149.0 L174.3,107.9 L174.3,159.3" keyPoints="0;0.25;0.5;0.75;1;1" keyTimes="0;0.2;0.4;0.6;0.8;1" calcMode="linear"/></circle><g ><line x1="22.0" y1="218.0" x2="43.0" y2="218.0" stroke="#2f7fbf" stroke-width="2.6"/><polygon points="52.0,218.0 43.0,222.3 43.0,213.7" fill="#2f7fbf"/></g><text x="58.0" y="218.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" class="svg-ink halo" >đóng băng: băng nâng hạt lên</text><g ><line x1="22.0" y1="240.0" x2="43.0" y2="240.0" stroke="var(--rust)" stroke-width="2.6"/><polygon points="52.0,240.0 43.0,244.3 43.0,235.7" fill="var(--rust)"/></g><text x="58.0" y="240.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" class="svg-ink halo" >tan băng: trọng lực kéo xuống</text><g ><line x1="22.0" y1="262.0" x2="43.0" y2="262.0" stroke="var(--accent)" stroke-width="2.6"/><polygon points="52.0,262.0 43.0,266.3 43.0,257.7" fill="var(--accent)"/></g><text x="58.0" y="262.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" class="svg-ink halo" >kết quả: hạt bò xuống dốc</text><line x1="385" y1="12" x2="385" y2="290" stroke="var(--line)"/><polygon points="400,95.0 760,275.0 760,290 400,290" fill="#cfa86e" stroke="#9c7444" stroke-width="1.6"/><text x="404.0" y="20.0" dy=".35em" text-anchor="start" font-size="15" font-weight="700" class="svg-ink" >B. Dấu hiệu của bò đất</text><path d="M425,107.5 Q432,104.0 439,114.5 Q446,111.0 453,121.5 Q460,118.0 467,128.5 Q474,125.0 481,135.5" fill="#cfa86e" stroke="#9c7444" stroke-width="1.6"/><path d="M520,155.0 Q534,141.0 531,119.0 L531,77.0" fill="none" stroke="#6b4a2b" stroke-width="6" stroke-linecap="round"/><circle cx="531" cy="63.0" r="19" fill="#7aa957" stroke="#4d7a35"/><line x1="605" y1="197.5" x2="627" y2="141.5" stroke="#4a4a4a" stroke-width="4" stroke-linecap="round"/><line x1="615" y1="147.5" x2="637" y2="155.5" stroke="#4a4a4a" stroke-width="3"/><line x1="668" y1="229.0" x2="675" y2="191.0" stroke="#6b4a2b" stroke-width="4" stroke-linecap="round"/><line x1="700" y1="245.0" x2="713" y2="207.0" stroke="#6b4a2b" stroke-width="4" stroke-linecap="round"/><line x1="732" y1="261.0" x2="751" y2="223.0" stroke="#6b4a2b" stroke-width="4" stroke-linecap="round"/><polyline points="675.0,191.0 713.0,207.0 751.0,223.0" fill="none" stroke="#3d3d3d" stroke-width="1.3"/><text x="412.0" y="64.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" class="svg-ink halo" >gợn đất</text><line x1="440.0" y1="72.0" x2="446.0" y2="114.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="446.0" cy="114.0" r="2.8" fill="var(--fg)"/><text x="554.0" y="120.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" class="svg-ink halo" >gốc cây cong</text><line x1="552.0" y1="124.0" x2="532.0" y2="129.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="532.0" cy="129.0" r="2.8" fill="var(--fg)"/><text x="640.0" y="148.0" dy=".35em" text-anchor="start" font-size="12.5" font-weight="400" class="svg-ink halo" >cột nghiêng</text><line x1="638.0" y1="152.0" x2="618.0" y2="164.5" stroke="var(--fg)" stroke-width="1.1"/><circle cx="618.0" cy="164.5" r="2.8" fill="var(--fg)"/><text x="755.0" y="172.0" dy=".35em" text-anchor="end" font-size="12.5" font-weight="400" class="svg-ink halo" >hàng rào lệch hàng</text><line x1="705.0" y1="180.0" x2="706.5" y2="226.0" stroke="var(--fg)" stroke-width="1.1"/><circle cx="706.5" cy="226.0" r="2.8" fill="var(--fg)"/></svg></div>
+    <figcaption>Bò đất. A (hoạt hình): mỗi lần đóng băng nâng hạt vuông góc với sườn; mỗi lần tan băng hạt rơi thẳng xuống, nên hạt dịch xuống dốc thêm một chút. Chuyển động được phóng đại. B: các dấu hiệu bò đất mà chương nêu.<span class="credit">Vẽ cho đề cương theo mô tả trong chương.</span></figcaption>
+  </figure>
+
+  <h3 id="s10-3-2">10.3.2 Các bộ phận của khối trượt</h3>
+  <p>Nhiều vụ sạt lở có chung các đặc điểm nhận dạng, dù có nhiều ngoại lệ. Sạt lở lấy đi vật liệu ở phía trên và bồi đắp ở phía dưới, và những công trình hay đối tượng tự nhiên vốn thẳng đứng hoặc cố định trở nên nghiêng hoặc lệch. Các bộ phận được thể hiện ở <a href="#fig-parts">Hình 10.10</a> và liệt kê ở <a href="#tbl-parts">Bảng 10.2</a>.</p>
+  <ul>
+    <li><b>Vách trượt.</b> Giống vách đứt gãy, vách trượt là phần đất dốc lộ ra khi phần đất bên cạnh dịch đi. <button class="term" data-term="vách chính">Vách chính</button> (main scarp) đánh dấu giới hạn trên của khối trượt; đó là phần lộ ra của mặt trượt.</li>
+    <li><b><button class="term" data-term="mặt trượt">Mặt trượt</button></b> (rupture surface): ranh giới của khối chuyển động. Vật liệu bên dưới không dịch chuyển. Hai bên được giới hạn bởi <button class="term" data-term="sườn bên khối trượt">sườn bên</button> (flank), và cuối cùng là chân khối trượt.</li>
+    <li><b>Chân khối trượt</b>: điểm cuối của vật liệu chuyển động, đánh dấu <button class="term" data-term="quãng đường trượt">quãng đường trượt</button> (runout), tức khoảng cách xa nhất. Ở trượt xoay, chân thường là một gò lớn bị xáo trộn, hình thành khi khối trượt vượt quá mặt trượt ban đầu.</li>
+    <li><b>Đặc điểm bề mặt</b> của trượt xoay và trượt tịnh tiến: <button class="term" data-term="khe nứt tách giãn">khe nứt tách giãn</button> (chân chạy nhanh hơn phần còn lại, kéo khối trượt tách ra), <button class="term" data-term="hồ trũng">hồ trũng</button> (sag pond; nước lấp chỗ trũng nơi chuyển động chặn dòng thoát), địa hình gò đống, và <button class="term" data-term="gờ nén">gờ nén</button> (pressure ridge; vật liệu bị đẩy trồi thành gờ ở rìa).</li>
+  </ul>
+  <figure id="fig-parts">
+    <div class="frame">
+      <div class="hot">
+        <img class="diagram" src="images/unit10/parts.webp" alt="Sơ đồ khối của một vụ trượt xoay trên sườn đồi phủ cỏ phía trên một con đường, có các số đánh dấu từng bộ phận." loading="lazy" width="1400" height="899">
+        <button class="spot" type="button" style="left:86%;top:9%" data-n="1" data-name="Đỉnh khối trượt" data-text="Phần đất đá chưa bị xáo trộn phía trên vách chính." aria-label="1. Đỉnh khối trượt">1</button><button class="spot" type="button" style="left:70%;top:14%" data-n="2" data-name="Vách chính" data-text="Vách dốc ở rìa trên (phần đầu) khối trượt, hình thành khi vật liệu dịch chuyển rời khỏi phần chưa xáo trộn; phần lộ ra của mặt trượt." aria-label="2. Vách chính">2</button><button class="spot" type="button" style="left:38%;top:30%" data-n="3" data-name="Sườn bên" data-text="Phần đất đá không dịch chuyển bên cạnh khối trượt; rìa trái và phải của khối chuyển động." aria-label="3. Sườn bên">3</button><button class="spot" type="button" style="left:60%;top:40%" data-n="4" data-name="Thân khối trượt" data-text="Phần khối trượt nằm trên mặt trượt." aria-label="4. Thân khối trượt">4</button><button class="spot" type="button" style="left:69%;top:47%" data-n="5" data-name="Mặt trượt" data-text="Ranh giới dưới của khối chuyển động, nằm dưới mặt đất ban đầu; mặt mà vật liệu trượt theo." aria-label="5. Mặt trượt">5</button><button class="spot" type="button" style="left:40%;top:51%" data-n="6" data-name="Khe nứt tách giãn" data-text="Khe nứt nơi phần giữa khối trượt bị kéo tách; thường ở giữa khối trượt." aria-label="6. Khe nứt tách giãn">6</button><button class="spot" type="button" style="left:45%;top:68%" data-n="7" data-name="Mặt tách" data-text="Phần mặt đất ban đầu nay bị vật liệu trượt phủ lên." aria-label="7. Mặt tách">7</button><button class="spot" type="button" style="left:34%;top:70%" data-n="8" data-name="Phần chân" data-text="Phần khối trượt nằm trên mặt đất ban đầu (mặt tách)." aria-label="8. Phần chân">8</button><button class="spot" type="button" style="left:21%;top:72%" data-n="9" data-name="Chân khối trượt" data-text="Đầu dưới của khối trượt, xa vách chính nhất." aria-label="9. Chân khối trượt">9</button><div class="tip" hidden></div>
+      </div>
+    </div>
+    <figcaption>Các bộ phận của một khối trượt xoay (ROTATIONAL LANDSLIDE). Chạm hoặc rê chuột vào một số để đọc mô tả; các bộ phận này cũng được liệt kê ở Bảng 10.2.<span class="credit">Sở Khảo sát Địa chất Utah (2011), CC BY-NC-SA 4.0, từ hình tương tác của giáo trình; số được thêm cho đề cương.</span></figcaption>
+  </figure>
+  <div class="tablewrap" id="tbl-parts">
+    <table>
+      <caption>Các bộ phận của khối trượt, đánh số như ở Hình 10.10.</caption>
+      <thead><tr><th>#</th><th>Bộ phận</th><th>Mô tả</th></tr></thead>
+      <tbody><tr><td>1</td><td>Đỉnh khối trượt</td><td>Phần đất đá chưa bị xáo trộn phía trên vách chính.</td></tr><tr><td>2</td><td>Vách chính</td><td>Vách dốc ở rìa trên (phần đầu) khối trượt, hình thành khi vật liệu dịch chuyển rời khỏi phần chưa xáo trộn; phần lộ ra của mặt trượt.</td></tr><tr><td>3</td><td>Sườn bên</td><td>Phần đất đá không dịch chuyển bên cạnh khối trượt; rìa trái và phải của khối chuyển động.</td></tr><tr><td>4</td><td>Thân khối trượt</td><td>Phần khối trượt nằm trên mặt trượt.</td></tr><tr><td>5</td><td>Mặt trượt</td><td>Ranh giới dưới của khối chuyển động, nằm dưới mặt đất ban đầu; mặt mà vật liệu trượt theo.</td></tr><tr><td>6</td><td>Khe nứt tách giãn</td><td>Khe nứt nơi phần giữa khối trượt bị kéo tách; thường ở giữa khối trượt.</td></tr><tr><td>7</td><td>Mặt tách</td><td>Phần mặt đất ban đầu nay bị vật liệu trượt phủ lên.</td></tr><tr><td>8</td><td>Phần chân</td><td>Phần khối trượt nằm trên mặt đất ban đầu (mặt tách).</td></tr><tr><td>9</td><td>Chân khối trượt</td><td>Đầu dưới của khối trượt, xa vách chính nhất.</td></tr></tbody>
+    </table>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/10-mass-wasting/" target="_blank" rel="noopener">Bài kiểm tra Mục 10.3 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<!-- 10.4 -->
+<section id="s10-4">
+  <h2 class="sec"><span class="n">10.4</span>Các vụ sạt lở tiêu biểu</h2>
+  <p>Những vụ sạt lở nổi tiếng cho thấy các yếu tố ở 10.1–10.2 kết hợp ra sao. <a href="#tbl-cases">Bảng 10.3</a> ở cuối mục tóm tắt chúng.</p>
+
+  <h3 id="s10-4-1">10.4.1 Sạt lở ở Hoa Kỳ</h3>
+  <p><b>1925, Gros Ventre, Wyoming.</b> Ngày 23/6/1925, một vụ trượt tịnh tiến đá khối lượng 38 triệu m³ (50 triệu yd³) xảy ra bên sông Gros Ventre (đọc là "grô vông") gần Jackson Hole. Các tảng đá lớn chặn sông và dâng lên sườn đối diện của thung lũng vài trăm foot theo chiều thẳng đứng. <button class="term" data-term="đập chắn do sạt lở">Đập chắn do sạt lở</button> tạo nên hồ Slide; năm 1927 mực hồ dâng đủ cao làm đập mất ổn định, đập vỡ và gây lũ làm sáu người chết ở thị trấn Kelly, Wyoming, phía hạ lưu.</p>
+  <div class="pair">
+    <figure id="fig-gv">
+      <div class="frame"><img src="images/unit10/grosventre.webp" alt="Sườn núi phủ rừng với một vết sẹo trơ trụi lớn nơi khối trượt bắt nguồn, và vật liệu trượt lổn nhổn ở tiền cảnh." loading="lazy" width="981" height="622"></div>
+      <figcaption>Vết sẹo của vụ trượt Gros Ventre (hậu cảnh) và vật liệu trượt (tiền cảnh).<span class="credit">Paul Inkenbrandt (tác giả giáo trình), CC BY-NC-SA (qua giáo trình); đã cắt khung.</span></figcaption>
+    </figure>
+    <figure id="fig-gvsec">
+      <div class="frame"><img class="diagram" src="images/unit10/gvsection.webp" alt="Mặt cắt trước và sau của sườn Gros Ventre với các lớp cát kết và đá phiến sét nghiêng song song với sườn về phía sông." loading="lazy" width="550" height="349"></div>
+      <figcaption>Mặt cắt vụ trượt Gros Ventre năm 1925: các lớp song song với sườn, bị sông khoét chân.<span class="credit">USGS, phạm vi công cộng (qua giáo trình).</span></figcaption>
+    </figure>
+  </div>
+  <p>Ba yếu tố kết hợp: (1) mưa lớn và tuyết tan nhanh làm bão hòa cát kết Tensleep, khiến đá phiến sét của hệ tầng Amsden bên dưới mất sức kháng cắt; (2) sông cắt qua lớp cát kết, làm sườn dốc quá mức; (3) đất trên đỉnh núi bão hòa nước do thoát nước kém. Các mặt lớp giữa cát kết và đá phiến sét song song với sườn nên chỉ tạo ít ma sát khi sông khoét chân sườn. Một trận động đất có thể là tác nhân kích hoạt cuối cùng.</p>
+
+  <p><b>1959, Madison Canyon, Montana.</b> Trận động đất Hebgen Lake độ lớn 7,5, lớn nhất trong lịch sử ghi nhận ở vùng núi Rocky, gây ra dao động lắc (seiche) phá hoại trên hồ Hebgen (Học phần 9) và một vụ <button class="term" data-term="lở đá">lở đá</button> chặn sông Madison, tạo nên hồ Quake. Khối lở dâng lên sườn bên kia thung lũng hàng trăm foot; những tảng đá cỡ ngôi nhà vẫn nằm trên sườn đối diện nơi chúng bắt đầu. Khối lở đạt tốc độ tới 160,9 km/h (100 dặm/giờ) và đẩy một luồng khí quét qua khu cắm trại Rock Creek. Hai mươi tám người chết, phần lớn ở khu cắm trại, và họ vẫn bị vùi lấp tại đó. Giống Gros Ventre, các mặt yếu (ở đây là mặt <button class="term" data-term="phân phiến">phân phiến</button> trong đá biến chất) song song với sườn.</p>
+  <figure id="fig-madison">
+    <div class="frame"><img src="images/unit10/madison.webp" alt="Ảnh toàn cảnh sườn núi dốc với vết sẹo trơ trụi rộng nơi khối lở năm 1959 tách ra." loading="lazy" width="1600" height="564"></div>
+    <figcaption>Vết sẹo vụ trượt Madison Canyon năm 1959, chụp từ trên vật liệu trượt.<span class="credit">Paul Inkenbrandt, CC BY (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <p><b>1980, núi St. Helens, Washington.</b> Ngày 18/5/1980, một trận động đất độ lớn 5,1 kích hoạt vụ sạt lở lớn nhất trong lịch sử ghi nhận: 2,8 km³ (0,67 dặm³) vật liệu. Tiếp theo sạt lở là vụ phun trào sườn của núi lửa, và sau phun trào là các dòng bùn đá núi lửa gọi là <button class="term" data-term="lahar">lahar</button> (Học phần 4).</p>
+
+  <p><b>1995 và 2005, La Conchita, California.</b> Ngày 4/3/1995, một dòng đất chuyển động nhanh làm hư hại chín ngôi nhà ở cộng đồng ven biển này; một tuần sau, một lũ bùn đá ở cùng chỗ làm hư hại thêm năm nhà. Các khe nứt căng trên đỉnh khối trượt đã cảnh báo sớm từ mùa hè năm 1994 và rộng ra trong mùa đông mưa nhiều; tác nhân có thể là mưa lớn bất thường và mực <button class="term" data-term="nước dưới đất">nước dưới đất</button> dâng. Năm 2005, sau 15 ngày mưa gần mức kỷ lục, một lũ bùn đá nhanh làm hư hại 36 ngôi nhà và làm 10 người chết. Thảm thực vật vẫn nguyên vẹn khi trôi trên mặt dòng, cho thấy khối trượt được mang đi trên một lớp bên dưới bão hòa và hóa lỏng hơn nhiều (<a href="#fig-lidar">Hình 10.14</a>).</p>
+  <figure id="fig-lidar">
+    <div class="frame"><img src="images/unit10/conchitalidar.webp" alt="Ảnh lidar xiên của vách La Conchita, khối trượt 1995 viền xanh lam, khối trượt 2005 viền vàng và vách chính của một khối trượt cổ viền đỏ." loading="lazy" width="1056" height="547"></div>
+    <figcaption>Ảnh <button class="term" data-term="lidar">lidar</button> xiên của La Conchita sau vụ trượt năm 2005: khối trượt 1995 viền xanh lam, 2005 viền vàng; mũi tên chỉ các khối trượt khác; đường đỏ viền vách chính của một khối trượt cổ bao trùm cả vách.<span class="credit">Todd Stennett, Airborne 1 Corp., phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+  <div class="pair">
+    <figure id="fig-conchita">
+      <div class="frame"><img src="images/unit10/conchita1995.webp" alt="Vách trơ trụi dốc phía trên một thùy vật liệu trượt đã đẩy vào nhiều ngôi nhà." loading="lazy" width="451" height="672"></div>
+      <figcaption>Vụ trượt La Conchita năm 1995: vách trượt rõ rệt, vật liệu trượt phủ lên nhiều ngôi nhà.<span class="credit">USGS, phạm vi công cộng (qua giáo trình).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>La Conchita, hai sự kiện</h4>
+      <ul>
+        <li><b>1994</b>: khe nứt căng trên đỉnh sườn; rộng dần qua mùa đông.</li>
+        <li><b>Tháng 3/1995</b>: dòng đất làm hư hại 9 nhà; một tuần sau lũ bùn đá làm hư hại thêm 5 nhà. Tác nhân: mưa đông lớn và nước dưới đất dâng.</li>
+        <li><b>2005</b>: lũ bùn đá nhanh sau 15 ngày mưa gần kỷ lục; 36 nhà hư hại, 10 người chết.</li>
+        <li><b>Bài học</b>: cả vách nằm trong một khối trượt cổ, và sạt lở ở đây lặp lại khi trời rất ẩm ướt.</li>
+      </ul>
+    </div>
+  </div>
+
+  <p><b>2014, Oso, Washington.</b> Ngày 22/3/2014, khoảng 18 triệu tấn (10 triệu yd³) vật liệu di chuyển với tốc độ 64 km/h (40 dặm/giờ), đi gần 1,6 km (1 dặm) và chặn nhánh North Fork của sông Stillaguamish. Khối trượt phủ lên 40 ngôi nhà và làm 43 người chết ở cộng đồng Steelhead Haven, khối lượng tương đương 600 sân bóng bầu dục bị phủ dày 3 m (10 ft). Mùa đông 2013–2014 có lượng mưa gần gấp đôi trung bình, và thung lũng này có lịch sử nhiều vụ sạt lở, dù những vụ trước đều nhỏ.</p>
+  <figure id="fig-oso">
+    <div class="frame"><img src="images/unit10/oso.webp" alt="Ảnh chụp từ trên không một khối trượt bùn rộng tràn qua thung lũng sông, với vách đầu rõ rệt và dòng sông bị ngập." loading="lazy" width="800" height="521"></div>
+    <figcaption>Vụ trượt Oso năm 2014 làm 43 người chết và vùi lấp nhiều ngôi nhà.<span class="credit">USGS, phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+  <figure id="fig-osolidar">
+    <div class="frame"><img src="images/unit10/osolidar.webp" alt="Bản đồ bóng địa hình lidar của vụ trượt Oso thể hiện phạm vi, mũi tên hướng chảy và các ngôi nhà bị phủ." loading="lazy" width="1300" height="841"></div>
+    <figcaption>Bản đồ lidar có chú giải (tiếng Anh) của vụ trượt Oso năm 2014.<span class="credit">USGS, phạm vi công cộng (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <p><b>Đá rơi ở Vườn quốc gia Yosemite.</b> Các vách đá dốc của Yosemite thường xuyên có đá rơi. Khe nứt do ứng suất kiến tạo và <button class="term" data-term="phong hóa bóc vỏ">phong hóa bóc vỏ</button>, được <button class="term" data-term="nêm băng">nêm băng</button> mở rộng, có thể làm những khối granit cỡ ngôi nhà tách khỏi vách. Vườn quốc gia mô phỏng quãng đường trượt tiềm năng để đánh giá rủi ro cho hàng triệu du khách.</p>
+
+  <h3 id="s10-4-2">10.4.2 Sạt lở ở Utah</h3>
+  <p><b>Khối trượt trọng lực Markagunt.</b> Khoảng 21–22 triệu năm trước, một trong những vụ sạt lở trên đất liền lớn nhất từng được phát hiện trong hồ sơ địa chất đã dịch chuyển hơn 1.700 km³ (408 dặm³) vật liệu trong một sự kiện tương đối nhanh, trên diện tích cỡ bang Rhode Island, từ gần Cedar City tới Panguitch (<a href="#fig-markagunt">Hình 10.18</a>). Bằng chứng gồm <button class="term" data-term="dăm kết">dăm kết</button> và cuội kết (Học phần 5), <button class="term" data-term="pseudotachylit">pseudotachylit</button> dạng thủy tinh (Học phần 6), các mặt trượt giống đứt gãy (Học phần 9) và các thể tường. Khối trượt có lẽ là vật liệu bị giải phóng từ sườn của một <button class="term" data-term="thể nấm">thể nấm</button> (laccolith, Học phần 4) đang lớn dần, sau một trận động đất liên quan đến phun trào.</p>
+  <figure id="fig-markagunt">
+    <div class="frame"><img class="diagram" src="images/unit10/markagunt.webp" alt="Bản đồ tây nam Utah thể hiện phạm vi gần đúng của khối trượt trọng lực Markagunt giữa Cedar City và Panguitch." loading="lazy" width="1030" height="741"></div>
+    <figcaption>Phạm vi gần đúng của khối trượt trọng lực Markagunt.<span class="credit">Robert F. Biek, Sở Khảo sát Địa chất Utah, <i>Survey Notes</i> t. 45 số 2 (2013), CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <p><b>1983, Thistle.</b> Từ tháng 4 đến tháng 5/1983, một khối trượt chậm di chuyển 305 m (1.000 ft) xuống dốc và chặn hẻm Spanish Fork bằng một đập dòng đất cao 61 m (200 ft) (<a href="#fig-hero">Hình 10.1</a>). Lũ ở thượng nguồn trong các thung lũng Soldier Creek và Thistle Creek nhấn chìm thị trấn Thistle. Một đường tràn ngăn hồ mới làm vỡ đập, sau đó một đường hầm tháo cạn hồ, và đến nay sông vẫn chảy qua đường hầm đó. Việc di dời tuyến đường sắt và quốc lộ US-6 tốn hơn 200 triệu USD.</p>
+
+  <p><b>2013, đá rơi ở Rockville.</b> Tháng 12/2013, một khối cuội kết Shinarump nặng 2.700 tấn (1.400 yd³) rơi từ vách Rockville Bench gần Vườn quốc gia Zion, đáp xuống sườn dốc 35° bên dưới và vỡ thành những mảnh lớn tiếp tục lăn với tốc độ cao. Chúng phá hủy một ngôi nhà cách chân vách 375 ft và làm hai người trong nhà thiệt mạng. Các vụ đá rơi trước đó trong vùng được thể hiện ở <a href="#fig-rockmap">Hình 10.20</a>.</p>
+  <figure id="fig-rockville">
+    <div class="frame"><img src="images/unit10/rockville1.webp" alt="Hai ảnh cạnh nhau: ngôi nhà dưới vách đá trước vụ đá rơi, và cùng vị trí sau đó với ngôi nhà bị các tảng đá phá hủy." loading="lazy" width="1100" height="475"></div>
+    <figcaption>Ngôi nhà trước và sau vụ đá rơi Rockville năm 2013.<span class="credit">William R. Lund, Tyler R. Knudsen và Steve D. Bowman (Sở Khảo sát Địa chất Utah), CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+  <figure id="fig-rockmap">
+    <div class="frame"><img src="images/unit10/rockville2.webp" alt="Bản đồ địa hình Rockville thể hiện đường đi của vụ đá rơi năm 2013 và các vụ đá rơi được ghi nhận trước đó." loading="lazy" width="1100" height="994"></div>
+    <figcaption>Đường đi của vụ đá rơi chết người ở Rockville năm 2013 và các vụ đá rơi được ghi nhận trước đó (chú giải tiếng Anh).<span class="credit">William R. Lund, Tyler R. Knudsen và Steve D. Bowman (Sở Khảo sát Địa chất Utah), CC BY-SA (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <p><b>2014, North Salt Lake.</b> Tháng 8/2014, sau một thời kỳ đặc biệt ẩm ướt, một khối trượt xoay chậm phá hủy một ngôi nhà và làm hư hại các sân tennis gần đó (<a href="#fig-parkview">Hình 10.21</a>). Cư dân đã thấy khe nứt gần đỉnh sườn ít nhất một năm trước đó. Lớp cát và sỏi dễ thoát nước nằm trên lớp sét kém thấm (phong hóa từ tro núi lửa), cộng với việc san lại sườn gần đây, có thể đã góp phần; mưa lớn cục bộ dường như là tác nhân kích hoạt. Sườn được san lại một phần, nhưng tháng 1/2017 nhiều phần lại chuyển động. Ở khu gần đó, cư dân báo nhà bị hư hại từ năm 1996 đến 2012, khi 18 ngôi nhà không thể ở được nữa và bị dỡ bỏ; khu đất trống nay là một công viên địa chất.</p>
+  <figure id="fig-parkview">
+    <div class="frame"><img src="images/unit10/parkview.webp" alt="Vách đất trơ cong trên sườn đồi với vật liệu dịch chuyển lộn xộn bên dưới, gần các ngôi nhà." loading="lazy" width="1100" height="770"></div>
+    <figcaption>Vách trượt và vật liệu dịch chuyển của vụ trượt North Salt Lake (Parkview) năm 2014.<span class="credit">Gregg Beukelman, CC BY (qua giáo trình).</span></figcaption>
+  </figure>
+
+  <p><b>2013, mỏ đồng Bingham Canyon.</b> Lúc 21:30 ngày 10/4/2013, hơn 65 triệu m³ vách mỏ dốc dạng bậc trượt vào moong khai thác của <button class="term" data-term="mỏ">mỏ</button> Bingham Canyon, một trong những vụ sạt lở lịch sử lớn nhất không liên quan đến núi lửa. Hệ thống radar của đơn vị vận hành mỏ đã cảnh báo vách đang dịch chuyển, nên không ai thiệt mạng và thiệt hại tài sản được hạn chế (<a href="#fig-bingham">Hình 10.22</a>, <a href="#fig-bingham2">Hình 10.23</a>).</p>
+  <div class="pair">
+    <figure id="fig-bingham">
+      <div class="frame"><img src="images/unit10/bingham1.webp" alt="Ảnh vệ tinh moong mỏ Bingham Canyon dạng bậc và đồi xanh xung quanh trước vụ trượt." loading="lazy" width="720" height="480"></div>
+      <figcaption>Mỏ Bingham Canyon ngày 20/7/2011, trước vụ trượt.<span class="credit">NASA Earth Observatory, phạm vi công cộng (qua giáo trình).</span></figcaption>
+    </figure>
+    <figure id="fig-bingham2">
+      <div class="frame"><img src="images/unit10/bingham2.webp" alt="Ảnh vệ tinh cận cảnh moong mỏ ngày 2/5/2013 với vách trượt và một thùy vật liệu phủ lên các bậc khai thác." loading="lazy" width="720" height="480"></div>
+      <figcaption>Moong mỏ ngày 2/5/2013, sau vụ trượt ngày 10/4 (ảnh cận cảnh hơn; nhãn "scarp" là vách trượt).<span class="credit">NASA Earth Observatory, phạm vi công cộng (qua giáo trình).</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="tablewrap" id="tbl-cases">
+    <table style="min-width:640px">
+      <caption>Tóm tắt các vụ sạt lở trong chương.</caption>
+      <thead><tr><th>Sự kiện</th><th>Kiểu</th><th>Nguyên nhân và tác nhân</th><th>Hậu quả</th></tr></thead>
+      <tbody>
+        <tr><td>Gros Ventre, WY, 1925</td><td>Trượt tịnh tiến đá</td><td>Đá phiến sét bão hòa dưới cát kết; mặt lớp song song sườn; sông khoét chân; có thể có động đất</td><td>Chặn sông; đập vỡ năm 1927, lũ làm 6 người chết</td></tr>
+        <tr><td>Madison Canyon, MT, 1959</td><td>Lở đá</td><td>Động đất M7,5; mặt phân phiến song song sườn</td><td>28 người chết; hình thành hồ Quake</td></tr>
+        <tr><td>Núi St. Helens, WA, 1980</td><td>Sạt lở, rồi phun trào và lahar</td><td>Động đất M5,1</td><td>Sạt lở lớn nhất lịch sử ghi nhận, 2,8 km³</td></tr>
+        <tr><td>La Conchita, CA, 1995 và 2005</td><td>Dòng đất, lũ bùn đá</td><td>Mưa lớn, nước dưới đất dâng</td><td>2005: 36 nhà hư hại, 10 người chết</td></tr>
+        <tr><td>Oso, WA, 2014</td><td>Sạt lở (mảnh vụn)</td><td>Mùa đông mưa gần gấp đôi trung bình; thung lũng hay sạt lở</td><td>43 người chết, 40 nhà bị phủ; sông bị chặn</td></tr>
+        <tr><td>Yosemite, CA</td><td>Đá rơi</td><td>Khe nứt kiến tạo và bóc vỏ, được nêm băng mở rộng</td><td>Rủi ro thường trực cho du khách; mô phỏng quãng đường trượt</td></tr>
+        <tr><td>Markagunt, UT, 21–22 triệu năm trước</td><td>Trượt trọng lực</td><td>Sườn thể nấm đang lớn; động đất liên quan phun trào</td><td>Hơn 1.700 km³ dịch chuyển</td></tr>
+        <tr><td>Thistle, UT, 1983</td><td>Dòng đất chậm</td><td>(Chương không nêu)</td><td>Chặn sông, ngập thị trấn; hơn 200 triệu USD</td></tr>
+        <tr><td>Rockville, UT, 2013</td><td>Đá rơi</td><td>Khối cuội kết rơi từ vách</td><td>Phá hủy nhà, 2 người chết</td></tr>
+        <tr><td>North Salt Lake, UT, 2014</td><td>Trượt xoay chậm</td><td>Cát sỏi trên sét; san lại sườn; mưa lớn</td><td>1 nhà bị phá hủy; tái hoạt động 2017</td></tr>
+        <tr><td>Bingham Canyon, UT, 2013</td><td>Trượt vách mỏ</td><td>Vách moong dốc dạng bậc</td><td>Hơn 65 triệu m³; không ai chết nhờ cảnh báo radar</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/10-mass-wasting/" target="_blank" rel="noopener">Bài kiểm tra Mục 10.4 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<section id="summary">
+  <h2 class="sec">Tóm tắt</h2>
+  <p>Di chuyển khối trên sườn là mọi chuyển động xuống dốc của đất đá do trọng lực. Nó xảy ra khi sườn quá dốc để giữ ổn định với vật liệu và điều kiện hiện có; thứ thường dịch chuyển là đất đá bở rời (lớp phủ phong hóa). Độ ổn định sườn phụ thuộc vào góc dốc và sức kháng cắt của vật liệu. Các vụ di chuyển khối được kích hoạt bởi những thay đổi làm sườn dốc quá mức hoặc yếu đi: tuyết tan nhanh, mưa lớn, rung lắc động đất, phun trào, sóng bão, xói lở do dòng chảy và hoạt động của con người. Nước dư thừa là tác nhân phổ biến nhất. Chúng được phân loại theo chuyển động và vật liệu và có chung các đặc điểm bề mặt; phổ biến nhất là đá đổ, trượt, dòng và bò đất. Tốc độ dao động từ chậm đến nhanh nguy hiểm. Nghiên cứu các vụ trong quá khứ giúp dự báo sạt lở sẽ xảy ra ở đâu, như thế nào và cách bảo vệ con người.</p>
+  <div class="callout">
+    <h4>Ôn nhanh</h4>
+    <ul>
+      <li>fg không đổi; sườn dốc hơn làm tăng fs (gây trượt) và giảm fn, nên ma sát (lực kháng trượt, tỉ lệ với fn) cũng giảm.</li>
+      <li>Góc nghỉ tự nhiên = góc dốc lớn nhất còn ổn định; phụ thuộc cỡ hạt, thành phần và nước.</li>
+      <li>Một ít nước làm cát bền hơn (lâu đài cát); quá nhiều nước làm cát yếu đi.</li>
+      <li>Mặt lớp hay mặt phân phiến song song với sườn = kém ổn định (Gros Ventre, Madison Canyon).</li>
+      <li>Tác nhân: nước (phổ biến nhất), làm dốc quá mức, rung lắc. Giảm thiểu: thoát nước, gia cố, hoặc che chắn, hứng và chuyển hướng.</li>
+      <li>Đá đổ (rơi tự do) · trượt xoay (mặt cong) · trượt tịnh tiến (mặt phẳng) · dòng (nhiều nước) · bò đất (đóng băng – tan băng, rất chậm).</li>
+      <li>Cấu tạo khối trượt: đỉnh → vách chính → thân khối trượt trên mặt trượt → phần chân → chân khối trượt; hai bên là sườn bên.</li>
+    </ul>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/10-mass-wasting/" target="_blank" rel="noopener">Bài ôn tập Chương 10 trong giáo trình (tiếng Anh) ↗</a></p>
+</section>
+
+<section id="resources">
+  <h2 class="sec">Tài liệu tham khảo</h2>
+  <div class="res">
+    <a href="https://slcc.pressbooks.pub/introgeology/chapter/10-mass-wasting/" target="_blank" rel="noopener"><b>Chương 10 (giáo trình) ↗</b><span>Toàn văn chương (tiếng Anh), có bài kiểm tra từng mục, video và các hình tương tác về sạt lở.</span></a>
+    <a href="https://slcc.pressbooks.pub/introgeology/back-matter/glossary-test/" target="_blank" rel="noopener"><b>Bảng thuật ngữ của giáo trình ↗</b><span>Định nghĩa mọi thuật ngữ in đậm trong sách (tiếng Anh).</span></a>
+    <a href="https://www.youtube.com/watch?v=MVwSpGVfWVo" target="_blank" rel="noopener"><b>Landslide Hazards (video) ↗</b><span>David Applegate nói về hiểm họa sạt lở; video được dẫn ở Mục 10.3 (tiếng Anh).</span></a>
+    <a href="https://www.youtube.com/watch?v=H0YhlqP1BgE" target="_blank" rel="noopener"><b>Đá rơi ở Yosemite (video) ↗</b><span>Yosemite Nature Notes giải thích vì sao vách đá trong vườn quốc gia bong rơi (tiếng Anh).</span></a>
+    <a href="https://www.youtube.com/watch?v=NQs_OWgNshg" target="_blank" rel="noopener"><b>Sạt lở North Salt Lake (video) ↗</b><span>Video tua nhanh vụ trượt năm 2014 phá hủy một ngôi nhà.</span></a>
+    <a href="https://pubs.usgs.gov/circ/1325/" target="_blank" rel="noopener"><b>The Landslide Handbook (USGS) ↗</b><span>Highland và Bobrowsky (2008), một tài liệu tham khảo của chương: kiểu, nguyên nhân và giảm thiểu sạt lở, viết dễ hiểu (tiếng Anh).</span></a>
+    <a href="https://www.usgs.gov/programs/landslide-hazards" target="_blank" rel="noopener"><b>Chương trình Hiểm họa Sạt lở của USGS ↗</b><span>Bản đồ, thông tin sạt lở hiện hành và hiểm họa lũ bùn đá sau cháy rừng (tiếng Anh).</span></a>
+    <a href="https://geology.utah.gov/hazards/landslides/" target="_blank" rel="noopener"><b>Sở Khảo sát Địa chất Utah: sạt lở ↗</b><span>Bản đồ và báo cáo sạt lở ở Utah, gồm Rockville và North Salt Lake (tiếng Anh).</span></a>
+  </div>
+</section>
+
+<section id="factcheck">
+  <h2 class="sec">Ghi chú kiểm chứng</h2>
+  <p class="small">Mọi dữ kiện trong đề cương lấy từ Chương 10. Các ghi chú này nêu những chỗ chương đơn giản hóa, in nhầm hoặc khác với các nguồn đáng tin cậy khác. Phần nội dung chính giữ số liệu của chương.</p>
+  <div class="tablewrap">
+    <table style="min-width:600px">
+      <caption>Ghi chú kiểm chứng Học phần 10.</caption>
+      <thead><tr><th>Chương viết</th><th>Kiểm chứng</th></tr></thead>
+      <tbody>
+        <tr><td>Giáo trình viết rằng lực pháp tuyến (ma sát) chống lại lực cắt, và ở góc nghỉ tự nhiên lực cắt bằng lực pháp tuyến.</td><td>Đã sửa trong đề cương này. Lực kháng trượt là ma sát, tỉ lệ với lực pháp tuyến nhưng không phải chính lực pháp tuyến (bằng một phần của fn, cộng lực dính nếu có), nên vật liệu trượt khi fs vượt sức kháng đó chứ không phải vượt chính fn. Vì vậy góc nghỉ của cát khô thường khoảng 30–35° chứ không phải 45° là góc mà fs = fn (Steven Earle, <i>Physical Geology</i>, BCcampus, CC BY). Thanh trượt ở Hình 10.2 chỉ thể hiện hai thành phần lực.</td></tr>
+        <tr><td>"Shockcrete"</td><td>In nhầm: vật liệu đúng là <b>shotcrete</b> (bê tông phun).</td></tr>
+        <tr><td>Bò đất do đóng băng ban đêm và tan băng ban ngày.</td><td>Đó là một nguyên nhân. Các tài liệu khác bổ sung chu kỳ ướt – khô và nóng – lạnh, cũng làm đất nở và co (USGS Landslide Handbook, 2008).</td></tr>
+        <tr><td>Động đất Hebgen Lake năm 1959 độ lớn 7,5; 28 người chết.</td><td>USGS ghi M7,3 (trang sự kiện hiện ghi 7,2); Đại học Utah ghi 7,5. Con số 28 người chết là tổng số của trận động đất; phần lớn chết trong vụ trượt Madison.</td></tr>
+        <tr><td>Sạt lở núi St. Helens 2,8 km³ (0,67 dặm³).</td><td>USGS thường ghi khoảng 2,5 km³ (0,6 dặm³) cho khối lở mảnh vụn năm 1980. Cả hai đều xác nhận đây là sạt lở lớn nhất lịch sử ghi nhận.</td></tr>
+        <tr><td>Vụ Oso "extended for nearly a 1.6 km (1 m)".</td><td>In nhầm: 1 <b>dặm</b> (mile). USGS ghi khối lượng khoảng 8 triệu m³ (khoảng 10 triệu yd³), khớp với chương.</td></tr>
+        <tr><td>Bingham Canyon, hơn 65 triệu m³.</td><td>Khớp với báo cáo của Sở Khảo sát Địa chất Utah và NASA Earth Observatory (khoảng 165 triệu tấn). Trong hình so sánh của giáo trình, ảnh "sau" đề ngày 2/5/2013, sau vụ trượt ngày 10/4.</td></tr>
+        <tr><td>Phương án "Transitional slide" trong bài kiểm tra Mục 10.3.</td><td>In nhầm, đúng là <b>translational</b> slide (trượt tịnh tiến).</td></tr>
+        <tr><td>Pseudotachylit, lidar, đập chắn bùn đá, đập chắn do sạt lở.</td><td>Chương không định nghĩa; bảng thuật ngữ định nghĩa theo USGS Landslide Handbook và tài liệu địa chất phổ thông.</td></tr>
+        <tr><td>Thuật ngữ tiếng Việt.</td><td>Đã đối chiếu với tên bài trên vi.wikipedia: sạt lở đất (landslide; tài liệu địa chất cũng dùng "trượt lở đất"), lực pháp tuyến, nước dưới đất, dòng chảy mặt, sườn tích (talus/scree), dăm kết, phân phiến, dao động lắc, lidar. Các thuật ngữ còn lại theo cách dùng phổ biến trong địa chất công trình Việt Nam và các học phần trước (lỗ rỗng, mặt lớp, phong hóa bóc vỏ, nêm băng, thể nấm, pseudotachylit); <b>chưa thấy trong nguồn chính thức</b>: di chuyển khối trên sườn (mass wasting), góc nghỉ tự nhiên, sức kháng cắt, lực cắt, bê tông phun, neo đá, phản áp, lũ bùn đá, dòng đất, bò đất, trượt xoay, trượt tịnh tiến, lở đá, các bộ phận khối trượt.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="credits">
+  <h2 class="sec">Nguồn &amp; trích dẫn</h2>
+  <p class="small">Nội dung tóm tắt từ <a href="https://slcc.pressbooks.pub/introgeology/chapter/10-mass-wasting/" target="_blank" rel="noopener"><i>An Introduction to Geology</i>, Chương 10</a>, © 2017 Chris Johnson, Matthew D. Affolter, Paul Inkenbrandt và Cam Mosher, giấy phép <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. Mọi ảnh và hình vẽ lấy từ chương đều ghi nguồn trong chú thích, với giấy phép theo mục ghi công hình ảnh của chương. Không hình nào của Chương 10 bị đánh dấu "All Rights Reserved".</p>
+  <ul class="small">
+    <li>Vẽ cho đề cương theo mô tả trong chương: các lực trên sườn (Hình 10.2, theo hình của Paul Inkenbrandt), đống cát lớn dần (Hình 10.4), làm dốc quá mức do san lấp (Hình 10.6), các biện pháp giảm thiểu (Hình 10.7) và bò đất (Hình 10.9). Các số trên Hình 10.10 dựng lại hình tương tác của giáo trình; thanh so sánh trước–sau của giáo trình được trình bày thành Hình 10.22 và Hình 10.23 vì hai ảnh NASA chụp hai vùng khác nhau.</li>
+    <li>Nguồn bên ngoài được nêu tại chỗ sử dụng: USGS (Landslide Handbook; các trang về Hebgen Lake, núi St. Helens và Oso), Sở Khảo sát Địa chất Utah, NASA Earth Observatory và Steven Earle, <i>Physical Geology</i> (BCcampus, CC BY).</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<button class="fab" id="notesBtn" type="button" aria-controls="notes" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Thuật ngữ
+</button>
+<button class="fab hide" id="toTop" type="button" aria-label="Lên đầu trang">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<aside class="notes" id="notes" hidden aria-label="Thuật ngữ">
+  <header>
+    <div><h2>Thuật ngữ · Chương 10</h2><button class="close" id="notesClose" type="button" aria-label="Đóng bảng thuật ngữ">×</button></div>
+    <input id="termSearch" type="search" placeholder="Tìm thuật ngữ và định nghĩa" autocomplete="off" aria-label="Tìm thuật ngữ và định nghĩa">
+    <div class="count" id="termCount"></div>
+  </header>
+  <dl id="termList"></dl>
+</aside>
+</div>
+
+<script type="application/json" id="terms">
+[
+ [
+  "di chuyển khối trên sườn",
+  "outcomes",
+  "Mọi chuyển động xuống dốc của đất đá do trọng lực, dù chậm hay nhanh. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: mass wasting)"
+ ],
+ [
+  "sạt lở đất",
+  "outcomes",
+  "Thuật ngữ chung cho di chuyển khối của vật liệu chuyển động nhanh; thường được dùng rộng cho mọi di chuyển khối (còn gọi là trượt lở đất; tên bài trên vi.wiki: Sạt lở đất). (EN: landslide)"
+ ],
+ [
+  "lớp phủ phong hóa (regolith)",
+  "outcomes",
+  "Vật liệu bở rời gồm đất và trầm tích phong hóa từ đá gốc; là thứ thường dịch chuyển khi sạt lở. (EN: regolith)"
+ ],
+ [
+  "độ ổn định sườn dốc",
+  "s10-1",
+  "Khả năng sườn dốc chống lại sự phá hủy; phụ thuộc góc dốc và độ bền của vật liệu. (EN: slope stability)"
+ ],
+ [
+  "trọng lực",
+  "s10-1-1",
+  "fg: lực kéo vật liệu trên sườn về phía tâm Trái Đất; gần như không đổi ở bề mặt. (EN: force of gravity)"
+ ],
+ [
+  "lực cắt",
+  "s10-1-1",
+  "fs, lực gây trượt: thành phần của trọng lực đẩy vật liệu xuống dốc. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: shear force)"
+ ],
+ [
+  "lực pháp tuyến",
+  "s10-1-1",
+  "fn: thành phần của trọng lực ép vật liệu vào sườn, vuông góc với sườn. Nó tạo ra ma sát (lực kháng trượt), có độ lớn tỉ lệ với fn. (EN: normal force)"
+ ],
+ [
+  "sức kháng cắt",
+  "s10-1-1",
+  "Khả năng chống trượt của vật liệu: ma sát (tỉ lệ với lực pháp tuyến) cộng lực dính kết. Khi lực cắt lớn hơn sức kháng cắt, sạt lở có thể xảy ra. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: shear strength)"
+ ],
+ [
+  "góc nghỉ tự nhiên",
+  "s10-1-2",
+  "Góc dốc lớn nhất (đo từ phương ngang) mà đất đá còn ổn định; thay đổi theo cỡ hạt, thành phần và lượng nước. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: angle of repose)"
+ ],
+ [
+  "lỗ rỗng",
+  "s10-1-3",
+  "Khoảng trống giữa các hạt trong trầm tích hoặc đá; có thể chứa không khí, nước hoặc hydrocarbon. (EN: pore space)"
+ ],
+ [
+  "mặt lớp",
+  "s10-1-3",
+  "Mặt phân cách các lớp đá trầm tích; là mặt yếu khi song song với sườn dốc. (EN: bedding plane)"
+ ],
+ [
+  "mặt yếu",
+  "s10-1-3",
+  "Mặt trong đá, như mặt lớp hay mặt phân phiến, dọc theo đó đá dễ vỡ hoặc trượt. (EN: plane of weakness)"
+ ],
+ [
+  "tác nhân kích hoạt",
+  "s10-2-1",
+  "Sự kiện làm sạt lở xảy ra vào một thời điểm cụ thể; nước là tác nhân phổ biến nhất. (EN: trigger)"
+ ],
+ [
+  "El Niño",
+  "s10-2-1",
+  "Hiện tượng khí hậu; vào năm El Niño bờ tây Bắc Mỹ mưa nhiều hơn và sạt lở thường xảy ra hơn. (EN: El Niño)"
+ ],
+ [
+  "dòng chảy mặt",
+  "s10-2-1",
+  "Nước chảy trên mặt đất. (EN: runoff)"
+ ],
+ [
+  "sườn bị làm dốc quá mức",
+  "s10-2-1",
+  "Sườn bị làm dốc hơn góc nghỉ tự nhiên do xói mòn tự nhiên hoặc hoạt động của con người. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: oversteepened slope)"
+ ],
+ [
+  "thấm",
+  "s10-2-2",
+  "Nước ngấm dần xuống dưới mặt đất. (EN: infiltration)"
+ ],
+ [
+  "neo đá",
+  "s10-2-2",
+  "Thanh thép dài khoan vào vách đá vài mét để giữ các khối đá long rời. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: rock bolt)"
+ ],
+ [
+  "bê tông phun",
+  "s10-2-2",
+  "Bê tông cốt sợi phun lên mặt sườn để gia cố (sách viết nhầm 'shockcrete'). Thuật ngữ chưa thấy trong nguồn chính thức. (EN: shotcrete)"
+ ],
+ [
+  "phản áp",
+  "s10-2-2",
+  "Ổn định khối trượt bằng cách thêm tải ở chân và giảm tải ở phần đầu. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: buttressing)"
+ ],
+ [
+  "tạo bậc thang",
+  "s10-2-2",
+  "Cắt sườn thành dạng bậc thang để ổn định; chỉ hiệu quả khi đúng quy mô. (EN: terracing)"
+ ],
+ [
+  "đập chắn bùn đá",
+  "s10-2-2",
+  "Đập nhỏ chắn ngang lòng dẫn để làm chậm lũ bùn đá và giữ vật liệu. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: check dam)"
+ ],
+ [
+  "quãng đường trượt",
+  "s10-3-2",
+  "Khoảng cách xa nhất vật liệu sạt lở di chuyển tới; đánh dấu bởi chân khối trượt. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: runout)"
+ ],
+ [
+  "vách đầu",
+  "s10-3",
+  "Vách dốc ở đỉnh khối trượt, thường có dạng lưỡi liềm trên vách đá. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: head scarp)"
+ ],
+ [
+  "địa hình gò đống",
+  "s10-3",
+  "Địa hình nhấp nhô, lồi lõm nơi sạt lở xáo trộn mặt đất. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: hummocky terrain)"
+ ],
+ [
+  "sườn tích",
+  "s10-3",
+  "Vật liệu đá vụn bở rời rơi từ vách dốc phía trên và phủ lên sườn bên dưới. (EN: talus)"
+ ],
+ [
+  "chân khối trượt",
+  "s10-3-2",
+  "Đầu dưới của khối trượt, xa vách chính nhất. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: toe)"
+ ],
+ [
+  "đá đổ (đá rơi)",
+  "s10-3-1",
+  "Đá tách đột ngột khỏi sườn dốc hay vách đá dọc theo khe nứt hoặc mặt lớp, rơi tự do, nảy và lăn. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: fall)"
+ ],
+ [
+  "lở đá",
+  "s10-3-1",
+  "Dòng đá gốc vỡ vụn rất lớn và rất nhanh, như vụ Madison Canyon 1959. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: rock avalanche)"
+ ],
+ [
+  "trượt xoay",
+  "s10-3-1",
+  "Trượt (sụt) thường di chuyển chậm dọc mặt trượt cong. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: rotational slide)"
+ ],
+ [
+  "trượt tịnh tiến",
+  "s10-3-1",
+  "Trượt dọc theo một mặt yếu phẳng, thường nhanh. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: translational slide)"
+ ],
+ [
+  "lũ bùn đá",
+  "s10-3-1",
+  "Dòng vật liệu thô trộn với nước, chảy nhanh theo lòng dẫn. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: debris flow)"
+ ],
+ [
+  "dòng đất",
+  "s10-3-1",
+  "Dòng vật liệu hạt mịn chuyển động dẻo. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: earthflow)"
+ ],
+ [
+  "sturzstrom (sạt lở quãng xa)",
+  "s10-3-1",
+  "Sạt lở rất lớn, rất nhanh, đi rất xa; vẫn chưa được hiểu rõ. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: sturzstrom)"
+ ],
+ [
+  "bò đất",
+  "s10-3-1",
+  "Chuyển động xuống dốc rất chậm của đất, theo sách do chu kỳ đóng băng – tan băng; thấy qua cây cong gốc, cột và hàng rào nghiêng. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: creep)"
+ ],
+ [
+  "dòng chảy đất (solifluction)",
+  "s10-3-1",
+  "Chuyển động chậm của các thùy đất trên sườn thoải do đóng băng – tan băng theo mùa ở vĩ độ cao. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: solifluction)"
+ ],
+ [
+  "vách chính",
+  "s10-3-2",
+  "Vách dốc ở rìa trên khối trượt; phần lộ ra của mặt trượt. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: main scarp)"
+ ],
+ [
+  "đỉnh khối trượt (crown)",
+  "s10-3-2",
+  "Phần đất đá chưa bị xáo trộn phía trên vách chính. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: crown)"
+ ],
+ [
+  "mặt trượt",
+  "s10-3-2",
+  "Mặt mà khối trượt chuyển động dọc theo; vật liệu bên dưới đứng yên. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: rupture surface)"
+ ],
+ [
+  "sườn bên khối trượt",
+  "s10-3-2",
+  "Phần đất đá không dịch chuyển dọc hai bên khối trượt. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: flank)"
+ ],
+ [
+  "thân khối trượt",
+  "s10-3-2",
+  "Phần khối trượt nằm trên mặt trượt. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: main body)"
+ ],
+ [
+  "phần chân",
+  "s10-3-2",
+  "Phần khối trượt nằm trên mặt đất ban đầu, vượt quá mặt trượt. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: foot)"
+ ],
+ [
+  "mặt tách",
+  "s10-3-2",
+  "Phần mặt đất ban đầu nay bị phần chân khối trượt phủ lên. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: separation surface)"
+ ],
+ [
+  "khe nứt tách giãn",
+  "s10-3-2",
+  "Khe nứt hình thành khi chân khối trượt chạy nhanh hơn phần còn lại, kéo khối trượt tách ra. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: extensional cracks)"
+ ],
+ [
+  "hồ trũng",
+  "s10-3-2",
+  "Hồ nhỏ lấp đầy chỗ trũng nơi chuyển động trượt chặn dòng thoát nước. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: sag pond)"
+ ],
+ [
+  "gờ nén",
+  "s10-3-2",
+  "Gờ ở rìa khối trượt nơi vật liệu bị đẩy trồi lên. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: pressure ridge)"
+ ],
+ [
+  "đập chắn do sạt lở",
+  "s10-4-1",
+  "Vật liệu sạt lở chặn sông, tạo hồ (Gros Ventre, Madison Canyon, Thistle, Oso). Thuật ngữ chưa thấy trong nguồn chính thức. (EN: landslide dam)"
+ ],
+ [
+  "phân phiến",
+  "s10-4-1",
+  "Sự sắp xếp khoáng vật theo mặt phẳng trong đá biến chất (Học phần 6); là mặt yếu khi song song với sườn. (EN: foliation)"
+ ],
+ [
+  "lahar",
+  "s10-4-1",
+  "Lũ bùn đá núi lửa gồm nước, tro và đá (Học phần 4). (EN: lahar)"
+ ],
+ [
+  "nước dưới đất",
+  "s10-4-1",
+  "Nước nằm dưới mặt đất. (EN: groundwater)"
+ ],
+ [
+  "lidar",
+  "s10-4-1",
+  "Đo vẽ địa hình bằng tia laser từ trên không; làm lộ vách trượt dưới lớp thực vật. (EN: LiDAR)"
+ ],
+ [
+  "phong hóa bóc vỏ",
+  "s10-4-1",
+  "Phong hóa cơ học làm các lớp đá ngoài, gần song song với bề mặt, nứt và bong ra. (EN: exfoliation)"
+ ],
+ [
+  "nêm băng",
+  "s10-4-1",
+  "Nước đóng băng trong khe nứt, nở ra và tách đá ra. (EN: frost wedging)"
+ ],
+ [
+  "dăm kết",
+  "s10-4-2",
+  "Đá gồm các mảnh vỡ sắc cạnh (Học phần 5). (EN: breccia)"
+ ],
+ [
+  "pseudotachylit",
+  "s10-4-2",
+  "Đá dạng thủy tinh do nóng chảy ma sát trên mặt trượt chuyển động nhanh (Học phần 6). Thuật ngữ chưa thấy trong nguồn chính thức. (EN: pseudotachylyte)"
+ ],
+ [
+  "thể nấm",
+  "s10-4-2",
+  "Khối xâm nhập magma nằm giữa các lớp trầm tích, đẩy chúng phồng lên (Học phần 4). Thuật ngữ chưa thấy trong nguồn chính thức. (EN: laccolith)"
+ ],
+ [
+  "mỏ",
+  "s10-4-2",
+  "Nơi khai thác vật liệu từ lòng đất phục vụ con người. (EN: mine)"
+ ]
+]
+</script>
+<script src="assets/guide.js"></script>
+
+<script>
+
+(function(){
+  var sl=document.getElementById('slopeAngle'); if(!sl) return;
+  var out=document.getElementById('slopeOut');
+  function $(i){return document.getElementById(i)}
+  function f(v){return v.toFixed(1)}
+  function arr(id,x1,y1,x2,y2){var dx=x2-x1,dy=y2-y1,L=Math.hypot(dx,dy)||1,ux=dx/L,uy=dy/L,h=Math.min(13,L*.45),bx=x2-ux*h,by=y2-uy*h,px=-uy,py=ux,w=h*.5;
+    var l=$(id);l.setAttribute('x1',f(x1));l.setAttribute('y1',f(y1));l.setAttribute('x2',f(bx));l.setAttribute('y2',f(by));
+    $(id+'h').setAttribute('points',f(x2)+','+f(y2)+' '+f(bx+px*w)+','+f(by+py*w)+' '+f(bx-px*w)+','+f(by-py*w));}
+  function lbl(id,x,y){var t=$(id);t.setAttribute('x',f(x));t.setAttribute('y',f(y));}
+  function draw(deg){
+    var th=deg*Math.PI/180,L=330,bx=560,by=330,c=Math.cos(th),s=Math.sin(th);
+    var tx=bx-L*c,ty=by-L*s;
+    $('fz-tri').setAttribute('points',f(tx)+','+f(ty)+' '+bx+','+by+' '+f(tx)+','+by);
+    var dx=c,dy=s,nx=s,ny=-c,Px=tx+dx*L*.3,Py=ty+dy*L*.3,S=46,Cx=Px+nx*S/2,Cy=Py+ny*S/2;
+    var h=S/2,pts=[[-h,-h],[h,-h],[h,h],[-h,h]].map(function(p){return f(Cx+p[0]*dx+p[1]*(-nx))+','+f(Cy+p[0]*dy+p[1]*(-ny))});
+    $('fz-block').setAttribute('points',pts.join(' '));
+    var G=110,gx=Cx,gy=Cy+G,sx=Cx+dx*G*s,sy=Cy+dy*G*s,qx=Cx-nx*G*c,qy=Cy-ny*G*c;
+    arr('fz-g',Cx,Cy,gx,gy);arr('fz-s',Cx,Cy,sx,sy);arr('fz-n',Cx,Cy,qx,qy);
+    var d1=$('fz-d1'),d2=$('fz-d2');
+    d1.setAttribute('x1',f(sx));d1.setAttribute('y1',f(sy));d1.setAttribute('x2',f(gx));d1.setAttribute('y2',f(gy));
+    d2.setAttribute('x1',f(qx));d2.setAttribute('y1',f(qy));d2.setAttribute('x2',f(gx));d2.setAttribute('y2',f(gy));
+    lbl('fz-tg',gx+8,gy+12);lbl('fz-ts',sx+dx*10+8,sy+dy*10);lbl('fz-tn',qx-nx*14-30,qy-ny*14+4);
+    var r=58;$('fz-arc').setAttribute('d','M'+(bx-r)+','+by+' A'+r+','+r+' 0 0,1 '+f(bx-r*c)+','+f(by-r*s));
+    var a=$('fz-ang');a.setAttribute('x',f(bx-r-10));a.setAttribute('y',f(by-14));a.textContent=deg+'°';
+    var vs=s, vn=c;
+    out.querySelector('[data-v=a]').textContent=deg+'°';
+    out.querySelector('[data-v=s]').textContent=vs.toFixed(2);
+    out.querySelector('[data-v=n]').textContent=vn.toFixed(2);
+    out.querySelector('[data-b=s]').style.width=(vs*100)+'%';
+    out.querySelector('[data-b=n]').style.width=(vn*100)+'%';
+  }
+  sl.addEventListener('input',function(){draw(+sl.value)});draw(+sl.value);
+})();
+
+(function(){var h=document.querySelector('.hot');if(!h)return;var tip=h.querySelector('.tip');var cur=null;
+  function show(b){if(cur)cur.classList.remove('on');if(cur===b){cur=null;tip.hidden=true;return}cur=b;b.classList.add('on');tip.innerHTML='<b>'+b.dataset.n+'. '+b.dataset.name+'</b>: '+b.dataset.text;tip.hidden=false;}
+  h.querySelectorAll('.spot').forEach(function(b){b.addEventListener('click',function(){show(b)});b.addEventListener('mouseenter',function(){if(cur!==b)show(b)});});
+})();
+</script>
+
+</body>
+</html>
