@@ -1,0 +1,1113 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Biến đổi khí hậu toàn cầu</title>
+<meta name="description" content="Hướng dẫn học Học phần 15 cho An Introduction to Geology, Chương 15: Biến đổi khí hậu toàn cầu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/guide.css">
+<style>
+/* Unit 15 palette: warming stripes. Heat crimson with cool-stripe blue and burning-fuel amber; header bands run from cool blue through pale to orange and red, like a warming-stripes chart, over a dark carbon-black sky. */
+:root{
+  --fig-prefix:"Hình 15."; --tbl-prefix:"Bảng 15.";
+  --bg:#faf6f6; --surface:#ffffff; --surface-2:#f4e9eb; --fg:#2a1a1e; --muted:#6e5a60; --line:#ecdadd;
+  --accent:#ad1f52; --accent-soft:#f9dfe8; --ochre:#2b5f9e; --ochre-soft:#dde8f6; --rust:#c25400;
+  --s1:#3a6fb0; --s2:#f2d0c4; --s3:#e0603a; --s4:#b01e3c; --s5:#22101a;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#150d11; --surface:#1d1318; --surface-2:#2a1b22; --fg:#f2e6ea; --muted:#bba5ad; --line:#3a2830;
+  --accent:#f27aa3; --accent-soft:#4a1a2d; --ochre:#8bb8ee; --ochre-soft:#1c2c42; --rust:#ffa25c;
+  --s1:#2c568a; --s2:#8a5a52; --s3:#b4492c; --s4:#8a1530; --s5:#0b0508; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#150d11; --surface:#1d1318; --surface-2:#2a1b22; --fg:#f2e6ea; --muted:#bba5ad; --line:#3a2830;
+  --accent:#f27aa3; --accent-soft:#4a1a2d; --ochre:#8bb8ee; --ochre-soft:#1c2c42; --rust:#ffa25c;
+  --s1:#2c568a; --s2:#8a5a52; --s3:#b4492c; --s4:#8a1530; --s5:#0b0508; color-scheme:dark}
+/* moving dashes show energy flow in the greenhouse figure */
+.gh-flow{stroke-dasharray:10 7;animation:ghflow 1.1s linear infinite}
+@keyframes ghflow{to{stroke-dashoffset:-17}}
+
+</style>
+</head>
+<body>
+<div lang="vi">
+<header class="hero" id="top">
+  <div class="strata" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Học phần 15 · Chương 15 · An Introduction to Geology</div>
+      <h1>Biến đổi khí hậu toàn cầu</h1>
+      <p>Khí quyển quyết định nhiệt độ Trái Đất qua hiệu ứng nhà kính và cân bằng năng lượng ra sao; bằng chứng khí hậu đang thay đổi ngay lúc này; đá, băng và hóa thạch ghi lại khí hậu quá khứ thế nào; và vì sao biến đổi hiện nay do con người gây ra.</p>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="toc" aria-label="Mục lục">
+    <div class="navbar" role="group" aria-label="Công cụ trang">
+      <a class="btn tbtn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Tất cả học phần</span></a>
+      <a class="btn tbtn lbtn" href="unit15.html" lang="en" hreflang="en"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>English</span></a>
+      <button class="btn tbtn" id="themeBtn" type="button" aria-label="Chuyển chế độ sáng hoặc tối">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Chế độ tối</span>
+      </button>
+    </div>
+    <h2>Mục lục</h2>
+    <ol>
+      <li><a href="#outcomes">Mục tiêu học tập</a></li>
+      <li><a href="#s15-1"><span class="num">15.1</span>Nhiệt độ Trái Đất</a>
+        <ol>
+          <li><a href="#s15-1-1"><span class="num">15.1.1</span>Thành phần khí quyển</a></li>
+          <li><a href="#s15-1-2"><span class="num">15.1.2</span>Chu trình cacbon</a></li>
+          <li><a href="#s15-1-3"><span class="num">15.1.3</span>Hiệu ứng nhà kính</a></li>
+          <li><a href="#s15-1-4"><span class="num">15.1.4</span>Cân bằng năng lượng</a></li>
+        </ol>
+      </li>
+      <li><a href="#s15-2"><span class="num">15.2</span>Bằng chứng biến đổi gần đây</a>
+        <ol>
+          <li><a href="#s15-2-1"><span class="num">15.2.1</span>Nhiệt độ toàn cầu tăng</a></li>
+          <li><a href="#s15-2-2"><span class="num">15.2.2</span>Cacbon điôxit</a></li>
+          <li><a href="#s15-2-3"><span class="num">15.2.3</span>Băng tan</a></li>
+          <li><a href="#s15-2-4"><span class="num">15.2.4</span>Mực nước biển dâng</a></li>
+          <li><a href="#s15-2-5"><span class="num">15.2.5</span>Axit hóa đại dương</a></li>
+          <li><a href="#s15-2-6"><span class="num">15.2.6</span>Thời tiết cực đoan</a></li>
+        </ol>
+      </li>
+      <li><a href="#s15-3"><span class="num">15.3</span>Biến đổi khí hậu tiền sử</a>
+        <ol>
+          <li><a href="#s15-3-1"><span class="num">15.3.1</span>Các thời kỳ băng hà</a></li>
+          <li><a href="#s15-3-2"><span class="num">15.3.2</span>Chỉ thị gián tiếp</a></li>
+        </ol>
+      </li>
+      <li><a href="#s15-4"><span class="num">15.4</span>Nguyên nhân do con người</a>
+        <ol>
+          <li><a href="#s15-4-1"><span class="num">15.4.1</span>Đồng thuận khoa học</a></li>
+          <li><a href="#s15-4-2"><span class="num">15.4.2</span>Nguồn khí nhà kính</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary">Tóm tắt</a></li>
+      <li><a href="#resources">Tài liệu tham khảo</a></li>
+      <li><a href="#factcheck">Ghi chú kiểm chứng</a></li>
+      <li><a href="#credits">Nguồn &amp; trích dẫn</a></li>
+    </ol>
+  </nav>
+
+<main>
+<section id="outcomes">
+  <h2 class="sec">Mục tiêu học tập</h2>
+  <p class="lead">Học xong Chương 15, bạn cần làm được từng điều dưới đây. Nhãn cho biết mục nào trình bày nội dung đó.</p>
+  <ul class="outcomes">
+    <li><a class="tag" href="#s15-1">15.1</a><span>Mô tả vai trò của khí nhà kính trong biến đổi khí hậu và nguồn gốc của các khí đó.</span></li>
+    <li><a class="tag" href="#s15-1">15.1</a><span>Giải thích cân bằng năng lượng của Trái Đất và cách các cơ chế phản hồi dương và âm ảnh hưởng đến khí hậu.</span></li>
+    <li><a class="tag" href="#s15-2">15.2</a><span>Mô tả những thành phần nào của môi trường đang thay đổi do biến đổi khí hậu nhân sinh.</span></li>
+    <li><a class="tag" href="#s15-3">15.3</a><span>Giải thích vì sao chúng ta biết về khí hậu trong quá khứ địa chất.</span></li>
+    <li><a class="tag" href="#s15-4">15.4</a><span>Mô tả nguyên nhân của biến đổi khí hậu gần đây, đặc biệt vai trò của con người trong cân bằng khí hậu chung.</span></li>
+  </ul>
+  <div class="callout">
+    <h4>Cách dùng tài liệu</h4>
+    <p>Các từ gạch chân là thuật ngữ chính. Bấm vào một từ, hoặc mở <b>Thuật ngữ</b> ở góc dưới bên phải, để đọc và tìm mọi định nghĩa của chương. Thuật ngữ được dịch sang tiếng Việt khoa học; thuật ngữ chưa thấy trong nguồn chính thức được ghi chú trong bảng thuật ngữ. Chương đi từ cách khí quyển quyết định nhiệt độ Trái Đất (15.1), đến bằng chứng khí hậu đang thay đổi (15.2), cách các nhà địa chất đọc khí hậu quá khứ từ đá, băng và hóa thạch (15.3), và cuối cùng là vì sao biến đổi hiện nay do con người gây ra (15.4).</p>
+  </div>
+  <div class="spheres">
+    <div class="sphere"><b><span class="dot" style="background:var(--rust)"></span>Năng lượng vào, ra</b>Khí nhà kính giữ lại nhiệt đi ra.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--accent)"></span>Thay đổi hiện nay</b>Không khí và biển ấm hơn, ít băng hơn, biển dâng.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--ochre)"></span>Khí hậu quá khứ</b>Đọc từ chỉ thị trong băng, bùn và gỗ.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s4)"></span>Do con người</b>CO<sub>2</sub> hóa thạch, nhận ra nhờ đồng vị.</div>
+  </div>
+  <div class="pair">
+    <figure id="fig-marble">
+      <div class="frame"><img src="images/unit15/bluemarble.webp" alt="Toàn cảnh Trái Đất nhìn từ vũ trụ, thấy châu Phi, bán đảo Ả Rập và chỏm băng Nam Cực dưới những dải mây trắng." loading="lazy" width="767" height="768" style="max-height:300px;width:auto;height:auto"></div>
+      <figcaption>"Viên bi xanh", chụp từ tàu Apollo 17 năm 1972: một hành tinh hữu hạn gồm nhiều hệ thống tương tác. Người chụp nhiều khả năng là Harrison "Jack" Schmitt, nhà địa chất đầu tiên và duy nhất từng lên Mặt Trăng.<span class="credit">NASA/Apollo 17, phạm vi công cộng (qua sách).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Các hệ thống của Trái Đất</h4>
+      <p>Một <button class="term" data-term="hệ thống">hệ thống</button> là một nhóm đối tượng và quá trình tương tác với nhau. <button class="term" data-term="khoa học hệ thống Trái Đất">Khoa học hệ thống Trái Đất</button> nghiên cứu năm hệ thống:</p>
+      <ul>
+        <li><button class="term" data-term="địa quyển">Địa quyển</button>: đá</li>
+        <li><button class="term" data-term="khí quyển">Khí quyển</button>: khí</li>
+        <li><button class="term" data-term="thủy quyển">Thủy quyển</button>: nước</li>
+        <li><button class="term" data-term="băng quyển">Băng quyển</button>: băng</li>
+        <li><button class="term" data-term="sinh quyển">Sinh quyển</button>: sinh vật</li>
+      </ul>
+      <p>Thay đổi ở một hệ thống ảnh hưởng đến các hệ thống khác, dù do chu kỳ tự nhiên hay do tác động <button class="term" data-term="nhân sinh">nhân sinh</button> (do con người).</p>
+    </div>
+  </div>
+  <p>Hiểu các hệ thống này tương tác ra sao giúp ta hiểu <b>vì sao và bằng cách nào hoạt động của con người gây ra biến đổi khí hậu hiện nay</b>, và phân biệt quá trình tự nhiên với quá trình do con người trong hồ sơ địa chất. Nhiệt độ và khí hậu Trái Đất phụ thuộc chủ yếu vào thành phần khí quyển, hoàn lưu đại dương và bề mặt đất liền: đá, sông băng và thực vật.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Thời tiết và khí hậu không giống nhau.</caption>
+      <thead><tr><th></th><th>Thời tiết</th><th>Khí hậu</th></tr></thead>
+      <tbody>
+        <tr><td><b>Là gì</b></td><td>Nhiệt độ và giáng thủy ngắn hạn</td><td>Khoảng dao động của nhiệt độ và giáng thủy, tính trung bình dài hạn cho một vùng</td></tr>
+        <tr><td><b>Thời gian</b></td><td>Vài ngày đến vài tuần</td><td>Thường lấy trung bình 30 năm làm mốc</td></tr>
+        <tr><td><b>Ví dụ</b></td><td>Mùa đông lạnh ở Hoa Kỳ năm 2013 và 2014</td><td>Cũng những mùa đông đó, phần còn lại của Trái Đất ấm kỷ lục</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Vì vậy một mùa đông lạnh không có nghĩa là địa cầu đang lạnh đi. <button class="term" data-term="biến đổi khí hậu">Biến đổi khí hậu</button> là những thay đổi và xu hướng chậm, dài hạn của nhiệt độ và giáng thủy, ở một vùng hoặc toàn Trái Đất.</p>
+</section>
+
+<section id="s15-1">
+  <h2 class="sec"><span class="n">15.1</span>Nhiệt độ Trái Đất</h2>
+  <p>Nếu không có khí quyển, nhiệt độ Trái Đất sẽ dao động cực lớn giữa ngày và đêm, như Mặt Trăng. Mặt Trăng gần như không có khí quyển: ban ngày khoảng 106 °C (224 °F), ban đêm khoảng −183 °C (−298 °F), chênh lệch khoảng 290 °C (522 °F). Khí quyển của Trái Đất điều hòa nhiệt độ của nó.</p>
+
+  <h3 id="s15-1-1">15.1.1 Thành phần khí quyển</h3>
+  <div class="pair">
+    <figure id="fig-atmos">
+      <div class="frame"><img class="diagram" src="images/unit15/atmos.webp" alt="Hai biểu đồ tròn. Biểu đồ trên: nitơ 78,084%, oxy 20,946%, agon 0,934%; một lát mỏng 0,04338% được phóng to ở biểu đồ dưới, phần lớn là cacbon điôxit (0,0407%) với phần rất nhỏ neon, heli, mêtan, krypton và hydro." loading="lazy" width="200" height="417" style="max-height:320px;width:auto;height:auto"></div>
+      <figcaption>Thành phần không khí khô. Lát nhỏ còn lại sau nitơ, oxy và agon chủ yếu là CO<sub>2</sub> (số liệu khoảng năm 2016).<span class="credit">Mysid, phạm vi công cộng (qua sách).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Không khí gồm những gì</h4>
+      <ul>
+        <li><b>78%</b> nitơ (N<sub>2</sub>)</li>
+        <li><b>21%</b> oxy (O<sub>2</sub>)</li>
+        <li><b>~1%</b> agon (Ar)</li>
+        <li><b>&lt; 1%</b> <button class="term" data-term="thành phần vết">thành phần vết</button>: CO<sub>2</sub>, hơi nước, neon, heli, mêtan và các khí khác</li>
+        <li>Hơi nước thay đổi nhiều theo vùng; trung bình khoảng 1%.</li>
+      </ul>
+      <p>Các khí vết gồm những <button class="term" data-term="khí nhà kính">khí nhà kính</button> quan trọng, làm hành tinh ấm lên hay lạnh đi.</p>
+    </div>
+  </div>
+  <p>Trên thang thời gian địa chất, <b>núi lửa</b> thêm CO<sub>2</sub> (cacbon điôxit, khí cacbonic) vào khí quyển, còn <b>phong hóa</b> lấy CO<sub>2</sub> đi bằng cách chôn nó trong trầm tích. Các quá trình sinh học vừa thêm vừa lấy đi CO<sub>2</sub>.</p>
+  <p>Khí nhà kính <b>hấp thụ một phần bức xạ hồng ngoại sóng dài do Trái Đất phát ra</b>, nên nhiệt đó không bị mất vào vũ trụ. Càng nhiều khí nhà kính, càng nhiều nhiệt bị hấp thụ và hành tinh càng ấm. Các khí này ít ảnh hưởng đến bức xạ sóng ngắn hơn đến từ Mặt Trời.</p>
+  <div class="pair">
+    <figure id="fig-molecules">
+      <div class="frame"><img class="diagram" src="images/unit15/molecules.webp" alt="Mô hình quả cầu và que của bốn phân tử: hơi nước H2O, đinitơ oxit N2O, mêtan CH4 và cacbon điôxit CO2." loading="lazy" width="746" height="478"></div>
+      <figcaption>Các khí nhà kính phổ biến: hơi nước, đinitơ oxit, mêtan và cacbon điôxit.<span class="credit">NASA, phạm vi công cộng (qua sách).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Vì sao CO<sub>2</sub> quan trọng nhất</h4>
+      <ul>
+        <li><b>Hơi nước</b> là khí nhà kính dồi dào nhất, nhưng lượng của nó ít thay đổi theo thời gian.</li>
+        <li><b>CO<sub>2</sub></b> ít hơn nhiều, nhưng con người liên tục thải thêm do đốt <button class="term" data-term="nhiên liệu hóa thạch">nhiên liệu hóa thạch</button>, thay đổi sử dụng đất và phá rừng. Núi lửa cũng thêm CO<sub>2</sub>, nhưng với tốc độ không đáng kể so với con người.</li>
+        <li>CO<sub>2</sub> <b>tồn tại trong không khí hàng trăm năm</b>.</li>
+        <li>Phần lớn CO<sub>2</sub> thêm vào là <b>cacbon "hóa thạch"</b>.</li>
+      </ul>
+    </div>
+  </div>
+  <p>Than đá và dầu mỏ hình thành từ thực vật chết từ lâu. Những thực vật đó tạo mô bằng <button class="term" data-term="quang hợp">quang hợp</button> hàng triệu năm trước, và cacbon của chúng được tích lũy chậm trong đá và trầm tích. Đốt than và dầu giải phóng năng lượng Mặt Trời và CO<sub>2</sub> hóa thạch đã tích trữ đó <b>gần như tức thì</b>, dù phải mất hàng triệu năm mới tích lũy được. <b>Tốc độ giải phóng</b> này là chìa khóa của biến đổi khí hậu hiện nay.</p>
+
+  <h3 id="s15-1-2">15.1.2 Chu trình cacbon</h3>
+  <p>Trái Đất cân bằng cacbon qua hai <button class="term" data-term="chu trình cacbon">chu trình cacbon</button> liên kết với nhau, và hoạt động của con người đang nhanh chóng phá vỡ cân bằng đó.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Hai chu trình cacbon.</caption>
+      <thead><tr><th></th><th>Chu trình cacbon sinh học</th><th>Chu trình cacbon địa chất</th></tr></thead>
+      <tbody>
+        <tr><td><b>Cách hoạt động</b></td><td>Sinh vật, chủ yếu là thực vật, lấy CO<sub>2</sub> từ không khí bằng quang hợp; khi chết và phân hủy, cacbon trở lại không khí.</td><td>Một phần cacbon sinh học bị chôn vùi: thực vật thành than đá và dầu mỏ, mảnh hữu cơ thành đá phiến sét giàu hữu cơ, vỏ sinh vật thành đá vôi.</td></tr>
+        <tr><td><b>Tốc độ</b></td><td>Nhanh: vài năm đến vài chục năm</td><td>Rất chậm: thời gian địa chất</td></tr>
+        <tr><td><b>Lượng cacbon</b></td><td>Một phần nhỏ</td><td>Phần lớn cacbon của Trái Đất</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="just" style="text-align:center"><b>Quang hợp:</b> CO<sub>2</sub> + H<sub>2</sub>O + ánh sáng → đường + O<sub>2</sub></p>
+  <figure id="fig-carboncycle">
+    <div class="frame"><img src="images/unit15/carboncycle.webp" alt="Tranh phong cảnh có mũi tên: cacbon điôxit trong khí quyển trao đổi với đại dương và thực vật qua quang hợp và hô hấp; phát thải của con người và một núi lửa thêm CO2; phong hóa đá, cacbon trong đất, cacbon hóa thạch, rửa trôi, trầm tích đại dương và nâng trồi hoàn thành chu trình. Chữ trong tranh bằng tiếng Anh." loading="lazy" width="1100" height="850"></div>
+    <figcaption>Chu trình cacbon, gồm vòng sinh học nhanh (quang hợp, hô hấp, phân hủy) và vòng địa chất chậm (phong hóa, trầm tích, cacbon hóa thạch, nâng trồi).<span class="credit">USGS, phạm vi công cộng (qua sách).</span></figcaption>
+  </figure>
+  <p>Chu trình địa chất lưu giữ cacbon trong nhiều <button class="term" data-term="bể chứa cacbon">bể chứa</button>, mỗi bể giữ trong khoảng thời gian rất khác nhau (<a href="#fig-reservoirs">Hình 15.5</a>):</p>
+  <ul>
+    <li><b>Than bùn, than đá và <button class="term" data-term="đất đóng băng vĩnh cửu">đất đóng băng vĩnh cửu</button></b>: chất hữu cơ thực vật, hàng nghìn đến hàng triệu năm.</li>
+    <li><b>Đại dương</b>: phong hóa khoáng vật silicat biến CO<sub>2</sub> khí quyển thành <button class="term" data-term="bicacbonat">bicacbonat</button> hòa tan, lưu giữ hàng nghìn đến hàng chục nghìn năm.</li>
+    <li><b>Đá cacbonat</b>: sinh vật biển biến bicacbonat thành canxit, lưu giữ hàng chục đến hàng trăm triệu năm.</li>
+    <li><b>Trầm tích</b>: hợp chất cacbon lưu giữ trực tiếp hàng chục đến hàng trăm triệu năm; một phần thành dầu mỏ.</li>
+    <li><b>Manti</b>: trầm tích chứa cacbon bị <button class="term" data-term="hút chìm">hút chìm</button> mang xuống, hàng chục triệu đến hàng tỉ năm.</li>
+    <li><b>Khí quyển</b>: CO<sub>2</sub> từ lòng Trái Đất thoát ra khi núi lửa phun, lưu lại vài năm đến vài chục năm.</li>
+  </ul>
+  <figure id="fig-reservoirs">
+    <div class="frame"><svg viewBox="0 0 760 308" role="img" aria-labelledby="res-vi-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="res-vi-t">Thời gian cacbon nằm trong mỗi bể chứa của chu trình cacbon địa chất, trên trục thời gian logarit từ một năm đến mười tỉ năm: khí quyển (từ núi lửa) vài năm đến vài chục năm; bicacbonat trong đại dương hàng nghìn đến hàng chục nghìn năm; than bùn, than đá và đất đóng băng vĩnh cửu hàng nghìn đến hàng triệu năm; đá cacbonat và trầm tích hàng chục đến hàng trăm triệu năm; manti hàng chục triệu đến hàng tỉ năm.</title><text x="380" y="16" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Cacbon được lưu giữ bao lâu (mỗi bước trên trục = ×10)</text><line x1="270.0" y1="38" x2="270.0" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="316.5" y1="38" x2="316.5" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="363.0" y1="38" x2="363.0" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="409.5" y1="38" x2="409.5" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="456.0" y1="38" x2="456.0" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="502.5" y1="38" x2="502.5" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="549.0" y1="38" x2="549.0" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="595.5" y1="38" x2="595.5" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="642.0" y1="38" x2="642.0" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="688.5" y1="38" x2="688.5" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="735.0" y1="38" x2="735.0" y2="262" stroke="var(--line)" stroke-width="1"/><text x="270.0" y="276" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">1 năm</text><text x="363.0" y="276" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">100 năm</text><text x="456.0" y="276" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">10 nghìn năm</text><text x="549.0" y="276" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">1 triệu năm</text><text x="642.0" y="276" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">100 tr. năm</text><text x="735.0" y="276" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">10 tỉ năm</text><line x1="270" y1="262" x2="735.0" y2="262" stroke="var(--fg)" stroke-width="1.5"/><text x="502.5" y="298" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-muted">Thời gian lưu giữ, năm (thang logarit)</text><rect x="270.0" y="48" width="93.0" height="18" rx="4" fill="#2b5f9e"/><text x="260" y="51" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Khí quyển</text><text x="260" y="65" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">CO₂ từ núi lửa</text><rect x="409.5" y="84" width="90.9" height="18" rx="4" fill="#4f8fc0"/><text x="260" y="87" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Đại dương</text><text x="260" y="101" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">bicacbonat hòa tan</text><rect x="409.5" y="120" width="183.9" height="18" rx="4" fill="#7a5a3e"/><text x="260" y="123" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Than bùn, than đá, đất băng</text><text x="260" y="137" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">chất hữu cơ thực vật</text><rect x="595.5" y="156" width="90.9" height="18" rx="4" fill="#9a8a66"/><text x="260" y="159" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Đá cacbonat</text><text x="260" y="173" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">canxit từ vỏ sinh vật biển</text><rect x="595.5" y="192" width="90.9" height="18" rx="4" fill="#3d3d3d"/><text x="260" y="195" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Trầm tích, dầu mỏ</text><text x="260" y="209" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">hợp chất cacbon bị chôn vùi</text><rect x="595.5" y="228" width="139.5" height="18" rx="4" fill="#ad1f52"/><text x="260" y="231" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Manti</text><text x="260" y="245" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">theo hút chìm xuống sâu</text></svg></div>
+    <figcaption>Thời gian mỗi bể chứa của chu trình cacbon địa chất giữ cacbon. Mỗi bước trên trục dài gấp mười lần bước trước.<span class="credit">Vẽ cho tài liệu này theo danh sách bể chứa của chương.</span></figcaption>
+  </figure>
+  <p>Trong phần lớn lịch sử Trái Đất, núi lửa giải phóng cacbon với tốc độ xấp xỉ tốc độ các quá trình khác lưu giữ nó, và khí hậu khá ổn định. Cân bằng này đã bị phá vỡ nhiều lần:</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Ba cách cân bằng cacbon bị phá vỡ.</caption>
+      <thead><tr><th>Mất cân bằng</th><th>Điều đã xảy ra</th><th>Hệ quả</th></tr></thead>
+      <tbody>
+        <tr><td><b>Núi lửa hoạt động mạnh</b></td><td>Các đợt phun trào <button class="term" data-term="Bẫy Siberia">Bẫy Siberia</button>, khoảng 250 triệu năm trước</td><td>Nóng lên mạnh trong vài triệu năm</td></tr>
+        <tr><td><b>Tạo núi</b></td><td>Dãy Himalaya, hình thành trong khoảng 40 triệu năm, phơi ra diện tích đá khổng lồ cho phong hóa, nhất là <button class="term" data-term="thủy phân">thủy phân</button> fenspat</td><td>CO<sub>2</sub> bị kéo từ không khí vào đại dương và trầm tích cacbonat; CO<sub>2</sub> giảm đều góp phần gây các thời kỳ băng hà Pliocen–Pleistocen</td></tr>
+        <tr><td><b>Hoạt động của con người</b> (không phải địa chất)</td><td>Chỉ trong vài thập niên, con người đã đốt lượng than, dầu và khí mà phải mất vài trăm triệu năm mới tích trữ được</td><td>Khí hậu thay đổi nhanh hơn bao giờ hết</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s15-1-3">15.1.3 Hiệu ứng nhà kính</h3>
+  <p><button class="term" data-term="hiệu ứng nhà kính">Hiệu ứng nhà kính</button> xảy ra vì khí nhà kính có trong khí quyển, và đó là lý do nhiệt độ toàn cầu đang tăng. Tên gọi xuất phát từ cách ánh nắng làm nóng nhà kính hay ô tô đóng kín: ánh sáng đi qua kính, biến thành nhiệt bên trong, và kính giữ nhiệt lại. Với Trái Đất, quá trình gồm ba bước (<a href="#fig-greenhouse">Hình 15.6</a>):</p>
+  <ol>
+    <li><b>Ánh nắng đi vào.</b> <button class="term" data-term="bức xạ Mặt Trời">Bức xạ Mặt Trời</button> chủ yếu gồm tử ngoại (UV), ánh sáng khả kiến và hồng ngoại (IR). Khí quyển hấp thụ, tán xạ hoặc phản xạ một phần, nhưng khoảng một nửa đến được bề mặt.</li>
+    <li><b>Bề mặt nóng lên.</b> Bức xạ đến mặt đất biến thành nhiệt, như ánh nắng làm nóng mặt đường hay sàn gỗ. Bề mặt ấm sau đó phát ra bức xạ <button class="term" data-term="hồng ngoại nhiệt">hồng ngoại nhiệt</button>, chính là hơi nóng ta cảm thấy từ đống lửa hay bếp nóng.</li>
+    <li><b>Khí nhà kính giữ nhiệt.</b> Năng lượng rời Trái Đất ở <b>bước sóng khác, dài hơn</b> so với lúc đi vào. Khí nhà kính (CO<sub>2</sub>, hơi nước, mêtan và đinitơ oxit) hấp thụ hồng ngoại nhiệt đi ra này, nên năng lượng bị giữ lại trên đường <b>đi ra</b>, không phải đường đi vào. Càng nhiều khí nhà kính, càng nhiều hồng ngoại nhiệt bị giữ lại.</li>
+  </ol>
+  <figure id="fig-greenhouse">
+    <div class="frame"><svg viewBox="0 0 760 380" role="img" aria-labelledby="gh-vi-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="gh-vi-t">Hiệu ứng nhà kính qua ba bước, nhìn từ bên cạnh. Ánh sáng Mặt Trời sóng ngắn đi qua khí quyển (khoảng 29% bị phản xạ); mặt đất hấp thụ và nóng lên; mặt đất ấm phát ra hồng ngoại nhiệt sóng dài, bị các phân tử khí nhà kính hấp thụ và một phần phát ngược xuống, phần còn lại thoát ra vũ trụ.</title><rect x="0" y="0" width="760" height="80" fill="#1d2440"/><rect x="0" y="80" width="760" height="220" fill="#d9e9f6"/><rect x="0" y="300" width="760" height="80" fill="#7a5a3e"/><rect x="160" y="300" width="230" height="10" fill="#f08a3c"/><line x1="0" y1="80" x2="760" y2="80" stroke="#8fb3d6" stroke-width="1.5" stroke-dasharray="6 5"/><text x="380" y="24" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" fill="#e8ecf7">Vũ trụ</text><text x="200" y="94" dy=".35em" text-anchor="start" font-size="11" font-weight="400" fill="#35506b">Đỉnh khí quyển</text><circle cx="52" cy="40" r="24" fill="#f6c033"/><line x1="80" y1="58" x2="278" y2="292" stroke="#f6c033" stroke-width="14" stroke-linecap="round" opacity=".55"/><line x1="80" y1="58" x2="277.5" y2="292.6" stroke="#d89a00" stroke-width="3" stroke-linecap="round" class="gh-flow"/><polygon points="282.0,298.0 270.6,294.1 280.1,286.1" fill="#d89a00"/><line x1="98.5" y1="80" x2="145.4" y2="27.2" stroke="#d89a00" stroke-width="2.5" stroke-linecap="round"/><polygon points="150.0,22.0 147.9,33.3 139.0,25.4" fill="#d89a00"/><text x="160" y="38" dy=".35em" text-anchor="start" font-size="11" font-weight="400" fill="#f6d77a">~29% phản xạ ra vũ trụ</text><g><circle cx="421" cy="160" r="5" fill="#c9303f"/><circle cx="430" cy="160" r="6.5" fill="#3a3a3a"/><circle cx="439" cy="160" r="5" fill="#c9303f"/></g><g><circle cx="531" cy="195" r="5" fill="#c9303f"/><circle cx="540" cy="195" r="6.5" fill="#3a3a3a"/><circle cx="549" cy="195" r="5" fill="#c9303f"/></g><g><circle cx="326" cy="225" r="5" fill="#c9303f"/><circle cx="335" cy="225" r="6.5" fill="#3a3a3a"/><circle cx="344" cy="225" r="5" fill="#c9303f"/></g><g><circle cx="611" cy="170" r="5" fill="#c9303f"/><circle cx="620" cy="170" r="6.5" fill="#3a3a3a"/><circle cx="629" cy="170" r="5" fill="#c9303f"/></g><g><circle cx="691" cy="225" r="5" fill="#c9303f"/><circle cx="700" cy="225" r="6.5" fill="#3a3a3a"/><circle cx="709" cy="225" r="5" fill="#c9303f"/></g><g><circle cx="471" cy="250" r="5" fill="#c9303f"/><circle cx="480" cy="250" r="6.5" fill="#3a3a3a"/><circle cx="489" cy="250" r="5" fill="#c9303f"/></g><g><circle cx="581" cy="265" r="5" fill="#c9303f"/><circle cx="590" cy="265" r="6.5" fill="#3a3a3a"/><circle cx="599" cy="265" r="5" fill="#c9303f"/></g><g><circle cx="183" cy="118" r="5" fill="#c9303f"/><circle cx="192" cy="118" r="6.5" fill="#3a3a3a"/><circle cx="201" cy="118" r="5" fill="#c9303f"/></g><text x="206" y="118" dy=".35em" text-anchor="start" font-size="11" font-weight="400" fill="#35506b">= phân tử khí nhà kính (CO₂, H₂O, CH₄, N₂O)</text><polyline points="430.0,298.0 433.2,296.0 435.5,294.0 435.9,292.0 434.5,290.0 431.7,288.0 428.3,286.0 425.5,284.0 424.1,282.0 424.5,280.0 426.8,278.0 430.0,276.0 433.2,274.0 435.5,272.0 435.9,270.0 434.5,268.0 431.7,266.0 428.3,264.0 425.5,262.0 424.1,260.0 424.5,258.0 426.8,256.0 430.0,254.0 433.2,252.0 435.5,250.0 435.9,248.0 434.5,246.0 431.7,244.0 428.3,242.0 425.5,240.0 424.1,238.0 424.5,236.0 426.8,234.0 430.0,232.0 433.2,230.0 435.5,228.0 435.9,226.0 434.5,224.0 431.7,222.0 428.3,220.0 425.5,218.0 424.1,216.0 424.5,214.0 426.8,212.0 430.0,210.0 433.2,208.0 435.5,206.0 435.9,204.0 434.5,202.0 431.7,200.0 428.3,198.0 425.5,196.0 424.1,194.0 424.5,192.0 426.8,190.0 430.0,188.0 433.2,186.0 435.5,184.0" fill="none" stroke="#c9303f" stroke-width="2.5" stroke-linecap="round" class="gh-flow"/><polygon points="430.0,172.0 435.7,181.4 424.3,181.4" fill="#c9303f"/><polyline points="540.0,298.0 543.2,296.0 545.5,294.0 545.9,292.0 544.5,290.0 541.7,288.0 538.3,286.0 535.5,284.0 534.1,282.0 534.5,280.0 536.8,278.0 540.0,276.0 543.2,274.0 545.5,272.0 545.9,270.0 544.5,268.0 541.7,266.0 538.3,264.0 535.5,262.0 534.1,260.0 534.5,258.0 536.8,256.0 540.0,254.0 543.2,252.0 545.5,250.0 545.9,248.0 544.5,246.0 541.7,244.0 538.3,242.0 535.5,240.0 534.1,238.0 534.5,236.0 536.8,234.0 540.0,232.0 543.2,230.0 545.5,228.0 545.9,226.0 544.5,224.0 541.7,222.0 538.3,220.0 535.5,218.0" fill="none" stroke="#c9303f" stroke-width="2.5" stroke-linecap="round" class="gh-flow"/><polygon points="540.0,206.0 545.7,215.4 534.3,215.4" fill="#c9303f"/><polyline points="660.0,298.0 663.2,296.0 665.5,294.0 665.9,292.0 664.5,290.0 661.7,288.0 658.3,286.0 655.5,284.0 654.1,282.0 654.5,280.0 656.8,278.0 660.0,276.0 663.2,274.0 665.5,272.0 665.9,270.0 664.5,268.0 661.7,266.0 658.3,264.0 655.5,262.0 654.1,260.0 654.5,258.0 656.8,256.0 660.0,254.0 663.2,252.0 665.5,250.0 665.9,248.0 664.5,246.0 661.7,244.0 658.3,242.0 655.5,240.0 654.1,238.0 654.5,236.0 656.8,234.0 660.0,232.0 663.2,230.0 665.5,228.0 665.9,226.0 664.5,224.0 661.7,222.0 658.3,220.0 655.5,218.0 654.1,216.0 654.5,214.0 656.8,212.0 660.0,210.0 663.2,208.0 665.5,206.0 665.9,204.0 664.5,202.0 661.7,200.0 658.3,198.0 655.5,196.0 654.1,194.0 654.5,192.0 656.8,190.0 660.0,188.0 663.2,186.0 665.5,184.0 665.9,182.0 664.5,180.0 661.7,178.0 658.3,176.0 655.5,174.0 654.1,172.0 654.5,170.0 656.8,168.0 660.0,166.0 663.2,164.0 665.5,162.0 665.9,160.0 664.5,158.0 661.7,156.0 658.3,154.0 655.5,152.0 654.1,150.0 654.5,148.0 656.8,146.0 660.0,144.0 663.2,142.0 665.5,140.0 665.9,138.0 664.5,136.0 661.7,134.0 658.3,132.0 655.5,130.0 654.1,128.0 654.5,126.0 656.8,124.0 660.0,122.0 663.2,120.0 665.5,118.0 665.9,116.0 664.5,114.0 661.7,112.0 658.3,110.0 655.5,108.0 654.1,106.0 654.5,104.0 656.8,102.0 660.0,100.0 663.2,98.0 665.5,96.0 665.9,94.0 664.5,92.0 661.7,90.0 658.3,88.0 655.5,86.0 654.1,84.0 654.5,82.0 656.8,80.0 660.0,78.0 663.2,76.0 665.5,74.0 665.9,72.0 664.5,70.0 661.7,68.0 658.3,66.0 655.5,64.0 654.1,62.0 654.5,60.0 656.8,58.0 660.0,56.0 663.2,54.0 665.5,52.0 665.9,50.0 664.5,48.0 661.7,46.0 658.3,44.0 655.5,42.0 654.1,40.0 654.5,38.0 656.8,36.0 660.0,34.0 663.2,32.0 665.5,30.0 665.9,28.0 664.5,26.0" fill="none" stroke="#c9303f" stroke-width="2" stroke-linecap="round" class="gh-flow"/><polygon points="660.0,14.0 665.7,23.4 654.3,23.4" fill="#c9303f"/><line x1="436" y1="168" x2="472.0" y2="289.3" stroke="#c9303f" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/><polygon points="474.0,296.0 465.9,288.6 476.8,285.4" fill="#c9303f"/><line x1="546" y1="203" x2="577.6" y2="289.4" stroke="#c9303f" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/><polygon points="580.0,296.0 571.4,289.1 582.1,285.2" fill="#c9303f"/><text x="415" y="150" dy=".35em" text-anchor="end" font-size="11" font-weight="400" fill="#35506b">Khí nhà kính hấp thụ tia hồng ngoại</text><text x="415" y="166" dy=".35em" text-anchor="end" font-size="11" font-weight="400" fill="#35506b">và phát một phần ngược xuống</text><text x="645" y="50" dy=".35em" text-anchor="end" font-size="11" font-weight="400" fill="#f3b3bb">Một phần hồng ngoại thoát ra vũ trụ</text><text x="222" y="258" dy=".35em" text-anchor="end" font-size="12" font-weight="700" fill="#8a5a00">① Ánh nắng (UV, khả kiến, IR gần)</text><text x="222" y="276" dy=".35em" text-anchor="end" font-size="11" font-weight="400" fill="#35506b">sóng ngắn đi xuyên qua các khí</text><text x="275" y="332" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">② Mặt đất hấp thụ và nóng lên</text><text x="275" y="350" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" fill="#f3e9dd">năng lượng ánh sáng thành nhiệt</text><text x="580" y="332" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">③ Mặt đất ấm phát ra hồng ngoại nhiệt</text><text x="580" y="350" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" fill="#f3e9dd">sóng dài: bị khí nhà kính giữ lại</text></svg></div>
+    <figcaption>Hiệu ứng nhà kính qua ba bước. Sóng ngắn đi vào; sóng dài đi ra, bị khí nhà kính hấp thụ một phần và phát ngược xuống. Các vạch chuyển động chỉ hướng của năng lượng.<span class="credit">Vẽ cho tài liệu này theo mô tả ba bước của chương; con số 29% phản xạ lấy từ mục 15.1.4.</span></figcaption>
+  </figure>
+  <figure id="fig-spectrum">
+    <div class="frame"><img class="diagram" src="images/unit15/spectrum.webp" alt="Đồ thị cường độ bức xạ Mặt Trời theo bước sóng từ 250 đến 2500 nanomet, chia thành UV, khả kiến và hồng ngoại. Vùng vàng là ánh nắng ở đỉnh khí quyển, gần đường vật đen 5778 K; vùng đỏ là phần nhỏ hơn tới mực nước biển, với các khe được ghi là dải hấp thụ của ozon, oxy, hơi nước và cacbon điôxit. Chữ trong hình bằng tiếng Anh." loading="lazy" width="800" height="600" style="max-height:380px;width:auto"></div>
+    <figcaption>Phổ ánh nắng đi vào: ở đỉnh khí quyển (vàng) và ở mực nước biển (đỏ). Các khe là những bước sóng bị các khí trong không khí hấp thụ.<span class="credit">Robert A. Rohde, CC BY-SA (qua sách).</span></figcaption>
+  </figure>
+  <p class="quiz">Khám phá: <a href="https://www.koshland-science-museum.org/explore-the-science/interactives/what-is-the-greenhouse-effect" target="_blank" rel="noopener">Mô phỏng tương tác hiệu ứng nhà kính (Viện Hàn lâm Khoa học Quốc gia Hoa Kỳ, tiếng Anh) ↗</a></p>
+
+  <h3 id="s15-1-4">15.1.4 Cân bằng năng lượng của Trái Đất</h3>
+  <p>Dòng năng lượng Mặt Trời đi vào và nhiệt đi ra là <button class="term" data-term="cân bằng năng lượng">cân bằng năng lượng</button> (ngân sách năng lượng) của Trái Đất. Để nhiệt độ ổn định trong thời gian dài, <b>năng lượng vào phải bằng năng lượng ra</b> tính trung bình ở đỉnh khí quyển. Ánh nắng đến Trái Đất khá ổn định theo thời gian.</p>
+  <figure id="fig-reflected">
+    <div class="frame"><img src="images/unit15/reflected.webp" alt="Ảnh đường chân trời cong của Trái Đất từ quỹ đạo với một mũi tên lớn là ánh nắng đi vào 340 oát trên mét vuông, tách thành 29% phản xạ, 23% hấp thụ trong khí quyển và 48% hấp thụ ở bề mặt. Chữ trong hình bằng tiếng Anh." loading="lazy" width="720" height="413"></div>
+    <figcaption>Ánh nắng đi vào đi đâu: 29% phản xạ, 23% bị khí quyển hấp thụ, 48% bị bề mặt hấp thụ.<span class="credit">NASA Earth Observatory, phạm vi công cộng (qua sách).</span></figcaption>
+  </figure>
+  <figure id="fig-surface">
+    <div class="frame"><img src="images/unit15/surface.webp" alt="Cảnh bãi biển với mũi tên lớn 48% năng lượng Mặt Trời ròng hấp thụ ở bề mặt, và ba mũi tên đi lên: 25% bay hơi, 5% đối lưu, 17% bức xạ nhiệt ròng. Chữ trong hình bằng tiếng Anh." loading="lazy" width="720" height="480"></div>
+    <figcaption>Bề mặt trả lại 48% năng lượng hấp thụ ra sao: bay hơi (25%), đối lưu (5%) và hồng ngoại nhiệt ròng (17%).<span class="credit">NASA, phạm vi công cộng (qua sách).</span></figcaption>
+  </figure>
+  <div class="tablewrap">
+    <table>
+      <caption>Ánh nắng đi vào đi đâu.</caption>
+      <thead><tr><th>Tỉ lệ</th><th>Số phận</th></tr></thead>
+      <tbody>
+        <tr><td>~29%</td><td>Phản xạ ra vũ trụ bởi mây, hạt trong không khí và bề mặt sáng như băng biển và tuyết</td></tr>
+        <tr><td>~23%</td><td>Bị hơi nước, bụi và ozon trong khí quyển hấp thụ</td></tr>
+        <tr><td>~48%</td><td>Đi qua và bị bề mặt hấp thụ</td></tr>
+        <tr><td><b>~71%</b></td><td><b>Tổng phần hệ Trái Đất hấp thụ</b> (23% + 48%)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Năng lượng hấp thụ làm không khí và bề mặt nóng lên. Nếu Trái Đất chỉ hấp thụ, nó sẽ nóng mãi, như bồn rửa mở vòi mà tắc lỗ thoát. Nhưng <b>Trái Đất càng ấm thì càng phát nhiều nhiệt ra vũ trụ</b>, và đó là cơ chế chính ngăn nó nóng lên vô hạn. Khí nhà kính như một tấm màn: càng nhiều khí, càng nhiều nhiệt đi ra bị giữ lại và càng ít thoát đi.</p>
+  <h4>Các yếu tố khác trong cân bằng</h4>
+  <figure id="fig-forcings">
+    <div class="frame"><img class="diagram" src="images/unit15/forcings.webp" alt="Biểu đồ thanh các đóng góp vào sự ấm lên quan sát được từ 1951 đến 2010, đơn vị độ C: ấm lên quan sát khoảng 0,65; khí nhà kính khoảng 0,9; các tác động nhân sinh khác khoảng âm 0,25; tổng tác động nhân sinh khoảng 0,7; tác động tự nhiên và biến động nội tại tự nhiên gần bằng không; mỗi thanh có thanh sai số. Chữ trong hình bằng tiếng Anh." loading="lazy" width="604" height="386"></div>
+    <figcaption>Nguyên nhân của sự ấm lên quan sát được giai đoạn 1951–2010 (IPCC). Khí nhà kính làm ấm; các tác động khác của con người, chủ yếu là sol khí, làm mát phần nào; nguyên nhân tự nhiên gần bằng không.<span class="credit">IPCC AR5, Pachauri và Meyer (chủ biên), phạm vi công cộng theo ghi chú của sách.</span></figcaption>
+  </figure>
+  <div class="callout">
+    <h4>Những gì khác làm thay đổi cân bằng</h4>
+    <ul>
+      <li><b>Mặt Trời</b>: thêm năng lượng Mặt Trời sẽ làm Trái Đất ấm lên, nhưng thay đổi rất nhỏ.</li>
+      <li><b><button class="term" data-term="suất phản chiếu">Suất phản chiếu</button></b> (albedo): ít băng và tuyết hơn thì đất và nước hấp thụ nhiều ánh nắng hơn.</li>
+      <li><b><button class="term" data-term="sol khí">Sol khí</button></b>: bụi và hạt từ đốt than, động cơ diesel và núi lửa phản xạ ánh nắng, làm hành tinh mát đi.</li>
+      <li><b>Tác động ròng của con người: làm ấm</b>, vì khí nhà kính từ đốt nhiên liệu hóa thạch lấn át sol khí.</li>
+    </ul>
+  </div>
+  <h4>Cơ chế phản hồi</h4>
+  <p>Một thay đổi của hành tinh có thể kích hoạt phản hồi làm thay đổi lớn hơn hoặc nhỏ đi (<a href="#fig-feedback">Hình 15.11</a>).</p>
+  <ul>
+    <li><button class="term" data-term="phản hồi dương">Phản hồi dương</button> làm thay đổi ban đầu mạnh thêm. <b>Băng biển</b>: mất băng biển Bắc Cực làm giảm suất phản chiếu, nên không khí và đại dương hấp thụ thêm năng lượng. <b>Đất đóng băng vĩnh cửu</b>: khi khí hậu ấm lên, đất đóng băng vĩnh cửu (đất đóng băng quanh năm ở vĩ độ cao, chủ yếu ở Bắc Bán Cầu) tan ra; lớp chất hữu cơ dày gặp oxy và phân hủy, giải phóng CO<sub>2</sub> và mêtan, gây ấm thêm, làm tan thêm đất đóng băng.</li>
+    <li><button class="term" data-term="phản hồi âm">Phản hồi âm</button> làm thay đổi ban đầu yếu đi. <b>Ngắn hạn</b>: thêm CO<sub>2</sub> được dự đoán giúp tán rừng phát triển, hấp thụ thêm CO<sub>2</sub>. <b>Dài hạn</b>: thêm CO<sub>2</sub> nghĩa là thêm <button class="term" data-term="axit cacbonic">axit cacbonic</button> và <button class="term" data-term="phong hóa hóa học">phong hóa hóa học</button>, đưa bicacbonat và các ion khác ra biển để lưu giữ trong trầm tích.</li>
+  </ul>
+  <figure id="fig-feedback">
+    <div class="frame"><svg viewBox="0 0 760 290" role="img" aria-labelledby="fb-vi-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="fb-vi-t">Hai vòng phản hồi. Bên trái, phản hồi dương: nóng lên làm băng biển và tuyết tan, bề mặt tối hơn có suất phản chiếu thấp hơn, hấp thụ thêm ánh nắng, làm nóng lên thêm. Bên phải, phản hồi âm: thêm cacbon điôxit giúp cây phát triển, cây hấp thụ thêm cacbon điôxit, làm chậm sự gia tăng cacbon điôxit.</title><text x="180" y="18" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Phản hồi dương: băng – suất phản chiếu</text><rect x="5" y="45" width="155" height="56" rx="8" fill="#fbe3ea" stroke="#ad1f52" stroke-width="2"/><text x="82.5" y="73.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">Nóng lên</text><rect x="200" y="45" width="155" height="56" rx="8" fill="#fbe3ea" stroke="#ad1f52" stroke-width="2"/><text x="277.5" y="65.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">Băng biển và</text><text x="277.5" y="80.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">tuyết tan</text><rect x="200" y="225" width="155" height="56" rx="8" fill="#fbe3ea" stroke="#ad1f52" stroke-width="2"/><text x="277.5" y="245.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">Biển, đất tối hơn:</text><text x="277.5" y="260.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">suất phản chiếu giảm</text><rect x="5" y="225" width="155" height="56" rx="8" fill="#fbe3ea" stroke="#ad1f52" stroke-width="2"/><text x="82.5" y="245.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">Hấp thụ thêm</text><text x="82.5" y="260.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">ánh nắng</text><line x1="160" y1="73" x2="192.0" y2="73.0" stroke="#ad1f52" stroke-width="2.5" stroke-linecap="round"/><polygon points="199.0,73.0 189.1,78.9 189.1,67.1" fill="#ad1f52"/><line x1="277" y1="101" x2="277.0" y2="217.0" stroke="#ad1f52" stroke-width="2.5" stroke-linecap="round"/><polygon points="277.0,224.0 271.1,214.1 282.9,214.1" fill="#ad1f52"/><line x1="200" y1="253" x2="168.0" y2="253.0" stroke="#ad1f52" stroke-width="2.5" stroke-linecap="round"/><polygon points="161.0,253.0 170.9,247.1 170.9,258.9" fill="#ad1f52"/><line x1="82" y1="225" x2="82.0" y2="109.0" stroke="#ad1f52" stroke-width="2.5" stroke-linecap="round"/><polygon points="82.0,102.0 87.9,111.9 76.1,111.9" fill="#ad1f52"/><circle cx="180" cy="163" r="24" fill="#ad1f52"/><text x="180" y="161" dy=".35em" text-anchor="middle" font-size="26" font-weight="700" fill="#fff">+</text><text x="180" y="200" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">khuếch đại thay đổi</text><text x="92" y="150" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">cộng</text><text x="92" y="165" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">thêm vào</text><text x="580" y="18" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Phản hồi âm: thực vật phát triển</text><rect x="405" y="45" width="155" height="56" rx="8" fill="#e1ebf7" stroke="#2b5f9e" stroke-width="2"/><text x="482.5" y="65.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">Thêm CO₂</text><text x="482.5" y="80.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">trong không khí</text><rect x="600" y="45" width="155" height="56" rx="8" fill="#e1ebf7" stroke="#2b5f9e" stroke-width="2"/><text x="677.5" y="65.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">Tán rừng</text><text x="677.5" y="80.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">phát triển hơn</text><rect x="600" y="225" width="155" height="56" rx="8" fill="#e1ebf7" stroke="#2b5f9e" stroke-width="2"/><text x="677.5" y="245.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">Cây hấp thụ</text><text x="677.5" y="260.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">thêm CO₂</text><rect x="405" y="225" width="155" height="56" rx="8" fill="#e1ebf7" stroke="#2b5f9e" stroke-width="2"/><text x="482.5" y="245.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">CO₂ tăng</text><text x="482.5" y="260.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">chậm lại</text><line x1="560" y1="73" x2="592.0" y2="73.0" stroke="#2b5f9e" stroke-width="2.5" stroke-linecap="round"/><polygon points="599.0,73.0 589.1,78.9 589.1,67.1" fill="#2b5f9e"/><line x1="677" y1="101" x2="677.0" y2="217.0" stroke="#2b5f9e" stroke-width="2.5" stroke-linecap="round"/><polygon points="677.0,224.0 671.1,214.1 682.9,214.1" fill="#2b5f9e"/><line x1="600" y1="253" x2="568.0" y2="253.0" stroke="#2b5f9e" stroke-width="2.5" stroke-linecap="round"/><polygon points="561.0,253.0 570.9,247.1 570.9,258.9" fill="#2b5f9e"/><line x1="482" y1="225" x2="482.0" y2="109.0" stroke="#2b5f9e" stroke-width="2.5" stroke-linecap="round"/><polygon points="482.0,102.0 487.9,111.9 476.1,111.9" fill="#2b5f9e"/><circle cx="580" cy="163" r="24" fill="#2b5f9e"/><text x="580" y="161" dy=".35em" text-anchor="middle" font-size="26" font-weight="700" fill="#fff">−</text><text x="580" y="200" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">làm dịu thay đổi</text><text x="492" y="150" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">chống</text><text x="492" y="165" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">lại nó</text></svg></div>
+    <figcaption>Phản hồi dương (trái) đưa thay đổi quay lại tăng cường chính nó; phản hồi âm (phải) chống lại thay đổi. Đi theo mũi tên theo chiều kim đồng hồ từ góc trên bên trái.<span class="credit">Vẽ cho tài liệu này theo các ví dụ của chương.</span></figcaption>
+  </figure>
+  <div class="callout warn">
+    <h4>Cân bằng đang bị lệch</h4>
+    <p>Hiện tượng nóng lên toàn cầu là bằng chứng cân bằng năng lượng của Trái Đất không còn cân bằng: các tác động làm tăng nhiệt độ Trái Đất hiện lớn hơn các tác động làm giảm.</p>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/15-global-climate-change/" target="_blank" rel="noopener">câu hỏi Mục 15.1 trong sách ↗</a></p>
+</section>
+
+<section id="s15-2">
+  <h2 class="sec"><span class="n">15.2</span>Bằng chứng về biến đổi khí hậu gần đây</h2>
+  <p>Khí hậu đã nhiều lần thay đổi vì nguyên nhân tự nhiên (Học phần 14.5.1 và 15.3), nhưng <b>đồng thuận khoa học là hoạt động của con người đang gây ra biến đổi khí hậu rất nhanh hiện nay</b>, một ý tưởng được nêu từ hơn 75 năm trước. Mục này trình bày bằng chứng về <button class="term" data-term="biến đổi khí hậu do con người">biến đổi khí hậu do con người</button>.</p>
+  <p class="quiz">Xem: <a href="https://youtu.be/dquECwUfIQg" target="_blank" rel="noopener">Bằng chứng biến đổi khí hậu, sáu phút (Đại học bang North Carolina, tiếng Anh) ↗</a></p>
+
+  <h3 id="s15-2-1">15.2.1 Nhiệt độ toàn cầu tăng</h3>
+  <figure id="fig-tempgraph">
+    <div class="frame"><img class="diagram" src="images/unit15/tempgraph.webp" alt="Đồ thị đường của dị thường nhiệt độ toàn cầu từ 1880 đến khoảng 2016 dựa trên số liệu đất liền và đại dương. Trung bình năm (ô vuông đen) và đường làm trơn màu đỏ ở khoảng âm 0,2 đến âm 0,4 tới khoảng 1910, lên khoảng 0,1 vào 1940, đi ngang đến khoảng 1975, rồi tăng dốc tới gần 1 độ năm 2016. Có vài thanh sai số màu xanh. Chữ trong hình bằng tiếng Anh." loading="lazy" width="1100" height="584"></div>
+    <figcaption>Chỉ số nhiệt độ đất liền–đại dương, 1880 đến khoảng 2016, so với trung bình 1951–1980. Đen: trung bình toàn cầu từng năm. Đỏ: làm trơn năm năm (Lowess). Thanh xanh: độ bất định 95% do lấy mẫu không gian chưa đầy đủ.<span class="credit">NASA GISS, phạm vi công cộng (qua sách).</span></figcaption>
+  </figure>
+  <p>Từ năm 1880, nhiệt độ bề mặt trung bình của Trái Đất có xu hướng tăng, với <b>phần lớn mức ấm lên diễn ra từ 1970</b>. Nhiệt độ bề mặt gồm cả đất liền và đại dương, vì nước hấp thụ phần lớn nhiệt bị giữ thêm.</p>
+  <ul>
+    <li><button class="term" data-term="dị thường nhiệt độ">Dị thường nhiệt độ</button> là hiệu giữa nhiệt độ đo được và nhiệt độ trung bình của một <button class="term" data-term="thời kỳ tham chiếu">thời kỳ tham chiếu</button>. Đồ thị dùng 1951–1980; một lựa chọn phổ biến khác là thế kỷ 1900–2000. Thời kỳ tham chiếu dài từ 30 năm trở lên.</li>
+    <li>Dị thường dương nghĩa là ấm hơn trung bình tham chiếu. Chương ghi +1,25 °C cho năm 2015 và −0,28 °C cho năm 1950 so với 1900–2000. Chênh lệch 1,25 °C tương ứng chênh lệch 2,25 °F (xem Ghi chú kiểm chứng).</li>
+  </ul>
+  <div class="pair">
+    <div class="callout">
+      <h4>Đại dương nhận phần lớn nhiệt</h4>
+      <ul>
+        <li>Đại dương phủ khoảng 70% Trái Đất và có <button class="term" data-term="nhiệt dung riêng">nhiệt dung riêng</button> rất cao.</li>
+        <li>Chúng đã hấp thụ khoảng <b>80–90%</b> lượng nhiệt thêm do hoạt động của con người.</li>
+        <li>Lớp 700 m (2.300 ft) trên cùng đã ấm thêm khoảng 0,17 °C (0,3 °F) từ năm 1969.</li>
+        <li>Nước chỉ ấm lên chút ít dù hấp thụ nhiều nhiệt; không khí, với nhiệt dung riêng thấp hơn, ấm lên nhiều hơn dù hấp thụ ít hơn.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h4>"Khoảng chững" 1998–2013</h4>
+      <ul>
+        <li>Một số người cho rằng khí nhà kính không gây nóng lên vì nhiệt độ bề mặt hầu như không tăng từ 1998 đến 2013.</li>
+        <li>Nhưng thay đổi hoàn lưu đại dương quy mô thập niên, tương tự La Niña, đã đẩy nước ấm xuống sâu.</li>
+        <li>Cộng nhiệt đó của đại dương trở lại thì sự ấm lên hiện rõ.</li>
+        <li>Việc lưu giữ chỉ là tạm thời: 2014–2016 lập kỷ lục, và 15 trong 16 năm đầu thế kỷ 21 là những năm nóng nhất từng ghi nhận.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="quiz">Xem: <a href="https://svs.gsfc.nasa.gov/4882" target="_blank" rel="noopener">Dị thường nhiệt độ toàn cầu từ 1880 (hoạt hình NASA) ↗</a> · <a href="https://climate.nasa.gov/climate_resources/40/" target="_blank" rel="noopener">Nhiệt dung của đại dương, 3 phút (NASA JPL, tiếng Anh) ↗</a></p>
+
+  <h3 id="s15-2-2">15.2.2 Cacbon điôxit</h3>
+  <p>Khí nhà kính nhân sinh, chủ yếu là CO<sub>2</sub>, đã tăng từ Cách mạng Công nghiệp, khi việc đốt nhiên liệu hóa thạch tăng vọt. Mức hiện nay <b>chưa từng có trong 800.000 năm qua</b> theo ghi nhận của lõi băng.</p>
+  <ul>
+    <li>CO<sub>2</sub> tăng khoảng <b>40% từ 1750 đến 2011</b>, và tốc độ tăng nhanh nhất trong thập niên gần nhất.</li>
+    <li>Từ 1750 đến 2011, khoảng <b>2.040 gigatấn</b> CO<sub>2</sub> được thải ra: khoảng 40% ở lại khí quyển, khoảng 60% vào thực vật và đất trên đất liền hoặc vào đại dương.</li>
+    <li>Trong đời của phần lớn người trẻ, CO<sub>2</sub> khí quyển đã tăng khoảng 50 ppm, tức 15%.</li>
+  </ul>
+  <figure id="fig-keeling">
+    <div class="frame"><img class="diagram" src="images/unit15/keeling.webp" alt="Đường cong Keeling: nồng độ cacbon điôxit tại Đài quan sát Mauna Loa từ 1958 đến tháng 1/2022, tăng từ khoảng 315 lên 417,69 phần triệu với nhịp răng cưa nhỏ hằng năm, đường cong ngày càng dốc. Chữ trong hình bằng tiếng Anh." loading="lazy" width="928" height="618"></div>
+    <figcaption>Đường cong Keeling: CO<sub>2</sub> tại Đài quan sát Mauna Loa, Hawaii, từ 1958 đến tháng 1/2022 (417,69 ppm).<span class="credit">Viện Hải dương học Scripps, phạm vi công cộng theo ghi chú của sách.</span></figcaption>
+  </figure>
+  <div class="callout">
+    <h4><button class="term" data-term="đường cong Keeling">Đường cong Keeling</button></h4>
+    <ul>
+      <li>Charles Keeling, nhà hải dương học tại Viện Hải dương học Scripps, là người đầu tiên đo CO<sub>2</sub> khí quyển đều đặn.</li>
+      <li>Đài quan sát Mauna Loa đo CO<sub>2</sub> liên tục bằng phương pháp của ông từ năm 1958.</li>
+      <li><b>Răng cưa</b>: chu kỳ hằng năm, vì thực vật Bắc Bán Cầu hấp thụ CO<sub>2</sub> vào mùa hè và ngủ đông vào mùa đông.</li>
+      <li><b>Xu hướng</b>: tăng đều và <b>ngày càng dốc</b>; chính tốc độ tăng cũng đang tăng.</li>
+    </ul>
+  </div>
+  <p>Số đo từ nhiều trạm cho thấy CO<sub>2</sub> thay đổi theo vĩ độ: phần lớn nguồn CO<sub>2</sub> của con người ở <b>Bắc Bán Cầu</b>, nơi có phần lớn đất liền và phần lớn các nước phát triển. Xem số đo mới nhất tại <a href="https://keelingcurve.ucsd.edu/" target="_blank" rel="noopener">trang Keeling Curve</a>.</p>
+  <p class="quiz">Xem: <a href="https://www.youtube.com/watch?v=gH6fQh9eAQE" target="_blank" rel="noopener">CO<sub>2</sub> khí quyển, gần đây và trong 800.000 năm (NOAA, tiếng Anh) ↗</a></p>
+
+  <h3 id="s15-2-3">15.2.3 Sông băng tan và băng biển co lại</h3>
+  <p><b>Sông băng</b> là băng tồn tại quanh năm trên đất liền; <b>núi băng trôi</b> là băng nổi, có thể vỡ ra từ sông băng (Học phần 14). Sông băng núi cao, dải băng và băng biển đều đang tan.</p>
+  <figure id="fig-antarctica">
+    <div class="frame"><img class="diagram" src="images/unit15/antarctica.webp" alt="Đồ thị đường thay đổi khối lượng băng Nam Cực, đơn vị gigatấn, từ 2002 đến 2016, giảm không đều từ 0 xuống khoảng âm 1.500. Chữ trong hình bằng tiếng Anh." loading="lazy" width="737" height="365"></div>
+    <figcaption>Thay đổi khối lượng băng Nam Cực đo bằng vệ tinh, 2002–2016.<span class="credit">NASA, phạm vi công cộng (qua sách).</span></figcaption>
+  </figure>
+  <div class="callout">
+    <h4>Mất băng qua các con số</h4>
+    <ul>
+      <li><b>Nam Cực</b>: mất khoảng <b>118 gigatấn</b> băng mỗi năm.</li>
+      <li><b>Greenland</b>: mất khoảng <b>281 gigatấn</b> mỗi năm.</li>
+      <li>1 tấn = 1.000 kg; 1 gigatấn = 1 tỉ tấn, hơn 2 nghìn tỉ pound.</li>
+      <li>Hầu hết sông băng núi cao lớn đang co lại, mỏng đi và lùi dần, với tốc độ chưa từng thấy kể từ khi có số liệu sông băng tốt vào thập niên 1940.</li>
+    </ul>
+  </div>
+  <p>Trước khi con người làm ấm khí hậu, có sông băng tiến, có sông băng lùi. Nay <b>lớp tuyết mùa xuân đang giảm và băng biển đang co lại</b>. Phần lớn băng biển nằm quanh Bắc Cực, nơi chỉ có Bắc Băng Dương và băng của nó. Tỉ lệ băng Bắc Cực già nhất (trên bốn tuổi) giảm từ <b>20% năm 1985 xuống 3% năm 2015</b>.</p>
+  <p class="quiz">Khám phá: <a href="https://climate.nasa.gov/interactives/global-ice-viewer/" target="_blank" rel="noopener">NASA Global Ice Viewer (tiếng Anh) ↗</a> · Xem: <a href="https://www.youtube.com/watch?v=Fw7GfNR5PLA" target="_blank" rel="noopener">25 năm băng biển Bắc Cực biến mất (NOAA) ↗</a></p>
+
+  <h3 id="s15-2-4">15.2.4 Mực nước biển dâng</h3>
+  <p>Mực nước biển đang dâng khoảng <b>3,4 mm (0,13 in) mỗi năm</b>, và đã dâng <b>0,19 m (7,4 in) từ 1901 đến 2010</b>. Hai nguyên nhân chính là <b>sông băng tan</b> và sự <button class="term" data-term="giãn nở vì nhiệt">giãn nở vì nhiệt</button> của nước biển: chất rắn, lỏng và khí nở ra khi nóng lên.</p>
+  <p class="quiz">Xem: <a href="https://www.youtube.com/watch?v=QNoE5IoRheQ" target="_blank" rel="noopener">Thí nghiệm giãn nở vì nhiệt với quả cầu và vòng kim loại, 30 giây (NCSSM) ↗</a></p>
+
+  <h3 id="s15-2-5">15.2.5 Axit hóa đại dương</h3>
+  <p>Trong lượng CO<sub>2</sub> con người thải thêm từ 1750, khoảng 40% ở lại khí quyển, phần còn lại vào đại dương và thảm thực vật; riêng đại dương đã hấp thụ khoảng <b>30%</b>. Điều này gây ra <button class="term" data-term="axit hóa đại dương">axit hóa đại dương</button>:</p>
+  <div class="callout">
+    <h4>Từ CO<sub>2</sub> đến vỏ mỏng hơn</h4>
+    <ol>
+      <li>CO<sub>2</sub> hòa tan trong nước biển tạo axit cacbonic: CO<sub>2</sub> + H<sub>2</sub>O → H<sub>2</sub>CO<sub>3</sub>.</li>
+      <li>Đại dương trở nên axit hơn: <button class="term" data-term="pH">pH</button> của nó <b>giảm</b>.</li>
+      <li>Axit tấn công canxi cacbonat, giống như axit clohydric làm canxit (đá vôi) sủi bọt.</li>
+      <li>Sinh vật tạo vỏ canxi cacbonat gặp khó khăn: vỏ mỏng đi ở một số loài <button class="term" data-term="ốc chân cánh">ốc chân cánh</button> (pteropod) và <button class="term" data-term="trùng lỗ">trùng lỗ</button> (foraminifera), và rạn san hô phát triển chậm lại.</li>
+    </ol>
+  </div>
+  <p>Những sinh vật nhỏ bé này nằm ở đáy chuỗi thức ăn biển. Axit hóa kết hợp với nước ấm hơn và ít oxy hơn được dự đoán sẽ ảnh hưởng nghiêm trọng đến hệ sinh thái biển và nghề cá mà con người dựa vào làm nguồn thực phẩm.</p>
+
+  <h3 id="s15-2-6">15.2.6 Hiện tượng thời tiết cực đoan</h3>
+  <p>Thời tiết cực đoan, như bão, mưa lớn và nắng nóng, đang tăng và mạnh hơn. <b>Không khí ấm hơn chứa được nhiều hơi ẩm hơn</b>, làm tăng khả năng xảy ra hiện tượng cực đoan.</p>
+  <ul>
+    <li><b>Bão</b> hình thành trên nước biển ấm. Từ thập niên 1980, bão mạnh hơn và kéo dài hơn; chương còn nói bão nhiều hơn, điều này kém chắc chắn hơn (xem Ghi chú kiểm chứng).</li>
+    <li><b>Giáng thủy</b> ở lục địa Hoa Kỳ (trừ Alaska, Hawaii) tăng khoảng 10% từ 1910, phần lớn trong các trận mưa lớn. Mức tăng không đều: miền bắc được dự đoán ẩm hơn, còn vùng Tây Nam vốn khô sẽ khô hơn.</li>
+    <li><b>Nắng nóng</b> tăng lên, và nhiệt độ cao đã ảnh hưởng đến năng suất cây trồng ở các vĩ độ phía bắc.</li>
+  </ul>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/15-global-climate-change/" target="_blank" rel="noopener">câu hỏi Mục 15.2 trong sách ↗</a></p>
+</section>
+
+<section id="s15-3">
+  <h2 class="sec"><span class="n">15.3</span>Biến đổi khí hậu tiền sử</h2>
+  <p>Khí hậu Trái Đất đã thay đổi rất nhiều. Trong Đại Trung Sinh, thời đại khủng long, khí hậu ấm hơn nhiều và CO<sub>2</sub> dồi dào. Suốt Đại Tân Sinh, 66 triệu năm gần đây, khí hậu dần lạnh đi.</p>
+
+  <h3 id="s15-3-1">15.3.1 Các thời kỳ băng hà trong quá khứ</h3>
+  <p>Trong lịch sử địa chất, khí hậu thay đổi chậm qua hàng triệu năm. Trước thời kỳ băng hà Pliocen–Đệ Tứ hiện nay, đã có một số thời kỳ băng hà lớn khác:</p>
+  <ul class="timeline">
+    <li><time>~2,5 tỉ năm</time><span><b><button class="term" data-term="băng hà Huron">Băng hà Huron</button></b> (cuối Liên đại Thái Cổ đến đầu Nguyên Sinh). Thường gắn với <button class="term" data-term="Sự kiện Ôxy hóa Lớn">Sự kiện Ôxy hóa Lớn</button>: oxy mới xuất hiện có lẽ đã phản ứng với mêtan, một khí nhà kính mạnh, làm hành tinh lạnh đi.</span></li>
+    <li><time>~700 tr. năm</time><span><b>Các thời kỳ băng hà cuối Nguyên Sinh</b>, thuộc giả thuyết <button class="term" data-term="Trái Đất quả cầu tuyết">Trái Đất quả cầu tuyết</button>. Có bằng chứng sông băng ở cả vĩ độ thấp.</span></li>
+    <li><time>440–460 tr. năm</time><span><b>Băng hà Ande-Sahara</b> (cuối kỷ Ordovic), trùng với một đợt tuyệt chủng lớn.</span></li>
+    <li><time>323–300 tr. năm</time><span><b>Kỷ băng hà Karoo</b> (Pennsylvania). Wegener dẫn nó làm bằng chứng Pangaea trôi qua Nam Cực. Gắn với oxy tăng và CO<sub>2</sub> giảm khi thực vật trên cạn tiến hóa và lan rộng.</span></li>
+    <li class="geo"><time>~34 tr. năm–nay</time><span><b>Đại Tân Sinh lạnh đi</b>: sông băng trên châu Nam Cực từ khoảng 35 triệu năm trước, rồi dải băng Bắc Bán Cầu, và các thời kỳ băng hà Pleistocen.</span></li>
+  </ul>
+  <p class="legend"><span><i></i>Các thời kỳ băng hà lớn trước đây</span><span><i class="geo"></i>Thời kỳ "nhà băng" hiện nay (Tân Sinh)</span></p>
+  <h4>Trái Đất quả cầu tuyết</h4>
+  <p>Đá khoảng 700 triệu năm tuổi khắp thế giới mang dấu vết sông băng ngay gần xích đạo. Ở nhiều vùng, <b>đá vôi</b> (thường hình thành ở biển nhiệt đới) và <b>trầm tích băng hà</b> (thường ở nơi lạnh) nằm cùng nhau. Một ví dụ là đảo Antelope trong Hồ Muối Lớn, Utah, nơi đá vôi xen kẽ với <button class="term" data-term="diamictit">diamictit</button> băng hà.</p>
+  <div class="pair">
+    <div class="callout">
+      <h4>Trái Đất quả cầu tuyết (còn tranh cãi)</h4>
+      <ul>
+        <li>Hiệu ứng suất phản chiếu mất kiểm soát: băng tuyết phản xạ ánh nắng và lan từ hai cực về xích đạo.</li>
+        <li>Đất liền và đại dương đóng băng hoàn toàn, hoạt động sinh học sụp đổ.</li>
+        <li>CO<sub>2</sub> không vào được đại dương đóng băng, nên băng chỉ tan khi núi lửa đẩy CO<sub>2</sub> lên đủ cao; một số nghiên cứu ước tính khoảng 350 lần mức hiện nay.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h4>Vì sao còn tranh cãi</h4>
+      <ul>
+        <li>Sự sống vẫn tồn tại, nên việc đóng băng hoàn toàn bị nghi ngờ.</li>
+        <li>Giả thuyết đối lập <button class="term" data-term="Trái Đất quả cầu tuyết tan">Trái Đất quả cầu tuyết tan</button> (Slushball Earth) cho rằng một phần đại dương xích đạo vẫn không đóng băng.</li>
+        <li>Các nhà khoa học còn bất đồng về độ ổn định của cực từ, về việc biến chất sau này đã làm thay đổi đá ra sao, và về cách đọc bằng chứng.</li>
+      </ul>
+    </div>
+  </div>
+  <h4>Đại Tân Sinh lạnh đi</h4>
+  <figure id="fig-cenozoic">
+    <div class="frame"><img class="diagram" src="images/unit15/cenozoic.webp" alt="Đồ thị nhiệt độ bề mặt trung bình toàn cầu trong 65 triệu năm qua. Đỉnh khoảng 50 đến 55 triệu năm trước, gần 28 độ C, có một đợt tăng vọt ghi PETM, rồi giảm theo xu hướng lạnh đi dài hạn xuống khoảng 14 độ hiện nay. Các thanh cho thấy dải băng Nam Cực từ khoảng 34 triệu năm trước và dải băng Bắc Bán Cầu trong vài triệu năm gần đây. Mũi tên đánh dấu va chạm Ấn Độ–châu Á, hải lưu quanh cực và eo đất Panama. Chữ trong hình bằng tiếng Anh." loading="lazy" width="1100" height="479"></div>
+    <figcaption>Nhiệt độ bề mặt trung bình toàn cầu trong 65 triệu năm qua, cùng các sự kiện kiến tạo giúp hành tinh lạnh đi.<span class="credit">Steven Earle, <i>Physical Geology</i>, CC BY-NC-SA (qua sách).</span></figcaption>
+  </figure>
+  <p>Đại Tân Sinh bắt đầu ấm. <b>Thế Eocen sớm</b>, khoảng 50 đến 55 triệu năm trước, là thời ấm nhất, có một đợt tăng vọt ngắn gọi là <button class="term" data-term="Cực đại Nhiệt Paleocen–Eocen">Cực đại Nhiệt Paleocen–Eocen</button> (PETM); Nam Cực và Greenland không có băng. Từ thế Eocen, các sự kiện kiến tạo đã làm hành tinh lạnh đi đều đặn:</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Các sự kiện kiến tạo khiến Đại Tân Sinh lạnh đi (niên đại theo chương).</caption>
+      <thead><tr><th>Khi nào</th><th>Sự kiện</th><th>Làm Trái Đất lạnh đi thế nào</th></tr></thead>
+      <tbody>
+        <tr><td>Từ ~50 tr. năm</td><td>Ấn Độ va chạm châu Á, nâng dãy Himalaya</td><td>Phong hóa khoáng vật silicat tăng, nhất là fenspat, tiêu thụ CO<sub>2</sub> và làm yếu hiệu ứng nhà kính</td></tr>
+        <tr><td>~40 tr. năm</td><td>Nam Mỹ và châu Nam Cực tách ra, mở <b>eo biển Drake</b></td><td><button class="term" data-term="Hải lưu Quanh Nam Cực">Hải lưu Quanh Nam Cực</button> chảy tự do từ tây sang đông, cô lập Nam Đại Dương khỏi các đại dương ấm hơn; đến khoảng 35 triệu năm trước (thế Oligocen) sông băng hình thành trên châu Nam Cực</td></tr>
+        <tr><td>~15 tr. năm (theo chương)</td><td>Núi lửa tạo nên <b>eo đất Panama</b>, nối hai châu Mỹ</td><td>Chặn dòng chảy giữa Thái Bình Dương và Đại Tây Dương, giảm truyền nhiệt về cực; băng Nam Cực mở rộng (xem Ghi chú kiểm chứng về niên đại)</td></tr>
+        <tr><td>~5 tr. năm (theo chương)</td><td>Dải băng bắt đầu phát triển ở Bắc Mỹ và Bắc Âu (thế Pliocen)</td><td>Băng phản xạ nhiều hơn gây lạnh thêm: phản hồi dương băng – suất phản chiếu</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure id="fig-acc">
+    <div class="frame"><img class="diagram" src="images/unit15/acc.webp" alt="Bản đồ nhìn xuống Nam Cực, châu Nam Cực được bao quanh bởi vòng mũi tên đỏ ghi A.C.C., eo biển Drake được đánh dấu giữa Nam Cực và Nam Mỹ, mũi châu Phi và Úc ở rìa. Chữ trong hình bằng tiếng Anh." loading="lazy" width="283" height="279" style="max-height:280px;width:auto;height:auto"></div>
+    <figcaption>Hải lưu Quanh Nam Cực (A.C.C.) chảy vòng quanh châu Nam Cực qua eo biển Drake. Bản đồ nhìn từ trên xuống Nam Cực.<span class="credit">Steven Earle, CC BY (qua sách).</span></figcaption>
+  </figure>
+  <figure id="fig-laurentide">
+    <div class="frame"><img class="diagram" src="images/unit15/laurentide.webp" alt="Bản đồ Bắc Bán Cầu quanh Bắc Cực với phạm vi băng cực đại thời Pleistocen tô trắng, phủ phần lớn Canada, Greenland, Scandinavia và một phần bắc Á, có ghi tên các thành phố lớn. Chữ trong hình bằng tiếng Anh." loading="lazy" width="250" height="417" style="max-height:280px;width:auto;height:auto"></div>
+    <figcaption>Phạm vi cực đại của các dải băng Bắc Bán Cầu thời Pleistocen, gồm dải băng Laurentide trên Canada.<span class="credit">USGS, phạm vi công cộng (qua sách).</span></figcaption>
+  </figure>
+  <h4>Các thời kỳ băng hà Pleistocen</h4>
+  <ul>
+    <li>Phần khắc nghiệt nhất của thời kỳ băng hà hiện nay là <b>1 triệu năm cuối</b> của thế Pleistocen.</li>
+    <li>Nhiệt độ dao động trong khoảng gần 10 °C (18 °F) qua 40.000 đến 100.000 năm, và các dải băng mở rộng, thu hẹp theo.</li>
+    <li>Các dao động được điều nhịp bởi những thay đổi nhỏ của quỹ đạo Trái Đất, tức <button class="term" data-term="chu kỳ Milankovitch">chu kỳ Milankovitch</button> (Học phần 14). Trong triệu năm qua, chu kỳ băng hà lặp lại khoảng mỗi <b>100.000 năm</b>.</li>
+    <li>Các thời kỳ ấm trong một kỷ băng hà là <button class="term" data-term="gian băng">gian băng</button>; có năm hoặc sáu gian băng trong 500.000 năm qua, gần nhất là <button class="term" data-term="thế Holocen">thế Holocen</button> hiện nay. Các pha ấm ngắn, ôn hòa hơn trong một thời kỳ băng hà là <button class="term" data-term="gian băng phụ">gian băng phụ</button> (interstadial).</li>
+  </ul>
+  <figure id="fig-lr04">
+    <div class="frame"><img class="diagram" src="images/unit15/lr04.webp" alt="Ba dải đồ thị đường răng cưa của giá trị đồng vị oxy sinh vật đáy từ 0 đến 5,3 triệu năm trước. Các dao động lớn hơn và chậm hơn về phía hiện tại, với số thứ tự các giai đoạn đồng vị và thanh đảo cực từ dưới mỗi dải. Chữ trong hình bằng tiếng Anh." loading="lazy" width="1058" height="794"></div>
+    <figcaption>Chuỗi LR04: đồng vị oxy (δ<sup>18</sup>O) từ 57 lõi biển sâu trong 5,3 triệu năm qua. Giá trị cao hơn nghĩa là nhiều băng hơn và nước sâu lạnh hơn (15.3.2); các dao động lớn dần về phía hiện tại.<span class="credit">Lisiecki và Raymo (2005), <i>Paleoceanography</i> 20(1), CC BY-SA (qua sách).</span></figcaption>
+  </figure>
+  <div class="tablewrap">
+    <table>
+      <caption>Hai dao động khí hậu gần đây với bằng chứng chưa thống nhất.</caption>
+      <thead><tr><th>Sự kiện</th><th>Khi nào</th><th>Điều đã biết</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="Dryas Trẻ">Dryas Trẻ</button></td><td>Khoảng 12.000 năm trước</td><td>Đợt lạnh được công nhận rộng rãi ở Bắc Bán Cầu, nhưng thời điểm khác nhau giữa các nơi và khó tìm thấy ở Nam Bán Cầu</td></tr>
+        <tr><td><button class="term" data-term="Tối ưu khí hậu Holocen">Tối ưu khí hậu Holocen</button></td><td>Khoảng 6.000 năm trước</td><td>Đợt ấm không ấm hơn ở mọi nơi, không ấm bằng hiện nay, và không ấm cùng lúc ở mọi nơi</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s15-3-2">15.3.2 Chỉ thị gián tiếp của khí hậu quá khứ</h3>
+  <p>Không ai đo nhiệt độ từ hàng triệu năm trước, nên các nhà địa chất dùng <button class="term" data-term="chỉ thị gián tiếp">chỉ thị gián tiếp</button> (proxy): dấu hiệu sinh học, hóa học hoặc vật lý lưu giữ trong đá, trầm tích hay băng, giống như <b>dấu vân tay</b> của điều kiện xưa. Chúng là chỉ thị <b>gián tiếp</b> của khí hậu.</p>
+  <div class="tablewrap">
+    <table style="min-width:560px">
+      <caption>Các chỉ thị gián tiếp được nêu trong chương.</caption>
+      <thead><tr><th>Chỉ thị</th><th>Tìm thấy trong</th><th>Ghi lại điều gì</th><th>Khoảng thời gian</th></tr></thead>
+      <tbody>
+        <tr><td>Trầm tích băng hà (diamictit, <button class="term" data-term="tilit">tilit</button>)</td><td>Đá, ví dụ hệ tầng Mineral Fork, Utah</td><td>Các thời kỳ băng hà xưa</td><td>Nguyên Sinh và Cổ Sinh</td></tr>
+        <tr><td>Đồng vị oxy</td><td>Vỏ trùng lỗ trong lõi biển sâu; lõi băng</td><td>Nhiệt độ biển sâu và thể tích băng</td><td>Tân Sinh (lõi biển); 800.000 năm (băng)</td></tr>
+        <tr><td>Đồng vị bo</td><td>Vỏ trùng lỗ phù du</td><td>pH đại dương, từ đó suy ra CO<sub>2</sub> xưa</td><td>Khoảng 60 triệu năm</td></tr>
+        <tr><td>Bọt khí</td><td>Lõi băng Nam Cực và Greenland</td><td>Thành phần không khí xưa, gồm CO<sub>2</sub></td><td>800.000 năm</td></tr>
+        <tr><td>Quần hợp vi hóa thạch</td><td>Lõi trầm tích</td><td>Điều kiện nước lạnh hay nước ấm</td><td>Tân Sinh</td></tr>
+        <tr><td>Vòng gỗ</td><td>Cây sống và cây chết</td><td>Năm ẩm hay khô, ấm hay lạnh</td><td>Hàng nghìn năm</td></tr>
+        <tr><td>Quần hợp phấn hoa</td><td>Lõi trầm tích hồ</td><td>Thảm thực vật xưa, từ đó suy ra khí hậu</td><td>Ví dụ: 125.000 năm</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Ngoài ra còn có ghi chép lịch sử của con người, số liệu đo đạc gần đây, trầm tích hồ, trầm tích hang động và san hô.</p>
+
+  <h4>Lõi trầm tích: đồng vị oxy bền</h4>
+  <div class="pair">
+    <figure id="fig-sedcore">
+      <div class="frame"><img src="images/unit15/sedcore.webp" alt="Tám đoạn lõi trầm tích đã bổ đôi nằm cạnh nhau, cho thấy các dải bùn xám, ô liu và nâu xen kẽ." loading="lazy" width="1100" height="1064" style="max-height:300px;width:auto;height:auto"></div>
+      <figcaption>Lõi trầm tích từ sườn lục địa Greenland, bổ đôi để thấy các lớp.<span class="credit">Hannes Grobe, CC BY (qua sách).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Lõi biển sâu</h4>
+      <ul>
+        <li>Chương trình Khoan Đại dương quốc tế khoan lấy lõi trầm tích tích tụ liên tục dưới đáy biển.</li>
+        <li>Lõi chứa vỏ trùng lỗ sống ở đáy (sinh vật đáy) trong 66 triệu năm qua.</li>
+        <li>Đồng vị cacbon và oxy bền của vỏ ghi lại nhiệt độ biển sâu và thể tích băng lục địa.</li>
+      </ul>
+    </div>
+  </div>
+  <p>Oxy có hai <button class="term" data-term="đồng vị">đồng vị</button> bền chính: <b><sup>16</sup>O</b> phổ biến, nhẹ và <b><sup>18</sup>O</b> hiếm hơn, nặng. Cả hai có trong nước và trong canxi cacbonat của vỏ trùng lỗ. Tỉ số <sup>18</sup>O trên <sup>16</sup>O, ký hiệu <button class="term" data-term="δ18O">δ<sup>18</sup>O</button>, phản ánh thể tích băng (<a href="#fig-isotope">Hình 15.20</a>):</p>
+  <ol>
+    <li>Nước chứa <sup>16</sup>O nhẹ <b>bay hơi dễ hơn</b>, nhất là từ nước ấm, làm nước biển bề mặt giàu <sup>18</sup>O hơn một chút.</li>
+    <li>Khi hơi nước trôi về phía cực, nước chứa <sup>18</sup>O nặng <b>ngưng tụ và rơi xuống trước</b>, nên hơi nước còn lại nghèo <sup>18</sup>O.</li>
+    <li>Trong thời kỳ lạnh, giáng thủy giàu <sup>16</sup>O này <b>bị khóa lại thành băng</b> trên đất liền. Các dải băng dày hơn một dặm (1,6 km) đã phủ phần lớn Bắc Mỹ cách đây chỉ khoảng 14.000 năm.</li>
+    <li>Đại dương, cùng vỏ trùng lỗ lớn lên trong đó, trở nên <b>giàu <sup>18</sup>O</b>. δ<sup>18</sup>O trong vỏ cao hơn nghĩa là nhiều băng hơn và khí hậu lạnh hơn.</li>
+  </ol>
+  <figure id="fig-isotope">
+    <div class="frame"><svg viewBox="0 0 760 340" role="img" aria-labelledby="iso-vi-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="iso-vi-t">Mặt cắt nhìn từ bên cạnh, không theo tỉ lệ, cho thấy đồng vị oxy ghi lại thể tích băng trong thời kỳ băng hà. Nước chứa oxy-16 nhẹ bay hơi dễ hơn khỏi đại dương; khi hơi nước trôi về phía cực, nước chứa oxy-18 nặng ngưng tụ và rơi xuống trước; tuyết tạo nên dải băng giàu oxy-16, nên đại dương, cùng vỏ trùng lỗ lớn lên trong đó, giàu oxy-18 hơn.</title><text x="380" y="14" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">Trong một thời kỳ băng hà (mặt cắt, không theo tỉ lệ)</text><rect x="0" y="230" width="340" height="110" fill="#3f7fb3"/><polygon points="330,340 330,230 420,205 520,152 600,140 760,124 760,340" fill="#7a5a3e"/><polygon points="450,189.1 470,165 520,128 600,98 680,86 760,80 760,124 600,140 520,152" fill="#e6f1fa" stroke="#8fb3d6" stroke-width="1.5"/><text x="640" y="116" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3b57">Dải băng giữ ¹⁶O</text><text x="545" y="250" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" fill="#f3e9dd">Đất liền</text><polyline points="40.0,224.0 42.7,222.0 44.5,220.0 44.9,218.0 43.8,216.0 41.4,214.0 38.6,212.0 36.2,210.0 35.1,208.0 35.5,206.0 37.3,204.0 40.0,202.0 42.7,200.0 44.5,198.0 44.9,196.0 43.8,194.0 41.4,192.0 38.6,190.0 36.2,188.0 35.1,186.0 35.5,184.0 37.3,182.0 40.0,180.0 42.7,178.0 44.5,176.0 44.9,174.0 43.8,172.0 41.4,170.0 38.6,168.0 36.2,166.0 35.1,164.0 35.5,162.0" fill="none" stroke="#2b5f9e" stroke-width="2.2" stroke-linecap="round" class=""/><polygon points="40.0,150.0 45.7,159.4 34.3,159.4" fill="#2b5f9e"/><polyline points="90.0,224.0 92.7,222.0 94.5,220.0 94.9,218.0 93.8,216.0 91.4,214.0 88.6,212.0 86.2,210.0 85.1,208.0 85.5,206.0 87.3,204.0 90.0,202.0 92.7,200.0 94.5,198.0 94.9,196.0 93.8,194.0 91.4,192.0 88.6,190.0 86.2,188.0 85.1,186.0 85.5,184.0 87.3,182.0 90.0,180.0 92.7,178.0 94.5,176.0 94.9,174.0 93.8,172.0 91.4,170.0 88.6,168.0 86.2,166.0 85.1,164.0 85.5,162.0" fill="none" stroke="#2b5f9e" stroke-width="2.2" stroke-linecap="round" class=""/><polygon points="90.0,150.0 95.7,159.4 84.3,159.4" fill="#2b5f9e"/><text x="18" y="110" dy=".35em" text-anchor="start" font-size="11" font-weight="700" class="svg-ink halo">Bay hơi: ¹⁶O nhẹ</text><text x="18" y="125" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">thoát ra dễ hơn</text><ellipse cx="222" cy="86" rx="26" ry="16" fill="#f4f6f9" stroke="#9aa7b5" stroke-width="1.2"/><ellipse cx="250" cy="76" rx="30" ry="22" fill="#f4f6f9" stroke="#9aa7b5" stroke-width="1.2"/><ellipse cx="278" cy="86" rx="26" ry="16" fill="#f4f6f9" stroke="#9aa7b5" stroke-width="1.2"/><rect x="200" y="82" width="100" height="16" fill="#f4f6f9"/><line x1="312" y1="68" x2="541.0" y2="42.8" stroke="#55697b" stroke-width="2.2" stroke-linecap="round"/><polygon points="548.0,42.0 539.1,48.8 537.8,37.3" fill="#55697b"/><text x="430" y="36" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">Hơi nước trôi về phía cực</text><ellipse cx="600.4" cy="46.2" rx="18.2" ry="11.2" fill="#f4f6f9" stroke="#9aa7b5" stroke-width="1.2"/><ellipse cx="620.0" cy="39.2" rx="21.0" ry="15.399999999999999" fill="#f4f6f9" stroke="#9aa7b5" stroke-width="1.2"/><ellipse cx="639.6" cy="46.2" rx="18.2" ry="11.2" fill="#f4f6f9" stroke="#9aa7b5" stroke-width="1.2"/><rect x="585.0" y="43.4" width="70.0" height="11.2" fill="#f4f6f9"/><path d="M240 112 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><path d="M262 129 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><path d="M284 114 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><path d="M250 154 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><path d="M274 169 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><path d="M296 144 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><path d="M262 192 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><path d="M288 199 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><text x="112" y="176" dy=".35em" text-anchor="start" font-size="11" font-weight="700" class="svg-ink halo">¹⁸O nặng ngưng tụ</text><text x="112" y="191" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">và rơi xuống trước</text><text x="590" y="72" dy=".35em" font-size="13" text-anchor="middle" fill="#6a8fb3">✱</text><text x="625" y="66" dy=".35em" font-size="13" text-anchor="middle" fill="#6a8fb3">✱</text><text x="660" y="74" dy=".35em" font-size="13" text-anchor="middle" fill="#6a8fb3">✱</text><text x="700" y="70" dy=".35em" font-size="13" text-anchor="middle" fill="#6a8fb3">✱</text><text x="170" y="252" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Đại dương giàu ¹⁸O hơn</text><text x="170" y="270" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" fill="#e6f1fa">nhiều băng trên đất = δ¹⁸O cao hơn</text><circle cx="40" cy="318" r="5.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="46" cy="314" r="3.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="62" cy="318" r="5.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="68" cy="314" r="3.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="84" cy="318" r="5.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="90" cy="314" r="3.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="106" cy="318" r="5.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="112" cy="314" r="3.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="128" cy="318" r="5.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="134" cy="314" r="3.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="150" cy="318" r="5.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="156" cy="314" r="3.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="172" cy="318" r="5.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="178" cy="314" r="3.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><text x="200" y="318" dy=".35em" text-anchor="start" font-size="11" font-weight="400" fill="#fff">Vỏ trùng lỗ ghi lại</text></svg></div>
+    <figcaption>Đại dương trở nên giàu <sup>18</sup>O trong thời kỳ băng hà như thế nào. <sup>16</sup>O nhẹ rời đại dương thành hơi nước và được giữ trong dải băng; <sup>18</sup>O nặng rơi trở lại gần nguồn. Vỏ trùng lỗ ghi lại tỉ số của đại dương.<span class="credit">Vẽ cho tài liệu này theo mô tả của chương.</span></figcaption>
+  </figure>
+  <p>Các lõi liên tục ghi lại những hóa thạch này theo từng lớp, nên cho ta hồ sơ của các thời kỳ băng hà, gian băng và gian băng phụ (<a href="#fig-iceage">Hình 15.21</a>).</p>
+  <figure id="fig-iceage">
+    <div class="frame"><img class="diagram" src="images/unit15/iceage.webp" alt="Ba đường trong 450.000 năm qua: thay đổi nhiệt độ Nam Cực từ lõi băng EPICA và Vostok, và thể tích băng toàn cầu, cùng lên xuống theo chu kỳ khoảng 100.000 năm, với các đợt ấm đột ngột gần 430, 330, 240, 130 nghìn năm trước và hiện nay. Chữ trong hình bằng tiếng Anh." loading="lazy" width="564" height="377"></div>
+    <figcaption>Thay đổi nhiệt độ Nam Cực trong 450.000 năm qua từ hai lõi băng (EPICA và Vostok, dựa trên đơteri) và thể tích băng toàn cầu từ đồng vị oxy biển sâu (dưới). Thời ấm trùng với thể tích băng thấp.<span class="credit">Robert A. Rohde, CC BY-SA (qua sách).</span></figcaption>
+  </figure>
+
+  <h4>Lõi trầm tích: đồng vị bo và độ axit</h4>
+  <p>Bo có hai đồng vị, <sup>11</sup>B và <sup>10</sup>B, và tỉ lệ của chúng trong bo hòa tan phụ thuộc pH. Vì thêm CO<sub>2</sub> nghĩa là thêm axit cacbonic và pH thấp hơn, đồng vị bo trong vỏ trùng lỗ phù du tiết lộ <b>CO<sub>2</sub> khí quyển xưa</b> trong khoảng 60 triệu năm:</p>
+  <ul>
+    <li><b>~60 triệu năm</b> (đầu Tân Sinh): CO<sub>2</sub> trên 2.000 ppm, pH đại dương <b>thấp hơn</b>.</li>
+    <li><b>~55–40 triệu năm</b>: CO<sub>2</sub> bắt đầu giảm, có thể vì ít CO<sub>2</sub> thoát ra từ sống núi đại dương, núi lửa và đai biến chất hơn, và nhiều cacbon bị chôn vùi hơn nhờ hút chìm và phong hóa dãy Himalaya đang nâng lên.</li>
+    <li><b>~24 triệu năm</b> (thế Miocen): CO<sub>2</sub> dưới 500 ppm.</li>
+    <li><b>800.000 năm gần đây</b>: CO<sub>2</sub> không vượt quá khoảng 300 ppm (cho đến thời công nghiệp).</li>
+  </ul>
+
+  <h4>Cacbon điôxit trong lõi băng</h4>
+  <figure id="fig-gisp2">
+    <div class="frame"><img src="images/unit15/gisp2.webp" alt="Đoạn lõi băng dài 19 cm trên nền xanh với các dải sáng tối xen kẽ; mười một mũi tên phía trên chỉ các lớp mùa hè sáng màu." loading="lazy" width="741" height="335"></div>
+    <figcaption>Đoạn lõi băng GISP2 dài 19 cm từ Greenland, ở độ sâu 1.855 m, có 11 lớp năm: lớp mùa hè sáng (mũi tên) xen giữa các lớp mùa đông tối hơn.<span class="credit">NOAA, phạm vi công cộng (qua sách).</span></figcaption>
+  </figure>
+  <figure id="fig-bubbles">
+    <div class="frame"><img src="images/unit15/bubbles.webp" alt="Cận cảnh lát băng Nam Cực mỏng dưới ánh sáng phân cực, các tinh thể băng nhiều màu chứa hàng trăm bọt khí nhỏ màu tối." loading="lazy" width="1100" height="753" style="max-height:360px;width:auto"></div>
+    <figcaption>Băng Nam Cực với hàng trăm bọt khí nhỏ bị giữ lại từ hàng nghìn năm trước.<span class="credit">CSIRO Atmospheric Research, CC BY (qua sách).</span></figcaption>
+  </figure>
+  <p>Lõi băng khoan từ các dải băng Nam Cực và Greenland cho hồ sơ hóa học <b>chi tiết và trực tiếp</b> hơn trong 800.000 năm qua:</p>
+  <ul>
+    <li>Tuyết tích tụ thành <b>lớp hằng năm</b>. δ<sup>18</sup>O của chúng cho biết nhiệt độ, như trên.</li>
+    <li>Khi tuyết biến thành băng, nó giữ lại <b>những bọt khí nhỏ</b>. Các mẩu băng nhỏ được nghiền, và không khí cổ được đưa vào <button class="term" data-term="khối phổ kế">khối phổ kế</button> để đo thành phần hóa học, gồm cả CO<sub>2</sub>.</li>
+    <li>Trong 800.000 năm qua, CO<sub>2</sub> lên tới khoảng <b>300 ppm vào thời ấm</b> và xuống khoảng <b>170–185 ppm vào thời lạnh</b>. Hiện nay là <b>trên 420 ppm</b> (<a href="#fig-co2bars">Hình 15.28</a>).</li>
+  </ul>
+  <figure id="fig-co2800k">
+    <div class="frame"><img class="diagram" src="images/unit15/co2800k.webp" alt="Đồ thị cacbon điôxit từ 800.000 năm trước đến nay, dao động giữa khoảng 175 và 300 phần triệu theo chu kỳ khoảng 100.000 năm; giá trị trên 230 ppm tô vàng, dưới tô xanh lơ, các gian băng đánh dấu bằng dải trắng. Chữ trong hình bằng tiếng Anh." loading="lazy" width="818" height="580"></div>
+    <figcaption>Chuỗi CO<sub>2</sub> tổng hợp trong 800.000 năm qua từ lõi băng (EPICA Dome C và các lõi khác). Nó chưa bao giờ vượt quá khoảng 300 ppm.<span class="credit">Tom Ruen, CC BY-SA (qua sách).</span></figcaption>
+  </figure>
+
+  <h4>Vi hóa thạch đại dương</h4>
+  <p><b>Vi hóa thạch</b> như trùng lỗ, tảo cát và trùng phóng xạ cũng là chỉ thị gián tiếp. Các nhóm loài gặp cùng nhau gọi là <button class="term" data-term="quần hợp hóa thạch">quần hợp hóa thạch</button>. Một lớp của lõi trầm tích có thể chứa quần hợp nước lạnh (thời băng hà), lớp khác chứa quần hợp nước ấm.</p>
+  <p class="quiz">Xem: <a href="https://www.youtube.com/watch?v=Yvu-g8BkkIg" target="_blank" rel="noopener">Bằng chứng khí hậu từ trầm tích (video, tiếng Anh) ↗</a></p>
+
+  <h4>Vòng gỗ</h4>
+  <div class="pair">
+    <figure id="fig-treerings">
+      <div class="frame"><img src="images/unit15/treerings.webp" alt="Cận cảnh gốc cây đã phong hóa với rất nhiều vòng sinh trưởng sát nhau, độ rộng khác nhau." loading="lazy" width="1100" height="823"></div>
+      <figcaption>Vòng gỗ: mỗi năm mọc một vòng, độ rộng tùy điều kiện năm đó.<span class="credit">Adrian Pingstone, phạm vi công cộng (qua sách).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Đọc vòng gỗ</h4>
+      <ul>
+        <li>Mỗi năm cây mọc <b>một vòng</b>, gồm phần sáng và phần tối.</li>
+        <li><b>Vòng rộng</b>: năm ẩm hơn. <b>Vòng hẹp, sát nhau</b>: năm khô, lạnh hơn.</li>
+        <li>Một số cây sống vài nghìn năm, nên vòng gỗ giúp tái dựng nhiệt độ, giáng thủy, thảm thực vật, dòng chảy sông và nhiều điều khác của một vùng: nghiên cứu <button class="term" data-term="cổ khí hậu">cổ khí hậu</button>.</li>
+        <li>Gỗ chết, như xà nhà trong phế tích người Pueblo, kéo dài hồ sơ và cho thấy những đợt hạn hán dài có thể giải thích vì sao làng bị bỏ hoang.</li>
+      </ul>
+    </div>
+  </div>
+  <figure id="fig-yamal">
+    <div class="frame"><img class="diagram" src="images/unit15/yamal.webp" alt="Đồ thị dài các dị thường nhiệt độ mùa hè từ 5000 TCN đến 2000 CN, cột đỏ trên mức không và cột xanh dưới mức không xen kẽ suốt chuỗi, với một đỉnh đỏ cao ở tận cùng bên phải. Chữ trong hình bằng tiếng Anh." loading="lazy" width="1100" height="241"></div>
+    <figcaption>Dị thường nhiệt độ mùa hè trong 7.000 năm qua từ vòng gỗ trên bán đảo Yamal, Nga (làm trơn 50 năm). Đỏ: ấm hơn trung bình; xanh: lạnh hơn.<span class="credit">R. M. Hantemirov, CC BY 3.0 (qua sách; giấy phép theo Wikimedia Commons).</span></figcaption>
+  </figure>
+
+  <h4>Phấn hoa</h4>
+  <div class="pair">
+    <figure id="fig-pollen">
+      <div class="frame"><img src="images/unit15/pollen.webp" alt="Ảnh kính hiển vi điện tử quét của nhiều hạt phấn hình dạng khác nhau, có hạt hình cầu gai, có hạt hình hạt đậu, tô màu vàng, xanh lá, hồng và đỏ." loading="lazy" width="1100" height="838"></div>
+      <figcaption>Phấn hoa hiện đại dưới kính hiển vi điện tử quét, tô màu giả để phân biệt các loài cây.<span class="credit">Dartmouth Electron Microscope Facility, phạm vi công cộng (qua sách).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Phấn hoa làm chỉ thị</h4>
+      <ul>
+        <li>Hạt phấn của mỗi loài thực vật có hoa trông rất riêng dưới kính hiển vi.</li>
+        <li>Phấn hoa được lưu giữ trong trầm tích hồ tích tụ thành lớp hằng năm.</li>
+        <li><b>Quần hợp phấn hoa hóa thạch</b> (ví dụ vân sam, thông, sồi), định tuổi bằng phương pháp phóng xạ, cho biết cây nào từng mọc ở đó, và mỗi loài ưa một kiểu khí hậu.</li>
+        <li>Ở phía đông dãy Cascade, Tây Bắc Thái Bình Dương (Hoa Kỳ), phấn hoa theo dõi trong 125.000 năm qua hai thời kỳ băng hà cho thấy thảm thực vật thay đổi giữa thời băng hà và gian băng (Whitlock và Bartlein 1997).</li>
+      </ul>
+    </div>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/15-global-climate-change/" target="_blank" rel="noopener">câu hỏi Mục 15.3 trong sách ↗</a></p>
+</section>
+
+<section id="s15-4">
+  <h2 class="sec"><span class="n">15.4</span>Nguyên nhân biến đổi khí hậu do con người</h2>
+  <p>Các biến đổi khí hậu tiền sử diễn ra chậm, qua nhiều triệu năm. Biến đổi hiện nay <b>nhanh và phần lớn do con người gây ra</b>. Các nhà khoa học đi đến kết luận này từng bước:</p>
+  <ul class="timeline">
+    <li><time>Cuối 1800</time><span>Các nhà khoa học nghi ngờ khí nhà kính do con người thải ra sẽ làm thay đổi khí hậu, vì mọi lần trong quá khứ địa chất, thay đổi các khí này đều làm vậy.</span></li>
+    <li><time>Giữa 1900</time><span>Đo đạc có hệ thống xác nhận CO<sub>2</sub> do con người thải ra đang tích tụ trong khí quyển, rừng và đại dương.</span></li>
+    <li><time>1990–2000</time><span>Hàng nghìn nghiên cứu mặt đất cùng đo đạc vệ tinh liên tục trên đất liền và đại dương cho thấy sự ấm lên như dự đoán: <button class="term" data-term="thuyết biến đổi khí hậu do con người">thuyết biến đổi khí hậu do con người</button> được khẳng định.</span></li>
+  </ul>
+  <p>Thuyết này cho rằng <b>con người đang gây ra phần lớn biến đổi khí hậu hiện nay do đốt nhiên liệu hóa thạch</b> như than đá, dầu mỏ và khí thiên nhiên. Như mọi lý thuyết, nó có thể phát triển khi có số liệu và phương pháp mới; nó thể hiện hiểu biết hiện tại của ngành.</p>
+
+  <h3 id="s15-4-1">15.4.1 Đồng thuận khoa học</h3>
+  <div class="pair">
+    <div class="callout">
+      <h4>Đồng thuận</h4>
+      <ul>
+        <li>Tuyệt đại đa số nghiên cứu khí hậu cho thấy hoạt động của con người đang làm khí hậu thay đổi nhanh, sẽ gây thiệt hại môi trường nghiêm trọng.</li>
+        <li>Các nghiên cứu bình duyệt cho thấy <b>97% nhà khoa học khí hậu</b> đồng ý rằng sự ấm lên do hoạt động của con người.</li>
+        <li>Không có giải thích nào khác cho mối liên hệ giữa phát thải khí nhà kính của con người và khí hậu đang thay đổi.</li>
+        <li>Các tổ chức khoa học hàng đầu đều đồng ý, gồm <b>Viện Hàn lâm Khoa học Quốc gia Hoa Kỳ</b>, do Quốc hội lập năm 1863 để tư vấn độc lập, khách quan về khoa học.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h4>Dấu vân tay đồng vị</h4>
+      <ul>
+        <li>Nhiên liệu hóa thạch đến từ thực vật sống hàng triệu năm trước, có tỉ số <b><sup>13</sup>C/<sup>12</sup>C</b> khác với không khí ngày nay. (Đây là các đồng vị bền; <sup>14</sup>C phóng xạ không dùng ở đây.)</li>
+        <li>Băng Nam Cực cho thấy dấu hiệu đồng vị cacbon ổn định từ khoảng năm 1000 đến 1800, thay đổi dần sau 1800, và nhanh hơn sau 1950.</li>
+        <li>Khi CO<sub>2</sub> hóa thạch hòa vào, dấu hiệu của không khí ngày càng <b>giống nhiên liệu hóa thạch</b>. <button class="term" data-term="dấu vân tay đồng vị">Dấu vân tay</button> này được dùng từ thập niên 1980.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 id="s15-4-2">15.4.2 Nguồn khí nhà kính do con người</h3>
+  <p>Phát thải khí nhà kính của con người tăng từ thời tiền công nghiệp cùng tăng trưởng kinh tế và dân số. CO<sub>2</sub> đang ở mức chưa từng thấy trong ít nhất 800.000 năm (<a href="#fig-co2bars">Hình 15.28</a>):</p>
+  <figure id="fig-co2bars">
+    <div class="frame"><svg viewBox="0 0 760 312" role="img" aria-labelledby="co2-vi-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="co2-vi-t">Biểu đồ thanh nồng độ cacbon điôxit trong khí quyển, đơn vị phần triệu. Mức thấp thời băng hà khoảng 180; thời gian băng ấm khoảng 300, giá trị cao nhất trong 800.000 năm lõi băng; tiền công nghiệp 278; Mauna Loa 1958, 315; 2016, 400; 2022, 417; 2024, khoảng 425.</title><text x="380" y="16" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">CO₂ trong khí quyển (phần triệu, ppm)</text><line x1="300.0" y1="34" x2="300.0" y2="272" stroke="var(--line)" stroke-width="1"/><text x="300.0" y="286" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">0</text><line x1="347.8" y1="34" x2="347.8" y2="272" stroke="var(--line)" stroke-width="1"/><line x1="395.6" y1="34" x2="395.6" y2="272" stroke="var(--line)" stroke-width="1"/><text x="395.55555555555554" y="286" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">100</text><line x1="443.3" y1="34" x2="443.3" y2="272" stroke="var(--line)" stroke-width="1"/><line x1="491.1" y1="34" x2="491.1" y2="272" stroke="var(--line)" stroke-width="1"/><text x="491.1111111111111" y="286" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">200</text><line x1="538.9" y1="34" x2="538.9" y2="272" stroke="var(--line)" stroke-width="1"/><line x1="586.7" y1="34" x2="586.7" y2="272" stroke="var(--line)" stroke-width="1"/><text x="586.6666666666667" y="286" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">300</text><line x1="634.4" y1="34" x2="634.4" y2="272" stroke="var(--line)" stroke-width="1"/><line x1="682.2" y1="34" x2="682.2" y2="272" stroke="var(--line)" stroke-width="1"/><text x="682.2222222222222" y="286" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">400</text><line x1="730.0" y1="34" x2="730.0" y2="272" stroke="var(--line)" stroke-width="1"/><text x="515.0" y="304" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-muted">Nồng độ CO₂ (ppm); nét đứt = mức cao nhất trong 800.000 năm (≈300 ppm)</text><line x1="586.7" y1="34" x2="586.7" y2="272" stroke="var(--fg)" stroke-width="1.5" stroke-dasharray="5 4"/><rect x="300" y="42" width="172.0" height="18" rx="3" fill="#2b5f9e"/><text x="478.0" y="51" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">~180</text><text x="290" y="45" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Mức thấp thời băng hà</text><text x="290" y="59" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">lõi băng, 800.000 năm</text><rect x="300" y="75" width="286.7" height="18" rx="3" fill="#6aa5cf"/><text x="592.6666666666667" y="84" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">~300</text><text x="290" y="78" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Thời gian băng ấm</text><text x="290" y="92" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">lõi băng, 800.000 năm</text><rect x="300" y="108" width="265.6" height="18" rx="3" fill="#9a8a66"/><text x="571.6444444444444" y="117" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">278</text><text x="290" y="111" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Tiền công nghiệp</text><text x="290" y="125" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">khoảng năm 1750</text><rect x="300" y="141" width="301.0" height="18" rx="3" fill="#e0603a"/><text x="607.0" y="150" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">315</text><text x="290" y="144" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Mauna Loa, 1958</text><text x="290" y="158" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">khởi đầu đường cong Keeling</text><rect x="300" y="174" width="382.2" height="18" rx="3" fill="#c9303f"/><text x="688.2222222222222" y="183" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">400+</text><text x="290" y="177" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">2016</text><text x="290" y="191" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">năm đầu tiên trọn năm trên 400</text><rect x="300" y="207" width="398.5" height="18" rx="3" fill="#ad1f52"/><text x="704.4666666666667" y="216" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">417</text><text x="290" y="210" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">2022</text><text x="290" y="224" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">giá trị trong chương</text><rect x="300" y="240" width="405.7" height="18" rx="3" fill="#7d1038"/><text x="711.728888888889" y="249" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">~425</text><text x="290" y="243" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">2024</text><text x="290" y="257" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">trung bình năm của NOAA</text></svg></div>
+    <figcaption>CO<sub>2</sub> khí quyển trong quá khứ và hiện tại. Mọi giá trị bên phải nét đứt đều cao hơn bất kỳ giá trị nào trong 800.000 năm của lõi băng.<span class="credit">Vẽ cho tài liệu này theo số liệu của chương; giá trị 2024 là trung bình năm tại Mauna Loa của NOAA (Global Monitoring Laboratory).</span></figcaption>
+  </figure>
+  <figure id="fig-sectors">
+    <div class="frame"><img class="diagram" src="images/unit15/sectors.webp" alt="Biểu đồ vành khuyên phát thải khí nhà kính theo ngành kinh tế, tổng 49 gigatấn CO2 tương đương năm 2010: điện và nhiệt 25%, nông nghiệp, lâm nghiệp và sử dụng đất khác 24%, công nghiệp 21%, giao thông 14%, năng lượng khác 9,6%, nhà ở và công trình 6,4%. Một cung bên ngoài chia phần điện và nhiệt cho các ngành sử dụng: công nghiệp 11, công trình 12, giao thông 0,3, năng lượng 1,4, AFOLU 0,87%. Chữ trong hình bằng tiếng Anh." loading="lazy" width="725" height="647" style="max-height:440px;width:auto"></div>
+    <figcaption>Phát thải khí nhà kính theo ngành kinh tế năm 2010: 49 Gt CO<sub>2</sub> tương đương. Cung ngoài cho biết phát thải điện và nhiệt phục vụ ngành sử dụng nào.<span class="credit">IPCC AR5 Báo cáo tổng hợp, Hình 1.7, Pachauri và Meyer (chủ biên), CC BY-SA theo ghi chú của sách.</span></figcaption>
+  </figure>
+  <div class="tablewrap">
+    <table>
+      <caption>Phát thải theo ngành kinh tế, 2010.</caption>
+      <thead><tr><th>Ngành</th><th>Tỉ lệ</th></tr></thead>
+      <tbody>
+        <tr><td>Sản xuất điện và nhiệt</td><td>25%</td></tr>
+        <tr><td>Nông nghiệp, lâm nghiệp và sử dụng đất khác (AFOLU)</td><td>24%</td></tr>
+        <tr><td>Công nghiệp</td><td>21%</td></tr>
+        <tr><td>Giao thông, gồm ô tô</td><td>14%</td></tr>
+        <tr><td>Sản xuất năng lượng khác</td><td>9,6%</td></tr>
+        <tr><td>Nhà ở và công trình</td><td>6,4%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Đốt nhiên liệu hóa thạch và các quá trình công nghiệp gây ra khoảng <b>78% mức tăng</b> phát thải khí nhà kính từ 1970 đến 2010.</li>
+    <li>Khoảng một nửa tổng phát thải CO<sub>2</sub> của con người từ 1750 diễn ra trong <b>40 năm gần đây</b>, và khoảng 40% lượng phát thải đã ở lại khí quyển.</li>
+    <li>Phát thải tính theo <button class="term" data-term="đương lượng CO2">đương lượng CO<sub>2</sub></button> (CO<sub>2</sub> tương đương) cho phép cộng các khí khác nhau.</li>
+    <li>Chính sách và hiệp định đã giảm phát thải ở một số nơi, nhưng tăng trưởng kinh tế ở các nước đang phát triển làm tổng phát thải toàn cầu tăng; giai đoạn 2000–2010 có mức tăng lớn nhất kể từ 1970.</li>
+  </ul>
+  <figure id="fig-emissions">
+    <div class="frame"><img class="diagram" src="images/unit15/emissions.webp" alt="Biểu đồ diện tích phát thải CO2 hằng năm của con người từ 1850 đến 2011, chia thành nhiên liệu hóa thạch, xi măng và đốt khí (xám) và lâm nghiệp, sử dụng đất khác (nâu vàng). Tổng tăng từ khoảng 2 lên khoảng 35 gigatấn mỗi năm, nhanh nhất sau 1950. Hai cột bên phải so sánh phát thải tích lũy 1750–1970 (khoảng 900 gigatấn) và 1750–2011 (khoảng 2.000 gigatấn). Chữ trong hình bằng tiếng Anh." loading="lazy" width="1100" height="425"></div>
+    <figcaption>Phát thải CO<sub>2</sub> hằng năm của con người, 1850–2011, từ nhiên liệu hóa thạch, xi măng và đốt khí (xám) và từ lâm nghiệp, sử dụng đất khác (nâu vàng). Phải: phát thải tích lũy từ 1750, kèm khoảng bất định.<span class="credit">IPCC AR5 Báo cáo tổng hợp, Hình 1.5, Pachauri và Meyer (chủ biên), CC BY-SA theo ghi chú của sách.</span></figcaption>
+  </figure>
+  <p>Dù có đồng thuận khoa học, làm chậm biến đổi khí hậu vẫn cần <b>hành động chính trị</b>.</p>
+  <p class="quiz">Số liệu trực tiếp: <a href="https://www.co2.earth/daily-co2" target="_blank" rel="noopener">CO<sub>2</sub> hằng ngày ↗</a> · Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/15-global-climate-change/" target="_blank" rel="noopener">câu hỏi Mục 15.4 trong sách ↗</a></p>
+</section>
+
+<section id="summary">
+  <h2 class="sec">Tóm tắt</h2>
+  <p>Để khí hậu Trái Đất ổn định, ánh nắng đi vào và nhiệt đi ra phải cân bằng. Khí nhà kính hấp thụ hồng ngoại nhiệt do bề mặt được nắng làm ấm phát ra, giữ nhiệt lại: đó là hiệu ứng nhà kính. Con người đang thải thêm khí nhà kính, trước hết là CO<sub>2</sub> từ nhiên liệu hóa thạch, nên cân bằng năng lượng bị lệch và Trái Đất ấm lên. Các phản hồi dương như băng biển tan và đất đóng băng vĩnh cửu tan khuếch đại thay đổi. Cacbon di chuyển qua chu trình sinh học nhanh và chu trình địa chất chậm. Bằng chứng thay đổi gồm nhiệt độ không khí và đại dương tăng, đường cong Keeling, băng co lại, biển dâng, axit hóa đại dương và thời tiết cực đoan hơn. Các chỉ thị gián tiếp trong đá, lõi trầm tích, lõi băng, vòng gỗ và phấn hoa cho thấy khí hậu đã thay đổi nhiều lần, từ Trái Đất quả cầu tuyết đến các thời kỳ băng hà Pleistocen, nhưng luôn chậm. Tốc độ và mức độ thay đổi hiện nay là độc nhất trong hồ sơ địa chất và chỉ có thể giải thích bằng hoạt động của con người.</p>
+  <div class="callout">
+    <h4>Ôn nhanh</h4>
+    <ul>
+      <li>Thời tiết = vài ngày đến vài tuần; khí hậu = trung bình dài hạn (thường 30 năm).</li>
+      <li>Không khí: 78% N<sub>2</sub>, 21% O<sub>2</sub>, ~1% Ar; khí nhà kính là khí vết (H<sub>2</sub>O, CO<sub>2</sub>, CH<sub>4</sub>, N<sub>2</sub>O).</li>
+      <li>Hiệu ứng nhà kính: sóng ngắn vào → bề mặt nóng lên → hồng ngoại nhiệt sóng dài ra, bị khí nhà kính hấp thụ.</li>
+      <li>Cân bằng năng lượng: 29% phản xạ, 23% khí quyển hấp thụ, 48% bề mặt hấp thụ (tổng hấp thụ 71%).</li>
+      <li>Phản hồi dương khuếch đại (băng – suất phản chiếu, đất đóng băng vĩnh cửu); phản hồi âm làm dịu (cây phát triển, phong hóa).</li>
+      <li>Chu trình cacbon: sinh học (nhanh) và địa chất (chậm, phần lớn cacbon). Mất cân bằng: Bẫy Siberia, Himalaya, con người.</li>
+      <li>Bằng chứng: ấm lên từ 1880 (chủ yếu từ 1970); đại dương nhận 80–90% nhiệt; CO<sub>2</sub> tăng 40% từ 1750.</li>
+      <li>Mất băng: Nam Cực ~118 Gt/năm, Greenland ~281 Gt/năm. Mực nước biển +3,4 mm/năm; +0,19 m từ 1901 đến 2010.</li>
+      <li>Axit hóa: đại dương hấp thụ ~30% CO<sub>2</sub> của con người → axit cacbonic → pH giảm → vỏ mỏng hơn.</li>
+      <li>Các thời kỳ băng hà xưa: Huron (~2,5 tỉ năm), quả cầu tuyết (~700 triệu năm), Ande-Sahara, Karoo, Tân Sinh (Nam Cực ~35 triệu năm).</li>
+      <li>Chỉ thị: δ<sup>18</sup>O (cao = nhiều băng), đồng vị bo (pH → CO<sub>2</sub>), bọt khí lõi băng, vi hóa thạch, vòng gỗ, phấn hoa.</li>
+      <li>CO<sub>2</sub>: 170–300 ppm suốt 800.000 năm; 278 thời tiền công nghiệp; 315 năm 1958; trên 420 hiện nay. Đồng vị cho thấy đó là cacbon hóa thạch.</li>
+    </ul>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/15-global-climate-change/" target="_blank" rel="noopener">câu hỏi ôn tập Chương 15 trong sách ↗</a></p>
+</section>
+
+<section id="resources">
+  <h2 class="sec">Tài liệu tham khảo</h2>
+  <div class="res">
+    <a href="https://slcc.pressbooks.pub/introgeology/chapter/15-global-climate-change/" target="_blank" rel="noopener"><b>Chương 15 (sách, tiếng Anh) ↗</b><span>Toàn bộ chương, với câu hỏi từng mục, video và hoạt hình.</span></a>
+    <a href="https://slcc.pressbooks.pub/introgeology/back-matter/glossary-test/" target="_blank" rel="noopener"><b>Bảng thuật ngữ của sách ↗</b><span>Định nghĩa mọi thuật ngữ in đậm trong sách.</span></a>
+    <a href="https://keelingcurve.ucsd.edu/" target="_blank" rel="noopener"><b>Đường cong Keeling (Scripps) ↗</b><span>Số đo CO<sub>2</sub> hôm nay tại Mauna Loa và toàn bộ chuỗi số liệu.</span></a>
+    <a href="https://gml.noaa.gov/ccgg/trends/" target="_blank" rel="noopener"><b>Xu hướng CO<sub>2</sub> khí quyển (NOAA GML) ↗</b><span>Số liệu CO<sub>2</sub> hằng tháng, hằng năm và tốc độ tăng.</span></a>
+    <a href="https://climate.nasa.gov/vital-signs/" target="_blank" rel="noopener"><b>Dấu hiệu sinh tồn của hành tinh (NASA) ↗</b><span>Số liệu cập nhật về nhiệt độ toàn cầu, CO<sub>2</sub>, băng và mực nước biển.</span></a>
+    <a href="https://earthobservatory.nasa.gov/features/EnergyBalance" target="_blank" rel="noopener"><b>Khí hậu và cân bằng năng lượng Trái Đất (NASA Earth Observatory) ↗</b><span>Nguồn của các con số cân bằng năng lượng trong chương.</span></a>
+    <a href="https://www.ipcc.ch/report/ar6/syr/" target="_blank" rel="noopener"><b>Báo cáo tổng hợp lần thứ sáu của IPCC (2023) ↗</b><span>Đánh giá đồng thuận mới nhất; chương dùng báo cáo 2014 (AR5).</span></a>
+    <a href="https://www.koshland-science-museum.org/explore-the-science/interactives/what-is-the-greenhouse-effect" target="_blank" rel="noopener"><b>Hiệu ứng nhà kính là gì? (tương tác) ↗</b><span>Mô phỏng của chương từ Viện Hàn lâm Khoa học Quốc gia Hoa Kỳ.</span></a>
+  </div>
+</section>
+
+<section id="factcheck">
+  <h2 class="sec">Ghi chú kiểm chứng</h2>
+  <p class="small">Mọi nội dung trong tài liệu đều lấy từ Chương 15. Các ghi chú dưới đây đánh dấu chỗ chương đơn giản hóa, có sai sót, hoặc khác với nguồn đáng tin cậy khác. Nơi chương sai, phần chính của tài liệu dùng nội dung đã sửa và lời văn của chương (dịch sang tiếng Việt) được ghi lại ở đây.</p>
+  <div class="tablewrap">
+    <table style="min-width:600px">
+      <caption>Ghi chú kiểm chứng cho Học phần 15.</caption>
+      <thead><tr><th>Chương viết</th><th>Kiểm chứng</th></tr></thead>
+      <tbody>
+        <tr><td>Biên độ ngày–đêm của Mặt Trăng "272°C (522°F)" (106 °C đến −183 °C).</td><td>Sai số học ở đơn vị °C: 106 − (−183) = <b>289 °C</b>, khớp với 522 °F. Tài liệu ghi khoảng 290 °C. (Số đo Diviner của NASA cho nhiệt độ trưa ở xích đạo gần 120 °C; số liệu của chương nằm trong khoảng đã công bố.)</td></tr>
+        <tr><td>Núi lửa "và quá trình phong hóa, vốn chôn CO2 trong trầm tích, là nguồn CO2 của khí quyển."</td><td>Phong hóa là <b>bể hấp thụ</b>, không phải nguồn: nó lấy CO<sub>2</sub> khỏi không khí (chính chương nói vậy ở 15.1.2). Tài liệu ghi núi lửa thêm CO<sub>2</sub>, phong hóa lấy đi.</td></tr>
+        <tr><td>Hồng ngoại nhiệt, "thay vì UV, khả kiến hay hồng ngoại thường", mới bị giữ lại.</td><td>Đơn giản hóa. Khí nhà kính hấp thụ ở những bước sóng hồng ngoại sóng dài (nhiệt) nhất định; một phần hồng ngoại gần từ Mặt Trời cũng bị hơi nước hấp thụ (các khe trong hình phổ). Tài liệu giữ ý chính: năng lượng bị giữ lại trên đường đi ra ở bước sóng dài hơn.</td></tr>
+        <tr><td>"Tác động của sol khí nhân sinh lên hệ thống khí hậu là yếu."</td><td>IPCC cho thấy sol khí do con người có tác dụng làm mát đáng kể, che bớt một phần sự nóng lên do khí nhà kính (thanh "tác động nhân sinh khác" trong hình, khoảng −0,25 °C). Tác động ròng của con người vẫn rõ ràng là làm ấm, như chương nói. Tài liệu ghi sol khí làm mát "phần nào".</td></tr>
+        <tr><td>"Dị thường 1,25 ℃ (34,3°F)"; "-0,28 ℃ (31,5°F)".</td><td>Sai khi đổi đơn vị: một <b>hiệu</b> nhiệt độ chỉ nhân với 1,8, nên 1,25 °C = 2,25 °F và −0,28 °C ≈ −0,5 °F (chương đã đổi như nhiệt độ). Giá trị dị thường còn phụ thuộc thời kỳ tham chiếu; chương lẫn lộn 1951–1980 (đồ thị) và 1900–2000 (văn bản).</td></tr>
+        <tr><td>Lớp nước trên cùng 701,4 m của đại dương "đã tăng -17,6°C (0,3℉) từ 1969".</td><td>Sai khi đổi đơn vị: tăng 0,3 °F là khoảng <b>+0,17 °C</b> (−17,6 °C là giá trị khi đổi 0,3 °F như một nhiệt độ). 701,4 m là đổi ngược từ 2.300 ft; nguồn ghi khoảng 700 m. Tài liệu ghi 0,17 °C (0,3 °F) và 700 m.</td></tr>
+        <tr><td>"20409 tấn (2040 gigaton) CO2" từ năm 1750.</td><td>Sai đơn vị: 2.040 gigatấn là 2.040 tỉ tấn. Giá trị IPCC AR5 là 2.040 ± 310 Gt CO<sub>2</sub> cho 1750–2011, và mức tăng 40% CO<sub>2</sub> cũng tính đến 2011. Tài liệu ghi rõ mốc năm.</td></tr>
+        <tr><td>"NASA thường xuyên công bố số đo tại scripps.ucsd.edu"; Mauna Loa đo CO<sub>2</sub> "từ 1957".</td><td>Trang Keeling Curve do Viện Hải dương học Scripps vận hành (NOAA có chuỗi số liệu Mauna Loa song song). Chuỗi đo liên tục của Keeling ở Mauna Loa bắt đầu tháng 3/1958, như phần tóm tắt của chính chương; tài liệu dùng 1958.</td></tr>
+        <tr><td>Đường cong Keeling "tăng theo hàm mũ".</td><td>Tốc độ tăng cao dần qua từng thập niên nên đường cong ngày càng dốc (NOAA: khoảng 0,8 ppm/năm thập niên 1960, khoảng 2,4 ppm/năm thập niên 2010). Gọi là hàm mũ đúng nghĩa thì không chặt; tài liệu ghi mức tăng ngày càng dốc.</td></tr>
+        <tr><td>Nam Cực tan "1189 tấn (118 gigaton)" và Greenland "2819 tấn (281 gigaton)" mỗi năm.</td><td>Sai đơn vị: giá trị là 118 và 281 <b>gigatấn</b> mỗi năm (số liệu GRACE của NASA thời đó). Tài liệu dùng gigatấn.</td></tr>
+        <tr><td>Tỉ lệ băng già giảm "từ 20% năm 1985 xuống 3% năm 2015".</td><td>Đúng với băng biển Bắc Cực già nhất, trên bốn tuổi (NOAA Arctic Report Card 2015). Tài liệu ghi rõ nhóm tuổi.</td></tr>
+        <tr><td>Bão "tăng về tần suất, cường độ và thời gian" từ thập niên 1980.</td><td>IPCC (AR6, 2021) cho rằng tỉ lệ bão mạnh (cấp 3–5) có thể đã tăng trong bốn thập niên qua, nhưng <b>độ tin cậy thấp</b> về xu hướng dài hạn của tổng số cơn bão. Tài liệu ghi tần suất là kém chắc chắn hơn.</td></tr>
+        <tr><td>Tóm tắt: axit cacbonic "đang làm tăng pH của đại dương".</td><td>Ngược: thêm axit cacbonic làm <b>giảm</b> pH (đại dương axit hơn), như mục 15.2.5 nói. Tài liệu ghi pH giảm.</td></tr>
+        <tr><td>Đại Tân Sinh là "65 triệu năm" gần đây.</td><td>Niên đại hiện hành cho điểm bắt đầu Đại Tân Sinh là <b>66,0 triệu năm</b> trước (Bảng Thời địa tầng Quốc tế). Tài liệu dùng 66.</td></tr>
+        <tr><td>"Thời kỳ ấm này gọi là Cực đại Nhiệt Paleocen–Eocen."</td><td>PETM là một đợt tăng vọt ngắn, vài trăm nghìn năm, khoảng 56 triệu năm trước. Khoảng ấm dài hơn sau đó, khoảng 53–49 triệu năm trước, là Tối ưu Khí hậu Eocen Sớm. Tài liệu mô tả Eocen Sớm là thời ấm nhất, với PETM là một đợt tăng vọt trong đó.</td></tr>
+        <tr><td>"Khoảng 15 triệu năm trước" núi lửa "tạo nên eo đất Panama", làm giảm truyền nhiệt về cực và làm lạnh Nam Cực.</td><td>Còn tranh cãi. Phần lớn nghiên cứu xác định eo đất khép kín hoàn toàn khoảng <b>2,8 triệu năm</b> trước (O'Dea và cs. 2016, <i>Science Advances</i>), dù một số cho rằng đã có kết nối một phần sớm hơn, khoảng 15–13 triệu năm. Quan điểm thông thường là việc khép kín làm mạnh dòng Gulf Stream và giúp dải băng Bắc Bán Cầu phát triển. Tài liệu giữ niên đại của chương trong bảng nhưng ghi chú.</td></tr>
+        <tr><td>"Đến 5 triệu năm trước" dải băng đã bắt đầu phát triển ở Bắc Mỹ và Bắc Âu.</td><td>Các dải băng lớn ở Bắc Bán Cầu thường được xác định khoảng 2,7 triệu năm trước (giai đoạn băng hà Bắc Bán Cầu tăng mạnh); băng nhỏ sớm hơn còn tranh cãi. Tài liệu giữ niên đại của chương với ghi chú "(theo chương)".</td></tr>
+        <tr><td>"Trong các gian băng, những pha rất ngắn còn ấm hơn gọi là interstadial."</td><td>Sai: <b>interstadial</b> (gian băng phụ) là pha ngắn, ôn hòa hơn <b>trong một thời kỳ băng hà</b>, không phải pha ấm hơn trong gian băng. Tài liệu dùng nghĩa chuẩn.</td></tr>
+        <tr><td>Nhiệt độ thế Pleistocen dao động "trong khoảng gần 10°C".</td><td>Biên độ đó hợp với nhiệt độ vùng cực như Nam Cực (các đường lõi băng). Nhiệt độ trung bình toàn cầu thay đổi ít hơn giữa băng hà và gian băng, khoảng 4–7 °C (IPCC). Tài liệu giữ con số của chương.</td></tr>
+        <tr><td>Đồng vị bo: CO<sub>2</sub> trên 2.000 ppm, "pH cao hơn" khoảng 60 triệu năm trước, rồi "pH giảm rõ" khi CO<sub>2</sub> giảm.</td><td>Ngược: CO<sub>2</sub> cao nghĩa là pH <b>thấp hơn</b>, và pH <b>tăng</b> khi CO<sub>2</sub> giảm (Pearson và Palmer 2000, <i>Nature</i>). Tài liệu ghi đúng chiều.</td></tr>
+        <tr><td>CO<sub>2</sub> thấp nhất trong lõi băng "khoảng 170 ppm" (15.3.2) nhưng "khoảng 185 ppm" (15.4.2).</td><td>Cả hai đều có trong số liệu: giá trị đơn lẻ thấp nhất trong lõi EPICA Dome C khoảng 172 ppm (khoảng 667.000 năm trước); mức thấp điển hình thời băng hà khoảng 180–190 ppm. Tài liệu ghi 170–185 ppm.</td></tr>
+        <tr><td>"Hiện nay hàm lượng CO2 khí quyển trên 410 ppm" / "trên 417 ppm năm 2022".</td><td>Đã cũ: trung bình năm tại Mauna Loa của NOAA khoảng <b>424,6 ppm năm 2024</b>. Tài liệu ghi trên 420 ppm và nêu giá trị 2024.</td></tr>
+        <tr><td>Phấn hoa thông nhiều hơn trong thời kỳ băng hà và ít hơn trong gian băng (Whitlock và Bartlein 1997).</td><td>Đơn giản hóa. Ở hồ Carp, thời kỳ cực băng là thảo nguyên lạnh với ngải đắng (<i>Artemisia</i>) và cỏ chiếm ưu thế; rừng hoặc rừng thưa có thông chiếm ưu thế xuất hiện cả trong đới gian băng lẫn đới gian băng phụ mát hơn. Tài liệu chỉ ghi thảm thực vật thay đổi giữa thời băng hà và gian băng.</td></tr>
+        <tr><td>Nhiên liệu hóa thạch và công nghiệp "đóng góp 78% toàn bộ phát thải từ 1970."</td><td>Lời văn của IPCC AR5 là chúng đóng góp khoảng 78% <b>mức tăng</b> tổng phát thải khí nhà kính từ 1970 đến 2010. Tài liệu dùng cách diễn đạt này.</td></tr>
+        <tr><td>Tóm tắt: "mức tăng Keeling hơn 100 ppm trong 50 năm".</td><td>Từ 315 ppm (1958) lên 417 ppm (2022) là khoảng 100 ppm trong 64 năm. Ý chính vẫn đúng; khoảng thời gian dài hơn.</td></tr>
+        <tr><td>97% nhà khoa học khí hậu đồng thuận.</td><td>Được nhiều nghiên cứu ủng hộ (ví dụ Cook và cs. 2013; các khảo sát sau này cho thấy hơn 99% bài báo bình duyệt gần đây đồng thuận). Giữ nguyên.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="credits">
+  <h2 class="sec">Nguồn &amp; trích dẫn</h2>
+  <p class="small">Nội dung tóm tắt từ <a href="https://slcc.pressbooks.pub/introgeology/chapter/15-global-climate-change/" target="_blank" rel="noopener"><i>An Introduction to Geology</i>, Chương 15</a>, © 2017 Chris Johnson, Matthew D. Affolter, Paul Inkenbrandt và Cam Mosher, giấy phép <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. Tác giả và giấy phép của từng ảnh ghi ngay dưới ảnh.</p>
+  <ul class="small">
+    <li>Vẽ cho tài liệu này theo mô tả của chương: thời gian lưu giữ cacbon, hiệu ứng nhà kính qua ba bước, hai vòng phản hồi, đồng vị oxy trong thời kỳ băng hà, và biểu đồ thanh CO<sub>2</sub>.</li>
+    <li>Nguồn bên ngoài được ghi ở nơi sử dụng: NOAA Global Monitoring Laboratory (CO<sub>2</sub> năm 2024), Wikimedia Commons (giấy phép của đồ thị vòng gỗ Yamal), và các nguồn khác ghi trong phần kiểm chứng.</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<button class="fab" id="notesBtn" type="button" aria-controls="notes" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Thuật ngữ
+</button>
+<button class="fab hide" id="toTop" type="button" aria-label="Lên đầu trang">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<aside class="notes" id="notes" hidden aria-label="Thuật ngữ">
+  <header>
+    <div><h2>Thuật ngữ · Chương 15</h2><button class="close" id="notesClose" type="button" aria-label="Đóng bảng thuật ngữ">×</button></div>
+    <input id="termSearch" type="search" placeholder="Tìm thuật ngữ và định nghĩa" autocomplete="off" aria-label="Tìm thuật ngữ và định nghĩa">
+    <div class="count" id="termCount"></div>
+  </header>
+  <dl id="termList"></dl>
+</aside>
+</div>
+
+<script type="application/json" id="terms">
+[
+ [
+  "hệ thống",
+  "outcomes",
+  "Một nhóm đối tượng và quá trình tương tác với nhau. (EN: system)"
+ ],
+ [
+  "khoa học hệ thống Trái Đất",
+  "outcomes",
+  "Ngành nghiên cứu các hệ thống tương tác của Trái Đất (địa quyển, khí quyển, thủy quyển, băng quyển, sinh quyển) và cách chúng thay đổi. (EN: Earth System Science)"
+ ],
+ [
+  "địa quyển",
+  "outcomes",
+  "Phần rắn của Trái Đất: đá và khoáng vật. (EN: geosphere)"
+ ],
+ [
+  "khí quyển",
+  "outcomes",
+  "Lớp khí bao quanh Trái Đất. (EN: atmosphere)"
+ ],
+ [
+  "thủy quyển",
+  "outcomes",
+  "Toàn bộ nước của Trái Đất: đại dương, hồ, sông, nước dưới đất và hơi nước. (EN: hydrosphere)"
+ ],
+ [
+  "băng quyển",
+  "outcomes",
+  "Phần đóng băng của Trái Đất: sông băng, dải băng, băng biển, tuyết và đất đóng băng vĩnh cửu. (EN: cryosphere)"
+ ],
+ [
+  "sinh quyển",
+  "outcomes",
+  "Toàn bộ sinh vật trên Trái Đất và nơi chúng sống. (EN: biosphere)"
+ ],
+ [
+  "nhân sinh",
+  "outcomes",
+  "Do con người gây ra hoặc tạo ra. (EN: anthropogenic)"
+ ],
+ [
+  "biến đổi khí hậu",
+  "outcomes",
+  "Những thay đổi và xu hướng chậm, dài hạn của nhiệt độ và giáng thủy, ở một vùng hoặc toàn Trái Đất. (EN: climate change)"
+ ],
+ [
+  "thành phần vết",
+  "s15-1",
+  "Các khí chiếm dưới 1% khí quyển, như CO₂, hơi nước, neon, heli và mêtan. (EN: trace components)"
+ ],
+ [
+  "khí nhà kính",
+  "s15-1",
+  "Khí hấp thụ bức xạ hồng ngoại sóng dài đi ra và vì thế làm hành tinh ấm lên; chủ yếu là hơi nước, cacbon điôxit, mêtan và đinitơ oxit. (EN: greenhouse gas)"
+ ],
+ [
+  "nhiên liệu hóa thạch",
+  "s15-1",
+  "Nhiên liệu như than đá, dầu mỏ, khí thiên nhiên hình thành từ xác sinh vật cổ, chứa cacbon và năng lượng Mặt Trời được giữ lại từ hàng triệu năm trước. (EN: fossil fuel)"
+ ],
+ [
+  "quang hợp",
+  "s15-1",
+  "Quá trình thực vật dùng ánh sáng Mặt Trời biến cacbon điôxit và nước thành đường và oxy: CO₂ + H₂O + ánh sáng → đường + O₂. (EN: photosynthesis)"
+ ],
+ [
+  "chu trình cacbon",
+  "s15-1",
+  "Sự di chuyển của cacbon giữa khí quyển, sinh vật, đại dương, đá và manti; gồm phần sinh học nhanh và phần địa chất chậm. (EN: carbon cycle)"
+ ],
+ [
+  "bể chứa cacbon",
+  "s15-1",
+  "Nơi cacbon được lưu giữ một thời gian, như khí quyển, đại dương, than đá, đá cacbonat hay manti. (EN: carbon reservoir)"
+ ],
+ [
+  "đất đóng băng vĩnh cửu",
+  "s15-1",
+  "Đất đóng băng quanh năm ở vĩ độ cao, chủ yếu ở Bắc Bán Cầu; chứa lượng lớn chất hữu cơ. (EN: permafrost)"
+ ],
+ [
+  "bicacbonat",
+  "s15-1",
+  "Ion hòa tan HCO₃⁻, tạo thành khi CO₂ phản ứng với nước và khoáng vật; đại dương lưu giữ cacbon dưới dạng này. (EN: bicarbonate)"
+ ],
+ [
+  "hút chìm",
+  "s15-1",
+  "Sự chìm của một mảng kiến tạo xuống dưới mảng khác vào manti, có thể mang theo trầm tích chứa cacbon. (EN: subduction)"
+ ],
+ [
+  "Bẫy Siberia",
+  "s15-1",
+  "Đợt phun trào bazan lũ khổng lồ ở Siberia khoảng 250 triệu năm trước; lượng CO₂ của nó gây nóng lên mạnh. (EN: Siberian Traps)"
+ ],
+ [
+  "thủy phân",
+  "s15-1",
+  "Phong hóa hóa học trong đó nước phản ứng với khoáng vật như fenspat tạo thành sét; quá trình này tiêu thụ CO₂ từ không khí. (EN: hydrolysis)"
+ ],
+ [
+  "hiệu ứng nhà kính",
+  "s15-1",
+  "Sự ấm lên của Trái Đất do khí nhà kính hấp thụ bức xạ hồng ngoại nhiệt từ bề mặt và giữ lại một phần nhiệt đó trong khí quyển. (EN: greenhouse effect)"
+ ],
+ [
+  "bức xạ Mặt Trời",
+  "s15-1",
+  "Năng lượng từ Mặt Trời, chủ yếu là tử ngoại, ánh sáng khả kiến và hồng ngoại ở bước sóng ngắn. (EN: solar radiation)"
+ ],
+ [
+  "hồng ngoại nhiệt",
+  "s15-1",
+  "Bức xạ hồng ngoại sóng dài do vật ấm như bề mặt Trái Đất phát ra; cảm nhận như hơi nóng và bị khí nhà kính hấp thụ. (EN: thermal infrared)"
+ ],
+ [
+  "cân bằng năng lượng",
+  "s15-1",
+  "Sự cân đối giữa năng lượng Mặt Trời Trái Đất hấp thụ và nhiệt nó bức xạ ngược ra vũ trụ (ngân sách năng lượng). (EN: energy budget)"
+ ],
+ [
+  "suất phản chiếu",
+  "s15-1",
+  "Mức độ một bề mặt phản xạ ánh sáng Mặt Trời (albedo); tuyết và băng có suất phản chiếu cao, biển và đất tối có suất phản chiếu thấp. (EN: albedo)"
+ ],
+ [
+  "sol khí",
+  "s15-1",
+  "Hạt hoặc giọt rất nhỏ lơ lửng trong không khí, như bụi, muội, sunfat từ đốt than hay núi lửa; nhiều loại phản xạ ánh nắng và làm hành tinh mát đi. (EN: aerosol)"
+ ],
+ [
+  "phản hồi dương",
+  "s15-1",
+  "Quá trình mà kết quả của nó tăng cường chính nguyên nhân, khuếch đại thay đổi (ví dụ băng tan làm giảm suất phản chiếu, gây nóng thêm). (EN: positive feedback)"
+ ],
+ [
+  "phản hồi âm",
+  "s15-1",
+  "Quá trình mà kết quả của nó làm yếu chính nguyên nhân, làm dịu thay đổi (ví dụ thêm CO₂ giúp cây phát triển, cây lại hấp thụ thêm CO₂). (EN: negative feedback)"
+ ],
+ [
+  "axit cacbonic",
+  "s15-1",
+  "Axit yếu H₂CO₃ tạo thành khi cacbon điôxit hòa tan trong nước. (EN: carbonic acid)"
+ ],
+ [
+  "phong hóa hóa học",
+  "s15-1",
+  "Sự phá hủy đá bằng phản ứng hóa học, chẳng hạn với axit cacbonic, làm biến đổi khoáng vật của đá. (EN: chemical weathering)"
+ ],
+ [
+  "biến đổi khí hậu do con người",
+  "s15-2",
+  "Biến đổi khí hậu do hoạt động của con người gây ra, chủ yếu do thải thêm khí nhà kính vào khí quyển. (EN: anthropogenic climate change)"
+ ],
+ [
+  "dị thường nhiệt độ",
+  "s15-2",
+  "Hiệu giữa nhiệt độ đo được và nhiệt độ trung bình của thời kỳ tham chiếu; dương nghĩa là ấm hơn trung bình. (EN: temperature anomaly)"
+ ],
+ [
+  "thời kỳ tham chiếu",
+  "s15-2",
+  "Khoảng năm (từ 30 năm trở lên, như 1951–1980 hay 1900–2000) có nhiệt độ trung bình dùng làm mốc tính dị thường. (EN: reference period)"
+ ],
+ [
+  "nhiệt dung riêng",
+  "s15-2",
+  "Lượng nhiệt cần để làm một đơn vị khối lượng chất nóng thêm một độ; của nước rất cao, nên đại dương hấp thụ nhiều nhiệt mà chỉ ấm lên chút ít. (EN: specific heat)"
+ ],
+ [
+  "đường cong Keeling",
+  "s15-2",
+  "Chuỗi số liệu CO₂ khí quyển đo liên tục tại Đài quan sát Mauna Loa, Hawaii, từ năm 1958, mang tên Charles Keeling. (EN: Keeling Curve)"
+ ],
+ [
+  "giãn nở vì nhiệt",
+  "s15-2",
+  "Sự tăng thể tích của chất rắn, lỏng hoặc khí khi nóng lên; nước biển ấm giãn nở làm mực nước biển dâng. (EN: thermal expansion)"
+ ],
+ [
+  "axit hóa đại dương",
+  "s15-2",
+  "Sự giảm pH của đại dương khi nước biển hấp thụ CO₂ và tạo axit cacbonic, khiến sinh vật khó tạo vỏ canxi cacbonat. (EN: ocean acidification)"
+ ],
+ [
+  "pH",
+  "s15-2",
+  "Thang đo độ axit: giá trị thấp hơn là axit hơn, cao hơn là bazơ hơn. (EN: pH)"
+ ],
+ [
+  "ốc chân cánh",
+  "s15-2",
+  "Loài ốc biển nhỏ bơi tự do (pteropod) có vỏ canxi cacbonat mỏng, nhạy cảm với axit hóa đại dương. (EN: pteropod)"
+ ],
+ [
+  "trùng lỗ",
+  "s15-2",
+  "Sinh vật biển đơn bào (foraminifera, động vật nguyên sinh) có vỏ canxi cacbonat; vỏ hóa thạch trong trầm tích đáy biển ghi lại hóa học và nhiệt độ đại dương xưa. (EN: foraminifera)"
+ ],
+ [
+  "băng hà Huron",
+  "s15-3",
+  "Thời kỳ băng hà lớn cổ nhất được biết, khoảng 2,5–2,1 tỉ năm trước, gắn với Sự kiện Ôxy hóa Lớn. (EN: Huronian glaciation)"
+ ],
+ [
+  "Sự kiện Ôxy hóa Lớn",
+  "s15-3",
+  "Sự xuất hiện oxy tự do trong khí quyển khoảng 2,4 tỉ năm trước; oxy có lẽ đã phá hủy nhiều mêtan, làm Trái Đất lạnh đi. (EN: Great Oxygenation Event)"
+ ],
+ [
+  "Trái Đất quả cầu tuyết",
+  "s15-3",
+  "Giả thuyết còn tranh cãi rằng Trái Đất đóng băng gần như hoàn toàn trong các thời kỳ băng hà cuối Nguyên Sinh, khoảng 700 triệu năm trước. (EN: Snowball Earth)"
+ ],
+ [
+  "Trái Đất quả cầu tuyết tan",
+  "s15-3",
+  "Giả thuyết đối lập (Slushball Earth), cho rằng một phần đại dương xích đạo vẫn không đóng băng trong các thời kỳ băng hà cuối Nguyên Sinh. Tên tiếng Việt do tài liệu này đặt, chưa thấy trong nguồn chính thức. (EN: Slushball Earth)"
+ ],
+ [
+  "diamictit",
+  "s15-3",
+  "Đá trầm tích gồm mảnh vụn lớn nằm rải rác trong nền hạt mịn, giống trầm tích băng tích đã thạch hóa. (EN: diamictite)"
+ ],
+ [
+  "tilit",
+  "s15-3",
+  "Trầm tích băng tích (till) đã thạch hóa; một loại diamictit, là bằng chứng của băng hà cổ. (EN: tillite)"
+ ],
+ [
+  "Cực đại Nhiệt Paleocen–Eocen",
+  "s15-3",
+  "Một đợt nóng toàn cầu cực độ ngắn ngủi khoảng 56 triệu năm trước, ở ranh giới thế Paleocen và Eocen (PETM). (EN: Paleocene-Eocene Thermal Maximum)"
+ ],
+ [
+  "Hải lưu Quanh Nam Cực",
+  "s15-3",
+  "Dòng hải lưu chảy từ tây sang đông quanh châu Nam Cực, mở ra nhờ eo biển Drake khoảng 40 triệu năm trước; nó cô lập Nam Cực khỏi các vùng nước ấm. Tên tiếng Việt chưa thấy trong nguồn chính thức. (EN: Antarctic Circumpolar Current)"
+ ],
+ [
+  "chu kỳ Milankovitch",
+  "s15-3",
+  "Những thay đổi có chu kỳ của quỹ đạo và trục Trái Đất (độ lệch tâm, độ nghiêng trục, tuế sai) làm thay đổi lượng ánh nắng và điều nhịp các chu kỳ băng hà. (EN: Milankovitch cycles)"
+ ],
+ [
+  "gian băng",
+  "s15-3",
+  "Thời kỳ ấm giữa các đợt băng tiến trong một kỷ băng hà; thế Holocen là gian băng hiện nay. (EN: interglacial)"
+ ],
+ [
+  "gian băng phụ",
+  "s15-3",
+  "Một pha ngắn, ôn hòa hơn trong thời kỳ băng hà, kém ấm và ngắn hơn gian băng (interstadial). Tên tiếng Việt chưa thấy trong nguồn chính thức. (EN: interstadial)"
+ ],
+ [
+  "thế Holocen",
+  "s15-3",
+  "Thế hiện tại, khoảng 11.700 năm gần đây; là gian băng hiện nay. (EN: Holocene)"
+ ],
+ [
+  "Dryas Trẻ",
+  "s15-3",
+  "Đợt lạnh đột ngột ở Bắc Bán Cầu khoảng 12.000 năm trước, gần cuối thời kỳ băng hà gần nhất. (EN: Younger Dryas)"
+ ],
+ [
+  "Tối ưu khí hậu Holocen",
+  "s15-3",
+  "Thời kỳ ấm khoảng 6.000 năm trước, không ấm ở mọi nơi cùng lúc và không ấm bằng hiện nay. (EN: Holocene Climatic Optimum)"
+ ],
+ [
+  "chỉ thị gián tiếp",
+  "s15-3",
+  "Dấu hiệu sinh học, hóa học hoặc vật lý lưu giữ trong đá, trầm tích hay băng, gián tiếp ghi lại khí hậu quá khứ (proxy). (EN: proxy indicator)"
+ ],
+ [
+  "đồng vị",
+  "s15-3",
+  "Dạng của một nguyên tố có số nơtron khác nên khối lượng khác, như oxy-16 và oxy-18. (EN: isotope)"
+ ],
+ [
+  "δ18O",
+  "s15-3",
+  "Tỉ số oxy-18 trên oxy-16 trong mẫu so với chuẩn; trong vỏ trùng lỗ, giá trị cao hơn nghĩa là nhiều băng trên đất liền hơn và nước lạnh hơn. (EN: δ18O)"
+ ],
+ [
+  "khối phổ kế",
+  "s15-3",
+  "Thiết bị phân tách nguyên tử và phân tử theo khối lượng để đo thành phần của mẫu, như không khí cổ trong lõi băng. (EN: mass spectrometer)"
+ ],
+ [
+  "quần hợp hóa thạch",
+  "s15-3",
+  "Nhóm loài hóa thạch gặp cùng nhau trong một lớp; phản ánh điều kiện khi chúng sống (assemblage). (EN: assemblage)"
+ ],
+ [
+  "cổ khí hậu",
+  "s15-3",
+  "Khí hậu của một thời kỳ trong quá khứ địa chất; nghiên cứu cổ khí hậu tái dựng nó từ các chỉ thị gián tiếp. (EN: paleoclimate)"
+ ],
+ [
+  "thuyết biến đổi khí hậu do con người",
+  "s15-4",
+  "Lý thuyết được ủng hộ vững chắc rằng con người gây ra phần lớn biến đổi khí hậu hiện nay, chủ yếu do đốt nhiên liệu hóa thạch. (EN: Theory of Anthropogenic Climate Change)"
+ ],
+ [
+  "dấu vân tay đồng vị",
+  "s15-4",
+  "Tỉ số cacbon-13 trên cacbon-12 của CO₂ từ nhiên liệu hóa thạch, khác với của khí quyển, cho phép nhận ra cacbon do con người thải vào không khí. (EN: isotopic fingerprint)"
+ ],
+ [
+  "đương lượng CO2",
+  "s15-4",
+  "Đơn vị quy mọi khí nhà kính về lượng CO₂ có cùng tác dụng làm ấm, để cộng được các khí khác nhau (CO₂-eq). (EN: CO2-equivalent)"
+ ]
+]
+</script>
+<script src="assets/guide.js"></script>
+</body>
+</html>

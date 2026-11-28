@@ -1,0 +1,1116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Global Climate Change</title>
+<meta name="description" content="Unit 15 study guide for An Introduction to Geology, Chapter 15: Global Climate Change.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/guide.css">
+<style>
+/* Unit 15 palette: warming stripes. Heat crimson with cool-stripe blue and burning-fuel amber; header bands run from cool blue through pale to orange and red, like a warming-stripes chart, over a dark carbon-black sky. */
+:root{
+  --fig-prefix:"Figure 15."; --tbl-prefix:"Table 15.";
+  --bg:#faf6f6; --surface:#ffffff; --surface-2:#f4e9eb; --fg:#2a1a1e; --muted:#6e5a60; --line:#ecdadd;
+  --accent:#ad1f52; --accent-soft:#f9dfe8; --ochre:#2b5f9e; --ochre-soft:#dde8f6; --rust:#c25400;
+  --s1:#3a6fb0; --s2:#f2d0c4; --s3:#e0603a; --s4:#b01e3c; --s5:#22101a;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#150d11; --surface:#1d1318; --surface-2:#2a1b22; --fg:#f2e6ea; --muted:#bba5ad; --line:#3a2830;
+  --accent:#f27aa3; --accent-soft:#4a1a2d; --ochre:#8bb8ee; --ochre-soft:#1c2c42; --rust:#ffa25c;
+  --s1:#2c568a; --s2:#8a5a52; --s3:#b4492c; --s4:#8a1530; --s5:#0b0508; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#150d11; --surface:#1d1318; --surface-2:#2a1b22; --fg:#f2e6ea; --muted:#bba5ad; --line:#3a2830;
+  --accent:#f27aa3; --accent-soft:#4a1a2d; --ochre:#8bb8ee; --ochre-soft:#1c2c42; --rust:#ffa25c;
+  --s1:#2c568a; --s2:#8a5a52; --s3:#b4492c; --s4:#8a1530; --s5:#0b0508; color-scheme:dark}
+/* moving dashes show energy flow in the greenhouse figure */
+.gh-flow{stroke-dasharray:10 7;animation:ghflow 1.1s linear infinite}
+@keyframes ghflow{to{stroke-dashoffset:-17}}
+
+</style>
+</head>
+<body>
+<div lang="en">
+<header class="hero" id="top">
+  <div class="strata" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Unit 15 · Chapter 15 · An Introduction to Geology</div>
+      <h1>Global Climate Change</h1>
+      <p>How the atmosphere sets Earth's temperature through the greenhouse effect and the energy budget; the evidence that climate is changing now; how rocks, ice, and fossils record past climates; and why today's change is caused by people.</p>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="toc" aria-label="Contents">
+    <div class="navbar" role="group" aria-label="Page tools">
+      <a class="btn tbtn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>All units</span></a>
+      <a class="btn tbtn lbtn" href="unit15-vi.html" lang="vi" hreflang="vi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Tiếng Việt</span></a>
+      <button class="btn tbtn" id="themeBtn" type="button" aria-label="Toggle light or dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Dark mode</span>
+      </button>
+    </div>
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#outcomes">Learning outcomes</a></li>
+      <li><a href="#s15-1"><span class="num">15.1</span>Earth's temperature</a>
+        <ol>
+          <li><a href="#s15-1-1"><span class="num">15.1.1</span>Composition of the atmosphere</a></li>
+          <li><a href="#s15-1-2"><span class="num">15.1.2</span>Carbon cycle</a></li>
+          <li><a href="#s15-1-3"><span class="num">15.1.3</span>Greenhouse effect</a></li>
+          <li><a href="#s15-1-4"><span class="num">15.1.4</span>Earth's energy budget</a></li>
+        </ol>
+      </li>
+      <li><a href="#s15-2"><span class="num">15.2</span>Evidence of recent change</a>
+        <ol>
+          <li><a href="#s15-2-1"><span class="num">15.2.1</span>Global temperature rise</a></li>
+          <li><a href="#s15-2-2"><span class="num">15.2.2</span>Carbon dioxide</a></li>
+          <li><a href="#s15-2-3"><span class="num">15.2.3</span>Melting ice</a></li>
+          <li><a href="#s15-2-4"><span class="num">15.2.4</span>Rising sea level</a></li>
+          <li><a href="#s15-2-5"><span class="num">15.2.5</span>Ocean acidification</a></li>
+          <li><a href="#s15-2-6"><span class="num">15.2.6</span>Extreme weather</a></li>
+        </ol>
+      </li>
+      <li><a href="#s15-3"><span class="num">15.3</span>Prehistoric climate change</a>
+        <ol>
+          <li><a href="#s15-3-1"><span class="num">15.3.1</span>Past glaciations</a></li>
+          <li><a href="#s15-3-2"><span class="num">15.3.2</span>Proxy indicators</a></li>
+        </ol>
+      </li>
+      <li><a href="#s15-4"><span class="num">15.4</span>Anthropogenic causes</a>
+        <ol>
+          <li><a href="#s15-4-1"><span class="num">15.4.1</span>Scientific consensus</a></li>
+          <li><a href="#s15-4-2"><span class="num">15.4.2</span>Sources of greenhouse gases</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#factcheck">Fact-check notes</a></li>
+      <li><a href="#credits">Credits</a></li>
+    </ol>
+  </nav>
+
+<main>
+<section id="outcomes">
+  <h2 class="sec">Learning outcomes</h2>
+  <p class="lead">By the end of Chapter 15 you should be able to do each of these. The tag shows where it is covered.</p>
+  <ul class="outcomes">
+    <li><a class="tag" href="#s15-1">15.1</a><span>Describe the role of greenhouse gases in climate change and the sources of those gases.</span></li>
+    <li><a class="tag" href="#s15-1">15.1</a><span>Explain Earth's energy budget and how positive and negative feedback mechanisms can influence climate.</span></li>
+    <li><a class="tag" href="#s15-2">15.2</a><span>Describe which parts of the environment are changing because of anthropogenic climate change.</span></li>
+    <li><a class="tag" href="#s15-3">15.3</a><span>Explain how we know about climates in the geologic past.</span></li>
+    <li><a class="tag" href="#s15-4">15.4</a><span>Describe the causes of recent climate change, particularly the role of humans in the overall climate balance.</span></li>
+  </ul>
+  <div class="callout">
+    <h4>How to use this guide</h4>
+    <p>Underlined words are key terms. Click one, or open <b>Key terms</b> at the bottom right, to read and search every definition from this chapter. The chapter moves from how the atmosphere sets Earth's temperature (15.1), to the evidence that climate is changing now (15.2), to how geologists read past climates from rocks, ice, and fossils (15.3), and finally to why the present change is caused by people (15.4).</p>
+  </div>
+  <div class="spheres">
+    <div class="sphere"><b><span class="dot" style="background:var(--rust)"></span>Energy in, energy out</b>Greenhouse gases trap outgoing heat.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--accent)"></span>Change now</b>Warmer air and ocean, less ice, higher seas.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--ochre)"></span>Past climates</b>Read from proxies in ice, mud, and wood.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s4)"></span>Human cause</b>Fossil-fuel CO<sub>2</sub>, fingerprinted by isotopes.</div>
+  </div>
+  <div class="pair">
+    <figure id="fig-marble">
+      <div class="frame"><img src="images/unit15/bluemarble.webp" alt="The whole Earth seen from space, with Africa, Arabia, and the Antarctic ice cap under swirls of white cloud." loading="lazy" width="767" height="768" style="max-height:300px;width:auto;height:auto"></div>
+      <figcaption>The "Blue Marble", photographed from Apollo 17 in 1972: a finite planet of interacting systems. It was most likely taken by Harrison "Jack" Schmitt, the first and only geologist on the Moon.<span class="credit">NASA/Apollo 17, public domain (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Earth's systems</h4>
+      <p>A <button class="term" data-term="system">system</button> is a group of interacting objects and processes. <button class="term" data-term="Earth System Science">Earth System Science</button> studies five of them:</p>
+      <ul>
+        <li><button class="term" data-term="geosphere">Geosphere</button>: rocks</li>
+        <li><button class="term" data-term="atmosphere">Atmosphere</button>: gases</li>
+        <li><button class="term" data-term="hydrosphere">Hydrosphere</button>: water</li>
+        <li><button class="term" data-term="cryosphere">Cryosphere</button>: ice</li>
+        <li><button class="term" data-term="biosphere">Biosphere</button>: living things</li>
+      </ul>
+      <p>A change in one system affects the others, whether it comes from natural cycles or from <button class="term" data-term="anthropogenic">anthropogenic</button> (human-driven) forces.</p>
+    </div>
+  </div>
+  <p>Knowing how these systems interact lets us understand <b>how and why human activity causes today's climate change</b>, and lets us tell natural processes from human ones in the geologic record. Earth's temperature and climate depend mostly on the gases in the atmosphere, on ocean circulation, and on the land surface: its rocks, glaciers, and plants.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Weather and climate are not the same thing.</caption>
+      <thead><tr><th></th><th>Weather</th><th>Climate</th></tr></thead>
+      <tbody>
+        <tr><td><b>What</b></td><td>Short-term temperature and precipitation</td><td>The range of temperature and precipitation averaged over the long term for a region</td></tr>
+        <tr><td><b>Time span</b></td><td>Days and weeks</td><td>Usually a 30-year average as the baseline</td></tr>
+        <tr><td><b>Example</b></td><td>The cold US winters of 2013 and 2014</td><td>The same winters were record-warm for the rest of the Earth</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>So one cold winter does not mean the globe is cooling. <button class="term" data-term="climate change">Climate change</button> means slow, long-term changes and trends in temperature and precipitation, for one area or for the whole Earth.</p>
+</section>
+
+<section id="s15-1">
+  <h2 class="sec"><span class="n">15.1</span>Earth's temperature</h2>
+  <p>Without an atmosphere, Earth would swing between extreme day and night temperatures, like the Moon. The Moon has almost no atmosphere: its days reach about 106 °C (224 °F) and its nights about −183 °C (−298 °F), a range of about 290 °C (522 °F). Earth's atmosphere regulates its temperature.</p>
+
+  <h3 id="s15-1-1">15.1.1 Composition of the atmosphere</h3>
+  <div class="pair">
+    <figure id="fig-atmos">
+      <div class="frame"><img class="diagram" src="images/unit15/atmos.webp" alt="Two pie charts. The upper one shows nitrogen 78.084 percent, oxygen 20.946 percent and argon 0.934 percent; a thin slice of 0.04338 percent is enlarged in the lower pie, which is mostly carbon dioxide (0.0407 percent) with tiny shares of neon, helium, methane, krypton and hydrogen." loading="lazy" width="200" height="417" style="max-height:320px;width:auto;height:auto"></div>
+      <figcaption>Composition of dry air. The tiny slice left over after nitrogen, oxygen, and argon is mostly CO<sub>2</sub> (values for about 2016).<span class="credit">Mysid, public domain (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>What air is made of</h4>
+      <ul>
+        <li><b>78%</b> nitrogen (N<sub>2</sub>)</li>
+        <li><b>21%</b> oxygen (O<sub>2</sub>)</li>
+        <li><b>~1%</b> argon (Ar)</li>
+        <li><b>&lt; 1%</b> <button class="term" data-term="trace components">trace components</button>: CO<sub>2</sub>, water vapor, neon, helium, methane, and others</li>
+        <li>Water vapor varies a lot by region; it averages about 1%.</li>
+      </ul>
+      <p>The trace gases include the important <button class="term" data-term="greenhouse gas">greenhouse gases</button>, which warm and cool the planet.</p>
+    </div>
+  </div>
+  <p>On a geologic time scale, <b>volcanoes</b> add CO<sub>2</sub> to the atmosphere, and <b>weathering</b> removes it by burying it in sediments. Biological processes both add and remove CO<sub>2</sub>.</p>
+  <p>Greenhouse gases <b>absorb part of the long-wave infrared radiation that Earth gives off</b>, so that heat is not lost to space. More greenhouse gas means more heat absorbed and a warmer planet. These gases have little effect on the shorter-wave radiation coming in from the Sun.</p>
+  <div class="pair">
+    <figure id="fig-molecules">
+      <div class="frame"><img class="diagram" src="images/unit15/molecules.webp" alt="Ball-and-stick models of four molecules: water vapor H2O, nitrous oxide N2O, methane CH4 and carbon dioxide CO2." loading="lazy" width="746" height="478"></div>
+      <figcaption>The common greenhouse gases: water vapor, nitrous oxide, methane, and carbon dioxide.<span class="credit">NASA, public domain (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Why CO<sub>2</sub> matters most</h4>
+      <ul>
+        <li><b>Water vapor</b> is the most abundant greenhouse gas, but its amount changes little over time.</li>
+        <li><b>CO<sub>2</sub></b> is much less abundant, but people keep adding it by burning <button class="term" data-term="fossil fuel">fossil fuels</button>, changing land use, and cutting forests. Volcanoes add CO<sub>2</sub> too, at an insignificant rate by comparison.</li>
+        <li>CO<sub>2</sub> <b>stays in the air for hundreds of years</b>.</li>
+        <li>Most of the added CO<sub>2</sub> is <b>"fossil" carbon</b>.</li>
+      </ul>
+    </div>
+  </div>
+  <p>Coal and oil formed from long-dead plants. Those plants made their tissues by <button class="term" data-term="photosynthesis">photosynthesis</button> millions of years ago, and their carbon was stored slowly in rocks and sediments. Burning coal and oil releases that stored solar energy and fossil CO<sub>2</sub> <b>almost instantly</b>, though it took millions of years to collect. This <b>rate of release</b> is the key to today's climate change.</p>
+
+  <h3 id="s15-1-2">15.1.2 Carbon cycle</h3>
+  <p>Earth balances its carbon through two linked <button class="term" data-term="carbon cycle">carbon cycles</button>, and human activity is now rapidly throwing that balance off.</p>
+  <div class="tablewrap">
+    <table>
+      <caption>The two carbon cycles.</caption>
+      <thead><tr><th></th><th>Biological carbon cycle</th><th>Geological carbon cycle</th></tr></thead>
+      <tbody>
+        <tr><td><b>How it works</b></td><td>Living things, mostly plants, take CO<sub>2</sub> from the air by photosynthesis; when they die and decay, the carbon returns to the air.</td><td>Part of the biological carbon is buried: plants become coal and petroleum, organic fragments become organic-rich shale, and shells become limestone.</td></tr>
+        <tr><td><b>Speed</b></td><td>Fast: years to decades</td><td>Very slow: geologic time</td></tr>
+        <tr><td><b>Carbon involved</b></td><td>A small share</td><td>Most of Earth's carbon</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="just" style="text-align:center"><b>Photosynthesis:</b> CO<sub>2</sub> + H<sub>2</sub>O + sunlight → sugars + O<sub>2</sub></p>
+  <figure id="fig-carboncycle">
+    <div class="frame"><img src="images/unit15/carboncycle.webp" alt="Illustrated landscape with arrows: carbon dioxide in the atmosphere exchanges with the ocean and plants through photosynthesis and respiration; human emissions and a volcano add CO2; weathering of rocks, soil carbon, fossil carbon, leaching and runoff, ocean sediments and uplifting complete the cycle." loading="lazy" width="1100" height="850"></div>
+    <figcaption>The carbon cycle, combining the fast biological loop (photosynthesis, respiration, decay) and the slow geological loop (weathering, sediments, fossil carbon, uplift).<span class="credit">USGS, public domain (via the textbook).</span></figcaption>
+  </figure>
+  <p>The geological cycle stores carbon in several <button class="term" data-term="carbon reservoir">reservoirs</button>, each for a very different length of time (<a href="#fig-reservoirs">Figure 15.5</a>):</p>
+  <ul>
+    <li><b>Peat, coal, and <button class="term" data-term="permafrost">permafrost</button></b>: plant organic matter, for thousands to millions of years.</li>
+    <li><b>The ocean</b>: weathering of silicate minerals turns atmospheric CO<sub>2</sub> into dissolved <button class="term" data-term="bicarbonate">bicarbonate</button>, stored for thousands to tens of thousands of years.</li>
+    <li><b>Carbonate rocks</b>: marine organisms turn bicarbonate into calcite, stored for tens to hundreds of millions of years.</li>
+    <li><b>Sediments</b>: carbon compounds stored directly for tens to hundreds of millions of years; some become petroleum.</li>
+    <li><b>The mantle</b>: carbon-bearing sediments carried down by <button class="term" data-term="subduction">subduction</button>, for tens of millions to billions of years.</li>
+    <li><b>The atmosphere</b>: CO<sub>2</sub> from Earth's interior released by volcanic eruptions, for years to decades.</li>
+  </ul>
+  <figure id="fig-reservoirs">
+    <div class="frame"><svg viewBox="0 0 760 308" role="img" aria-labelledby="res-en-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="res-en-t">How long carbon stays in each storage reservoir of the geological carbon cycle, on a logarithmic time axis from one year to ten billion years: the atmosphere (from volcanoes) years to decades; ocean bicarbonate thousands to tens of thousands of years; peat, coal and permafrost thousands to millions of years; carbonate rocks and sediments tens to hundreds of millions of years; the mantle tens of millions to billions of years.</title><text x="380" y="16" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">How long carbon is stored (each step on the axis = ×10)</text><line x1="270.0" y1="38" x2="270.0" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="316.5" y1="38" x2="316.5" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="363.0" y1="38" x2="363.0" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="409.5" y1="38" x2="409.5" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="456.0" y1="38" x2="456.0" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="502.5" y1="38" x2="502.5" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="549.0" y1="38" x2="549.0" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="595.5" y1="38" x2="595.5" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="642.0" y1="38" x2="642.0" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="688.5" y1="38" x2="688.5" y2="262" stroke="var(--line)" stroke-width="1"/><line x1="735.0" y1="38" x2="735.0" y2="262" stroke="var(--line)" stroke-width="1"/><text x="270.0" y="276" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">1 yr</text><text x="363.0" y="276" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">100 yr</text><text x="456.0" y="276" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">10 kyr</text><text x="549.0" y="276" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">1 Myr</text><text x="642.0" y="276" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">100 Myr</text><text x="735.0" y="276" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">10 Gyr</text><line x1="270" y1="262" x2="735.0" y2="262" stroke="var(--fg)" stroke-width="1.5"/><text x="502.5" y="298" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-muted">Storage time in years (logarithmic scale)</text><rect x="270.0" y="48" width="93.0" height="18" rx="4" fill="#2b5f9e"/><text x="260" y="51" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Atmosphere</text><text x="260" y="65" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">CO₂ from volcanoes</text><rect x="409.5" y="84" width="90.9" height="18" rx="4" fill="#4f8fc0"/><text x="260" y="87" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Ocean</text><text x="260" y="101" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">dissolved bicarbonate</text><rect x="409.5" y="120" width="183.9" height="18" rx="4" fill="#7a5a3e"/><text x="260" y="123" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Peat, coal, permafrost</text><text x="260" y="137" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">plant organic matter</text><rect x="595.5" y="156" width="90.9" height="18" rx="4" fill="#9a8a66"/><text x="260" y="159" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Carbonate rocks</text><text x="260" y="173" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">calcite from marine shells</text><rect x="595.5" y="192" width="90.9" height="18" rx="4" fill="#3d3d3d"/><text x="260" y="195" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Sediments, petroleum</text><text x="260" y="209" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">buried carbon compounds</text><rect x="595.5" y="228" width="139.5" height="18" rx="4" fill="#ad1f52"/><text x="260" y="231" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Mantle</text><text x="260" y="245" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">carried down by subduction</text></svg></div>
+    <figcaption>How long each reservoir of the geological carbon cycle holds carbon. Each step on the axis is ten times longer than the last.<span class="credit">Drawn for this guide from the chapter's list of reservoirs.</span></figcaption>
+  </figure>
+  <p>For most of Earth's history, volcanoes released carbon at about the same rate the other processes stored it, and climate stayed fairly stable. The balance has been upset several times:</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Three ways the carbon balance has been upset.</caption>
+      <thead><tr><th>Imbalance</th><th>What happened</th><th>Effect</th></tr></thead>
+      <tbody>
+        <tr><td><b>Extra volcanism</b></td><td>The <button class="term" data-term="Siberian Traps">Siberian Traps</button> eruptions, about 250 million years ago</td><td>Strong warming over a few million years</td></tr>
+        <tr><td><b>Mountain building</b></td><td>The Himalaya, forming for about 40 million years, exposes huge areas of rock to weathering, especially the <button class="term" data-term="hydrolysis">hydrolysis</button> of feldspar</td><td>CO<sub>2</sub> drawn from the air into the ocean and carbonate sediments; the steady CO<sub>2</sub> drop helped bring on the Pliocene–Pleistocene glaciations</td></tr>
+        <tr><td><b>Human activity</b> (not geological)</td><td>In a few decades, people have burned coal, oil, and gas that took several hundred million years to store</td><td>Climate changing faster than ever before</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s15-1-3">15.1.3 Greenhouse effect</h3>
+  <p>The <button class="term" data-term="greenhouse effect">greenhouse effect</button> happens because greenhouse gases are in the atmosphere, and it is why global temperature is rising. It is named after the way sunlight warms a greenhouse or a closed car: light passes through the glass, turns into heat inside, and the glass traps the heat. For Earth it works in three steps (<a href="#fig-greenhouse">Figure 15.6</a>):</p>
+  <ol>
+    <li><b>Sunlight comes in.</b> <button class="term" data-term="solar radiation">Solar radiation</button> is mostly ultraviolet (UV), visible light, and infrared (IR). The atmosphere absorbs, scatters, or reflects some of it, but about half reaches the surface.</li>
+    <li><b>The surface warms.</b> The radiation that reaches the ground turns into heat, as sunlight warms pavement or a deck. The warm surface then gives off <button class="term" data-term="thermal infrared">thermal infrared</button> radiation, the heat you feel from a fire or a hot stove.</li>
+    <li><b>Greenhouse gases trap the heat.</b> Energy leaves Earth at a <b>different, longer wavelength</b> than it came in. Greenhouse gases (CO<sub>2</sub>, water vapor, methane, and nitrous oxide) absorb this outgoing thermal IR, so the energy is caught on its way <b>out</b>, not on its way in. More greenhouse gas traps more thermal IR.</li>
+  </ol>
+  <figure id="fig-greenhouse">
+    <div class="frame"><svg viewBox="0 0 760 380" role="img" aria-labelledby="gh-en-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="gh-en-t">The greenhouse effect in three steps, seen from the side. Short-wave sunlight passes through the atmosphere (about 29 percent is reflected); the ground absorbs it and warms; the warm ground gives off long-wave thermal infrared, which greenhouse-gas molecules absorb and partly send back down, while some escapes to space.</title><rect x="0" y="0" width="760" height="80" fill="#1d2440"/><rect x="0" y="80" width="760" height="220" fill="#d9e9f6"/><rect x="0" y="300" width="760" height="80" fill="#7a5a3e"/><rect x="160" y="300" width="230" height="10" fill="#f08a3c"/><line x1="0" y1="80" x2="760" y2="80" stroke="#8fb3d6" stroke-width="1.5" stroke-dasharray="6 5"/><text x="380" y="24" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" fill="#e8ecf7">Space</text><text x="200" y="94" dy=".35em" text-anchor="start" font-size="11" font-weight="400" fill="#35506b">Top of the atmosphere</text><circle cx="52" cy="40" r="24" fill="#f6c033"/><line x1="80" y1="58" x2="278" y2="292" stroke="#f6c033" stroke-width="14" stroke-linecap="round" opacity=".55"/><line x1="80" y1="58" x2="277.5" y2="292.6" stroke="#d89a00" stroke-width="3" stroke-linecap="round" class="gh-flow"/><polygon points="282.0,298.0 270.6,294.1 280.1,286.1" fill="#d89a00"/><line x1="98.5" y1="80" x2="145.4" y2="27.2" stroke="#d89a00" stroke-width="2.5" stroke-linecap="round"/><polygon points="150.0,22.0 147.9,33.3 139.0,25.4" fill="#d89a00"/><text x="160" y="38" dy=".35em" text-anchor="start" font-size="11" font-weight="400" fill="#f6d77a">~29% reflected to space</text><g><circle cx="421" cy="160" r="5" fill="#c9303f"/><circle cx="430" cy="160" r="6.5" fill="#3a3a3a"/><circle cx="439" cy="160" r="5" fill="#c9303f"/></g><g><circle cx="531" cy="195" r="5" fill="#c9303f"/><circle cx="540" cy="195" r="6.5" fill="#3a3a3a"/><circle cx="549" cy="195" r="5" fill="#c9303f"/></g><g><circle cx="326" cy="225" r="5" fill="#c9303f"/><circle cx="335" cy="225" r="6.5" fill="#3a3a3a"/><circle cx="344" cy="225" r="5" fill="#c9303f"/></g><g><circle cx="611" cy="170" r="5" fill="#c9303f"/><circle cx="620" cy="170" r="6.5" fill="#3a3a3a"/><circle cx="629" cy="170" r="5" fill="#c9303f"/></g><g><circle cx="691" cy="225" r="5" fill="#c9303f"/><circle cx="700" cy="225" r="6.5" fill="#3a3a3a"/><circle cx="709" cy="225" r="5" fill="#c9303f"/></g><g><circle cx="471" cy="250" r="5" fill="#c9303f"/><circle cx="480" cy="250" r="6.5" fill="#3a3a3a"/><circle cx="489" cy="250" r="5" fill="#c9303f"/></g><g><circle cx="581" cy="265" r="5" fill="#c9303f"/><circle cx="590" cy="265" r="6.5" fill="#3a3a3a"/><circle cx="599" cy="265" r="5" fill="#c9303f"/></g><g><circle cx="183" cy="118" r="5" fill="#c9303f"/><circle cx="192" cy="118" r="6.5" fill="#3a3a3a"/><circle cx="201" cy="118" r="5" fill="#c9303f"/></g><text x="206" y="118" dy=".35em" text-anchor="start" font-size="11" font-weight="400" fill="#35506b">= greenhouse-gas molecule (CO₂, H₂O, CH₄, N₂O)</text><polyline points="430.0,298.0 433.2,296.0 435.5,294.0 435.9,292.0 434.5,290.0 431.7,288.0 428.3,286.0 425.5,284.0 424.1,282.0 424.5,280.0 426.8,278.0 430.0,276.0 433.2,274.0 435.5,272.0 435.9,270.0 434.5,268.0 431.7,266.0 428.3,264.0 425.5,262.0 424.1,260.0 424.5,258.0 426.8,256.0 430.0,254.0 433.2,252.0 435.5,250.0 435.9,248.0 434.5,246.0 431.7,244.0 428.3,242.0 425.5,240.0 424.1,238.0 424.5,236.0 426.8,234.0 430.0,232.0 433.2,230.0 435.5,228.0 435.9,226.0 434.5,224.0 431.7,222.0 428.3,220.0 425.5,218.0 424.1,216.0 424.5,214.0 426.8,212.0 430.0,210.0 433.2,208.0 435.5,206.0 435.9,204.0 434.5,202.0 431.7,200.0 428.3,198.0 425.5,196.0 424.1,194.0 424.5,192.0 426.8,190.0 430.0,188.0 433.2,186.0 435.5,184.0" fill="none" stroke="#c9303f" stroke-width="2.5" stroke-linecap="round" class="gh-flow"/><polygon points="430.0,172.0 435.7,181.4 424.3,181.4" fill="#c9303f"/><polyline points="540.0,298.0 543.2,296.0 545.5,294.0 545.9,292.0 544.5,290.0 541.7,288.0 538.3,286.0 535.5,284.0 534.1,282.0 534.5,280.0 536.8,278.0 540.0,276.0 543.2,274.0 545.5,272.0 545.9,270.0 544.5,268.0 541.7,266.0 538.3,264.0 535.5,262.0 534.1,260.0 534.5,258.0 536.8,256.0 540.0,254.0 543.2,252.0 545.5,250.0 545.9,248.0 544.5,246.0 541.7,244.0 538.3,242.0 535.5,240.0 534.1,238.0 534.5,236.0 536.8,234.0 540.0,232.0 543.2,230.0 545.5,228.0 545.9,226.0 544.5,224.0 541.7,222.0 538.3,220.0 535.5,218.0" fill="none" stroke="#c9303f" stroke-width="2.5" stroke-linecap="round" class="gh-flow"/><polygon points="540.0,206.0 545.7,215.4 534.3,215.4" fill="#c9303f"/><polyline points="660.0,298.0 663.2,296.0 665.5,294.0 665.9,292.0 664.5,290.0 661.7,288.0 658.3,286.0 655.5,284.0 654.1,282.0 654.5,280.0 656.8,278.0 660.0,276.0 663.2,274.0 665.5,272.0 665.9,270.0 664.5,268.0 661.7,266.0 658.3,264.0 655.5,262.0 654.1,260.0 654.5,258.0 656.8,256.0 660.0,254.0 663.2,252.0 665.5,250.0 665.9,248.0 664.5,246.0 661.7,244.0 658.3,242.0 655.5,240.0 654.1,238.0 654.5,236.0 656.8,234.0 660.0,232.0 663.2,230.0 665.5,228.0 665.9,226.0 664.5,224.0 661.7,222.0 658.3,220.0 655.5,218.0 654.1,216.0 654.5,214.0 656.8,212.0 660.0,210.0 663.2,208.0 665.5,206.0 665.9,204.0 664.5,202.0 661.7,200.0 658.3,198.0 655.5,196.0 654.1,194.0 654.5,192.0 656.8,190.0 660.0,188.0 663.2,186.0 665.5,184.0 665.9,182.0 664.5,180.0 661.7,178.0 658.3,176.0 655.5,174.0 654.1,172.0 654.5,170.0 656.8,168.0 660.0,166.0 663.2,164.0 665.5,162.0 665.9,160.0 664.5,158.0 661.7,156.0 658.3,154.0 655.5,152.0 654.1,150.0 654.5,148.0 656.8,146.0 660.0,144.0 663.2,142.0 665.5,140.0 665.9,138.0 664.5,136.0 661.7,134.0 658.3,132.0 655.5,130.0 654.1,128.0 654.5,126.0 656.8,124.0 660.0,122.0 663.2,120.0 665.5,118.0 665.9,116.0 664.5,114.0 661.7,112.0 658.3,110.0 655.5,108.0 654.1,106.0 654.5,104.0 656.8,102.0 660.0,100.0 663.2,98.0 665.5,96.0 665.9,94.0 664.5,92.0 661.7,90.0 658.3,88.0 655.5,86.0 654.1,84.0 654.5,82.0 656.8,80.0 660.0,78.0 663.2,76.0 665.5,74.0 665.9,72.0 664.5,70.0 661.7,68.0 658.3,66.0 655.5,64.0 654.1,62.0 654.5,60.0 656.8,58.0 660.0,56.0 663.2,54.0 665.5,52.0 665.9,50.0 664.5,48.0 661.7,46.0 658.3,44.0 655.5,42.0 654.1,40.0 654.5,38.0 656.8,36.0 660.0,34.0 663.2,32.0 665.5,30.0 665.9,28.0 664.5,26.0" fill="none" stroke="#c9303f" stroke-width="2" stroke-linecap="round" class="gh-flow"/><polygon points="660.0,14.0 665.7,23.4 654.3,23.4" fill="#c9303f"/><line x1="436" y1="168" x2="472.0" y2="289.3" stroke="#c9303f" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/><polygon points="474.0,296.0 465.9,288.6 476.8,285.4" fill="#c9303f"/><line x1="546" y1="203" x2="577.6" y2="289.4" stroke="#c9303f" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/><polygon points="580.0,296.0 571.4,289.1 582.1,285.2" fill="#c9303f"/><text x="415" y="150" dy=".35em" text-anchor="end" font-size="11" font-weight="400" fill="#35506b">Greenhouse gases absorb the infrared</text><text x="415" y="166" dy=".35em" text-anchor="end" font-size="11" font-weight="400" fill="#35506b">and send part of it back down</text><text x="645" y="50" dy=".35em" text-anchor="end" font-size="11" font-weight="400" fill="#f3b3bb">Some infrared escapes to space</text><text x="222" y="258" dy=".35em" text-anchor="end" font-size="12" font-weight="700" fill="#8a5a00">① Sunlight (UV, visible, near-IR)</text><text x="222" y="276" dy=".35em" text-anchor="end" font-size="11" font-weight="400" fill="#35506b">short waves pass through the gases</text><text x="275" y="332" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">② The ground absorbs it and warms</text><text x="275" y="350" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" fill="#f3e9dd">light energy becomes heat</text><text x="580" y="332" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">③ The warm ground gives off thermal infrared</text><text x="580" y="350" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" fill="#f3e9dd">long waves: trapped by greenhouse gases</text></svg></div>
+    <figcaption>The greenhouse effect in three steps. Short waves come in; long waves go out and are partly absorbed and sent back down by greenhouse gases. The flowing dashes show the direction of the energy.<span class="credit">Drawn for this guide from the chapter's three-step description; the 29% reflected figure is from 15.1.4.</span></figcaption>
+  </figure>
+  <figure id="fig-spectrum">
+    <div class="frame"><img class="diagram" src="images/unit15/spectrum.webp" alt="Graph of solar irradiance against wavelength from 250 to 2500 nanometers, divided into UV, visible and infrared. A yellow area shows sunlight at the top of the atmosphere close to a 5778 K blackbody curve; a red area shows the smaller amount reaching sea level, with gaps labeled as absorption bands of ozone, oxygen, water vapor and carbon dioxide." loading="lazy" width="800" height="600" style="max-height:380px;width:auto"></div>
+    <figcaption>The spectrum of incoming sunlight: at the top of the atmosphere (yellow) and at sea level (red). The gaps are wavelengths absorbed by gases in the air.<span class="credit">Robert A. Rohde, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <p class="quiz">Explore: <a href="https://www.koshland-science-museum.org/explore-the-science/interactives/what-is-the-greenhouse-effect" target="_blank" rel="noopener">Interactive animation of the greenhouse effect (National Academy of Sciences) ↗</a></p>
+
+  <h3 id="s15-1-4">15.1.4 Earth's energy budget</h3>
+  <p>The flow of incoming solar energy and outgoing heat is Earth's <button class="term" data-term="energy budget">energy budget</button>. For temperature to stay stable over long times, <b>energy in must equal energy out</b> on average at the top of the atmosphere. Sunlight reaching Earth is fairly steady over time.</p>
+  <figure id="fig-reflected">
+    <div class="frame"><img src="images/unit15/reflected.webp" alt="Photo of Earth's curved horizon from orbit with a broad arrow of incoming sunlight labeled 340 watts per square meter splitting into 29 percent reflected, 23 percent absorbed in the atmosphere and 48 percent absorbed at the surface." loading="lazy" width="720" height="413"></div>
+    <figcaption>Where incoming sunlight goes: 29% reflected, 23% absorbed by the atmosphere, 48% absorbed by the surface.<span class="credit">NASA Earth Observatory, public domain (via the textbook).</span></figcaption>
+  </figure>
+  <figure id="fig-surface">
+    <div class="frame"><img src="images/unit15/surface.webp" alt="Beach scene with a broad arrow of 48 percent net solar energy absorbed at the surface, and three upward arrows: 25 percent evaporation, 5 percent convection, and 17 percent net thermal radiation." loading="lazy" width="720" height="480"></div>
+    <figcaption>How the surface sheds the 48% it absorbs: evaporation (25%), convection (5%), and net thermal infrared (17%).<span class="credit">NASA, public domain (via the textbook).</span></figcaption>
+  </figure>
+  
+  <div class="tablewrap">
+    <table>
+      <caption>Where incoming sunlight goes.</caption>
+      <thead><tr><th>Share</th><th>Fate</th></tr></thead>
+      <tbody>
+        <tr><td>~29%</td><td>Reflected back to space by clouds, particles in the air, and bright surfaces such as sea ice and snow</td></tr>
+        <tr><td>~23%</td><td>Absorbed in the atmosphere by water vapor, dust, and ozone</td></tr>
+        <tr><td>~48%</td><td>Passes through and is absorbed at the surface</td></tr>
+        <tr><td><b>~71%</b></td><td><b>Total absorbed by the Earth system</b> (23% + 48%)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Absorbed energy warms the air and surface. If Earth only absorbed energy, it would keep heating, like a sink with the tap running and the drain plugged. But <b>a warmer Earth gives off more heat to space</b>, and that is the main thing that stops it from heating without limit. Greenhouse gases act like a canopy: the more there are, the more outgoing heat stays, and the less escapes.</p>
+  <h4>Other factors in the budget</h4>
+  <figure id="fig-forcings">
+    <div class="frame"><img class="diagram" src="images/unit15/forcings.webp" alt="Bar chart of contributions to observed surface warming from 1951 to 2010, in degrees Celsius: observed warming about 0.65, greenhouse gases about 0.9, other human forcings about minus 0.25, combined human forcings about 0.7, natural forcings and natural internal variability near zero, each with error bars." loading="lazy" width="604" height="386"></div>
+    <figcaption>What caused the observed warming of 1951–2010 (IPCC). Greenhouse gases warmed; other human effects, mainly aerosols, cooled somewhat; natural causes were near zero.<span class="credit">IPCC AR5, Pachauri and Meyer (eds.), public domain as given in the textbook.</span></figcaption>
+  </figure>
+  <div class="callout">
+    <h4>What else changes the budget</h4>
+    <ul>
+      <li><b>The Sun</b>: more solar energy would warm Earth, but changes are very small.</li>
+      <li><b><button class="term" data-term="albedo">Albedo</button></b>: less ice and snow means land and water absorb more sunlight.</li>
+      <li><b><button class="term" data-term="aerosol">Aerosols</button></b>: dust and particles from burning coal, diesel engines, and eruptions reflect sunlight and cool the planet.</li>
+      <li><b>Net effect of people: warming</b>, because the greenhouse gases from burning fossil fuels outweigh the aerosols.</li>
+    </ul>
+  </div>
+  <h4>Feedback mechanisms</h4>
+  <p>A change to the planet can trigger feedbacks that make the change bigger or smaller (<a href="#fig-feedback">Figure 15.11</a>).</p>
+  <ul>
+    <li>A <button class="term" data-term="positive feedback">positive feedback</button> makes the original change stronger. <b>Sea ice</b>: losing Arctic sea ice lowers albedo, so the air and ocean absorb more energy. <b>Permafrost</b>: as the climate warms, permafrost (permanently frozen soil at high latitudes, mostly in the Northern Hemisphere) thaws; its thick organic matter meets oxygen and decays, releasing CO<sub>2</sub> and methane, which cause more warming, which thaws more permafrost.</li>
+    <li>A <button class="term" data-term="negative feedback">negative feedback</button> makes the original change weaker. <b>Short term</b>: more CO<sub>2</sub> should help forest canopies grow, and they take up more CO<sub>2</sub>. <b>Long term</b>: more CO<sub>2</sub> means more <button class="term" data-term="carbonic acid">carbonic acid</button> and more <button class="term" data-term="chemical weathering">chemical weathering</button>, which carries bicarbonate and other ions to the ocean to be stored in sediment.</li>
+  </ul>
+  <figure id="fig-feedback">
+    <div class="frame"><svg viewBox="0 0 760 290" role="img" aria-labelledby="fb-en-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="fb-en-t">Two feedback loops. Left, a positive feedback: warming melts sea ice and snow, the darker surface has a lower albedo, more sunlight is absorbed, and that adds to the warming. Right, a negative feedback: more carbon dioxide helps plants grow, plants take up more carbon dioxide, and that slows the rise in carbon dioxide.</title><text x="180" y="18" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Positive feedback: ice–albedo</text><rect x="5" y="45" width="155" height="56" rx="8" fill="#fbe3ea" stroke="#ad1f52" stroke-width="2"/><text x="82.5" y="73.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">Warming</text><rect x="200" y="45" width="155" height="56" rx="8" fill="#fbe3ea" stroke="#ad1f52" stroke-width="2"/><text x="277.5" y="65.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">Sea ice and</text><text x="277.5" y="80.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">snow melt</text><rect x="200" y="225" width="155" height="56" rx="8" fill="#fbe3ea" stroke="#ad1f52" stroke-width="2"/><text x="277.5" y="245.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">Darker ocean and land:</text><text x="277.5" y="260.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">lower albedo</text><rect x="5" y="225" width="155" height="56" rx="8" fill="#fbe3ea" stroke="#ad1f52" stroke-width="2"/><text x="82.5" y="245.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">More sunlight</text><text x="82.5" y="260.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">absorbed</text><line x1="160" y1="73" x2="192.0" y2="73.0" stroke="#ad1f52" stroke-width="2.5" stroke-linecap="round"/><polygon points="199.0,73.0 189.1,78.9 189.1,67.1" fill="#ad1f52"/><line x1="277" y1="101" x2="277.0" y2="217.0" stroke="#ad1f52" stroke-width="2.5" stroke-linecap="round"/><polygon points="277.0,224.0 271.1,214.1 282.9,214.1" fill="#ad1f52"/><line x1="200" y1="253" x2="168.0" y2="253.0" stroke="#ad1f52" stroke-width="2.5" stroke-linecap="round"/><polygon points="161.0,253.0 170.9,247.1 170.9,258.9" fill="#ad1f52"/><line x1="82" y1="225" x2="82.0" y2="109.0" stroke="#ad1f52" stroke-width="2.5" stroke-linecap="round"/><polygon points="82.0,102.0 87.9,111.9 76.1,111.9" fill="#ad1f52"/><circle cx="180" cy="163" r="24" fill="#ad1f52"/><text x="180" y="161" dy=".35em" text-anchor="middle" font-size="26" font-weight="700" fill="#fff">+</text><text x="180" y="200" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">amplifies the change</text><text x="92" y="150" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">adds</text><text x="92" y="165" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">to it</text><text x="580" y="18" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Negative feedback: plant growth</text><rect x="405" y="45" width="155" height="56" rx="8" fill="#e1ebf7" stroke="#2b5f9e" stroke-width="2"/><text x="482.5" y="65.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">More CO₂</text><text x="482.5" y="80.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">in the air</text><rect x="600" y="45" width="155" height="56" rx="8" fill="#e1ebf7" stroke="#2b5f9e" stroke-width="2"/><text x="677.5" y="65.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">Forest canopies</text><text x="677.5" y="80.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">grow more</text><rect x="600" y="225" width="155" height="56" rx="8" fill="#e1ebf7" stroke="#2b5f9e" stroke-width="2"/><text x="677.5" y="245.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">Plants take up</text><text x="677.5" y="260.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">more CO₂</text><rect x="405" y="225" width="155" height="56" rx="8" fill="#e1ebf7" stroke="#2b5f9e" stroke-width="2"/><text x="482.5" y="245.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">Rise in CO₂</text><text x="482.5" y="260.5" dy=".35em" text-anchor="middle" font-size="12" font-weight="500" fill="#22181b">is slowed</text><line x1="560" y1="73" x2="592.0" y2="73.0" stroke="#2b5f9e" stroke-width="2.5" stroke-linecap="round"/><polygon points="599.0,73.0 589.1,78.9 589.1,67.1" fill="#2b5f9e"/><line x1="677" y1="101" x2="677.0" y2="217.0" stroke="#2b5f9e" stroke-width="2.5" stroke-linecap="round"/><polygon points="677.0,224.0 671.1,214.1 682.9,214.1" fill="#2b5f9e"/><line x1="600" y1="253" x2="568.0" y2="253.0" stroke="#2b5f9e" stroke-width="2.5" stroke-linecap="round"/><polygon points="561.0,253.0 570.9,247.1 570.9,258.9" fill="#2b5f9e"/><line x1="482" y1="225" x2="482.0" y2="109.0" stroke="#2b5f9e" stroke-width="2.5" stroke-linecap="round"/><polygon points="482.0,102.0 487.9,111.9 476.1,111.9" fill="#2b5f9e"/><circle cx="580" cy="163" r="24" fill="#2b5f9e"/><text x="580" y="161" dy=".35em" text-anchor="middle" font-size="26" font-weight="700" fill="#fff">−</text><text x="580" y="200" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">dampens the change</text><text x="492" y="150" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">works</text><text x="492" y="165" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">against it</text></svg></div>
+    <figcaption>A positive feedback (left) feeds the change back into itself; a negative feedback (right) works against it. Follow the arrows clockwise from the top left.<span class="credit">Drawn for this guide from the chapter's examples.</span></figcaption>
+  </figure>
+  <div class="callout warn">
+    <h4>The budget is out of balance</h4>
+    <p>Global warming is evidence that Earth's energy budget is not balanced: the effects that raise Earth's temperature are now greater than those that lower it.</p>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/15-global-climate-change/" target="_blank" rel="noopener">Section 15.1 quiz in the textbook ↗</a></p>
+</section>
+
+<section id="s15-2">
+  <h2 class="sec"><span class="n">15.2</span>Evidence of recent climate change</h2>
+  <p>Climate has often changed for natural reasons (Unit 14.5.1 and 15.3), but the <b>scientific consensus is that human activity is causing today's very rapid climate change</b>, an idea first suggested more than 75 years ago. This section covers the evidence for <button class="term" data-term="anthropogenic climate change">anthropogenic climate change</button>.</p>
+  <p class="quiz">Watch: <a href="https://youtu.be/dquECwUfIQg" target="_blank" rel="noopener">Evidence for climate change, six minutes (North Carolina State University) ↗</a></p>
+
+  <h3 id="s15-2-1">15.2.1 Global temperature rise</h3>
+  <figure id="fig-tempgraph">
+    <div class="frame"><img class="diagram" src="images/unit15/tempgraph.webp" alt="Line graph of global temperature anomaly from 1880 to about 2016 based on land and ocean data. Annual means (black squares) and a red smoothed line stay near minus 0.2 to minus 0.4 until about 1910, rise to about 0.1 by 1940, level off until about 1975, then climb steeply to nearly 1 degree by 2016. A few blue error bars are shown." loading="lazy" width="1100" height="584"></div>
+    <figcaption>Land–ocean temperature index, 1880 to about 2016, compared with the 1951–1980 average. Black: yearly global mean. Red: five-year smoothing (Lowess). Blue bars: 95% uncertainty from incomplete spatial sampling.<span class="credit">NASA GISS, public domain (via the textbook).</span></figcaption>
+  </figure>
+  <p>Since 1880, Earth's average surface temperature has trended upward, with <b>most of the warming since 1970</b>. Surface temperature includes both land and ocean, because water absorbs much of the extra trapped heat.</p>
+  <ul>
+    <li>A <button class="term" data-term="temperature anomaly">temperature anomaly</button> is the difference between a measured temperature and the average for a <button class="term" data-term="reference period">reference period</button>. The graph uses 1951–1980; another common choice is the century 1900–2000. Reference periods are 30 years or more.</li>
+    <li>A positive anomaly means warmer than the reference average. The chapter gives +1.25 °C for 2015 and −0.28 °C for 1950 against 1900–2000. A difference of 1.25 °C is a difference of 2.25 °F (see Fact-check notes).</li>
+  </ul>
+  <div class="pair">
+    <div class="callout">
+      <h4>The ocean takes most of the heat</h4>
+      <ul>
+        <li>Oceans cover about 70% of Earth and have a very high <button class="term" data-term="specific heat">specific heat</button>.</li>
+        <li>They have absorbed about <b>80–90%</b> of the extra heat from human activities.</li>
+        <li>The top 700 m (2,300 ft) has warmed by about 0.17 °C (0.3 °F) since 1969.</li>
+        <li>Water warms only a little while absorbing a lot of heat; air, with its lower specific heat, warms more while absorbing less.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h4>The 1998–2013 "pause"</h4>
+      <ul>
+        <li>Some claimed greenhouse gases don't cause warming because surface temperatures barely rose from 1998 to 2013.</li>
+        <li>But decade-scale ocean circulation changes, similar to La Niña, pushed warm water deeper.</li>
+        <li>Adding that ocean heat back in shows the warming clearly.</li>
+        <li>The storage was temporary: 2014–2016 broke records, and 15 of the first 16 years of the 21st century were the hottest on record.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="quiz">Watch: <a href="https://svs.gsfc.nasa.gov/4882" target="_blank" rel="noopener">Global temperature anomalies since 1880 (NASA animation) ↗</a> · <a href="https://climate.nasa.gov/climate_resources/40/" target="_blank" rel="noopener">The ocean's heat capacity, 3 minutes (NASA JPL) ↗</a></p>
+
+  <h3 id="s15-2-2">15.2.2 Carbon dioxide</h3>
+  <p>Anthropogenic greenhouse gases, mostly CO<sub>2</sub>, have risen since the Industrial Revolution, when burning fossil fuels increased dramatically. Today's levels are <b>unprecedented in the last 800,000 years</b> recorded in ice cores.</p>
+  <ul>
+    <li>CO<sub>2</sub> rose by about <b>40% from 1750 to 2011</b>, and the rate of increase has been fastest in the most recent decade.</li>
+    <li>From 1750 to 2011, about <b>2,040 gigatonnes</b> of CO<sub>2</sub> were emitted: about 40% stayed in the atmosphere, and about 60% went into plants and soil on land or into the ocean.</li>
+    <li>In the lifetime of most young adults, atmospheric CO<sub>2</sub> has risen by about 50 ppm, or 15%.</li>
+  </ul>
+  <figure id="fig-keeling">
+    <div class="frame"><img class="diagram" src="images/unit15/keeling.webp" alt="The Keeling Curve: carbon dioxide concentration at Mauna Loa Observatory from 1958 to January 2022, rising from about 315 to 417.69 parts per million with a small yearly zigzag, and the curve getting steeper over time." loading="lazy" width="928" height="618"></div>
+    <figcaption>The Keeling Curve: CO<sub>2</sub> at Mauna Loa Observatory, Hawaii, from 1958 to January 2022 (417.69 ppm).<span class="credit">Scripps Institution of Oceanography, public domain as given in the textbook.</span></figcaption>
+  </figure>
+  <div class="callout">
+    <h4>The <button class="term" data-term="Keeling Curve">Keeling Curve</button></h4>
+    <ul>
+      <li>Charles Keeling, an oceanographer at Scripps Institution of Oceanography, was the first to measure atmospheric CO<sub>2</sub> regularly.</li>
+      <li>Mauna Loa Observatory has measured CO<sub>2</sub> continuously with his methods since 1958.</li>
+      <li><b>Zigzag</b>: a yearly cycle, as Northern Hemisphere plants take up CO<sub>2</sub> in summer and are dormant in winter.</li>
+      <li><b>Trend</b>: a steady rise that is <b>getting steeper</b>; the rate of increase is itself increasing.</li>
+    </ul>
+  </div>
+  <p>Measurements from many stations show that CO<sub>2</sub> varies with latitude: most human CO<sub>2</sub> sources are in the <b>Northern Hemisphere</b>, where most of the land and most developed nations are. See the latest reading at the <a href="https://keelingcurve.ucsd.edu/" target="_blank" rel="noopener">Keeling Curve site</a>.</p>
+  <p class="quiz">Watch: <a href="https://www.youtube.com/watch?v=gH6fQh9eAQE" target="_blank" rel="noopener">Atmospheric CO<sub>2</sub>, recently and over 800,000 years (NOAA) ↗</a></p>
+
+  <h3 id="s15-2-3">15.2.3 Melting glaciers and shrinking sea ice</h3>
+  <p><b>Glaciers</b> are year-round ice on land; <b>icebergs</b> are floating ice that may have broken off glaciers (Unit 14). Alpine glaciers, ice sheets, and sea ice are all melting.</p>
+  <figure id="fig-antarctica">
+    <div class="frame"><img class="diagram" src="images/unit15/antarctica.webp" alt="Line graph of Antarctic ice mass change in gigatonnes from 2002 to 2016, falling unevenly from 0 to about minus 1,500." loading="lazy" width="737" height="365"></div>
+    <figcaption>Change in Antarctica's ice mass measured by satellites, 2002–2016.<span class="credit">NASA, public domain (via the textbook).</span></figcaption>
+  </figure>
+  <div class="callout">
+    <h4>Ice loss by the numbers</h4>
+    <ul>
+      <li><b>Antarctica</b>: losing about <b>118 gigatonnes</b> of ice per year.</li>
+      <li><b>Greenland</b>: losing about <b>281 gigatonnes</b> per year.</li>
+      <li>1 tonne = 1,000 kg; 1 gigatonne = 1 billion tonnes, over 2 trillion pounds.</li>
+      <li>Almost all major alpine glaciers are shrinking, thinning, and retreating, at a rate never seen since good glacier records began in the 1940s.</li>
+    </ul>
+  </div>
+  <p>Before human warming, some glaciers advanced while others retreated. Now <b>spring snow cover is decreasing and sea ice is shrinking</b>. Most sea ice is around the North Pole, which has only the Arctic Ocean and its ice. The share of the oldest Arctic ice (more than four years old) fell from <b>20% in 1985 to 3% in 2015</b>.</p>
+  <p class="quiz">Explore: <a href="https://climate.nasa.gov/interactives/global-ice-viewer/" target="_blank" rel="noopener">NASA Global Ice Viewer ↗</a> · Watch: <a href="https://www.youtube.com/watch?v=Fw7GfNR5PLA" target="_blank" rel="noopener">25 years of Arctic sea ice disappear (NOAA) ↗</a></p>
+
+  <h3 id="s15-2-4">15.2.4 Rising sea level</h3>
+  <p>Sea level is rising about <b>3.4 mm (0.13 in) per year</b>, and it rose <b>0.19 m (7.4 in) from 1901 to 2010</b>. The two main causes are <b>melting glaciers</b> and the <button class="term" data-term="thermal expansion">thermal expansion</button> of seawater: as solids, liquids, and gases warm, they expand.</p>
+  <p class="quiz">Watch: <a href="https://www.youtube.com/watch?v=QNoE5IoRheQ" target="_blank" rel="noopener">Ball-and-ring thermal expansion demonstration, 30 seconds (NCSSM) ↗</a></p>
+
+  <h3 id="s15-2-5">15.2.5 Ocean acidification</h3>
+  <p>Of the CO<sub>2</sub> people have added since 1750, about 40% stayed in the atmosphere and the rest went into the ocean and vegetation; the ocean alone has absorbed about <b>30%</b> of it. This causes <button class="term" data-term="ocean acidification">ocean acidification</button>:</p>
+  <div class="callout">
+    <h4>From CO<sub>2</sub> to thinner shells</h4>
+    <ol>
+      <li>CO<sub>2</sub> dissolves in seawater and forms carbonic acid: CO<sub>2</sub> + H<sub>2</sub>O → H<sub>2</sub>CO<sub>3</sub>.</li>
+      <li>The ocean becomes more acidic: its <button class="term" data-term="pH">pH</button> goes <b>down</b>.</li>
+      <li>Acid attacks calcium carbonate, just as hydrochloric acid makes calcite (limestone) fizz.</li>
+      <li>Organisms that build calcium carbonate shells struggle: thinner shells in some sea snails (<button class="term" data-term="pteropod">pteropods</button>) and in <button class="term" data-term="foraminifera">foraminifera</button>, and slower growth of coral reefs.</li>
+    </ol>
+  </div>
+  <p>These tiny organisms are at the base of the marine food web. Acidification combined with warmer water and less oxygen is expected to have severe effects on marine ecosystems and on fisheries that people depend on for food.</p>
+
+  <h3 id="s15-2-6">15.2.6 Extreme weather events</h3>
+  <p>Extreme weather, such as hurricanes, heavy precipitation, and heat waves, is increasing and becoming more intense. <b>Warmer air holds more moisture</b>, which raises the potential for extreme events.</p>
+  <ul>
+    <li><b>Hurricanes</b> form over warm ocean water. Since the 1980s they have become more intense and longer-lasting; the chapter also says more frequent, which is less certain (see Fact-check notes).</li>
+    <li><b>Precipitation</b> in the contiguous United States has risen about 10% since 1910, much of it in heavy downpours. It is uneven: the north is projected to get wetter and the already dry Southwest drier.</li>
+    <li><b>Heat waves</b> have increased, and rising temperatures are already affecting crop yields in northern latitudes.</li>
+  </ul>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/15-global-climate-change/" target="_blank" rel="noopener">Section 15.2 quiz in the textbook ↗</a></p>
+</section>
+
+<section id="s15-3">
+  <h2 class="sec"><span class="n">15.3</span>Prehistoric climate change</h2>
+  <p>Earth's climate has changed a great deal. In the Mesozoic Era, the age of dinosaurs, the climate was much warmer and CO<sub>2</sub> was abundant. Through the Cenozoic Era, the last 66 million years, the climate has gradually cooled.</p>
+
+  <h3 id="s15-3-1">15.3.1 Past glaciations</h3>
+  <p>Over geologic history, climate changed slowly over millions of years. Before the current Pliocene–Quaternary glaciation there were several other major ones:</p>
+  <ul class="timeline">
+    <li><time>~2.5 Ga</time><span><b><button class="term" data-term="Huronian glaciation">Huronian</button></b> (end of the Archean to early Proterozoic). Most often linked to the <button class="term" data-term="Great Oxygenation Event">Great Oxygenation Event</button>: the new oxygen likely reacted with the potent greenhouse gas methane, cooling the planet.</span></li>
+    <li><time>~700 Ma</time><span><b>Late Proterozoic glaciations</b>, part of the <button class="term" data-term="Snowball Earth">Snowball Earth</button> hypothesis. Evidence of glaciers even at low latitudes.</span></li>
+    <li><time>440–460 Ma</time><span><b>Andean-Saharan glaciation</b> (Late Ordovician), at the same time as a major extinction.</span></li>
+    <li><time>323–300 Ma</time><span><b>Karoo Ice Age</b> (Pennsylvanian). Wegener cited it as evidence that Pangaea drifted over the South Pole. Linked to more oxygen and less CO<sub>2</sub> as land plants evolved and spread.</span></li>
+    <li class="geo"><time>~34 Ma–today</time><span><b>Cenozoic cooling</b>: glaciers on Antarctica from about 35 million years ago, Northern Hemisphere ice sheets later, and the Pleistocene ice ages.</span></li>
+  </ul>
+  <p class="legend"><span><i></i>Earlier major glaciations</span><span><i class="geo"></i>Current (Cenozoic) icehouse</span></p>
+  <h4>Snowball Earth</h4>
+  <p>Rocks from about 700 million years ago around the world hold signs of glaciers even near the equator. In many regions, <b>limestone</b> (usually tropical and marine) and <b>glacial deposits</b> (usually cold) are found together. One example is Antelope Island in the Great Salt Lake, Utah, where limestone is interbedded with glacial <button class="term" data-term="diamictite">diamictites</button>.</p>
+  <div class="pair">
+    <div class="callout">
+      <h4>Snowball Earth (controversial)</h4>
+      <ul>
+        <li>A runaway albedo effect: ice and snow reflect sunlight and spread from the poles toward the equator.</li>
+        <li>Land and ocean freeze over completely and biological activity collapses.</li>
+        <li>CO<sub>2</sub> cannot enter the frozen ocean, so the ice melts only when volcanoes build CO<sub>2</sub> high enough; some studies estimate about 350 times today's level.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h4>Why it is debated</h4>
+      <ul>
+        <li>Life survived, so complete freezing is questioned.</li>
+        <li>The rival <button class="term" data-term="Slushball Earth">Slushball Earth</button> hypothesis keeps some equatorial ocean open.</li>
+        <li>Scientists also disagree on the stability of Earth's magnetic poles, on how later metamorphism changed the rocks, and on how to read the evidence.</li>
+      </ul>
+    </div>
+  </div>
+  <h4>Cenozoic cooling</h4>
+  <figure id="fig-cenozoic">
+    <div class="frame"><img class="diagram" src="images/unit15/cenozoic.webp" alt="Graph of global surface temperature over the last 65 million years. It peaks around 50 to 55 million years ago near 28 degrees Celsius, including a spike labeled PETM, then falls in a long-term cooling trend to about 14 degrees today. Bars show the Antarctic ice sheet from about 34 million years ago and Northern Hemisphere ice sheets in the last few million years. Arrows mark the India–Asia collision, the circumpolar current, and the Isthmus of Panama." loading="lazy" width="1100" height="479"></div>
+    <figcaption>Global average surface temperature over the past 65 million years, with the tectonic events that helped cool the planet.<span class="credit">Steven Earle, <i>Physical Geology</i>, CC BY-NC-SA (via the textbook).</span></figcaption>
+  </figure>
+  <p>The Cenozoic began warm. The <b>Early Eocene</b>, about 50 to 55 million years ago, was the warmest time, with a brief spike called the <button class="term" data-term="Paleocene-Eocene Thermal Maximum">Paleocene-Eocene Thermal Maximum</button> (PETM); Antarctica and Greenland had no ice. Since the Eocene, tectonic events have cooled the planet steadily:</p>
+  <div class="tablewrap">
+    <table>
+      <caption>Tectonic events behind Cenozoic cooling (dates as given in the chapter).</caption>
+      <thead><tr><th>When</th><th>Event</th><th>How it cooled Earth</th></tr></thead>
+      <tbody>
+        <tr><td>From ~50 Ma</td><td>India collides with Asia, raising the Himalaya</td><td>More weathering of silicate minerals, especially feldspar, consumes CO<sub>2</sub> and weakens the greenhouse effect</td></tr>
+        <tr><td>~40 Ma</td><td>South America and Antarctica separate, opening the <b>Drake Passage</b></td><td>The <button class="term" data-term="Antarctic Circumpolar Current">Antarctic Circumpolar Current</button> flows freely west to east and cuts the Southern Ocean off from warmer oceans; by about 35 Ma (Oligocene) glaciers form on Antarctica</td></tr>
+        <tr><td>~15 Ma (chapter)</td><td>Volcanoes build the <b>Isthmus of Panama</b>, joining the Americas</td><td>Blocks flow between the Pacific and Atlantic and reduces heat transport toward the poles; Antarctic ice grows (see Fact-check notes for dating)</td></tr>
+        <tr><td>~5 Ma (chapter)</td><td>Ice sheets start to grow in North America and northern Europe (Pliocene)</td><td>More reflective ice causes more cooling: the ice–albedo positive feedback</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure id="fig-acc">
+    <div class="frame"><img class="diagram" src="images/unit15/acc.webp" alt="Map centered on the South Pole showing Antarctica surrounded by a red clockwise-arrowed loop labeled A.C.C., with the Drake Passage marked between Antarctica and South America and the tips of Africa and Australia at the edges." loading="lazy" width="283" height="279" style="max-height:280px;width:auto;height:auto"></div>
+    <figcaption>The Antarctic Circumpolar Current (A.C.C.) flowing around Antarctica through the Drake Passage. Map view, looking down on the South Pole.<span class="credit">Steven Earle, CC BY (via the textbook).</span></figcaption>
+  </figure>
+  <figure id="fig-laurentide">
+    <div class="frame"><img class="diagram" src="images/unit15/laurentide.webp" alt="Map of the Northern Hemisphere around the North Pole with the maximum extent of Pleistocene ice shaded white, covering most of Canada, Greenland, Scandinavia and parts of northern Asia, with major cities labeled." loading="lazy" width="250" height="417" style="max-height:280px;width:auto;height:auto"></div>
+    <figcaption>Maximum extent of Northern Hemisphere ice sheets in the Pleistocene, including the Laurentide Ice Sheet over Canada.<span class="credit">USGS, public domain (via the textbook).</span></figcaption>
+  </figure>
+  
+  <h4>The Pleistocene ice ages</h4>
+  <ul>
+    <li>The most intense part of the current glaciation is the <b>last 1 million years</b> of the Pleistocene.</li>
+    <li>Temperature swung through a range of almost 10 °C (18 °F) over 40,000 to 100,000 years, and ice sheets grew and shrank with it.</li>
+    <li>The swings are paced by small changes in Earth's orbit, the <button class="term" data-term="Milankovitch cycles">Milankovitch cycles</button> (Unit 14). Over the past million years, glacial cycles came about every <b>100,000 years</b>.</li>
+    <li>Warm periods within an ice age are <button class="term" data-term="interglacial">interglacials</button>; there have been five or six in the last 500,000 years, the latest being our own <button class="term" data-term="Holocene">Holocene</button> Epoch. Brief, milder warm spells within a glacial period are <button class="term" data-term="interstadial">interstadials</button>.</li>
+  </ul>
+  <figure id="fig-lr04">
+    <div class="frame"><img class="diagram" src="images/unit15/lr04.webp" alt="Three stacked strips of a jagged line graph of benthic oxygen-isotope values from 0 to 5.3 million years ago. The swings grow larger and slower toward the present, with numbered isotope stages and magnetic reversal bars under each strip." loading="lazy" width="1058" height="794"></div>
+    <figcaption>The LR04 stack: oxygen isotopes (δ<sup>18</sup>O) from 57 deep-sea cores over the last 5.3 million years. Higher values mean more ice and colder deep water (15.3.2); the swings grow larger toward the present.<span class="credit">Lisiecki and Raymo (2005), <i>Paleoceanography</i> 20(1), CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <div class="tablewrap">
+    <table>
+      <caption>Two recent climate swings with mixed evidence.</caption>
+      <thead><tr><th>Event</th><th>When</th><th>What is known</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="Younger Dryas">Younger Dryas</button></td><td>About 12,000 years ago</td><td>A cooling widely recognized in the Northern Hemisphere, but its timing differs from place to place and it is hard to find in the Southern Hemisphere</td></tr>
+        <tr><td><button class="term" data-term="Holocene Climatic Optimum">Holocene Climatic Optimum</button></td><td>Around 6,000 years ago</td><td>A warming that was not warmer everywhere, not as warm as today, and not warm at the same time everywhere</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s15-3-2">15.3.2 Proxy indicators of past climates</h3>
+  <p>No one measured temperature millions of years ago, so geologists use <button class="term" data-term="proxy indicator">proxy indicators</button>: biological, chemical, or physical signatures preserved in rock, sediment, or ice that act like a <b>fingerprint</b> of past conditions. They are <b>indirect</b> indicators of climate.</p>
+  <div class="tablewrap">
+    <table style="min-width:560px">
+      <caption>Proxy indicators covered in the chapter.</caption>
+      <thead><tr><th>Proxy</th><th>Found in</th><th>What it records</th><th>Time span</th></tr></thead>
+      <tbody>
+        <tr><td>Glacial sediments (diamictite, <button class="term" data-term="tillite">tillite</button>)</td><td>Rock, e.g. the Mineral Fork Formation, Utah</td><td>Past glaciations</td><td>Proterozoic and Paleozoic</td></tr>
+        <tr><td>Oxygen isotopes</td><td>Foraminifera shells in deep-sea cores; ice cores</td><td>Deep-sea temperature and ice volume</td><td>Cenozoic (cores); 800,000 years (ice)</td></tr>
+        <tr><td>Boron isotopes</td><td>Planktonic foraminifera shells</td><td>Ocean pH, hence past CO<sub>2</sub></td><td>About 60 million years</td></tr>
+        <tr><td>Air bubbles</td><td>Antarctic and Greenland ice cores</td><td>Composition of past air, including CO<sub>2</sub></td><td>800,000 years</td></tr>
+        <tr><td>Microfossil assemblages</td><td>Sediment cores</td><td>Cool- versus warm-water conditions</td><td>Cenozoic</td></tr>
+        <tr><td>Tree rings</td><td>Living and dead trees</td><td>Wet and dry, warm and cold years</td><td>Thousands of years</td></tr>
+        <tr><td>Pollen assemblages</td><td>Lake-sediment cores</td><td>Past vegetation, hence climate</td><td>Example: 125,000 years</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Others include human historical accounts, instrument records from the recent past, lake sediments, cave deposits, and corals.</p>
+
+  <h4>Sediment cores: stable oxygen isotopes</h4>
+  <div class="pair">
+    <figure id="fig-sedcore">
+      <div class="frame"><img src="images/unit15/sedcore.webp" alt="Eight split sediment-core sections lying side by side, showing alternating grey, olive and brown bands of mud." loading="lazy" width="1100" height="1064" style="max-height:300px;width:auto;height:auto"></div>
+      <figcaption>Sediment core from the Greenland continental slope, split open to show its layers.<span class="credit">Hannes Grobe, CC BY (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Deep-sea cores</h4>
+      <ul>
+        <li>The international Ocean Drilling Program drills cores of sediment that piled up continuously on the sea floor.</li>
+        <li>They hold shells of bottom-dwelling (benthic) foraminifera from the last 66 million years.</li>
+        <li>The shells' stable carbon and oxygen isotopes record deep-sea temperature and continental ice volume.</li>
+      </ul>
+    </div>
+  </div>
+  <p>Oxygen has two main stable <button class="term" data-term="isotope">isotopes</button>: common, light <b><sup>16</sup>O</b> and rarer, heavy <b><sup>18</sup>O</b>. Both are in water and in the calcium carbonate of foraminifera shells. The ratio of <sup>18</sup>O to <sup>16</sup>O, written <button class="term" data-term="δ18O">δ<sup>18</sup>O</button>, tracks ice volume (<a href="#fig-isotope">Figure 15.20</a>):</p>
+  <ol>
+    <li>Water with light <sup>16</sup>O <b>evaporates more easily</b>, more so from warm water, which leaves surface seawater slightly richer in <sup>18</sup>O.</li>
+    <li>As vapor drifts toward the poles, water with heavy <sup>18</sup>O <b>condenses and rains out first</b>, so the remaining vapor is depleted in <sup>18</sup>O.</li>
+    <li>In cold times, this <sup>16</sup>O-rich precipitation is <b>locked up as glacial ice</b> on land. The ice sheets were more than a mile thick over much of North America as recently as about 14,000 years ago.</li>
+    <li>The ocean, and the foraminifera shells that grow in it, are left <b>enriched in <sup>18</sup>O</b>. Higher δ<sup>18</sup>O in shells means more ice and a colder climate.</li>
+  </ol>
+  <figure id="fig-isotope">
+    <div class="frame"><svg viewBox="0 0 760 340" role="img" aria-labelledby="iso-en-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="iso-en-t">Side view, not to scale, of how oxygen isotopes record ice volume during a glaciation. Water with light oxygen-16 evaporates more easily from the ocean; as the vapor drifts toward the poles, water with heavy oxygen-18 condenses and rains out first; the snow that builds the ice sheet is rich in oxygen-16, so the ocean, and the foraminifera shells that grow in it, are left richer in oxygen-18.</title><text x="380" y="14" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">During a glaciation (side view, not to scale)</text><rect x="0" y="230" width="340" height="110" fill="#3f7fb3"/><polygon points="330,340 330,230 420,205 520,152 600,140 760,124 760,340" fill="#7a5a3e"/><polygon points="450,189.1 470,165 520,128 600,98 680,86 760,80 760,124 600,140 520,152" fill="#e6f1fa" stroke="#8fb3d6" stroke-width="1.5"/><text x="640" y="116" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3b57">Ice sheet stores ¹⁶O</text><text x="545" y="250" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" fill="#f3e9dd">Land</text><polyline points="40.0,224.0 42.7,222.0 44.5,220.0 44.9,218.0 43.8,216.0 41.4,214.0 38.6,212.0 36.2,210.0 35.1,208.0 35.5,206.0 37.3,204.0 40.0,202.0 42.7,200.0 44.5,198.0 44.9,196.0 43.8,194.0 41.4,192.0 38.6,190.0 36.2,188.0 35.1,186.0 35.5,184.0 37.3,182.0 40.0,180.0 42.7,178.0 44.5,176.0 44.9,174.0 43.8,172.0 41.4,170.0 38.6,168.0 36.2,166.0 35.1,164.0 35.5,162.0" fill="none" stroke="#2b5f9e" stroke-width="2.2" stroke-linecap="round" class=""/><polygon points="40.0,150.0 45.7,159.4 34.3,159.4" fill="#2b5f9e"/><polyline points="90.0,224.0 92.7,222.0 94.5,220.0 94.9,218.0 93.8,216.0 91.4,214.0 88.6,212.0 86.2,210.0 85.1,208.0 85.5,206.0 87.3,204.0 90.0,202.0 92.7,200.0 94.5,198.0 94.9,196.0 93.8,194.0 91.4,192.0 88.6,190.0 86.2,188.0 85.1,186.0 85.5,184.0 87.3,182.0 90.0,180.0 92.7,178.0 94.5,176.0 94.9,174.0 93.8,172.0 91.4,170.0 88.6,168.0 86.2,166.0 85.1,164.0 85.5,162.0" fill="none" stroke="#2b5f9e" stroke-width="2.2" stroke-linecap="round" class=""/><polygon points="90.0,150.0 95.7,159.4 84.3,159.4" fill="#2b5f9e"/><text x="18" y="110" dy=".35em" text-anchor="start" font-size="11" font-weight="700" class="svg-ink halo">Evaporation: light ¹⁶O</text><text x="18" y="125" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">escapes more easily</text><ellipse cx="222" cy="86" rx="26" ry="16" fill="#f4f6f9" stroke="#9aa7b5" stroke-width="1.2"/><ellipse cx="250" cy="76" rx="30" ry="22" fill="#f4f6f9" stroke="#9aa7b5" stroke-width="1.2"/><ellipse cx="278" cy="86" rx="26" ry="16" fill="#f4f6f9" stroke="#9aa7b5" stroke-width="1.2"/><rect x="200" y="82" width="100" height="16" fill="#f4f6f9"/><line x1="312" y1="68" x2="541.0" y2="42.8" stroke="#55697b" stroke-width="2.2" stroke-linecap="round"/><polygon points="548.0,42.0 539.1,48.8 537.8,37.3" fill="#55697b"/><text x="430" y="36" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">Vapor drifts toward the poles</text><ellipse cx="600.4" cy="46.2" rx="18.2" ry="11.2" fill="#f4f6f9" stroke="#9aa7b5" stroke-width="1.2"/><ellipse cx="620.0" cy="39.2" rx="21.0" ry="15.399999999999999" fill="#f4f6f9" stroke="#9aa7b5" stroke-width="1.2"/><ellipse cx="639.6" cy="46.2" rx="18.2" ry="11.2" fill="#f4f6f9" stroke="#9aa7b5" stroke-width="1.2"/><rect x="585.0" y="43.4" width="70.0" height="11.2" fill="#f4f6f9"/><path d="M240 112 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><path d="M262 129 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><path d="M284 114 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><path d="M250 154 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><path d="M274 169 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><path d="M296 144 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><path d="M262 192 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><path d="M288 199 q4 6 0 9 q-4 -3 0 -9z" fill="#2b5f9e"/><text x="112" y="176" dy=".35em" text-anchor="start" font-size="11" font-weight="700" class="svg-ink halo">Heavy ¹⁸O condenses</text><text x="112" y="191" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">and rains out first</text><text x="590" y="72" dy=".35em" font-size="13" text-anchor="middle" fill="#6a8fb3">✱</text><text x="625" y="66" dy=".35em" font-size="13" text-anchor="middle" fill="#6a8fb3">✱</text><text x="660" y="74" dy=".35em" font-size="13" text-anchor="middle" fill="#6a8fb3">✱</text><text x="700" y="70" dy=".35em" font-size="13" text-anchor="middle" fill="#6a8fb3">✱</text><text x="170" y="252" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Ocean left richer in ¹⁸O</text><text x="170" y="270" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" fill="#e6f1fa">more ice on land = higher δ¹⁸O</text><circle cx="40" cy="318" r="5.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="46" cy="314" r="3.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="62" cy="318" r="5.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="68" cy="314" r="3.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="84" cy="318" r="5.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="90" cy="314" r="3.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="106" cy="318" r="5.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="112" cy="314" r="3.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="128" cy="318" r="5.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="134" cy="314" r="3.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="150" cy="318" r="5.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="156" cy="314" r="3.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="172" cy="318" r="5.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><circle cx="178" cy="314" r="3.5" fill="#efe1c1" stroke="#b39a63" stroke-width="1"/><text x="200" y="318" dy=".35em" text-anchor="start" font-size="11" font-weight="400" fill="#fff">Foram shells record it</text></svg></div>
+    <figcaption>How the ocean becomes richer in <sup>18</sup>O during a glaciation. Light <sup>16</sup>O leaves the ocean as vapor and is stored in the ice sheet; heavy <sup>18</sup>O falls back near the source. Foraminifera shells (foram) record the ocean's ratio.<span class="credit">Drawn for this guide from the chapter's description.</span></figcaption>
+  </figure>
+  <p>Continuous cores record these fossils layer by layer, so they give a record of glacials, interglacials, and interstadials (<a href="#fig-iceage">Figure 15.21</a>).</p>
+  <figure id="fig-iceage">
+    <div class="frame"><img class="diagram" src="images/unit15/iceage.webp" alt="Three curves over the last 450,000 years: Antarctic temperature change from the EPICA and Vostok ice cores, and global ice volume, all rising and falling together in roughly 100,000-year cycles, with sharp warmings near 430, 330, 240, 130 thousand years ago and today." loading="lazy" width="564" height="377"></div>
+    <figcaption>Antarctic temperature change over the last 450,000 years from two ice cores (EPICA and Vostok, from deuterium) and global ice volume from deep-sea oxygen isotopes (bottom). Warm times line up with low ice volume.<span class="credit">Robert A. Rohde, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+
+  <h4>Sediment cores: boron isotopes and acidity</h4>
+  <p>Boron has two isotopes, <sup>11</sup>B and <sup>10</sup>B, and their relative abundance in dissolved boron depends on pH. Because more CO<sub>2</sub> means more carbonic acid and lower pH, the boron isotopes in planktonic foraminifera shells reveal <b>past atmospheric CO<sub>2</sub></b> over about 60 million years:</p>
+  <ul>
+    <li><b>~60 Ma</b> (early Cenozoic): CO<sub>2</sub> above 2,000 ppm, with a <b>lower</b> ocean pH.</li>
+    <li><b>~55–40 Ma</b>: CO<sub>2</sub> began to fall, possibly because less CO<sub>2</sub> came out of ocean ridges, volcanoes, and metamorphic belts, and more carbon was buried by subduction and by weathering of the rising Himalaya.</li>
+    <li><b>~24 Ma</b> (Miocene): CO<sub>2</sub> below 500 ppm.</li>
+    <li><b>Last 800,000 years</b>: CO<sub>2</sub> never above about 300 ppm (until the industrial era).</li>
+  </ul>
+
+  <h4>Carbon dioxide in ice cores</h4>
+  <figure id="fig-gisp2">
+    <div class="frame"><img src="images/unit15/gisp2.webp" alt="A 19-centimeter section of ice core on a blue background with alternating light and dark bands; eleven arrows above mark the light summer layers." loading="lazy" width="741" height="335"></div>
+    <figcaption>A 19 cm section of the GISP2 ice core from Greenland, 1,855 m deep, with 11 annual layers: light summer layers (arrows) between darker winter layers.<span class="credit">NOAA, public domain (via the textbook).</span></figcaption>
+  </figure>
+  <figure id="fig-bubbles">
+    <div class="frame"><img src="images/unit15/bubbles.webp" alt="Close-up of a thin slice of Antarctic ice under polarized light, showing many-colored ice crystals full of hundreds of small dark air bubbles." loading="lazy" width="1100" height="753" style="max-height:360px;width:auto"></div>
+    <figcaption>Antarctic ice with hundreds of tiny air bubbles trapped thousands of years ago.<span class="credit">CSIRO Atmospheric Research, CC BY (via the textbook).</span></figcaption>
+  </figure>
+  
+  <p>Ice cores drilled from the Antarctic and Greenland ice sheets give a more <b>detailed and direct</b> chemical record of the last 800,000 years:</p>
+  <ul>
+    <li>Snow piles up in <b>yearly layers</b>. Their δ<sup>18</sup>O gives temperature, as above.</li>
+    <li>As snow turns to ice, it traps <b>small bubbles of air</b>. Small pieces of ice are crushed, and the ancient air goes into a <button class="term" data-term="mass spectrometer">mass spectrometer</button> that measures its chemistry, including CO<sub>2</sub>.</li>
+    <li>Over the last 800,000 years, CO<sub>2</sub> reached about <b>300 ppm in warm times</b> and fell to about <b>170–185 ppm in cold times</b>. Today it is <b>over 420 ppm</b> (<a href="#fig-co2bars">Figure 15.28</a>).</li>
+  </ul>
+  <figure id="fig-co2800k">
+    <div class="frame"><img class="diagram" src="images/unit15/co2800k.webp" alt="Graph of carbon dioxide from 800,000 years ago to the present, swinging between about 175 and 300 parts per million in roughly 100,000-year cycles; values above 230 ppm are shaded yellow and below are cyan, with interglacials marked by white bands." loading="lazy" width="818" height="580"></div>
+    <figcaption>Composite CO<sub>2</sub> record for the last 800,000 years from ice cores (EPICA Dome C and others). It never rose above about 300 ppm.<span class="credit">Tom Ruen, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+
+  <h4>Oceanic microfossils</h4>
+  <p><b>Microfossils</b> such as foraminifera, diatoms, and radiolarians are also proxies. Groups of species found together are called <button class="term" data-term="assemblage">assemblages</button>. One layer of a sediment core may hold a cool-water assemblage (from a glacial time), and another layer a warm-water assemblage.</p>
+  <p class="quiz">Watch: <a href="https://www.youtube.com/watch?v=Yvu-g8BkkIg" target="_blank" rel="noopener">Climatic evidence from sediments (video) ↗</a></p>
+
+  <h4>Tree rings</h4>
+  <div class="pair">
+    <figure id="fig-treerings">
+      <div class="frame"><img src="images/unit15/treerings.webp" alt="Close-up of a weathered tree stump showing many closely spaced growth rings of varying width." loading="lazy" width="1100" height="823"></div>
+      <figcaption>Tree rings: one ring grows each year, and its width depends on that year's conditions.<span class="credit">Adrian Pingstone, public domain (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Reading tree rings</h4>
+      <ul>
+        <li>Each year a tree grows <b>one ring</b>, with a light and a dark part.</li>
+        <li><b>Wide rings</b>: wetter years. <b>Narrow, close rings</b>: drier, colder years.</li>
+        <li>Some trees live several thousand years, so their rings reconstruct regional temperature, precipitation, vegetation, streamflow, and more: <button class="term" data-term="paleoclimate">paleoclimatic</button> study.</li>
+        <li>Dead wood, such as beams in Puebloan ruins, extends the record and shows long droughts that may explain why villages were abandoned.</li>
+      </ul>
+    </div>
+  </div>
+  <figure id="fig-yamal">
+    <div class="frame"><img class="diagram" src="images/unit15/yamal.webp" alt="Long graph of summer temperature anomalies from 5000 BC to 2000 AD, with red bars above zero and blue bars below zero alternating through the whole record, and a sharp red spike at the far right end." loading="lazy" width="1100" height="241"></div>
+    <figcaption>Summer temperature anomalies for the past 7,000 years from tree rings on the Yamal Peninsula, Russia (50-year smoothing). Red: warmer than average; blue: cooler.<span class="credit">R. M. Hantemirov, CC BY 3.0 (via the textbook; license from Wikimedia Commons).</span></figcaption>
+  </figure>
+
+  <h4>Pollen</h4>
+  <div class="pair">
+    <figure id="fig-pollen">
+      <div class="frame"><img src="images/unit15/pollen.webp" alt="Scanning electron microscope image of many pollen grains of different shapes, some spiky spheres and some bean shapes, colored yellow, green, pink and red." loading="lazy" width="1100" height="838"></div>
+      <figcaption>Modern pollen under a scanning electron microscope, with false color added to tell the plant species apart.<span class="credit">Dartmouth Electron Microscope Facility, public domain (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Pollen as a proxy</h4>
+      <ul>
+        <li>Each flowering plant's pollen grains look distinctive under a microscope.</li>
+        <li>Pollen is preserved in lake sediments that build up in yearly layers.</li>
+        <li><b>Fossil-pollen assemblages</b> (for example spruce, pine, oak), dated by radiometric methods, show which plants grew there, and plants prefer different climates.</li>
+        <li>East of the Cascades in the Pacific Northwest, pollen tracked over 125,000 years and two glaciations shows vegetation changing between glacial and interglacial times (Whitlock and Bartlein 1997).</li>
+      </ul>
+    </div>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/15-global-climate-change/" target="_blank" rel="noopener">Section 15.3 quiz in the textbook ↗</a></p>
+</section>
+
+<section id="s15-4">
+  <h2 class="sec"><span class="n">15.4</span>Anthropogenic causes of climate change</h2>
+  <p>Prehistoric climate changes happened slowly, over many millions of years. Today's changes are <b>rapid and largely caused by people</b>. Scientists reached this conclusion step by step:</p>
+  <ul class="timeline">
+    <li><time>Late 1800s</time><span>Scientists suspect that human-made greenhouse gases would change climate, since changes in these gases did so every time in the geologic past.</span></li>
+    <li><time>Mid 1900s</time><span>Systematic measurements confirm that human CO<sub>2</sub> is building up in the atmosphere, forests, and oceans.</span></li>
+    <li><time>1990s–2000s</time><span>Thousands of ground studies and continuous land and ocean satellite measurements show the expected warming: the <button class="term" data-term="Theory of Anthropogenic Climate Change">Theory of Anthropogenic Climate Change</button> is established.</span></li>
+  </ul>
+  <p>The theory states that <b>humans are causing most of the current climate change by burning fossil fuels</b> such as coal, oil, and natural gas. Like every theory, it can grow as new data and methods appear; it represents the field's current state of knowledge.</p>
+
+  <h3 id="s15-4-1">15.4.1 Scientific consensus</h3>
+  <div class="pair">
+    <div class="callout">
+      <h4>Consensus</h4>
+      <ul>
+        <li>The overwhelming majority of climate studies show that human activity is changing the climate rapidly, which will cause severe environmental damage.</li>
+        <li>Peer-reviewed studies show <b>97% of climate scientists</b> agree that the warming is caused by human activities.</li>
+        <li>No other explanation accounts for the link between human greenhouse-gas emissions and the changing climate.</li>
+        <li>Leading scientific organizations agree, including the <b>US National Academy of Sciences</b>, set up by Congress in 1863 to give independent, objective advice on science.</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h4>The isotopic fingerprint</h4>
+      <ul>
+        <li>Fossil fuels come from plants that lived millions of years ago, and they have a different <b><sup>13</sup>C/<sup>12</sup>C</b> ratio from today's air. (These are stable isotopes; radioactive <sup>14</sup>C is not used here.)</li>
+        <li>Antarctic ice shows a steady carbon-isotope signature from about 1000 to 1800 AD, a gradual change after 1800, and a faster change after 1950.</li>
+        <li>As fossil CO<sub>2</sub> mixes in, the air's signature looks <b>more and more like fossil fuel</b>. This <button class="term" data-term="isotopic fingerprint">fingerprint</button> has been used since the 1980s.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 id="s15-4-2">15.4.2 Anthropogenic sources of greenhouse gases</h3>
+  <p>Human emissions of greenhouse gases have grown since pre-industrial times with economic and population growth. CO<sub>2</sub> is at levels not seen in at least 800,000 years (<a href="#fig-co2bars">Figure 15.28</a>):</p>
+  <figure id="fig-co2bars">
+    <div class="frame"><svg viewBox="0 0 760 312" role="img" aria-labelledby="co2-en-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="co2-en-t">Bar chart of atmospheric carbon dioxide in parts per million. Ice-age lows about 180; warm interglacials about 300, the highest value in 800,000 years of ice cores; pre-industrial 278; Mauna Loa 1958, 315; 2016, 400; 2022, 417; 2024, about 425.</title><text x="380" y="16" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Atmospheric CO₂ (parts per million)</text><line x1="300.0" y1="34" x2="300.0" y2="272" stroke="var(--line)" stroke-width="1"/><text x="300.0" y="286" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">0</text><line x1="347.8" y1="34" x2="347.8" y2="272" stroke="var(--line)" stroke-width="1"/><line x1="395.6" y1="34" x2="395.6" y2="272" stroke="var(--line)" stroke-width="1"/><text x="395.55555555555554" y="286" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">100</text><line x1="443.3" y1="34" x2="443.3" y2="272" stroke="var(--line)" stroke-width="1"/><line x1="491.1" y1="34" x2="491.1" y2="272" stroke="var(--line)" stroke-width="1"/><text x="491.1111111111111" y="286" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">200</text><line x1="538.9" y1="34" x2="538.9" y2="272" stroke="var(--line)" stroke-width="1"/><line x1="586.7" y1="34" x2="586.7" y2="272" stroke="var(--line)" stroke-width="1"/><text x="586.6666666666667" y="286" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">300</text><line x1="634.4" y1="34" x2="634.4" y2="272" stroke="var(--line)" stroke-width="1"/><line x1="682.2" y1="34" x2="682.2" y2="272" stroke="var(--line)" stroke-width="1"/><text x="682.2222222222222" y="286" dy=".35em" text-anchor="middle" font-size="11" font-weight="500" class="svg-ink halo">400</text><line x1="730.0" y1="34" x2="730.0" y2="272" stroke="var(--line)" stroke-width="1"/><text x="515.0" y="304" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-muted">CO₂ concentration (ppm); dashed line = 800,000-year maximum (≈300 ppm)</text><line x1="586.7" y1="34" x2="586.7" y2="272" stroke="var(--fg)" stroke-width="1.5" stroke-dasharray="5 4"/><rect x="300" y="42" width="172.0" height="18" rx="3" fill="#2b5f9e"/><text x="478.0" y="51" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">~180</text><text x="290" y="45" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Ice-age lows</text><text x="290" y="59" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">ice cores, 800,000 yr</text><rect x="300" y="75" width="286.7" height="18" rx="3" fill="#6aa5cf"/><text x="592.6666666666667" y="84" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">~300</text><text x="290" y="78" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Warm interglacials</text><text x="290" y="92" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">ice cores, 800,000 yr</text><rect x="300" y="108" width="265.6" height="18" rx="3" fill="#9a8a66"/><text x="571.6444444444444" y="117" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">278</text><text x="290" y="111" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Pre-industrial</text><text x="290" y="125" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">about 1750</text><rect x="300" y="141" width="301.0" height="18" rx="3" fill="#e0603a"/><text x="607.0" y="150" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">315</text><text x="290" y="144" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">Mauna Loa, 1958</text><text x="290" y="158" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">start of the Keeling Curve</text><rect x="300" y="174" width="382.2" height="18" rx="3" fill="#c9303f"/><text x="688.2222222222222" y="183" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">400+</text><text x="290" y="177" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">2016</text><text x="290" y="191" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">first full year above 400</text><rect x="300" y="207" width="398.5" height="18" rx="3" fill="#ad1f52"/><text x="704.4666666666667" y="216" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">417</text><text x="290" y="210" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">2022</text><text x="290" y="224" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">chapter value</text><rect x="300" y="240" width="405.7" height="18" rx="3" fill="#7d1038"/><text x="711.728888888889" y="249" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">~425</text><text x="290" y="243" dy=".35em" text-anchor="end" font-size="11.5" font-weight="600" class="svg-ink halo">2024</text><text x="290" y="257" dy=".35em" text-anchor="end" font-size="10.5" font-weight="400" class="svg-muted">NOAA annual mean</text></svg></div>
+    <figcaption>Atmospheric CO<sub>2</sub> past and present. Everything to the right of the dashed line is higher than any value in 800,000 years of ice cores.<span class="credit">Drawn for this guide from the chapter's values; the 2024 value is NOAA's Mauna Loa annual mean (Global Monitoring Laboratory).</span></figcaption>
+  </figure>
+    <figure id="fig-sectors">
+      <div class="frame"><img class="diagram" src="images/unit15/sectors.webp" alt="Ring chart titled Greenhouse gas emissions by economic sectors, total 49 gigatonnes CO2-equivalent in 2010: electricity and heat production 25 percent, agriculture, forestry and other land use 24 percent, industry 21 percent, transport 14 percent, other energy 9.6 percent, buildings 6.4 percent. An outer arc splits the electricity and heat share among end users: industry 11, buildings 12, transport 0.3, energy 1.4, AFOLU 0.87 percent." loading="lazy" width="725" height="647" style="max-height:440px;width:auto"></div>
+      <figcaption>Greenhouse-gas emissions by economic sector in 2010: 49 Gt CO<sub>2</sub>-equivalent. The outer arc shows which end users the electricity and heat emissions serve.<span class="credit">IPCC AR5 Synthesis Report, Fig. 1.7, Pachauri and Meyer (eds.), CC BY-SA as given in the textbook.</span></figcaption>
+    </figure>
+    <div class="tablewrap">
+      <table>
+        <caption>Emissions by economic sector, 2010.</caption>
+        <thead><tr><th>Sector</th><th>Share</th></tr></thead>
+        <tbody>
+          <tr><td>Electricity and heat production</td><td>25%</td></tr>
+          <tr><td>Agriculture, forestry, and other land use (AFOLU)</td><td>24%</td></tr>
+          <tr><td>Industry</td><td>21%</td></tr>
+          <tr><td>Transportation, including cars</td><td>14%</td></tr>
+          <tr><td>Other energy production</td><td>9.6%</td></tr>
+          <tr><td>Buildings</td><td>6.4%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  <ul>
+    <li>Fossil-fuel burning and industrial processes caused about <b>78% of the increase</b> in greenhouse-gas emissions from 1970 to 2010.</li>
+    <li>About half of all human CO<sub>2</sub> emissions since 1750 happened in the <b>last 40 years</b>, and about 40% of the emissions have stayed in the atmosphere.</li>
+    <li>Emission measured as <button class="term" data-term="CO2-equivalent">CO<sub>2</sub>-equivalent</button> lets different gases be added together.</li>
+    <li>Policies and agreements have cut emissions in some places, but economic growth in the developing world has raised the global total; 2000–2010 saw the largest increases since 1970.</li>
+  </ul>
+  <figure id="fig-emissions">
+    <div class="frame"><img class="diagram" src="images/unit15/emissions.webp" alt="Area chart of global human CO2 emissions per year from 1850 to 2011, split into fossil fuels, cement and flaring (grey) and forestry and other land use (tan). Totals grow from about 2 to about 35 gigatonnes per year, rising fastest after 1950. Two bars on the right compare cumulative emissions for 1750 to 1970 (about 900 gigatonnes) and 1750 to 2011 (about 2,000 gigatonnes)." loading="lazy" width="1100" height="425"></div>
+    <figcaption>Yearly human CO<sub>2</sub> emissions, 1850–2011, from fossil fuels, cement, and flaring (grey) and from forestry and other land use (tan). Right: cumulative emissions since 1750, with uncertainty whiskers.<span class="credit">IPCC AR5 Synthesis Report, Fig. 1.5, Pachauri and Meyer (eds.), CC BY-SA as given in the textbook.</span></figcaption>
+  </figure>
+  <p>Despite the scientific consensus, slowing climate change requires <b>political action</b>.</p>
+  <p class="quiz">Live data: <a href="https://www.co2.earth/daily-co2" target="_blank" rel="noopener">Daily CO<sub>2</sub> ↗</a> · Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/15-global-climate-change/" target="_blank" rel="noopener">Section 15.4 quiz in the textbook ↗</a></p>
+</section>
+
+<section id="summary">
+  <h2 class="sec">Summary</h2>
+  <p>For Earth's climate to be stable, incoming sunlight and outgoing heat must balance. Greenhouse gases absorb the thermal infrared that the sun-warmed surface gives off, trapping heat: the greenhouse effect. People are adding greenhouse gases, above all CO<sub>2</sub> from fossil fuels, so the energy budget is out of balance and Earth is warming. Positive feedbacks such as melting sea ice and thawing permafrost amplify the change. Carbon moves through a fast biological cycle and a slow geological cycle. The evidence of change includes rising air and ocean temperatures, the Keeling Curve, shrinking ice, rising seas, ocean acidification, and more extreme weather. Proxies in rocks, sediment cores, ice cores, tree rings, and pollen show that climate has changed many times, from Snowball Earth to the Pleistocene ice ages, but always slowly. Today's rate and amount of change are unique in the geologic record and can only be explained by human activity.</p>
+  <div class="callout">
+    <h4>Quick recap</h4>
+    <ul>
+      <li>Weather = days to weeks; climate = long-term average (often 30 years).</li>
+      <li>Air: 78% N<sub>2</sub>, 21% O<sub>2</sub>, ~1% Ar; greenhouse gases are trace gases (H<sub>2</sub>O, CO<sub>2</sub>, CH<sub>4</sub>, N<sub>2</sub>O).</li>
+      <li>Greenhouse effect: short waves in → surface warms → long-wave thermal IR out, absorbed by greenhouse gases.</li>
+      <li>Energy budget: 29% reflected, 23% absorbed by air, 48% absorbed by surface (71% absorbed in total).</li>
+      <li>Positive feedback amplifies (ice–albedo, permafrost); negative feedback dampens (plant growth, weathering).</li>
+      <li>Carbon cycles: biological (fast) and geological (slow, most of the carbon). Upsets: Siberian Traps, Himalaya, humans.</li>
+      <li>Evidence: warming since 1880 (mostly since 1970); ocean took 80–90% of the heat; CO<sub>2</sub> +40% since 1750.</li>
+      <li>Ice loss: Antarctica ~118 Gt/yr, Greenland ~281 Gt/yr. Sea level +3.4 mm/yr; +0.19 m from 1901 to 2010.</li>
+      <li>Acidification: ocean absorbed ~30% of human CO<sub>2</sub> → carbonic acid → lower pH → thinner shells.</li>
+      <li>Past glaciations: Huronian (~2.5 Ga), Snowball Earth (~700 Ma), Andean-Saharan, Karoo, Cenozoic (Antarctica ~35 Ma).</li>
+      <li>Proxies: δ<sup>18</sup>O (higher = more ice), boron isotopes (pH → CO<sub>2</sub>), ice-core bubbles, microfossils, tree rings, pollen.</li>
+      <li>CO<sub>2</sub>: 170–300 ppm for 800,000 years; 278 pre-industrial; 315 in 1958; over 420 today. Isotopes fingerprint it as fossil carbon.</li>
+    </ul>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/15-global-climate-change/" target="_blank" rel="noopener">Chapter 15 review quiz in the textbook ↗</a></p>
+</section>
+
+<section id="resources">
+  <h2 class="sec">Resources</h2>
+  <div class="res">
+    <a href="https://slcc.pressbooks.pub/introgeology/chapter/15-global-climate-change/" target="_blank" rel="noopener"><b>Chapter 15 (textbook) ↗</b><span>The full chapter, with its section quizzes, videos, and animations.</span></a>
+    <a href="https://slcc.pressbooks.pub/introgeology/back-matter/glossary-test/" target="_blank" rel="noopener"><b>Textbook glossary ↗</b><span>Definitions for every bolded term in the book.</span></a>
+    <a href="https://keelingcurve.ucsd.edu/" target="_blank" rel="noopener"><b>The Keeling Curve (Scripps) ↗</b><span>Today's CO<sub>2</sub> reading at Mauna Loa and the full record.</span></a>
+    <a href="https://gml.noaa.gov/ccgg/trends/" target="_blank" rel="noopener"><b>Trends in atmospheric CO<sub>2</sub> (NOAA GML) ↗</b><span>Monthly and yearly CO<sub>2</sub> data and growth rates.</span></a>
+    <a href="https://climate.nasa.gov/vital-signs/" target="_blank" rel="noopener"><b>Vital signs of the planet (NASA) ↗</b><span>Up-to-date global temperature, CO<sub>2</sub>, ice, and sea-level data.</span></a>
+    <a href="https://earthobservatory.nasa.gov/features/EnergyBalance" target="_blank" rel="noopener"><b>Climate and Earth's energy budget (NASA Earth Observatory) ↗</b><span>The source of the chapter's energy-budget figures.</span></a>
+    <a href="https://www.ipcc.ch/report/ar6/syr/" target="_blank" rel="noopener"><b>IPCC Sixth Assessment Synthesis Report (2023) ↗</b><span>The latest consensus assessment; the chapter uses the 2014 (AR5) report.</span></a>
+    <a href="https://www.koshland-science-museum.org/explore-the-science/interactives/what-is-the-greenhouse-effect" target="_blank" rel="noopener"><b>What is the greenhouse effect? (interactive) ↗</b><span>The chapter's animation from the National Academy of Sciences.</span></a>
+  </div>
+</section>
+
+<section id="factcheck">
+  <h2 class="sec">Fact-check notes</h2>
+  <p class="small">Each fact in this guide comes from Chapter 15. These notes flag places where the chapter simplifies, has a slip, or differs from other reliable sources. Where the chapter is wrong, the guide's main text uses the corrected statement and the chapter's wording is recorded here.</p>
+  <div class="tablewrap">
+    <table style="min-width:600px">
+      <caption>Fact-check notes for Unit 15.</caption>
+      <thead><tr><th>Chapter says</th><th>Check</th></tr></thead>
+      <tbody>
+        <tr><td>The Moon's day–night range is "272°C (522°F)" (106 °C to −183 °C).</td><td>Arithmetic slip in °C: 106 − (−183) = <b>289 °C</b>, which matches 522 °F. The guide says about 290 °C. (NASA's Diviner measurements give equatorial noon near 120 °C; the chapter's values are within the reported range.)</td></tr>
+        <tr><td>Volcanoes "and the weathering process, which bury CO2 in sediments, are the atmosphere's CO2 sources."</td><td>Weathering is a <b>sink</b>, not a source: it removes CO<sub>2</sub> from the air (the chapter itself says so in 15.1.2). The guide says volcanoes add CO<sub>2</sub> and weathering removes it.</td></tr>
+        <tr><td>Thermal IR "instead of UV, visible, or regular IR" is what gets trapped.</td><td>Simplified. Greenhouse gases absorb at particular long-wave (thermal) infrared wavelengths; some near-IR from the Sun is also absorbed by water vapor (the gaps in the spectrum figure). The guide keeps the main idea: energy is caught on the way out at longer wavelengths.</td></tr>
+        <tr><td>"The effect of anthropogenic aerosols on the climate's system is weak."</td><td>The IPCC finds human aerosols have a significant cooling effect that masks part of the greenhouse warming (the "other anthropogenic forcings" bar in the forcings figure, about −0.25 °C). The net human effect is still clearly warming, as the chapter says. The guide says aerosols cool "somewhat".</td></tr>
+        <tr><td>"An anomaly of 1.25 ℃ (34.3°F)"; "-0.28 ℃ (31.5°F)".</td><td>Conversion slip: a temperature <b>difference</b> converts by ×1.8 only, so 1.25 °C = 2.25 °F and −0.28 °C ≈ −0.5 °F (the chapter converted them as temperatures). The anomaly values also depend on which reference period is used; the chapter mixes 1951–1980 (graph) and 1900–2000 (text).</td></tr>
+        <tr><td>The ocean's top 701.4 m "has increased by -17.6°C (0.3℉) since 1969".</td><td>Conversion slip: a rise of 0.3 °F is about <b>+0.17 °C</b> (−17.6 °C is what 0.3 °F converts to as a temperature). 701.4 m is a back-conversion of 2,300 ft; the source says about 700 m. The guide gives 0.17 °C (0.3 °F) and 700 m.</td></tr>
+        <tr><td>"20409 tonnes (2040 gigatons) of CO2" since 1750.</td><td>Unit slip: 2,040 gigatonnes is 2,040 billion tonnes. The IPCC AR5 value is 2,040 ± 310 Gt CO<sub>2</sub> for 1750–2011, and the 40% rise in CO<sub>2</sub> is also to 2011. The guide gives the dates.</td></tr>
+        <tr><td>"NASA regularly publishes these measurements at scripps.ucsd.edu"; Mauna Loa has measured CO<sub>2</sub> "since 1957".</td><td>The Keeling Curve site is run by Scripps Institution of Oceanography (NOAA runs a parallel Mauna Loa record). Keeling's continuous Mauna Loa record begins in March 1958, as the chapter's own summary says; the guide uses 1958.</td></tr>
+        <tr><td>The Keeling Curve "increases exponentially".</td><td>The growth rate has risen decade by decade, so the curve gets steeper (NOAA: about 0.8 ppm per year in the 1960s, about 2.4 ppm per year in the 2010s). Calling it exactly exponential is loose; the guide says the rise is getting steeper.</td></tr>
+        <tr><td>Antarctica melts at "1189 tonnes (118 gigatons)" and Greenland "2819 tonnes (281 gigatons)" per year.</td><td>Unit slip: the values are 118 and 281 <b>gigatonnes</b> per year (NASA GRACE data at the time). The guide uses gigatonnes.</td></tr>
+        <tr><td>The old-ice share fell "from 20 percent in 1985 to 3 percent in 2015".</td><td>Correct for the oldest Arctic sea ice, older than four years (NOAA Arctic Report Card 2015). The guide names the age class.</td></tr>
+        <tr><td>Hurricanes "have increased in frequency, intensity, and duration" since the 1980s.</td><td>The IPCC (AR6, 2021) finds the share of major (Category 3–5) tropical cyclones has likely increased over the last four decades, but has <b>low confidence</b> in long-term trends in their overall number. The guide flags frequency as less certain.</td></tr>
+        <tr><td>Summary: carbonic acid "is raising the pH of the oceans".</td><td>Reversed: more carbonic acid <b>lowers</b> pH (the ocean becomes more acidic), as 15.2.5 says. The guide says pH goes down.</td></tr>
+        <tr><td>The Cenozoic Era is the last "65 million years".</td><td>The current date for the start of the Cenozoic is <b>66.0 million years</b> ago (International Chronostratigraphic Chart). The guide uses 66.</td></tr>
+        <tr><td>"This warm time is called the Paleocene-Eocene Thermal Maximum."</td><td>The PETM was a brief spike of a few hundred thousand years about 56 million years ago. The longer warm interval after it, about 53–49 million years ago, is the Early Eocene Climatic Optimum. The guide describes the Early Eocene as the warmest time with the PETM as a spike within it.</td></tr>
+        <tr><td>"Around 15 million years ago" volcanoes "created the Isthmus of Panama", which reduced heat transfer to the poles and cooled Antarctica.</td><td>Disputed. Most studies date the full closure to about <b>2.8 million years</b> ago (O'Dea et al. 2016, <i>Science Advances</i>), though some argue for an earlier, partial connection around 15–13 Ma. The usual view is that closure strengthened the Gulf Stream and helped Northern Hemisphere ice sheets grow. The guide keeps the chapter's date in the table but flags it.</td></tr>
+        <tr><td>"By 5 million years ago" ice sheets had started to grow in North America and northern Europe.</td><td>Large Northern Hemisphere ice sheets are usually dated to about 2.7 million years ago (the intensification of Northern Hemisphere glaciation); smaller earlier ice is debated. The guide keeps the chapter's date with "(chapter)".</td></tr>
+        <tr><td>"During interglacials, very brief periods of even warmer climate are called interstadials."</td><td>Slip: an <b>interstadial</b> is a brief, milder spell <b>within a glacial period</b>, not a warmer spell within an interglacial. The guide uses the standard meaning.</td></tr>
+        <tr><td>Pleistocene temperature varies through "a range of almost 10°C".</td><td>That range fits polar temperatures such as Antarctica's (the ice-core curves). Global average temperature changed less between glacial and interglacial times, about 4–7 °C (IPCC). The guide keeps the chapter's figure.</td></tr>
+        <tr><td>Boron isotopes: CO<sub>2</sub> over 2,000 ppm "higher pH" around 60 Ma, then "a noticeable drop in pH" as CO<sub>2</sub> fell.</td><td>Reversed: high CO<sub>2</sub> means <b>lower</b> pH, and pH <b>rose</b> as CO<sub>2</sub> fell (Pearson and Palmer 2000, <i>Nature</i>). The guide gives the correct direction.</td></tr>
+        <tr><td>Ice-core CO<sub>2</sub> minimum "about 170 ppm" (15.3.2) but "about 185 ppm" (15.4.2).</td><td>Both appear in the data: the lowest single value in the EPICA Dome C record is about 172 ppm (about 667,000 years ago); typical glacial lows are about 180–190 ppm. The guide gives 170–185 ppm.</td></tr>
+        <tr><td>"Currently, the earth's atmospheric carbon dioxide content is over 410 ppm" / "over 417 ppm in 2022".</td><td>Out of date: NOAA's Mauna Loa annual mean was about <b>424.6 ppm in 2024</b>. The guide says over 420 ppm and shows the 2024 value.</td></tr>
+        <tr><td>Pine pollen is higher during glaciations and lower during interglacials (Whitlock and Bartlein 1997).</td><td>Simplified. At Carp Lake the full-glacial period was cold steppe dominated by sagebrush (<i>Artemisia</i>) and grasses; pine-dominated forest or woodland appears in both interglacial and cooler interstadial zones. The guide says only that vegetation changed between glacial and interglacial times.</td></tr>
+        <tr><td>Fossil fuels and industry "contributed 78 percent of all emissions since 1970."</td><td>The IPCC AR5 wording is that they contributed about 78% of the <b>increase</b> in total greenhouse-gas emissions from 1970 to 2010. The guide uses that wording.</td></tr>
+        <tr><td>Summary: "the Keeling increase of over 100 ppm in 50 years".</td><td>From 315 ppm (1958) to 417 ppm (2022) is about 100 ppm in 64 years. The point stands; the time span is longer.</td></tr>
+        <tr><td>97 percent of climate scientists agree.</td><td>Supported by several studies (e.g. Cook et al. 2013; later surveys find over 99% of recent peer-reviewed papers agree). Kept as stated.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="credits">
+  <h2 class="sec">Credits</h2>
+  <p class="small">Content summarized from <a href="https://slcc.pressbooks.pub/introgeology/chapter/15-global-climate-change/" target="_blank" rel="noopener"><i>An Introduction to Geology</i>, Chapter 15</a>, © 2017 Chris Johnson, Matthew D. Affolter, Paul Inkenbrandt, and Cam Mosher, licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. Each image's creator and license is given under it.</p>
+  <ul class="small">
+    <li>Drawn for this guide from the chapter's descriptions: carbon storage times, the greenhouse effect in three steps, the two feedback loops, oxygen isotopes during a glaciation, and the CO<sub>2</sub> bar chart.</li>
+    <li>Outside sources are named where they are used: NOAA Global Monitoring Laboratory (2024 CO<sub>2</sub>), Wikimedia Commons (license of the Yamal tree-ring graph), and the others listed in the fact-check notes.</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<button class="fab" id="notesBtn" type="button" aria-controls="notes" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Key terms
+</button>
+<button class="fab hide" id="toTop" type="button" aria-label="Return to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<aside class="notes" id="notes" hidden aria-label="Key terms">
+  <header>
+    <div><h2>Key terms · Chapter 15</h2><button class="close" id="notesClose" type="button" aria-label="Close key terms">×</button></div>
+    <input id="termSearch" type="search" placeholder="Search terms and definitions" autocomplete="off" aria-label="Search terms and definitions">
+    <div class="count" id="termCount"></div>
+  </header>
+  <dl id="termList"></dl>
+</aside>
+</div>
+
+<script type="application/json" id="terms">
+[
+ [
+  "system",
+  "outcomes",
+  "A group of interacting objects and processes."
+ ],
+ [
+  "Earth System Science",
+  "outcomes",
+  "The study of Earth's interacting systems (geosphere, atmosphere, hydrosphere, cryosphere, biosphere) and how they change."
+ ],
+ [
+  "geosphere",
+  "outcomes",
+  "The solid Earth: its rocks and minerals."
+ ],
+ [
+  "atmosphere",
+  "outcomes",
+  "The layer of gases surrounding Earth."
+ ],
+ [
+  "hydrosphere",
+  "outcomes",
+  "All of Earth's water: oceans, lakes, rivers, groundwater, and water vapor."
+ ],
+ [
+  "cryosphere",
+  "outcomes",
+  "The frozen part of Earth: glaciers, ice sheets, sea ice, snow, and permafrost."
+ ],
+ [
+  "biosphere",
+  "outcomes",
+  "All living things on Earth and the places they live."
+ ],
+ [
+  "anthropogenic",
+  "outcomes",
+  "Caused or produced by humans."
+ ],
+ [
+  "climate change",
+  "outcomes",
+  "Slow, long-term changes and trends in temperature and precipitation, for a region or for the whole Earth."
+ ],
+ [
+  "trace components",
+  "s15-1",
+  "Gases that make up less than 1% of the atmosphere, such as CO2, water vapor, neon, helium, and methane."
+ ],
+ [
+  "greenhouse gas",
+  "s15-1",
+  "A gas that absorbs outgoing long-wave infrared radiation and so warms the planet; mainly water vapor, carbon dioxide, methane, and nitrous oxide."
+ ],
+ [
+  "fossil fuel",
+  "s15-1",
+  "A fuel such as coal, oil, or natural gas formed from the remains of ancient organisms, storing carbon and solar energy captured millions of years ago."
+ ],
+ [
+  "photosynthesis",
+  "s15-1",
+  "The process by which plants use sunlight to turn carbon dioxide and water into sugars and oxygen: CO2 + H2O + sunlight → sugars + O2."
+ ],
+ [
+  "carbon cycle",
+  "s15-1",
+  "The movement of carbon among the atmosphere, living things, oceans, rocks, and the mantle; it has a fast biological part and a slow geological part."
+ ],
+ [
+  "carbon reservoir",
+  "s15-1",
+  "A place where carbon is stored for a time, such as the atmosphere, the ocean, coal, carbonate rocks, or the mantle."
+ ],
+ [
+  "permafrost",
+  "s15-1",
+  "Permanently frozen soil at high latitudes, mostly in the Northern Hemisphere; it holds large amounts of organic matter."
+ ],
+ [
+  "bicarbonate",
+  "s15-1",
+  "The dissolved ion HCO3−, formed when CO2 reacts with water and minerals; the ocean stores carbon this way."
+ ],
+ [
+  "subduction",
+  "s15-1",
+  "The sinking of one tectonic plate beneath another into the mantle, which can carry carbon-bearing sediments down with it."
+ ],
+ [
+  "Siberian Traps",
+  "s15-1",
+  "A huge outpouring of flood basalts in Siberia about 250 million years ago whose CO2 caused strong warming."
+ ],
+ [
+  "hydrolysis",
+  "s15-1",
+  "Chemical weathering in which water reacts with a mineral such as feldspar to form clay; it consumes CO2 from the air."
+ ],
+ [
+  "greenhouse effect",
+  "s15-1",
+  "The warming of Earth because greenhouse gases absorb the thermal infrared radiation given off by the surface and keep part of that heat in the atmosphere."
+ ],
+ [
+  "solar radiation",
+  "s15-1",
+  "Energy from the Sun, mostly ultraviolet, visible light, and infrared at short wavelengths."
+ ],
+ [
+  "thermal infrared",
+  "s15-1",
+  "Long-wave infrared radiation given off by warm objects such as Earth's surface; felt as heat, and absorbed by greenhouse gases."
+ ],
+ [
+  "energy budget",
+  "s15-1",
+  "The balance between the solar energy Earth absorbs and the heat it radiates back to space."
+ ],
+ [
+  "albedo",
+  "s15-1",
+  "How much sunlight a surface reflects; snow and ice have a high albedo, dark ocean and land a low one."
+ ],
+ [
+  "aerosol",
+  "s15-1",
+  "Tiny particles or droplets suspended in the air, such as dust, soot, and sulfate from burning coal or from eruptions; many reflect sunlight and cool the planet."
+ ],
+ [
+  "positive feedback",
+  "s15-1",
+  "A process whose result strengthens its own cause, amplifying a change (e.g. melting ice lowers albedo, which causes more warming)."
+ ],
+ [
+  "negative feedback",
+  "s15-1",
+  "A process whose result weakens its own cause, damping a change (e.g. more CO2 helps plants grow, which take up more CO2)."
+ ],
+ [
+  "carbonic acid",
+  "s15-1",
+  "The weak acid H2CO3 formed when carbon dioxide dissolves in water."
+ ],
+ [
+  "chemical weathering",
+  "s15-1",
+  "The breakdown of rock by chemical reactions, such as with carbonic acid, which changes its minerals."
+ ],
+ [
+  "anthropogenic climate change",
+  "s15-2",
+  "Climate change caused by human activity, mainly by adding greenhouse gases to the atmosphere."
+ ],
+ [
+  "temperature anomaly",
+  "s15-2",
+  "The difference between a measured temperature and the average for a reference period; positive means warmer than the average."
+ ],
+ [
+  "reference period",
+  "s15-2",
+  "The span of years (30 or more, e.g. 1951–1980 or 1900–2000) whose average temperature is the baseline for anomalies."
+ ],
+ [
+  "specific heat",
+  "s15-2",
+  "The amount of heat needed to warm a substance by one degree; water's is very high, so the ocean absorbs much heat while warming only a little."
+ ],
+ [
+  "Keeling Curve",
+  "s15-2",
+  "The record of atmospheric CO2 measured continuously at Mauna Loa Observatory, Hawaii, since 1958, named after Charles Keeling."
+ ],
+ [
+  "thermal expansion",
+  "s15-2",
+  "The increase in volume of a solid, liquid, or gas as it warms; warming seawater expands and raises sea level."
+ ],
+ [
+  "ocean acidification",
+  "s15-2",
+  "The fall in ocean pH as seawater absorbs CO2 and forms carbonic acid, which makes it harder for organisms to build calcium carbonate shells."
+ ],
+ [
+  "pH",
+  "s15-2",
+  "A scale of acidity: lower values are more acidic, higher values more basic."
+ ],
+ [
+  "pteropod",
+  "s15-2",
+  "A small swimming sea snail with a thin calcium carbonate shell, sensitive to ocean acidification."
+ ],
+ [
+  "foraminifera",
+  "s15-2",
+  "Single-celled marine organisms (protozoans) with calcium carbonate shells; fossil shells in sea-floor sediment record past ocean chemistry and temperature."
+ ],
+ [
+  "Huronian glaciation",
+  "s15-3",
+  "The oldest known major glaciation, about 2.5–2.1 billion years ago, linked to the Great Oxygenation Event."
+ ],
+ [
+  "Great Oxygenation Event",
+  "s15-3",
+  "The rise of free oxygen in the atmosphere about 2.4 billion years ago; the oxygen likely destroyed much methane, cooling Earth."
+ ],
+ [
+  "Snowball Earth",
+  "s15-3",
+  "The controversial hypothesis that Earth froze over almost completely during Late Proterozoic glaciations, about 700 million years ago."
+ ],
+ [
+  "Slushball Earth",
+  "s15-3",
+  "A rival hypothesis in which some equatorial ocean stayed open during the Late Proterozoic glaciations."
+ ],
+ [
+  "diamictite",
+  "s15-3",
+  "A sedimentary rock of large clasts scattered in a fine-grained matrix, like lithified glacial till."
+ ],
+ [
+  "tillite",
+  "s15-3",
+  "Lithified glacial till; a kind of diamictite that is evidence of ancient glaciation."
+ ],
+ [
+  "Paleocene-Eocene Thermal Maximum",
+  "s15-3",
+  "A brief spike of extreme global warmth about 56 million years ago, at the boundary of the Paleocene and Eocene epochs."
+ ],
+ [
+  "Antarctic Circumpolar Current",
+  "s15-3",
+  "The ocean current flowing west to east around Antarctica, opened by the Drake Passage about 40 million years ago; it isolates Antarctica from warmer waters."
+ ],
+ [
+  "Milankovitch cycles",
+  "s15-3",
+  "Cyclic changes in Earth's orbit and axis (eccentricity, obliquity, precession) that change incoming sunlight and pace glacial cycles."
+ ],
+ [
+  "interglacial",
+  "s15-3",
+  "A warm period between glacial advances within an ice age; the Holocene is the current one."
+ ],
+ [
+  "interstadial",
+  "s15-3",
+  "A short, milder period within a glacial period, less warm and shorter than an interglacial."
+ ],
+ [
+  "Holocene",
+  "s15-3",
+  "The current epoch, the last about 11,700 years; the present interglacial."
+ ],
+ [
+  "Younger Dryas",
+  "s15-3",
+  "A sharp cooling in the Northern Hemisphere about 12,000 years ago, near the end of the last glaciation."
+ ],
+ [
+  "Holocene Climatic Optimum",
+  "s15-3",
+  "A warm period around 6,000 years ago that was not warm everywhere at the same time and not as warm as today."
+ ],
+ [
+  "proxy indicator",
+  "s15-3",
+  "A biological, chemical, or physical signature preserved in rock, sediment, or ice that indirectly records past climate."
+ ],
+ [
+  "isotope",
+  "s15-3",
+  "A form of an element with a different number of neutrons and so a different mass, such as oxygen-16 and oxygen-18."
+ ],
+ [
+  "δ18O",
+  "s15-3",
+  "The ratio of oxygen-18 to oxygen-16 in a sample compared with a standard; in foraminifera shells, higher values mean more ice on land and colder water."
+ ],
+ [
+  "mass spectrometer",
+  "s15-3",
+  "An instrument that sorts atoms and molecules by mass to measure the composition of a sample, such as ancient air from ice cores."
+ ],
+ [
+  "assemblage",
+  "s15-3",
+  "A group of fossil species found together in one layer; it reflects the conditions when they lived."
+ ],
+ [
+  "paleoclimate",
+  "s15-3",
+  "The climate of a time in the geologic past; paleoclimatic study reconstructs it from proxies."
+ ],
+ [
+  "Theory of Anthropogenic Climate Change",
+  "s15-4",
+  "The well-supported theory that humans are causing most of the current climate change, mainly by burning fossil fuels."
+ ],
+ [
+  "isotopic fingerprint",
+  "s15-4",
+  "The carbon-13 to carbon-12 ratio of fossil-fuel CO2, which differs from that of the atmosphere and identifies human carbon in the air."
+ ],
+ [
+  "CO2-equivalent",
+  "s15-4",
+  "A unit that expresses any greenhouse gas as the amount of CO2 with the same warming effect, so different gases can be added."
+ ]
+]
+</script>
+<script src="assets/guide.js"></script>
+</body>
+</html>
