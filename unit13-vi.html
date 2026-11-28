@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hoang mạc</title>
+<meta name="description" content="Tài liệu ôn tập Học phần 13, An Introduction to Geology, Chương 13: Hoang mạc.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/guide.css">
+<style>
+/* Unit 13 palette: the desert. Dune gold with a desert-sky teal and a varnish-red accent; header bands run from pale sand through dune gold and coral-pink sandstone to desert-varnish brown under a night sky. */
+:root{
+  --fig-prefix:"Hình 13."; --tbl-prefix:"Bảng 13.";
+  --bg:#faf6ee; --surface:#ffffff; --surface-2:#f1e8d6; --fg:#2a1f14; --muted:#6e5d4a; --line:#e3d5bd;
+  --accent:#946100; --accent-soft:#f6e6c4; --ochre:#2f7a8c; --ochre-soft:#dcedf0; --rust:#a63d2a;
+  --s1:#f3dfae; --s2:#e0ae55; --s3:#d1825c; --s4:#7a4326; --s5:#2b1b10;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17120c; --surface:#201911; --surface-2:#2a2117; --fg:#f1e8da; --muted:#bba98f; --line:#3d3022;
+  --accent:#e5b04f; --accent-soft:#3d2e12; --ochre:#6cc0d2; --ochre-soft:#17343b; --rust:#f0866d;
+  --s1:#7a6438; --s2:#8a6524; --s3:#7d4a33; --s4:#4a2816; --s5:#0d0805; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17120c; --surface:#201911; --surface-2:#2a2117; --fg:#f1e8da; --muted:#bba98f; --line:#3d3022;
+  --accent:#e5b04f; --accent-soft:#3d2e12; --ochre:#6cc0d2; --ochre-soft:#17343b; --rust:#f0866d;
+  --s1:#7a6438; --s2:#8a6524; --s3:#7d4a33; --s4:#4a2816; --s5:#0d0805; color-scheme:dark}
+
+</style>
+</head>
+<body>
+<div lang="vi">
+<header class="hero" id="top">
+  <div class="strata" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Học phần 13 · Chương 13 · An Introduction to Geology</div>
+      <h1>Hoang mạc</h1>
+      <p>Vì sao hoang mạc nằm ở những nơi nhất định, từ không khí giáng xuống, vùng khuất mưa đến hiệu ứng Coriolis; gió và những trận lũ hiếm hoi bào mòn đá hoang mạc thế nào; các nón phóng vật, playa và đụn cát chúng tạo nên; và các bồn đứt gãy khối của vùng Great Basin ở Bắc Mỹ.</p>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="toc" aria-label="Mục lục">
+    <div class="navbar" role="group" aria-label="Công cụ trang">
+      <a class="btn tbtn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Tất cả học phần</span></a>
+      <a class="btn tbtn lbtn" href="unit13.html" lang="en" hreflang="en"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>English</span></a>
+      <button class="btn tbtn" id="themeBtn" type="button" aria-label="Chuyển chế độ sáng hoặc tối">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Chế độ tối</span>
+      </button>
+    </div>
+    <h2>Mục lục</h2>
+    <ol>
+      <li><a href="#outcomes">Mục tiêu học tập</a></li>
+      <li><a href="#s13-1"><span class="num">13.1</span>Nguồn gốc của hoang mạc</a>
+        <ol>
+          <li><a href="#s13-1-1"><span class="num">13.1.1</span>Hoàn lưu khí quyển</a></li>
+          <li><a href="#s13-1-2"><span class="num">13.1.2</span>Hiệu ứng Coriolis</a></li>
+        </ol>
+      </li>
+      <li><a href="#s13-2"><span class="num">13.2</span>Phong hóa và xói mòn ở hoang mạc</a>
+        <ol>
+          <li><a href="#s13-2-wind">Xói mòn do gió</a></li>
+          <li><a href="#s13-2-stones">Đá trượt</a></li>
+          <li><a href="#s13-2-abrasion">Địa hình do cát mài</a></li>
+        </ol>
+      </li>
+      <li><a href="#s13-3"><span class="num">13.3</span>Địa hình hoang mạc</a>
+        <ol>
+          <li><a href="#s13-3-water">Dòng chảy tạm thời</a></li>
+          <li><a href="#s13-3-1"><span class="num">13.3.1</span>Cát</a></li>
+          <li><a href="#s13-3-dunes">Các kiểu đụn cát</a></li>
+        </ol>
+      </li>
+      <li><a href="#s13-4"><span class="num">13.4</span>Great Basin và Basin and Range</a>
+        <ol>
+          <li><a href="#s13-4-1"><span class="num">13.4.1</span>Hoang mạc hóa</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary">Tóm tắt</a></li>
+      <li><a href="#resources">Tài liệu tham khảo</a></li>
+      <li><a href="#factcheck">Ghi chú kiểm chứng</a></li>
+      <li><a href="#credits">Nguồn & trích dẫn</a></li>
+
+    </ol>
+  </nav>
+
+<main>
+<section id="outcomes">
+  <h2 class="sec">Mục tiêu học tập</h2>
+  <p class="lead">Sau Chương 13, bạn cần làm được từng điều dưới đây. Nhãn cho biết nội dung nằm ở mục nào.</p>
+  <ul class="outcomes">
+    <li><a class="tag" href="#outcomes">13</a><span>Giải thích đặc điểm định nghĩa của hoang mạc và phân biệt ba nhóm hoang mạc chính.</span></li>
+    <li><a class="tag" href="#s13-1">13.1</a><span>Giải thích các yếu tố địa lý, vĩ độ, hoàn lưu khí quyển và hiệu ứng Coriolis ảnh hưởng thế nào đến vị trí của hoang mạc.</span></li>
+    <li><a class="tag" href="#s13-2">13.2</a><span>Liệt kê các quá trình phong hóa và xói mòn chính ở hoang mạc.</span></li>
+    <li><a class="tag" href="#s13-3">13.3</a><span>Nhận biết các dạng địa hình hoang mạc.</span></li>
+    <li><a class="tag" href="#s13-3">13.3</a><span>Giải thích các dạng địa hình hoang mạc được tạo thành bởi xói mòn và lắng đọng như thế nào.</span></li>
+    <li><a class="tag" href="#s13-3-1">13.3.1</a><span>Mô tả các kiểu đụn cát chính và điều kiện hình thành chúng.</span></li>
+    <li><a class="tag" href="#s13-4">13.4</a><span>Nhận biết các đặc điểm chính của hoang mạc Basin and Range (Hoa Kỳ).</span></li>
+  </ul>
+  <div class="callout">
+    <h4>Cách dùng tài liệu này</h4>
+    <p>Các từ được gạch chân là thuật ngữ. Nhấn vào một từ, hoặc mở <b>Thuật ngữ</b> ở góc dưới bên phải, để đọc và tìm mọi định nghĩa của chương. Thuật ngữ được dịch sang tiếng Việt khoa học; thuật ngữ chưa thấy trong nguồn chính thức được ghi chú trong bảng thuật ngữ. Chương đi từ bầu trời xuống mặt đất: vì sao không khí khô ở nơi có hoang mạc (13.1), gió và nước hiếm hoi bào mòn đá hoang mạc thế nào (13.2), các địa hình và đụn cát chúng tạo nên (13.3), và hoang mạc của những bồn đứt gãy khối ở Bắc Mỹ (13.4).</p>
+  </div>
+  <div class="spheres">
+    <div class="sphere"><b><span class="dot" style="background:var(--ochre)"></span>Không khí khô</b>Không khí giáng xuống và vùng khuất mưa giữ cho hoang mạc khô.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--accent)"></span>Gió</b>Vận chuyển cát và bụi, mài mòn đá, tạo đụn cát.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--rust)"></span>Nước hiếm hoi</b>Lũ quét vẫn gây ra phần lớn xói mòn.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s4)"></span>Bồn trũng</b>Nón phóng vật, bajada và playa lấp đầy các bồn kín.</div>
+  </div>
+  <figure id="fig-erg">
+    <div class="frame"><img src="images/unit13/erg.webp" alt="Những đụn cát gợn sóng trải dài tới chân trời dưới bầu trời nhạt ở sa mạc Sahara." loading="lazy" width="800" height="600"></div>
+    <figcaption>Sa mạc Sahara gần Jalu, Libya: một biển cát (erg). Cát chỉ phủ một phần các hoang mạc trên thế giới; điều làm nên hoang mạc là sự thiếu nước.<span class="credit">Wsx, CC BY-SA (qua sách giáo khoa).</span></figcaption>
+  </figure>
+  <p>Khoảng 30% bề mặt đất liền (<button class="term" data-term="trên cạn">bề mặt trên cạn</button>) của Trái Đất là <button class="term" data-term="hoang mạc">hoang mạc</button> (sa mạc). Hoang mạc được định nghĩa bởi <b>lượng <button class="term" data-term="giáng thủy">giáng thủy</button> thấp</b>, không phải bởi nhiệt độ. Hoang mạc có nhiệt độ khắc nghiệt, nhưng đó là vì <button class="term" data-term="khí quyển">khí quyển</button> phía trên chứa ít hơi ẩm: độ ẩm thấp và ít mây. Không có mây che, mặt đất hấp thụ nhiều năng lượng Mặt Trời hơn vào ban ngày và tỏa nhiệt nhiều hơn vào ban đêm.</p>
+  <p>Hoang mạc không phân bố ngẫu nhiên. Có ba nhóm chính (<a href="#tbl-kinds">Bảng 13.1</a>):</p>
+  <div class="tablewrap" id="tbl-kinds">
+    <table>
+      <caption>Ba nhóm hoang mạc chính.</caption>
+      <thead><tr><th>Nhóm</th><th>Nguyên nhân</th><th>Ví dụ</th></tr></thead>
+      <tbody>
+        <tr><td>Hoang mạc cận nhiệt đới (theo vĩ độ)</td><td>Không khí khô giáng xuống ở khoảng 30° B và N; hoang mạc nằm trong khoảng 15°–30° (13.1.1)</td><td>Sahara (châu Phi), vùng nội địa Úc (Outback)</td></tr>
+        <tr><td><button class="term" data-term="hoang mạc khuất mưa">Hoang mạc khuất mưa</button></td><td>Gió thịnh hành mất hơi ẩm khi vượt qua dãy núi; không khí khô giáng xuống phía bên kia</td><td>Nội địa miền tây Bắc Mỹ (Great Basin), <button class="term" data-term="hoang mạc Atacama">hoang mạc Atacama</button> (Chile), Gobi (châu Á)</td></tr>
+        <tr><td><button class="term" data-term="hoang mạc cực">Hoang mạc cực</button></td><td>Không khí quá lạnh, giữ được rất ít hơi ẩm, giáng xuống ở hai cực</td><td>Châu Nam Cực, phần lớn Bắc Cực</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure id="fig-koppen">
+    <div class="frame"><img src="images/unit13/koppen.webp" alt="Bản đồ thế giới với các hoang mạc nóng tô đỏ; vùng tô tập trung gần vĩ độ 30° bắc và nam, gồm Sahara, Ả Rập, Kalahari, trung Úc và tây nam Hoa Kỳ." loading="lazy" width="1200" height="735"></div>
+    <figcaption>Các hoang mạc nóng trên thế giới (kiểu khí hậu Köppen BWh, vùng tô màu). Phần lớn nằm thành dải gần 30° B và 30° N.<span class="credit">M. C. Peel, B. L. Finlayson và T. A. McMahon (Đại học Melbourne), Me ne frego chỉnh sửa, CC BY-SA (qua sách giáo khoa).</span></figcaption>
+  </figure>
+  <p><button class="term" data-term="vùng khuất mưa">Vùng khuất mưa</button> (bóng mưa) hình thành khi gió đẩy không khí lên và vượt qua núi (<a href="#fig-rainshadow">Hình 13.3</a>). Áp suất không khí thấp hơn ở trên cao, nên không khí bốc lên giãn nở và lạnh đi. Không khí lạnh giữ được ít hơi ẩm hơn không khí ấm, nên hơi ẩm rơi xuống thành mưa hoặc tuyết ở <b>sườn đón gió</b>. Không khí giờ đã khô giáng xuống <b>sườn khuất gió</b> và để lại một vùng khô hạn, ít giáng thủy.</p>
+  <figure id="fig-rainshadow">
+    <div class="frame"><svg viewBox="0 0 760 360" role="img" aria-labelledby="rs-vi-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="rs-vi-t">Mặt cắt một dãy núi, gió thổi từ biển bên trái. Không khí ẩm bốc lên theo sườn đón gió, lạnh đi và gây mưa, tuyết; không khí khô giáng xuống sườn khuất gió và nóng lên, để lại hoang mạc khuất mưa bên phải.</title><rect x="0" y="0" width="760" height="300" fill="#2f7a8c" opacity=".10"/><rect x="0" y="300" width="760" height="60" fill="#6f563f"/><rect x="0" y="300" width="112" height="60" fill="#3f8fb5"/><polygon points="110,300 390,95 565,300 565,360 110,360" fill="#8a6f57"/><path d="M565,300 Q600,290 640,298 T720,296 T760,298 L760,360 L565,360 Z" fill="#e6c27a"/><line x1="0" y1="300" x2="760" y2="300" stroke="#2a1f14" stroke-width="1" stroke-dasharray="6 5" opacity=".5"/><text x="752.0" y="316.0" dy=".35em" text-anchor="end" font-size="10" font-weight="400" fill="#2a1f14" class="">mực nước biển</text><polygon points="360,117.0 390,95 420,130.1 406,124 392,131 377,121" fill="#fff"/><polygon points="143,272.7 150,254.7 157,272.7" fill="#4f8a3a"/><polygon points="171,252.2 178,234.2 185,252.2" fill="#4f8a3a"/><polygon points="199,231.7 206,213.7 213,231.7" fill="#4f8a3a"/><polygon points="227,211.2 234,193.2 241,211.2" fill="#4f8a3a"/><polygon points="255,190.7 262,172.7 269,190.7" fill="#4f8a3a"/><polygon points="283,170.2 290,152.2 297,170.2" fill="#4f8a3a"/><line x1="178" y1="254.2" x2="178" y2="282" stroke="#fff" stroke-width="1.3"/><circle cx="178" cy="252.2" r="2.5" fill="#fff"/><text x="178.0" y="290.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#fff" class="">rừng</text><line x1="222" y1="128" x2="214" y2="219.9" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><line x1="236" y1="128" x2="228" y2="209.6" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><line x1="250" y1="128" x2="242" y2="199.4" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><line x1="264" y1="128" x2="256" y2="189.1" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><line x1="278" y1="128" x2="270" y2="178.9" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><line x1="292" y1="128" x2="284" y2="168.6" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><line x1="306" y1="128" x2="298" y2="158.4" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><line x1="320" y1="128" x2="312" y2="148.1" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><g fill="#f4f6f8" stroke="#9aa7b0" stroke-width="3"><ellipse cx="244" cy="112" rx="34" ry="20"/><ellipse cx="278" cy="98" rx="38" ry="26"/><ellipse cx="312" cy="112" rx="30" ry="18"/></g><g fill="#f4f6f8"><ellipse cx="244" cy="112" rx="34" ry="20"/><ellipse cx="278" cy="98" rx="38" ry="26"/><ellipse cx="312" cy="112" rx="30" ry="18"/></g><path d="M15,232 L125,232 L355,63 Q385,40 415,63 L545,213 L725,213" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round" opacity=".85"/><path d="M15,232 L125,232 L355,63 Q385,40 415,63 L545,213 L725,213" fill="none" stroke="#3f7fbf" stroke-width="4" stroke-linejoin="round"/><path d="M415,63 L545,213 L725,213" fill="none" stroke="#c9822e" stroke-width="4" stroke-linejoin="round"/><polygon points="80.0,232.0 68.7,238.5 68.7,225.5" fill="#3f7fbf"/><polygon points="240.0,147.6 234.8,159.5 227.1,149.0" fill="#3f7fbf"/><polygon points="480.0,138.0 467.7,133.7 477.5,125.2" fill="#c9822e"/><polygon points="740.0,213.0 727.9,220.0 727.9,206.0" fill="#c9822e"/><text x="66.0" y="198.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="600" class="svg-ink halo">Không khí ẩm từ biển</text><text x="66.0" y="214.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="400" class="svg-ink halo">gió thịnh hành →</text><text x="112.0" y="140.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="600" class="svg-ink halo">1  Không khí bốc lên</text><text x="112.0" y="156.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="400" class="svg-ink halo">và lạnh đi</text><text x="292.0" y="28.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="600" class="svg-ink halo">2  Hơi nước ngưng tụ: mây,</text><text x="292.0" y="44.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="400" class="svg-ink halo">mưa và tuyết ở sườn đón gió</text><text x="570.0" y="120.0" dy=".35em" text-anchor="start" font-size="12" font-weight="600" class="svg-ink halo">3  Không khí khô giáng xuống</text><text x="570.0" y="136.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">và nóng lên</text><text x="655.0" y="258.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Hoang mạc khuất mưa</text><text x="655.0" y="274.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">(rất ít giáng thủy)</text><rect x="19.8" y="320.4" width="72.5" height="19.2" rx="9.6" fill="#3f8fb5" opacity="1"/><text x="56.0" y="330.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Đại dương</text><rect x="158.8" y="324.4" width="146.4" height="19.2" rx="9.6" fill="#6f563f" opacity="1"/><text x="232.0" y="334.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Sườn đón gió: ẩm ướt</text><rect x="380.2" y="324.4" width="139.7" height="19.2" rx="9.6" fill="#6f563f" opacity="1"/><text x="450.0" y="334.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Sườn khuất gió: khô</text></svg></div>
+    <figcaption>Vùng khuất mưa hình thành như thế nào. Đường xanh dương: không khí ẩm từ biển; đường cam: cùng khối không khí đó sau khi mất hơi ẩm. Mặt cắt qua một dãy núi, gió thổi từ trái; không theo tỷ lệ.<span class="credit">Vẽ cho tài liệu này theo hình "Rainshadow" của chương (Bariot, phạm vi công cộng).</span></figcaption>
+  </figure>
+  <figure id="fig-owens">
+    <div class="frame"><img src="images/unit13/owens.webp" alt="Ảnh chụp từ không gian các dãy núi song song; dãy trên cùng phủ nhiều tuyết, dãy kế bên dưới ít tuyết hơn nhiều, giữa là những thung lũng khô." loading="lazy" width="750" height="750" style="max-height:520px;width:auto"></div>
+    <figcaption>Vùng khuất mưa nhìn từ Trạm Vũ trụ Quốc tế. Dãy Sierra Nevada (phía trên) nằm chắn ngang gió tây thịnh hành; vùng khuất mưa ở phía đông của nó (phía dưới ảnh). Hãy để ý dãy Inyo có ít tuyết hơn hẳn.<span class="credit">Adrian Pingstone (NASA), phạm vi công cộng (qua sách giáo khoa).</span></figcaption>
+  </figure>
+  <p>Ở các hoang mạc cực, những vùng rộng lớn của châu Nam Cực và Bắc Cực phủ băng tuyết, nhưng lượng giáng thủy trung bình hằng năm rất thấp. Vì vậy <b>châu Nam Cực là lục địa khô nhất Trái Đất</b>.</p>
+  <p class="quiz">Xem: <a href="https://www.youtube.com/watch?v=iMu4dShS74w" target="_blank" rel="noopener">video về vùng khuất mưa của chương (tiếng Anh) ↗</a></p>
+</section>
+
+<section id="s13-1">
+  <h2 class="sec"><span class="n">13.1</span>Nguồn gốc của hoang mạc</h2>
+  <p>Vị trí địa lý, hoàn lưu khí quyển và sự tự quay của Trái Đất là những nguyên nhân chính tạo nên hoang mạc.</p>
+
+  <h3 id="s13-1-1">13.1.1 Hoàn lưu khí quyển</h3>
+  <p>Năng lượng Mặt Trời chuyển thành nhiệt là động lực của hoàn lưu không khí trong khí quyển và nước trong đại dương. Hoàn lưu mạnh hay yếu tùy vào lượng năng lượng bề mặt Trái Đất hấp thụ, và Trái Đất bị đốt nóng <b>không đều</b>, tùy theo hai góc:</p>
+  <ul>
+    <li><b><button class="term" data-term="vĩ độ">Vĩ độ</button></b>: các đường vòng quanh Trái Đất song song với xích đạo, đo bằng độ: 0° ở xích đạo, 90° B và 90° N ở hai cực.</li>
+    <li><b><button class="term" data-term="góc tới">Góc tới</button></b>: góc mà tia nắng chiếu xuống mặt đất, đo từ phương vuông góc với mặt đất. Ở vùng nhiệt đới cả hai góc gần 0°, nên bề mặt nhận nhiều năng lượng Mặt Trời; ở hai cực cả hai góc tiến tới 90°, bề mặt nhận rất ít hoặc gần như không có năng lượng.</li>
+  </ul>
+  <p>Giữa xích đạo và mỗi cực, không khí đảo lộn trong ba <b>vòng hoàn lưu</b> (<a href="#fig-cells">Hình 13.5</a>, <a href="#tbl-cells">Bảng 13.2</a>):</p>
+  <ul>
+    <li><b><button class="term" data-term="vòng hoàn lưu Hadley">Vòng hoàn lưu Hadley</button></b> (trên vùng nhiệt đới): Mặt Trời đốt nóng không khí ở xích đạo và không khí bốc lên. Không khí bốc lên thì lạnh đi và trút hơi ẩm thành mưa nhiệt đới. Không khí đã khô tỏa về phía hai cực, gặp không khí khô của vòng Ferrel, và khối không khí khô hợp lại giáng xuống mặt đất ở gần vĩ độ 30°.</li>
+    <li><b><button class="term" data-term="vòng hoàn lưu Ferrel">Vòng hoàn lưu Ferrel (vĩ độ trung bình)</button></b>, trong khoảng 30° đến 60°.</li>
+    <li><b><button class="term" data-term="vòng hoàn lưu cực">Vòng hoàn lưu cực</button></b>, từ khoảng 60° đến cực, nơi không khí lạnh và khô giáng xuống.</li>
+  </ul>
+  <figure id="fig-cells">
+    <div class="frame"><svg viewBox="0 0 760 330" role="img" aria-labelledby="cells-vi-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="cells-vi-t">Mặt cắt khí quyển từ cực Bắc (trái) đến cực Nam (phải). Mỗi bán cầu có ba vòng hoàn lưu: Hadley, Ferrel và vòng cực. Không khí bốc lên ở xích đạo và vĩ độ 60°, giáng xuống ở 30° và ở hai cực, nơi hình thành hoang mạc.</title><rect x="20" y="52" width="720" height="188" fill="#2f7a8c" opacity=".08"/><line x1="20" y1="60" x2="740" y2="60" stroke="var(--muted)" stroke-dasharray="5 5"/><text x="380.0" y="40.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">Đỉnh tầng khí quyển dưới (tầng đối lưu)</text><rect x="40.0" y="240" width="56.7" height="12" fill="#e8eef2"/><rect x="96.7" y="240" width="113.3" height="12" fill="#7aa35e"/><rect x="210.0" y="240" width="113.3" height="12" fill="#e0b25a"/><rect x="323.3" y="240" width="113.3" height="12" fill="#3f8a4a"/><rect x="436.7" y="240" width="113.3" height="12" fill="#e0b25a"/><rect x="550.0" y="240" width="113.3" height="12" fill="#7aa35e"/><rect x="663.3" y="240" width="56.7" height="12" fill="#e8eef2"/><line x1="20" y1="240" x2="740" y2="240" stroke="var(--fg)" stroke-width="1.5"/><rect x="53.0" y="92" width="87.3" height="134" rx="16" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="53.0,169.0 47.0,158.6 59.0,158.6" fill="#3f7fbf"/><polygon points="140.3,149.0 146.3,159.4 134.3,159.4" fill="#3f7fbf"/><polygon points="88.7,92.0 99.1,86.0 99.1,98.0" fill="#3f7fbf"/><polygon points="104.7,226.0 94.3,232.0 94.3,220.0" fill="#3f7fbf"/><text x="96.7" y="137.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Vòng</text><text x="96.7" y="153.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">cực</text><text x="96.7" y="196.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#3f7fbf" class="halo">Gió đông</text><text x="96.7" y="210.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#3f7fbf" class="halo">cực</text><rect x="166.3" y="92" width="87.3" height="134" rx="16" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="166.3,149.0 172.3,159.4 160.3,159.4" fill="#8a6f57"/><polygon points="253.7,169.0 247.7,158.6 259.7,158.6" fill="#8a6f57"/><polygon points="218.0,92.0 207.6,98.0 207.6,86.0" fill="#8a6f57"/><polygon points="202.0,226.0 212.4,220.0 212.4,232.0" fill="#8a6f57"/><text x="210.0" y="137.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Vòng</text><text x="210.0" y="153.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Ferrel</text><text x="210.0" y="204.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#8a6f57" class="halo">Gió tây</text><rect x="279.7" y="92" width="87.3" height="134" rx="16" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="279.7,169.0 273.7,158.6 285.7,158.6" fill="#c9822e"/><polygon points="367.0,149.0 373.0,159.4 361.0,159.4" fill="#c9822e"/><polygon points="315.3,92.0 325.7,86.0 325.7,98.0" fill="#c9822e"/><polygon points="331.3,226.0 320.9,232.0 320.9,220.0" fill="#c9822e"/><text x="323.3" y="137.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Vòng</text><text x="323.3" y="153.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Hadley</text><text x="323.3" y="196.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#c9822e" class="halo">Tín phong</text><text x="323.3" y="210.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#c9822e" class="halo">đông bắc</text><rect x="393.0" y="92" width="87.3" height="134" rx="16" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="393.0,149.0 399.0,159.4 387.0,159.4" fill="#c9822e"/><polygon points="480.3,169.0 474.3,158.6 486.3,158.6" fill="#c9822e"/><polygon points="444.7,92.0 434.3,98.0 434.3,86.0" fill="#c9822e"/><polygon points="428.7,226.0 439.1,220.0 439.1,232.0" fill="#c9822e"/><text x="436.7" y="137.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Vòng</text><text x="436.7" y="153.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Hadley</text><text x="436.7" y="196.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#c9822e" class="halo">Tín phong</text><text x="436.7" y="210.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#c9822e" class="halo">đông nam</text><rect x="506.3" y="92" width="87.3" height="134" rx="16" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="506.3,169.0 500.3,158.6 512.3,158.6" fill="#8a6f57"/><polygon points="593.7,149.0 599.7,159.4 587.7,159.4" fill="#8a6f57"/><polygon points="542.0,92.0 552.4,86.0 552.4,98.0" fill="#8a6f57"/><polygon points="558.0,226.0 547.6,232.0 547.6,220.0" fill="#8a6f57"/><text x="550.0" y="137.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Vòng</text><text x="550.0" y="153.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Ferrel</text><text x="550.0" y="204.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#8a6f57" class="halo">Gió tây</text><rect x="619.7" y="92" width="87.3" height="134" rx="16" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="619.7,149.0 625.7,159.4 613.7,159.4" fill="#3f7fbf"/><polygon points="707.0,169.0 701.0,158.6 713.0,158.6" fill="#3f7fbf"/><polygon points="671.3,92.0 660.9,98.0 660.9,86.0" fill="#3f7fbf"/><polygon points="655.3,226.0 665.7,220.0 665.7,232.0" fill="#3f7fbf"/><text x="663.3" y="137.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Vòng</text><text x="663.3" y="153.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">cực</text><text x="663.3" y="196.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#3f7fbf" class="halo">Gió đông</text><text x="663.3" y="210.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#3f7fbf" class="halo">cực</text><line x1="40.0" y1="252" x2="40.0" y2="260" stroke="var(--fg)"/><text x="40.0" y="269.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">90°B</text><text x="40.0" y="289.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Giáng, lạnh:</text><text x="40.0" y="304.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">hoang mạc cực</text><line x1="153.3" y1="252" x2="153.3" y2="260" stroke="var(--fg)"/><text x="153.3" y="269.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">60°B</text><text x="153.3" y="289.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Bốc lên:</text><text x="153.3" y="304.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">ẩm hơn</text><line x1="266.7" y1="252" x2="266.7" y2="260" stroke="var(--fg)"/><text x="266.7" y="269.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">30°B</text><text x="266.7" y="289.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Giáng, khô:</text><text x="266.7" y="304.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">hoang mạc nóng</text><line x1="380.0" y1="252" x2="380.0" y2="260" stroke="var(--fg)"/><text x="380.0" y="269.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">0°</text><text x="380.0" y="289.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Bốc lên:</text><text x="380.0" y="304.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">mưa nhiệt đới</text><line x1="493.3" y1="252" x2="493.3" y2="260" stroke="var(--fg)"/><text x="493.3" y="269.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">30°N</text><text x="493.3" y="289.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Giáng, khô:</text><text x="493.3" y="304.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">hoang mạc nóng</text><line x1="606.7" y1="252" x2="606.7" y2="260" stroke="var(--fg)"/><text x="606.7" y="269.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">60°N</text><text x="606.7" y="289.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Bốc lên:</text><text x="606.7" y="304.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">ẩm hơn</text><line x1="720.0" y1="252" x2="720.0" y2="260" stroke="var(--fg)"/><text x="720.0" y="269.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">90°N</text><text x="720.0" y="289.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Giáng, lạnh:</text><text x="720.0" y="304.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">hoang mạc cực</text><g fill="#f4f6f8" stroke="#9aa7b0" stroke-width="1.2"><ellipse cx="368.0" cy="72" rx="13" ry="8"/><ellipse cx="386.0" cy="66" rx="15" ry="10"/><ellipse cx="398.0" cy="73" rx="10" ry="7"/></g><g fill="#f4f6f8" stroke="#9aa7b0" stroke-width="1.2"><ellipse cx="141.3" cy="72" rx="13" ry="8"/><ellipse cx="159.3" cy="66" rx="15" ry="10"/><ellipse cx="171.3" cy="73" rx="10" ry="7"/></g><g fill="#f4f6f8" stroke="#9aa7b0" stroke-width="1.2"><ellipse cx="594.7" cy="72" rx="13" ry="8"/><ellipse cx="612.7" cy="66" rx="15" ry="10"/><ellipse cx="624.7" cy="73" rx="10" ry="7"/></g><text x="30.0" y="320.0" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">← Bắc</text><text x="730.0" y="320.0" dy=".35em" text-anchor="end" font-size="11" font-weight="600" class="svg-ink halo">Nam →</text></svg></div>
+    <figcaption>Ba vòng hoàn lưu ở mỗi bán cầu. Mũi tên trên mỗi vòng cho biết chiều chuyển động của không khí; tên ghi trong vòng, sát mặt đất, là gió bề mặt mà vòng đó tạo ra. Dải màu trên mặt đất chỉ khí hậu: xanh lá đậm, mưa nhiệt đới; vàng nâu, các đới khô (15°–30°); xanh lá nhạt, vĩ độ trung bình ẩm hơn; xám nhạt, băng ở cực. Mặt cắt từ cực Bắc (trái) đến cực Nam (phải); chiều cao được phóng đại rất nhiều.<span class="credit">Vẽ cho tài liệu này theo hình "Earth Global Circulation" của chương (NASA, phạm vi công cộng).</span></figcaption>
+  </figure>
+  <p>Không khí khô giáng xuống tạo nên những đới chủ yếu là <b>áp cao</b> ở khoảng 30° B và 30° N, gọi là <button class="term" data-term="vĩ độ ngựa">vĩ độ ngựa</button>. Vì vậy các đới khô hạn, nơi điều kiện hoang mạc chiếm ưu thế, nằm trong khoảng 15° đến 30° về hai phía xích đạo. Không khí chảy sát mặt đất ra xa các đới này tạo nên gió thịnh hành: <button class="term" data-term="gió tín phong">gió tín phong</button> (gió mậu dịch) thổi về phía xích đạo và <button class="term" data-term="gió tây ôn đới">gió tây ôn đới</button> ở đới ôn hòa (13.1.2 giải thích hướng của chúng).</p>
+  <div class="tablewrap" id="tbl-cells">
+    <table>
+      <caption>Ba vòng hoàn lưu ở mỗi bán cầu.</caption>
+      <thead><tr><th>Vòng</th><th>Vĩ độ</th><th>Không khí bốc lên ở</th><th>Không khí giáng xuống ở</th><th>Gió bề mặt</th></tr></thead>
+      <tbody>
+        <tr><td>Hadley</td><td>0°–30°</td><td>Xích đạo (mưa nhiệt đới)</td><td>30° (vĩ độ ngựa; hoang mạc nóng)</td><td>Gió tín phong</td></tr>
+        <tr><td>Ferrel (vĩ độ trung bình)</td><td>30°–60°</td><td>60°</td><td>30°</td><td>Gió tây ôn đới</td></tr>
+        <tr><td>Cực</td><td>60°–90°</td><td>60°</td><td>Cực (áp cao cực; hoang mạc cực)</td><td>Gió đông cực*</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">*Chương chỉ gọi tên gió tín phong và gió tây; "gió đông cực" là tên chuẩn dùng trong hình hoàn lưu của NASA mà chương sử dụng.</p>
+  <p>Những hoang mạc khác có nguồn gốc ít nhất một phần từ các hiện tượng khác. <button class="term" data-term="hoang mạc Great Basin">Hoang mạc Great Basin</button>, trải trên một phần Utah và Nevada, chịu ảnh hưởng phần nào của không khí giáng xuống trong hoàn lưu toàn cầu, nhưng chủ yếu là một <b>hoang mạc khuất mưa</b>. Không khí ẩm theo gió tây từ Thái Bình Dương bốc lên qua dãy Sierra Nevada và các dãy núi khác, lạnh đi và mất hơi ẩm ở phía đón gió (<a href="#fig-greatbasin">Hình 13.6</a>).</p>
+  <figure id="fig-greatbasin">
+      <div class="frame"><img class="diagram" src="images/unit13/greatbasin.webp" alt="Bản đồ miền tây Hoa Kỳ với hoang mạc Great Basin được tô màu, phủ phần lớn Nevada, tây Utah và một phần các bang lân cận." loading="lazy" width="310" height="273" style="width:100%;max-width:420px"></div>
+      <figcaption>Hoang mạc Great Basin (vùng sinh thái trung tâm Basin and Range).<span class="credit">C. E. Soulard, USGS, phạm vi công cộng (qua sách giáo khoa).</span></figcaption>
+    </figure>
+  <p>Một trong những nơi khô nhất Trái Đất là hoang mạc Atacama ở bắc Chile, một dải đất dọc bờ biển phía bắc vĩ độ khoảng 30° N, ở rìa nam của đới gió tín phong. Ba yếu tố kết hợp ở đây:</p>
+  <div class="pair">
+    <figure id="fig-atacama">
+      <div class="frame"><img class="diagram" src="images/unit13/atacama.webp" alt="Bản đồ phía tây Nam Mỹ với hoang mạc Atacama màu vàng dọc bờ biển bắc Chile, các vùng khí hậu khô liên quan màu cam." loading="lazy" width="434" height="608" style="height:340px;width:auto"></div>
+      <figcaption>Hoang mạc Atacama (vàng) và các vùng khí hậu khô liên quan (cam).<span class="credit">cobaltcigs, CC BY-SA (qua sách giáo khoa).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Ba yếu tố</h4>
+      <ol>
+    <li><b>Vĩ độ</b>: nằm trong đới khô của không khí giáng xuống.</li>
+    <li><b>Vùng khuất mưa</b>: gió tín phong thổi về phía tây mang không khí ấm, ẩm qua lưu vực Amazon. Tới dãy Andes, không khí bốc lên, lạnh đi và trút phần lớn nước thành mưa; không khí khô, mát sau đó giáng xuống Atacama ở phía tây dãy núi.</li>
+    <li><b>Hải lưu lạnh</b>: gió từ Thái Bình Dương thổi vào bờ bị hải lưu Peru (Humboldt) làm lạnh, và không khí lạnh này giữ được rất ít hơi ẩm.</li>
+      </ol>
+    </div>
+  </div>
+  <p>Một số nơi ở Atacama không đo được giáng thủy trong nhiều năm liền. Đây là <b>nơi khô nhất Trái Đất ngoài vùng cực</b>.</p>
+  <div class="pair">
+    <figure id="fig-vortex">
+      <div class="frame"><img src="images/unit13/vortex.webp" alt="Bản đồ Bắc bán cầu nhìn từ trên cực Bắc, không khí lạnh giáng xuống tô màu tím, tâm ngay phía bắc Greenland." loading="lazy" width="636" height="689" style="height:300px;width:auto"></div>
+      <figcaption>Xoáy cực giữa tháng 11 năm 2013. Không khí lạnh giáng xuống (tím) là đặc trưng của hoàn lưu cực.<span class="credit">Phòng thí nghiệm Môi trường Biển Thái Bình Dương, NOAA, phạm vi công cộng (qua sách giáo khoa).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Hoang mạc cực</h4>
+      <p>Vùng cực cũng là những đới chủ yếu là áp cao, do không khí lạnh và khô giáng xuống trong các vòng hoàn lưu cực. Không khí lạnh giữ ít hơi ẩm hơn nhiều so với không khí ấm, nên không khí cực giáng xuống tạo nên <b>hoang mạc cực</b>. Vì vậy đất liền gần cực Bắc và cực Nam luôn rất khô.</p>
+    </div>
+  </div>
+
+  <h3 id="s13-1-2">13.1.2 Hiệu ứng Coriolis</h3>
+  <p>Trái Đất quay về phía đông, nơi Mặt Trời mọc. Hãy nghĩ tới việc quay một quả nặng buộc vào sợi dây: tốc độ của quả nặng phụ thuộc vào độ dài sợi dây. Tương tự, tốc độ hướng đông của một điểm trên Trái Đất phụ thuộc vào khoảng cách từ điểm đó tới <b>trục</b> quay. Vĩ độ cao gần trục hơn nên di chuyển về phía đông chậm hơn vĩ độ thấp.</p>
+  <p>Khi không khí hoặc nước di chuyển từ vĩ độ thấp lên vĩ độ cao, nó giữ động lượng của vĩ độ nhanh hơn, nên di chuyển về phía đông nhanh hơn mặt đất bên dưới. Điều ngược lại xảy ra khi nó di chuyển về phía xích đạo. Sự lệch hướng chuyển động này, nhìn từ Trái Đất đang quay, là <button class="term" data-term="hiệu ứng Coriolis">hiệu ứng Coriolis</button> (<a href="#fig-corgif">Hình 13.9</a>). Yếu tố thứ hai làm lệch chuyển động theo hướng đông–tây: hiệu ứng ly tâm do Trái Đất quay và trọng lực (kéo về tâm Trái Đất) không thẳng hàng, và với một khối di chuyển về phía đông, kết quả là một lực đẩy về phía xích đạo (khối di chuyển về phía tây bị đẩy về phía cực). Tổng độ lệch Coriolis của một khối di chuyển theo bất kỳ hướng nào là sự kết hợp của hai yếu tố này.</p>
+  <figure id="fig-corgif">
+    <div class="frame"><img class="diagram" src="images/unit13/coriolis.gif" width="200" height="283" alt="Hoạt hình một quả bóng ném trên đĩa quay. Trên: nhìn từ trên xuống, quả bóng đi theo đường thẳng. Dưới: người quan sát trên đĩa (chấm đỏ) thấy quả bóng đi theo đường cong." loading="lazy" style="width:min(100%,300px)"></div>
+    <figcaption>Hoạt hình: quả bóng ném trên đĩa quay. Trên: từ một điểm nhìn không quay (hệ quy chiếu quán tính), quả bóng đi thẳng. Dưới: người quan sát (chấm đỏ) quay cùng đĩa thấy quả bóng đi theo đường cong. Đường cong biểu kiến này là do hiệu ứng Coriolis và lực ly tâm.<span class="credit">Hubi, CC BY-SA (qua sách giáo khoa).</span></figcaption>
+  </figure>
+  <p>Các vòng hoàn lưu đưa không khí di chuyển theo hướng bắc–nam so với mặt đất, và hiệu ứng Coriolis làm lệch các khối khí này <b>sang phải ở Bắc bán cầu</b> và <b>sang trái ở Nam bán cầu</b> (<a href="#fig-coriolis">Hình 13.10</a>):</p>
+  <ul>
+    <li><b>Gió tín phong</b>: trong vòng Hadley bắc, không khí tầng thấp chảy về phía nam tới xích đạo và bị lệch sang phải (về phía tây). Các thủy thủ châu Âu đã dùng gió tín phong này để vượt Đại Tây Dương tới Nam Mỹ và vùng Caribe. Ở Nam bán cầu, không khí chảy về xích đạo bị lệch sang trái, nên gió tín phong thổi về phía tây bắc.</li>
+    <li><b>Gió tây ôn đới</b>: trong vòng Ferrel bắc, không khí bề mặt chảy từ vĩ độ ngựa về phía cực Bắc và bị lệch sang phải (về phía đông), tạo nên gió tây. Ở Nam bán cầu, không khí chảy về phía cực bị lệch sang trái và thổi về phía đông nam.</li>
+    <li><b>Vòng hoàn lưu cực</b>: ở 60° B và N, không khí tương đối ấm hơn bốc lên, chảy về phía cực, lạnh đi, hội tụ ở cực và giáng xuống trong vùng áp cao cực. Không khí khô giáng xuống này tạo nên hoang mạc cực, nơi cái lạnh giữ cho băng tuyết tồn tại.</li>
+  </ul>
+  <figure id="fig-coriolis">
+    <div class="frame"><svg viewBox="0 0 760 425" role="img" aria-labelledby="cor-vi-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="cor-vi-t">Nhìn từ trên xuống, phía bắc ở trên: gió bề mặt trong từng đới vĩ độ. Mũi tên nét đứt là đường đi thẳng bắc–nam nếu Trái Đất không quay; mũi tên liền là hướng bị lệch do hiệu ứng Coriolis, sang phải ở Bắc bán cầu, sang trái ở Nam bán cầu.</title><rect x="70" y="20" width="490" height="60" fill="#e8eef2"/><rect x="70" y="80" width="490" height="60" fill="#e4ecd9"/><rect x="70" y="140" width="490" height="60" fill="#f3e2bd"/><rect x="70" y="200" width="490" height="60" fill="#f3e2bd"/><rect x="70" y="260" width="490" height="60" fill="#e4ecd9"/><rect x="70" y="320" width="490" height="60" fill="#e8eef2"/><line x1="66" y1="20" x2="560" y2="20" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/><text x="40.0" y="20.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">90°B</text><line x1="66" y1="80" x2="560" y2="80" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/><text x="40.0" y="80.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">60°B</text><line x1="66" y1="140" x2="560" y2="140" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/><text x="40.0" y="140.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">30°B</text><line x1="66" y1="200" x2="560" y2="200" stroke="var(--muted)" stroke-width="2" /><text x="40.0" y="200.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">0°</text><line x1="66" y1="260" x2="560" y2="260" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/><text x="40.0" y="260.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">30°N</text><line x1="66" y1="320" x2="560" y2="320" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/><text x="40.0" y="320.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">60°N</text><line x1="66" y1="380" x2="560" y2="380" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/><text x="40.0" y="380.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">90°N</text><text x="522.0" y="191.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Xích đạo</text><line x1="110" y1="25" x2="110" y2="67" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><polygon points="110.0,75.0 105.5,67.2 114.5,67.2" fill="#555"/><path d="M230,25 Q230,50.0 178.3,71.5" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="170.0,75.0 176.7,66.3 180.9,76.4" fill="#3f7fbf"/><path d="M350,25 Q350,50.0 298.3,71.5" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="290.0,75.0 296.7,66.3 300.9,76.4" fill="#3f7fbf"/><path d="M470,25 Q470,50.0 418.3,71.5" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="410.0,75.0 416.7,66.3 420.9,76.4" fill="#3f7fbf"/><text x="580.0" y="42.0" dy=".35em" text-anchor="start" font-size="13" font-weight="700" fill="#3f7fbf" class="halo">Gió đông cực</text><text x="580.0" y="59.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">lệch sang phải</text><line x1="110" y1="135" x2="110" y2="93" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><polygon points="110.0,85.0 114.5,92.8 105.5,92.8" fill="#555"/><path d="M230,135 Q230,110.0 281.7,88.5" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="290.0,85.0 283.3,93.7 279.1,83.6" fill="#8a6f57"/><path d="M350,135 Q350,110.0 401.7,88.5" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="410.0,85.0 403.3,93.7 399.1,83.6" fill="#8a6f57"/><path d="M470,135 Q470,110.0 521.7,88.5" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="530.0,85.0 523.3,93.7 519.1,83.6" fill="#8a6f57"/><text x="580.0" y="102.0" dy=".35em" text-anchor="start" font-size="13" font-weight="700" fill="#8a6f57" class="halo">Gió tây</text><text x="580.0" y="119.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">lệch sang phải</text><line x1="110" y1="145" x2="110" y2="187" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><polygon points="110.0,195.0 105.5,187.2 114.5,187.2" fill="#555"/><path d="M230,145 Q230,170.0 178.3,191.5" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="170.0,195.0 176.7,186.3 180.9,196.4" fill="#c9822e"/><path d="M350,145 Q350,170.0 298.3,191.5" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="290.0,195.0 296.7,186.3 300.9,196.4" fill="#c9822e"/><path d="M470,145 Q470,170.0 418.3,191.5" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="410.0,195.0 416.7,186.3 420.9,196.4" fill="#c9822e"/><text x="580.0" y="162.0" dy=".35em" text-anchor="start" font-size="13" font-weight="700" fill="#c9822e" class="halo">Tín phong đông bắc</text><text x="580.0" y="179.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">lệch sang phải</text><line x1="110" y1="255" x2="110" y2="213" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><polygon points="110.0,205.0 114.5,212.8 105.5,212.8" fill="#555"/><path d="M230,255 Q230,230.0 178.3,208.5" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="170.0,205.0 180.9,203.6 176.7,213.7" fill="#c9822e"/><path d="M350,255 Q350,230.0 298.3,208.5" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="290.0,205.0 300.9,203.6 296.7,213.7" fill="#c9822e"/><path d="M470,255 Q470,230.0 418.3,208.5" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="410.0,205.0 420.9,203.6 416.7,213.7" fill="#c9822e"/><text x="580.0" y="222.0" dy=".35em" text-anchor="start" font-size="13" font-weight="700" fill="#c9822e" class="halo">Tín phong đông nam</text><text x="580.0" y="239.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">lệch sang trái</text><line x1="110" y1="265" x2="110" y2="307" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><polygon points="110.0,315.0 105.5,307.2 114.5,307.2" fill="#555"/><path d="M230,265 Q230,290.0 281.7,311.5" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="290.0,315.0 279.1,316.4 283.3,306.3" fill="#8a6f57"/><path d="M350,265 Q350,290.0 401.7,311.5" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="410.0,315.0 399.1,316.4 403.3,306.3" fill="#8a6f57"/><path d="M470,265 Q470,290.0 521.7,311.5" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="530.0,315.0 519.1,316.4 523.3,306.3" fill="#8a6f57"/><text x="580.0" y="282.0" dy=".35em" text-anchor="start" font-size="13" font-weight="700" fill="#8a6f57" class="halo">Gió tây</text><text x="580.0" y="299.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">lệch sang trái</text><line x1="110" y1="375" x2="110" y2="333" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><polygon points="110.0,325.0 114.5,332.8 105.5,332.8" fill="#555"/><path d="M230,375 Q230,350.0 178.3,328.5" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="170.0,325.0 180.9,323.6 176.7,333.7" fill="#3f7fbf"/><path d="M350,375 Q350,350.0 298.3,328.5" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="290.0,325.0 300.9,323.6 296.7,333.7" fill="#3f7fbf"/><path d="M470,375 Q470,350.0 418.3,328.5" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="410.0,325.0 420.9,323.6 416.7,333.7" fill="#3f7fbf"/><text x="580.0" y="342.0" dy=".35em" text-anchor="start" font-size="13" font-weight="700" fill="#3f7fbf" class="halo">Gió đông cực</text><text x="580.0" y="359.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">lệch sang trái</text><line x1="72" y1="412" x2="96" y2="412" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><text x="102.0" y="412.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">nếu không quay</text><line x1="206" y1="412" x2="230" y2="412" stroke="#c9822e" stroke-width="3"/><text x="236.0" y="412.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">gió thực</text><text x="360.0" y="412.0" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">Trái Đất quay về phía đông</text><line x1="540.0" y1="412.0" x2="653.7" y2="412.0" stroke="var(--fg)" stroke-width="2" stroke-linecap="round"/><polygon points="660.0,412.0 652.2,416.5 652.2,407.5" fill="var(--fg)"/></svg></div>
+    <figcaption>Sự lệch hướng Coriolis của gió bề mặt. Mũi tên nét đứt: đường đi thẳng bắc–nam của không khí nếu Trái Đất không quay. Mũi tên liền: gió bị lệch hướng; màu tương ứng với các vòng ở <a href="#fig-cells">Hình 13.5</a>. Nhìn từ trên xuống, phía bắc ở trên.<span class="credit">Vẽ cho tài liệu này theo nội dung chương và hình hoàn lưu của NASA.</span></figcaption>
+  </figure>
+  <div class="pair">
+    <figure id="fig-corglobe">
+      <div class="frame"><img class="diagram" src="images/unit13/coriolisglobe.webp" alt="Quả địa cầu với các vòng tròn nhỏ cho thấy không khí di chuyển bị lệch sang phải ở Bắc bán cầu và sang trái ở Nam bán cầu." loading="lazy" width="256" height="256" style="height:260px;width:auto"></div>
+      <figcaption>Vòng quán tính: đường đi của các khối khí chỉ chịu hiệu ứng Coriolis, không có lực nào khác. Chúng quay theo chiều kim đồng hồ (sang phải) ở Bắc bán cầu và ngược chiều kim đồng hồ (sang trái) ở Nam bán cầu.<span class="credit">Anders Persson, CC BY-SA (qua sách giáo khoa).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Hiệu ứng Coriolis tác động lên mọi chuyển động trên Trái Đất</h4>
+      <ul>
+        <li>Pháo binh phải tính đến nó khi ngắm bắn ở cự ly xa.</li>
+        <li>Các <button class="term" data-term="vòng hải lưu">vòng hải lưu</button> quay theo chiều kim đồng hồ ở Bắc bán cầu và ngược chiều ở Nam bán cầu (Học phần 12).</li>
+        <li>Nó góp phần định hình các <b>dòng tia</b> cực ở trên cao, đôi khi đẩy những lưỡi không khí lạnh Bắc Cực xuống tới vĩ độ 30° thay vì 60° như thường lệ.</li>
+        <li>Các hệ thống áp thấp và bão nhiệt đới xoáy ngược chiều kim đồng hồ ở Bắc bán cầu và theo chiều kim đồng hồ ở Nam bán cầu.</li>
+      </ul>
+    </div>
+  </div>
+  <figure id="fig-gyres">
+    <div class="frame"><img class="diagram" src="images/unit13/gyres.webp" alt="Bản đồ thế giới các hải lưu bề mặt; hải lưu nóng màu đỏ, hải lưu lạnh màu xanh tạo thành những vòng lớn trong mỗi đại dương." loading="lazy" width="1000" height="522"></div>
+    <figcaption>Các hải lưu bề mặt tạo thành những vòng hải lưu. Đỏ: hải lưu nóng; xanh: hải lưu lạnh.<span class="credit">TS. Michael Pidwirny, phạm vi công cộng (qua sách giáo khoa).</span></figcaption>
+  </figure>
+  <p class="quiz">Xem: <a href="https://www.youtube.com/watch?v=HIyBpi7B-dE" target="_blank" rel="noopener">video về hiệu ứng Coriolis của chương (tiếng Anh) ↗</a> · Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/13-deserts/" target="_blank" rel="noopener">câu hỏi Mục 13.1 trong sách ↗</a></p>
+</section>
+
+<section id="s13-2">
+  <h2 class="sec"><span class="n">13.2</span>Phong hóa và xói mòn ở hoang mạc</h2>
+  <p><button class="term" data-term="phong hóa">Phong hóa</button> ở hoang mạc diễn ra theo cùng các cách như ở những khí hậu khác (Học phần 5), chỉ <b>chậm hơn</b>. Nhiệt độ cao thường làm <button class="term" data-term="phong hóa hóa học">phong hóa hóa học</button> nhanh hơn, nhưng nước là tác nhân phong hóa chính, và thiếu nước làm chậm cả phong hóa cơ học lẫn hóa học. Giáng thủy thấp cũng có nghĩa là ít <button class="term" data-term="dòng chảy mặt">dòng chảy mặt</button> và ít <button class="term" data-term="nêm băng">nêm băng</button> hơn. Khi mưa rơi ở hoang mạc, mưa thường rất lớn và có thể gây <button class="term" data-term="lũ quét">lũ quét</button>, cuốn đi nhiều vật liệu rất nhanh (13.3).</p>
+  <figure id="fig-newspaper">
+    <div class="frame"><img src="images/unit13/newspaper.webp" alt="Một mặt đá phẳng phủ lớp vecni hoang mạc nâu sẫm, chi chít hàng trăm hình người, động vật và ký hiệu được khắc màu sáng hơn." loading="lazy" width="1000" height="667"></div>
+    <figcaption>Newspaper Rock, gần Vườn quốc gia Canyonlands, Utah. Các hình khắc trên đá được tạo bằng cách đục xuyên lớp vecni hoang mạc sẫm màu tới phần đá sáng màu bên dưới.<span class="credit">Cacophony, CC BY-SA (qua sách giáo khoa).</span></figcaption>
+  </figure>
+  <p>Có một sản phẩm phong hóa chỉ có ở hoang mạc: <button class="term" data-term="vecni hoang mạc">vecni hoang mạc</button> (còn gọi là lớp gỉ đá). Đó là những lớp mỏng màu nâu sẫm gồm <button class="term" data-term="khoáng vật">khoáng vật</button> sét và <button class="term" data-term="oxit">oxit</button> sắt, mangan, hình thành trên những mặt đá rất ổn định trong môi trường khô hạn (<a href="#fig-newspaper">Hình 13.13</a>). Chương cho biết cơ chế hình thành chính xác vẫn chưa rõ; người ta đã đề xuất các cơ chế vũ trụ và sinh học (xem ghi chú kiểm chứng).</p>
+
+  <h3 id="s13-2-wind">Gió, một tác nhân xói mòn</h3>
+  <p>Nước vẫn là tác nhân <button class="term" data-term="xói mòn">xói mòn</button> chủ đạo ở phần lớn hoang mạc, nhưng <b>gió</b> là tác nhân phong hóa và xói mòn đáng kể ở nhiều hoang mạc. Gió mang trầm tích lơ lửng trong các trận <button class="term" data-term="bão bụi haboob">bão bụi haboob</button>, những cơn bão bụi lớn thường gặp ở hoang mạc. Trầm tích bụi do gió mang tới gọi là <button class="term" data-term="hoàng thổ">hoàng thổ</button> (loess). Hoàng thổ phủ những vùng rộng ở miền Trung Tây Hoa Kỳ; phần lớn là bột đá tan ra từ các <button class="term" data-term="băng phủ lục địa">băng phủ lục địa</button> trong <button class="term" data-term="thời kỳ băng hà">thời kỳ băng hà</button> gần nhất (Học phần 14), một phần được thổi tới từ các vùng hoang mạc ở miền Tây.</p>
+  <figure id="fig-haboob">
+    <div class="frame"><img src="images/unit13/haboob.webp" alt="Một bức tường bụi nâu khổng lồ cuộn tới một doanh trại giữa hoang mạc ngay trước khi trời tối." loading="lazy" width="1280" height="853"></div>
+    <figcaption>Một trận bão bụi haboob tràn qua Al Asad, Iraq, ngày 27 tháng 4 năm 2005. Ảnh haboob của chương (Gobi, Mông Cổ) không có giấy phép mở, nên được thay bằng ảnh này.<span class="credit">Hạ sĩ Alicia M. Garcia, Thủy quân lục chiến Hoa Kỳ, phạm vi công cộng (Wikimedia Commons).</span></figcaption>
+  </figure>
+  <p>Gió có ít năng lượng hơn nước nhưng vẫn vận chuyển cát, bột và bụi. Giống như dòng chảy (Học phần 11), vật liệu mà một chất lưu mang theo chia thành <button class="term" data-term="vật liệu di đáy">vật liệu di đáy</button> và <button class="term" data-term="vật liệu lơ lửng">vật liệu lơ lửng</button>, tỷ lệ giữa hai phần tùy vào vận tốc gió. Gió vận chuyển trầm tích theo ba cách (<a href="#fig-transport">Hình 13.15</a>, <a href="#tbl-transport">Bảng 13.3</a>):</p>
+  <figure id="fig-transport">
+    <div class="frame"><svg viewBox="0 0 760 300" role="img" aria-labelledby="tr-vi-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="tr-vi-t">Hoạt hình, mặt cắt: gió thổi sang phải vận chuyển trầm tích theo ba cách. Bụi và bột bay cao ở dạng lơ lửng; hạt cát nảy lên và rơi xuống (nhảy cóc) trong khoảng 1 m trên mặt đất; hạt thô lăn và trượt (bò lăn).</title><rect x="0" y="0" width="760" height="240" fill="#2f7a8c" opacity=".07"/><rect x="30" y="170" width="470" height="70" fill="#e6c27a" opacity=".28"/><rect x="0" y="240" width="760" height="60" fill="#e6c27a"/><circle cx="179.4" cy="251.4" r="2.2" fill="#c99a50"/><circle cx="117.8" cy="249.5" r="2.2" fill="#c99a50"/><circle cx="697.6" cy="287.6" r="2.8" fill="#c99a50"/><circle cx="168.7" cy="273.9" r="2.0" fill="#c99a50"/><circle cx="131.2" cy="251.5" r="1.9" fill="#c99a50"/><circle cx="704.9" cy="289.1" r="2.9" fill="#c99a50"/><circle cx="608.3" cy="256.1" r="2.1" fill="#c99a50"/><circle cx="476.5" cy="284.1" r="3.0" fill="#c99a50"/><circle cx="668.8" cy="250.5" r="2.6" fill="#c99a50"/><circle cx="510.5" cy="272.3" r="1.9" fill="#c99a50"/><circle cx="359.9" cy="250.6" r="3.1" fill="#c99a50"/><circle cx="657.8" cy="274.5" r="2.1" fill="#c99a50"/><circle cx="690.7" cy="275.8" r="3.0" fill="#c99a50"/><circle cx="644.5" cy="272.4" r="2.3" fill="#c99a50"/><circle cx="455.2" cy="268.4" r="1.9" fill="#c99a50"/><circle cx="231.9" cy="288.3" r="1.7" fill="#c99a50"/><circle cx="35.2" cy="278.6" r="2.0" fill="#c99a50"/><circle cx="406.3" cy="270.5" r="2.1" fill="#c99a50"/><circle cx="757.9" cy="256.2" r="2.3" fill="#c99a50"/><circle cx="154.0" cy="278.9" r="2.0" fill="#c99a50"/><circle cx="270.4" cy="284.8" r="2.1" fill="#c99a50"/><circle cx="424.5" cy="293.0" r="1.8" fill="#c99a50"/><circle cx="46.8" cy="257.9" r="2.8" fill="#c99a50"/><circle cx="467.7" cy="258.3" r="2.1" fill="#c99a50"/><circle cx="134.9" cy="269.9" r="1.7" fill="#c99a50"/><circle cx="529.9" cy="292.6" r="3.1" fill="#c99a50"/><circle cx="558.5" cy="295.9" r="1.6" fill="#c99a50"/><circle cx="219.6" cy="296.2" r="2.8" fill="#c99a50"/><circle cx="311.9" cy="295.1" r="2.6" fill="#c99a50"/><circle cx="621.6" cy="261.3" r="1.9" fill="#c99a50"/><circle cx="337.5" cy="253.1" r="2.2" fill="#c99a50"/><circle cx="731.0" cy="263.2" r="1.6" fill="#c99a50"/><circle cx="34.0" cy="254.8" r="2.9" fill="#c99a50"/><circle cx="275.7" cy="261.1" r="1.8" fill="#c99a50"/><circle cx="746.1" cy="268.0" r="1.9" fill="#c99a50"/><circle cx="45.1" cy="248.9" r="1.9" fill="#c99a50"/><circle cx="514.4" cy="253.8" r="1.7" fill="#c99a50"/><circle cx="372.9" cy="259.0" r="3.2" fill="#c99a50"/><circle cx="92.9" cy="273.5" r="2.8" fill="#c99a50"/><circle cx="311.1" cy="297.4" r="2.4" fill="#c99a50"/><circle cx="183.8" cy="267.4" r="1.7" fill="#c99a50"/><circle cx="320.1" cy="258.9" r="3.0" fill="#c99a50"/><circle cx="631.6" cy="271.9" r="1.7" fill="#c99a50"/><circle cx="193.3" cy="258.6" r="1.9" fill="#c99a50"/><circle cx="175.9" cy="291.2" r="1.8" fill="#c99a50"/><circle cx="39.0" cy="294.3" r="2.5" fill="#c99a50"/><circle cx="752.8" cy="267.0" r="3.0" fill="#c99a50"/><circle cx="497.0" cy="287.1" r="2.8" fill="#c99a50"/><circle cx="375.7" cy="250.8" r="1.9" fill="#c99a50"/><circle cx="664.1" cy="292.8" r="3.1" fill="#c99a50"/><circle cx="255.8" cy="280.2" r="2.9" fill="#c99a50"/><circle cx="488.3" cy="288.4" r="2.4" fill="#c99a50"/><circle cx="497.6" cy="281.7" r="2.0" fill="#c99a50"/><circle cx="701.3" cy="295.7" r="1.7" fill="#c99a50"/><circle cx="738.0" cy="296.0" r="2.7" fill="#c99a50"/><circle cx="33.9" cy="292.7" r="1.8" fill="#c99a50"/><circle cx="736.1" cy="280.7" r="1.7" fill="#c99a50"/><circle cx="127.1" cy="279.0" r="2.5" fill="#c99a50"/><circle cx="567.3" cy="294.2" r="1.9" fill="#c99a50"/><circle cx="2.5" cy="294.0" r="1.6" fill="#c99a50"/><circle cx="666.1" cy="252.0" r="2.9" fill="#c99a50"/><circle cx="595.1" cy="291.6" r="2.5" fill="#c99a50"/><circle cx="667.8" cy="256.5" r="2.7" fill="#c99a50"/><circle cx="251.3" cy="292.4" r="2.8" fill="#c99a50"/><circle cx="358.3" cy="273.4" r="1.6" fill="#c99a50"/><circle cx="26.0" cy="276.9" r="2.4" fill="#c99a50"/><circle cx="657.2" cy="277.6" r="1.8" fill="#c99a50"/><circle cx="275.6" cy="285.9" r="2.4" fill="#c99a50"/><circle cx="8.0" cy="289.6" r="2.9" fill="#c99a50"/><circle cx="64.7" cy="274.3" r="2.2" fill="#c99a50"/><circle cx="598.4" cy="262.2" r="2.0" fill="#c99a50"/><circle cx="369.9" cy="296.2" r="1.8" fill="#c99a50"/><circle cx="87.0" cy="278.3" r="3.0" fill="#c99a50"/><circle cx="389.5" cy="268.6" r="3.0" fill="#c99a50"/><circle cx="590.2" cy="249.5" r="3.0" fill="#c99a50"/><circle cx="148.8" cy="261.7" r="2.9" fill="#c99a50"/><circle cx="321.1" cy="287.5" r="1.9" fill="#c99a50"/><circle cx="664.5" cy="255.2" r="1.8" fill="#c99a50"/><circle cx="375.6" cy="263.6" r="2.5" fill="#c99a50"/><circle cx="687.1" cy="282.9" r="1.6" fill="#c99a50"/><circle cx="237.0" cy="274.3" r="2.4" fill="#c99a50"/><circle cx="543.8" cy="271.2" r="1.7" fill="#c99a50"/><circle cx="186.5" cy="290.1" r="2.2" fill="#c99a50"/><circle cx="582.7" cy="297.3" r="2.6" fill="#c99a50"/><circle cx="514.3" cy="277.7" r="2.1" fill="#c99a50"/><circle cx="693.7" cy="270.3" r="3.1" fill="#c99a50"/><circle cx="232.3" cy="291.1" r="2.9" fill="#c99a50"/><circle cx="465.9" cy="269.0" r="1.8" fill="#c99a50"/><circle cx="586.0" cy="264.8" r="2.7" fill="#c99a50"/><circle cx="101.3" cy="250.3" r="1.8" fill="#c99a50"/><circle cx="614.9" cy="255.2" r="3.0" fill="#c99a50"/><circle cx="282.7" cy="276.0" r="2.2" fill="#c99a50"/><circle cx="471.8" cy="250.9" r="2.2" fill="#c99a50"/><circle cx="711.5" cy="255.3" r="2.6" fill="#c99a50"/><circle cx="248.3" cy="261.6" r="1.6" fill="#c99a50"/><circle cx="15.3" cy="295.4" r="2.9" fill="#c99a50"/><circle cx="608.8" cy="288.0" r="3.1" fill="#c99a50"/><circle cx="120.4" cy="276.4" r="2.4" fill="#c99a50"/><circle cx="436.1" cy="294.8" r="2.8" fill="#c99a50"/><circle cx="736.0" cy="252.1" r="2.6" fill="#c99a50"/><circle cx="513.3" cy="284.8" r="2.6" fill="#c99a50"/><circle cx="631.8" cy="261.7" r="3.1" fill="#c99a50"/><circle cx="308.6" cy="277.1" r="3.0" fill="#c99a50"/><circle cx="534.7" cy="262.1" r="2.0" fill="#c99a50"/><circle cx="248.2" cy="278.6" r="3.2" fill="#c99a50"/><circle cx="683.3" cy="266.8" r="2.2" fill="#c99a50"/><circle cx="621.3" cy="260.8" r="2.3" fill="#c99a50"/><circle cx="10.0" cy="255.6" r="2.5" fill="#c99a50"/><circle cx="526.9" cy="278.0" r="2.2" fill="#c99a50"/><circle cx="722.8" cy="278.4" r="1.8" fill="#c99a50"/><circle cx="51.5" cy="296.6" r="3.2" fill="#c99a50"/><circle cx="699.2" cy="277.4" r="2.1" fill="#c99a50"/><circle cx="69.4" cy="259.4" r="2.0" fill="#c99a50"/><circle cx="705.5" cy="292.4" r="2.8" fill="#c99a50"/><circle cx="113.0" cy="258.4" r="2.1" fill="#c99a50"/><circle cx="720.4" cy="254.5" r="2.9" fill="#c99a50"/><circle cx="517.3" cy="274.5" r="3.1" fill="#c99a50"/><circle cx="199.4" cy="273.3" r="1.9" fill="#c99a50"/><circle cx="73.5" cy="247.7" r="2.1" fill="#c99a50"/><circle cx="92.5" cy="249.2" r="3.2" fill="#c99a50"/><circle cx="219.7" cy="292.3" r="2.7" fill="#c99a50"/><circle cx="555.8" cy="280.1" r="3.1" fill="#c99a50"/><circle cx="667.6" cy="283.4" r="2.5" fill="#c99a50"/><circle cx="527.3" cy="283.6" r="2.5" fill="#c99a50"/><circle cx="381.9" cy="254.0" r="3.0" fill="#c99a50"/><circle cx="368.0" cy="249.5" r="1.9" fill="#c99a50"/><circle cx="664.8" cy="259.3" r="2.2" fill="#c99a50"/><circle cx="518.4" cy="290.8" r="2.1" fill="#c99a50"/><circle cx="294.0" cy="268.0" r="1.6" fill="#c99a50"/><circle cx="666.3" cy="247.0" r="3.1" fill="#c99a50"/><circle cx="115.9" cy="254.1" r="3.0" fill="#c99a50"/><circle cx="625.8" cy="258.1" r="2.5" fill="#c99a50"/><circle cx="362.3" cy="283.4" r="1.9" fill="#c99a50"/><circle cx="627.4" cy="297.8" r="2.7" fill="#c99a50"/><circle cx="700.1" cy="294.7" r="2.2" fill="#c99a50"/><circle cx="644.1" cy="289.4" r="2.5" fill="#c99a50"/><circle cx="81.4" cy="278.2" r="3.1" fill="#c99a50"/><circle cx="231.9" cy="279.6" r="3.0" fill="#c99a50"/><circle cx="456.1" cy="247.9" r="2.6" fill="#c99a50"/><circle cx="194.3" cy="290.6" r="2.7" fill="#c99a50"/><circle cx="233.6" cy="292.6" r="2.6" fill="#c99a50"/><circle cx="257.8" cy="289.4" r="3.0" fill="#c99a50"/><circle cx="678.8" cy="291.9" r="2.7" fill="#c99a50"/><circle cx="531.0" cy="277.4" r="2.4" fill="#c99a50"/><circle cx="750.5" cy="264.4" r="1.7" fill="#c99a50"/><circle cx="542.3" cy="271.9" r="2.5" fill="#c99a50"/><circle cx="454.4" cy="259.0" r="1.9" fill="#c99a50"/><circle cx="54.2" cy="286.6" r="3.1" fill="#c99a50"/><circle cx="529.5" cy="252.1" r="3.2" fill="#c99a50"/><circle cx="628.3" cy="272.5" r="1.6" fill="#c99a50"/><circle cx="641.3" cy="278.4" r="2.6" fill="#c99a50"/><circle cx="13.9" cy="284.1" r="1.7" fill="#c99a50"/><circle cx="363.3" cy="253.5" r="2.2" fill="#c99a50"/><circle cx="676.5" cy="284.9" r="2.9" fill="#c99a50"/><circle cx="226.6" cy="266.2" r="2.6" fill="#c99a50"/><circle cx="25.9" cy="267.4" r="3.2" fill="#c99a50"/><circle cx="573.1" cy="290.9" r="2.1" fill="#c99a50"/><circle cx="525.0" cy="287.0" r="2.7" fill="#c99a50"/><circle cx="332.4" cy="255.1" r="1.6" fill="#c99a50"/><circle cx="674.1" cy="294.5" r="2.0" fill="#c99a50"/><circle cx="574.4" cy="267.2" r="2.6" fill="#c99a50"/><circle cx="639.8" cy="262.7" r="2.6" fill="#c99a50"/><circle cx="194.6" cy="272.6" r="1.6" fill="#c99a50"/><circle cx="200.3" cy="260.9" r="3.1" fill="#c99a50"/><circle cx="100.6" cy="285.4" r="1.7" fill="#c99a50"/><circle cx="749.6" cy="254.6" r="1.7" fill="#c99a50"/><circle cx="160.8" cy="294.5" r="2.7" fill="#c99a50"/><circle cx="676.8" cy="272.0" r="1.8" fill="#c99a50"/><circle cx="258.8" cy="269.7" r="3.2" fill="#c99a50"/><circle cx="126.5" cy="258.7" r="2.9" fill="#c99a50"/><line x1="30.0" y1="28.0" x2="161.6" y2="28.0" stroke="var(--fg)" stroke-width="3" stroke-linecap="round"/><polygon points="170.0,28.0 159.6,34.0 159.6,22.0" fill="var(--fg)"/><text x="100.0" y="48.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Gió</text><path d="M480,236 Q560,120 731,72.5" fill="none" stroke="#8a6f57" stroke-width="2" stroke-dasharray="3 5"/><polygon points="742.0,69.5 734.3,77.3 731.3,66.8" fill="#8a6f57"/><circle cx="597.3" cy="66.5" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="508.1" cy="106.4" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="471.8" cy="83.1" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="717.0" cy="38.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="622.4" cy="82.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="481.2" cy="73.9" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="663.5" cy="68.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="669.4" cy="47.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="535.5" cy="51.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="609.2" cy="104.3" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="632.4" cy="92.5" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="575.5" cy="93.9" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="498.0" cy="66.7" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="655.4" cy="87.7" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="586.0" cy="47.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="543.4" cy="58.3" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="547.3" cy="100.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="524.9" cy="106.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="711.8" cy="37.3" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="574.2" cy="76.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="476.5" cy="77.3" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="719.3" cy="40.9" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="634.1" cy="46.6" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="629.1" cy="101.1" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="525.8" cy="45.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="493.0" cy="84.4" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="474.8" cy="53.7" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="606.6" cy="104.3" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="585.5" cy="68.9" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="645.6" cy="44.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="629.4" cy="50.5" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="637.4" cy="105.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="484.9" cy="86.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="636.8" cy="48.4" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="543.8" cy="113.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="744.4" cy="40.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="664.0" cy="102.9" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="535.1" cy="86.9" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="481.8" cy="72.9" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="655.4" cy="78.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="683.0" cy="41.3" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="565.5" cy="102.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="630.6" cy="70.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="580.6" cy="110.4" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="628.0" cy="39.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="689.8" cy="57.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="589.2" cy="55.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="592.1" cy="63.4" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="494.4" cy="90.6" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="498.3" cy="101.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="477.0" cy="102.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="692.1" cy="69.5" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="665.1" cy="53.7" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="672.8" cy="65.6" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="533.5" cy="111.7" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="580.2" cy="67.5" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="706.5" cy="59.7" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="653.6" cy="49.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="701.9" cy="52.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="483.9" cy="115.4" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="517.5" cy="111.4" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="741.2" cy="74.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="473.3" cy="52.1" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="527.4" cy="71.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="638.2" cy="105.6" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="567.5" cy="52.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="624.5" cy="48.3" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="493.8" cy="85.5" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="661.4" cy="41.1" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="594.1" cy="89.8" r="1.3" fill="#8a6f57" opacity=".75"/><text x="610.0" y="26.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Lơ lửng: bột và bụi</text><text x="610.0" y="42.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">bay cao và xa</text><path d="M40,236 Q95,100 150,236 Q205,100 260,236 Q315,100 370,236 Q425,100 480,236" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="5 4"/><polygon points="150.0,236.0 141.3,229.2 151.5,225.1" fill="var(--accent)"/><circle cx="160" cy="228" r="2" fill="#a8792f"/><circle cx="166" cy="232" r="2" fill="#a8792f"/><polygon points="260.0,236.0 251.3,229.2 261.5,225.1" fill="var(--accent)"/><circle cx="270" cy="228" r="2" fill="#a8792f"/><circle cx="276" cy="232" r="2" fill="#a8792f"/><polygon points="370.0,236.0 361.3,229.2 371.5,225.1" fill="var(--accent)"/><circle cx="380" cy="228" r="2" fill="#a8792f"/><circle cx="386" cy="232" r="2" fill="#a8792f"/><polygon points="480.0,236.0 471.3,229.2 481.5,225.1" fill="var(--accent)"/><circle cx="490" cy="228" r="2" fill="#a8792f"/><circle cx="496" cy="232" r="2" fill="#a8792f"/><circle r="5" fill="var(--accent)" stroke="#fff" stroke-width="1"><animateMotion dur="4.5s" begin="0.0s" repeatCount="indefinite" path="M40,236 Q95,100 150,236 Q205,100 260,236 Q315,100 370,236 Q425,100 480,236"/></circle><circle r="5" fill="var(--accent)" stroke="#fff" stroke-width="1"><animateMotion dur="4.5s" begin="-1.5s" repeatCount="indefinite" path="M40,236 Q95,100 150,236 Q205,100 260,236 Q315,100 370,236 Q425,100 480,236"/></circle><circle r="5" fill="var(--accent)" stroke="#fff" stroke-width="1"><animateMotion dur="4.5s" begin="-3.0s" repeatCount="indefinite" path="M40,236 Q95,100 150,236 Q205,100 260,236 Q315,100 370,236 Q425,100 480,236"/></circle><text x="265.0" y="108.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">Đới nhảy cóc: hạt cát nảy lên rồi rơi xuống,</text><text x="265.0" y="123.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">cao tới khoảng 1 m trên mặt đất</text><g class="slide" style="--slide:18px"><circle cx="560" cy="232" r="8" fill="#a77b42" stroke="#6f563f" stroke-width="1.5"/></g><g class="slide" style="--slide:22px"><circle cx="600" cy="232" r="8" fill="#a77b42" stroke="#6f563f" stroke-width="1.5"/></g><g class="slide" style="--slide:26px"><circle cx="645" cy="232" r="8" fill="#a77b42" stroke="#6f563f" stroke-width="1.5"/></g><g class="slide" style="--slide:30px"><circle cx="690" cy="232" r="8" fill="#a77b42" stroke="#6f563f" stroke-width="1.5"/></g><text x="630.0" y="196.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">Bò lăn: hạt thô lăn</text><text x="630.0" y="211.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">và trượt trên bề mặt</text></svg></div>
+    <figcaption>Hoạt hình: ba cách gió vận chuyển trầm tích. Chấm nâu: bụi và bột lơ lửng; chấm vàng trên các cung nét đứt: hạt cát nhảy cóc (các vạch ngắn đánh dấu chỗ hạt rơi xuống bắn tung hạt khác); hạt nâu lớn: bò lăn. Mặt cắt, gió thổi từ trái; không theo tỷ lệ.<span class="credit">Vẽ cho tài liệu này theo nội dung chương và hoạt hình "Saltation mechanics" của chương (NASA, phạm vi công cộng).</span></figcaption>
+  </figure>
+  <div class="tablewrap" id="tbl-transport">
+    <table>
+      <caption>Gió vận chuyển trầm tích như thế nào.</caption>
+      <thead><tr><th>Quá trình</th><th>Cỡ hạt</th><th>Cách di chuyển</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="vật liệu lơ lửng">Lơ lửng</button></td><td>Bột và bụi (khoảng 70 µm trở xuống)</td><td>Bị nâng cao và mang đi xa, như trong bão bụi haboob; lắng xuống thành hoàng thổ</td></tr>
+        <tr><td><button class="term" data-term="nhảy cóc">Nhảy cóc</button></td><td>Cát</td><td>Hạt bị nâng lên, mang đi một đoạn ngắn rồi rơi xuống, bắn tung các hạt khác, các hạt này lại nảy lên; một chuỗi lan truyền cao tới khoảng 1 m trên mặt đất</td></tr>
+        <tr><td><button class="term" data-term="bò lăn">Bò lăn</button></td><td>Hạt thô hơn</td><td>Trượt hoặc lăn trên bề mặt khi gió đủ mạnh</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Vì các hạt nhảy cóc liên tục va vào nhau, hạt cát do gió mang thường <b>tròn cạnh và có bề mặt mờ đục</b> (<a href="#fig-grains">Hình 13.16</a>). Vật liệu lơ lửng tách khỏi cát gần mặt đất và bị mang đi thành bụi, nên gió là tác nhân <button class="term" data-term="độ chọn lọc">chọn lọc</button> hiệu quả: nó tách cát khỏi các hạt cỡ bụi (Học phần 5).</p>
+  <figure id="fig-grains">
+    <div class="frame"><img src="images/unit13/grains.webp" alt="Ảnh phóng to nhiều hạt cát tròn màu cam hồng, bề mặt mờ đục." loading="lazy" width="1000" height="750" style="max-height:440px;width:auto"></div>
+    <figcaption>Hạt cát do gió mang, phóng to, từ Công viên tiểu bang Coral Pink Sand Dunes, Utah; tròn cạnh và mờ đục do nhảy cóc.<span class="credit">Mark A. Wilson, phạm vi công cộng (qua sách giáo khoa).</span></figcaption>
+  </figure>
+
+  <h3 id="s13-2-stones">Đá trượt</h3>
+  <div class="pair">
+    <figure id="fig-racetrack">
+      <div class="frame"><img src="images/unit13/racetrack.webp" alt="Một tảng đá nằm trên lòng hồ khô phẳng, nứt nẻ, ở cuối một rãnh dài nó đã vạch trên bùn." loading="lazy" width="816" height="899" style="height:340px;width:auto"></div>
+      <figcaption>Một tảng đá trượt và vệt của nó trên Racetrack Playa, Vườn quốc gia Death Valley, California.<span class="credit">Laurence G. Charlot, CC BY-SA (qua sách giáo khoa).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Một bí ẩn đã được giải</h4>
+      <p><button class="term" data-term="đá trượt">Đá trượt</button> (đá di chuyển) là những tảng đá lớn di chuyển trên mặt phẳng hoang mạc, để lại vệt. Nổi tiếng nhất là ở Racetrack Playa, Death Valley. Nhiều năm liền người ta không giải thích được chuyển động của chúng. Các nghiên cứu quan sát và thực nghiệm gần đây, gồm đo chuyển động thực tế và tái tạo trong phòng thí nghiệm, cho thấy đá bị giữ trong những tấm băng mỏng và gió đẩy các tấm băng này trôi trên playa.</p>
+      <p class="small">Đo đạc thực địa (Norris và cộng sự, 2014) cho thấy các tấm băng được đẩy bởi gió nhẹ; chương viết "gió mạnh". Xem ghi chú kiểm chứng.</p>
+    </div>
+  </div>
+
+  <h3 id="s13-2-abrasion">Địa hình do cát mài</h3>
+  <p>Đới cát nhảy cóc là tác nhân xói mòn mạnh: đá gốc và đá rời nằm trong đới này bị cát mài (<a href="#fig-abrasion">Hình 13.18</a>, <a href="#tbl-abrasion">Bảng 13.4</a>).</p>
+  <figure id="fig-abrasion">
+    <ul class="gallery" style="--cols:3">
+      <li><img src="images/unit13/ventifact.webp" alt="Một tảng đá trên nền hoang mạc có nhiều mặt phẳng nhẵn bóng gặp nhau ở các cạnh sắc." loading="lazy" width="1000" height="926"><span><b>Đá gió mài</b>Hoang mạc Mojave gần Barstow, California. Mark A. Wilson, phạm vi công cộng.</span></li>
+      <li><img src="images/unit13/yardang.webp" alt="Một tảng đá lớn đứng trên chân hẹp bị cát mài lõm vào." loading="lazy" width="1000" height="742"><span><b>Đá bị mài thắt chân</b>Gần Salar de Uyuni, Bolivia. Thomas Wilken, CC BY-SA.</span></li>
+      <li><img src="images/unit13/blowout.webp" alt="Một hố lòng chảo trên nền cát giữa các bụi cỏ." loading="lazy" width="608" height="372"><span><b>Hố thổi mòn</b>Texas. Leaflet, CC BY-SA.</span></li>
+    </ul>
+    <figcaption>Các dạng địa hình do gió xói mòn. Ảnh giữa là ảnh chương dùng để minh họa yardang (xem ghi chú kiểm chứng).<span class="credit">Tất cả qua sách giáo khoa.</span></figcaption>
+  </figure>
+  <div class="tablewrap" id="tbl-abrasion">
+    <table>
+      <caption>Các dạng địa hình do gió xói mòn.</caption>
+      <thead><tr><th>Dạng</th><th>Là gì</th><th>Hình thành thế nào</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="yardang">Yardang</button></td><td>Khối đá gốc lộ ra có hình dạng do cát mài</td><td>Cát nhảy cóc mài mòn</td></tr>
+        <tr><td><button class="term" data-term="đá gió mài">Đá gió mài</button></td><td>Tảng đá nằm trên mặt đất có các mặt bị mài và đánh bóng</td><td>Cát mài; khi hướng gió chính thay đổi, nhiều mặt nhẵn được tạo ra</td></tr>
+        <tr><td><button class="term" data-term="hố thổi mòn">Hố thổi mòn</button></td><td>Một hố lòng chảo trong cát và bột</td><td>Các bụi thực vật giữ trầm tích; gió thổi đi phần vật liệu không được giữ giữa chúng</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/13-deserts/" target="_blank" rel="noopener">câu hỏi Mục 13.2 trong sách ↗</a></p>
+</section>
+
+<section id="s13-3">
+  <h2 class="sec"><span class="n">13.3</span>Địa hình hoang mạc</h2>
+  <p>Ở tây nam Hoa Kỳ, các dòng chảy rời núi và đổ vào thung lũng, tạo nên một loạt dạng địa hình (<a href="#fig-landforms">Hình 13.19</a>, <a href="#tbl-landforms">Bảng 13.5</a>):</p>
+  <ul>
+    <li><b><button class="term" data-term="nón phóng vật">Nón phóng vật</button></b>: khi dòng chảy ra khỏi hẻm núi hẹp, dòng nước không còn bị vách hẻm giữ lại và tỏa rộng ra. Trên sườn thoải hơn, nước chảy chậm lại và thả vật liệu thô. Khi vật liệu giống cuội kết này lấp đầy lòng dẫn, nó làm dòng chảy đổi hướng, nên dòng chảy chia thành một hệ <b>phân lưu</b> tỏa tia, giống như sông tạo <button class="term" data-term="châu thổ">châu thổ</button> khi đổ vào một vùng nước. Kết quả là một khối trầm tích hình nón quạt.</li>
+    <li><b><button class="term" data-term="bajada">Bajada</button></b>: các nón phóng vật tiếp tục lớn và có thể nối với nón bên cạnh thành một dải <button class="term" data-term="bồi tích">bồi tích</button> dọc chân núi.</li>
+    <li><b><button class="term" data-term="núi sót">Núi sót</button></b> (inselberg): khi núi bị bào mòn và trầm tích của nó tích tụ, trước tiên trong các nón rồi trong bajada, núi dần bị chôn vùi trong chính mảnh vụn của nó. Những phần sót lại còn nhô lên là núi sót, "núi đảo", được nhà địa chất người Đức Wilhelm Bornhardt (1864–1946) mô tả đầu tiên.</li>
+    <li><b><button class="term" data-term="playa">Playa</button></b>: nơi thung lũng là một bồn kín, dòng chảy đổ vào không thoát ra được, nước chỉ mất đi do bốc hơi và hình thành một lòng hồ khô. Playa thuộc những dạng địa hình bằng phẳng nhất. Một playa có thể rộng lớn nhưng sau một trận dông lớn chỉ ngập sâu vài inch.</li>
+  </ul>
+  <figure id="fig-landforms">
+    <ul class="gallery" style="--cols:4">
+      <li><img src="images/unit13/fan.webp" alt="Ảnh chụp từ trên không một khối trầm tích hình quạt tỏa ra từ cửa hẻm xuống đáy thung lũng." loading="lazy" width="1000" height="528"><span><b>Nón phóng vật</b>Death Valley, California. USGS, phạm vi công cộng.</span></li>
+      <li><img src="images/unit13/bajada.webp" alt="Một ngọn núi có chân được bao quanh bởi một dải trầm tích dốc thoải liên tục." loading="lazy" width="1000" height="667"><span><b>Bajada</b>Núi Frisco, Utah. GerthMichael, CC BY-SA.</span></li>
+      <li><img src="images/unit13/inselbergs.webp" alt="Ảnh chụp từ trên không những đồi đá nhỏ nhô lên giữa một đồng bằng rộng phủ trầm tích." loading="lazy" width="500" height="667"><span><b>Núi sót</b>Hoang mạc Mojave, California. USGS, phạm vi công cộng.</span></li>
+      <li><img src="images/unit13/playa.webp" alt="Ảnh vệ tinh một lòng hồ khô phẳng, màu nhạt, trong thung lũng có núi bao quanh." loading="lazy" width="1000" height="750"><span><b>Playa</b>Gần Dolan Springs, Arizona. NASA, phạm vi công cộng.</span></li>
+    </ul>
+    <figcaption>Các dạng địa hình hoang mạc do dòng chảy rời núi tạo nên. Ảnh được cắt vuông.<span class="credit">Tất cả qua sách giáo khoa.</span></figcaption>
+  </figure>
+  <p>Những dạng địa hình này ghi lại quá trình "già đi" của cảnh quan hoang mạc (<a href="#fig-evolution">Hình 13.20</a>): núi khối đứt gãy trẻ với đỉnh nhọn và các nón riêng rẽ ở cửa hẻm, rồi các bajada dọc chân núi, cuối cùng là những núi sót thấp nhô lên giữa một biển bajada hợp nhất. Một hành trình từ Wasatch Front ở Utah về phía tây nam tới Thái Bình Dương đi qua cả ba giai đoạn (13.4).</p>
+  <figure id="fig-evolution">
+    <div class="frame"><svg viewBox="0 0 760 352" role="img" aria-labelledby="ev-vi-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="ev-vi-t">Ba hình nhìn từ trên xuống của một bồn hoang mạc giữa các dãy núi. Giai đoạn 1: các nón phóng vật riêng rẽ ở cửa hẻm và một playa ở giữa. Giai đoạn 2: núi bị bào mòn lùi lại và các nón nối thành bajada. Giai đoạn 3: chỉ còn những núi sót nhỏ nhô lên giữa các bajada hợp nhất.</title><g transform="translate(0,26)"><g transform="translate(0,0)"><clipPath id="evc0-vi"><rect x="0" y="40" width="245" height="250"/></clipPath><g clip-path="url(#evc0-vi)"><rect x="0" y="40" width="245" height="250" fill="#f3e2bd"/><polygon points="0,40 44.1,40.0 55.6,52.0 54.2,64.0 46.1,76.0 49.9,88.0 49.2,100.0 52.4,112.0 54.6,124.0 43.5,136.0 42.5,148.0 55.4,160.0 48.9,172.0 54.2,184.0 42.0,196.0 49.1,208.0 53.5,220.0 45.7,232.0 57.1,244.0 56.4,256.0 42.5,268.0 42.4,280.0 0,290" fill="#7a5a3e"/><polygon points="245,40 202.3,40.0 202.2,52.0 187.9,64.0 188.4,76.0 200.4,88.0 198.8,100.0 197.7,112.0 191.9,124.0 196.7,136.0 196.7,148.0 196.3,160.0 189.5,172.0 193.9,184.0 193.3,196.0 198.6,208.0 202.9,220.0 202.2,232.0 195.7,244.0 194.1,256.0 191.3,268.0 187.6,280.0 245,290" fill="#7a5a3e"/><path d="M50,58 A32,32 0 0 1 50,122 Z" fill="#e3bd78" stroke="#b8873a" stroke-width="1"/><line x1="50" y1="90" x2="24" y2="90" stroke="#3f7fbf" stroke-width="2"/><line x1="50" y1="90" x2="70.8" y2="72.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="50" y1="90" x2="77.2" y2="90.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="50" y1="90" x2="70.8" y2="107.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M50,138 A32,32 0 0 1 50,202 Z" fill="#e3bd78" stroke="#b8873a" stroke-width="1"/><line x1="50" y1="170" x2="24" y2="170" stroke="#3f7fbf" stroke-width="2"/><line x1="50" y1="170" x2="70.8" y2="152.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="50" y1="170" x2="77.2" y2="170.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="50" y1="170" x2="70.8" y2="187.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M50,218 A32,32 0 0 1 50,282 Z" fill="#e3bd78" stroke="#b8873a" stroke-width="1"/><line x1="50" y1="250" x2="24" y2="250" stroke="#3f7fbf" stroke-width="2"/><line x1="50" y1="250" x2="70.8" y2="232.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="50" y1="250" x2="77.2" y2="250.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="50" y1="250" x2="70.8" y2="267.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M195,93 A32,32 0 0 0 195,157 Z" fill="#e3bd78" stroke="#b8873a" stroke-width="1"/><line x1="195" y1="125" x2="221" y2="125" stroke="#3f7fbf" stroke-width="2"/><line x1="195" y1="125" x2="174.2" y2="107.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="195" y1="125" x2="167.8" y2="125.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="195" y1="125" x2="174.2" y2="142.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M195,183 A32,32 0 0 0 195,247 Z" fill="#e3bd78" stroke="#b8873a" stroke-width="1"/><line x1="195" y1="215" x2="221" y2="215" stroke="#3f7fbf" stroke-width="2"/><line x1="195" y1="215" x2="174.2" y2="197.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="195" y1="215" x2="167.8" y2="215.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="195" y1="215" x2="174.2" y2="232.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><ellipse cx="122" cy="170" rx="26" ry="48" fill="#f7f4ec" stroke="#bdb4a0"/><rect x="100.6" y="161.2" width="42.8" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="122.0" y="170.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">playa</text><line x1="70" y1="90" x2="100" y2="60" stroke="#2a1f14" stroke-width="1.3"/><circle cx="70" cy="90" r="3" fill="#2a1f14"/><rect x="72.0" y="47.2" width="92.1" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="118.0" y="56.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">nón phóng vật</text><rect x="0.4" y="266.2" width="55.1" height="17.6" rx="8.8" fill="#7a5a3e" opacity="1"/><text x="28.0" y="275.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">dãy núi</text></g><rect x="0" y="40" width="245" height="250" fill="none" stroke="var(--line)"/></g><text x="122.0" y="14.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">1  Trẻ</text><text x="122.0" y="30.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">nón ở cửa hẻm (Utah)</text><g transform="translate(257,0)"><clipPath id="evc257-vi"><rect x="0" y="40" width="245" height="250"/></clipPath><g clip-path="url(#evc257-vi)"><rect x="0" y="40" width="245" height="250" fill="#f3e2bd"/><polygon points="0,40 31.8,40.0 36.7,52.0 33.9,64.0 37.7,76.0 38.0,88.0 29.0,100.0 28.2,112.0 41.4,124.0 32.1,136.0 31.7,148.0 43.9,160.0 35.5,172.0 41.4,184.0 35.6,196.0 38.2,208.0 30.4,220.0 38.2,232.0 41.9,244.0 36.4,256.0 39.9,268.0 38.7,280.0 0,290" fill="#7a5a3e"/><polygon points="245,40 204.8,40.0 202.7,52.0 207.3,64.0 203.5,76.0 202.1,88.0 207.4,100.0 215.7,112.0 213.8,124.0 213.2,136.0 204.6,148.0 209.6,160.0 205.4,172.0 203.8,184.0 202.7,196.0 204.4,208.0 215.8,220.0 214.3,232.0 213.9,244.0 213.8,256.0 204.1,268.0 206.0,280.0 245,290" fill="#7a5a3e"/><rect x="36" y="40" width="42" height="250" fill="#e3bd78"/><rect x="167" y="40" width="42" height="250" fill="#e3bd78"/><path d="M36,0 A50,50 0 0 1 36,100 Z" fill="#e3bd78"/><line x1="36" y1="50" x2="10" y2="50" stroke="#3f7fbf" stroke-width="2"/><line x1="36" y1="50" x2="68.6" y2="22.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="50" x2="78.5" y2="50.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="50" x2="68.6" y2="77.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M36,60 A50,50 0 0 1 36,160 Z" fill="#e3bd78"/><line x1="36" y1="110" x2="10" y2="110" stroke="#3f7fbf" stroke-width="2"/><line x1="36" y1="110" x2="68.6" y2="82.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="110" x2="78.5" y2="110.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="110" x2="68.6" y2="137.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M36,120 A50,50 0 0 1 36,220 Z" fill="#e3bd78"/><line x1="36" y1="170" x2="10" y2="170" stroke="#3f7fbf" stroke-width="2"/><line x1="36" y1="170" x2="68.6" y2="142.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="170" x2="78.5" y2="170.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="170" x2="68.6" y2="197.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M36,180 A50,50 0 0 1 36,280 Z" fill="#e3bd78"/><line x1="36" y1="230" x2="10" y2="230" stroke="#3f7fbf" stroke-width="2"/><line x1="36" y1="230" x2="68.6" y2="202.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="230" x2="78.5" y2="230.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="230" x2="68.6" y2="257.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M36,240 A50,50 0 0 1 36,340 Z" fill="#e3bd78"/><line x1="36" y1="290" x2="10" y2="290" stroke="#3f7fbf" stroke-width="2"/><line x1="36" y1="290" x2="68.6" y2="262.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="290" x2="78.5" y2="290.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="290" x2="68.6" y2="317.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M209,25 A50,50 0 0 0 209,125 Z" fill="#e3bd78"/><line x1="209" y1="75" x2="235" y2="75" stroke="#3f7fbf" stroke-width="2"/><line x1="209" y1="75" x2="176.4" y2="47.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="75" x2="166.5" y2="75.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="75" x2="176.4" y2="102.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M209,90 A50,50 0 0 0 209,190 Z" fill="#e3bd78"/><line x1="209" y1="140" x2="235" y2="140" stroke="#3f7fbf" stroke-width="2"/><line x1="209" y1="140" x2="176.4" y2="112.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="140" x2="166.5" y2="140.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="140" x2="176.4" y2="167.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M209,155 A50,50 0 0 0 209,255 Z" fill="#e3bd78"/><line x1="209" y1="205" x2="235" y2="205" stroke="#3f7fbf" stroke-width="2"/><line x1="209" y1="205" x2="176.4" y2="177.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="205" x2="166.5" y2="205.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="205" x2="176.4" y2="232.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M209,220 A50,50 0 0 0 209,320 Z" fill="#e3bd78"/><line x1="209" y1="270" x2="235" y2="270" stroke="#3f7fbf" stroke-width="2"/><line x1="209" y1="270" x2="176.4" y2="242.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="270" x2="166.5" y2="270.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="270" x2="176.4" y2="297.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><ellipse cx="122" cy="168" rx="16" ry="36" fill="#f7f4ec" stroke="#bdb4a0"/><rect x="100.6" y="205.2" width="42.8" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="122.0" y="214.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">playa</text><rect x="51.5" y="47.2" width="49.0" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="76.0" y="56.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">bajada</text><line x1="76" y1="64" x2="66" y2="90" stroke="#2a1f14" stroke-width="1.3"/><circle cx="66" cy="90" r="3" fill="#2a1f14"/></g><rect x="0" y="40" width="245" height="250" fill="none" stroke="var(--line)"/></g><text x="379.0" y="14.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">2  Trung niên</text><text x="379.0" y="30.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">nón nối thành bajada (nam Nevada)</text><g transform="translate(514,0)"><clipPath id="evc514-vi"><rect x="0" y="40" width="245" height="250"/></clipPath><g clip-path="url(#evc514-vi)"><rect x="0" y="40" width="245" height="250" fill="#f3e2bd"/><rect x="0" y="40" width="245" height="250" fill="#e3bd78"/><ellipse cx="38" cy="92" rx="20" ry="14" fill="#7a5a3e"/><ellipse cx="30" cy="222" rx="16" ry="12" fill="#7a5a3e"/><ellipse cx="200" cy="150" rx="22" ry="15" fill="#7a5a3e"/><ellipse cx="212" cy="258" rx="14" ry="10" fill="#7a5a3e"/><ellipse cx="150" cy="70" rx="10" ry="8" fill="#7a5a3e"/><line x1="60" y1="92" x2="86.0" y2="77.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="60" y1="92" x2="90.0" y2="92.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="60" y1="92" x2="86.0" y2="107.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="48" y1="222" x2="74.0" y2="207.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="48" y1="222" x2="78.0" y2="222.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="48" y1="222" x2="74.0" y2="237.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="176" y1="150" x2="150.0" y2="135.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="176" y1="150" x2="146.0" y2="150.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="176" y1="150" x2="150.0" y2="165.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><ellipse cx="118" cy="182" rx="12" ry="24" fill="#f7f4ec" stroke="#bdb4a0"/><rect x="96.6" y="211.2" width="42.8" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="118.0" y="220.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">playa</text><line x1="200" y1="137" x2="186" y2="110" stroke="#2a1f14" stroke-width="1.3"/><circle cx="200" cy="140" r="3" fill="#fff"/><rect x="148.4" y="91.2" width="55.1" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="176.0" y="100.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">núi sót</text><rect x="15.5" y="266.2" width="129.0" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="80.0" y="275.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">các bajada hợp nhất</text></g><rect x="0" y="40" width="245" height="250" fill="none" stroke="var(--line)"/></g><text x="636.0" y="14.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">3  Già</text><text x="636.0" y="30.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">núi sót giữa trầm tích (Mojave)</text><rect x="20" y="304" width="22" height="16" fill="#7a5a3e"/><text x="48.0" y="312.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">đá gốc của núi</text><rect x="190" y="304" width="22" height="16" fill="#e3bd78" stroke="#b8873a"/><text x="218.0" y="312.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">trầm tích nón (bồi tích)</text><line x1="400" y1="312" x2="428" y2="312" stroke="#3f7fbf" stroke-width="1.6" stroke-dasharray="4 3"/><text x="434.0" y="312.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">dòng chảy tạm thời</text><rect x="585" y="304" width="22" height="16" fill="#f7f4ec" stroke="#bdb4a0"/><text x="613.0" y="312.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">playa (lòng hồ khô)</text></g><text x="380.0" y="10.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Nhìn từ trên xuống: mỗi ô là một bản đồ nhìn thẳng từ trên cao</text></svg></div>
+    <figcaption>Các giai đoạn phát triển cảnh quan hoang mạc, theo hành trình từ Utah tới Mojave trong sách. Đường xanh liền: dòng chảy ra khỏi hẻm núi; đường xanh nét đứt: các phân lưu tạm thời trên nón. Nhìn từ trên xuống một bồn giữa hai dãy núi; không theo tỷ lệ.<span class="credit">Vẽ cho tài liệu này theo nội dung chương.</span></figcaption>
+  </figure>
+  <div class="tablewrap" id="tbl-landforms">
+    <table>
+      <caption>Các dạng địa hình hoang mạc do lắng đọng.</caption>
+      <thead><tr><th>Dạng địa hình</th><th>Vị trí</th><th>Hình thành thế nào</th></tr></thead>
+      <tbody>
+        <tr><td>Nón phóng vật</td><td>Ở cửa hẻm núi</td><td>Dòng chảy tỏa rộng, chậm lại, thả vật liệu thô; các phân lưu tỏa tia đắp nên hình quạt</td></tr>
+        <tr><td>Bajada</td><td>Dọc chân núi</td><td>Các nón cạnh nhau lớn lên và nối thành một dải bồi tích</td></tr>
+        <tr><td>Núi sót</td><td>Nhô lên khỏi trầm tích lấp bồn</td><td>Núi bị bào mòn và chôn vùi trong chính mảnh vụn của nó; chỉ phần sót còn nhô lên</td></tr>
+        <tr><td>Playa</td><td>Đáy bồn kín</td><td>Nước không thoát được bốc hơi, để lại lòng hồ khô bằng phẳng</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s13-3-water">Dòng chảy tạm thời và lũ quét</h3>
+  <p>Hồ playa và các dòng chảy hoang mạc chỉ có nước sau mưa được gọi là <button class="term" data-term="tạm thời">gián đoạn hay tạm thời</button>. Vì dông ở hoang mạc rất dữ dội, dòng chảy tạm thời có thể mang một lượng nước lớn trong thời gian ngắn. Đất hoang mạc thiếu chất hữu cơ giúp nước thấm xuống. Thay vào đó, dòng chảy mặt nén chặt bề mặt và làm đất <b>kỵ nước</b>. Vì bề mặt cứng này, dòng chảy tạm thời có thể gom nước từ những vùng rộng lớn và đột ngột đầy nước từ những cơn bão cách xa nhiều dặm.</p>
+  <figure id="fig-washes">
+    <ul class="gallery" style="--cols:2">
+      <li><img src="images/unit13/drywash.webp" alt="Một lòng suối khô đầy cát uốn khúc giữa vùng đất xấu." loading="lazy" width="1000" height="603"><span><b>Lòng suối khô (dòng chảy tạm thời)</b>Vườn quốc gia Petrified Forest, Arizona. Finetooth, CC BY-SA.</span></li>
+      <li><img src="images/unit13/flashflood.webp" alt="Một dòng nước bùn cuồn cuộn chảy xuống một lòng dẫn hoang mạc thường khô." loading="lazy" width="1000" height="750"><span><b>Lũ quét trong lòng suối khô</b>USGS, phạm vi công cộng.</span></li>
+    </ul>
+    <figcaption>Cùng một kiểu lòng dẫn khi khô và khi có nước. Ảnh được cắt vuông.<span class="credit">Cả hai qua sách giáo khoa.</span></figcaption>
+  </figure>
+  <p>Những dòng chảy tạm thời lưu lượng lớn, gọi là <b>lũ quét</b>, có thể di chuyển thành <button class="term" data-term="dòng chảy tràn mặt">dòng chảy tràn mặt</button> trên mặt đất hoặc dồn vào các <button class="term" data-term="arroyo">arroyo</button> (lòng khe khô) hay hẻm núi thường khô. Một lòng dẫn khô có thể nhanh chóng đầy một khối nước và mảnh vụn lao xuống arroyo và có thể tràn bờ. Lũ quét là yếu tố chính trong sự <button class="term" data-term="lắng đọng">lắng đọng</button> ở hoang mạc.</p>
+  <div class="callout warn">
+    <h4>Nguy hiểm của lũ quét</h4>
+    <p>Cơn bão gây lũ quét có thể ở cách xa nhiều dặm, ngoài tầm nhìn. Người đi bộ hoặc cắm trại trong những arroyo đã khô cạn hàng tháng, thậm chí hàng năm, đã bị cuốn trôi bởi lũ quét bất ngờ.</p>
+  </div>
+
+  <h3 id="s13-3-1">13.3.1 Cát</h3>
+  <p>Hình ảnh quen thuộc về hoang mạc là một vùng cát mênh mông, nhưng về địa chất, hoang mạc được định nghĩa bởi sự thiếu nước. Những vùng khô hạn giống một biển cát là một kiểu hoang mạc gọi là <button class="term" data-term="biển cát">biển cát</button> (erg) (<a href="#fig-erg">Hình 13.1</a>). Biển cát gồm những hạt cát mịn, rời, thường bị gió (các quá trình <button class="term" data-term="phong thành">phong thành</button>) thổi thành <button class="term" data-term="đụn cát">đụn cát</button>.</p>
+  <ul>
+    <li>Biển cát nổi tiếng nhất: <b>Rub' al Khali</b> ("Khu vực Trống rỗng") ở bán đảo Ả Rập.</li>
+    <li>Ở Hoa Kỳ: Vườn quốc gia Great Sand Dunes (Colorado), Khu giải trí Little Sahara (Utah), Vườn quốc gia White Sands (New Mexico, là di tích quốc gia tới năm 2019) và một phần Vườn quốc gia Death Valley (California).</li>
+    <li>Biển cát không chỉ có ở hoang mạc; chúng có thể hình thành ở bất cứ nơi nào có nhiều cát: xa về phía bắc tới Công viên tỉnh Athabasca Sand Dunes ở Saskatchewan, Canada, và thành biển cát ven bờ hồ, bờ biển ở Oregon, Michigan và Indiana.</li>
+  </ul>
+  <p>Bên trong đụn cát có <button class="term" data-term="phân lớp xiên">phân lớp xiên</button> (<a href="#fig-dune">Hình 13.22</a>). Gió thổi lên sườn đón gió (<b>stoss</b>) thoải và mang cát tới đỉnh, đắp các lớp song song với sườn đón gió. Cát dồn lên đỉnh và tràn qua cho tới khi sườn khuất gió dốc (<b>sườn trượt</b>) đạt <button class="term" data-term="góc nghỉ tự nhiên">góc nghỉ tự nhiên</button>, góc dốc nhất mà cát rời còn đứng yên. Đụn cát không ổn định và di chuyển: cát bị xói khỏi sườn đón gió và tiếp tục đổ xuống sườn trượt, vùi lấp các lớp sườn đón gió và sườn trượt trước đó, tạo nên phân lớp xiên. Phần lớn bị tái tạo lặp đi lặp lại, nhưng đôi khi chúng được bảo tồn trong một vùng trũng rồi thạch hóa. Hướng gió thay đổi và nguồn cát dồi dào tạo nên những kiểu phân lớp xiên hỗn độn, như ở Vườn quốc gia Zion, Utah (<a href="#fig-zion">Hình 13.23</a>).</p>
+  <figure id="fig-dune">
+    <div class="frame"><svg viewBox="0 0 760 300" role="img" aria-labelledby="dune-vi-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="dune-vi-t">Mặt cắt một đụn cát, gió thổi từ trái: cát di chuyển lên sườn đón gió thoải, vượt qua đỉnh và đổ sụt xuống sườn trượt dốc ở góc nghỉ tự nhiên. Bên trong, các lớp xiên song song với sườn trượt là những sườn trượt cũ bị vùi lấp khi đụn cát di chuyển.</title><rect x="0" y="0" width="760" height="260" fill="#2f7a8c" opacity=".07"/><rect x="0" y="260" width="760" height="40" fill="#c99a50"/><polygon points="60,260 500,120 707.6,260" fill="#e6c27a"/><line x1="462.6" y1="131.9" x2="652.6" y2="260" stroke="#a8792f" stroke-width="2"/><line x1="425.3" y1="143.8" x2="597.6" y2="260" stroke="#a8792f" stroke-width="2"/><line x1="387.9" y1="155.7" x2="542.6" y2="260" stroke="#a8792f" stroke-width="2"/><line x1="350.5" y1="167.6" x2="487.6" y2="260" stroke="#a8792f" stroke-width="2"/><line x1="313.1" y1="179.5" x2="432.6" y2="260" stroke="#a8792f" stroke-width="2"/><line x1="275.8" y1="191.3" x2="377.6" y2="260" stroke="#a8792f" stroke-width="2"/><line x1="500" y1="120" x2="707.6" y2="260" stroke="#7a5320" stroke-width="2.5"/><line x1="120.0" y1="214.9" x2="422.0" y2="118.8" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".85"/><line x1="120.0" y1="214.9" x2="422.0" y2="118.8" stroke="var(--fg)" stroke-width="3" stroke-linecap="round"/><polygon points="430.0,116.3 420.2,127.0 415.8,113.2" fill="#fff"/><polygon points="430.0,116.3 421.9,125.1 418.3,113.7" fill="var(--fg)"/><text x="250.0" y="112.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="600" class="svg-ink halo">Cát bị thổi lên sườn đón gió (stoss)</text><line x1="542.0" y1="118.3" x2="669.0" y2="204.0" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".85"/><line x1="542.0" y1="118.3" x2="669.0" y2="204.0" stroke="#7a5320" stroke-width="3" stroke-linecap="round"/><polygon points="676.0,208.7 661.5,207.7 669.6,195.7" fill="#fff"/><polygon points="676.0,208.7 664.0,207.9 670.7,197.9" fill="#7a5320"/><text x="548.0" y="64.0" dy=".35em" text-anchor="start" font-size="12" font-weight="600" class="svg-ink halo">Cát đổ sụt xuống sườn trượt</text><text x="548.0" y="80.0" dy=".35em" text-anchor="start" font-size="12" font-weight="600" class="svg-ink halo">(sườn khuất gió)</text><text x="500.0" y="104.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">đỉnh</text><line x1="30.0" y1="60.0" x2="141.6" y2="60.0" stroke="#2f7a8c" stroke-width="3" stroke-linecap="round"/><polygon points="150.0,60.0 139.6,66.0 139.6,54.0" fill="#2f7a8c"/><text x="90.0" y="42.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" fill="#2f7a8c" class="halo">Gió</text><path d="M665.6,260 A42,42 0 0 1 672.7,236.5" fill="none" stroke="var(--rust)" stroke-width="2.5"/><line x1="697.6" y1="270" x2="681.6" y2="252" stroke="var(--rust)" stroke-width="1.5"/><rect x="555.2" y="273.2" width="196.8" height="17.6" rx="8.8" fill="#a63d2a" opacity="1"/><text x="653.6" y="282.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">góc nghỉ tự nhiên (khoảng 34°)</text><line x1="465.2" y1="207.8" x2="300" y2="272" stroke="#2a1f14" stroke-width="1.5"/><circle cx="465.2" cy="207.8" r="3.5" fill="#2a1f14"/><rect x="161.6" y="273.2" width="276.9" height="17.6" rx="8.8" fill="#fffaf0" opacity="1"/><text x="300.0" y="282.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">Phân lớp xiên: các sườn trượt cũ bị vùi lấp</text><text x="250.0" y="22.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">Đụn cát di chuyển theo chiều gió →</text></svg></div>
+    <figcaption>Cấu tạo của một đụn cát đang di chuyển. Các đường nâu bên trong đụn: phân lớp xiên. Cung đỏ: góc nghỉ tự nhiên của sườn trượt. Mặt cắt, gió thổi từ trái; sườn trượt vẽ đúng góc thật, sườn đón gió vẽ dốc hơn thực tế.<span class="credit">Vẽ cho tài liệu này theo nội dung chương và hoạt hình "Formation of cross beds" của chương (USGS, phạm vi công cộng); giá trị góc nghỉ theo Wikipedia, "Angle of repose".</span></figcaption>
+  </figure>
+  <figure id="fig-zion">
+    <div class="frame"><img src="images/unit13/zion.webp" alt="Một vách sa thạch có nhiều tập lớp mỏng nghiêng bị cắt cụt ở các góc khác nhau." loading="lazy" width="1000" height="667"></div>
+    <figcaption>Phân lớp xiên trong sa thạch Navajo, Vườn quốc gia Zion, Utah: phần bên trong của những đụn cát kỷ Jura đã hóa đá.<span class="credit">Roy Luck, CC BY (qua sách giáo khoa).</span></figcaption>
+  </figure>
+  <p>Trong Đại <button class="term" data-term="Đại Trung sinh">Trung sinh</button>, Utah bị phủ bởi một loạt biển cát, dày nhất ở nam Utah, về sau thạch hóa thành <button class="term" data-term="cát kết">cát kết</button> (sa thạch) (Học phần 5 và 8):</p>
+  <ul>
+    <li><b>Sa thạch Navajo</b> (<button class="term" data-term="kỷ Jura">kỷ Jura</button>): nổi tiếng nhất. Nó tạo nên những vách đá và tháp đá ấn tượng ở Vườn quốc gia Zion và phủ một phần lớn Cao nguyên Colorado.</li>
+    <li><b>Sa thạch Entrada</b> (cũng thuộc kỷ Jura): một loạt đụn cát muộn hơn phủ lên sa thạch Navajo rồi thạch hóa. Ở Vườn quốc gia Arches, sự bào mòn các lớp phía trên làm lộ ra những "vây" sa thạch Entrada và khoét đi phần yếu của chúng, tạo nên các vòm đá.</li>
+  </ul>
+  <p>Cát có thể được tái chế. Khi chất xi măng gắn các hạt trong những vách sa thạch này bị phá hủy, các hạt được giải phóng tụ ở chân vách và theo các lòng suối khô đi xuống. Các biển cát Trung sinh có thể chứa cát thạch anh vốn phong hóa từ đá magma từ đầu <button class="term" data-term="Tiền Cambri">Tiền Cambri</button> và đã được tái chế nhiều lần. Công viên tiểu bang Coral Pink Sand Dunes ở tây nam Utah là một ví dụ: các đụn cát mới ở đây được tạo từ cát bị xói ra từ sa thạch Navajo (<a href="#fig-grains">Hình 13.16</a>).</p>
+
+  <h4 id="s13-3-dunes">Các kiểu đụn cát</h4>
+  <p>Hình dạng đụn cát phụ thuộc vào <b>hướng gió</b>, <b>nguồn cung cát</b> và đôi khi <b>thực vật</b> giữ cát lại (<a href="#fig-dunetypes">Hình 13.24</a>, <a href="#fig-dunephotos">Hình 13.25</a>, <a href="#tbl-dunes">Bảng 13.6</a>).</p>
+  <figure id="fig-dunetypes">
+    <div class="frame"><svg viewBox="0 0 760 495" role="img" aria-labelledby="dt-vi-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="dt-vi-t">Bốn kiểu đụn cát nhìn từ trên xuống, mũi tên xanh là gió: barchan hình lưỡi liềm với hai sừng chỉ về cuối gió; các dải đụn dọc song song giữa hai hướng gió luân phiên; đụn parabol có hai cánh phủ thực vật chỉ về đầu gió quanh một hố thổi mòn; và đụn hình sao với các cánh tỏa ra dưới gió từ nhiều hướng.</title><g transform="translate(5,5)"><rect x="0" y="0" width="370" height="215" rx="10" fill="#e6c27a" opacity=".35"/><text x="185.0" y="18.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="700" class="svg-ink halo">Barchan (lưỡi liềm)</text><path d="M230.0,45.0 Q118.0,38.0 114.0,95.0 Q118.0,152.0 230.0,145.0 Q170.0,120.0 176.0,95.0 Q170.0,70.0 230.0,45.0 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M226.0,50.0 Q156.0,62.0 158.0,95.0 Q156.0,128.0 226.0,140.0 Q170.0,120.0 176.0,95.0 Q170.0,70.0 226.0,50.0 Z" fill="#b8873a"/><path d="M323.0,102.5 Q261.4,98.7 259.2,130.0 Q261.4,161.3 323.0,157.5 Q290.0,143.8 293.3,130.0 Q290.0,116.2 323.0,102.5 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M320.8,105.2 Q282.3,111.8 283.4,130.0 Q282.3,148.2 320.8,154.8 Q290.0,143.8 293.3,130.0 Q290.0,116.2 320.8,105.2 Z" fill="#b8873a"/><path d="M327.0,39.5 Q276.6,36.3 274.8,62.0 Q276.6,87.7 327.0,84.5 Q300.0,73.2 302.7,62.0 Q300.0,50.8 327.0,39.5 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M325.2,41.8 Q293.7,47.1 294.6,62.0 Q293.7,76.8 325.2,82.2 Q300.0,73.2 302.7,62.0 Q300.0,50.8 325.2,41.8 Z" fill="#b8873a"/><line x1="20.0" y1="70.0" x2="53.0" y2="70.0" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="60.0,70.0 51.3,75.0 51.3,65.0" fill="#2f7a8c"/><line x1="20.0" y1="105.0" x2="53.0" y2="105.0" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="60.0,105.0 51.3,110.0 51.3,100.0" fill="#2f7a8c"/><line x1="20.0" y1="140.0" x2="53.0" y2="140.0" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="60.0,140.0 51.3,145.0 51.3,135.0" fill="#2f7a8c"/><text x="185.0" y="184.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Ít cát, gió thổi ổn định một hướng;</text><text x="185.0" y="199.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">hai sừng chỉ về phía cuối gió</text></g><g transform="translate(385,5)"><rect x="0" y="0" width="370" height="215" rx="10" fill="#e6c27a" opacity=".35"/><text x="185.0" y="18.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="700" class="svg-ink halo">Đụn cát dọc (tuyến tính)</text><path d="M70,60 Q200,34 340,60 Q200,86 70,60 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M80,60 Q200,38 330,60 Q200,54 80,60 Z" fill="#b8873a"/><path d="M70,105 Q200,79 340,105 Q200,131 70,105 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M80,105 Q200,83 330,105 Q200,99 80,105 Z" fill="#b8873a"/><path d="M70,150 Q200,124 340,150 Q200,176 70,150 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M80,150 Q200,128 330,150 Q200,144 80,150 Z" fill="#b8873a"/><line x1="14.0" y1="48.0" x2="50.2" y2="62.6" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="56.7,65.2 46.7,66.6 50.5,57.4" fill="#2f7a8c"/><line x1="14.0" y1="162.0" x2="50.2" y2="147.4" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="56.7,144.8 50.5,152.6 46.7,143.4" fill="#2f7a8c"/><text x="185.0" y="184.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Nhiều cát hơn; gió đổi chiều qua lại</text><text x="185.0" y="199.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">quanh một hướng; các dải chạy dọc theo hướng gió</text></g><g transform="translate(5,240)"><rect x="0" y="0" width="370" height="215" rx="10" fill="#e6c27a" opacity=".35"/><text x="185.0" y="18.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="700" class="svg-ink halo">Đụn cát parabol</text><path d="M60,58 L170,58 Q280,58 280,105 Q280,152 170,152 L60,152 L60,134 L170,134 Q238,134 238,105 Q238,76 170,76 L60,76 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M255,66 Q292,105 255,144 Q276,105 255,66 Z" fill="#b8873a"/><circle cx="64.4" cy="52.3" r="4.2" fill="#4f8a3a"/><circle cx="65.2" cy="82.6" r="4.2" fill="#4f8a3a"/><circle cx="66.8" cy="125.4" r="4.2" fill="#4f8a3a"/><circle cx="63.1" cy="160.0" r="4.2" fill="#4f8a3a"/><circle cx="77.6" cy="50.4" r="4.2" fill="#4f8a3a"/><circle cx="82.0" cy="81.8" r="4.2" fill="#4f8a3a"/><circle cx="81.0" cy="127.9" r="4.2" fill="#4f8a3a"/><circle cx="79.8" cy="155.9" r="4.2" fill="#4f8a3a"/><circle cx="92.8" cy="54.2" r="4.2" fill="#4f8a3a"/><circle cx="92.1" cy="83.4" r="4.2" fill="#4f8a3a"/><circle cx="93.0" cy="125.4" r="4.2" fill="#4f8a3a"/><circle cx="93.5" cy="158.5" r="4.2" fill="#4f8a3a"/><circle cx="103.8" cy="49.2" r="4.2" fill="#4f8a3a"/><circle cx="107.2" cy="81.8" r="4.2" fill="#4f8a3a"/><circle cx="106.3" cy="130.3" r="4.2" fill="#4f8a3a"/><circle cx="106.3" cy="160.5" r="4.2" fill="#4f8a3a"/><circle cx="117.4" cy="53.8" r="4.2" fill="#4f8a3a"/><circle cx="117.7" cy="84.6" r="4.2" fill="#4f8a3a"/><circle cx="120.3" cy="125.6" r="4.2" fill="#4f8a3a"/><circle cx="115.8" cy="156.3" r="4.2" fill="#4f8a3a"/><circle cx="133.8" cy="51.6" r="4.2" fill="#4f8a3a"/><circle cx="131.8" cy="80.8" r="4.2" fill="#4f8a3a"/><circle cx="131.0" cy="127.3" r="4.2" fill="#4f8a3a"/><circle cx="130.1" cy="158.5" r="4.2" fill="#4f8a3a"/><circle cx="144.5" cy="54.4" r="4.2" fill="#4f8a3a"/><circle cx="145.1" cy="84.6" r="4.2" fill="#4f8a3a"/><circle cx="146.1" cy="130.9" r="4.2" fill="#4f8a3a"/><circle cx="145.0" cy="156.0" r="4.2" fill="#4f8a3a"/><circle cx="159.2" cy="54.8" r="4.2" fill="#4f8a3a"/><circle cx="159.4" cy="82.4" r="4.2" fill="#4f8a3a"/><circle cx="158.3" cy="126.3" r="4.2" fill="#4f8a3a"/><circle cx="159.0" cy="158.4" r="4.2" fill="#4f8a3a"/><rect x="145.1" y="96.2" width="79.8" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.95"/><text x="185.0" y="105.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">hố thổi mòn</text><line x1="14.0" y1="105.0" x2="41.0" y2="105.0" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="48.0,105.0 39.3,110.0 39.3,100.0" fill="#2f7a8c"/><text x="185.0" y="184.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Thực vật (xanh lá) giữ chặt hai cánh,</text><text x="185.0" y="199.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">nên hai cánh chỉ về phía đầu gió</text></g><g transform="translate(385,240)"><rect x="0" y="0" width="370" height="215" rx="10" fill="#e6c27a" opacity=".35"/><text x="185.0" y="18.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="700" class="svg-ink halo">Đụn cát hình sao</text><path d="M196.9,101.7 Q197.0,72.3 194.7,42.6 Q182.7,70.3 173.1,98.3 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M185.0,100.0 Q194.0,71.9 194.7,42.6 Q189.9,71.3 185.0,100.0 Z" fill="#b8873a"/><path d="M187.1,111.8 Q220.7,102.1 253.9,89.9 Q218.2,87.9 182.9,88.2 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M185.0,100.0 Q220.2,99.1 253.9,89.9 Q219.5,95.0 185.0,100.0 Z" fill="#b8873a"/><path d="M174.4,105.6 Q195.1,129.0 217.9,151.2 Q207.8,122.2 195.6,94.4 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M185.0,100.0 Q197.7,127.6 217.9,151.2 Q201.4,125.6 185.0,100.0 Z" fill="#b8873a"/><path d="M176.4,91.7 Q155.5,115.9 136.4,141.7 Q165.9,125.9 193.6,108.3 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M185.0,100.0 Q157.7,117.9 136.4,141.7 Q160.7,120.9 185.0,100.0 Z" fill="#b8873a"/><path d="M190.3,89.2 Q156.7,80.8 122.1,74.6 Q150.4,93.8 179.7,110.8 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M185.0,100.0 Q155.4,83.5 122.1,74.6 Q153.5,87.3 185.0,100.0 Z" fill="#b8873a"/><circle cx="185" cy="100" r="9" fill="#a8792f"/><line x1="28.0" y1="100.0" x2="57.0" y2="100.0" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="64.0,100.0 55.3,105.0 55.3,95.0" fill="#2f7a8c"/><line x1="342.0" y1="100.0" x2="313.0" y2="100.0" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="306.0,100.0 314.7,95.0 314.7,105.0" fill="#2f7a8c"/><line x1="70.0" y1="40.0" x2="92.1" y2="55.5" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="97.9,59.5 87.9,58.6 93.6,50.4" fill="#2f7a8c"/><line x1="300.0" y1="40.0" x2="277.9" y2="55.5" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="272.1,59.5 276.4,50.4 282.1,58.6" fill="#2f7a8c"/><line x1="300.0" y1="160.0" x2="277.9" y2="144.5" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="272.1,140.5 282.1,141.4 276.4,149.6" fill="#2f7a8c"/><text x="185.0" y="184.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Gió từ nhiều hướng; lượng cát</text><text x="185.0" y="199.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">từ ít đến rất nhiều</text></g><line x1="40.0" y1="478.0" x2="73.0" y2="478.0" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="80.0,478.0 71.3,483.0 71.3,473.0" fill="#2f7a8c"/><text x="88.0" y="478.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">gió</text><rect x="160" y="470" width="26" height="16" fill="#d9ad5c" stroke="#a8792f"/><text x="192.0" y="478.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">cát đụn</text><rect x="290" y="470" width="26" height="16" fill="#b8873a"/><text x="322.0" y="478.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">sườn trượt (dốc, phía cuối gió)</text><circle cx="590" cy="478" r="6" fill="#4f8a3a"/><text x="602.0" y="478.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">thực vật</text></svg></div>
+    <figcaption>Bốn kiểu đụn cát chính nhìn từ trên xuống. Mũi tên xanh: gió; màu nâu vàng đậm: sườn trượt; chấm xanh lá: thực vật.<span class="credit">Vẽ cho tài liệu này theo nội dung chương.</span></figcaption>
+  </figure>
+  <figure id="fig-dunephotos">
+    <ul class="gallery" style="--cols:4">
+      <li><img src="images/unit13/barchan.webp" alt="Ảnh vệ tinh nhiều đụn cát hình lưỡi liềm, mỗi đụn có hai sừng." loading="lazy" width="540" height="540"><span><b>Đụn cát barchan</b>Ven biển Brazil. NASA, phạm vi công cộng.</span></li>
+      <li><img src="images/unit13/linear.webp" alt="Ảnh vệ tinh những dải cát dài, thẳng, song song." loading="lazy" width="720" height="480"><span><b>Đụn cát dọc (tuyến tính)</b>Biển cát Lớn, Ai Cập. NASA Earth Observatory, phạm vi công cộng.</span></li>
+      <li><img src="images/unit13/parabolic.webp" alt="Ảnh chụp từ trên không những đụn hình chữ U có hai cánh phủ thực vật kéo dài phía sau một mũi cát trơ trụi." loading="lazy" width="400" height="390"><span><b>Đụn cát parabol</b>Cape Cod, Massachusetts. USGS, phạm vi công cộng.</span></li>
+      <li><img src="images/unit13/star.webp" alt="Một đụn cát lớn có đỉnh ở giữa và nhiều sống cát tỏa ra." loading="lazy" width="1000" height="758"><span><b>Đụn cát hình sao</b>Sahara. USGS, phạm vi công cộng.</span></li>
+    </ul>
+    <figcaption>Bốn kiểu đụn cát ngoài thực tế. Ảnh được cắt vuông.<span class="credit">Tất cả qua sách giáo khoa.</span></figcaption>
+  </figure>
+  <div class="tablewrap" id="tbl-dunes">
+    <table>
+      <caption>Các kiểu đụn cát và điều kiện hình thành.</caption>
+      <thead><tr><th>Kiểu</th><th>Nguồn cát</th><th>Gió</th><th>Hình dạng</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="đụn cát barchan">Barchan (lưỡi liềm)</button></td><td>Hạn chế</td><td>Hướng khá ổn định</td><td>Hình lưỡi liềm có hai cánh (sừng) hai bên đỉnh; di chuyển theo chiều gió, có thể vùi lấp nhà cửa, thậm chí cả thị trấn</td></tr>
+        <tr><td><button class="term" data-term="đụn cát dọc">Dọc (tuyến tính)</button></td><td>Nhiều hơn</td><td>Đổi chiều qua lại quanh một hướng chính</td><td>Những dải cao hàng chục mét, chạy theo hướng gió chính</td></tr>
+        <tr><td><button class="term" data-term="đụn cát parabol">Parabol</button></td><td>Thay đổi; thực vật giữ một phần cát</td><td>Một hướng chính</td><td>Giống barchan nhưng thường ngược lại; phần không được giữ bị thổi mòn. Hình dạng do thực vật quyết định hơn là một parabol đúng nghĩa</td></tr>
+        <tr><td><button class="term" data-term="đụn cát hình sao">Hình sao</button></td><td>Từ ít đến khá nhiều</td><td>Thay đổi, từ mọi hướng</td><td>Hình ngôi sao; hướng gió thay đổi tạo nên các cánh</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/13-deserts/" target="_blank" rel="noopener">câu hỏi Mục 13.3 trong sách ↗</a></p>
+</section>
+
+<section id="s13-4">
+  <h2 class="sec"><span class="n">13.4</span>Great Basin và Basin and Range</h2>
+  <div class="pair">
+    <figure id="fig-gbmap">
+      <div class="frame"><img class="diagram" src="images/unit13/gbmap.webp" alt="Bản đồ vùng Great Basin vẽ trên miền tây Hoa Kỳ, phủ tây Utah, phần lớn Nevada và một phần California, Oregon, Idaho." loading="lazy" width="900" height="1006" style="height:340px;width:auto"></div>
+      <figcaption>Great Basin, vùng nội lưu lớn nhất Bắc Mỹ.<span class="credit">Karl Musser, CC BY-SA (qua sách giáo khoa).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Nội lưu</h4>
+      <p><b>Great Basin</b> (Đại Bồn địa) là vùng <button class="term" data-term="nội lưu">nội lưu</button>: không có lối thoát ra đại dương, nên mọi lượng giáng thủy ở lại trong bồn hoặc bốc hơi. Các dòng chảy của nó đổ nước vào những hồ và playa trong bồn.</p>
+      <p>Vùng này phủ tây Utah, phần lớn Nevada và một phần đông nam California, nam Oregon và nam Idaho.</p>
+    </div>
+  </div>
+  <p>Một tiểu vùng của Great Basin là <button class="term" data-term="Basin and Range">Basin and Range</button> (vùng Bồn và Dãy), trải từ Wasatch Front ở Utah về phía tây qua Nevada tới dãy Sierra Nevada ở California. Các "bồn" và "dãy" của nó là <button class="term" data-term="địa hào">địa hào</button> và <button class="term" data-term="địa lũy">địa lũy</button>: những khối sụt xuống hoặc nâng lên dọc các <button class="term" data-term="đứt gãy thuận">đứt gãy thuận</button> khi vỏ Trái Đất bị kéo giãn do <button class="term" data-term="tách giãn">tách giãn</button> (Học phần 2 và 9; <a href="#fig-horst">Hình 13.27</a>). <button class="term" data-term="thạch quyển">Thạch quyển</button> của cả vùng đã bị kéo dãn khoảng 2 lần trong khoảng 30 triệu năm qua: chiều rộng từ đầu này tới đầu kia đã tăng gấp đôi.</p>
+  <figure id="fig-horst">
+    <div class="frame"><svg viewBox="0 0 760 290" role="img" aria-labelledby="hg-vi-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="hg-vi-t">Mặt cắt vùng Basin and Range: vỏ Trái Đất bị kéo giãn, các khối giữa những đứt gãy thuận nhô lên thành địa lũy (dãy núi) hoặc sụt xuống thành địa hào (bồn trũng). Địa hào chứa trầm tích lấp bồn với playa ở trên; các lớp đá tương ứng bị dịch chuyển qua mỗi đứt gãy.</title><defs><clipPath id="hg0-vi"><polygon points="0.0,60.0 100.0,60.0 150.0,240.0 0.0,240.0"/></clipPath><clipPath id="hg1-vi"><polygon points="100.0,60.0 290.0,60.0 240.0,240.0 150.0,240.0"/></clipPath><clipPath id="hg2-vi"><polygon points="290.0,60.0 390.0,60.0 440.0,240.0 240.0,240.0"/></clipPath><clipPath id="hg3-vi"><polygon points="390.0,60.0 580.0,60.0 530.0,240.0 440.0,240.0"/></clipPath><clipPath id="hg4-vi"><polygon points="580.0,60.0 690.0,60.0 740.0,240.0 530.0,240.0"/></clipPath><clipPath id="hg5-vi"><polygon points="690.0,60.0 760.0,60.0 760.0,240.0 740.0,240.0"/></clipPath></defs><rect x="0" y="0" width="760" height="60" fill="#2f7a8c" opacity=".08"/><g clip-path="url(#hg0-vi)"><rect x="0" y="0" width="760" height="300" fill="#8c5a3b"/><rect x="0" y="20" width="760" height="80" fill="#c58a5c"/><rect x="0" y="100" width="760" height="50" fill="#a86f48"/></g><g clip-path="url(#hg1-vi)"><rect x="0" y="0" width="760" height="300" fill="#8c5a3b"/><rect x="0" y="130" width="760" height="80" fill="#c58a5c"/><rect x="0" y="210" width="760" height="50" fill="#a86f48"/><rect x="0" y="0" width="760" height="170" fill="#2f7a8c" opacity=".0"/></g><g clip-path="url(#hg1-vi)"><rect x="0" y="122" width="760" height="48" fill="#e6c27a"/></g><g clip-path="url(#hg2-vi)"><rect x="0" y="0" width="760" height="300" fill="#8c5a3b"/><rect x="0" y="20" width="760" height="80" fill="#c58a5c"/><rect x="0" y="100" width="760" height="50" fill="#a86f48"/></g><g clip-path="url(#hg3-vi)"><rect x="0" y="0" width="760" height="300" fill="#8c5a3b"/><rect x="0" y="130" width="760" height="80" fill="#c58a5c"/><rect x="0" y="210" width="760" height="50" fill="#a86f48"/><rect x="0" y="0" width="760" height="170" fill="#2f7a8c" opacity=".0"/></g><g clip-path="url(#hg3-vi)"><rect x="0" y="122" width="760" height="48" fill="#e6c27a"/></g><g clip-path="url(#hg4-vi)"><rect x="0" y="0" width="760" height="300" fill="#8c5a3b"/><rect x="0" y="20" width="760" height="80" fill="#c58a5c"/><rect x="0" y="100" width="760" height="50" fill="#a86f48"/></g><g clip-path="url(#hg5-vi)"><rect x="0" y="0" width="760" height="300" fill="#8c5a3b"/><rect x="0" y="130" width="760" height="80" fill="#c58a5c"/><rect x="0" y="210" width="760" height="50" fill="#a86f48"/><rect x="0" y="0" width="760" height="170" fill="#2f7a8c" opacity=".0"/></g><g clip-path="url(#hg5-vi)"><rect x="0" y="122" width="760" height="48" fill="#e6c27a"/></g><g clip-path="url(#hg1-vi)"><rect x="0" y="0" width="760" height="122" fill="var(--surface)"/><rect x="0" y="0" width="760" height="122" fill="#2f7a8c" opacity=".08"/></g><g clip-path="url(#hg3-vi)"><rect x="0" y="0" width="760" height="122" fill="var(--surface)"/><rect x="0" y="0" width="760" height="122" fill="#2f7a8c" opacity=".08"/></g><g clip-path="url(#hg5-vi)"><rect x="0" y="0" width="760" height="122" fill="var(--surface)"/><rect x="0" y="0" width="760" height="122" fill="#2f7a8c" opacity=".08"/></g><line x1="100" y1="60" x2="150.0" y2="240" stroke="#2a1f14" stroke-width="2.5"/><line x1="137.3" y1="158.4" x2="142.3" y2="176.2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><polygon points="143.8,181.6 138.1,176.0 145.8,173.8" fill="#fff"/><line x1="290" y1="60" x2="240.0" y2="240" stroke="#2a1f14" stroke-width="2.5"/><line x1="252.7" y1="158.4" x2="247.7" y2="176.2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><polygon points="246.2,181.6 244.2,173.8 251.9,176.0" fill="#fff"/><line x1="390" y1="60" x2="440.0" y2="240" stroke="#2a1f14" stroke-width="2.5"/><line x1="427.3" y1="158.4" x2="432.3" y2="176.2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><polygon points="433.8,181.6 428.1,176.0 435.8,173.8" fill="#fff"/><line x1="580" y1="60" x2="530.0" y2="240" stroke="#2a1f14" stroke-width="2.5"/><line x1="542.7" y1="158.4" x2="537.7" y2="176.2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><polygon points="536.2,181.6 534.2,173.8 541.9,176.0" fill="#fff"/><line x1="690" y1="60" x2="740.0" y2="240" stroke="#2a1f14" stroke-width="2.5"/><line x1="727.3" y1="158.4" x2="732.3" y2="176.2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><polygon points="733.8,181.6 728.1,176.0 735.8,173.8" fill="#fff"/><rect x="167.0" y="119" width="56" height="5" fill="#f7f4ec" stroke="#bdb4a0" stroke-width=".8"/><rect x="457.0" y="119" width="56" height="5" fill="#f7f4ec" stroke="#bdb4a0" stroke-width=".8"/><text x="340.0" y="40.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Địa lũy = dãy núi</text><text x="195.0" y="86.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Địa hào = bồn trũng</text><text x="195.0" y="106.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">playa</text><text x="485.0" y="86.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Địa hào = bồn trũng</text><text x="485.0" y="106.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">playa</text><rect x="136.6" y="139.2" width="116.7" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="195.0" y="148.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">trầm tích lấp bồn</text><rect x="426.6" y="139.2" width="116.7" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="485.0" y="148.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">trầm tích lấp bồn</text><line x1="541.1" y1="200" x2="600" y2="262" stroke="#2a1f14" stroke-width="1.3"/><circle cx="541.1" cy="200" r="3" fill="#2a1f14"/><text x="606.0" y="262.0" dy=".35em" text-anchor="start" font-size="12" font-weight="600" class="svg-ink halo">đứt gãy thuận</text><line x1="110.0" y1="22.0" x2="37.7" y2="22.0" stroke="var(--rust)" stroke-width="3" stroke-linecap="round"/><polygon points="30.0,22.0 39.5,16.5 39.5,27.5" fill="var(--rust)"/><line x1="650.0" y1="22.0" x2="722.3" y2="22.0" stroke="var(--rust)" stroke-width="3" stroke-linecap="round"/><polygon points="730.0,22.0 720.5,27.5 720.5,16.5" fill="var(--rust)"/><text x="118.0" y="22.0" dy=".35em" text-anchor="start" font-size="12" font-weight="700" fill="var(--rust)" class="halo">tách giãn</text><text x="642.0" y="22.0" dy=".35em" text-anchor="end" font-size="12" font-weight="700" fill="var(--rust)" class="halo">tách giãn</text><text x="10.0" y="270.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">Mũi tên trắng: khối địa hào trượt xuống</text></svg></div>
+    <figcaption>Địa lũy và địa hào của vùng Basin and Range. Các dải màu trong đá: những lớp tương ứng, bị dịch chuyển qua mỗi đứt gãy. Vàng nâu: trầm tích lấp bồn; dải trắng: playa. Mũi tên trắng cho thấy khối địa hào trượt xuống theo đứt gãy. Mặt cắt; không theo tỷ lệ.<span class="credit">Vẽ cho tài liệu này theo nội dung chương.</span></figcaption>
+  </figure>
+  <p>Mỗi thung lũng không có lối thoát là một bồn riêng, được lấp bằng trầm tích bồi tích dẫn ra một playa. Trong thời kỳ băng hà gần nhất, khí hậu ẩm hơn: trong khi sông băng phát triển ở một số dãy núi, các <button class="term" data-term="hồ mưa">hồ mưa</button> (hồ pluvial) phủ những vùng rộng lớn (Học phần 14). Hồ Bonneville phủ các thung lũng ở phần lớn tây Utah và đông Nevada. Khi khí hậu trở nên khô hạn sau thời kỳ băng hà, hồ Bonneville cạn dần, để lại <b>Hồ Muối Lớn</b> (Great Salt Lake) là phần sót lại.</p>
+  <figure id="fig-ridgecrest">
+    <div class="frame"><img src="images/unit13/ridgecrest.webp" alt="Một thị trấn nhỏ trải trên đáy thung lũng hoang mạc bằng phẳng, xa xa là các dãy núi trơ trụi." loading="lazy" width="1000" height="667"></div>
+    <figcaption>Một cảnh điển hình của vùng Basin and Range: Ridgecrest, California, ngay phía đông phần nam dãy Sierra Nevada.<span class="credit">Matt Affolter, CC BY-SA (qua sách giáo khoa).</span></figcaption>
+  </figure>
+  <p>Hoang mạc Basin and Range, từ khoảng 35° tới gần 40° B, là một <b>hoang mạc khuất mưa</b>: gió tây từ Thái Bình Dương bốc lên và lạnh đi khi vượt dãy Sierra Nevada và mất hơi ẩm ở sườn tây, nên không khí tương đối khô giáng xuống khắp Nevada và tây Utah.</p>
+  <p>Một hành trình từ Wasatch Front về phía tây nam tới Thái Bình Dương cho thấy các giai đoạn phát triển cảnh quan hoang mạc ở <a href="#fig-evolution">Hình 13.20</a>: núi khối đứt gãy với đỉnh nhọn và nón phóng vật ở cửa hẻm ở Utah; bajada dọc chân núi ở nam Nevada; và những núi sót thấp nhô lên giữa một biển bajada hợp nhất ở hoang mạc Mojave, California.</p>
+
+  <h3 id="s13-4-1">13.4.1 Hoang mạc hóa</h3>
+  <p><button class="term" data-term="hoang mạc hóa">Hoang mạc hóa</button> (sa mạc hóa) là sự biến đổi đất trước đây canh tác được thành hoang mạc. Thực vật và đất giàu <button class="term" data-term="mùn">mùn</button> (Học phần 5) giúp nước thấm xuống (<button class="term" data-term="thấm">thấm</button>) và được giữ lại. Khi một vùng trở nên khô hạn hơn, thực vật và đất của nó giữ nước kém đi, làm vùng đó càng khô hạn hơn: một vòng <button class="term" data-term="phản hồi dương">phản hồi dương</button> tự củng cố, làm hoang mạc mở rộng (<a href="#fig-feedback">Hình 13.29</a>).</p>
+  <figure id="fig-feedback">
+    <div class="frame"><svg viewBox="0 0 760 280" role="img" aria-labelledby="fb-vi-t" style="width:100%;max-width:720px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="fb-vi-t">Vòng gồm bốn ô: khí hậu khô hơn hoặc đất bị khai thác quá mức làm thực vật chết và đất mất mùn, khiến nước thấm vào ít hơn, làm đất khô hạn hơn và lại khô thêm nữa.</title><rect class="flow-step" style="--d:0.0s" x="40" y="30" width="280" height="76" rx="12"/><text x="180.0" y="58.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="600" class="svg-ink">Khí hậu khô hơn,</text><text x="180.0" y="78.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="400" class="svg-ink">hoặc đất bị khai thác quá mức</text><rect class="flow-step" style="--d:1.5s" x="440" y="30" width="280" height="76" rx="12"/><text x="580.0" y="58.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="600" class="svg-ink">Thực vật chết dần và</text><text x="580.0" y="78.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="400" class="svg-ink">đất mất lớp mùn</text><rect class="flow-step" style="--d:3.0s" x="440" y="190" width="280" height="76" rx="12"/><text x="580.0" y="218.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="600" class="svg-ink">Nước thấm và được giữ lại</text><text x="580.0" y="238.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="400" class="svg-ink">trong đất ít hơn</text><rect class="flow-step" style="--d:4.5s" x="40" y="190" width="280" height="76" rx="12"/><text x="180.0" y="218.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="600" class="svg-ink">Đất đai trở nên</text><text x="180.0" y="238.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="400" class="svg-ink">khô hạn hơn</text><line x1="325.0" y1="68.0" x2="424.6" y2="68.0" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/><polygon points="433.0,68.0 422.6,74.0 422.6,62.0" fill="var(--accent)"/><line x1="580.0" y1="111.0" x2="580.0" y2="174.6" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/><polygon points="580.0,183.0 574.0,172.6 586.0,172.6" fill="var(--accent)"/><line x1="435.0" y1="228.0" x2="335.4" y2="228.0" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/><polygon points="327.0,228.0 337.4,222.0 337.4,234.0" fill="var(--accent)"/><line x1="180.0" y1="185.0" x2="180.0" y2="121.4" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/><polygon points="180.0,113.0 186.0,123.4 174.0,123.4" fill="var(--accent)"/><text x="380.0" y="140.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="700" class="svg-ink halo">Vòng phản hồi dương:</text><text x="380.0" y="160.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="400" class="svg-ink halo">mỗi bước làm bước sau mạnh thêm</text></svg></div>
+    <figcaption>Vòng phản hồi dương của hoang mạc hóa. Ô được tô sáng di chuyển quanh vòng để chỉ thứ tự.<span class="credit">Vẽ cho tài liệu này theo nội dung chương.</span></figcaption>
+  </figure>
+  <p>Các hoạt động của con người có thể gây hoang mạc hóa:</p>
+  <ul class="inline">
+    <li>Canh tác không bền vững</li>
+    <li>Chăn thả gia súc quá mức</li>
+    <li>Khai thác quá mức <button class="term" data-term="nước dưới đất">nước dưới đất</button></li>
+    <li>Biến đổi khí hậu toàn cầu (Học phần 15)</li>
+  </ul>
+  <figure id="fig-desertif">
+    <div class="frame"><img class="diagram" src="images/unit13/desertif.webp" alt="Bản đồ thế giới tô màu theo mức độ dễ bị hoang mạc hóa, từ thấp tới rất cao; những vùng đỏ và cam rộng lớn ở miền tây và trung tây Hoa Kỳ, Bắc Phi, Trung Đông, Trung Á và Úc." loading="lazy" width="1200" height="776"></div>
+    <figcaption>Mức độ dễ bị hoang mạc hóa trên thế giới. Vùng đỏ và cam dễ bị tổn thương nhất.<span class="credit">USDA, phạm vi công cộng (qua sách giáo khoa).</span></figcaption>
+  </figure>
+  <p>Hoang mạc hóa do con người là một vấn đề nghiêm trọng trên toàn thế giới. Ở <a href="#fig-desertif">Hình 13.30</a>, hãy để ý các vùng đỏ và cam ở miền tây và trung tây Hoa Kỳ, bao gồm những vùng đất nông nghiệp rộng lớn dùng để trồng trọt và chăn nuôi. <b>Thảm họa Bão Bụi</b> (Dust Bowl) những năm 1930 (Học phần 5) là ví dụ kinh điển về một vùng rất dễ tổn thương bị hoang mạc hóa do con người. Như Dust Bowl cho thấy, tập quán canh tác và bảo tồn có thể mâu thuẫn. Hạn chế hoang mạc hóa mà vẫn để nông dân kiếm sống đòi hỏi giáo dục cộng đồng và cá nhân để tạo sự ủng hộ cho các phương thức nông nghiệp bền vững.</p>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/13-deserts/" target="_blank" rel="noopener">câu hỏi Mục 13.4 trong sách ↗</a></p>
+</section>
+
+<section id="summary">
+  <h2 class="sec">Tóm tắt</h2>
+  <p>Khoảng 30% đất liền của Trái Đất là vùng khô hạn, và vị trí của hoang mạc do vĩ độ, hoàn lưu khí quyển và địa hình quyết định. Không khí giáng xuống trong các vòng hoàn lưu tạo nên các đới khô ở 15°–30° B và N (Sahara, Trung Đông) và các hoang mạc cực; núi tạo nên hoang mạc khuất mưa (miền tây Bắc Mỹ, Atacama, Gobi). Hiệu ứng Coriolis biến dòng khí bề mặt của các vòng thành gió tín phong và gió tây. Hoang mạc phong hóa chậm; nước vẫn gây phần lớn xói mòn, nhưng gió mang bụi ở dạng lơ lửng, cát theo kiểu nhảy cóc và hạt thô theo kiểu bò lăn, làm hạt cát mờ đục và mài nên yardang, đá gió mài. Dòng chảy rời núi đắp nón phóng vật, rồi bajada, cho tới khi chỉ còn núi sót; bồn kín chứa playa. Đụn cát hình thành trong biển cát; hình dạng của chúng tùy vào nguồn cát, gió và thực vật, và bên trong lưu giữ phân lớp xiên. Great Basin là vùng nội lưu, và Basin and Range của nó là vùng địa lũy, địa hào. Quản lý đất kém có thể gây hoang mạc hóa.</p>
+  <div class="callout">
+    <h4>Ôn nhanh</h4>
+    <ul>
+      <li>Hoang mạc = giáng thủy thấp, không phải nóng. Ba nhóm: cận nhiệt đới (15°–30°), khuất mưa, cực.</li>
+      <li>Khuất mưa: không khí bốc lên và lạnh đi ở sườn đón gió (mưa, tuyết), giáng xuống và nóng lên ở sườn khuất gió (hoang mạc).</li>
+      <li>Các vòng: Hadley (0°–30°), Ferrel (30°–60°), cực (60°–90°). Không khí giáng xuống ở 30° (vĩ độ ngựa) và ở cực → hoang mạc.</li>
+      <li>Coriolis: lệch sang phải (B) và trái (N) → gió tín phong về phía xích đạo, gió tây ở vĩ độ trung bình.</li>
+      <li>Atacama = vĩ độ + khuất mưa của dãy Andes + hải lưu lạnh Humboldt; nơi khô nhất ngoài vùng cực.</li>
+      <li>Phong hóa chậm; vecni hoang mạc chỉ có ở hoang mạc. Lũ quét gây phần lớn xói mòn.</li>
+      <li>Gió: lơ lửng (bụi → haboob, hoàng thổ), nhảy cóc (cát, hạt mờ đục, ≤ ~1 m), bò lăn (lăn).</li>
+      <li>Cát mài: yardang (đá gốc), đá gió mài (đá rời); gió khoét hố thổi mòn.</li>
+      <li>Nón phóng vật → bajada → núi sót; playa ở bồn kín; dòng chảy tạm thời trong arroyo.</li>
+      <li>Đụn cát: cát lên sườn đón gió, sườn trượt ở góc nghỉ tự nhiên; phân lớp xiên = sườn trượt bị vùi. Barchan, dọc, parabol, hình sao.</li>
+      <li>Great Basin: nội lưu. Basin and Range: địa lũy và địa hào; vỏ bị kéo dãn ×2 trong ~30 triệu năm; hồ Bonneville → Hồ Muối Lớn.</li>
+      <li>Hoang mạc hóa: phản hồi dương, trầm trọng thêm do canh tác quá mức, chăn thả quá mức, khai thác quá mức nước dưới đất, biến đổi khí hậu.</li>
+    </ul>
+  </div>
+  <p class="quiz">Tự kiểm tra: <a href="https://slcc.pressbooks.pub/introgeology/chapter/13-deserts/" target="_blank" rel="noopener">câu hỏi ôn tập Chương 13 trong sách ↗</a></p>
+</section>
+
+<section id="resources">
+  <h2 class="sec">Tài liệu tham khảo</h2>
+  <div class="res">
+    <a href="https://slcc.pressbooks.pub/introgeology/chapter/13-deserts/" target="_blank" rel="noopener"><b>Chương 13 (sách giáo khoa) ↗</b><span>Toàn bộ chương, kèm câu hỏi từng mục và video (tiếng Anh).</span></a>
+    <a href="https://slcc.pressbooks.pub/introgeology/back-matter/glossary-test/" target="_blank" rel="noopener"><b>Bảng thuật ngữ của sách ↗</b><span>Định nghĩa mọi thuật ngữ in đậm trong sách (tiếng Anh).</span></a>
+    <a href="https://www.youtube.com/watch?v=iMu4dShS74w" target="_blank" rel="noopener"><b>Vùng khuất mưa (video) ↗</b><span>Video của chương về cách núi tạo nên hoang mạc (tiếng Anh).</span></a>
+    <a href="https://www.youtube.com/watch?v=HIyBpi7B-dE" target="_blank" rel="noopener"><b>Giải thích hiệu ứng Coriolis (video) ↗</b><span>Video của chương về sự lệch hướng do Trái Đất quay (tiếng Anh).</span></a>
+    <a href="https://pubs.usgs.gov/gip/deserts/" target="_blank" rel="noopener"><b>Deserts: Geology and Resources (USGS) ↗</b><span>Tài liệu của USGS mà chương trích dẫn (Walker, 1996).</span></a>
+    <a href="https://www.noaa.gov/jetstream/global/global-atmospheric-circulations" target="_blank" rel="noopener"><b>Hoàn lưu khí quyển toàn cầu (NOAA JetStream) ↗</b><span>Ba vòng hoàn lưu và các đới gió (tiếng Anh).</span></a>
+    <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0105948" target="_blank" rel="noopener"><b>Đá trượt ở Racetrack Playa (PLOS ONE, 2014) ↗</b><span>Lần đầu quan sát được đá đang di chuyển, có dữ liệu chụp liên tục.</span></a>
+    <a href="https://www.nps.gov/whsa/index.htm" target="_blank" rel="noopener"><b>Vườn quốc gia White Sands (NPS) ↗</b><span>Cánh đồng đụn cát thạch cao trong ảnh mở đầu của chương.</span></a>
+  </div>
+</section>
+
+<section id="factcheck">
+  <h2 class="sec">Ghi chú kiểm chứng</h2>
+  <p class="small">Mọi nội dung trong tài liệu đều lấy từ Chương 13. Các ghi chú dưới đây đánh dấu chỗ chương đơn giản hóa, có sai sót, hoặc khác với nguồn đáng tin cậy khác. Nơi chương sai, phần chính của tài liệu dùng nội dung đã sửa và lời văn của chương được ghi lại ở đây.</p>
+  <div class="tablewrap">
+    <table style="min-width:600px">
+      <caption>Ghi chú kiểm chứng cho Học phần 13.</caption>
+      <thead><tr><th>Chương viết</th><th>Kiểm chứng</th></tr></thead>
+      <tbody>
+        <tr><td>Atacama là "hoang mạc khô nhất Trái Đất" (phần tóm tắt), nhưng hoang mạc cực lại là "những hoang mạc khô nhất Trái Đất" (13.1.2), và phần mở đầu gọi Atacama là hoang mạc "khô nhất, ấm".</td><td>Chương tự mâu thuẫn. Atacama là hoang mạc khô nhất <b>ngoài vùng cực</b>; một số nơi ở châu Nam Cực, như các Thung lũng Khô McMurdo, còn khô hơn (Wikipedia, "Atacama Desert"). Tài liệu này viết "nơi khô nhất ngoài vùng cực".</td></tr>
+        <tr><td>Đá trượt được đẩy đi "bởi ma sát từ gió mạnh".</td><td>Đã sửa trong tài liệu. Những quan sát trực tiếp đầu tiên (Norris và cộng sự, 2014, PLOS ONE, được chương trích dẫn) cho thấy đá bị đẩy bởi những tấm băng mỏng nổi trên nước do gió <b>nhẹ</b>, khoảng 3–5 m/s.</td></tr>
+        <tr><td>Cơ chế hình thành vecni hoang mạc "vẫn chưa rõ".</td><td>Vẫn còn tranh luận, nhưng một nghiên cứu năm 2021 cho rằng vi khuẩn lam tích lũy mangan cung cấp mangan (Lingappa và cộng sự, 2021, <i>PNAS</i>, "An ecophysiological explanation for manganese enrichment in rock varnish").</td></tr>
+        <tr><td>Yardang là "khối đá gốc lộ ra có hình dạng do cát mài", minh họa bằng một tảng đá đứng trên chân bị thắt hẹp.</td><td>Yardang điển hình là những sống đá thuôn dài song song với hướng gió thịnh hành (Wikipedia, "Yardang"). Tảng đá trong ảnh nên gọi là đá chân thắt (đá hình nấm), bị khoét ở nơi cát nhảy cóc dày đặc nhất sát mặt đất. Cả hai đều do cùng một quá trình cát mài.</td></tr>
+        <tr><td>Gió tách cát khỏi các hạt "cỡ bụi (≤70 µm)".</td><td>Gần đúng. Theo thang Wentworth (Học phần 5), ranh giới cát–bột là 1/16 mm = <b>62,5 µm</b>.</td></tr>
+        <tr><td>"Di tích quốc gia White Sands".</td><td>Đã đổi tên: nơi này trở thành <b>Vườn quốc gia White Sands</b> từ tháng 12 năm 2019 (Cục Vườn quốc gia Hoa Kỳ).</td></tr>
+        <tr><td>Biển cát hình thành "xa về phía bắc tới 60° B" ở Athabasca Sand Dunes, Saskatchewan.</td><td>Các đụn cát Athabasca nằm ngay phía nam 60° B, khoảng 59° B.</td></tr>
+        <tr><td>Khoảng 30% "bề mặt Trái Đất" là khô hạn (phần tóm tắt).</td><td>Phần mở đầu viết 30% bề mặt <b>trên cạn</b> (đất liền), đó là cách hiểu đúng; hoang mạc không phủ 30% toàn bộ hành tinh, vốn phần lớn là đại dương.</td></tr>
+        <tr><td>Yếu tố Coriolis thứ hai "tạo ra độ lệch thực về phía xích đạo".</td><td>Đúng với khối di chuyển về phía <b>đông</b>; khối di chuyển về phía tây bị lệch về phía cực. Cả hai trường hợp đều lệch sang phải ở Bắc bán cầu. Phần chính bổ sung trường hợp hướng tây.</td></tr>
+        <tr><td>Hiệu ứng Coriolis tạo ra "các dòng tia cực ở trên cao".</td><td>Đơn giản hóa. Dòng tia chủ yếu do chênh lệch nhiệt độ giữa các khối khí; hiệu ứng Coriolis làm dòng đó quay về phía đông (NOAA JetStream, "The jet stream").</td></tr>
+        <tr><td>Không khí bị hải lưu Humboldt làm lạnh là "siêu lạnh" (super-cooled).</td><td>"Siêu lạnh" thường chỉ nước lỏng dưới 0 °C. Chương muốn nói không khí bị làm lạnh mạnh nên giữ ít hơi ẩm; tài liệu này viết "bị làm lạnh".</td></tr>
+        <tr><td>Núi sót là "phần sót của núi bị chôn vùi".</td><td>Núi sót là phần vẫn còn nhô <b>lên trên</b> lớp mảnh vụn chôn vùi phần còn lại của ngọn núi; tài liệu diễn đạt theo cách đó.</td></tr>
+        <tr><td>Chương không nêu giá trị góc nghỉ tự nhiên.</td><td>Khoảng 34° với cát khô (Wikipedia, "Angle of repose"); hình đụn cát dùng giá trị này. Định nghĩa trong bảng thuật ngữ của sách ("lực cắt và lực pháp tuyến bằng nhau") lặp lại sai sót đã ghi ở Học phần 10; tài liệu dùng "góc dốc nhất mà vật liệu rời còn ổn định".</td></tr>
+        <tr><td>Lỗi chính tả: "circlustion", "Forces ting", "not outlet", "imbedded".</td><td>Đọc là: circulation; forces acting; no outlet; embedded.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="credits">
+  <h2 class="sec">Nguồn &amp; trích dẫn</h2>
+  <p class="small">Nội dung tóm tắt từ <a href="https://slcc.pressbooks.pub/introgeology/chapter/13-deserts/" target="_blank" rel="noopener"><i>An Introduction to Geology</i>, Chương 13</a>, © 2017 Chris Johnson, Matthew D. Affolter, Paul Inkenbrandt và Cam Mosher, giấy phép <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. Tác giả và giấy phép của từng ảnh ghi ngay dưới ảnh.</p>
+  <ul class="small">
+    <li>Vẽ cho tài liệu này theo mô tả của chương: vùng khuất mưa (theo hình của Bariot), các vòng hoàn lưu (theo hình hoàn lưu toàn cầu của NASA), sự lệch hướng gió do Coriolis, sự vận chuyển của gió (theo hoạt hình nhảy cóc của NASA), cấu tạo đụn cát (theo hoạt hình phân lớp xiên của USGS), các kiểu đụn cát, các giai đoạn cảnh quan hoang mạc, địa lũy và địa hào, và vòng hoang mạc hóa.</li>
+    <li>Nguồn bên ngoài được ghi ở nơi sử dụng: NOAA JetStream (hoàn lưu toàn cầu), Norris và cộng sự (2014, PLOS ONE: đá trượt), Wikipedia ("Angle of repose", "Yardang"), Cục Vườn quốc gia Hoa Kỳ (White Sands), và các nguồn khác ghi trong phần kiểm chứng.</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<button class="fab" id="notesBtn" type="button" aria-controls="notes" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Thuật ngữ
+</button>
+<button class="fab hide" id="toTop" type="button" aria-label="Lên đầu trang">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<aside class="notes" id="notes" hidden aria-label="Thuật ngữ">
+  <header>
+    <div><h2>Thuật ngữ · Chương 13</h2><button class="close" id="notesClose" type="button" aria-label="Đóng bảng thuật ngữ">×</button></div>
+    <input id="termSearch" type="search" placeholder="Tìm thuật ngữ và định nghĩa" autocomplete="off" aria-label="Tìm thuật ngữ và định nghĩa">
+    <div class="count" id="termCount"></div>
+  </header>
+  <dl id="termList"></dl>
+</aside>
+</div>
+
+<script type="application/json" id="terms">
+[
+ [
+  "trên cạn",
+  "outcomes",
+  "Thuộc về đất liền; môi trường trên cạn là môi trường trên bề mặt lục địa của Trái Đất. (EN: terrestrial)"
+ ],
+ [
+  "hoang mạc",
+  "outcomes",
+  "Vùng có lượng giáng thủy thấp (sa mạc). Hoang mạc chiếm khoảng 30% đất liền; được định nghĩa bởi sự khô hạn, không phải nhiệt độ. (EN: desert)"
+ ],
+ [
+  "giáng thủy",
+  "outcomes",
+  "Nước rơi từ khí quyển xuống dưới dạng mưa, tuyết, mưa tuyết hoặc mưa đá. (EN: precipitation)"
+ ],
+ [
+  "khí quyển",
+  "outcomes",
+  "Lớp khí bao quanh Trái Đất, chủ yếu là nitơ và oxy. (EN: atmosphere)"
+ ],
+ [
+  "hoang mạc khuất mưa",
+  "outcomes",
+  "Hoang mạc ở sườn khuất gió của dãy núi, nơi không khí đã mất hơi ẩm khi vượt núi giáng xuống (Great Basin, Atacama, Gobi). Thuật ngữ chưa thấy trong nguồn chính thức. (EN: rain shadow desert)"
+ ],
+ [
+  "hoang mạc Atacama",
+  "outcomes",
+  "Hoang mạc ven biển bắc Chile; nơi khô nhất Trái Đất ngoài vùng cực, do vĩ độ, vùng khuất mưa của dãy Andes và hải lưu lạnh Humboldt. (EN: Atacama Desert)"
+ ],
+ [
+  "hoang mạc cực",
+  "outcomes",
+  "Hoang mạc do không khí lạnh, khô giáng xuống ở hai cực, như châu Nam Cực và phần lớn Bắc Cực. (EN: polar desert)"
+ ],
+ [
+  "vùng khuất mưa",
+  "outcomes",
+  "Vùng khô ở sườn khuất gió của núi (bóng mưa): không khí bốc lên qua núi lạnh đi và trút hơi ẩm ở sườn đón gió, rồi giáng xuống khi đã khô. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: rain shadow)"
+ ],
+ [
+  "vĩ độ",
+  "s13-1",
+  "Khoảng cách góc về phía bắc hoặc nam của xích đạo: 0° ở xích đạo, 90° B và 90° N ở hai cực. (EN: latitude)"
+ ],
+ [
+  "góc tới",
+  "s13-1",
+  "Góc, đo từ phương vuông góc với mặt đất, mà ánh nắng chiếu xuống bề mặt; bằng 0° khi Mặt Trời ở thiên đỉnh. (EN: angle of incidence)"
+ ],
+ [
+  "vòng hoàn lưu Hadley",
+  "s13-1",
+  "Vòng hoàn lưu trên vùng nhiệt đới: không khí bốc lên ở xích đạo, chảy về phía cực ở trên cao và giáng xuống gần vĩ độ 30°. (EN: Hadley cell)"
+ ],
+ [
+  "vòng hoàn lưu Ferrel",
+  "s13-1",
+  "Vòng hoàn lưu vĩ độ trung bình, khoảng 30° đến 60°; không khí bề mặt chảy về phía cực thành gió tây. (EN: Ferrel cell)"
+ ],
+ [
+  "vòng hoàn lưu cực",
+  "s13-1",
+  "Vòng hoàn lưu từ khoảng 60° tới cực: không khí bốc lên gần 60°, chảy về phía cực và giáng xuống ở cực, tạo nên hoang mạc cực. (EN: polar cell)"
+ ],
+ [
+  "vĩ độ ngựa",
+  "s13-1",
+  "Các đới áp cao, không khí khô giáng xuống, ở khoảng 30° B và N, nơi hình thành hoang mạc cận nhiệt đới. (EN: horse latitudes)"
+ ],
+ [
+  "gió tín phong",
+  "s13-1",
+  "Gió thịnh hành (gió mậu dịch) thổi về phía xích đạo ở vùng nhiệt đới, bị hiệu ứng Coriolis làm lệch về phía tây: từ đông bắc ở Bắc bán cầu, từ đông nam ở Nam bán cầu. (EN: trade winds)"
+ ],
+ [
+  "gió tây ôn đới",
+  "s13-1",
+  "Gió thịnh hành ở khoảng vĩ độ 30° đến 60°, thổi từ tây sang đông. (EN: westerlies)"
+ ],
+ [
+  "hoang mạc Great Basin",
+  "s13-1",
+  "Hoang mạc ở Nevada, tây Utah và các bang lân cận; một phần do không khí giáng xuống nhưng chủ yếu là hoang mạc khuất mưa sau dãy Sierra Nevada. (EN: Great Basin Desert)"
+ ],
+ [
+  "hiệu ứng Coriolis",
+  "s13-1",
+  "Sự lệch hướng biểu kiến của không khí và nước chuyển động trên Trái Đất đang quay: sang phải ở Bắc bán cầu và sang trái ở Nam bán cầu. (EN: Coriolis effect)"
+ ],
+ [
+  "vòng hải lưu",
+  "s13-1",
+  "Dòng hải lưu vòng tròn lớn do các hệ thống gió toàn cầu tạo ra; theo chiều kim đồng hồ ở Bắc bán cầu, ngược chiều ở Nam bán cầu. (EN: gyre)"
+ ],
+ [
+  "phong hóa",
+  "s13-2",
+  "Sự phá vỡ đá thành mảnh nhỏ hơn bằng cách cơ học hoặc hóa học; chậm hơn ở hoang mạc vì khan hiếm nước. (EN: weathering)"
+ ],
+ [
+  "phong hóa hóa học",
+  "s13-2",
+  "Sự phân hủy khoáng vật bằng các phản ứng hóa học như hòa tan và oxy hóa. (EN: chemical weathering)"
+ ],
+ [
+  "dòng chảy mặt",
+  "s13-2",
+  "Nước chảy trên bề mặt đất. (EN: runoff)"
+ ],
+ [
+  "nêm băng",
+  "s13-2",
+  "Phong hóa cơ học trong đó nước đóng băng và nở ra trong khe nứt của đá, nêm cho khe nứt mở rộng. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: ice wedging)"
+ ],
+ [
+  "lũ quét",
+  "s13-3",
+  "Trận lũ đột ngột, lưu lượng lớn trong một lòng dẫn tạm thời sau một cơn bão dữ dội, thường do mưa ở xa nhiều dặm; tác nhân lắng đọng chính ở hoang mạc và mối nguy cho người đi bộ đường dài. (EN: flash flood)"
+ ],
+ [
+  "vecni hoang mạc",
+  "s13-2",
+  "Lớp phủ mỏng màu nâu sẫm gồm khoáng vật sét và oxit sắt, mangan trên mặt đá ổn định ở vùng khô hạn; còn gọi là lớp gỉ đá. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: desert varnish)"
+ ],
+ [
+  "khoáng vật",
+  "s13-2",
+  "Chất rắn tự nhiên, thường vô cơ, có thành phần hóa học xác định và cấu trúc tinh thể (Học phần 3). (EN: mineral)"
+ ],
+ [
+  "oxit",
+  "s13-2",
+  "Khoáng vật trong đó kim loại liên kết với oxy, như các oxit sắt và mangan trong vecni hoang mạc. (EN: oxide)"
+ ],
+ [
+  "xói mòn",
+  "s13-2",
+  "Sự lấy đi và vận chuyển vật liệu đã phong hóa bởi nước, gió, băng hoặc trọng lực. (EN: erosion)"
+ ],
+ [
+  "bão bụi haboob",
+  "s13-2",
+  "Cơn bão bụi lớn mang trầm tích lơ lửng băng qua hoang mạc. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: haboob)"
+ ],
+ [
+  "hoàng thổ",
+  "s13-2",
+  "Trầm tích bột và bụi do gió mang tới (loess); ở miền Trung Tây Hoa Kỳ phần lớn là bột đá băng hà, một phần thổi tới từ các hoang mạc miền Tây. (EN: loess)"
+ ],
+ [
+  "băng phủ lục địa",
+  "s13-2",
+  "Sông băng dày phủ một phần lớn lục địa, như trong các thời kỳ băng hà. (EN: ice sheet)"
+ ],
+ [
+  "thời kỳ băng hà",
+  "s13-2",
+  "Thời kỳ nhiệt độ toàn cầu lạnh hơn, khi các băng phủ lục địa phát triển. (EN: ice age)"
+ ],
+ [
+  "vật liệu di đáy",
+  "s13-2",
+  "Phần thô hơn của vật liệu mà chất lưu mang theo, di chuyển dọc theo hoặc sát đáy thay vì bị nâng lên trong dòng. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: bedload)"
+ ],
+ [
+  "vật liệu lơ lửng",
+  "s13-2",
+  "Trầm tích mịn (bột, bụi) được giữ lơ lửng trong chất lưu chuyển động; trong gió, bị mang cao và xa như trong bão bụi haboob. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: suspended load)"
+ ],
+ [
+  "nhảy cóc",
+  "s13-2",
+  "Sự vận chuyển cát bằng những bước nảy ngắn (saltation): hạt bị nâng lên, mang đi một đoạn ngắn rồi rơi xuống, bắn tung các hạt khác; một đới cao tới khoảng 1 m trên mặt đất. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: saltation)"
+ ],
+ [
+  "bò lăn",
+  "s13-2",
+  "Sự di chuyển chậm của các hạt thô hơn trượt hoặc lăn trên bề mặt khi gió đủ mạnh. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: creep)"
+ ],
+ [
+  "độ chọn lọc",
+  "s13-2",
+  "Mức độ đồng đều về cỡ hạt của trầm tích; gió là tác nhân chọn lọc tốt, tách cát khỏi bụi. (EN: sorting)"
+ ],
+ [
+  "đá trượt",
+  "s13-2",
+  "Những tảng đá di chuyển trên playa bằng phẳng, để lại vệt, như ở Racetrack Playa, Death Valley; được gió đẩy khi bị giữ trong những tấm băng mỏng. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: sliding stones / sailing stones)"
+ ],
+ [
+  "yardang",
+  "s13-2",
+  "Khối đá gốc lộ ra bị cát nhảy cóc mài thành hình; yardang điển hình là những sống đá thuôn dài theo hướng gió. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: yardang)"
+ ],
+ [
+  "đá gió mài",
+  "s13-2",
+  "Tảng đá rời trên mặt hoang mạc có các mặt bị cát do gió mang mài và đánh bóng; gió đổi hướng tạo nhiều mặt. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: ventifact)"
+ ],
+ [
+  "hố thổi mòn",
+  "s13-2",
+  "Hố lòng chảo nơi gió đã thổi đi cát và bột không được thực vật giữ lại. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: blowout)"
+ ],
+ [
+  "nón phóng vật",
+  "s13-3",
+  "Khối trầm tích hình quạt nơi dòng chảy ra khỏi hẻm núi, tỏa rộng, chậm lại và thả vật liệu thô vào các phân lưu tỏa tia. (EN: alluvial fan)"
+ ],
+ [
+  "châu thổ",
+  "s13-3",
+  "Khối trầm tích được đắp nơi sông đổ vào một vùng nước, chảy chậm lại và chia thành các phân lưu. (EN: delta)"
+ ],
+ [
+  "bajada",
+  "s13-3",
+  "Dải bồi tích dọc chân núi, hình thành khi các nón phóng vật cạnh nhau nối liền. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: bajada)"
+ ],
+ [
+  "bồi tích",
+  "s13-3",
+  "Trầm tích rời do nước chảy lắng đọng. (EN: alluvium)"
+ ],
+ [
+  "núi sót",
+  "s13-3",
+  "Inselberg, \"núi đảo\": phần sót lại của một ngọn núi bị bào mòn, nhô lên khỏi lớp trầm tích chôn vùi nó; Wilhelm Bornhardt mô tả đầu tiên. (EN: inselberg)"
+ ],
+ [
+  "playa",
+  "s13-3",
+  "Lòng hồ khô bằng phẳng ở đáy một bồn hoang mạc kín, nơi nước chỉ mất đi do bốc hơi. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: playa)"
+ ],
+ [
+  "tạm thời",
+  "s13-3",
+  "Chỉ dòng chảy hoặc hồ chỉ có nước sau mưa; còn gọi là gián đoạn. (EN: ephemeral)"
+ ],
+ [
+  "dòng chảy tràn mặt",
+  "s13-3",
+  "Nước lũ chảy thành một lớp mỏng, rộng trên mặt đất thay vì trong lòng dẫn. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: sheetwash / sheet flow)"
+ ],
+ [
+  "arroyo",
+  "s13-3",
+  "Lòng khe thường khô ở vùng khô hạn, còn gọi là lòng suối khô. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: arroyo / dry wash)"
+ ],
+ [
+  "lắng đọng",
+  "s13-3",
+  "Sự tích tụ trầm tích, thường nơi nước hoặc gió vận chuyển chậm lại. (EN: deposition)"
+ ],
+ [
+  "biển cát",
+  "s13-3-1",
+  "Một vùng cát rộng lớn (erg), thường bị gió thổi thành đụn, như Rub' al Khali (Khu vực Trống rỗng) ở Ả Rập. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: erg)"
+ ],
+ [
+  "phong thành",
+  "s13-3-1",
+  "Do gió tạo thành hoặc vận chuyển. (EN: aeolian)"
+ ],
+ [
+  "đụn cát",
+  "s13-3-1",
+  "Gò hoặc sống cát do gió (hoặc nước) đắp; di chuyển khi cát leo lên sườn đón gió và đổ xuống sườn trượt. (EN: dune)"
+ ],
+ [
+  "phân lớp xiên",
+  "s13-3-1",
+  "Các lớp nghiêng bên trong một lớp lớn hơn; trong đụn cát, đó là những sườn trượt cũ bị vùi lấp khi đụn di chuyển. (EN: cross bedding)"
+ ],
+ [
+  "góc nghỉ tự nhiên",
+  "s13-3-1",
+  "Góc dốc nhất mà vật liệu rời còn ổn định; khoảng 34° với cát khô, là góc của sườn trượt đụn cát. (EN: angle of repose)"
+ ],
+ [
+  "Đại Trung sinh",
+  "s13-3-1",
+  "Đại giữa của Liên đại Hiển sinh, từ 252 đến 66 triệu năm trước. (EN: Mesozoic)"
+ ],
+ [
+  "cát kết",
+  "s13-3-1",
+  "Đá trầm tích chủ yếu gồm hạt cỡ cát (sa thạch). (EN: sandstone)"
+ ],
+ [
+  "kỷ Jura",
+  "s13-3-1",
+  "Kỷ giữa của Đại Trung sinh, từ 201 đến 145 triệu năm trước; tuổi của sa thạch Navajo và Entrada. (EN: Jurassic)"
+ ],
+ [
+  "Tiền Cambri",
+  "s13-3-1",
+  "Toàn bộ thời gian địa chất trước Liên đại Hiển sinh (trước 541 triệu năm). (EN: Precambrian)"
+ ],
+ [
+  "đụn cát barchan",
+  "s13-3-1",
+  "Đụn cát hình lưỡi liềm có hai sừng chỉ về phía cuối gió; hình thành nơi ít cát và gió thổi từ một hướng khá ổn định. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: barchan dune)"
+ ],
+ [
+  "đụn cát dọc",
+  "s13-3-1",
+  "Đụn cát dạng sống dài (tuyến tính) chạy theo hướng gió chính; hình thành khi nhiều cát hơn và gió đổi chiều qua lại. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: longitudinal / linear dune)"
+ ],
+ [
+  "đụn cát parabol",
+  "s13-3-1",
+  "Đụn cát hình chữ U có hai cánh được thực vật giữ lại và chỉ về phía đầu gió, bao quanh một hố thổi mòn. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: parabolic dune)"
+ ],
+ [
+  "đụn cát hình sao",
+  "s13-3-1",
+  "Đụn cát có các cánh tỏa ra từ một đỉnh ở giữa, do gió từ nhiều hướng tạo nên. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: star dune)"
+ ],
+ [
+  "nội lưu",
+  "s13-4",
+  "Hệ thống thoát nước không có lối ra đại dương; nước ở lại trong bồn hoặc bốc hơi, như ở Great Basin. (EN: interior drainage)"
+ ],
+ [
+  "Basin and Range",
+  "s13-4",
+  "Vùng Bồn và Dãy, từ Wasatch Front ở Utah tới dãy Sierra Nevada, gồm các dãy núi khối đứt gãy (địa lũy) và bồn trũng (địa hào) do vỏ Trái Đất bị tách giãn. (EN: Basin and Range)"
+ ],
+ [
+  "địa hào",
+  "s13-4",
+  "Khối vỏ sụt xuống giữa các đứt gãy thuận; một bồn trũng ở vùng Basin and Range. (EN: graben)"
+ ],
+ [
+  "địa lũy",
+  "s13-4",
+  "Khối vỏ nâng lên giữa các đứt gãy thuận; một dãy núi ở vùng Basin and Range. (EN: horst)"
+ ],
+ [
+  "đứt gãy thuận",
+  "s13-4",
+  "Đứt gãy trong đó khối phía trên mặt đứt gãy (cánh treo) dịch xuống so với khối phía dưới; hình thành do tách giãn. (EN: normal fault)"
+ ],
+ [
+  "tách giãn",
+  "s13-4",
+  "Sự kéo giãn vỏ Trái Đất; vùng Basin and Range đã giãn rộng gấp khoảng hai lần trong khoảng 30 triệu năm. (EN: extension)"
+ ],
+ [
+  "thạch quyển",
+  "s13-4",
+  "Lớp ngoài cứng của Trái Đất: vỏ cùng phần trên cùng của manti. (EN: lithosphere)"
+ ],
+ [
+  "hồ mưa",
+  "s13-4",
+  "Hồ hình thành trong khí hậu ẩm ướt hơn (hồ pluvial), như hồ Bonneville trong thời kỳ băng hà gần nhất. Thuật ngữ chưa thấy trong nguồn chính thức. (EN: pluvial lake)"
+ ],
+ [
+  "hoang mạc hóa",
+  "s13-4-1",
+  "Sự biến đổi đất trước đây canh tác được thành hoang mạc (sa mạc hóa), qua vòng phản hồi dương của khô hạn, mất thực vật và mất đất; trầm trọng thêm do hoạt động của con người. (EN: desertification)"
+ ],
+ [
+  "mùn",
+  "s13-4-1",
+  "Chất hữu cơ đã phân hủy màu sẫm trong đất, giúp đất hút và giữ nước. (EN: humus)"
+ ],
+ [
+  "thấm",
+  "s13-4-1",
+  "Nước ngấm xuống đất. (EN: infiltration)"
+ ],
+ [
+  "phản hồi dương",
+  "s13-4-1",
+  "Vòng tự củng cố trong đó một thay đổi gây ra các tác động làm thay đổi đó tăng lên. (EN: positive feedback)"
+ ],
+ [
+  "nước dưới đất",
+  "s13-4-1",
+  "Nước chứa dưới mặt đất trong lỗ rỗng và khe nứt của đất đá (nước ngầm; Học phần 11). (EN: groundwater)"
+ ]
+]
+</script>
+<script src="assets/guide.js"></script>
+</body>
+</html>

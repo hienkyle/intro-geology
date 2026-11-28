@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deserts</title>
+<meta name="description" content="Unit 13 study guide for An Introduction to Geology, Chapter 13: Deserts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/guide.css">
+<style>
+/* Unit 13 palette: the desert. Dune gold with a desert-sky teal and a varnish-red accent; header bands run from pale sand through dune gold and coral-pink sandstone to desert-varnish brown under a night sky. */
+:root{
+  --fig-prefix:"Figure 13."; --tbl-prefix:"Table 13.";
+  --bg:#faf6ee; --surface:#ffffff; --surface-2:#f1e8d6; --fg:#2a1f14; --muted:#6e5d4a; --line:#e3d5bd;
+  --accent:#946100; --accent-soft:#f6e6c4; --ochre:#2f7a8c; --ochre-soft:#dcedf0; --rust:#a63d2a;
+  --s1:#f3dfae; --s2:#e0ae55; --s3:#d1825c; --s4:#7a4326; --s5:#2b1b10;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17120c; --surface:#201911; --surface-2:#2a2117; --fg:#f1e8da; --muted:#bba98f; --line:#3d3022;
+  --accent:#e5b04f; --accent-soft:#3d2e12; --ochre:#6cc0d2; --ochre-soft:#17343b; --rust:#f0866d;
+  --s1:#7a6438; --s2:#8a6524; --s3:#7d4a33; --s4:#4a2816; --s5:#0d0805; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17120c; --surface:#201911; --surface-2:#2a2117; --fg:#f1e8da; --muted:#bba98f; --line:#3d3022;
+  --accent:#e5b04f; --accent-soft:#3d2e12; --ochre:#6cc0d2; --ochre-soft:#17343b; --rust:#f0866d;
+  --s1:#7a6438; --s2:#8a6524; --s3:#7d4a33; --s4:#4a2816; --s5:#0d0805; color-scheme:dark}
+
+</style>
+</head>
+<body>
+<div lang="en">
+<header class="hero" id="top">
+  <div class="strata" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Unit 13 · Chapter 13 · An Introduction to Geology</div>
+      <h1>Deserts</h1>
+      <p>Why deserts lie where they do, from sinking air and rain shadows to the Coriolis effect; how wind and rare floods wear desert rock; the fans, playas, and dunes they build; and the fault-block basins of North America's Great Basin.</p>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <nav class="toc" aria-label="Contents">
+    <div class="navbar" role="group" aria-label="Page tools">
+      <a class="btn tbtn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>All units</span></a>
+      <a class="btn tbtn lbtn" href="unit13-vi.html" lang="vi" hreflang="vi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Tiếng Việt</span></a>
+      <button class="btn tbtn" id="themeBtn" type="button" aria-label="Toggle light or dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="themeLabel">Dark mode</span>
+      </button>
+    </div>
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#outcomes">Learning outcomes</a></li>
+      <li><a href="#s13-1"><span class="num">13.1</span>The origin of deserts</a>
+        <ol>
+          <li><a href="#s13-1-1"><span class="num">13.1.1</span>Atmospheric circulation</a></li>
+          <li><a href="#s13-1-2"><span class="num">13.1.2</span>Coriolis effect</a></li>
+        </ol>
+      </li>
+      <li><a href="#s13-2"><span class="num">13.2</span>Desert weathering and erosion</a>
+        <ol>
+          <li><a href="#s13-2-wind">Wind erosion</a></li>
+          <li><a href="#s13-2-stones">Sliding stones</a></li>
+          <li><a href="#s13-2-abrasion">Sandblasted landforms</a></li>
+        </ol>
+      </li>
+      <li><a href="#s13-3"><span class="num">13.3</span>Desert landforms</a>
+        <ol>
+          <li><a href="#s13-3-water">Ephemeral streams</a></li>
+          <li><a href="#s13-3-1"><span class="num">13.3.1</span>Sand</a></li>
+          <li><a href="#s13-3-dunes">Dune types</a></li>
+        </ol>
+      </li>
+      <li><a href="#s13-4"><span class="num">13.4</span>The Great Basin and the Basin and Range</a>
+        <ol>
+          <li><a href="#s13-4-1"><span class="num">13.4.1</span>Desertification</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#factcheck">Fact-check notes</a></li>
+      <li><a href="#credits">Credits</a></li>
+
+    </ol>
+  </nav>
+
+<main>
+<section id="outcomes">
+  <h2 class="sec">Learning outcomes</h2>
+  <p class="lead">By the end of Chapter 13 you should be able to do each of these. The tag shows where it is covered.</p>
+  <ul class="outcomes">
+    <li><a class="tag" href="#outcomes">13</a><span>Explain the defining characteristic of a desert and distinguish between the three broad categories of deserts.</span></li>
+    <li><a class="tag" href="#s13-1">13.1</a><span>Explain how geographic features, latitude, atmospheric circulation, and the Coriolis effect influence where deserts are located.</span></li>
+    <li><a class="tag" href="#s13-2">13.2</a><span>List the primary desert weathering and erosion processes.</span></li>
+    <li><a class="tag" href="#s13-3">13.3</a><span>Identify desert landforms.</span></li>
+    <li><a class="tag" href="#s13-3">13.3</a><span>Explain how desert landforms are formed by erosion and deposition.</span></li>
+    <li><a class="tag" href="#s13-3-1">13.3.1</a><span>Describe the main types of sand dunes and the conditions that form them.</span></li>
+    <li><a class="tag" href="#s13-4">13.4</a><span>Identify the main features of the Basin and Range desert (United States).</span></li>
+  </ul>
+  <div class="callout">
+    <h4>How to use this guide</h4>
+    <p>Underlined words are key terms. Click one, or open <b>Key terms</b> at the bottom right, to read and search every definition from this chapter. The chapter moves from the sky to the ground: why the air is dry where deserts are (13.1), how wind and rare water wear desert rock down (13.2), the landforms and dunes they build (13.3), and North America's own desert of fault-block basins (13.4).</p>
+  </div>
+  <div class="spheres">
+    <div class="sphere"><b><span class="dot" style="background:var(--ochre)"></span>Dry air</b>Sinking air and rain shadows keep deserts dry.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--accent)"></span>Wind</b>Moves sand and dust, sandblasts rock, builds dunes.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--rust)"></span>Rare water</b>Flash floods still do most of the erosion.</div>
+    <div class="sphere"><b><span class="dot" style="background:var(--s4)"></span>Basins</b>Fans, bajadas, and playas fill closed basins.</div>
+  </div>
+  <figure id="fig-erg">
+    <div class="frame"><img src="images/unit13/erg.webp" alt="Rippled sand dunes stretching to the horizon under a pale sky in the Sahara Desert." loading="lazy" width="800" height="600"></div>
+    <figcaption>The Sahara Desert near Jalu, Libya: a sand sea, or erg. Sand covers only part of the world's deserts; what makes a desert is a lack of water.<span class="credit">Wsx, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <p>About 30% of Earth's land surface (<button class="term" data-term="terrestrial">terrestrial</button> surface) is <button class="term" data-term="desert">desert</button>. Deserts are defined by <b>low <button class="term" data-term="precipitation">precipitation</button></b>, not by temperature. They do have extreme temperatures, but because the <button class="term" data-term="atmosphere">atmosphere</button> above them holds little moisture: humidity is low and clouds are scarce. Without cloud cover, the ground absorbs more of the Sun's energy by day and gives off more heat by night.</p>
+  <p>Deserts are not randomly placed. There are three broad kinds (<a href="#tbl-kinds">Table 13.1</a>):</p>
+  <div class="tablewrap" id="tbl-kinds">
+    <table>
+      <caption>The three broad categories of deserts.</caption>
+      <thead><tr><th>Kind</th><th>Cause</th><th>Examples</th></tr></thead>
+      <tbody>
+        <tr><td>Subtropical (latitude) deserts</td><td>Dry air sinks at about 30° N and S; deserts lie between about 15° and 30° (13.1.1)</td><td>Sahara (Africa), Australian Outback</td></tr>
+        <tr><td><button class="term" data-term="rain shadow desert">Rain-shadow deserts</button></td><td>Prevailing winds lose their moisture crossing a mountain range; dry air descends on the far side</td><td>Western interior of North America (Great Basin), <button class="term" data-term="Atacama Desert">Atacama Desert</button> (Chile), Gobi (Asia)</td></tr>
+        <tr><td><button class="term" data-term="polar desert">Polar deserts</button></td><td>Cold air too cold to hold much moisture sinks at the poles</td><td>Antarctica, large parts of the Arctic</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure id="fig-koppen">
+    <div class="frame"><img src="images/unit13/koppen.webp" alt="World map with hot deserts shaded red; the shaded areas cluster near 30 degrees north and south, including the Sahara, Arabia, the Kalahari, central Australia, and the southwestern United States." loading="lazy" width="1200" height="735"></div>
+    <figcaption>World hot deserts (Köppen climate class BWh, shaded). Most lie in belts near 30° N and 30° S.<span class="credit">M. C. Peel, B. L. Finlayson, and T. A. McMahon (University of Melbourne), adapted by Me ne frego, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <p>A <button class="term" data-term="rain shadow">rain shadow</button> forms when wind drives air up and over mountains (<a href="#fig-rainshadow">Figure 13.3</a>). Air pressure is lower at higher elevation, so the rising air expands and cools. Cool air holds less moisture than warm air, so the moisture falls as rain or snow on the <b>windward</b> side. The now-dry air descends the <b>leeward</b> (downwind) side and leaves an arid region with little precipitation.</p>
+  <figure id="fig-rainshadow">
+    <div class="frame"><svg viewBox="0 0 760 360" role="img" aria-labelledby="rs-en-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="rs-en-t">Side view of a mountain range with the wind blowing from the ocean on the left. Moist air rises up the windward slope, cools and drops rain and snow; dry air sinks down the leeward slope and warms, leaving a rain-shadow desert on the right.</title><rect x="0" y="0" width="760" height="300" fill="#2f7a8c" opacity=".10"/><rect x="0" y="300" width="760" height="60" fill="#6f563f"/><rect x="0" y="300" width="112" height="60" fill="#3f8fb5"/><polygon points="110,300 390,95 565,300 565,360 110,360" fill="#8a6f57"/><path d="M565,300 Q600,290 640,298 T720,296 T760,298 L760,360 L565,360 Z" fill="#e6c27a"/><line x1="0" y1="300" x2="760" y2="300" stroke="#2a1f14" stroke-width="1" stroke-dasharray="6 5" opacity=".5"/><text x="752.0" y="316.0" dy=".35em" text-anchor="end" font-size="10" font-weight="400" fill="#2a1f14" class="">sea level</text><polygon points="360,117.0 390,95 420,130.1 406,124 392,131 377,121" fill="#fff"/><polygon points="143,272.7 150,254.7 157,272.7" fill="#4f8a3a"/><polygon points="171,252.2 178,234.2 185,252.2" fill="#4f8a3a"/><polygon points="199,231.7 206,213.7 213,231.7" fill="#4f8a3a"/><polygon points="227,211.2 234,193.2 241,211.2" fill="#4f8a3a"/><polygon points="255,190.7 262,172.7 269,190.7" fill="#4f8a3a"/><polygon points="283,170.2 290,152.2 297,170.2" fill="#4f8a3a"/><line x1="178" y1="254.2" x2="178" y2="282" stroke="#fff" stroke-width="1.3"/><circle cx="178" cy="252.2" r="2.5" fill="#fff"/><text x="178.0" y="290.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#fff" class="">forest</text><line x1="222" y1="128" x2="214" y2="219.9" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><line x1="236" y1="128" x2="228" y2="209.6" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><line x1="250" y1="128" x2="242" y2="199.4" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><line x1="264" y1="128" x2="256" y2="189.1" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><line x1="278" y1="128" x2="270" y2="178.9" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><line x1="292" y1="128" x2="284" y2="168.6" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><line x1="306" y1="128" x2="298" y2="158.4" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><line x1="320" y1="128" x2="312" y2="148.1" stroke="#3f7fbf" stroke-width="2" stroke-dasharray="6 6" opacity=".8"/><g fill="#f4f6f8" stroke="#9aa7b0" stroke-width="3"><ellipse cx="244" cy="112" rx="34" ry="20"/><ellipse cx="278" cy="98" rx="38" ry="26"/><ellipse cx="312" cy="112" rx="30" ry="18"/></g><g fill="#f4f6f8"><ellipse cx="244" cy="112" rx="34" ry="20"/><ellipse cx="278" cy="98" rx="38" ry="26"/><ellipse cx="312" cy="112" rx="30" ry="18"/></g><path d="M15,232 L125,232 L355,63 Q385,40 415,63 L545,213 L725,213" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round" opacity=".85"/><path d="M15,232 L125,232 L355,63 Q385,40 415,63 L545,213 L725,213" fill="none" stroke="#3f7fbf" stroke-width="4" stroke-linejoin="round"/><path d="M415,63 L545,213 L725,213" fill="none" stroke="#c9822e" stroke-width="4" stroke-linejoin="round"/><polygon points="80.0,232.0 68.7,238.5 68.7,225.5" fill="#3f7fbf"/><polygon points="240.0,147.6 234.8,159.5 227.1,149.0" fill="#3f7fbf"/><polygon points="480.0,138.0 467.7,133.7 477.5,125.2" fill="#c9822e"/><polygon points="740.0,213.0 727.9,220.0 727.9,206.0" fill="#c9822e"/><text x="66.0" y="198.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="600" class="svg-ink halo">Moist ocean air</text><text x="66.0" y="214.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="400" class="svg-ink halo">prevailing wind →</text><text x="112.0" y="140.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="600" class="svg-ink halo">1  Air rises</text><text x="112.0" y="156.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="400" class="svg-ink halo">and cools</text><text x="292.0" y="28.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="600" class="svg-ink halo">2  Vapor condenses: clouds,</text><text x="292.0" y="44.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="400" class="svg-ink halo">rain and snow on the windward side</text><text x="570.0" y="120.0" dy=".35em" text-anchor="start" font-size="12" font-weight="600" class="svg-ink halo">3  Dry air sinks</text><text x="570.0" y="136.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">and warms</text><text x="655.0" y="258.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Rain-shadow desert</text><text x="655.0" y="274.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">(little precipitation)</text><rect x="33.2" y="320.4" width="45.6" height="19.2" rx="9.6" fill="#3f8fb5" opacity="1"/><text x="56.0" y="330.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Ocean</text><rect x="165.5" y="324.4" width="133.0" height="19.2" rx="9.6" fill="#6f563f" opacity="1"/><text x="232.0" y="334.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Windward side: wet</text><rect x="386.9" y="324.4" width="126.2" height="19.2" rx="9.6" fill="#6f563f" opacity="1"/><text x="450.0" y="334.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Leeward side: dry</text></svg></div>
+    <figcaption>How a rain shadow forms. Blue path: moist air from the ocean; orange path: the same air after it has lost its moisture. Side view across a mountain range, wind from the left; not to scale.<span class="credit">Drawn for this guide after the chapter's "Rainshadow" figure (Bariot, public domain).</span></figcaption>
+  </figure>
+  <figure id="fig-owens">
+    <div class="frame"><img src="images/unit13/owens.webp" alt="Photo from space of parallel mountain ranges; the range at the top is heavily snow-covered, the next range below has much less snow, and dry valleys lie between." loading="lazy" width="750" height="750" style="max-height:520px;width:auto"></div>
+    <figcaption>A rain shadow seen from the International Space Station. The Sierra Nevada (top) lies across the prevailing westerly winds; the rain shadow is to its east (toward the bottom). Note how much less snow there is on the Inyo Mountains.<span class="credit">Adrian Pingstone (NASA), public domain (via the textbook).</span></figcaption>
+  </figure>
+  <p>In polar deserts the vast areas of Antarctica and the Arctic are covered with ice and snow, yet their average yearly precipitation is very low. As a result, <b>Antarctica is Earth's driest continent</b>.</p>
+  <p class="quiz">Watch: <a href="https://www.youtube.com/watch?v=iMu4dShS74w" target="_blank" rel="noopener">the chapter's rain-shadow video ↗</a></p>
+</section>
+
+<section id="s13-1">
+  <h2 class="sec"><span class="n">13.1</span>The origin of deserts</h2>
+  <p>Geographic location, atmospheric circulation, and Earth's rotation are the main causes of deserts.</p>
+
+  <h3 id="s13-1-1">13.1.1 Atmospheric circulation</h3>
+  <p>Solar energy turned into heat drives the circulation of air in the atmosphere and of water in the oceans. How strong that circulation is depends on how much energy Earth's surface absorbs, and Earth is heated <b>unevenly</b>, depending on two angles:</p>
+  <ul>
+    <li><b><button class="term" data-term="latitude">Latitude</button></b>: lines circling Earth parallel to the equator, measured in degrees: 0° at the equator, 90° N and 90° S at the poles.</li>
+    <li><b><button class="term" data-term="angle of incidence">Angle of incidence</button></b>: the angle at which a ray of sunlight strikes the surface, measured from the perpendicular. In the tropics both angles are close to 0°, so the surface receives a lot of solar energy; at the poles both approach 90°, and the surface receives little or almost none.</li>
+  </ul>
+  <p>Between the equator and each pole, the air turns over in three <b>cells</b> (<a href="#fig-cells">Figure 13.5</a>, <a href="#tbl-cells">Table 13.2</a>):</p>
+  <ul>
+    <li><b><button class="term" data-term="Hadley cell">Hadley cell</button></b> (over the tropics): the Sun heats the air at the equator and it rises. Rising air cools and drops its moisture as tropical rain. The dried air spreads toward the poles, meets dry air of the Ferrel cell, and the combined dry air sinks back to Earth near 30° latitude.</li>
+    <li><b><button class="term" data-term="Ferrel cell">Ferrel (midlatitude) cell</button></b>, between about 30° and 60°.</li>
+    <li><b><button class="term" data-term="polar cell">Polar cell</button></b>, between about 60° and the pole, where cold dry air sinks.</li>
+  </ul>
+  <figure id="fig-cells">
+    <div class="frame"><svg viewBox="0 0 760 330" role="img" aria-labelledby="cells-en-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="cells-en-t">Cross section of the atmosphere from the North Pole (left) to the South Pole (right). Three loops of circulating air in each hemisphere: Hadley, Ferrel and Polar cells. Air rises at the equator and 60 degrees and sinks at 30 degrees and the poles, where deserts form.</title><rect x="20" y="52" width="720" height="188" fill="#2f7a8c" opacity=".08"/><line x1="20" y1="60" x2="740" y2="60" stroke="var(--muted)" stroke-dasharray="5 5"/><text x="380.0" y="40.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">Top of the lower atmosphere (troposphere)</text><rect x="40.0" y="240" width="56.7" height="12" fill="#e8eef2"/><rect x="96.7" y="240" width="113.3" height="12" fill="#7aa35e"/><rect x="210.0" y="240" width="113.3" height="12" fill="#e0b25a"/><rect x="323.3" y="240" width="113.3" height="12" fill="#3f8a4a"/><rect x="436.7" y="240" width="113.3" height="12" fill="#e0b25a"/><rect x="550.0" y="240" width="113.3" height="12" fill="#7aa35e"/><rect x="663.3" y="240" width="56.7" height="12" fill="#e8eef2"/><line x1="20" y1="240" x2="740" y2="240" stroke="var(--fg)" stroke-width="1.5"/><rect x="53.0" y="92" width="87.3" height="134" rx="16" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="53.0,169.0 47.0,158.6 59.0,158.6" fill="#3f7fbf"/><polygon points="140.3,149.0 146.3,159.4 134.3,159.4" fill="#3f7fbf"/><polygon points="88.7,92.0 99.1,86.0 99.1,98.0" fill="#3f7fbf"/><polygon points="104.7,226.0 94.3,232.0 94.3,220.0" fill="#3f7fbf"/><text x="96.7" y="137.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Polar</text><text x="96.7" y="153.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">cell</text><text x="96.7" y="196.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#3f7fbf" class="halo">Polar</text><text x="96.7" y="210.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#3f7fbf" class="halo">easterlies</text><rect x="166.3" y="92" width="87.3" height="134" rx="16" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="166.3,149.0 172.3,159.4 160.3,159.4" fill="#8a6f57"/><polygon points="253.7,169.0 247.7,158.6 259.7,158.6" fill="#8a6f57"/><polygon points="218.0,92.0 207.6,98.0 207.6,86.0" fill="#8a6f57"/><polygon points="202.0,226.0 212.4,220.0 212.4,232.0" fill="#8a6f57"/><text x="210.0" y="137.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Ferrel</text><text x="210.0" y="153.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">cell</text><text x="210.0" y="204.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#8a6f57" class="halo">Westerlies</text><rect x="279.7" y="92" width="87.3" height="134" rx="16" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="279.7,169.0 273.7,158.6 285.7,158.6" fill="#c9822e"/><polygon points="367.0,149.0 373.0,159.4 361.0,159.4" fill="#c9822e"/><polygon points="315.3,92.0 325.7,86.0 325.7,98.0" fill="#c9822e"/><polygon points="331.3,226.0 320.9,232.0 320.9,220.0" fill="#c9822e"/><text x="323.3" y="137.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Hadley</text><text x="323.3" y="153.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">cell</text><text x="323.3" y="196.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#c9822e" class="halo">NE trade</text><text x="323.3" y="210.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#c9822e" class="halo">winds</text><rect x="393.0" y="92" width="87.3" height="134" rx="16" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="393.0,149.0 399.0,159.4 387.0,159.4" fill="#c9822e"/><polygon points="480.3,169.0 474.3,158.6 486.3,158.6" fill="#c9822e"/><polygon points="444.7,92.0 434.3,98.0 434.3,86.0" fill="#c9822e"/><polygon points="428.7,226.0 439.1,220.0 439.1,232.0" fill="#c9822e"/><text x="436.7" y="137.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Hadley</text><text x="436.7" y="153.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">cell</text><text x="436.7" y="196.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#c9822e" class="halo">SE trade</text><text x="436.7" y="210.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#c9822e" class="halo">winds</text><rect x="506.3" y="92" width="87.3" height="134" rx="16" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="506.3,169.0 500.3,158.6 512.3,158.6" fill="#8a6f57"/><polygon points="593.7,149.0 599.7,159.4 587.7,159.4" fill="#8a6f57"/><polygon points="542.0,92.0 552.4,86.0 552.4,98.0" fill="#8a6f57"/><polygon points="558.0,226.0 547.6,232.0 547.6,220.0" fill="#8a6f57"/><text x="550.0" y="137.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Ferrel</text><text x="550.0" y="153.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">cell</text><text x="550.0" y="204.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#8a6f57" class="halo">Westerlies</text><rect x="619.7" y="92" width="87.3" height="134" rx="16" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="619.7,149.0 625.7,159.4 613.7,159.4" fill="#3f7fbf"/><polygon points="707.0,169.0 701.0,158.6 713.0,158.6" fill="#3f7fbf"/><polygon points="671.3,92.0 660.9,98.0 660.9,86.0" fill="#3f7fbf"/><polygon points="655.3,226.0 665.7,220.0 665.7,232.0" fill="#3f7fbf"/><text x="663.3" y="137.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Polar</text><text x="663.3" y="153.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">cell</text><text x="663.3" y="196.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#3f7fbf" class="halo">Polar</text><text x="663.3" y="210.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#3f7fbf" class="halo">easterlies</text><line x1="40.0" y1="252" x2="40.0" y2="260" stroke="var(--fg)"/><text x="40.0" y="269.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">90°N</text><text x="40.0" y="289.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Sinking, cold:</text><text x="40.0" y="304.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">polar desert</text><line x1="153.3" y1="252" x2="153.3" y2="260" stroke="var(--fg)"/><text x="153.3" y="269.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">60°N</text><text x="153.3" y="289.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Rising:</text><text x="153.3" y="304.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">wetter</text><line x1="266.7" y1="252" x2="266.7" y2="260" stroke="var(--fg)"/><text x="266.7" y="269.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">30°N</text><text x="266.7" y="289.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Sinking, dry:</text><text x="266.7" y="304.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">hot deserts</text><line x1="380.0" y1="252" x2="380.0" y2="260" stroke="var(--fg)"/><text x="380.0" y="269.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">0°</text><text x="380.0" y="289.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Rising:</text><text x="380.0" y="304.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">tropical rain</text><line x1="493.3" y1="252" x2="493.3" y2="260" stroke="var(--fg)"/><text x="493.3" y="269.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">30°S</text><text x="493.3" y="289.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Sinking, dry:</text><text x="493.3" y="304.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">hot deserts</text><line x1="606.7" y1="252" x2="606.7" y2="260" stroke="var(--fg)"/><text x="606.7" y="269.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">60°S</text><text x="606.7" y="289.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Rising:</text><text x="606.7" y="304.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">wetter</text><line x1="720.0" y1="252" x2="720.0" y2="260" stroke="var(--fg)"/><text x="720.0" y="269.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">90°S</text><text x="720.0" y="289.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Sinking, cold:</text><text x="720.0" y="304.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">polar desert</text><g fill="#f4f6f8" stroke="#9aa7b0" stroke-width="1.2"><ellipse cx="368.0" cy="72" rx="13" ry="8"/><ellipse cx="386.0" cy="66" rx="15" ry="10"/><ellipse cx="398.0" cy="73" rx="10" ry="7"/></g><g fill="#f4f6f8" stroke="#9aa7b0" stroke-width="1.2"><ellipse cx="141.3" cy="72" rx="13" ry="8"/><ellipse cx="159.3" cy="66" rx="15" ry="10"/><ellipse cx="171.3" cy="73" rx="10" ry="7"/></g><g fill="#f4f6f8" stroke="#9aa7b0" stroke-width="1.2"><ellipse cx="594.7" cy="72" rx="13" ry="8"/><ellipse cx="612.7" cy="66" rx="15" ry="10"/><ellipse cx="624.7" cy="73" rx="10" ry="7"/></g><text x="30.0" y="320.0" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">← North</text><text x="730.0" y="320.0" dy=".35em" text-anchor="end" font-size="11" font-weight="600" class="svg-ink halo">South →</text></svg></div>
+    <figcaption>The three circulation cells in each hemisphere. Arrows on each loop show which way the air turns; the names inside the loops near the ground are the surface winds each cell produces. The colored strip on the ground marks the climate: dark green, tropical rain; tan, dry belts (15°–30°); light green, wetter midlatitudes; pale grey, polar ice. Cross section from the North Pole (left) to the South Pole (right); heights are greatly exaggerated.<span class="credit">Drawn for this guide after the chapter's "Earth Global Circulation" figure (NASA, public domain).</span></figcaption>
+  </figure>
+  <p>The sinking dry air makes belts of mostly <b>high pressure</b> at about 30° N and 30° S, called the <button class="term" data-term="horse latitudes">horse latitudes</button>. So arid zones, where desert conditions dominate, lie between about 15° and 30° north and south of the equator. Air flowing along the ground away from these belts makes the prevailing winds: the <button class="term" data-term="trade winds">trade winds</button> toward the equator and the <button class="term" data-term="westerlies">westerlies</button> in the temperate zone (13.1.2 explains their directions).</p>
+  <div class="tablewrap" id="tbl-cells">
+    <table>
+      <caption>The three circulation cells in each hemisphere.</caption>
+      <thead><tr><th>Cell</th><th>Latitudes</th><th>Air rises at</th><th>Air sinks at</th><th>Surface winds</th></tr></thead>
+      <tbody>
+        <tr><td>Hadley</td><td>0°–30°</td><td>Equator (tropical rain)</td><td>30° (horse latitudes; hot deserts)</td><td>Trade winds</td></tr>
+        <tr><td>Ferrel (midlatitude)</td><td>30°–60°</td><td>60°</td><td>30°</td><td>Westerlies</td></tr>
+        <tr><td>Polar</td><td>60°–90°</td><td>60°</td><td>Pole (polar high; polar deserts)</td><td>Polar easterlies*</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">*The chapter names the trade winds and westerlies only; "polar easterlies" is the standard name used in its NASA circulation figure.</p>
+  <p>Other deserts owe at least part of their origin to other effects. The <button class="term" data-term="Great Basin Desert">Great Basin Desert</button>, which covers parts of Utah and Nevada, is somewhat affected by sinking air from global circulation, but it is mainly a <b>rain-shadow desert</b>. Moist westerly air from the Pacific rises over the Sierra Nevada and other mountains, cools, and loses its moisture on the upwind side (<a href="#fig-greatbasin">Figure 13.6</a>).</p>
+  <figure id="fig-greatbasin">
+      <div class="frame"><img class="diagram" src="images/unit13/greatbasin.webp" alt="Map of the western United States with the Great Basin Desert shaded, covering most of Nevada, western Utah, and parts of neighboring states." loading="lazy" width="310" height="273" style="width:100%;max-width:420px"></div>
+      <figcaption>The Great Basin Desert (central Basin and Range ecoregion).<span class="credit">C. E. Soulard, USGS, public domain (via the textbook).</span></figcaption>
+    </figure>
+  <p>One of the driest places on Earth is the Atacama Desert of northern Chile, a strip along the coast north of about 30° S, at the southern edge of the trade-wind belt. Three factors combine there:</p>
+  <div class="pair">
+    <figure id="fig-atacama">
+      <div class="frame"><img class="diagram" src="images/unit13/atacama.webp" alt="Map of western South America with the Atacama Desert in yellow along the coast of northern Chile, and related dry climate areas in orange." loading="lazy" width="434" height="608" style="height:340px;width:auto"></div>
+      <figcaption>The Atacama Desert (yellow) and related dry climate areas (orange).<span class="credit">cobaltcigs, CC BY-SA (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Three factors</h4>
+      <ol>
+    <li><b>Latitude</b>: it lies in the dry belt of sinking air.</li>
+    <li><b>Rain shadow</b>: trade winds blowing west carry warm, moist air across the Amazon basin. At the Andes the air rises, cools, and drops most of its water as rain; the cool, dry air then descends onto the Atacama, west of the mountains.</li>
+    <li><b>A cold ocean current</b>: onshore winds from the Pacific are cooled by the Peru (Humboldt) Current, and this cold air holds almost no moisture.</li>
+      </ol>
+    </div>
+  </div>
+  <p>Some places in the Atacama have recorded no precipitation for several years. It is the <b>driest non-polar place on Earth</b>.</p>
+  <div class="pair">
+    <figure id="fig-vortex">
+      <div class="frame"><img src="images/unit13/vortex.webp" alt="Map of the Northern Hemisphere seen from above the North Pole, with cold descending air shown in purple centered just north of Greenland." loading="lazy" width="636" height="689" style="height:300px;width:auto"></div>
+      <figcaption>The polar vortex in mid-November 2013. Cold, descending air (purple) is typical of polar circulation.<span class="credit">NOAA Pacific Marine Environmental Laboratory, public domain (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Polar deserts</h4>
+      <p>The polar regions are also belts of mostly high pressure, made by cold dry air sinking in the polar cells. Cold air holds much less moisture than warm air, so sinking polar air makes <b>polar deserts</b>. This is why land near the North and South Poles has always been so dry.</p>
+    </div>
+  </div>
+
+  <h3 id="s13-1-2">13.1.2 Coriolis effect</h3>
+  <p>Earth rotates toward the east, where the Sun rises. Think of spinning a weight on a string: the weight's speed depends on the length of the string. In the same way, the eastward speed of a point on Earth depends on its distance from Earth's <b>axis</b> of rotation. Higher latitudes are closer to the axis, so they travel eastward more slowly than lower latitudes.</p>
+  <p>When air or water moves from a lower to a higher latitude, it keeps the momentum it had at the faster latitude, so it moves east faster than the ground beneath it. The reverse happens when it moves toward the equator. This deflection of motion, seen from the rotating Earth, is the <button class="term" data-term="Coriolis effect">Coriolis effect</button> (<a href="#fig-corgif">Figure 13.9</a>). A second factor deflects east–west motion: the outward (centrifugal) effect of Earth's spin and gravity, which pulls toward Earth's center, are not in line, and for a mass moving east the result is a net push toward the equator (a mass moving west is pushed toward the pole). The total Coriolis deflection of a mass moving in any direction combines these two factors.</p>
+  <figure id="fig-corgif">
+    <div class="frame"><img class="diagram" src="images/unit13/coriolis.gif" width="200" height="283" alt="Animation of a ball thrown across a rotating disc. Top: seen from above, the ball moves in a straight line. Bottom: seen by an observer on the disc (red dot), the ball follows a curved path." loading="lazy" style="width:min(100%,300px)"></div>
+    <figcaption>Animation: a ball thrown on a rotating disc. Top: from a non-rotating (inertial) viewpoint, the ball moves in a straight line. Bottom: the observer (red dot) turning with the disc sees the ball follow a curved path. This apparent curve is due to the Coriolis effect and centrifugal force.<span class="credit">Hubi, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <p>The cells move air north and south relative to the ground, and the Coriolis effect deflects these moving air masses <b>to the right in the Northern Hemisphere</b> and <b>to the left in the Southern Hemisphere</b> (<a href="#fig-coriolis">Figure 13.10</a>):</p>
+  <ul>
+    <li><b>Trade winds</b>: in the northern Hadley cell, low-altitude air flows south toward the equator and is deflected to the right (west). European sailors used these trade winds to cross the Atlantic to South America and the Caribbean. In the Southern Hemisphere the equatorward air is deflected to the left, so the trade winds blow to the northwest.</li>
+    <li><b>Westerlies</b>: in the northern Ferrel cell, surface air flows from the horse latitudes toward the North Pole and is deflected to the right (east), making the westerlies. In the Southern Hemisphere the poleward air is deflected to the left and flows southeast.</li>
+    <li><b>Polar cells</b>: at 60° N and S, relatively warmer rising air flows poleward, cools, converges at the poles, and sinks in the polar high. This sinking dry air makes the polar deserts, where cold keeps the ice and snow from melting.</li>
+  </ul>
+  <figure id="fig-coriolis">
+    <div class="frame"><svg viewBox="0 0 760 425" role="img" aria-labelledby="cor-en-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="cor-en-t">Map view with north at the top: surface winds in each latitude band. Dashed arrows show air moving straight north or south as it would without Earth's rotation; solid arrows show the Coriolis deflection, to the right in the Northern Hemisphere and to the left in the Southern.</title><rect x="70" y="20" width="490" height="60" fill="#e8eef2"/><rect x="70" y="80" width="490" height="60" fill="#e4ecd9"/><rect x="70" y="140" width="490" height="60" fill="#f3e2bd"/><rect x="70" y="200" width="490" height="60" fill="#f3e2bd"/><rect x="70" y="260" width="490" height="60" fill="#e4ecd9"/><rect x="70" y="320" width="490" height="60" fill="#e8eef2"/><line x1="66" y1="20" x2="560" y2="20" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/><text x="40.0" y="20.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">90°N</text><line x1="66" y1="80" x2="560" y2="80" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/><text x="40.0" y="80.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">60°N</text><line x1="66" y1="140" x2="560" y2="140" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/><text x="40.0" y="140.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">30°N</text><line x1="66" y1="200" x2="560" y2="200" stroke="var(--muted)" stroke-width="2" /><text x="40.0" y="200.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">0°</text><line x1="66" y1="260" x2="560" y2="260" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/><text x="40.0" y="260.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">30°S</text><line x1="66" y1="320" x2="560" y2="320" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/><text x="40.0" y="320.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">60°S</text><line x1="66" y1="380" x2="560" y2="380" stroke="var(--muted)" stroke-width="1" stroke-dasharray="4 4"/><text x="40.0" y="380.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">90°S</text><text x="522.0" y="191.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Equator</text><line x1="110" y1="25" x2="110" y2="67" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><polygon points="110.0,75.0 105.5,67.2 114.5,67.2" fill="#555"/><path d="M230,25 Q230,50.0 178.3,71.5" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="170.0,75.0 176.7,66.3 180.9,76.4" fill="#3f7fbf"/><path d="M350,25 Q350,50.0 298.3,71.5" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="290.0,75.0 296.7,66.3 300.9,76.4" fill="#3f7fbf"/><path d="M470,25 Q470,50.0 418.3,71.5" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="410.0,75.0 416.7,66.3 420.9,76.4" fill="#3f7fbf"/><text x="580.0" y="42.0" dy=".35em" text-anchor="start" font-size="13" font-weight="700" fill="#3f7fbf" class="halo">Polar easterlies</text><text x="580.0" y="59.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">deflected right</text><line x1="110" y1="135" x2="110" y2="93" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><polygon points="110.0,85.0 114.5,92.8 105.5,92.8" fill="#555"/><path d="M230,135 Q230,110.0 281.7,88.5" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="290.0,85.0 283.3,93.7 279.1,83.6" fill="#8a6f57"/><path d="M350,135 Q350,110.0 401.7,88.5" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="410.0,85.0 403.3,93.7 399.1,83.6" fill="#8a6f57"/><path d="M470,135 Q470,110.0 521.7,88.5" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="530.0,85.0 523.3,93.7 519.1,83.6" fill="#8a6f57"/><text x="580.0" y="102.0" dy=".35em" text-anchor="start" font-size="13" font-weight="700" fill="#8a6f57" class="halo">Westerlies</text><text x="580.0" y="119.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">deflected right</text><line x1="110" y1="145" x2="110" y2="187" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><polygon points="110.0,195.0 105.5,187.2 114.5,187.2" fill="#555"/><path d="M230,145 Q230,170.0 178.3,191.5" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="170.0,195.0 176.7,186.3 180.9,196.4" fill="#c9822e"/><path d="M350,145 Q350,170.0 298.3,191.5" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="290.0,195.0 296.7,186.3 300.9,196.4" fill="#c9822e"/><path d="M470,145 Q470,170.0 418.3,191.5" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="410.0,195.0 416.7,186.3 420.9,196.4" fill="#c9822e"/><text x="580.0" y="162.0" dy=".35em" text-anchor="start" font-size="13" font-weight="700" fill="#c9822e" class="halo">NE trade winds</text><text x="580.0" y="179.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">deflected right</text><line x1="110" y1="255" x2="110" y2="213" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><polygon points="110.0,205.0 114.5,212.8 105.5,212.8" fill="#555"/><path d="M230,255 Q230,230.0 178.3,208.5" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="170.0,205.0 180.9,203.6 176.7,213.7" fill="#c9822e"/><path d="M350,255 Q350,230.0 298.3,208.5" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="290.0,205.0 300.9,203.6 296.7,213.7" fill="#c9822e"/><path d="M470,255 Q470,230.0 418.3,208.5" fill="none" stroke="#c9822e" stroke-width="3"/><polygon points="410.0,205.0 420.9,203.6 416.7,213.7" fill="#c9822e"/><text x="580.0" y="222.0" dy=".35em" text-anchor="start" font-size="13" font-weight="700" fill="#c9822e" class="halo">SE trade winds</text><text x="580.0" y="239.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">deflected left</text><line x1="110" y1="265" x2="110" y2="307" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><polygon points="110.0,315.0 105.5,307.2 114.5,307.2" fill="#555"/><path d="M230,265 Q230,290.0 281.7,311.5" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="290.0,315.0 279.1,316.4 283.3,306.3" fill="#8a6f57"/><path d="M350,265 Q350,290.0 401.7,311.5" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="410.0,315.0 399.1,316.4 403.3,306.3" fill="#8a6f57"/><path d="M470,265 Q470,290.0 521.7,311.5" fill="none" stroke="#8a6f57" stroke-width="3"/><polygon points="530.0,315.0 519.1,316.4 523.3,306.3" fill="#8a6f57"/><text x="580.0" y="282.0" dy=".35em" text-anchor="start" font-size="13" font-weight="700" fill="#8a6f57" class="halo">Westerlies</text><text x="580.0" y="299.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">deflected left</text><line x1="110" y1="375" x2="110" y2="333" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><polygon points="110.0,325.0 114.5,332.8 105.5,332.8" fill="#555"/><path d="M230,375 Q230,350.0 178.3,328.5" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="170.0,325.0 180.9,323.6 176.7,333.7" fill="#3f7fbf"/><path d="M350,375 Q350,350.0 298.3,328.5" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="290.0,325.0 300.9,323.6 296.7,333.7" fill="#3f7fbf"/><path d="M470,375 Q470,350.0 418.3,328.5" fill="none" stroke="#3f7fbf" stroke-width="3"/><polygon points="410.0,325.0 420.9,323.6 416.7,333.7" fill="#3f7fbf"/><text x="580.0" y="342.0" dy=".35em" text-anchor="start" font-size="13" font-weight="700" fill="#3f7fbf" class="halo">Polar easterlies</text><text x="580.0" y="359.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">deflected left</text><line x1="72" y1="412" x2="96" y2="412" stroke="#555" stroke-width="2" stroke-dasharray="5 4"/><text x="102.0" y="412.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">no rotation</text><line x1="206" y1="412" x2="230" y2="412" stroke="#c9822e" stroke-width="3"/><text x="236.0" y="412.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">actual wind</text><text x="360.0" y="412.0" dy=".35em" text-anchor="start" font-size="11" font-weight="600" class="svg-ink halo">Earth rotates toward the east</text><line x1="540.0" y1="412.0" x2="653.7" y2="412.0" stroke="var(--fg)" stroke-width="2" stroke-linecap="round"/><polygon points="660.0,412.0 652.2,416.5 652.2,407.5" fill="var(--fg)"/></svg></div>
+    <figcaption>Coriolis deflection of the surface winds. Dashed arrows: the straight north–south path air would take if Earth did not rotate. Solid arrows: the deflected winds; colors match the cells in <a href="#fig-cells">Figure 13.5</a>. Map view, north at the top.<span class="credit">Drawn for this guide from the chapter's text and its NASA circulation figure.</span></figcaption>
+  </figure>
+  <div class="pair">
+    <figure id="fig-corglobe">
+      <div class="frame"><img class="diagram" src="images/unit13/coriolisglobe.webp" alt="Globe with small circles showing moving air deflected to the right in the Northern Hemisphere and to the left in the Southern Hemisphere." loading="lazy" width="256" height="256" style="height:260px;width:auto"></div>
+      <figcaption>Inertial circles: the paths of air masses moving under the Coriolis effect alone, with no other forces. They turn clockwise (to the right) in the Northern Hemisphere and counterclockwise (to the left) in the Southern.<span class="credit">Anders Persson, CC BY-SA (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>The Coriolis effect acts on all motion on Earth</h4>
+      <ul>
+        <li>Artillery must allow for it in long-distance targeting.</li>
+        <li>Ocean <button class="term" data-term="gyre">gyres</button> turn clockwise in the Northern Hemisphere and counterclockwise in the Southern (Unit 12).</li>
+        <li>It helps shape the high-altitude polar <b>jet streams</b>, which sometimes push lobes of cold Arctic air as far as 30° latitude instead of the usual 60°.</li>
+        <li>Low-pressure systems and tropical storms spin counterclockwise in the Northern Hemisphere and clockwise in the Southern.</li>
+      </ul>
+    </div>
+  </div>
+  <figure id="fig-gyres">
+    <div class="frame"><img class="diagram" src="images/unit13/gyres.webp" alt="World map of ocean surface currents; warm currents in red and cold currents in blue form large loops in each ocean basin." loading="lazy" width="1000" height="522"></div>
+    <figcaption>Surface currents of the oceans, which form gyres. Red: warm currents; blue: cold currents.<span class="credit">Dr. Michael Pidwirny, public domain (via the textbook).</span></figcaption>
+  </figure>
+  <p class="quiz">Watch: <a href="https://www.youtube.com/watch?v=HIyBpi7B-dE" target="_blank" rel="noopener">the chapter's Coriolis effect video ↗</a> · Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/13-deserts/" target="_blank" rel="noopener">Section 13.1 quiz in the textbook ↗</a></p>
+</section>
+
+<section id="s13-2">
+  <h2 class="sec"><span class="n">13.2</span>Desert weathering and erosion</h2>
+  <p><button class="term" data-term="weathering">Weathering</button> in deserts works the same way as in other climates (Unit 5), only <b>more slowly</b>. Higher temperatures usually speed up <button class="term" data-term="chemical weathering">chemical weathering</button>, but water is the main agent of weathering, and the lack of water slows both mechanical and chemical weathering. Low precipitation also means less <button class="term" data-term="runoff">runoff</button> and less <button class="term" data-term="ice wedging">ice wedging</button>. When rain does fall in the desert it is often heavy and may cause <button class="term" data-term="flash flood">flash floods</button> that move a lot of material quickly (13.3).</p>
+  <figure id="fig-newspaper">
+    <div class="frame"><img src="images/unit13/newspaper.webp" alt="A flat rock face coated with dark brown desert varnish, covered with hundreds of lighter-colored carved figures of people, animals, and symbols." loading="lazy" width="1000" height="667"></div>
+    <figcaption>Newspaper Rock, near Canyonlands National Park, Utah. Its many petroglyphs were made by chipping through the dark desert varnish to the lighter rock beneath.<span class="credit">Cacophony, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <p>One weathering product is unique to deserts: <button class="term" data-term="desert varnish">desert varnish</button>, also called desert patina or rock rust. It is thin, dark brown layers of clay <button class="term" data-term="mineral">minerals</button> and iron and manganese <button class="term" data-term="oxide">oxides</button> that form on very stable rock surfaces in arid environments (<a href="#fig-newspaper">Figure 13.13</a>). The chapter says exactly how it forms is still unknown; cosmogenic and biological mechanisms have been proposed (see the fact-check notes).</p>
+
+  <h3 id="s13-2-wind">Wind as an agent of erosion</h3>
+  <p>Water is still the dominant agent of <button class="term" data-term="erosion">erosion</button> in most deserts, but <b>wind</b> is a notable agent of weathering and erosion in many of them. Wind carries suspended sediment in <button class="term" data-term="haboob">haboobs</button>, the large dust storms common in deserts. Deposits of windblown dust are called <button class="term" data-term="loess">loess</button>. Loess covers wide areas of the midwestern United States; much of it is rock flour that melted out of the <button class="term" data-term="ice sheet">ice sheets</button> of the last <button class="term" data-term="ice age">ice age</button> (Unit 14), and some was blown from desert regions in the West.</p>
+  <figure id="fig-haboob">
+    <div class="frame"><img src="images/unit13/haboob.webp" alt="A towering brown wall of dust rolling over a desert camp just before nightfall." loading="lazy" width="1280" height="853"></div>
+    <figcaption>A haboob rolls over Al Asad, Iraq, on 27 April 2005. The chapter's own haboob photo (Gobi, Mongolia) is not openly licensed, so this one replaces it.<span class="credit">Cpl. Alicia M. Garcia, U.S. Marine Corps, public domain (Wikimedia Commons).</span></figcaption>
+  </figure>
+  <p>Wind has less energy than water, but it still moves sand, silt, and dust. As with a stream (Unit 11), the load a fluid carries is split into <button class="term" data-term="bedload">bedload</button> and <button class="term" data-term="suspended load">suspended load</button>, and how much goes into each depends on the wind's velocity. Wind moves sediment three ways (<a href="#fig-transport">Figure 13.15</a>, <a href="#tbl-transport">Table 13.3</a>):</p>
+  <figure id="fig-transport">
+    <div class="frame"><svg viewBox="0 0 760 300" role="img" aria-labelledby="tr-en-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="tr-en-t">Animation, side view: wind blowing to the right moves sediment three ways. Dust and silt rise high in suspension; sand grains hop and splash in saltation within about a meter of the ground; coarse grains roll and slide in creep.</title><rect x="0" y="0" width="760" height="240" fill="#2f7a8c" opacity=".07"/><rect x="30" y="170" width="470" height="70" fill="#e6c27a" opacity=".28"/><rect x="0" y="240" width="760" height="60" fill="#e6c27a"/><circle cx="179.4" cy="251.4" r="2.2" fill="#c99a50"/><circle cx="117.8" cy="249.5" r="2.2" fill="#c99a50"/><circle cx="697.6" cy="287.6" r="2.8" fill="#c99a50"/><circle cx="168.7" cy="273.9" r="2.0" fill="#c99a50"/><circle cx="131.2" cy="251.5" r="1.9" fill="#c99a50"/><circle cx="704.9" cy="289.1" r="2.9" fill="#c99a50"/><circle cx="608.3" cy="256.1" r="2.1" fill="#c99a50"/><circle cx="476.5" cy="284.1" r="3.0" fill="#c99a50"/><circle cx="668.8" cy="250.5" r="2.6" fill="#c99a50"/><circle cx="510.5" cy="272.3" r="1.9" fill="#c99a50"/><circle cx="359.9" cy="250.6" r="3.1" fill="#c99a50"/><circle cx="657.8" cy="274.5" r="2.1" fill="#c99a50"/><circle cx="690.7" cy="275.8" r="3.0" fill="#c99a50"/><circle cx="644.5" cy="272.4" r="2.3" fill="#c99a50"/><circle cx="455.2" cy="268.4" r="1.9" fill="#c99a50"/><circle cx="231.9" cy="288.3" r="1.7" fill="#c99a50"/><circle cx="35.2" cy="278.6" r="2.0" fill="#c99a50"/><circle cx="406.3" cy="270.5" r="2.1" fill="#c99a50"/><circle cx="757.9" cy="256.2" r="2.3" fill="#c99a50"/><circle cx="154.0" cy="278.9" r="2.0" fill="#c99a50"/><circle cx="270.4" cy="284.8" r="2.1" fill="#c99a50"/><circle cx="424.5" cy="293.0" r="1.8" fill="#c99a50"/><circle cx="46.8" cy="257.9" r="2.8" fill="#c99a50"/><circle cx="467.7" cy="258.3" r="2.1" fill="#c99a50"/><circle cx="134.9" cy="269.9" r="1.7" fill="#c99a50"/><circle cx="529.9" cy="292.6" r="3.1" fill="#c99a50"/><circle cx="558.5" cy="295.9" r="1.6" fill="#c99a50"/><circle cx="219.6" cy="296.2" r="2.8" fill="#c99a50"/><circle cx="311.9" cy="295.1" r="2.6" fill="#c99a50"/><circle cx="621.6" cy="261.3" r="1.9" fill="#c99a50"/><circle cx="337.5" cy="253.1" r="2.2" fill="#c99a50"/><circle cx="731.0" cy="263.2" r="1.6" fill="#c99a50"/><circle cx="34.0" cy="254.8" r="2.9" fill="#c99a50"/><circle cx="275.7" cy="261.1" r="1.8" fill="#c99a50"/><circle cx="746.1" cy="268.0" r="1.9" fill="#c99a50"/><circle cx="45.1" cy="248.9" r="1.9" fill="#c99a50"/><circle cx="514.4" cy="253.8" r="1.7" fill="#c99a50"/><circle cx="372.9" cy="259.0" r="3.2" fill="#c99a50"/><circle cx="92.9" cy="273.5" r="2.8" fill="#c99a50"/><circle cx="311.1" cy="297.4" r="2.4" fill="#c99a50"/><circle cx="183.8" cy="267.4" r="1.7" fill="#c99a50"/><circle cx="320.1" cy="258.9" r="3.0" fill="#c99a50"/><circle cx="631.6" cy="271.9" r="1.7" fill="#c99a50"/><circle cx="193.3" cy="258.6" r="1.9" fill="#c99a50"/><circle cx="175.9" cy="291.2" r="1.8" fill="#c99a50"/><circle cx="39.0" cy="294.3" r="2.5" fill="#c99a50"/><circle cx="752.8" cy="267.0" r="3.0" fill="#c99a50"/><circle cx="497.0" cy="287.1" r="2.8" fill="#c99a50"/><circle cx="375.7" cy="250.8" r="1.9" fill="#c99a50"/><circle cx="664.1" cy="292.8" r="3.1" fill="#c99a50"/><circle cx="255.8" cy="280.2" r="2.9" fill="#c99a50"/><circle cx="488.3" cy="288.4" r="2.4" fill="#c99a50"/><circle cx="497.6" cy="281.7" r="2.0" fill="#c99a50"/><circle cx="701.3" cy="295.7" r="1.7" fill="#c99a50"/><circle cx="738.0" cy="296.0" r="2.7" fill="#c99a50"/><circle cx="33.9" cy="292.7" r="1.8" fill="#c99a50"/><circle cx="736.1" cy="280.7" r="1.7" fill="#c99a50"/><circle cx="127.1" cy="279.0" r="2.5" fill="#c99a50"/><circle cx="567.3" cy="294.2" r="1.9" fill="#c99a50"/><circle cx="2.5" cy="294.0" r="1.6" fill="#c99a50"/><circle cx="666.1" cy="252.0" r="2.9" fill="#c99a50"/><circle cx="595.1" cy="291.6" r="2.5" fill="#c99a50"/><circle cx="667.8" cy="256.5" r="2.7" fill="#c99a50"/><circle cx="251.3" cy="292.4" r="2.8" fill="#c99a50"/><circle cx="358.3" cy="273.4" r="1.6" fill="#c99a50"/><circle cx="26.0" cy="276.9" r="2.4" fill="#c99a50"/><circle cx="657.2" cy="277.6" r="1.8" fill="#c99a50"/><circle cx="275.6" cy="285.9" r="2.4" fill="#c99a50"/><circle cx="8.0" cy="289.6" r="2.9" fill="#c99a50"/><circle cx="64.7" cy="274.3" r="2.2" fill="#c99a50"/><circle cx="598.4" cy="262.2" r="2.0" fill="#c99a50"/><circle cx="369.9" cy="296.2" r="1.8" fill="#c99a50"/><circle cx="87.0" cy="278.3" r="3.0" fill="#c99a50"/><circle cx="389.5" cy="268.6" r="3.0" fill="#c99a50"/><circle cx="590.2" cy="249.5" r="3.0" fill="#c99a50"/><circle cx="148.8" cy="261.7" r="2.9" fill="#c99a50"/><circle cx="321.1" cy="287.5" r="1.9" fill="#c99a50"/><circle cx="664.5" cy="255.2" r="1.8" fill="#c99a50"/><circle cx="375.6" cy="263.6" r="2.5" fill="#c99a50"/><circle cx="687.1" cy="282.9" r="1.6" fill="#c99a50"/><circle cx="237.0" cy="274.3" r="2.4" fill="#c99a50"/><circle cx="543.8" cy="271.2" r="1.7" fill="#c99a50"/><circle cx="186.5" cy="290.1" r="2.2" fill="#c99a50"/><circle cx="582.7" cy="297.3" r="2.6" fill="#c99a50"/><circle cx="514.3" cy="277.7" r="2.1" fill="#c99a50"/><circle cx="693.7" cy="270.3" r="3.1" fill="#c99a50"/><circle cx="232.3" cy="291.1" r="2.9" fill="#c99a50"/><circle cx="465.9" cy="269.0" r="1.8" fill="#c99a50"/><circle cx="586.0" cy="264.8" r="2.7" fill="#c99a50"/><circle cx="101.3" cy="250.3" r="1.8" fill="#c99a50"/><circle cx="614.9" cy="255.2" r="3.0" fill="#c99a50"/><circle cx="282.7" cy="276.0" r="2.2" fill="#c99a50"/><circle cx="471.8" cy="250.9" r="2.2" fill="#c99a50"/><circle cx="711.5" cy="255.3" r="2.6" fill="#c99a50"/><circle cx="248.3" cy="261.6" r="1.6" fill="#c99a50"/><circle cx="15.3" cy="295.4" r="2.9" fill="#c99a50"/><circle cx="608.8" cy="288.0" r="3.1" fill="#c99a50"/><circle cx="120.4" cy="276.4" r="2.4" fill="#c99a50"/><circle cx="436.1" cy="294.8" r="2.8" fill="#c99a50"/><circle cx="736.0" cy="252.1" r="2.6" fill="#c99a50"/><circle cx="513.3" cy="284.8" r="2.6" fill="#c99a50"/><circle cx="631.8" cy="261.7" r="3.1" fill="#c99a50"/><circle cx="308.6" cy="277.1" r="3.0" fill="#c99a50"/><circle cx="534.7" cy="262.1" r="2.0" fill="#c99a50"/><circle cx="248.2" cy="278.6" r="3.2" fill="#c99a50"/><circle cx="683.3" cy="266.8" r="2.2" fill="#c99a50"/><circle cx="621.3" cy="260.8" r="2.3" fill="#c99a50"/><circle cx="10.0" cy="255.6" r="2.5" fill="#c99a50"/><circle cx="526.9" cy="278.0" r="2.2" fill="#c99a50"/><circle cx="722.8" cy="278.4" r="1.8" fill="#c99a50"/><circle cx="51.5" cy="296.6" r="3.2" fill="#c99a50"/><circle cx="699.2" cy="277.4" r="2.1" fill="#c99a50"/><circle cx="69.4" cy="259.4" r="2.0" fill="#c99a50"/><circle cx="705.5" cy="292.4" r="2.8" fill="#c99a50"/><circle cx="113.0" cy="258.4" r="2.1" fill="#c99a50"/><circle cx="720.4" cy="254.5" r="2.9" fill="#c99a50"/><circle cx="517.3" cy="274.5" r="3.1" fill="#c99a50"/><circle cx="199.4" cy="273.3" r="1.9" fill="#c99a50"/><circle cx="73.5" cy="247.7" r="2.1" fill="#c99a50"/><circle cx="92.5" cy="249.2" r="3.2" fill="#c99a50"/><circle cx="219.7" cy="292.3" r="2.7" fill="#c99a50"/><circle cx="555.8" cy="280.1" r="3.1" fill="#c99a50"/><circle cx="667.6" cy="283.4" r="2.5" fill="#c99a50"/><circle cx="527.3" cy="283.6" r="2.5" fill="#c99a50"/><circle cx="381.9" cy="254.0" r="3.0" fill="#c99a50"/><circle cx="368.0" cy="249.5" r="1.9" fill="#c99a50"/><circle cx="664.8" cy="259.3" r="2.2" fill="#c99a50"/><circle cx="518.4" cy="290.8" r="2.1" fill="#c99a50"/><circle cx="294.0" cy="268.0" r="1.6" fill="#c99a50"/><circle cx="666.3" cy="247.0" r="3.1" fill="#c99a50"/><circle cx="115.9" cy="254.1" r="3.0" fill="#c99a50"/><circle cx="625.8" cy="258.1" r="2.5" fill="#c99a50"/><circle cx="362.3" cy="283.4" r="1.9" fill="#c99a50"/><circle cx="627.4" cy="297.8" r="2.7" fill="#c99a50"/><circle cx="700.1" cy="294.7" r="2.2" fill="#c99a50"/><circle cx="644.1" cy="289.4" r="2.5" fill="#c99a50"/><circle cx="81.4" cy="278.2" r="3.1" fill="#c99a50"/><circle cx="231.9" cy="279.6" r="3.0" fill="#c99a50"/><circle cx="456.1" cy="247.9" r="2.6" fill="#c99a50"/><circle cx="194.3" cy="290.6" r="2.7" fill="#c99a50"/><circle cx="233.6" cy="292.6" r="2.6" fill="#c99a50"/><circle cx="257.8" cy="289.4" r="3.0" fill="#c99a50"/><circle cx="678.8" cy="291.9" r="2.7" fill="#c99a50"/><circle cx="531.0" cy="277.4" r="2.4" fill="#c99a50"/><circle cx="750.5" cy="264.4" r="1.7" fill="#c99a50"/><circle cx="542.3" cy="271.9" r="2.5" fill="#c99a50"/><circle cx="454.4" cy="259.0" r="1.9" fill="#c99a50"/><circle cx="54.2" cy="286.6" r="3.1" fill="#c99a50"/><circle cx="529.5" cy="252.1" r="3.2" fill="#c99a50"/><circle cx="628.3" cy="272.5" r="1.6" fill="#c99a50"/><circle cx="641.3" cy="278.4" r="2.6" fill="#c99a50"/><circle cx="13.9" cy="284.1" r="1.7" fill="#c99a50"/><circle cx="363.3" cy="253.5" r="2.2" fill="#c99a50"/><circle cx="676.5" cy="284.9" r="2.9" fill="#c99a50"/><circle cx="226.6" cy="266.2" r="2.6" fill="#c99a50"/><circle cx="25.9" cy="267.4" r="3.2" fill="#c99a50"/><circle cx="573.1" cy="290.9" r="2.1" fill="#c99a50"/><circle cx="525.0" cy="287.0" r="2.7" fill="#c99a50"/><circle cx="332.4" cy="255.1" r="1.6" fill="#c99a50"/><circle cx="674.1" cy="294.5" r="2.0" fill="#c99a50"/><circle cx="574.4" cy="267.2" r="2.6" fill="#c99a50"/><circle cx="639.8" cy="262.7" r="2.6" fill="#c99a50"/><circle cx="194.6" cy="272.6" r="1.6" fill="#c99a50"/><circle cx="200.3" cy="260.9" r="3.1" fill="#c99a50"/><circle cx="100.6" cy="285.4" r="1.7" fill="#c99a50"/><circle cx="749.6" cy="254.6" r="1.7" fill="#c99a50"/><circle cx="160.8" cy="294.5" r="2.7" fill="#c99a50"/><circle cx="676.8" cy="272.0" r="1.8" fill="#c99a50"/><circle cx="258.8" cy="269.7" r="3.2" fill="#c99a50"/><circle cx="126.5" cy="258.7" r="2.9" fill="#c99a50"/><line x1="30.0" y1="28.0" x2="161.6" y2="28.0" stroke="var(--fg)" stroke-width="3" stroke-linecap="round"/><polygon points="170.0,28.0 159.6,34.0 159.6,22.0" fill="var(--fg)"/><text x="100.0" y="48.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Wind</text><path d="M480,236 Q560,120 731,72.5" fill="none" stroke="#8a6f57" stroke-width="2" stroke-dasharray="3 5"/><polygon points="742.0,69.5 734.3,77.3 731.3,66.8" fill="#8a6f57"/><circle cx="597.3" cy="66.5" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="508.1" cy="106.4" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="471.8" cy="83.1" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="717.0" cy="38.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="622.4" cy="82.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="481.2" cy="73.9" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="663.5" cy="68.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="669.4" cy="47.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="535.5" cy="51.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="609.2" cy="104.3" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="632.4" cy="92.5" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="575.5" cy="93.9" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="498.0" cy="66.7" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="655.4" cy="87.7" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="586.0" cy="47.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="543.4" cy="58.3" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="547.3" cy="100.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="524.9" cy="106.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="711.8" cy="37.3" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="574.2" cy="76.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="476.5" cy="77.3" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="719.3" cy="40.9" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="634.1" cy="46.6" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="629.1" cy="101.1" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="525.8" cy="45.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="493.0" cy="84.4" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="474.8" cy="53.7" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="606.6" cy="104.3" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="585.5" cy="68.9" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="645.6" cy="44.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="629.4" cy="50.5" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="637.4" cy="105.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="484.9" cy="86.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="636.8" cy="48.4" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="543.8" cy="113.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="744.4" cy="40.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="664.0" cy="102.9" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="535.1" cy="86.9" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="481.8" cy="72.9" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="655.4" cy="78.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="683.0" cy="41.3" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="565.5" cy="102.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="630.6" cy="70.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="580.6" cy="110.4" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="628.0" cy="39.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="689.8" cy="57.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="589.2" cy="55.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="592.1" cy="63.4" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="494.4" cy="90.6" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="498.3" cy="101.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="477.0" cy="102.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="692.1" cy="69.5" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="665.1" cy="53.7" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="672.8" cy="65.6" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="533.5" cy="111.7" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="580.2" cy="67.5" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="706.5" cy="59.7" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="653.6" cy="49.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="701.9" cy="52.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="483.9" cy="115.4" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="517.5" cy="111.4" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="741.2" cy="74.2" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="473.3" cy="52.1" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="527.4" cy="71.8" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="638.2" cy="105.6" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="567.5" cy="52.0" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="624.5" cy="48.3" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="493.8" cy="85.5" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="661.4" cy="41.1" r="1.3" fill="#8a6f57" opacity=".75"/><circle cx="594.1" cy="89.8" r="1.3" fill="#8a6f57" opacity=".75"/><text x="610.0" y="26.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Suspension: silt and dust</text><text x="610.0" y="42.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">carried high and far</text><path d="M40,236 Q95,100 150,236 Q205,100 260,236 Q315,100 370,236 Q425,100 480,236" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="5 4"/><polygon points="150.0,236.0 141.3,229.2 151.5,225.1" fill="var(--accent)"/><circle cx="160" cy="228" r="2" fill="#a8792f"/><circle cx="166" cy="232" r="2" fill="#a8792f"/><polygon points="260.0,236.0 251.3,229.2 261.5,225.1" fill="var(--accent)"/><circle cx="270" cy="228" r="2" fill="#a8792f"/><circle cx="276" cy="232" r="2" fill="#a8792f"/><polygon points="370.0,236.0 361.3,229.2 371.5,225.1" fill="var(--accent)"/><circle cx="380" cy="228" r="2" fill="#a8792f"/><circle cx="386" cy="232" r="2" fill="#a8792f"/><polygon points="480.0,236.0 471.3,229.2 481.5,225.1" fill="var(--accent)"/><circle cx="490" cy="228" r="2" fill="#a8792f"/><circle cx="496" cy="232" r="2" fill="#a8792f"/><circle r="5" fill="var(--accent)" stroke="#fff" stroke-width="1"><animateMotion dur="4.5s" begin="0.0s" repeatCount="indefinite" path="M40,236 Q95,100 150,236 Q205,100 260,236 Q315,100 370,236 Q425,100 480,236"/></circle><circle r="5" fill="var(--accent)" stroke="#fff" stroke-width="1"><animateMotion dur="4.5s" begin="-1.5s" repeatCount="indefinite" path="M40,236 Q95,100 150,236 Q205,100 260,236 Q315,100 370,236 Q425,100 480,236"/></circle><circle r="5" fill="var(--accent)" stroke="#fff" stroke-width="1"><animateMotion dur="4.5s" begin="-3.0s" repeatCount="indefinite" path="M40,236 Q95,100 150,236 Q205,100 260,236 Q315,100 370,236 Q425,100 480,236"/></circle><text x="265.0" y="108.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">Saltation zone: sand grains hop and splash,</text><text x="265.0" y="123.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">up to about 1 m above the ground</text><g class="slide" style="--slide:18px"><circle cx="560" cy="232" r="8" fill="#a77b42" stroke="#6f563f" stroke-width="1.5"/></g><g class="slide" style="--slide:22px"><circle cx="600" cy="232" r="8" fill="#a77b42" stroke="#6f563f" stroke-width="1.5"/></g><g class="slide" style="--slide:26px"><circle cx="645" cy="232" r="8" fill="#a77b42" stroke="#6f563f" stroke-width="1.5"/></g><g class="slide" style="--slide:30px"><circle cx="690" cy="232" r="8" fill="#a77b42" stroke="#6f563f" stroke-width="1.5"/></g><text x="630.0" y="196.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">Creep: coarse grains roll</text><text x="630.0" y="211.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">and slide along the surface</text></svg></div>
+    <figcaption>Animation: the three ways wind moves sediment. Brown dots, dust and silt in suspension; gold dots on dashed arcs, sand grains in saltation (short lines mark the splash where each lands); large brown grains, creep. Side view, wind from the left; not to scale.<span class="credit">Drawn for this guide from the chapter's text and its "Saltation mechanics" animation (NASA, public domain).</span></figcaption>
+  </figure>
+  <div class="tablewrap" id="tbl-transport">
+    <table>
+      <caption>How wind moves sediment.</caption>
+      <thead><tr><th>Process</th><th>Grain size</th><th>How it moves</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="suspended load">Suspension</button></td><td>Silt and dust (about 70 µm or smaller)</td><td>Lifted high and carried far, as in haboobs; settles as loess</td></tr>
+        <tr><td><button class="term" data-term="saltation">Saltation</button></td><td>Sand</td><td>Grains are lifted, carried a short distance, and drop and splash into the surface, knocking loose other grains, which hop in turn; a cascade up to a meter or so above the ground</td></tr>
+        <tr><td><button class="term" data-term="creep">Creep</button></td><td>Coarser grains</td><td>Slide or roll along the surface when the wind is strong enough</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Because saltating grains keep striking one another, windblown sand grains are usually <b>well rounded with frosted surfaces</b> (<a href="#fig-grains">Figure 13.16</a>). The suspended load is separated from the sand near the ground and carried off as dust, so wind is an effective <button class="term" data-term="sorting">sorting</button> agent: it separates sand from dust-sized particles (Unit 5).</p>
+  <figure id="fig-grains">
+    <div class="frame"><img src="images/unit13/grains.webp" alt="Close-up of many rounded orange-pink sand grains with dull, frosted surfaces." loading="lazy" width="1000" height="750" style="max-height:440px;width:auto"></div>
+    <figcaption>Enlarged windblown sand grains from Coral Pink Sand Dunes State Park, Utah, rounded and frosted by saltation.<span class="credit">Mark A. Wilson, public domain (via the textbook).</span></figcaption>
+  </figure>
+
+  <h3 id="s13-2-stones">Sliding stones</h3>
+  <div class="pair">
+    <figure id="fig-racetrack">
+      <div class="frame"><img src="images/unit13/racetrack.webp" alt="A rock sitting on a flat, cracked dry lake bed at the end of a long groove it has carved in the mud." loading="lazy" width="816" height="899" style="height:340px;width:auto"></div>
+      <figcaption>A sliding stone and its trail on Racetrack Playa, Death Valley National Park, California.<span class="credit">Laurence G. Charlot, CC BY-SA (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>A solved mystery</h4>
+      <p><button class="term" data-term="sliding stones">Sliding stones</button> (sailing stones, sliding rocks) are large rocks that move across flat desert surfaces, leaving trails. The best known are on Racetrack Playa in Death Valley. For years their movement could not be explained. Recent observational and experimental studies, including measurements of actual motion and lab re-creations, show that the stones are held in thin sheets of ice that the wind pushes across the playa.</p>
+      <p class="small">Field measurements (Norris and others, 2014) found the ice sheets were moved by light winds; the chapter says "high winds". See the fact-check notes.</p>
+    </div>
+  </div>
+
+  <h3 id="s13-2-abrasion">Sandblasted landforms</h3>
+  <p>The zone of saltating sand is a powerful erosive agent: bedrock and loose rocks in it are sandblasted (<a href="#fig-abrasion">Figure 13.18</a>, <a href="#tbl-abrasion">Table 13.4</a>).</p>
+  <figure id="fig-abrasion">
+    <ul class="gallery" style="--cols:3">
+      <li><img src="images/unit13/ventifact.webp" alt="A rock on a desert floor with several flat, polished faces meeting at sharp edges." loading="lazy" width="1000" height="926"><span><b>Ventifact</b>Mojave Desert near Barstow, California. Mark A. Wilson, public domain.</span></li>
+      <li><img src="images/unit13/yardang.webp" alt="A large rock standing on a narrow base that has been cut back by sandblasting." loading="lazy" width="1000" height="742"><span><b>Rock narrowed at its base</b>Near Salar de Uyuni, Bolivia. Thomas Wilken, CC BY-SA.</span></li>
+      <li><img src="images/unit13/blowout.webp" alt="A bowl-shaped hollow in sandy ground among clumps of grass." loading="lazy" width="608" height="372"><span><b>Blowout</b>Texas. Leaflet, CC BY-SA.</span></li>
+    </ul>
+    <figcaption>Wind-eroded features. The middle photo is the one the chapter uses to illustrate a yardang (see the fact-check notes).<span class="credit">All via the textbook.</span></figcaption>
+  </figure>
+  <div class="tablewrap" id="tbl-abrasion">
+    <table>
+      <caption>Features made by wind erosion.</caption>
+      <thead><tr><th>Feature</th><th>What it is</th><th>How it forms</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="yardang">Yardang</button></td><td>A bedrock outcrop with a sandblasted shape</td><td>Abrasion by saltating sand</td></tr>
+        <tr><td><button class="term" data-term="ventifact">Ventifact</button></td><td>A rock or boulder on the surface with blasted and polished faces</td><td>Sand abrasion; when the main wind direction shifts, several polished faces form</td></tr>
+        <tr><td><button class="term" data-term="blowout">Blowout</button></td><td>A bowl-shaped depression in sand and silt</td><td>Clumps of vegetation anchor sediment; wind removes the unanchored material between them</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/13-deserts/" target="_blank" rel="noopener">Section 13.2 quiz in the textbook ↗</a></p>
+</section>
+
+<section id="s13-3">
+  <h2 class="sec"><span class="n">13.3</span>Desert landforms</h2>
+  <p>In the American Southwest, streams leave the mountains and enter the valleys, building a series of landforms (<a href="#fig-landforms">Figure 13.19</a>, <a href="#tbl-landforms">Table 13.5</a>):</p>
+  <ul>
+    <li><b><button class="term" data-term="alluvial fan">Alluvial fan</button></b>: when a stream leaves its narrow canyon, its flow is no longer held in by the canyon walls and spreads out. On the lower slope the water slows and drops its coarser load. As this conglomerate-like material fills the channel, it deflects the stream, so the stream splits into a system of radial <b>distributary channels</b>, much as a river builds a <button class="term" data-term="delta">delta</button> where it enters a body of water. The result is a fan-shaped deposit.</li>
+    <li><b><button class="term" data-term="bajada">Bajada</button></b>: alluvial fans keep growing and may join neighboring fans to form an apron of <button class="term" data-term="alluvium">alluvium</button> along the mountain front.</li>
+    <li><b><button class="term" data-term="inselberg">Inselberg</button></b>: as the mountains wear away and their sediment piles up, first in fans and then in bajadas, the mountains are eventually buried in their own debris. The remnants that still stick up are inselbergs, "island mountains", first described by the German geologist Wilhelm Bornhardt (1864–1946).</li>
+    <li><b><button class="term" data-term="playa">Playa</button></b>: where the valley is an enclosed basin, so streams entering it do not drain out, the water leaves only by evaporation and a dry lake bed forms. Playas are among the flattest of all landforms. A playa may cover a large area yet be filled only a few inches deep after a heavy thunderstorm.</li>
+  </ul>
+  <figure id="fig-landforms">
+    <ul class="gallery" style="--cols:4">
+      <li><img src="images/unit13/fan.webp" alt="Aerial view of a fan-shaped deposit spreading from a canyon mouth onto a valley floor." loading="lazy" width="1000" height="528"><span><b>Alluvial fan</b>Death Valley, California. USGS, public domain.</span></li>
+      <li><img src="images/unit13/bajada.webp" alt="A mountain whose base is wrapped in a continuous sloping apron of sediment." loading="lazy" width="1000" height="667"><span><b>Bajada</b>Frisco Peak, Utah. GerthMichael, CC BY-SA.</span></li>
+      <li><img src="images/unit13/inselbergs.webp" alt="Aerial photo of small rocky hills rising out of a broad sediment-covered plain." loading="lazy" width="500" height="667"><span><b>Inselbergs</b>Mojave Desert, California. USGS, public domain.</span></li>
+      <li><img src="images/unit13/playa.webp" alt="Satellite image of a flat, pale dry lake bed in a valley surrounded by mountains." loading="lazy" width="1000" height="750"><span><b>Playa</b>Near Dolan Springs, Arizona. NASA, public domain.</span></li>
+    </ul>
+    <figcaption>Desert landforms built by streams leaving the mountains. Photos are cropped to squares.<span class="credit">All via the textbook.</span></figcaption>
+  </figure>
+  <p>These landforms record how a desert landscape ages (<a href="#fig-evolution">Figure 13.20</a>): young fault-block mountains with sharp peaks and separate fans at their canyon mouths, then bajadas along the mountain fronts, and finally subdued inselbergs sticking up through a sea of joined bajadas. A trip from the Wasatch Front in Utah southwest to the Pacific passes through all three stages (13.4).</p>
+  <figure id="fig-evolution">
+    <div class="frame"><svg viewBox="0 0 760 352" role="img" aria-labelledby="ev-en-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="ev-en-t">Three map views of a desert basin between mountain ranges. Stage 1: separate alluvial fans at canyon mouths and a playa in the middle. Stage 2: the ranges are worn back and the fans have joined into bajadas. Stage 3: only small inselbergs stick up through coalesced bajadas.</title><g transform="translate(0,26)"><g transform="translate(0,0)"><clipPath id="evc0-en"><rect x="0" y="40" width="245" height="250"/></clipPath><g clip-path="url(#evc0-en)"><rect x="0" y="40" width="245" height="250" fill="#f3e2bd"/><polygon points="0,40 44.1,40.0 55.6,52.0 54.2,64.0 46.1,76.0 49.9,88.0 49.2,100.0 52.4,112.0 54.6,124.0 43.5,136.0 42.5,148.0 55.4,160.0 48.9,172.0 54.2,184.0 42.0,196.0 49.1,208.0 53.5,220.0 45.7,232.0 57.1,244.0 56.4,256.0 42.5,268.0 42.4,280.0 0,290" fill="#7a5a3e"/><polygon points="245,40 202.3,40.0 202.2,52.0 187.9,64.0 188.4,76.0 200.4,88.0 198.8,100.0 197.7,112.0 191.9,124.0 196.7,136.0 196.7,148.0 196.3,160.0 189.5,172.0 193.9,184.0 193.3,196.0 198.6,208.0 202.9,220.0 202.2,232.0 195.7,244.0 194.1,256.0 191.3,268.0 187.6,280.0 245,290" fill="#7a5a3e"/><path d="M50,58 A32,32 0 0 1 50,122 Z" fill="#e3bd78" stroke="#b8873a" stroke-width="1"/><line x1="50" y1="90" x2="24" y2="90" stroke="#3f7fbf" stroke-width="2"/><line x1="50" y1="90" x2="70.8" y2="72.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="50" y1="90" x2="77.2" y2="90.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="50" y1="90" x2="70.8" y2="107.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M50,138 A32,32 0 0 1 50,202 Z" fill="#e3bd78" stroke="#b8873a" stroke-width="1"/><line x1="50" y1="170" x2="24" y2="170" stroke="#3f7fbf" stroke-width="2"/><line x1="50" y1="170" x2="70.8" y2="152.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="50" y1="170" x2="77.2" y2="170.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="50" y1="170" x2="70.8" y2="187.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M50,218 A32,32 0 0 1 50,282 Z" fill="#e3bd78" stroke="#b8873a" stroke-width="1"/><line x1="50" y1="250" x2="24" y2="250" stroke="#3f7fbf" stroke-width="2"/><line x1="50" y1="250" x2="70.8" y2="232.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="50" y1="250" x2="77.2" y2="250.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="50" y1="250" x2="70.8" y2="267.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M195,93 A32,32 0 0 0 195,157 Z" fill="#e3bd78" stroke="#b8873a" stroke-width="1"/><line x1="195" y1="125" x2="221" y2="125" stroke="#3f7fbf" stroke-width="2"/><line x1="195" y1="125" x2="174.2" y2="107.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="195" y1="125" x2="167.8" y2="125.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="195" y1="125" x2="174.2" y2="142.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M195,183 A32,32 0 0 0 195,247 Z" fill="#e3bd78" stroke="#b8873a" stroke-width="1"/><line x1="195" y1="215" x2="221" y2="215" stroke="#3f7fbf" stroke-width="2"/><line x1="195" y1="215" x2="174.2" y2="197.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="195" y1="215" x2="167.8" y2="215.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="195" y1="215" x2="174.2" y2="232.5" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><ellipse cx="122" cy="170" rx="26" ry="48" fill="#f7f4ec" stroke="#bdb4a0"/><rect x="100.6" y="161.2" width="42.8" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="122.0" y="170.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">playa</text><line x1="70" y1="90" x2="100" y2="60" stroke="#2a1f14" stroke-width="1.3"/><circle cx="70" cy="90" r="3" fill="#2a1f14"/><rect x="75.0" y="47.2" width="85.9" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="118.0" y="56.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">alluvial fan</text><rect x="6.6" y="266.2" width="42.8" height="17.6" rx="8.8" fill="#7a5a3e" opacity="1"/><text x="28.0" y="275.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">range</text></g><rect x="0" y="40" width="245" height="250" fill="none" stroke="var(--line)"/></g><text x="122.0" y="14.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">1  Young</text><text x="122.0" y="30.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">fans at canyon mouths (Utah)</text><g transform="translate(257,0)"><clipPath id="evc257-en"><rect x="0" y="40" width="245" height="250"/></clipPath><g clip-path="url(#evc257-en)"><rect x="0" y="40" width="245" height="250" fill="#f3e2bd"/><polygon points="0,40 31.8,40.0 36.7,52.0 33.9,64.0 37.7,76.0 38.0,88.0 29.0,100.0 28.2,112.0 41.4,124.0 32.1,136.0 31.7,148.0 43.9,160.0 35.5,172.0 41.4,184.0 35.6,196.0 38.2,208.0 30.4,220.0 38.2,232.0 41.9,244.0 36.4,256.0 39.9,268.0 38.7,280.0 0,290" fill="#7a5a3e"/><polygon points="245,40 204.8,40.0 202.7,52.0 207.3,64.0 203.5,76.0 202.1,88.0 207.4,100.0 215.7,112.0 213.8,124.0 213.2,136.0 204.6,148.0 209.6,160.0 205.4,172.0 203.8,184.0 202.7,196.0 204.4,208.0 215.8,220.0 214.3,232.0 213.9,244.0 213.8,256.0 204.1,268.0 206.0,280.0 245,290" fill="#7a5a3e"/><rect x="36" y="40" width="42" height="250" fill="#e3bd78"/><rect x="167" y="40" width="42" height="250" fill="#e3bd78"/><path d="M36,0 A50,50 0 0 1 36,100 Z" fill="#e3bd78"/><line x1="36" y1="50" x2="10" y2="50" stroke="#3f7fbf" stroke-width="2"/><line x1="36" y1="50" x2="68.6" y2="22.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="50" x2="78.5" y2="50.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="50" x2="68.6" y2="77.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M36,60 A50,50 0 0 1 36,160 Z" fill="#e3bd78"/><line x1="36" y1="110" x2="10" y2="110" stroke="#3f7fbf" stroke-width="2"/><line x1="36" y1="110" x2="68.6" y2="82.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="110" x2="78.5" y2="110.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="110" x2="68.6" y2="137.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M36,120 A50,50 0 0 1 36,220 Z" fill="#e3bd78"/><line x1="36" y1="170" x2="10" y2="170" stroke="#3f7fbf" stroke-width="2"/><line x1="36" y1="170" x2="68.6" y2="142.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="170" x2="78.5" y2="170.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="170" x2="68.6" y2="197.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M36,180 A50,50 0 0 1 36,280 Z" fill="#e3bd78"/><line x1="36" y1="230" x2="10" y2="230" stroke="#3f7fbf" stroke-width="2"/><line x1="36" y1="230" x2="68.6" y2="202.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="230" x2="78.5" y2="230.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="230" x2="68.6" y2="257.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M36,240 A50,50 0 0 1 36,340 Z" fill="#e3bd78"/><line x1="36" y1="290" x2="10" y2="290" stroke="#3f7fbf" stroke-width="2"/><line x1="36" y1="290" x2="68.6" y2="262.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="290" x2="78.5" y2="290.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="36" y1="290" x2="68.6" y2="317.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M209,25 A50,50 0 0 0 209,125 Z" fill="#e3bd78"/><line x1="209" y1="75" x2="235" y2="75" stroke="#3f7fbf" stroke-width="2"/><line x1="209" y1="75" x2="176.4" y2="47.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="75" x2="166.5" y2="75.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="75" x2="176.4" y2="102.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M209,90 A50,50 0 0 0 209,190 Z" fill="#e3bd78"/><line x1="209" y1="140" x2="235" y2="140" stroke="#3f7fbf" stroke-width="2"/><line x1="209" y1="140" x2="176.4" y2="112.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="140" x2="166.5" y2="140.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="140" x2="176.4" y2="167.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M209,155 A50,50 0 0 0 209,255 Z" fill="#e3bd78"/><line x1="209" y1="205" x2="235" y2="205" stroke="#3f7fbf" stroke-width="2"/><line x1="209" y1="205" x2="176.4" y2="177.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="205" x2="166.5" y2="205.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="205" x2="176.4" y2="232.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M209,220 A50,50 0 0 0 209,320 Z" fill="#e3bd78"/><line x1="209" y1="270" x2="235" y2="270" stroke="#3f7fbf" stroke-width="2"/><line x1="209" y1="270" x2="176.4" y2="242.7" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="270" x2="166.5" y2="270.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="209" y1="270" x2="176.4" y2="297.3" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><ellipse cx="122" cy="168" rx="16" ry="36" fill="#f7f4ec" stroke="#bdb4a0"/><rect x="100.6" y="205.2" width="42.8" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="122.0" y="214.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">playa</text><rect x="51.5" y="47.2" width="49.0" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="76.0" y="56.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">bajada</text><line x1="76" y1="64" x2="66" y2="90" stroke="#2a1f14" stroke-width="1.3"/><circle cx="66" cy="90" r="3" fill="#2a1f14"/></g><rect x="0" y="40" width="245" height="250" fill="none" stroke="var(--line)"/></g><text x="379.0" y="14.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">2  Middle</text><text x="379.0" y="30.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">fans join into bajadas (S Nevada)</text><g transform="translate(514,0)"><clipPath id="evc514-en"><rect x="0" y="40" width="245" height="250"/></clipPath><g clip-path="url(#evc514-en)"><rect x="0" y="40" width="245" height="250" fill="#f3e2bd"/><rect x="0" y="40" width="245" height="250" fill="#e3bd78"/><ellipse cx="38" cy="92" rx="20" ry="14" fill="#7a5a3e"/><ellipse cx="30" cy="222" rx="16" ry="12" fill="#7a5a3e"/><ellipse cx="200" cy="150" rx="22" ry="15" fill="#7a5a3e"/><ellipse cx="212" cy="258" rx="14" ry="10" fill="#7a5a3e"/><ellipse cx="150" cy="70" rx="10" ry="8" fill="#7a5a3e"/><line x1="60" y1="92" x2="86.0" y2="77.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="60" y1="92" x2="90.0" y2="92.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="60" y1="92" x2="86.0" y2="107.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="48" y1="222" x2="74.0" y2="207.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="48" y1="222" x2="78.0" y2="222.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="48" y1="222" x2="74.0" y2="237.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="176" y1="150" x2="150.0" y2="135.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="176" y1="150" x2="146.0" y2="150.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><line x1="176" y1="150" x2="150.0" y2="165.0" stroke="#3f7fbf" stroke-width="1.4" stroke-dasharray="4 3"/><ellipse cx="118" cy="182" rx="12" ry="24" fill="#f7f4ec" stroke="#bdb4a0"/><rect x="96.6" y="211.2" width="42.8" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="118.0" y="220.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">playa</text><line x1="200" y1="137" x2="186" y2="110" stroke="#2a1f14" stroke-width="1.3"/><circle cx="200" cy="140" r="3" fill="#fff"/><rect x="142.3" y="91.2" width="67.4" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="176.0" y="100.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">inselberg</text><rect x="21.6" y="266.2" width="116.7" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="80.0" y="275.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">coalesced bajadas</text></g><rect x="0" y="40" width="245" height="250" fill="none" stroke="var(--line)"/></g><text x="636.0" y="14.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">3  Old</text><text x="636.0" y="30.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">inselbergs in sediment (Mojave)</text><rect x="20" y="304" width="22" height="16" fill="#7a5a3e"/><text x="48.0" y="312.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">mountain bedrock</text><rect x="190" y="304" width="22" height="16" fill="#e3bd78" stroke="#b8873a"/><text x="218.0" y="312.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">fan sediment (alluvium)</text><line x1="400" y1="312" x2="428" y2="312" stroke="#3f7fbf" stroke-width="1.6" stroke-dasharray="4 3"/><text x="434.0" y="312.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">ephemeral channels</text><rect x="585" y="304" width="22" height="16" fill="#f7f4ec" stroke="#bdb4a0"/><text x="613.0" y="312.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">playa (dry lake bed)</text></g><text x="380.0" y="10.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Map view: each panel is seen from directly above</text></svg></div>
+    <figcaption>Stages of desert landscape development, from the textbook's Utah-to-Mojave journey. Solid blue lines: streams leaving their canyons; dashed blue lines: ephemeral distributary channels on the fans. Map view of a basin between two ranges; not to scale.<span class="credit">Drawn for this guide from the chapter's text.</span></figcaption>
+  </figure>
+  <div class="tablewrap" id="tbl-landforms">
+    <table>
+      <caption>Desert landforms built by deposition.</caption>
+      <thead><tr><th>Landform</th><th>Where</th><th>How it forms</th></tr></thead>
+      <tbody>
+        <tr><td>Alluvial fan</td><td>At a canyon mouth</td><td>Stream spreads, slows, drops coarse load; radial distributaries build a fan</td></tr>
+        <tr><td>Bajada</td><td>Along a mountain front</td><td>Neighboring fans grow and join into an apron of alluvium</td></tr>
+        <tr><td>Inselberg</td><td>Rising out of the basin fill</td><td>Mountains worn down and buried in their own debris; only remnants stick up</td></tr>
+        <tr><td>Playa</td><td>Floor of an enclosed basin</td><td>Water that cannot drain out evaporates, leaving a flat dry lake bed</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="s13-3-water">Ephemeral streams and flash floods</h3>
+  <p>Playa lakes and desert streams that hold water only after rainstorms are called <button class="term" data-term="ephemeral">intermittent or ephemeral</button>. Because desert thunderstorms are intense, ephemeral drainage can carry a large volume of water in a short time. Desert soils lack the organic matter that helps water soak in. Instead, runoff compacts the ground surface and makes the soil <b>hydrophobic</b> (water-repellent). Because of this hard surface, ephemeral streams can gather water from large areas and fill suddenly from storms many miles away.</p>
+  <figure id="fig-washes">
+    <ul class="gallery" style="--cols:2">
+      <li><img src="images/unit13/drywash.webp" alt="A dry, sandy stream bed winding through badlands." loading="lazy" width="1000" height="603"><span><b>Dry wash (ephemeral stream)</b>Petrified Forest National Park, Arizona. Finetooth, CC BY-SA.</span></li>
+      <li><img src="images/unit13/flashflood.webp" alt="A muddy torrent of water rushing down a normally dry desert channel." loading="lazy" width="1000" height="750"><span><b>Flash flood in a dry wash</b>USGS, public domain.</span></li>
+    </ul>
+    <figcaption>The same kind of channel without and with water. Photos are cropped to squares.<span class="credit">Both via the textbook.</span></figcaption>
+  </figure>
+  <p>High-volume ephemeral flows, called <b>flash floods</b>, may move as <button class="term" data-term="sheetwash">sheet flow (sheetwash)</button> across the land or be channeled through normally dry <button class="term" data-term="arroyo">arroyos</button> or canyons. A dry channel can fill quickly with a mass of water and debris that charges down the arroyo and may overflow its banks. Flash floods are a major factor in desert <button class="term" data-term="deposition">deposition</button>.</p>
+  <div class="callout warn">
+    <h4>Flash flood danger</h4>
+    <p>The storm feeding a flash flood may be miles away, out of sight. People hiking or camping in arroyos that have been bone dry for months, or years, have been swept away by sudden floods.</p>
+  </div>
+
+  <h3 id="s13-3-1">13.3.1 Sand</h3>
+  <p>The popular picture of a desert is a broad expanse of sand, but geologically deserts are defined by a lack of water. Arid regions that look like a sea of sand are a kind of desert called an <button class="term" data-term="erg">erg</button> (<a href="#fig-erg">Figure 13.1</a>). An erg is made of fine-grained, loose sand, often blown by wind (<button class="term" data-term="aeolian">aeolian</button> processes) into <button class="term" data-term="dune">dunes</button>.</p>
+  <ul>
+    <li>Best-known erg: the <b>Rub' al Khali</b> ("Empty Quarter") of the Arabian Peninsula.</li>
+    <li>In the United States: Great Sand Dunes National Park (Colorado), Little Sahara Recreation Area (Utah), White Sands National Park (New Mexico, a national monument until 2019), and parts of Death Valley National Park (California).</li>
+    <li>Ergs are not limited to deserts; they can form wherever there is plenty of sand: as far north as the Athabasca Sand Dunes Provincial Park in Saskatchewan, Canada, and as coastal ergs along lakes and oceans in Oregon, Michigan, and Indiana.</li>
+  </ul>
+  <p>Inside a sand dune is <button class="term" data-term="cross bedding">cross bedding</button> (<a href="#fig-dune">Figure 13.22</a>). Wind blows up the gentle windward (<b>stoss</b>) side and carries sand to the crest, depositing layers parallel to the stoss side. Sand builds up the crest and pours over the top until the steep leeward (<b>slip</b>) face reaches the <button class="term" data-term="angle of repose">angle of repose</button>, the steepest angle at which the loose sand stays put. Dunes are unstable and move: sand is eroded from the stoss side and keeps falling down the slip face, burying earlier stoss and slip-face layers and making the cross beds. Most are reworked over and over, but sometimes they are preserved in a depression and then lithified. Shifting wind directions and plentiful sand create chaotic cross-bed patterns, like those in Zion National Park, Utah (<a href="#fig-zion">Figure 13.23</a>).</p>
+  <figure id="fig-dune">
+    <div class="frame"><svg viewBox="0 0 760 300" role="img" aria-labelledby="dune-en-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="dune-en-t">Side view of a sand dune with the wind from the left: sand moves up the gentle stoss side, spills over the crest and avalanches down the steep slip face at the angle of repose. Inside, inclined cross beds parallel to the slip face are former slip faces buried as the dune moved.</title><rect x="0" y="0" width="760" height="260" fill="#2f7a8c" opacity=".07"/><rect x="0" y="260" width="760" height="40" fill="#c99a50"/><polygon points="60,260 500,120 707.6,260" fill="#e6c27a"/><line x1="462.6" y1="131.9" x2="652.6" y2="260" stroke="#a8792f" stroke-width="2"/><line x1="425.3" y1="143.8" x2="597.6" y2="260" stroke="#a8792f" stroke-width="2"/><line x1="387.9" y1="155.7" x2="542.6" y2="260" stroke="#a8792f" stroke-width="2"/><line x1="350.5" y1="167.6" x2="487.6" y2="260" stroke="#a8792f" stroke-width="2"/><line x1="313.1" y1="179.5" x2="432.6" y2="260" stroke="#a8792f" stroke-width="2"/><line x1="275.8" y1="191.3" x2="377.6" y2="260" stroke="#a8792f" stroke-width="2"/><line x1="500" y1="120" x2="707.6" y2="260" stroke="#7a5320" stroke-width="2.5"/><line x1="120.0" y1="214.9" x2="422.0" y2="118.8" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".85"/><line x1="120.0" y1="214.9" x2="422.0" y2="118.8" stroke="var(--fg)" stroke-width="3" stroke-linecap="round"/><polygon points="430.0,116.3 420.2,127.0 415.8,113.2" fill="#fff"/><polygon points="430.0,116.3 421.9,125.1 418.3,113.7" fill="var(--fg)"/><text x="250.0" y="112.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="600" class="svg-ink halo">Sand is blown up the stoss (windward) side</text><line x1="542.0" y1="118.3" x2="669.0" y2="204.0" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".85"/><line x1="542.0" y1="118.3" x2="669.0" y2="204.0" stroke="#7a5320" stroke-width="3" stroke-linecap="round"/><polygon points="676.0,208.7 661.5,207.7 669.6,195.7" fill="#fff"/><polygon points="676.0,208.7 664.0,207.9 670.7,197.9" fill="#7a5320"/><text x="548.0" y="64.0" dy=".35em" text-anchor="start" font-size="12" font-weight="600" class="svg-ink halo">Sand avalanches down the</text><text x="548.0" y="80.0" dy=".35em" text-anchor="start" font-size="12" font-weight="600" class="svg-ink halo">slip (leeward) face</text><text x="500.0" y="104.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">crest</text><line x1="30.0" y1="60.0" x2="141.6" y2="60.0" stroke="#2f7a8c" stroke-width="3" stroke-linecap="round"/><polygon points="150.0,60.0 139.6,66.0 139.6,54.0" fill="#2f7a8c"/><text x="90.0" y="42.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" fill="#2f7a8c" class="halo">Wind</text><path d="M665.6,260 A42,42 0 0 1 672.7,236.5" fill="none" stroke="var(--rust)" stroke-width="2.5"/><line x1="697.6" y1="270" x2="681.6" y2="252" stroke="var(--rust)" stroke-width="1.5"/><rect x="573.7" y="273.2" width="178.3" height="17.6" rx="8.8" fill="#a63d2a" opacity="1"/><text x="662.8" y="282.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">angle of repose (about 34°)</text><line x1="465.2" y1="207.8" x2="300" y2="272" stroke="#2a1f14" stroke-width="1.5"/><circle cx="465.2" cy="207.8" r="3.5" fill="#2a1f14"/><rect x="183.1" y="273.2" width="233.8" height="17.6" rx="8.8" fill="#fffaf0" opacity="1"/><text x="300.0" y="282.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">Cross beds: buried former slip faces</text><text x="250.0" y="22.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="700" class="svg-ink halo">The dune migrates downwind →</text></svg></div>
+    <figcaption>Anatomy of a moving dune. Brown lines inside the dune: cross beds. Red arc: the angle of repose of the slip face. Side view, wind from the left; the slip face is drawn at its true angle, the stoss side steeper than real.<span class="credit">Drawn for this guide from the chapter's text and its "Formation of cross beds" animation (USGS, public domain); angle of repose value from Wikipedia, "Angle of repose".</span></figcaption>
+  </figure>
+  <figure id="fig-zion">
+    <div class="frame"><img src="images/unit13/zion.webp" alt="A sandstone cliff face crossed by many sets of thin, sloping layers cut off at different angles." loading="lazy" width="1000" height="667"></div>
+    <figcaption>Cross beds in the Navajo Sandstone, Zion National Park, Utah: the inside of Jurassic dunes, turned to rock.<span class="credit">Roy Luck, CC BY (via the textbook).</span></figcaption>
+  </figure>
+  <p>In the <button class="term" data-term="Mesozoic">Mesozoic</button> Era, Utah was covered by a series of ergs, thickest in southern Utah, which lithified into <button class="term" data-term="sandstone">sandstone</button> (Units 5 and 8):</p>
+  <ul>
+    <li><b>Navajo Sandstone</b> (<button class="term" data-term="Jurassic">Jurassic</button>): the best known. It forms the dramatic cliffs and spires of Zion National Park and covers a large part of the Colorado Plateau.</li>
+    <li><b>Entrada Sandstone</b> (also Jurassic): a later series of dunes covered the Navajo and lithified. In Arches National Park, erosion of the overlying layers exposed fins of Entrada Sandstone and carved out their weaker parts to form the arches.</li>
+  </ul>
+  <p>Sand can be recycled. As the cement holding the grains together in these sandstone cliffs breaks down, freed grains gather at the base of the cliffs and move down the washes. The Mesozoic ergs may hold quartz sand first weathered from igneous rocks in the early <button class="term" data-term="Precambrian">Precambrian</button> and recycled many times. Coral Pink Sand Dunes State Park in southwestern Utah is an example: its new dunes are made of sand eroded from the Navajo Sandstone (<a href="#fig-grains">Figure 13.16</a>).</p>
+
+  <h4 id="s13-3-dunes">Dune types</h4>
+  <p>Dune shape depends on <b>wind direction</b>, <b>sand supply</b>, and sometimes <b>vegetation</b> that anchors the sand (<a href="#fig-dunetypes">Figure 13.24</a>, <a href="#fig-dunephotos">Figure 13.25</a>, <a href="#tbl-dunes">Table 13.6</a>).</p>
+  <figure id="fig-dunetypes">
+    <div class="frame"><svg viewBox="0 0 760 495" role="img" aria-labelledby="dt-en-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="dt-en-t">Four dune types seen from above, each with blue wind arrows: barchan crescents with horns pointing downwind; long parallel longitudinal ridges between two alternating winds; a parabolic dune whose vegetated arms point upwind around a blowout; and a star dune with arms radiating under winds from many directions.</title><g transform="translate(5,5)"><rect x="0" y="0" width="370" height="215" rx="10" fill="#e6c27a" opacity=".35"/><text x="185.0" y="18.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="700" class="svg-ink halo">Barchan (crescent)</text><path d="M230.0,45.0 Q118.0,38.0 114.0,95.0 Q118.0,152.0 230.0,145.0 Q170.0,120.0 176.0,95.0 Q170.0,70.0 230.0,45.0 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M226.0,50.0 Q156.0,62.0 158.0,95.0 Q156.0,128.0 226.0,140.0 Q170.0,120.0 176.0,95.0 Q170.0,70.0 226.0,50.0 Z" fill="#b8873a"/><path d="M323.0,102.5 Q261.4,98.7 259.2,130.0 Q261.4,161.3 323.0,157.5 Q290.0,143.8 293.3,130.0 Q290.0,116.2 323.0,102.5 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M320.8,105.2 Q282.3,111.8 283.4,130.0 Q282.3,148.2 320.8,154.8 Q290.0,143.8 293.3,130.0 Q290.0,116.2 320.8,105.2 Z" fill="#b8873a"/><path d="M327.0,39.5 Q276.6,36.3 274.8,62.0 Q276.6,87.7 327.0,84.5 Q300.0,73.2 302.7,62.0 Q300.0,50.8 327.0,39.5 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M325.2,41.8 Q293.7,47.1 294.6,62.0 Q293.7,76.8 325.2,82.2 Q300.0,73.2 302.7,62.0 Q300.0,50.8 325.2,41.8 Z" fill="#b8873a"/><line x1="20.0" y1="70.0" x2="53.0" y2="70.0" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="60.0,70.0 51.3,75.0 51.3,65.0" fill="#2f7a8c"/><line x1="20.0" y1="105.0" x2="53.0" y2="105.0" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="60.0,105.0 51.3,110.0 51.3,100.0" fill="#2f7a8c"/><line x1="20.0" y1="140.0" x2="53.0" y2="140.0" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="60.0,140.0 51.3,145.0 51.3,135.0" fill="#2f7a8c"/><text x="185.0" y="184.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Limited sand, one steady wind direction;</text><text x="185.0" y="199.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">the horns point downwind</text></g><g transform="translate(385,5)"><rect x="0" y="0" width="370" height="215" rx="10" fill="#e6c27a" opacity=".35"/><text x="185.0" y="18.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="700" class="svg-ink halo">Longitudinal (linear)</text><path d="M70,60 Q200,34 340,60 Q200,86 70,60 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M80,60 Q200,38 330,60 Q200,54 80,60 Z" fill="#b8873a"/><path d="M70,105 Q200,79 340,105 Q200,131 70,105 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M80,105 Q200,83 330,105 Q200,99 80,105 Z" fill="#b8873a"/><path d="M70,150 Q200,124 340,150 Q200,176 70,150 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M80,150 Q200,128 330,150 Q200,144 80,150 Z" fill="#b8873a"/><line x1="14.0" y1="48.0" x2="50.2" y2="62.6" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="56.7,65.2 46.7,66.6 50.5,57.4" fill="#2f7a8c"/><line x1="14.0" y1="162.0" x2="50.2" y2="147.4" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="56.7,144.8 50.5,152.6 46.7,143.4" fill="#2f7a8c"/><text x="185.0" y="184.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">More sand; wind swings back and forth</text><text x="185.0" y="199.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">around one direction; ridges line up with it</text></g><g transform="translate(5,240)"><rect x="0" y="0" width="370" height="215" rx="10" fill="#e6c27a" opacity=".35"/><text x="185.0" y="18.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="700" class="svg-ink halo">Parabolic</text><path d="M60,58 L170,58 Q280,58 280,105 Q280,152 170,152 L60,152 L60,134 L170,134 Q238,134 238,105 Q238,76 170,76 L60,76 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M255,66 Q292,105 255,144 Q276,105 255,66 Z" fill="#b8873a"/><circle cx="64.4" cy="52.3" r="4.2" fill="#4f8a3a"/><circle cx="65.2" cy="82.6" r="4.2" fill="#4f8a3a"/><circle cx="66.8" cy="125.4" r="4.2" fill="#4f8a3a"/><circle cx="63.1" cy="160.0" r="4.2" fill="#4f8a3a"/><circle cx="77.6" cy="50.4" r="4.2" fill="#4f8a3a"/><circle cx="82.0" cy="81.8" r="4.2" fill="#4f8a3a"/><circle cx="81.0" cy="127.9" r="4.2" fill="#4f8a3a"/><circle cx="79.8" cy="155.9" r="4.2" fill="#4f8a3a"/><circle cx="92.8" cy="54.2" r="4.2" fill="#4f8a3a"/><circle cx="92.1" cy="83.4" r="4.2" fill="#4f8a3a"/><circle cx="93.0" cy="125.4" r="4.2" fill="#4f8a3a"/><circle cx="93.5" cy="158.5" r="4.2" fill="#4f8a3a"/><circle cx="103.8" cy="49.2" r="4.2" fill="#4f8a3a"/><circle cx="107.2" cy="81.8" r="4.2" fill="#4f8a3a"/><circle cx="106.3" cy="130.3" r="4.2" fill="#4f8a3a"/><circle cx="106.3" cy="160.5" r="4.2" fill="#4f8a3a"/><circle cx="117.4" cy="53.8" r="4.2" fill="#4f8a3a"/><circle cx="117.7" cy="84.6" r="4.2" fill="#4f8a3a"/><circle cx="120.3" cy="125.6" r="4.2" fill="#4f8a3a"/><circle cx="115.8" cy="156.3" r="4.2" fill="#4f8a3a"/><circle cx="133.8" cy="51.6" r="4.2" fill="#4f8a3a"/><circle cx="131.8" cy="80.8" r="4.2" fill="#4f8a3a"/><circle cx="131.0" cy="127.3" r="4.2" fill="#4f8a3a"/><circle cx="130.1" cy="158.5" r="4.2" fill="#4f8a3a"/><circle cx="144.5" cy="54.4" r="4.2" fill="#4f8a3a"/><circle cx="145.1" cy="84.6" r="4.2" fill="#4f8a3a"/><circle cx="146.1" cy="130.9" r="4.2" fill="#4f8a3a"/><circle cx="145.0" cy="156.0" r="4.2" fill="#4f8a3a"/><circle cx="159.2" cy="54.8" r="4.2" fill="#4f8a3a"/><circle cx="159.4" cy="82.4" r="4.2" fill="#4f8a3a"/><circle cx="158.3" cy="126.3" r="4.2" fill="#4f8a3a"/><circle cx="159.0" cy="158.4" r="4.2" fill="#4f8a3a"/><rect x="157.4" y="96.2" width="55.1" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.95"/><text x="185.0" y="105.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">blowout</text><line x1="14.0" y1="105.0" x2="41.0" y2="105.0" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="48.0,105.0 39.3,110.0 39.3,100.0" fill="#2f7a8c"/><text x="185.0" y="184.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Vegetation (green) anchors the arms,</text><text x="185.0" y="199.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">so the arms point upwind</text></g><g transform="translate(385,240)"><rect x="0" y="0" width="370" height="215" rx="10" fill="#e6c27a" opacity=".35"/><text x="185.0" y="18.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="700" class="svg-ink halo">Star</text><path d="M196.9,101.7 Q197.0,72.3 194.7,42.6 Q182.7,70.3 173.1,98.3 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M185.0,100.0 Q194.0,71.9 194.7,42.6 Q189.9,71.3 185.0,100.0 Z" fill="#b8873a"/><path d="M187.1,111.8 Q220.7,102.1 253.9,89.9 Q218.2,87.9 182.9,88.2 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M185.0,100.0 Q220.2,99.1 253.9,89.9 Q219.5,95.0 185.0,100.0 Z" fill="#b8873a"/><path d="M174.4,105.6 Q195.1,129.0 217.9,151.2 Q207.8,122.2 195.6,94.4 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M185.0,100.0 Q197.7,127.6 217.9,151.2 Q201.4,125.6 185.0,100.0 Z" fill="#b8873a"/><path d="M176.4,91.7 Q155.5,115.9 136.4,141.7 Q165.9,125.9 193.6,108.3 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M185.0,100.0 Q157.7,117.9 136.4,141.7 Q160.7,120.9 185.0,100.0 Z" fill="#b8873a"/><path d="M190.3,89.2 Q156.7,80.8 122.1,74.6 Q150.4,93.8 179.7,110.8 Z" fill="#d9ad5c" stroke="#a8792f" stroke-width="1.2"/><path d="M185.0,100.0 Q155.4,83.5 122.1,74.6 Q153.5,87.3 185.0,100.0 Z" fill="#b8873a"/><circle cx="185" cy="100" r="9" fill="#a8792f"/><line x1="28.0" y1="100.0" x2="57.0" y2="100.0" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="64.0,100.0 55.3,105.0 55.3,95.0" fill="#2f7a8c"/><line x1="342.0" y1="100.0" x2="313.0" y2="100.0" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="306.0,100.0 314.7,95.0 314.7,105.0" fill="#2f7a8c"/><line x1="70.0" y1="40.0" x2="92.1" y2="55.5" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="97.9,59.5 87.9,58.6 93.6,50.4" fill="#2f7a8c"/><line x1="300.0" y1="40.0" x2="277.9" y2="55.5" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="272.1,59.5 276.4,50.4 282.1,58.6" fill="#2f7a8c"/><line x1="300.0" y1="160.0" x2="277.9" y2="144.5" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="272.1,140.5 282.1,141.4 276.4,149.6" fill="#2f7a8c"/><text x="185.0" y="184.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">Wind from many directions; sand supply</text><text x="185.0" y="199.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="400" class="svg-ink halo">from limited to abundant</text></g><line x1="40.0" y1="478.0" x2="73.0" y2="478.0" stroke="#2f7a8c" stroke-width="2.5" stroke-linecap="round"/><polygon points="80.0,478.0 71.3,483.0 71.3,473.0" fill="#2f7a8c"/><text x="88.0" y="478.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">wind</text><rect x="160" y="470" width="26" height="16" fill="#d9ad5c" stroke="#a8792f"/><text x="192.0" y="478.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">dune sand</text><rect x="290" y="470" width="26" height="16" fill="#b8873a"/><text x="322.0" y="478.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">slip face (steep, downwind side)</text><circle cx="590" cy="478" r="6" fill="#4f8a3a"/><text x="602.0" y="478.0" dy=".35em" text-anchor="start" font-size="12" font-weight="400" class="svg-ink halo">vegetation</text></svg></div>
+    <figcaption>The four main dune types, seen from above. Blue arrows: wind; dark tan: slip faces; green dots: vegetation.<span class="credit">Drawn for this guide from the chapter's text.</span></figcaption>
+  </figure>
+  <figure id="fig-dunephotos">
+    <ul class="gallery" style="--cols:4">
+      <li><img src="images/unit13/barchan.webp" alt="Satellite image of many crescent-shaped dunes, each with two horns." loading="lazy" width="540" height="540"><span><b>Barchan dunes</b>Coastal Brazil. NASA, public domain.</span></li>
+      <li><img src="images/unit13/linear.webp" alt="Satellite image of long, straight, parallel sand ridges." loading="lazy" width="720" height="480"><span><b>Longitudinal (linear) dunes</b>Great Sand Sea, Egypt. NASA Earth Observatory, public domain.</span></li>
+      <li><img src="images/unit13/parabolic.webp" alt="Aerial photo of U-shaped dunes whose vegetated arms trail behind a bare sandy nose." loading="lazy" width="400" height="390"><span><b>Parabolic dunes</b>Cape Cod, Massachusetts. USGS, public domain.</span></li>
+      <li><img src="images/unit13/star.webp" alt="A large dune with a central peak and several ridges radiating from it." loading="lazy" width="1000" height="758"><span><b>Star dune</b>Sahara. USGS, public domain.</span></li>
+    </ul>
+    <figcaption>The four dune types in nature. Photos are cropped to squares.<span class="credit">All via the textbook.</span></figcaption>
+  </figure>
+  <div class="tablewrap" id="tbl-dunes">
+    <table>
+      <caption>Dune types and the conditions that form them.</caption>
+      <thead><tr><th>Type</th><th>Sand supply</th><th>Wind</th><th>Shape</th></tr></thead>
+      <tbody>
+        <tr><td><button class="term" data-term="barchan dune">Barchan (crescent)</button></td><td>Limited</td><td>Fairly constant direction</td><td>Crescent with wings (horns) on either side of the crest; moves downwind and can bury homes and even towns</td></tr>
+        <tr><td><button class="term" data-term="longitudinal dune">Longitudinal (linear)</button></td><td>Greater</td><td>Blows back and forth around a dominant direction</td><td>Ridges tens of meters high, lined up with the main wind direction</td></tr>
+        <tr><td><button class="term" data-term="parabolic dune">Parabolic</button></td><td>Varies; vegetation anchors parts of the sand</td><td>One main direction</td><td>Like a barchan but usually reversed; unanchored parts blow out. Shape is set more by the vegetation than by a strict parabola</td></tr>
+        <tr><td><button class="term" data-term="star dune">Star</button></td><td>Limited to quite abundant</td><td>Variable, from all directions</td><td>A star; the varying wind direction makes the arms</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/13-deserts/" target="_blank" rel="noopener">Section 13.3 quiz in the textbook ↗</a></p>
+</section>
+
+<section id="s13-4">
+  <h2 class="sec"><span class="n">13.4</span>The Great Basin and the Basin and Range</h2>
+  <div class="pair">
+    <figure id="fig-gbmap">
+      <div class="frame"><img class="diagram" src="images/unit13/gbmap.webp" alt="Map of the Great Basin outlined over the western United States, covering western Utah, most of Nevada, and parts of California, Oregon, and Idaho." loading="lazy" width="900" height="1006" style="height:340px;width:auto"></div>
+      <figcaption>The Great Basin, the largest area of interior drainage in North America.<span class="credit">Karl Musser, CC BY-SA (via the textbook).</span></figcaption>
+    </figure>
+    <div class="callout">
+      <h4>Interior drainage</h4>
+      <p>The <b>Great Basin</b> has <button class="term" data-term="interior drainage">interior drainage</button>: no outlet to the ocean, so all precipitation stays in the basin or evaporates. Its streams deliver runoff to lakes and playas within the basin.</p>
+      <p>It covers western Utah, most of Nevada, and parts of southeastern California, southern Oregon, and southern Idaho.</p>
+    </div>
+  </div>
+  <p>A subregion of the Great Basin is the <button class="term" data-term="Basin and Range">Basin and Range</button>, which reaches from the Wasatch Front in Utah west across Nevada to the Sierra Nevada of California. Its basins and ranges are <button class="term" data-term="graben">grabens</button> and <button class="term" data-term="horst">horsts</button>: blocks dropped or raised along <button class="term" data-term="normal fault">normal faults</button> as the crust was pulled apart by <button class="term" data-term="extension">extension</button> (Units 2 and 9; <a href="#fig-horst">Figure 13.27</a>). The <button class="term" data-term="lithosphere">lithosphere</button> of the whole area has stretched by a factor of about 2 over the past 30 million years or so: its width from end to end has doubled.</p>
+  <figure id="fig-horst">
+    <div class="frame"><svg viewBox="0 0 760 290" role="img" aria-labelledby="hg-en-t" style="width:100%;max-width:760px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="hg-en-t">Cross section of the Basin and Range: the crust is pulled apart (extension), and blocks between normal faults rise as horsts (the ranges) or drop as grabens (the basins). The grabens hold basin fill with a playa on top; matching rock layers are offset across each fault.</title><defs><clipPath id="hg0-en"><polygon points="0.0,60.0 100.0,60.0 150.0,240.0 0.0,240.0"/></clipPath><clipPath id="hg1-en"><polygon points="100.0,60.0 290.0,60.0 240.0,240.0 150.0,240.0"/></clipPath><clipPath id="hg2-en"><polygon points="290.0,60.0 390.0,60.0 440.0,240.0 240.0,240.0"/></clipPath><clipPath id="hg3-en"><polygon points="390.0,60.0 580.0,60.0 530.0,240.0 440.0,240.0"/></clipPath><clipPath id="hg4-en"><polygon points="580.0,60.0 690.0,60.0 740.0,240.0 530.0,240.0"/></clipPath><clipPath id="hg5-en"><polygon points="690.0,60.0 760.0,60.0 760.0,240.0 740.0,240.0"/></clipPath></defs><rect x="0" y="0" width="760" height="60" fill="#2f7a8c" opacity=".08"/><g clip-path="url(#hg0-en)"><rect x="0" y="0" width="760" height="300" fill="#8c5a3b"/><rect x="0" y="20" width="760" height="80" fill="#c58a5c"/><rect x="0" y="100" width="760" height="50" fill="#a86f48"/></g><g clip-path="url(#hg1-en)"><rect x="0" y="0" width="760" height="300" fill="#8c5a3b"/><rect x="0" y="130" width="760" height="80" fill="#c58a5c"/><rect x="0" y="210" width="760" height="50" fill="#a86f48"/><rect x="0" y="0" width="760" height="170" fill="#2f7a8c" opacity=".0"/></g><g clip-path="url(#hg1-en)"><rect x="0" y="122" width="760" height="48" fill="#e6c27a"/></g><g clip-path="url(#hg2-en)"><rect x="0" y="0" width="760" height="300" fill="#8c5a3b"/><rect x="0" y="20" width="760" height="80" fill="#c58a5c"/><rect x="0" y="100" width="760" height="50" fill="#a86f48"/></g><g clip-path="url(#hg3-en)"><rect x="0" y="0" width="760" height="300" fill="#8c5a3b"/><rect x="0" y="130" width="760" height="80" fill="#c58a5c"/><rect x="0" y="210" width="760" height="50" fill="#a86f48"/><rect x="0" y="0" width="760" height="170" fill="#2f7a8c" opacity=".0"/></g><g clip-path="url(#hg3-en)"><rect x="0" y="122" width="760" height="48" fill="#e6c27a"/></g><g clip-path="url(#hg4-en)"><rect x="0" y="0" width="760" height="300" fill="#8c5a3b"/><rect x="0" y="20" width="760" height="80" fill="#c58a5c"/><rect x="0" y="100" width="760" height="50" fill="#a86f48"/></g><g clip-path="url(#hg5-en)"><rect x="0" y="0" width="760" height="300" fill="#8c5a3b"/><rect x="0" y="130" width="760" height="80" fill="#c58a5c"/><rect x="0" y="210" width="760" height="50" fill="#a86f48"/><rect x="0" y="0" width="760" height="170" fill="#2f7a8c" opacity=".0"/></g><g clip-path="url(#hg5-en)"><rect x="0" y="122" width="760" height="48" fill="#e6c27a"/></g><g clip-path="url(#hg1-en)"><rect x="0" y="0" width="760" height="122" fill="var(--surface)"/><rect x="0" y="0" width="760" height="122" fill="#2f7a8c" opacity=".08"/></g><g clip-path="url(#hg3-en)"><rect x="0" y="0" width="760" height="122" fill="var(--surface)"/><rect x="0" y="0" width="760" height="122" fill="#2f7a8c" opacity=".08"/></g><g clip-path="url(#hg5-en)"><rect x="0" y="0" width="760" height="122" fill="var(--surface)"/><rect x="0" y="0" width="760" height="122" fill="#2f7a8c" opacity=".08"/></g><line x1="100" y1="60" x2="150.0" y2="240" stroke="#2a1f14" stroke-width="2.5"/><line x1="137.3" y1="158.4" x2="142.3" y2="176.2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><polygon points="143.8,181.6 138.1,176.0 145.8,173.8" fill="#fff"/><line x1="290" y1="60" x2="240.0" y2="240" stroke="#2a1f14" stroke-width="2.5"/><line x1="252.7" y1="158.4" x2="247.7" y2="176.2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><polygon points="246.2,181.6 244.2,173.8 251.9,176.0" fill="#fff"/><line x1="390" y1="60" x2="440.0" y2="240" stroke="#2a1f14" stroke-width="2.5"/><line x1="427.3" y1="158.4" x2="432.3" y2="176.2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><polygon points="433.8,181.6 428.1,176.0 435.8,173.8" fill="#fff"/><line x1="580" y1="60" x2="530.0" y2="240" stroke="#2a1f14" stroke-width="2.5"/><line x1="542.7" y1="158.4" x2="537.7" y2="176.2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><polygon points="536.2,181.6 534.2,173.8 541.9,176.0" fill="#fff"/><line x1="690" y1="60" x2="740.0" y2="240" stroke="#2a1f14" stroke-width="2.5"/><line x1="727.3" y1="158.4" x2="732.3" y2="176.2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><polygon points="733.8,181.6 728.1,176.0 735.8,173.8" fill="#fff"/><rect x="167.0" y="119" width="56" height="5" fill="#f7f4ec" stroke="#bdb4a0" stroke-width=".8"/><rect x="457.0" y="119" width="56" height="5" fill="#f7f4ec" stroke="#bdb4a0" stroke-width=".8"/><text x="340.0" y="40.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Horst = range</text><text x="195.0" y="86.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Graben = basin</text><text x="195.0" y="106.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">playa</text><text x="485.0" y="86.0" dy=".35em" text-anchor="middle" font-size="13" font-weight="700" class="svg-ink halo">Graben = basin</text><text x="485.0" y="106.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" class="svg-ink halo">playa</text><rect x="158.2" y="139.2" width="73.6" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="195.0" y="148.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">basin fill</text><rect x="448.2" y="139.2" width="73.6" height="17.6" rx="8.8" fill="#fffaf0" opacity="0.92"/><text x="485.0" y="148.0" dy=".35em" text-anchor="middle" font-size="11" font-weight="600" fill="#2a1f14">basin fill</text><line x1="541.1" y1="200" x2="600" y2="262" stroke="#2a1f14" stroke-width="1.3"/><circle cx="541.1" cy="200" r="3" fill="#2a1f14"/><text x="606.0" y="262.0" dy=".35em" text-anchor="start" font-size="12" font-weight="600" class="svg-ink halo">normal fault</text><line x1="110.0" y1="22.0" x2="37.7" y2="22.0" stroke="var(--rust)" stroke-width="3" stroke-linecap="round"/><polygon points="30.0,22.0 39.5,16.5 39.5,27.5" fill="var(--rust)"/><line x1="650.0" y1="22.0" x2="722.3" y2="22.0" stroke="var(--rust)" stroke-width="3" stroke-linecap="round"/><polygon points="730.0,22.0 720.5,27.5 720.5,16.5" fill="var(--rust)"/><text x="118.0" y="22.0" dy=".35em" text-anchor="start" font-size="12" font-weight="700" fill="var(--rust)" class="halo">extension</text><text x="642.0" y="22.0" dy=".35em" text-anchor="end" font-size="12" font-weight="700" fill="var(--rust)" class="halo">extension</text><text x="10.0" y="270.0" dy=".35em" text-anchor="start" font-size="11" font-weight="400" class="svg-ink halo">White arrows: the graben block slides down</text></svg></div>
+    <figcaption>Horsts and grabens of the Basin and Range. Bands in the rock: matching layers, offset across each fault. Tan: basin fill; white strip: playa. White arrows show the graben block moving down the fault. Cross section; not to scale.<span class="credit">Drawn for this guide from the chapter's text.</span></figcaption>
+  </figure>
+  <p>Each valley without an outlet is its own basin, filled with alluvial sediment that leads out to a playa. During the most recent ice age the climate was more humid: while glaciers grew in some mountains, <button class="term" data-term="pluvial lake">pluvial lakes</button> covered large areas (Unit 14). Lake Bonneville covered valleys in much of western Utah and eastern Nevada. When the climate became arid after the ice age, Lake Bonneville dried up, leaving the <b>Great Salt Lake</b> as a remnant.</p>
+  <figure id="fig-ridgecrest">
+    <div class="frame"><img src="images/unit13/ridgecrest.webp" alt="A small town spread across a flat desert valley floor, with bare mountain ranges in the distance." loading="lazy" width="1000" height="667"></div>
+    <figcaption>A typical Basin and Range scene: Ridgecrest, California, just east of the southern Sierra Nevada.<span class="credit">Matt Affolter, CC BY-SA (via the textbook).</span></figcaption>
+  </figure>
+  <p>The Basin and Range desert, from about 35° to near 40° N, is a <b>rain-shadow desert</b>: westerly winds from the Pacific rise and cool over the Sierra Nevada and lose their moisture on its western side, so relatively dry air descends across Nevada and western Utah.</p>
+  <p>A journey from the Wasatch Front southwest to the Pacific shows the stages of desert landscape development in <a href="#fig-evolution">Figure 13.20</a>: fault-block mountains with sharp peaks and alluvial fans at canyon mouths in Utah; bajadas along the mountain fronts in southern Nevada; and subdued inselbergs rising through a sea of joined bajadas in the Mojave Desert of California.</p>
+
+  <h3 id="s13-4-1">13.4.1 Desertification</h3>
+  <p><button class="term" data-term="desertification">Desertification</button> is the change of previously arable land, suitable for farming, into desert. Plants and <button class="term" data-term="humus">humus</button>-rich soil (Unit 5) help water soak in (<button class="term" data-term="infiltration">infiltration</button>) and stay. When an area becomes more arid, its plants and soil hold water less well, which makes it more arid still: a self-reinforcing <button class="term" data-term="positive feedback">positive feedback</button> loop that enlarges the desert (<a href="#fig-feedback">Figure 13.29</a>).</p>
+  <figure id="fig-feedback">
+    <div class="frame"><svg viewBox="0 0 760 280" role="img" aria-labelledby="fb-en-t" style="width:100%;max-width:720px;min-width:300px;height:auto;display:block;margin:0 auto"><title id="fb-en-t">A loop of four boxes: drier climate or overused land leads to plants dying and soil losing humus, which means less water soaks in, which makes the land more arid, which dries it further.</title><rect class="flow-step" style="--d:0.0s" x="40" y="30" width="280" height="76" rx="12"/><text x="180.0" y="58.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="600" class="svg-ink">Climate grows drier,</text><text x="180.0" y="78.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="400" class="svg-ink">or land is overused</text><rect class="flow-step" style="--d:1.5s" x="440" y="30" width="280" height="76" rx="12"/><text x="580.0" y="58.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="600" class="svg-ink">Plants die back and</text><text x="580.0" y="78.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="400" class="svg-ink">soil loses its humus</text><rect class="flow-step" style="--d:3.0s" x="440" y="190" width="280" height="76" rx="12"/><text x="580.0" y="218.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="600" class="svg-ink">Less water soaks in</text><text x="580.0" y="238.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="400" class="svg-ink">and is held in the soil</text><rect class="flow-step" style="--d:4.5s" x="40" y="190" width="280" height="76" rx="12"/><text x="180.0" y="218.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="600" class="svg-ink">The land becomes</text><text x="180.0" y="238.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="400" class="svg-ink">more arid</text><line x1="325.0" y1="68.0" x2="424.6" y2="68.0" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/><polygon points="433.0,68.0 422.6,74.0 422.6,62.0" fill="var(--accent)"/><line x1="580.0" y1="111.0" x2="580.0" y2="174.6" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/><polygon points="580.0,183.0 574.0,172.6 586.0,172.6" fill="var(--accent)"/><line x1="435.0" y1="228.0" x2="335.4" y2="228.0" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/><polygon points="327.0,228.0 337.4,222.0 337.4,234.0" fill="var(--accent)"/><line x1="180.0" y1="185.0" x2="180.0" y2="121.4" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/><polygon points="180.0,113.0 186.0,123.4 174.0,123.4" fill="var(--accent)"/><text x="380.0" y="140.0" dy=".35em" text-anchor="middle" font-size="14" font-weight="700" class="svg-ink halo">Positive feedback loop:</text><text x="380.0" y="160.0" dy=".35em" text-anchor="middle" font-size="12" font-weight="400" class="svg-ink halo">each step makes the next stronger</text></svg></div>
+    <figcaption>The positive feedback loop of desertification. The highlight moves around the loop to show the order.<span class="credit">Drawn for this guide from the chapter's text.</span></figcaption>
+  </figure>
+  <p>Human activities that can cause desertification:</p>
+  <ul class="inline">
+    <li>Unsustainable crop cultivation</li>
+    <li>Overgrazing by livestock</li>
+    <li>Overuse of <button class="term" data-term="groundwater">groundwater</button></li>
+    <li>Global climate change (Unit 15)</li>
+  </ul>
+  <figure id="fig-desertif">
+    <div class="frame"><img class="diagram" src="images/unit13/desertif.webp" alt="World map colored by vulnerability to desertification, from low to very high; large red and orange areas appear in the western and midwestern United States, North Africa, the Middle East, Central Asia, and Australia." loading="lazy" width="1200" height="776"></div>
+    <figcaption>Vulnerability to desertification around the world. Red and orange areas are the most vulnerable.<span class="credit">USDA, public domain (via the textbook).</span></figcaption>
+  </figure>
+  <p>Human-caused desertification is a serious worldwide problem. In <a href="#fig-desertif">Figure 13.30</a>, note the red and orange areas in the western and midwestern United States, which include large areas of farmland used to raise crops and animals. The <b>Dust Bowl</b> of the 1930s (Unit 5) is a classic example of a highly vulnerable region hit by human-caused desertification. As the Dust Bowl showed, farming practices and conservation can conflict. Slowing desertification while letting farmers make a living requires public and individual education that builds community support for sustainable farming.</p>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/13-deserts/" target="_blank" rel="noopener">Section 13.4 quiz in the textbook ↗</a></p>
+</section>
+
+<section id="summary">
+  <h2 class="sec">Summary</h2>
+  <p>About 30% of Earth's land is arid, and where deserts lie is set by latitude, atmospheric circulation, and terrain. Sinking air in the circulation cells makes the arid belts at 15°–30° N and S (the Sahara, the Middle East) and the polar deserts; mountains make rain-shadow deserts (western North America, the Atacama, the Gobi). The Coriolis effect turns the cells' surface flow into the trade winds and westerlies. Deserts weather slowly; water still does most erosion, but wind moves dust in suspension, sand by saltation, and coarse grains by creep, frosting grains and sandblasting yardangs and ventifacts. Streams leaving mountains build alluvial fans, then bajadas, until only inselbergs remain; enclosed basins hold playas. Dunes form in ergs; their shape depends on sand supply, wind, and vegetation, and their insides preserve cross beds. The Great Basin drains inward, and its Basin and Range is a land of horsts and grabens. Poor land management can trigger desertification.</p>
+  <div class="callout">
+    <h4>Quick recap</h4>
+    <ul>
+      <li>Desert = low precipitation, not heat. Three kinds: subtropical (15°–30°), rain shadow, polar.</li>
+      <li>Rain shadow: air rises and cools on the windward side (rain, snow), sinks and warms on the leeward side (desert).</li>
+      <li>Cells: Hadley (0°–30°), Ferrel (30°–60°), Polar (60°–90°). Air sinks at 30° (horse latitudes) and the poles → deserts.</li>
+      <li>Coriolis: deflection to the right (N) and left (S) → trade winds toward the equator, westerlies in midlatitudes.</li>
+      <li>Atacama = latitude + rain shadow of the Andes + cold Humboldt Current; driest non-polar place.</li>
+      <li>Weathering is slow; desert varnish is unique to deserts. Flash floods do most erosion.</li>
+      <li>Wind: suspension (dust → haboobs, loess), saltation (sand, frosted grains, ≤ ~1 m), creep (rolling).</li>
+      <li>Sandblasting: yardangs (bedrock), ventifacts (loose rocks); wind scours blowouts.</li>
+      <li>Fans → bajadas → inselbergs; playas in closed basins; ephemeral streams in arroyos.</li>
+      <li>Dunes: stoss side up, slip face at the angle of repose; cross beds = buried slip faces. Barchan, longitudinal, parabolic, star.</li>
+      <li>Great Basin: interior drainage. Basin and Range: horsts and grabens; crust stretched ×2 in ~30 Myr; Lake Bonneville → Great Salt Lake.</li>
+      <li>Desertification: positive feedback, worsened by overcultivation, overgrazing, groundwater overuse, climate change.</li>
+    </ul>
+  </div>
+  <p class="quiz">Check yourself: <a href="https://slcc.pressbooks.pub/introgeology/chapter/13-deserts/" target="_blank" rel="noopener">Chapter 13 review quiz in the textbook ↗</a></p>
+</section>
+
+<section id="resources">
+  <h2 class="sec">Resources</h2>
+  <div class="res">
+    <a href="https://slcc.pressbooks.pub/introgeology/chapter/13-deserts/" target="_blank" rel="noopener"><b>Chapter 13 (textbook) ↗</b><span>The full chapter, with its section quizzes and videos.</span></a>
+    <a href="https://slcc.pressbooks.pub/introgeology/back-matter/glossary-test/" target="_blank" rel="noopener"><b>Textbook glossary ↗</b><span>Definitions for every bolded term in the book.</span></a>
+    <a href="https://www.youtube.com/watch?v=iMu4dShS74w" target="_blank" rel="noopener"><b>Rain shadow (video) ↗</b><span>The chapter's video on how mountains make deserts.</span></a>
+    <a href="https://www.youtube.com/watch?v=HIyBpi7B-dE" target="_blank" rel="noopener"><b>The Coriolis effect explained (video) ↗</b><span>The chapter's video on deflection by Earth's rotation.</span></a>
+    <a href="https://pubs.usgs.gov/gip/deserts/" target="_blank" rel="noopener"><b>Deserts: Geology and Resources (USGS) ↗</b><span>The USGS booklet the chapter cites (Walker, 1996).</span></a>
+    <a href="https://www.noaa.gov/jetstream/global/global-atmospheric-circulations" target="_blank" rel="noopener"><b>Global atmospheric circulations (NOAA JetStream) ↗</b><span>The three cells and the wind belts.</span></a>
+    <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0105948" target="_blank" rel="noopener"><b>Sliding rocks on Racetrack Playa (PLOS ONE, 2014) ↗</b><span>The first observation of the rocks in motion, with time-lapse data.</span></a>
+    <a href="https://www.nps.gov/whsa/index.htm" target="_blank" rel="noopener"><b>White Sands National Park (NPS) ↗</b><span>The gypsum dune field in the chapter's opening photo.</span></a>
+  </div>
+</section>
+
+<section id="factcheck">
+  <h2 class="sec">Fact-check notes</h2>
+  <p class="small">Each fact in this guide comes from Chapter 13. These notes flag places where the chapter simplifies, has a slip, or differs from other reliable sources. Where the chapter is wrong, the guide's main text uses the corrected statement and the chapter's wording is recorded here.</p>
+  <div class="tablewrap">
+    <table style="min-width:600px">
+      <caption>Fact-check notes for Unit 13.</caption>
+      <thead><tr><th>Chapter says</th><th>Check</th></tr></thead>
+      <tbody>
+        <tr><td>The Atacama is "the driest desert on Earth" (summary), yet polar deserts are "the driest deserts on Earth" (13.1.2), and the opening calls the Atacama Earth's "driest, warm desert".</td><td>The chapter contradicts itself. The Atacama is the driest <b>non-polar</b> desert; parts of Antarctica, such as the McMurdo Dry Valleys, are drier (Wikipedia, "Atacama Desert"). This guide says "driest non-polar place".</td></tr>
+        <tr><td>Sliding stones are "propelled by friction from high winds".</td><td>Corrected in this guide. The first direct observations (Norris and others, 2014, PLOS ONE, cited by the chapter) found rocks pushed by thin, floating sheets of ice driven by <b>light</b> winds, about 3–5 m/s.</td></tr>
+        <tr><td>How desert varnish forms "is still unknown".</td><td>Still debated, but a 2021 study proposes that manganese-accumulating cyanobacteria supply the manganese (Lingappa and others, 2021, <i>PNAS</i>, "An ecophysiological explanation for manganese enrichment in rock varnish").</td></tr>
+        <tr><td>A yardang is "a bedrock outcrop which has such a sandblasted shape", illustrated by a rock standing on a narrowed base.</td><td>Classic yardangs are streamlined ridges elongated parallel to the prevailing wind (Wikipedia, "Yardang"). The pictured rock is better called a pedestal ("mushroom") rock, undercut where saltating sand is densest near the ground. Both are shaped by the same sandblasting.</td></tr>
+        <tr><td>Wind separates sand from "dust sized (≤70 µm)" particles.</td><td>Approximate. On the Wentworth scale (Unit 5) the sand–silt boundary is 1/16 mm = <b>62.5 µm</b>.</td></tr>
+        <tr><td>"White Sands National Monument".</td><td>Renamed: it became <b>White Sands National Park</b> in December 2019 (National Park Service).</td></tr>
+        <tr><td>Ergs form "as far north as 60° N" in the Athabasca Sand Dunes of Saskatchewan.</td><td>The Athabasca dunes lie just south of 60° N, at about 59° N.</td></tr>
+        <tr><td>About 30% of "Earth's surface" is arid (summary).</td><td>The opening says 30% of Earth's <b>terrestrial</b> (land) surface, which is the correct reading; deserts do not cover 30% of the whole planet, most of which is ocean.</td></tr>
+        <tr><td>The second Coriolis factor "produces a net deflection toward the equator".</td><td>True for a mass moving <b>east</b>; a mass moving west is deflected toward the pole. Either way the deflection is to the right in the Northern Hemisphere. The main text adds the westward case.</td></tr>
+        <tr><td>The Coriolis effect creates "high-altitude, polar jet streams".</td><td>Simplified. Jet streams are driven mainly by the temperature contrast between air masses; the Coriolis effect turns that flow eastward (NOAA JetStream, "The jet stream").</td></tr>
+        <tr><td>Air cooled by the Humboldt Current is "super-cooled".</td><td>"Supercooled" normally means liquid water below 0 °C. The chapter means the air is strongly cooled, so it holds little moisture; this guide says "cooled".</td></tr>
+        <tr><td>Inselbergs are "buried mountain remnants".</td><td>An inselberg is the part that still stands <b>above</b> the debris burying the rest of the mountain; the guide words it that way.</td></tr>
+        <tr><td>No value is given for the angle of repose.</td><td>About 34° for dry sand (Wikipedia, "Angle of repose"); the guide's dune figure uses it. The textbook glossary's definition ("shear forces and normal forces are equal") repeats the slip noted in Unit 10; the guide uses "the steepest angle at which loose material stays stable".</td></tr>
+        <tr><td>Typos: "circlustion", "Forces ting", "not outlet", "imbedded".</td><td>Read: circulation; forces acting; no outlet; embedded.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="credits">
+  <h2 class="sec">Credits</h2>
+  <p class="small">Content summarized from <a href="https://slcc.pressbooks.pub/introgeology/chapter/13-deserts/" target="_blank" rel="noopener"><i>An Introduction to Geology</i>, Chapter 13</a>, © 2017 Chris Johnson, Matthew D. Affolter, Paul Inkenbrandt, and Cam Mosher, licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. Each photo's creator and license is given under it.</p>
+  <ul class="small">
+    <li>Drawn for this guide from the chapter's descriptions: rain shadow (after Bariot's figure), circulation cells (after NASA's global circulation figure), Coriolis wind deflection, wind transport (after NASA's saltation animation), dune anatomy (after the USGS cross-bed animation), dune types, desert landscape stages, horsts and grabens, and the desertification loop.</li>
+    <li>Outside sources are named where they are used: NOAA JetStream (global circulation), Norris and others (2014, PLOS ONE: sliding stones), Wikipedia ("Angle of repose", "Yardang"), the National Park Service (White Sands), and the others listed in the fact-check notes.</li>
+  </ul>
+</section>
+
+</main>
+</div>
+
+<button class="fab" id="notesBtn" type="button" aria-controls="notes" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Key terms
+</button>
+<button class="fab hide" id="toTop" type="button" aria-label="Return to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<aside class="notes" id="notes" hidden aria-label="Key terms">
+  <header>
+    <div><h2>Key terms · Chapter 13</h2><button class="close" id="notesClose" type="button" aria-label="Close key terms">×</button></div>
+    <input id="termSearch" type="search" placeholder="Search terms and definitions" autocomplete="off" aria-label="Search terms and definitions">
+    <div class="count" id="termCount"></div>
+  </header>
+  <dl id="termList"></dl>
+</aside>
+</div>
+
+<script type="application/json" id="terms">
+[
+ [
+  "terrestrial",
+  "outcomes",
+  "On land; terrestrial environments are those on Earth's land surface."
+ ],
+ [
+  "desert",
+  "outcomes",
+  "A region of low precipitation. Deserts cover about 30% of Earth's land; they are defined by dryness, not by temperature."
+ ],
+ [
+  "precipitation",
+  "outcomes",
+  "Water that falls from the atmosphere as rain, snow, sleet, or hail."
+ ],
+ [
+  "atmosphere",
+  "outcomes",
+  "The layer of gases surrounding Earth, mainly nitrogen and oxygen."
+ ],
+ [
+  "rain shadow desert",
+  "outcomes",
+  "A desert on the leeward side of a mountain range, where air that lost its moisture crossing the mountains descends (Great Basin, Atacama, Gobi)."
+ ],
+ [
+  "Atacama Desert",
+  "outcomes",
+  "Coastal desert of northern Chile; the driest non-polar place on Earth, from latitude, the Andes rain shadow, and the cold Humboldt Current."
+ ],
+ [
+  "polar desert",
+  "outcomes",
+  "A desert formed by cold, dry air sinking at the poles, as in Antarctica and much of the Arctic."
+ ],
+ [
+  "rain shadow",
+  "outcomes",
+  "The dry area on the leeward side of mountains: air rising over them cools and drops its moisture on the windward side, then descends dry."
+ ],
+ [
+  "latitude",
+  "s13-1",
+  "Angular distance north or south of the equator: 0° at the equator, 90° N and 90° S at the poles."
+ ],
+ [
+  "angle of incidence",
+  "s13-1",
+  "The angle, measured from the perpendicular to the ground, at which sunlight strikes the surface; 0° when the Sun is directly overhead."
+ ],
+ [
+  "Hadley cell",
+  "s13-1",
+  "The circulation cell over the tropics: air rises at the equator, flows poleward aloft, and sinks near 30° latitude."
+ ],
+ [
+  "Ferrel cell",
+  "s13-1",
+  "The midlatitude circulation cell between about 30° and 60°; its surface air flows poleward as the westerlies."
+ ],
+ [
+  "polar cell",
+  "s13-1",
+  "The circulation cell between about 60° and the pole: air rises near 60°, flows poleward, and sinks at the pole, making polar deserts."
+ ],
+ [
+  "horse latitudes",
+  "s13-1",
+  "Belts of high pressure and sinking dry air at about 30° N and S, where subtropical deserts form."
+ ],
+ [
+  "trade winds",
+  "s13-1",
+  "Prevailing winds blowing toward the equator in the tropics, deflected west by the Coriolis effect: from the northeast in the Northern Hemisphere, from the southeast in the Southern."
+ ],
+ [
+  "westerlies",
+  "s13-1",
+  "Prevailing winds between about 30° and 60° latitude, blowing from west to east."
+ ],
+ [
+  "Great Basin Desert",
+  "s13-1",
+  "Desert of Nevada, western Utah, and neighboring states; partly from sinking air but mainly a rain-shadow desert behind the Sierra Nevada."
+ ],
+ [
+  "Coriolis effect",
+  "s13-1",
+  "Apparent deflection of moving air and water on the rotating Earth: to the right in the Northern Hemisphere and to the left in the Southern."
+ ],
+ [
+  "gyre",
+  "s13-1",
+  "A large circular ocean current driven by global wind patterns; clockwise in the Northern Hemisphere, counterclockwise in the Southern."
+ ],
+ [
+  "weathering",
+  "s13-2",
+  "Breaking down of rock into smaller pieces by mechanical or chemical means; slower in deserts because water is scarce."
+ ],
+ [
+  "chemical weathering",
+  "s13-2",
+  "Breakdown of minerals by chemical reactions such as dissolution and oxidation."
+ ],
+ [
+  "runoff",
+  "s13-2",
+  "Water that flows over the land surface."
+ ],
+ [
+  "ice wedging",
+  "s13-2",
+  "Mechanical weathering in which water freezes and expands in rock cracks, prying them open."
+ ],
+ [
+  "flash flood",
+  "s13-3",
+  "A sudden, high-volume flood of an ephemeral channel after an intense storm, often from rain miles away; a major agent of desert deposition and a danger to hikers."
+ ],
+ [
+  "desert varnish",
+  "s13-2",
+  "Thin, dark brown coating of clay minerals and iron and manganese oxides on stable rock surfaces in arid regions; also called desert patina or rock rust."
+ ],
+ [
+  "mineral",
+  "s13-2",
+  "A naturally occurring, usually inorganic solid with a definite chemical composition and crystal structure (Unit 3)."
+ ],
+ [
+  "oxide",
+  "s13-2",
+  "A mineral in which a metal is bonded to oxygen, such as the iron and manganese oxides in desert varnish."
+ ],
+ [
+  "erosion",
+  "s13-2",
+  "The removal and transport of weathered material by water, wind, ice, or gravity."
+ ],
+ [
+  "haboob",
+  "s13-2",
+  "A large dust storm carrying suspended sediment across a desert."
+ ],
+ [
+  "loess",
+  "s13-2",
+  "A deposit of windblown silt and dust; in the US Midwest much of it is glacial rock flour, some blown from western deserts."
+ ],
+ [
+  "ice sheet",
+  "s13-2",
+  "A thick glacier covering a large part of a continent, as during ice ages."
+ ],
+ [
+  "ice age",
+  "s13-2",
+  "A period of cooler global temperatures when ice sheets grow on the continents."
+ ],
+ [
+  "bedload",
+  "s13-2",
+  "The coarser part of a fluid's load, moved along or near the bed rather than carried up in the flow."
+ ],
+ [
+  "suspended load",
+  "s13-2",
+  "Fine sediment (silt, dust) held up in a moving fluid; in wind, carried high and far as in haboobs."
+ ],
+ [
+  "saltation",
+  "s13-2",
+  "Transport of sand by short hops: grains are lifted, carried a short way, and splash down, knocking other grains loose; a zone up to about 1 m above the ground."
+ ],
+ [
+  "creep",
+  "s13-2",
+  "Slow movement of coarser grains sliding or rolling along the surface when the wind is strong enough."
+ ],
+ [
+  "sorting",
+  "s13-2",
+  "How uniform the grain sizes in a sediment are; wind is a good sorting agent, separating sand from dust."
+ ],
+ [
+  "sliding stones",
+  "s13-2",
+  "Rocks that move across flat playas, leaving trails, as on Racetrack Playa in Death Valley; pushed by wind while held in thin sheets of ice. Also called sailing stones."
+ ],
+ [
+  "yardang",
+  "s13-2",
+  "A bedrock outcrop shaped by sandblasting from saltating sand; classic yardangs are streamlined ridges lined up with the wind."
+ ],
+ [
+  "ventifact",
+  "s13-2",
+  "A loose rock on the desert surface with faces blasted and polished by wind-blown sand; shifting winds give it several faces."
+ ],
+ [
+  "blowout",
+  "s13-2",
+  "A bowl-shaped depression where wind has removed sand and silt not anchored by vegetation."
+ ],
+ [
+  "alluvial fan",
+  "s13-3",
+  "A fan-shaped deposit where a stream leaves a canyon, spreads out, slows, and drops its coarse load into radial distributary channels."
+ ],
+ [
+  "delta",
+  "s13-3",
+  "A deposit built where a river enters a body of water, slows, and splits into distributary channels."
+ ],
+ [
+  "bajada",
+  "s13-3",
+  "An apron of alluvium along a mountain front formed when neighboring alluvial fans join."
+ ],
+ [
+  "alluvium",
+  "s13-3",
+  "Loose sediment deposited by running water."
+ ],
+ [
+  "inselberg",
+  "s13-3",
+  "\"Island mountain\": a remnant of a worn-down mountain that sticks up above the sediment burying it; first described by Wilhelm Bornhardt."
+ ],
+ [
+  "playa",
+  "s13-3",
+  "A flat, dry lake bed on the floor of an enclosed desert basin, where water leaves only by evaporation."
+ ],
+ [
+  "ephemeral",
+  "s13-3",
+  "Describes a stream or lake that holds water only after rainstorms; also called intermittent."
+ ],
+ [
+  "sheetwash",
+  "s13-3",
+  "Flood water flowing as a thin, broad sheet over the land surface rather than in a channel; also called sheet flow."
+ ],
+ [
+  "arroyo",
+  "s13-3",
+  "A normally dry stream channel in an arid region, also called a dry wash."
+ ],
+ [
+  "deposition",
+  "s13-3",
+  "The laying down of sediment, usually where the transporting water or wind slows."
+ ],
+ [
+  "erg",
+  "s13-3-1",
+  "A broad sea of sand, often blown into dunes, such as the Rub' al Khali (Empty Quarter) of Arabia."
+ ],
+ [
+  "aeolian",
+  "s13-3-1",
+  "Made or moved by wind."
+ ],
+ [
+  "dune",
+  "s13-3-1",
+  "A hill or ridge of sand built by wind (or water); it migrates as sand moves up its stoss side and down its slip face."
+ ],
+ [
+  "cross bedding",
+  "s13-3-1",
+  "Inclined layers within a larger bed; in dunes, the buried former slip faces left as the dune migrates."
+ ],
+ [
+  "angle of repose",
+  "s13-3-1",
+  "The steepest angle at which loose material stays stable; about 34° for dry sand, the angle of a dune's slip face."
+ ],
+ [
+  "Mesozoic",
+  "s13-3-1",
+  "The middle era of the Phanerozoic, 252 to 66 million years ago."
+ ],
+ [
+  "sandstone",
+  "s13-3-1",
+  "A sedimentary rock made mainly of sand-sized grains."
+ ],
+ [
+  "Jurassic",
+  "s13-3-1",
+  "The middle period of the Mesozoic Era, 201 to 145 million years ago; the age of the Navajo and Entrada sandstones."
+ ],
+ [
+  "Precambrian",
+  "s13-3-1",
+  "All of geologic time before the Phanerozoic (before 541 million years ago)."
+ ],
+ [
+  "barchan dune",
+  "s13-3-1",
+  "A crescent-shaped dune with horns pointing downwind; forms where sand is limited and the wind blows from a fairly constant direction."
+ ],
+ [
+  "longitudinal dune",
+  "s13-3-1",
+  "A long ridge-like (linear) dune lined up with the main wind direction; forms with more sand and wind that swings back and forth."
+ ],
+ [
+  "parabolic dune",
+  "s13-3-1",
+  "A U-shaped dune whose arms are anchored by vegetation and point upwind, around a blowout."
+ ],
+ [
+  "star dune",
+  "s13-3-1",
+  "A dune with arms radiating from a central peak, formed by winds from many directions."
+ ],
+ [
+  "interior drainage",
+  "s13-4",
+  "Drainage with no outlet to the ocean; water stays in the basin or evaporates, as in the Great Basin."
+ ],
+ [
+  "Basin and Range",
+  "s13-4",
+  "Region from the Wasatch Front in Utah to the Sierra Nevada, of fault-block ranges (horsts) and basins (grabens) formed by crustal extension."
+ ],
+ [
+  "graben",
+  "s13-4",
+  "A down-dropped block of crust between normal faults; a basin in the Basin and Range."
+ ],
+ [
+  "horst",
+  "s13-4",
+  "An uplifted block of crust between normal faults; a range in the Basin and Range."
+ ],
+ [
+  "normal fault",
+  "s13-4",
+  "A fault where the block above the fault (hanging wall) moves down relative to the block below; formed by extension."
+ ],
+ [
+  "extension",
+  "s13-4",
+  "Pulling apart of the crust; the Basin and Range has stretched to about twice its width in about 30 million years."
+ ],
+ [
+  "lithosphere",
+  "s13-4",
+  "The rigid outer layer of Earth: the crust plus the uppermost mantle."
+ ],
+ [
+  "pluvial lake",
+  "s13-4",
+  "A lake formed in a wetter (pluvial) climate, such as Lake Bonneville during the last ice age."
+ ],
+ [
+  "desertification",
+  "s13-4-1",
+  "The change of previously arable land into desert, through a positive feedback of drying, plant loss, and soil loss; worsened by human activities."
+ ],
+ [
+  "humus",
+  "s13-4-1",
+  "Dark, decomposed organic matter in soil that helps it absorb and hold water."
+ ],
+ [
+  "infiltration",
+  "s13-4-1",
+  "Water soaking into the ground."
+ ],
+ [
+  "positive feedback",
+  "s13-4-1",
+  "A self-reinforcing loop in which a change causes effects that increase the change."
+ ],
+ [
+  "groundwater",
+  "s13-4-1",
+  "Water held underground in the pores and fractures of soil and rock (Unit 11)."
+ ]
+]
+</script>
+<script src="assets/guide.js"></script>
+</body>
+</html>
